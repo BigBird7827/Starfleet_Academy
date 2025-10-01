@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starfleet Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --gold:#ffd84d; }
+    /* MAIN SCREEN (unchanged) */
+    body {
+      margin:0; padding:0;
+      font-family:'Orbitron',sans-serif;
+      background:url("https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Logo.jpeg") no-repeat center center fixed;
+      background-size:cover;
+      color:#ffcc33;
+      display:flex; flex-direction:column; align-items:center;
+      min-height:100vh; /* allow normal scroll on main screen */
+    }
+    .page-title{
+      margin-top:40px; margin-bottom:30px;
+      font-size:42pt; color:gold;
+      text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+      text-align:center;
+    }
+    .container{
+      background:rgba(0,0,0,0.8);
+      padding:20px 30px; border-radius:12px; box-shadow:0 0 20px #ffcc33; width:320px;
+    }
+    label{ display:block; margin:12px 0 5px; }
+    input,select,button{ width:100%; padding:8px; margin-bottom:15px; border:none; border-radius:6px; }
+    input,select{ background:#333; color:#fff; }
+    button{ background:#ffcc33; color:#000; font-weight:bold; cursor:pointer; }
+    button:hover{ background:#ffaa00; }
+
+    /* ORIENTATION-ONLY STYLES */
+    body.orientation { background:#000 !important; overflow:hidden; }
+    .corner-image{
+      position:fixed; width:2.5in; height:2.5in; top:10px; object-fit:contain; z-index:0; pointer-events:none;
+    }
+    .corner-left{ left:10px; }
+    .corner-right{ right:10px; }
+
+    .orientation-root{
+      position:relative; z-index:1;
+      display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
+      transform-origin: top center; /* will scale to fit */
+      margin:0 auto;
+    }
+    .orientation-title, .orientation-text{
+      color:gold;
+      text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+    }
+    .orientation-title{
+      font-size:32pt; margin-top:60px; margin-bottom:20px; text-align:center;
+    }
+    .orientation-text{
+      max-width:800px; margin:0 auto 40px auto; padding:0 20px;
+      font-size:16pt; line-height:1.5em; text-align:center;
+    }
+    .button-box{
+      margin-top:50px;
+      display:grid; grid-template-columns:1fr 1fr; gap:20px;
+      background:rgba(0,0,0,0.4); padding:30px; border-radius:12px; box-shadow:0 0 15px var(--gold);
+    }
+    .button-box button{
+      background:linear-gradient(to bottom,#1e3c72,#000000);
+      color:var(--gold); font-size:24pt; font-weight:bold;
+      border:2px solid var(--gold); border-radius:12px; padding:15px 25px; cursor:pointer;
+      box-shadow:inset 0 2px 5px rgba(255,255,255,.3), 0 5px 15px rgba(0,0,0,.6);
+      transition:transform .2s ease, background .2s ease;
+    }
+    .button-box button:hover{
+      background:linear-gradient(to bottom,#2a5298,#111);
+      transform:translateY(-3px);
+      box-shadow:inset 0 2px 5px rgba(255,255,255,.5), 0 8px 20px rgba(0,0,0,.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-title">Welcome to Starfleet Academy</div>
+
+  <div class="container" id="registration">
+    <form id="entryForm">
+      <label for="name">Cadet Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="species">Species</label>
+      <select id="species" name="species" required>
+        <option value="">-- Select Species --</option>
+        <option>Human</option><option>Vulcan</option><option>Andorian</option><option>Tellarite</option>
+        <option>Betazoid</option><option>Trill</option><option>Bajoran</option><option>Bolian</option>
+        <option>Denobulan</option><option>Caitian</option><option>Benzite</option><option>Deltan</option>
+      </select>
+      <label for="department">Desired Department</label>
+      <select id="department" name="department" required>
+        <option value="">-- Select Department --</option>
+        <option>Command</option><option>Diplomacy</option><option>Security</option>
+        <option>Engineering</option><option>Science</option><option>Medical</option>
+      </select>
+      <button type="submit">Enter Academy</button>
+    </form>
+  </div>
+
+  <script>
+    function buildOrientation(name){
+      document.body.classList.add('orientation'); // affects orientation ONLY
+      document.body.innerHTML = '';
+
+      // Corner crests
+      const imgLeft = document.createElement('img');
+      imgLeft.src = 'https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png';
+      imgLeft.className = 'corner-image corner-left';
+      document.body.appendChild(imgLeft);
+
+      const imgRight = document.createElement('img');
+      imgRight.src = 'https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png';
+      imgRight.className = 'corner-image corner-right';
+      document.body.appendChild(imgRight);
+
+      // Orientation content wrapper (will scale to fit viewport)
+      const root = document.createElement('div');
+      root.id = 'orientationRoot';
+      root.className = 'orientation-root';
+      root.innerHTML = `
+        <div class="orientation-title">Welcome to Starfleet Orientation</div>
+        <div class="orientation-text">
+          Congratulations on your acceptance to Starfleet Academy. You have chosen a field to specialize in, but you must complete all sections below to graduate.
+          You may complete the modules below in any order, but once started, you must complete the module before moving to another.<br><br>
+          There is no time limit to complete the modules themselves, but you have only 4 years to complete all of the modules.
+        </div>
+        <div class="button-box">
+          <button>Command</button>
+          <button>Diplomacy</button>
+          <button>Engineering</button>
+          <button>Security</button>
+          <button>Science</button>
+          <button>Medical</button>
+        </div>
+      `;
+      document.body.appendChild(root);
+
+      // Button handlers
+      root.querySelectorAll('.button-box button').forEach(btn=>{
+        btn.addEventListener('click',()=>alert(`You selected ${btn.textContent}, Cadet ${name}`));
+      });
+
+      // Fit to viewport (height) without scrolling
+      scaleOrientationToFit();
+      window.addEventListener('resize', scaleOrientationToFit, { passive:true });
+    }
+
+    function scaleOrientationToFit(){
+      const root = document.getElementById('orientationRoot');
+      if(!root) return;
+      root.style.transform = 'scale(1)';
+      // leave some breathing room for corner images
+      const topPadding = 20;
+      const availableH = window.innerHeight - topPadding;
+      const rect = root.getBoundingClientRect();
+      if(rect.height > availableH){
+        const scale = Math.max(0.6, Math.min(1, (availableH) / rect.height));
+        root.style.transform = `scale(${scale})`;
+      }
+    }
+
+    document.getElementById('entryForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      buildOrientation(name);
+    });
+  </script>
+</body>
+</html>
