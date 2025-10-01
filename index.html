@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Starfleet Academy</title>
-  <!-- Orbitron font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -61,16 +60,17 @@
     button:hover {
       background: #ffaa00;
     }
-    /* Orientation screen styles */
+    .orientation-title, .orientation-text {
+      color: black;
+      text-shadow: -1px -1px 0 #fff,  
+                   1px -1px 0 #fff,  
+                  -1px  1px 0 #fff,  
+                   1px  1px 0 #fff;
+    }
     .orientation-title {
       font-size: 32pt;
       margin-top: 40px;
       margin-bottom: 20px;
-      color: gold;
-      text-shadow: -1px -1px 0 #000,  
-                   1px -1px 0 #000,  
-                  -1px  1px 0 #000,  
-                   1px  1px 0 #000;
       text-align: center;
     }
     .orientation-text {
@@ -79,12 +79,7 @@
       padding: 0 20px;
       font-size: 16pt;
       line-height: 1.5em;
-      color: gold;
       text-align: center;
-      text-shadow: -1px -1px 0 #000,  
-                   1px -1px 0 #000,  
-                  -1px  1px 0 #000,  
-                   1px  1px 0 #000;
     }
     .button-box {
       margin-top: 50px;
@@ -120,7 +115,6 @@
     <form id="entryForm">
       <label for="name">Cadet Name</label>
       <input type="text" id="name" name="name" required>
-
       <label for="species">Species</label>
       <select id="species" name="species" required>
         <option value="">-- Select Species --</option>
@@ -137,7 +131,6 @@
         <option>Benzite</option>
         <option>Deltan</option>
       </select>
-
       <label for="department">Desired Department</label>
       <select id="department" name="department" required>
         <option value="">-- Select Department --</option>
@@ -148,7 +141,6 @@
         <option>Science</option>
         <option>Medical</option>
       </select>
-
       <button type="submit">Enter Academy</button>
     </form>
   </div>
@@ -157,23 +149,15 @@
     document.getElementById("entryForm").addEventListener("submit", function(e) {
       e.preventDefault();
       const name = document.getElementById("name").value;
-
-      // Clear the page content
       document.body.innerHTML = "";
-
-      // Orientation title
       const title = document.createElement("div");
       title.className = "orientation-title";
       title.textContent = "Welcome to Starfleet Orientation";
       document.body.appendChild(title);
-
-      // Orientation text
       const text = document.createElement("div");
       text.className = "orientation-text";
       text.innerHTML = `Congratulations on your acceptance to Starfleet Academy. You have chosen a field to specialize in, but you must complete all sections below to graduate. You may complete the modules below in any order, but once started, you must complete the module before moving to another.<br><br>There is no time limit to complete the modules themselves, but you have only 4 years to complete all of the modules.`;
       document.body.appendChild(text);
-
-      // Button box
       const buttonBox = document.createElement("div");
       buttonBox.className = "button-box";
       const departments = ["Command", "Diplomacy", "Engineering", "Security", "Science", "Medical"];
@@ -184,10 +168,9 @@
         buttonBox.appendChild(btn);
       });
       document.body.appendChild(buttonBox);
-
-      // Update background image for orientation screen
-      document.body.style.background = "url('https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.jpg') no-repeat center center fixed";
-      document.body.style.backgroundSize = "cover";
+      document.body.style.background = "url('https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.jpg') center top no-repeat";
+      document.body.style.backgroundSize = "contain";
+      document.body.style.backgroundColor = "black";
     });
   </script>
 </body>
