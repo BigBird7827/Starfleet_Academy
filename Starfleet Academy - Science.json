@@ -1,0 +1,710 @@
+{
+  "department": "Science",
+  "sections": [
+    {
+      "name": "Gravitational & Subspace Phenomena",
+      "scenarios": [
+        {
+          "id": "GSP1",
+          "title": "Gravitational Mapping Drill",
+          "description": "Cadets chart local gravitational anomalies using long-range sensors.",
+          "options": [
+            "Calibrate sensors and record field strength variations.",
+            "Ignore minor fluctuations for efficiency.",
+            "Overload sensors to get faster results.",
+            "Rely solely on computer automation.",
+            "Request instructor to perform mapping."
+          ],
+          "points": [9, 4, 2, 6, 1]
+        },
+        {
+          "id": "GSP2",
+          "title": "Subspace Field Measurement",
+          "description": "Cadets measure subspace field distortions near a simulated rift.",
+          "options": [
+            "Adjust sensor arrays to track subtle distortions.",
+            "Ignore readings outside tolerance.",
+            "Overpower sensor gain dangerously.",
+            "Abort exercise prematurely.",
+            "Delegate measurement to automation."
+          ],
+          "points": [9, 3, 2, 4, 5]
+        },
+        {
+          "id": "GSP3",
+          "title": "Tidal Force Simulation",
+          "description": "Cadets calculate tidal stresses on a small planetoid.",
+          "options": [
+            "Use equations and validate with sensor models.",
+            "Ignore small stresses.",
+            "Exaggerate results in report.",
+            "Delegate calculations to automation.",
+            "Skip exercise entirely."
+          ],
+          "points": [9, 3, 2, 6, 1]
+        },
+        {
+          "id": "GSP4",
+          "title": "Graviton Burst Drill",
+          "description": "Cadets simulate a graviton burst and track field effects.",
+          "options": [
+            "Trigger burst safely and log changes.",
+            "Overpower burst to increase visibility.",
+            "Ignore results.",
+            "Abort drill after start.",
+            "Delegate entirely to automation."
+          ],
+          "points": [9, 2, 3, 4, 5]
+        },
+        {
+          "id": "GSP5",
+          "title": "Subspace Wave Analysis",
+          "description": "Cadets analyze wave propagation through simulated subspace layers.",
+          "options": [
+            "Record and interpret propagation data.",
+            "Ignore anomalies.",
+            "Exaggerate readings for effect.",
+            "Abort analysis early.",
+            "Allow computer to interpret without review."
+          ],
+          "points": [9, 3, 2, 4, 1]
+        }
+      ]
+    },
+    {
+      "name": "Cosmic Radiation & Particle Fields",
+      "scenarios": [
+        {
+          "id": "CRP1",
+          "title": "Radiation Band Survey",
+          "description": "Cadets identify radiation bands around a nearby star.",
+          "options": [
+            "Calibrate instruments and log results carefully.",
+            "Ignore weaker radiation zones.",
+            "Overpower sensors for faster data.",
+            "Abort survey prematurely.",
+            "Delegate to automation only."
+          ],
+          "points": [9, 3, 2, 4, 1]
+        },
+        {
+          "id": "CRP2",
+          "title": "Particle Density Mapping",
+          "description": "Cadets chart particle density in a nebula.",
+          "options": [
+            "Sweep with incremental scans.",
+            "Skip detailed mapping.",
+            "Overpower scanners.",
+            "Abort mapping.",
+            "Let computer auto-complete."
+          ],
+          "points": [9, 2, 3, 1, 5]
+        },
+        {
+          "id": "CRP3",
+          "title": "Radiation Shielding Test",
+          "description": "Cadets simulate shielding performance against cosmic rays.",
+          "options": [
+            "Measure shielding under different conditions.",
+            "Skip weaker ray types.",
+            "Overstate shield weaknesses.",
+            "Abort test early.",
+            "Delegate to automation."
+          ],
+          "points": [9, 4, 2, 3, 6]
+        },
+        {
+          "id": "CRP4",
+          "title": "Plasma Field Tracking",
+          "description": "Cadets monitor plasma field drift near a star.",
+          "options": [
+            "Track drift and log data regularly.",
+            "Ignore minor drift changes.",
+            "Overstate results.",
+            "Abort tracking mid-exercise.",
+            "Let automation run unattended."
+          ],
+          "points": [9, 3, 2, 1, 4]
+        },
+        {
+          "id": "CRP5",
+          "title": "Instructor Radiation Drill",
+          "description": "Instructor simulates sudden burst of cosmic rays.",
+          "options": [
+            "Log readings quickly and accurately.",
+            "Ignore exercise.",
+            "Overpower sensors recklessly.",
+            "Abort drill prematurely.",
+            "Request instructor intervention."
+          ],
+          "points": [9, 2, 1, 3, 4]
+        }
+      ]
+    },
+    {
+      "name": "Stellar Observation & Classification",
+      "scenarios": [
+        {
+          "id": "SOC1",
+          "title": "Star Classification Drill",
+          "description": "Cadets classify observed stars by spectrum.",
+          "options": [
+            "Record accurate spectral types.",
+            "Skip less common classes.",
+            "Overstate classification confidence.",
+            "Abort exercise.",
+            "Delegate task to computer."
+          ],
+          "points": [9, 4, 2, 3, 6]
+        },
+        {
+          "id": "SOC2",
+          "title": "Binary System Analysis",
+          "description": "Cadets analyze binary star orbital data.",
+          "options": [
+            "Compute orbital periods accurately.",
+            "Skip long-period systems.",
+            "Overstate analysis results.",
+            "Abort midway.",
+            "Allow automation to finish work."
+          ],
+          "points": [9, 3, 2, 1, 5]
+        },
+        {
+          "id": "SOC3",
+          "title": "Variable Star Monitoring",
+          "description": "Cadets monitor brightness changes in variable stars.",
+          "options": [
+            "Log consistent measurements.",
+            "Skip minor variations.",
+            "Overstate variability.",
+            "Abort monitoring.",
+            "Delegate monitoring to automation."
+          ],
+          "points": [9, 4, 2, 3, 5]
+        },
+        {
+          "id": "SOC4",
+          "title": "Stellar Evolution Exercise",
+          "description": "Cadets chart star life cycles based on data.",
+          "options": [
+            "Match data to known evolutionary stages.",
+            "Ignore anomalies.",
+            "Invent data to fit results.",
+            "Abort exercise.",
+            "Delegate to automation."
+          ],
+          "points": [9, 3, 1, 2, 6]
+        },
+        {
+          "id": "SOC5",
+          "title": "Instructor Classification Test",
+          "description": "Instructor assigns stars for rapid classification.",
+          "options": [
+            "Classify each accurately and quickly.",
+            "Skip difficult classifications.",
+            "Overstate results for speed.",
+            "Abort exercise.",
+            "Ask instructor for help."
+          ],
+          "points": [9, 2, 1, 3, 4]
+        }
+      ]
+    },
+    {
+      "name": "First Contact Biological Analysis",
+      "scenarios": [
+        {
+          "id": "FCB1",
+          "title": "Sample Analysis Drill",
+          "description": "Cadets analyze simulated alien biological samples.",
+          "options": [
+            "Run full spectrum biological scans.",
+            "Skip secondary scans.",
+            "Overstate findings.",
+            "Abort analysis.",
+            "Delegate to automation."
+          ],
+          "points": [9, 3, 2, 1, 5]
+        },
+        {
+          "id": "FCB2",
+          "title": "Toxin Screening",
+          "description": "Cadets screen samples for toxins.",
+          "options": [
+            "Perform multi-stage toxin checks.",
+            "Skip minor toxins.",
+            "Overstate results.",
+            "Abort screening.",
+            "Rely solely on automation."
+          ],
+          "points": [9, 2, 1, 3, 6]
+        },
+        {
+          "id": "FCB3",
+          "title": "Protein Structure Study",
+          "description": "Cadets map proteins in alien cells.",
+          "options": [
+            "Chart structures carefully.",
+            "Ignore unusual proteins.",
+            "Overstate structural matches.",
+            "Abort study.",
+            "Delegate to automation."
+          ],
+          "points": [9, 2, 1, 3, 5]
+        },
+        {
+          "id": "FCB4",
+          "title": "Sample Preservation",
+          "description": "Cadets maintain sample viability during analysis.",
+          "options": [
+            "Keep samples under stable conditions.",
+            "Ignore preservation protocols.",
+            "Overcompensate cooling dangerously.",
+            "Abort preservation effort.",
+            "Delegate to automation."
+          ],
+          "points": [9, 2, 3, 1, 5]
+        },
+        {
+          "id": "FCB5",
+          "title": "Instructor First Contact Drill",
+          "description": "Instructor presents unknown sample for analysis.",
+          "options": [
+            "Run thorough scans carefully.",
+            "Skip minor details.",
+            "Overstate discoveries.",
+            "Abort drill.",
+            "Request instructor guidance."
+          ],
+          "points": [9, 4, 2, 3, 6]
+        }
+      ]
+    },
+    {
+      "name": "Alien Physiology & Comparative Anatomy",
+      "scenarios": [
+        {
+          "id": "APC1",
+          "title": "Musculoskeletal Study",
+          "description": "Cadets examine alien skeletal structures.",
+          "options": [
+            "Compare with Federation reference.",
+            "Skip minor anomalies.",
+            "Overstate findings.",
+            "Abort study.",
+            "Delegate to automation."
+          ],
+          "points": [9, 3, 2, 1, 5]
+        },
+        {
+          "id": "APC2",
+          "title": "Circulatory System Drill",
+          "description": "Cadets map circulatory systems of alien physiology.",
+          "options": [
+            "Record accurate flow patterns.",
+            "Ignore small vessels.",
+            "Overstate circulatory complexity.",
+            "Abort drill.",
+            "Delegate to automation."
+          ],
+          "points": [9, 2, 3, 1, 4]
+        },
+        {
+          "id": "APC3",
+          "title": "Respiratory System Analysis",
+          "description": "Cadets analyze alien respiratory systems.",
+          "options": [
+            "Map gas exchange structures accurately.",
+            "Ignore secondary pathways.",
+            "Overstate efficiency.",
+            "Abort analysis.",
+            "Delegate to automation."
+          ],
+          "points": [9, 3, 2, 1, 5]
+        },
+        {
+          "id": "APC4",
+          "title": "Comparative Anatomy Drill",
+          "description": "Cadets compare alien organs to known physiology.",
+          "options": [
+            "Log similarities and differences carefully.",
+            "Skip unusual findings.",
+            "Overstate matches.",
+            "Abort drill.",
+            "Delegate to automation."
+          ],
+          "points": [9, 2, 3, 1, 4]
+        },
+        {
+          "id": "APC5",
+          "title": "Instructor Anatomy Test",
+          "description": "Instructor presents simulated alien body system.",
+          "options": [
+            "Map system carefully.",
+            "Skip minor details.",
+            "Overstate conclusions.",
+            "Abort test.",
+            "Ask instructor for help."
+          ],
+          "points": [9, 3, 2, 1, 5]
+        }
+      ]
+    },
+    {
+      "name": "Microbial Studies",
+      "scenarios": [
+        {
+          "id": "MS1",
+          "title": "Culture Growth Drill",
+          "description": "Cadets culture microbes in controlled lab environment.",
+          "options": [
+            "Monitor growth carefully.",
+            "Ignore secondary changes.",
+            "Overstate culture speed.",
+            "Abort growth mid-way.",
+            "Delegate to automation."
+          ],
+          "points": [9, 2, 1, 3, 5]
+        },
+        {
+          "id": "MS2",
+          "title": "Resistance Testing",
+          "description": "Cadets test microbial resistance to conditions.",
+          "options": [
+            "Run multi-condition testing.",
+            "Skip less common conditions.",
+            "Overstate results.",
+            "Abort testing.",
+            "Delegate to automation."
+          ],
+          "points": [9, 2, 3, 1, 5]
+        },
+        {
+          "id": "MS3",
+          "title": "Containment Practice",
+          "description": "Cadets practice microbial containment protocols.",
+          "options": [
+            "Seal containers properly.",
+            "Ignore protocols.",
+            "Overcompensate sealing dangerously.",
+            "Abort containment.",
+            "Delegate to automation."
+          ],
+          "points": [9, 1, 4, 2, 6]
+        },
+        {
+          "id": "MS4",
+          "title": "Observation Drill",
+          "description": "Cadets observe microbial reactions to stimuli.",
+          "options": [
+            "Log reactions precisely.",
+            "Ignore subtle reactions.",
+            "Overstate observations.",
+            "Abort drill.",
+            "Delegate to automation."
+          ],
+          "points": [9, 2, 3, 1, 5]
+        },
+        {
+          "id": "MS5",
+          "title": "Instructor Microbial Test",
+          "description": "Instructor presents unknown microbial culture.",
+          "options": [
+            "Analyze culture carefully.",
+            "Ignore culture.",
+            "Overstate findings.",
+            "Abort analysis.",
+            "Ask instructor for help."
+          ],
+          "points": [9, 1, 2, 3, 6]
+        }
+      ]
+    },
+    {
+      "name": "Planetary Identification",
+      "scenarios": [
+        {
+          "id": "PI1",
+          "title": "Class M Identification",
+          "description": "Cadets classify planets as Class M when appropriate.",
+          "options": [
+            "Use atmosphere and surface data.",
+            "Ignore minor deviations.",
+            "Overstate habitability.",
+            "Abort classification.",
+            "Delegate to automation."
+          ],
+          "points": [9, 2, 3, 1, 5]
+        },
+        {
+          "id": "PI2",
+          "title": "Gas Giant Survey",
+          "description": "Cadets identify Class J and other gas giants.",
+          "options": [
+            "Log correct classifications.",
+            "Skip rare giant types.",
+            "Overstate complexity.",
+            "Abort survey.",
+            "Delegate to automation."
+          ],
+          "points": [9, 3, 2, 1, 5]
+        },
+        {
+          "id": "PI3",
+          "title": "Unstable World Drill",
+          "description": "Cadets classify unstable planetary bodies.",
+          "options": [
+            "Record classification accurately.",
+            "Ignore unstable planets.",
+            "Overstate stability.",
+            "Abort classification.",
+            "Delegate task to automation."
+          ],
+          "points": [9, 2, 3, 1, 5]
+        },
+        {
+          "id": "PI4",
+          "title": "Instructor Planet Drill",
+          "description": "Instructor assigns unknown planet data.",
+          "options": [
+            "Classify carefully.",
+            "Skip minor details.",
+            "Overstate findings.",
+            "Abort drill.",
+            "Request help."
+          ],
+          "points": [9, 3, 2, 1, 5]
+        },
+        {
+          "id": "PI5",
+          "title": "Survey Log Exercise",
+          "description": "Cadets maintain planetary survey logs.",
+          "options": [
+            "Keep accurate logs.",
+            "Skip logs.",
+            "Overstate log entries.",
+            "Abort log duty.",
+            "Delegate to automation."
+          ],
+          "points": [9, 1, 2, 3, 5]
+        }
+      ]
+    },
+    {
+  "name": "Alien Species Identification",
+  "scenarios": [
+    {
+      "id": "ASI1",
+      "title": "Encounter in the Mess Hall",
+      "description": "During a routine mess hall exercise, you observe a humanoid with pointed ears, arched eyebrows, and a faint V-shaped brow above the nose bridge.",
+      "options": ["Romulan","Vulcan","Andorian","Human","Klingon"],
+      "points": [9,4,1,1,2]
+    },
+    {
+      "id": "ASI2",
+      "title": "Philosophy Seminar",
+      "description": "In a classroom discussion on logic, a cadet speaks calmly with pointed ears and no visible brow ridge.",
+      "options": ["Vulcan","Romulan","Betazoid","Cardassian","Ferengi"],
+      "points": [9,3,1,2,1]
+    },
+    {
+      "id": "ASI3",
+      "title": "Security Drill Observation",
+      "description": "You spot a heavily armored warrior with a strong build and pronounced cranial ridges across the forehead.",
+      "options": ["Klingon","Cardassian","Nausicaan","Romulan","Andorian"],
+      "points": [9,3,2,1,1]
+    },
+    {
+      "id": "ASI4",
+      "title": "Briefing Room Encounter",
+      "description": "In a tactical briefing, you notice a gray-skinned officer with a spoon-like indentation on the forehead and vertical neck ridges.",
+      "options": ["Cardassian","Bajoran","Klingon","Human","Ferengi"],
+      "points": [9,2,3,1,1]
+    },
+    {
+      "id": "ASI5",
+      "title": "Medical Evaluation Scenario",
+      "description": "During a mock medical screening, you encounter a humanoid with vertical nose ridges, wearing an ornamental earring.",
+      "options": ["Bajoran","Cardassian","Trill","Betazoid","Human"],
+      "points": [9,2,1,1,1]
+    },
+    {
+      "id": "ASI6",
+      "title": "Commerce Simulation",
+      "description": "At a trading exercise, a short alien with lobed ears and sharp teeth presses you into aggressive bargaining.",
+      "options": ["Ferengi","Tellarite","Orion","Klingon","Human"],
+      "points": [9,2,1,1,1]
+    },
+    {
+      "id": "ASI7",
+      "title": "Environmental Training Lab",
+      "description": "Inside a simulated arctic environment, a blue-skinned humanoid’s head antennae twitch responsively.",
+      "options": ["Andorian","Bolian","Trill","Orion","Romulan"],
+      "points": [9,2,1,1,1]
+    },
+    {
+      "id": "ASI8",
+      "title": "Crew Intake Screening",
+      "description": "A new officer’s examination reveals symmetrical dark spots running from the temples down each side of the body.",
+      "options": ["Trill","Human","Bajoran","Betazoid","Ferengi"],
+      "points": [9,1,2,1,1]
+    },
+    {
+      "id": "ASI9",
+      "title": "Security Alert Drill",
+      "description": "Responding to a security alert, you encounter a tall reptilian with scaled skin and yellow eyes.",
+      "options": ["Gorn","Jem'Hadar","Cardassian","Klingon","Andorian"],
+      "points": [9,2,1,3,1]
+    },
+    {
+      "id": "ASI10",
+      "title": "Counseling Observation",
+      "description": "During a mock counseling session, a humanoid with fully black eyes speaks with calm empathy.",
+      "options": ["Betazoid","Vulcan","Human","Trill","Romulan"],
+      "points": [9,3,1,1,2]
+    },
+    {
+      "id": "ASI11",
+      "title": "Captured Vessel Scenario",
+      "description": "On a simulated boarding exercise, you confront a pale-skinned humanoid with cybernetic implants and monotone speech: 'Resistance is futile.'",
+      "options": ["Borg","Android","Cardassian","Klingon","Human"],
+      "points": [9,2,1,1,1]
+    },
+    {
+      "id": "ASI12",
+      "title": "Diplomatic Argument Exercise",
+      "description": "During a debate simulation, a tusked humanoid with piglike features insists loudly on his point of view.",
+      "options": ["Tellarite","Ferengi","Klingon","Human","Andorian"],
+      "points": [9,2,3,1,1]
+    },
+    {
+      "id": "ASI13",
+      "title": "Engineering Cadre Review",
+      "description": "A blue-skinned crewmember presents with a vertical cranial ridge running across the skull.",
+      "options": ["Bolian","Andorian","Orion","Human","Trill"],
+      "points": [9,3,2,1,1]
+    },
+    {
+      "id": "ASI14",
+      "title": "Crew Social Gathering",
+      "description": "At an Academy mixer, you meet a humanoid with facial ridges along the forehead and cheeks, plus an unusually wide smile.",
+      "options": ["Denobulan","Human","Cardassian","Klingon","Ferengi"],
+      "points": [9,2,3,1,1]
+    },
+    {
+      "id": "ASI15",
+      "title": "Trade Negotiation Simulation",
+      "description": "During a mock trade session, a green-skinned humanoid introduces themselves as part of a merchant house.",
+      "options": ["Orion","Andorian","Bolian","Human","Ferengi"],
+      "points": [9,2,1,1,1]
+    },
+    {
+      "id": "ASI16",
+      "title": "Field Combat Drill",
+      "description": "A soldier with mottled gray skin and ridged features injects a vial of white liquid before continuing the fight.",
+      "options": ["Jem'Hadar","Klingon","Cardassian","Romulan","Human"],
+      "points": [9,3,2,1,1]
+    },
+    {
+      "id": "ASI17",
+      "title": "Dominion Briefing",
+      "description": "In a Dominion training holo, you encounter a pale humanoid with elongated ears and smooth features, dressed in official attire.",
+      "options": ["Vorta","Betazoid","Human","Cardassian","Andorian"],
+      "points": [9,2,1,3,1]
+    },
+    {
+      "id": "ASI18",
+      "title": "Captured Suit Examination",
+      "description": "A figure in a bulky armored suit speaks with a distorted electronic voice; features are fully concealed.",
+      "options": ["Breen","Tholian","Gorn","Human","Andorian"],
+      "points": [9,3,1,1,1]
+    },
+    {
+      "id": "ASI19",
+      "title": "Hunter Training Scenario",
+      "description": "On the holodeck, a towering alien hunter with bone crests on his skull stalks the simulation field.",
+      "options": ["Hirogen","Klingon","Cardassian","Tellarite","Romulan"],
+      "points": [9,3,2,1,1]
+    },
+    {
+      "id": "ASI20",
+      "title": "Extreme Environment Encounter",
+      "description": "Inside a simulated high-temperature chamber, you observe a non-humanoid crystalline being with angular facets communicating in resonant tones.",
+      "options": ["Tholian","Borg","Andorian","Human","Ferengi"],
+      "points": [9,2,1,1,1]
+    }
+      ]
+    },
+    {
+      "name": "Environmental Survey & Hazard Recognition",
+      "scenarios": [
+        {
+          "id": "ESH1",
+          "title": "Toxic Atmosphere Drill",
+          "description": "Cadets analyze atmosphere for hazards.",
+          "options": [
+            "Log toxins accurately.",
+            "Ignore trace toxins.",
+            "Overstate hazards.",
+            "Abort drill.",
+            "Delegate to automation."
+          ],
+          "points": [9, 2, 3, 1, 5]
+        },
+        {
+          "id": "ESH2",
+          "title": "Radiation Hazard Drill",
+          "description": "Cadets test for planetary radiation hazards.",
+          "options": [
+            "Measure carefully.",
+            "Skip minor hazards.",
+            "Overstate results.",
+            "Abort test.",
+            "Delegate to automation."
+          ],
+          "points": [9, 2, 3, 1, 5]
+        },
+        {
+          "id": "ESH3",
+          "title": "Terrain Hazard Analysis",
+          "description": "Cadets map hazardous terrain features.",
+          "options": [
+            "Log terrain precisely.",
+            "Skip minor hazards.",
+            "Overstate danger.",
+            "Abort analysis.",
+            "Delegate task to automation."
+          ],
+          "points": [9, 2, 3, 1, 5]
+        },
+        {
+          "id": "ESH4",
+          "title": "Instructor Hazard Drill",
+          "description": "Instructor simulates hazardous environment.",
+          "options": [
+            "Respond with full analysis.",
+            "Ignore hazards.",
+            "Overstate issues.",
+            "Abort drill.",
+            "Request help."
+          ],
+          "points": [9, 2, 3, 1, 5]
+        },
+        {
+          "id": "ESH5",
+          "title": "Survey Team Coordination",
+          "description": "Cadets coordinate hazard data with survey team.",
+          "options": [
+            "Share accurate data.",
+            "Ignore team input.",
+            "Overstate contributions.",
+            "Abort coordination.",
+            "Delegate reporting to automation."
+          ],
+          "points": [9, 2, 3, 1, 5]
+        }
+      ]
+    }
+  ]
+}
