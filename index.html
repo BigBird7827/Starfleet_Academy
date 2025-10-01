@@ -6,19 +6,16 @@
   <title>Starfleet Academy Entry</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
+      background: black;
+      color: #ffcc33;
       font-family: Arial, sans-serif;
-      background: url("https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Logo.png") no-repeat center center fixed;
-      background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      color: #ffcc33;
     }
     .container {
-      background: rgba(0, 0, 0, 0.8);
+      background: #222;
       padding: 20px 30px;
       border-radius: 12px;
       box-shadow: 0 0 20px #ffcc33;
@@ -101,7 +98,7 @@
       const department = document.getElementById("department").value;
 
       alert(`Welcome, Cadet ${name}!\nSpecies: ${species}\nDesired Department: ${department}`);
-      // TODO: Pass these values into your Academy simulation engine
+      // Later: pass these values into your Academy simulation engine
     });
   </script>
 </body>
