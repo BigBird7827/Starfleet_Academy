@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starfleet Academy Entry</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url("https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/refs/heads/main/Starfleet%20Academy%20Logo.png") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #ffcc33;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ffcc33;
+      width: 320px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin: 12px 0 5px;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 6px;
+    }
+    input, select {
+      background: #333;
+      color: #fff;
+    }
+    button {
+      background: #ffcc33;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #ffaa00;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Starfleet Academy Entry</h1>
+    <form id="entryForm">
+      <label for="name">Cadet Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="species">Species</label>
+      <select id="species" name="species" required>
+        <option value="">-- Select Species --</option>
+        <option>Human</option>
+        <option>Vulcan</option>
+        <option>Andorian</option>
+        <option>Tellarite</option>
+        <option>Betazoid</option>
+        <option>Trill</option>
+        <option>Bajoran</option>
+        <option>Bolian</option>
+        <option>Denobulan</option>
+        <option>Caitian</option>
+        <option>Benzite</option>
+        <option>Deltan</option>
+      </select>
+
+      <label for="department">Desired Department</label>
+      <select id="department" name="department" required>
+        <option value="">-- Select Department --</option>
+        <option>Command</option>
+        <option>Diplomacy</option>
+        <option>Security</option>
+        <option>Engineering</option>
+        <option>Science</option>
+        <option>Medical</option>
+      </select>
+
+      <button type="submit">Enter Academy</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("entryForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const species = document.getElementById("species").value;
+      const department = document.getElementById("department").value;
+
+      alert(`Welcome, Cadet ${name}!\nSpecies: ${species}\nDesired Department: ${department}`);
+      // Later: pass these values into your Academy simulation engine
+    });
+  </script>
+</body>
+</html>
