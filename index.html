@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starfleet Academy Registration</title>
+  <title>Starfleet Academy Entry</title>
+  <!-- Orbitron font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -13,9 +15,23 @@
       background-size: cover;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
+      flex-direction: column;
       height: 100vh;
       color: #ffcc33;
+    }
+    .page-title {
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 42pt;
+      color: gold;
+      text-shadow: -1px -1px 0 #000,  
+                   1px -1px 0 #000,  
+                  -1px  1px 0 #000,  
+                   1px  1px 0 #000; /* thin black border */
     }
     .container {
       background: rgba(0, 0, 0, 0.8);
@@ -23,10 +39,7 @@
       border-radius: 12px;
       box-shadow: 0 0 20px #ffcc33;
       width: 320px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
+      margin: 0 auto;
     }
     label {
       display: block;
@@ -55,8 +68,9 @@
   </style>
 </head>
 <body>
+  <div class="page-title">Welcome to Starfleet Academy</div>
+
   <div class="container">
-    <h1>Starfleet Academy Registration</h1>
     <form id="entryForm">
       <label for="name">Cadet Name</label>
       <input type="text" id="name" name="name" required>
@@ -106,5 +120,3 @@
   </script>
 </body>
 </html>
-
-
