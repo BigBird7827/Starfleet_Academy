@@ -1,0 +1,505 @@
+{
+  "department": "Security",
+  "sections": [
+    {
+      "name": "Shipboard Weapons Systems",
+      "scenarios": [
+        {
+          "id": "SWS1",
+          "title": "Proportional Response",
+          "description": "A small pirate craft fires warning shots while attempting to flee with contraband. You must decide how to use ship weapons to stop them while minimizing harm to nearby traffic.",
+          "options": [
+            "Return fire with disabling shots aimed at engines.",
+            "Lock weapons and pursue for a boarding action instead.",
+            "Escalate to maximum force to stop them quickly.",
+            "Attempt to hail and offer surrender terms first.",
+            "Fire warning shots back and hold position."
+          ],
+          "points": [
+            8,
+            9,
+            3,
+            7,
+            6
+          ]
+        },
+        {
+          "id": "SWS2",
+          "title": "Target Discrimination in Traffic",
+          "description": "Multiple contacts are in a crowded sector; one behaves aggressively. Choose how to apply shipboard weaponry to neutralize the threat without collateral damage.",
+          "options": [
+            "Bring full weapons to bear on the largest apparent threat.",
+            "Use a focused disabling torpedo on the hostile contact only.",
+            "Hold fire and attempt visual identification before engaging.",
+            "Shadow and maintain position until positive ID is achieved.",
+            "Order area-effect fire to ensure neutralization."
+          ],
+          "points": [
+            2,
+            9,
+            8,
+            7,
+            1
+          ]
+        },
+        {
+          "id": "SWS3",
+          "title": "Rules of Engagement with Neutral Convoy",
+          "description": "In a simulated escalation, enemy fire begins while a neutral convoy passes nearby. How do you employ ship weapons?",
+          "options": [
+            "Use evasive maneuvers and let allied ships engage instead.",
+            "Fire unrestricted to eliminate the threat immediately.",
+            "Cease fire until convoy clears, risking further hits.",
+            "Adjust firing arcs to avoid the convoy and return precision fire.",
+            "Request permission to use area-effect ordnance from command."
+          ],
+          "points": [
+            7,
+            1,
+            6,
+            9,
+            4
+          ]
+        },
+        {
+          "id": "SWS4",
+          "title": "Coordinated Strike to Minimize Damage",
+          "description": "Your task group must disable a fortified target near civilian infrastructure. Decide how to coordinate weapons use across the group.",
+          "options": [
+            "Hold fire and attempt to capture kinetically rather than destroy.",
+            "Use synchronized volleys to overwhelm defenses quickly.",
+            "Assign a single lead ship to perform a precision strike pattern.",
+            "Concentrate a torpedo salvo from one ship to limit collateral effects.",
+            "Allow each ship to engage independently as they see fit."
+          ],
+          "points": [
+            5,
+            6,
+            9,
+            8,
+            2
+          ]
+        },
+        {
+          "id": "SWS5",
+          "title": "Non-Lethal Disabling",
+          "description": "An unarmed freighter refuses boarding and attempts to flee. You must use ship weapons to stop it without causing loss of life.",
+          "options": [
+            "Allow the freighter to escape and log the incident for investigation.",
+            "Target life-support systems to force surrender (extreme measure).",
+            "Fire precise disabling shots at engines and comms.",
+            "Send boarding party to perform a non-lethal takedown.",
+            "Engage tractor beams to stop and hold the freighter."
+          ],
+          "points": [
+            3,
+            1,
+            8,
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Personal Weapons",
+      "scenarios": [
+        {
+          "id": "PWU1",
+          "title": "Authorized Use Under Fire",
+          "description": "During an away mission, a hostile combatant opens fire on your squad. You must decide how a cadet should employ their issued phaser.",
+          "options": [
+            "Disengage and fall back to a safer location.",
+            "Attempt to disable the attacker\u2019s weapon with a targeted shot.",
+            "Take cover and coordinate with squad for a non-lethal takedown.",
+            "Use lethal setting to stop the threat immediately.",
+            "Switch to stun setting and neutralize the attacker."
+          ],
+          "points": [
+            5,
+            7,
+            8,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "PWU2",
+          "title": "Graduated Force",
+          "description": "A suspect resists arrest but is not actively lethal. Choose the appropriate personal-weapon response consistent with Federation use-of-force principles.",
+          "options": [
+            "Attempt negotiation and de-escalation before firing.",
+            "Warn then use escalating pulse intensity if resistance continues.",
+            "Use lethal force immediately to ensure control.",
+            "Use non-firearm restraints and call for backup.",
+            "Employ stun pulses to incapacitate temporarily."
+          ],
+          "points": [
+            6,
+            8,
+            1,
+            7,
+            9
+          ]
+        },
+        {
+          "id": "PWU3",
+          "title": "Ambush Reaction",
+          "description": "Your team is ambushed in a narrow corridor. How should cadets employ their sidearms to maximize team survival?",
+          "options": [
+            "Attempt to flank using hand signals and coordinated shots.",
+            "Drop weapons and attempt to hide peacefully.",
+            "Choke-point suppressive stun fire while breaching.",
+            "Retreat in disorder and fire indiscriminately.",
+            "Use aimed lethal shots at obvious hostile combatants only."
+          ],
+          "points": [
+            8,
+            2,
+            9,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "PWU4",
+          "title": "Non-Lethal Apprehension",
+          "description": "A dangerous but surrender-capable target is cornered. You must use personal weapons to subdue without permanent harm.",
+          "options": [
+            "Use entanglement devices (net or restrainer) if available.",
+            "Employ targeted stun to immobilize.",
+            "Attempt a close-quarters takedown to avoid firing.",
+            "Fire at weapon to disable it rather than the person.",
+            "Order team to stand down and attempt verbal compliance."
+          ],
+          "points": [
+            7,
+            9,
+            6,
+            8,
+            5
+          ]
+        },
+        {
+          "id": "PWU5",
+          "title": "Weapon Retention Under Threat",
+          "description": "An assailant attempts to wrest your sidearm during a scuffle. How should cadets use their weapon and training to retain it safely?",
+          "options": [
+            "Fire a warning shot to create distance.",
+            "Attempt to flee while keeping hold of the weapon.",
+            "Surrender weapon to avoid escalation.",
+            "Execute retention maneuver and apply a disabling stun at close range.",
+            "Drop the weapon and continue with hand-to-hand techniques."
+          ],
+          "points": [
+            4,
+            5,
+            1,
+            9,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tactical Drills",
+      "scenarios": [
+        {
+          "id": "TDU1",
+          "title": "Ambush Response",
+          "description": "Your squad is ambushed in an urban holosim. Demonstrate tactical use of team formation and weapons to regain initiative.",
+          "options": [
+            "Attempt to negotiate a temporary ceasefire.",
+            "Break contact and fall back to a defensible position.",
+            "Use smoke/obscurants and perform stealth extraction.",
+            "Execute suppression and coordinated flank to neutralize ambushers.",
+            "Hold position and call for reinforcements while returning controlled fire."
+          ],
+          "points": [
+            2,
+            6,
+            8,
+            9,
+            7
+          ]
+        },
+        {
+          "id": "TDU2",
+          "title": "Boarding Counter-Tactics",
+          "description": "Hostile boarders are attempting to control critical ship systems. Choose tactical options for countering boarders using available gear and weapons.",
+          "options": [
+            "Attempt to outmaneuver them and retake from another access point.",
+            "Seal bulkheads and engage boarders with focused stun fire.",
+            "Deploy counter-boarding team to reclaim the area.",
+            "Open vents to depressurize the corridor as deterrent (last resort).",
+            "Use area non-lethal dispersal (gas/ion) to incapacitate intruders."
+          ],
+          "points": [
+            6,
+            9,
+            8,
+            1,
+            7
+          ]
+        },
+        {
+          "id": "TDU3",
+          "title": "Stealth Night Ops",
+          "description": "A night-time infiltration requires silent movement and precise, non-lethal use of equipment.",
+          "options": [
+            "Abort mission due to high risk.",
+            "Use electro-stunners and silent takedowns to avoid detection.",
+            "Proceed noisily to draw defenders away from primary objective.",
+            "Use ranged tranquilizers to maintain distance.",
+            "Rely on tech (drones) instead of personal engagement."
+          ],
+          "points": [
+            1,
+            9,
+            3,
+            7,
+            8
+          ]
+        },
+        {
+          "id": "TDU4",
+          "title": "Joint Ops with Medical",
+          "description": "Tactical teams must secure a mass-casualty zone while minimizing further injuries. How do you employ tactics and weapons use?",
+          "options": [
+            "Neutralize all perceived threats before permitting medical entry.",
+            "Embed medics inside tactical teams for immediate triage under fire.",
+            "Use remote suppression to eliminate threats from a distance.",
+            "Withdraw and let medical teams operate independently.",
+            "Secure perimeter then allow medics in while providing overwatch with non-lethal suppression."
+          ],
+          "points": [
+            6,
+            8,
+            7,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "TDU5",
+          "title": "ROE Adherence Under Pressure",
+          "description": "Under provocation, you're ordered to hold fire. How should cadets use weapons responsibly while obeying ROE?",
+          "options": [
+            "Follow ROE strictly and use non-lethal options where possible.",
+            "Hold position and seek clarification while maintaining defensive posture.",
+            "Attempt capture with minimal force while documenting everything.",
+            "Disobey and neutralize threat immediately.",
+            "Withdraw to avoid escalation and report provocations."
+          ],
+          "points": [
+            9,
+            7,
+            8,
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hand-to-Hand Combat",
+      "scenarios": [
+        {
+          "id": "HHCU1",
+          "title": "Close-Quarters Subdual",
+          "description": "You must clear a corridor and subdue multiple hostile opponents without using energy weapons.",
+          "options": [
+            "Employ coordinated non-lethal takedowns using holds and restraints.",
+            "Attempt to isolate and engage one opponent at a time.",
+            "Call for ranged support to break the engagement.",
+            "Use improvised blunt instruments to incapacitate quickly.",
+            "Push through and avoid engagement if possible."
+          ],
+          "points": [
+            9,
+            8,
+            5,
+            7,
+            2
+          ]
+        },
+        {
+          "id": "HHCU2",
+          "title": "Defensive Escape",
+          "description": "A larger assailant grabs you in a close fight \u2014 use hand-to-hand techniques to escape and disable the threat.",
+          "options": [
+            "Execute practiced escape-and-redirect maneuver and disengage.",
+            "Attempt to break the hold and run.",
+            "Feign compliance to create an opening for counterattack.",
+            "Surrender to avoid injury.",
+            "Strike to incapacitate and follow with restraint."
+          ],
+          "points": [
+            9,
+            5,
+            7,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "HHCU3",
+          "title": "Non-Lethal Crowd Control",
+          "description": "A panicked crowd threatens to become violent. Use hand-to-hand and team tactics to de-escalate and protect civilians.",
+          "options": [
+            "Form containment lines and use non-lethal holds to isolate aggressors.",
+            "Withdraw and call reinforcements.",
+            "Use forceful suppression to disperse the crowd quickly.",
+            "Use calming announcements and physical guidance to move crowd safely.",
+            "Employ incapacitating darts to remove threats."
+          ],
+          "points": [
+            9,
+            2,
+            3,
+            8,
+            6
+          ]
+        },
+        {
+          "id": "HHCU4",
+          "title": "Weaponless Disarm",
+          "description": "An opponent tries to disarm you; employ hand-to-hand to retain control and neutralize them without a weapon.",
+          "options": [
+            "Use a disabling choke to end confrontation quickly.",
+            "Attempt to flee and create distance.",
+            "Drop weapon and use holds to incapacitate.",
+            "Perform retention and disarm technique and restrain.",
+            "Throw a joint lock and call for backup."
+          ],
+          "points": [
+            2,
+            4,
+            6,
+            9,
+            8
+          ]
+        },
+        {
+          "id": "HHCU5",
+          "title": "Precision Hostage Rescue",
+          "description": "You must enter a confined space to free a hostage using close-combat techniques without harming the hostage.",
+          "options": [
+            "Abort operation until more resources arrive.",
+            "Use precision entry, immediate restraint, and controlled holds.",
+            "Use deceptive maneuver to distract captors and extract hostage.",
+            "Negotiate release while tactical team readies non-lethal options.",
+            "Breach loudly to disorient captors and force compliance."
+          ],
+          "points": [
+            2,
+            9,
+            8,
+            6,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Investigation Techniques & Surveillance",
+      "scenarios": [
+        {
+          "id": "ISU1",
+          "title": "Forensic Use of Surveillance",
+          "description": "Surveillance footage hints at illicit activity. Choose how to use surveillance and investigation tools to confirm and act.",
+          "options": [
+            "Ignore until more obvious proof appears.",
+            "Shut down surveillance to avoid privacy concerns.",
+            "Deploy covert tracking to gather further evidence.",
+            "Forensically analyze footage, cross-check logs, and identify suspects.",
+            "Publicly accuse the suspect immediately based on circumstantial footage."
+          ],
+          "points": [
+            2,
+            3,
+            8,
+            9,
+            1
+          ]
+        },
+        {
+          "id": "ISU2",
+          "title": "Covert Shadowing",
+          "description": "You must tail a suspect through a crowded port without detection to observe rendezvous and actions.",
+          "options": [
+            "Confront suspect immediately to force a reaction.",
+            "Employ surveillance drones to shadow remotely and collect evidence.",
+            "Call in an overt tactical stop to apprehend quickly.",
+            "Maintain discreet distance and document behavior for later action.",
+            "Lose the tail and attempt to pick them up later using tech."
+          ],
+          "points": [
+            2,
+            8,
+            6,
+            9,
+            3
+          ]
+        },
+        {
+          "id": "ISU3",
+          "title": "Sensor-Based Sting",
+          "description": "Sensor anomalies indicate tampering with freight manifests. Use surveillance and investigation methods to catch the perpetrator in the act.",
+          "options": [
+            "Replace cargo with decoy and watch who accesses it.",
+            "Disable cargo access until full audit is complete.",
+            "Log anomalies and wait for larger pattern before acting.",
+            "Publicly accuse cargo personnel to pressure confession.",
+            "Set a monitored bait shipment and observe via covert sensors."
+          ],
+          "points": [
+            8,
+            4,
+            6,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "ISU4",
+          "title": "Undercover Interaction for Evidence",
+          "description": "You must pose as a civilian to collect evidence at a suspect meeting. Use tradecraft and surveillance to safely collect admissible evidence.",
+          "options": [
+            "Refuse undercover role and request a tech-based sting instead.",
+            "Plant false information to test responses and reveal collaborators.",
+            "Rely only on remote surveillance tech to avoid personal risk.",
+            "Approach suspects overtly and attempt to extract information quickly.",
+            "Adopt a deep cover identity and gather direct evidence while recording covertly."
+          ],
+          "points": [
+            2,
+            8,
+            6,
+            3,
+            9
+          ]
+        },
+        {
+          "id": "ISU5",
+          "title": "Tracing a Data Leak",
+          "description": "Classified materials are leaking from within the Academy. Choose investigative techniques to locate the source while preserving chain-of-evidence.",
+          "options": [
+            "Ignore until higher command mandates action.",
+            "Correlate access logs, device signatures, and physical movements to identify leaks.",
+            "Shut down network to stop further leaks immediately.",
+            "Publicly accuse the most likely suspect as a deterrent.",
+            "Monitor suspects covertly and collect incriminating data before acting."
+          ],
+          "points": [
+            2,
+            9,
+            4,
+            1,
+            8
+          ]
+        }
+      ]
+    }
+  ]
+}

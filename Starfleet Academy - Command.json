@@ -1,0 +1,505 @@
+{
+  "department": "Command",
+  "sections": [
+    {
+      "name": "Leadership",
+      "scenarios": [
+        {
+          "id": "L1",
+          "title": "Crew Morale Crisis",
+          "description": "Engineering and Security divisions are in conflict during a long patrol.",
+          "options": [
+            "Order both divisions to cooperate immediately.",
+            "Reassign personnel to balance workloads.",
+            "Privately meet with department heads.",
+            "Authorize extra shore leave at the next port.",
+            "Ignore tensions and focus on mission."
+          ],
+          "points": [
+            6,
+            5,
+            9,
+            8,
+            2
+          ]
+        },
+        {
+          "id": "L2",
+          "title": "Cadet Disobedience",
+          "description": "A cadet ignores an order during a simulation, nearly causing failure.",
+          "options": [
+            "Ignore the incident.",
+            "File an immediate disciplinary report.",
+            "Confront cadet publicly during debrief.",
+            "Report cadet to Academy Command.",
+            "Discuss privately to understand their reasoning."
+          ],
+          "points": [
+            1,
+            6,
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "id": "L3",
+          "title": "Medical Officer Protest",
+          "description": "Chief Medical Officer argues mission risks crew health and insists on halting.",
+          "options": [
+            "Overrule and proceed as planned.",
+            "Request medical officer propose alternatives.",
+            "Follow medical advice and halt mission.",
+            "Slow pace but continue mission.",
+            "Seek consensus from senior staff."
+          ],
+          "points": [
+            2,
+            9,
+            8,
+            7,
+            6
+          ]
+        },
+        {
+          "id": "L4",
+          "title": "Conflicting Orders",
+          "description": "Two superior officers issue contradictory orders during a drill.",
+          "options": [
+            "Clarify conflict before acting.",
+            "Ask both for joint clarification.",
+            "Stall until one rescinds.",
+            "Follow highest-ranking officer.",
+            "Choose order you agree with."
+          ],
+          "points": [
+            9,
+            8,
+            2,
+            6,
+            3
+          ]
+        },
+        {
+          "id": "L5",
+          "title": "Rescue Priority",
+          "description": "Two distress calls arrive \u2014 one Federation transport, one Klingon freighter.",
+          "options": [
+            "Request guidance from Starfleet Command.",
+            "Rescue Federation ship first.",
+            "Rescue Klingon ship first.",
+            "Split forces to attempt both.",
+            "Consult senior staff first."
+          ],
+          "points": [
+            4,
+            7,
+            6,
+            9,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Strategy",
+      "scenarios": [
+        {
+          "id": "S1",
+          "title": "Sensor Ghosts",
+          "description": "Unidentified contacts appear on long-range sensors, possibly cloaked vessels.",
+          "options": [
+            "Attempt sensor sweep.",
+            "Contact Starfleet Command for orders.",
+            "Raise shields and arm weapons.",
+            "Alter course to avoid ambush.",
+            "Maintain course and log anomaly."
+          ],
+          "points": [
+            9,
+            4,
+            5,
+            7,
+            3
+          ]
+        },
+        {
+          "id": "S2",
+          "title": "Diplomatic Escort",
+          "description": "You must escort a delegation through disputed space.",
+          "options": [
+            "Keep shields raised at all times.",
+            "Split escort force to cover more ground.",
+            "Take indirect route to avoid detection.",
+            "Maintain steady pace and visible presence.",
+            "Travel at maximum warp to minimize exposure."
+          ],
+          "points": [
+            5,
+            3,
+            7,
+            9,
+            6
+          ]
+        },
+        {
+          "id": "S3",
+          "title": "Romulan Intrusion",
+          "description": "Romulan ships cross into Federation space during exercises.",
+          "options": [
+            "Ignore and continue exercise.",
+            "Shadow them and call reinforcements.",
+            "Engage immediately.",
+            "Hail and demand explanation.",
+            "Intercept to block path."
+          ],
+          "points": [
+            1,
+            9,
+            4,
+            8,
+            7
+          ]
+        },
+        {
+          "id": "S4",
+          "title": "Asteroid Threat",
+          "description": "An asteroid threatens a colony world.",
+          "options": [
+            "Call for reinforcements.",
+            "Tractor beam it off course.",
+            "Destroy asteroid with torpedoes.",
+            "Split resources between tasks.",
+            "Evacuate colony."
+          ],
+          "points": [
+            8,
+            6,
+            7,
+            9,
+            5
+          ]
+        },
+        {
+          "id": "S5",
+          "title": "Fleet Exercise",
+          "description": "You command a cadet squadron in fleet battle simulation.",
+          "options": [
+            "Send half to flank enemy.",
+            "Split into pairs for flexibility.",
+            "Keep squadron tightly grouped.",
+            "Charge directly at enemy line.",
+            "Adopt defensive formation."
+          ],
+          "points": [
+            7,
+            9,
+            6,
+            3,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Starship Command Training",
+      "scenarios": [
+        {
+          "id": "C1",
+          "title": "Warp Core Breach",
+          "description": "Warp core containment is failing during a sim.",
+          "options": [
+            "Request assistance from nearby ship.",
+            "Boost containment fields.",
+            "Send engineers for repairs.",
+            "Eject the core.",
+            "Evacuate immediately."
+          ],
+          "points": [
+            4,
+            8,
+            7,
+            9,
+            5
+          ]
+        },
+        {
+          "id": "C2",
+          "title": "Shuttle Bay Fire",
+          "description": "A fire threatens shuttle bay fuel stores.",
+          "options": [
+            "Send suppression teams.",
+            "Evacuate shuttle bay personnel.",
+            "Tractor burning shuttle out.",
+            "Vent atmosphere.",
+            "Isolate bay and continue."
+          ],
+          "points": [
+            9,
+            7,
+            6,
+            8,
+            4
+          ]
+        },
+        {
+          "id": "C3",
+          "title": "First Contact",
+          "description": "A warp-capable species makes sudden contact.",
+          "options": [
+            "Wait to be hailed first.",
+            "Hail with Federation greeting.",
+            "Send away team.",
+            "Scan for weaknesses.",
+            "Retreat until orders arrive."
+          ],
+          "points": [
+            6,
+            9,
+            8,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "C4",
+          "title": "Computer Failure",
+          "description": "Primary systems crash during combat sim.",
+          "options": [
+            "Reboot computer.",
+            "Shut down non-essentials.",
+            "Request engineering override.",
+            "Retreat until restored.",
+            "Switch to manual control."
+          ],
+          "points": [
+            6,
+            8,
+            7,
+            4,
+            9
+          ]
+        },
+        {
+          "id": "C5",
+          "title": "Kobayashi Maru",
+          "description": "The classic no-win rescue scenario.",
+          "options": [
+            "Negotiate with attackers.",
+            "Devise unorthodox solution.",
+            "Call reinforcements first.",
+            "Refuse to enter Neutral Zone.",
+            "Attempt rescue anyway."
+          ],
+          "points": [
+            5,
+            9,
+            7,
+            4,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Flight Control",
+      "scenarios": [
+        {
+          "id": "F1",
+          "title": "Asteroid Field",
+          "description": "Ship enters dense asteroid field.",
+          "options": [
+            "Use autopilot.",
+            "Plot safe manual course.",
+            "Retreat.",
+            "Blast rocks with phasers.",
+            "Slow to impulse."
+          ],
+          "points": [
+            6,
+            9,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "id": "F2",
+          "title": "Battle Maneuvers",
+          "description": "Cadets practice evasive maneuvers.",
+          "options": [
+            "Dive into nebula for cover.",
+            "Request tactical support.",
+            "Attempt risky warp jumps.",
+            "Hold steady and return fire.",
+            "Perform evasive pattern Delta."
+          ],
+          "points": [
+            8,
+            5,
+            7,
+            6,
+            9
+          ]
+        },
+        {
+          "id": "F3",
+          "title": "Impulse Power Loss",
+          "description": "Impulse engines cut out near asteroid belt.",
+          "options": [
+            "Engage RCS thrusters.",
+            "Signal engineering team.",
+            "Switch to auxiliary power.",
+            "Attempt emergency restart.",
+            "Drift until fixed."
+          ],
+          "points": [
+            8,
+            6,
+            9,
+            7,
+            3
+          ]
+        },
+        {
+          "id": "F4",
+          "title": "Collision Course",
+          "description": "Civilian freighter drifts into ship\u2019s path.",
+          "options": [
+            "Execute emergency stop.",
+            "Ignore collision warning.",
+            "Engage tractor beam.",
+            "Hail freighter immediately.",
+            "Adjust course manually."
+          ],
+          "points": [
+            8,
+            1,
+            6,
+            7,
+            9
+          ]
+        },
+        {
+          "id": "F5",
+          "title": "Docking Procedure",
+          "description": "Cadets attempt precision docking at starbase.",
+          "options": [
+            "Request tug assistance.",
+            "Proceed without clearance.",
+            "Abort docking attempt.",
+            "Manually calculate trajectory.",
+            "Follow autopilot."
+          ],
+          "points": [
+            6,
+            2,
+            4,
+            9,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Navigation",
+      "scenarios": [
+        {
+          "id": "N1",
+          "title": "Gravitational Anomaly",
+          "description": "An anomaly disrupts navigational sensors.",
+          "options": [
+            "Wait it out.",
+            "Attempt direct passage.",
+            "Ignore anomaly.",
+            "Launch probe.",
+            "Plot course around it."
+          ],
+          "points": [
+            6,
+            3,
+            1,
+            9,
+            8
+          ]
+        },
+        {
+          "id": "N2",
+          "title": "Chart Discrepancy",
+          "description": "Star system doesn\u2019t match Federation maps.",
+          "options": [
+            "Ignore as error.",
+            "Update charts.",
+            "Launch probe.",
+            "Report discrepancy.",
+            "Re-scan with secondary sensors."
+          ],
+          "points": [
+            2,
+            9,
+            7,
+            6,
+            8
+          ]
+        },
+        {
+          "id": "N3",
+          "title": "Nebula Shortcut",
+          "description": "Navigation computer suggests risky shortcut through nebula.",
+          "options": [
+            "Send probe first.",
+            "Ignore computer suggestion.",
+            "Avoid nebula entirely.",
+            "Take shortcut.",
+            "Skirt edges cautiously."
+          ],
+          "points": [
+            8,
+            3,
+            9,
+            6,
+            7
+          ]
+        },
+        {
+          "id": "N4",
+          "title": "Sensor Ghosts",
+          "description": "Phantom contacts clutter navigational sensors.",
+          "options": [
+            "Hail Starfleet.",
+            "Ignore errors.",
+            "Alter course to avoid.",
+            "Run diagnostics.",
+            "Investigate with shuttle."
+          ],
+          "points": [
+            7,
+            1,
+            6,
+            9,
+            8
+          ]
+        },
+        {
+          "id": "N5",
+          "title": "Slingshot Maneuver",
+          "description": "Cadets attempt slingshot orbit around star.",
+          "options": [
+            "Calculate exact trajectory.",
+            "Simulate first in holodeck.",
+            "Proceed ignoring star\u2019s pull.",
+            "Abort as too dangerous.",
+            "Use autopilot."
+          ],
+          "points": [
+            9,
+            8,
+            1,
+            2,
+            6
+          ]
+        }
+      ]
+    }
+  ]
+}

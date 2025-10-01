@@ -1,0 +1,1505 @@
+{
+  "department": "Engineering",
+  "sections": [
+    {
+      "name": "Warp Core Operations",
+      "scenarios": [
+        {
+          "id": "WCO1",
+          "title": "Core Startup Drill",
+          "description": "Cadets must perform a complete warp core startup sequence from cold shutdown.",
+          "options": [
+            "Bypass diagnostics and go directly to startup.",
+            "Run partial test cycle before full ignition.",
+            "Engage antimatter flow after diagnostic checks.",
+            "Request instructor to perform startup.",
+            "Engage matter/antimatter injectors simultaneously."
+          ],
+          "points": [
+            1,
+            8,
+            9,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "WCO2",
+          "title": "Core Balancing Exercise",
+          "description": "Cadets must balance injector flow ratios for maximum efficiency at warp 5.",
+          "options": [
+            "Adjust injectors gradually while monitoring readouts.",
+            "Overcompensate flow to reach balance faster.",
+            "Call for command to authorize manual override.",
+            "Shut down warp core and restart.",
+            "Ignore imbalance and proceed at warp."
+          ],
+          "points": [
+            9,
+            5,
+            6,
+            4,
+            1
+          ]
+        },
+        {
+          "id": "WCO3",
+          "title": "Core Monitoring Assignment",
+          "description": "Cadets are tasked to log and interpret warp core telemetry during extended operations.",
+          "options": [
+            "Note only critical alerts for efficiency.",
+            "Simulate fault conditions to test monitoring.",
+            "Ignore minor fluctuations as irrelevant.",
+            "Record raw data without interpretation.",
+            "Track injector variance and report anomalies."
+          ],
+          "points": [
+            6,
+            7,
+            3,
+            5,
+            9
+          ]
+        },
+        {
+          "id": "WCO4",
+          "title": "Core Shutdown Sequence",
+          "description": "Cadets must execute a complete core shutdown without exceeding safety thresholds.",
+          "options": [
+            "Leave systems idle without full shutdown.",
+            "Deactivate injectors in reverse order.",
+            "Drop antimatter flow abruptly to save time.",
+            "Shut down only primary injectors.",
+            "Follow full shutdown checklist step by step."
+          ],
+          "points": [
+            2,
+            7,
+            1,
+            6,
+            9
+          ]
+        },
+        {
+          "id": "WCO5",
+          "title": "Core Drill Coordination",
+          "description": "During a training simulation, cadets coordinate warp core output with the bridge for a simulated pursuit.",
+          "options": [
+            "Refuse coordination and log only readings.",
+            "Overload warp core for temporary advantage.",
+            "Synchronize output with helm for acceleration bursts.",
+            "Run at steady output regardless of helm requests.",
+            "Ask instructor to assume coordination role."
+          ],
+          "points": [
+            3,
+            1,
+            9,
+            4,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Warp Field Geometry & Efficiency",
+      "scenarios": [
+        {
+          "id": "WF1",
+          "title": "Field Shaping Drill",
+          "description": "Cadets adjust warp field geometry for optimal travel across a nebula.",
+          "options": [
+            "Alter geometry for minimum drag through dense regions.",
+            "Maintain default field shape for simplicity.",
+            "Ignore helm input and adjust independently.",
+            "Request autopilot field configuration.",
+            "Experiment with unstable geometry for speed."
+          ],
+          "points": [
+            9,
+            3,
+            4,
+            5,
+            2
+          ]
+        },
+        {
+          "id": "WF2",
+          "title": "Efficiency Optimization",
+          "description": "Cadets attempt to extend antimatter reserves by optimizing warp field efficiency.",
+          "options": [
+            "Ignore efficiency and prioritize speed.",
+            "Shut down warp early to save resources.",
+            "Balance efficiency against travel time.",
+            "Tighten field geometry to reduce waste.",
+            "Run core at maximum output for performance."
+          ],
+          "points": [
+            3,
+            6,
+            8,
+            9,
+            2
+          ]
+        },
+        {
+          "id": "WF3",
+          "title": "Course Correction Exercise",
+          "description": "Cadets modify warp field geometry to execute a long-range course correction.",
+          "options": [
+            "Adjust field coils in sync with navigational inputs.",
+            "Overcompensate to test field limits.",
+            "Ask command for permission to bypass coils.",
+            "Delay correction until later in the mission.",
+            "Change field shape without notifying helm."
+          ],
+          "points": [
+            9,
+            5,
+            6,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "WF4",
+          "title": "Efficiency Test Logging",
+          "description": "Cadets measure and record warp field efficiency over a simulated week-long journey.",
+          "options": [
+            "Exaggerate improvements in the report.",
+            "Ignore fluctuations and submit averages.",
+            "Delegate to computer and skip logging.",
+            "Log data precisely and suggest optimizations.",
+            "Record only start and end points."
+          ],
+          "points": [
+            1,
+            2,
+            3,
+            9,
+            4
+          ]
+        },
+        {
+          "id": "WF5",
+          "title": "Instructor Challenge",
+          "description": "Instructors ask cadets to manually adjust warp fields during a simulated asteroid slalom.",
+          "options": [
+            "Ignore exercise and let computer handle it.",
+            "Overpower field coils for sharper turns.",
+            "Ask for step-by-step instructor guidance.",
+            "Hold geometry constant despite course changes.",
+            "Continuously fine-tune geometry in sync with helm."
+          ],
+          "points": [
+            1,
+            4,
+            2,
+            3,
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Emergency Warp Shutdown Protocols",
+      "scenarios": [
+        {
+          "id": "EWS1",
+          "title": "Rapid Shutdown Drill",
+          "description": "Cadets rehearse an emergency warp shutdown when sensors detect a subspace anomaly.",
+          "options": [
+            "Delay shutdown until command confirms.",
+            "Run partial shutdown without securing systems.",
+            "Ignore anomaly and continue at warp.",
+            "Drop antimatter flow immediately to stop quickly.",
+            "Follow emergency shutdown checklist exactly."
+          ],
+          "points": [
+            5,
+            3,
+            1,
+            7,
+            9
+          ]
+        },
+        {
+          "id": "EWS2",
+          "title": "Controlled Drop",
+          "description": "Cadets must execute a smooth warp exit to avoid stressing the hull.",
+          "options": [
+            "Cut all power simultaneously.",
+            "Delegate exit to autopilot.",
+            "Ignore orders and maintain warp.",
+            "Gradually reduce field strength per manual.",
+            "Drop warp instantly."
+          ],
+          "points": [
+            3,
+            6,
+            1,
+            9,
+            2
+          ]
+        },
+        {
+          "id": "EWS3",
+          "title": "Team Coordination",
+          "description": "During a simulated pursuit, cadets coordinate shutdown with helm to minimize drift.",
+          "options": [
+            "Ignore pursuit scenario.",
+            "Delay shutdown until after maneuver.",
+            "Let computer decide optimal timing.",
+            "Shut down without consulting helm.",
+            "Synchronize shutdown timing with navigational input."
+          ],
+          "points": [
+            1,
+            6,
+            5,
+            4,
+            9
+          ]
+        },
+        {
+          "id": "EWS4",
+          "title": "Systems Lockdown Drill",
+          "description": "Cadets are tasked to secure antimatter storage following a warp drop.",
+          "options": [
+            "Seal injectors and activate magnetic containment.",
+            "Ignore procedure and await orders.",
+            "Leave systems idle without securing.",
+            "Delegate security to engineering computer.",
+            "Purge antimatter to space immediately."
+          ],
+          "points": [
+            9,
+            1,
+            2,
+            5,
+            4
+          ]
+        },
+        {
+          "id": "EWS5",
+          "title": "Instructor Review",
+          "description": "Instructor asks cadets to repeat shutdown procedure under timed conditions.",
+          "options": [
+            "Rely on computer automation.",
+            "Ask for extra time before starting.",
+            "Follow full checklist quickly but accurately.",
+            "Skip steps to improve speed.",
+            "Refuse timed drill."
+          ],
+          "points": [
+            6,
+            2,
+            9,
+            3,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EPS Power Distribution",
+      "scenarios": [
+        {
+          "id": "EPS1",
+          "title": "Mission Power Planning",
+          "description": "Cadets allocate EPS power for an exploration mission with scanning priority.",
+          "options": [
+            "Balance evenly across all systems.",
+            "Overpower shields in case of danger.",
+            "Ignore distribution planning.",
+            "Cut replicators to boost propulsion.",
+            "Favor sensors and reroute from non-critical systems."
+          ],
+          "points": [
+            7,
+            5,
+            1,
+            8,
+            9
+          ]
+        },
+        {
+          "id": "EPS2",
+          "title": "Combat Distribution Drill",
+          "description": "Cadets must reroute EPS power for a simulated battle.",
+          "options": [
+            "Prioritize shields and weapons.",
+            "Keep propulsion as top priority.",
+            "Ignore power distribution requests.",
+            "Cut life support to power weapons.",
+            "Balance all systems equally."
+          ],
+          "points": [
+            9,
+            7,
+            2,
+            1,
+            6
+          ]
+        },
+        {
+          "id": "EPS3",
+          "title": "Survey Mission Allocation",
+          "description": "Cadets allocate power during a planetary survey.",
+          "options": [
+            "Ignore sensor priority.",
+            "Divert to weapons just in case.",
+            "Balance all ship functions.",
+            "Cut propulsion for maximum sensor output.",
+            "Prioritize sensors and lab modules."
+          ],
+          "points": [
+            2,
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "id": "EPS4",
+          "title": "Adaptive Reallocation",
+          "description": "During training, mission profile changes from survey to combat.",
+          "options": [
+            "Ask bridge for confirmation before changing.",
+            "Shift from sensors to shields and weapons.",
+            "Cut all labs offline immediately.",
+            "Overpower propulsion regardless.",
+            "Ignore and keep current allocation."
+          ],
+          "points": [
+            7,
+            9,
+            6,
+            5,
+            2
+          ]
+        },
+        {
+          "id": "EPS5",
+          "title": "Instructor Challenge",
+          "description": "Instructor requires cadets to keep sensors and weapons balanced during an unpredictable scenario.",
+          "options": [
+            "Continuously adjust EPS allocations.",
+            "Request assistance from senior officer.",
+            "Ignore balance and favor one system.",
+            "Abandon scenario.",
+            "Delegate to autopilot systems."
+          ],
+          "points": [
+            9,
+            7,
+            2,
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computer Core & Software Operations",
+      "scenarios": [
+        {
+          "id": "CC1",
+          "title": "Diagnostics Scheduling",
+          "description": "Cadets schedule diagnostics to minimize disruption.",
+          "options": [
+            "Schedule during low-traffic hours.",
+            "Skip diagnostics entirely.",
+            "Balance partial diagnostics across systems.",
+            "Run diagnostics immediately regardless.",
+            "Ask for command override."
+          ],
+          "points": [
+            9,
+            1,
+            7,
+            6,
+            4
+          ]
+        },
+        {
+          "id": "CC2",
+          "title": "System Load Balancing",
+          "description": "Cadets optimize computer core resources during peak operations.",
+          "options": [
+            "Delegate to autopilot completely.",
+            "Prioritize bridge functions.",
+            "Shift workloads to auxiliary processors.",
+            "Overload main core for efficiency.",
+            "Ignore balancing."
+          ],
+          "points": [
+            6,
+            8,
+            9,
+            5,
+            1
+          ]
+        },
+        {
+          "id": "CC3",
+          "title": "Log Management",
+          "description": "Cadets must organize system logs for analysis.",
+          "options": [
+            "Fabricate log entries for efficiency.",
+            "Delete all logs to save memory.",
+            "Export logs to portable storage.",
+            "Ignore minor logs.",
+            "Sort logs and archive by system."
+          ],
+          "points": [
+            3,
+            1,
+            7,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "CC4",
+          "title": "Software Update Drill",
+          "description": "Cadets must apply software updates during a simulated mission.",
+          "options": [
+            "Install all updates immediately.",
+            "Request instructor to handle updates.",
+            "Update in phases with testing.",
+            "Delay updates until end of mission.",
+            "Skip updates entirely."
+          ],
+          "points": [
+            6,
+            1,
+            9,
+            4,
+            2
+          ]
+        },
+        {
+          "id": "CC5",
+          "title": "System Prioritization",
+          "description": "Cadets decide which ship systems receive priority in computing resources.",
+          "options": [
+            "Favor science labs and sensors.",
+            "Favor holodecks for training.",
+            "Equal distribution across systems.",
+            "Favor navigation and tactical.",
+            "Ignore prioritization entirely."
+          ],
+          "points": [
+            8,
+            2,
+            7,
+            9,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Replicator Systems & Diagnostics",
+      "scenarios": [
+        {
+          "id": "RS1",
+          "title": "Pattern Test",
+          "description": "Cadets test replicator by creating multiple copies of complex tools.",
+          "options": [
+            "Skip test and log success.",
+            "Assume all outputs are correct.",
+            "Run only one replication test.",
+            "Check molecular integrity for each tool.",
+            "Delegate testing to another cadet."
+          ],
+          "points": [
+            1,
+            2,
+            4,
+            9,
+            3
+          ]
+        },
+        {
+          "id": "RS2",
+          "title": "Nutritional Verification",
+          "description": "Cadets confirm nutritional accuracy of replicated meals.",
+          "options": [
+            "Ignore nutrition and serve anyway.",
+            "Ask medical staff to confirm.",
+            "Taste-test only.",
+            "Assume computer database is correct.",
+            "Run scans for molecular balance."
+          ],
+          "points": [
+            1,
+            7,
+            4,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "RS3",
+          "title": "Supply Programming",
+          "description": "Cadets must program replicators for mission-specific supplies.",
+          "options": [
+            "Load supply patterns and verify checksums.",
+            "Ignore assignment.",
+            "Load incorrect patterns deliberately.",
+            "Request instructor to load patterns.",
+            "Skip checksum verification."
+          ],
+          "points": [
+            9,
+            2,
+            1,
+            6,
+            3
+          ]
+        },
+        {
+          "id": "RS4",
+          "title": "Emergency Reprogramming",
+          "description": "Cadets reprogram replicator to create emergency medical supplies.",
+          "options": [
+            "Ignore and request real supplies.",
+            "Load verified medical pattern libraries.",
+            "Attempt to improvise formula manually.",
+            "Delay programming.",
+            "Use entertainment patterns as base."
+          ],
+          "points": [
+            2,
+            9,
+            5,
+            3,
+            1
+          ]
+        },
+        {
+          "id": "RS5",
+          "title": "Diagnostics Cycle",
+          "description": "Cadets run diagnostics on multiple replicators before deployment.",
+          "options": [
+            "Skip diagnostics.",
+            "Run minimal tests only.",
+            "Run full diagnostic cycle.",
+            "Delegate to automation.",
+            "Delay until after deployment."
+          ],
+          "points": [
+            1,
+            6,
+            9,
+            5,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Atmosphere Regulation & Scrubbers",
+      "scenarios": [
+        {
+          "id": "AR1",
+          "title": "Oxygen Mix Drill",
+          "description": "Cadets must maintain proper O\u2082/CO\u2082 balance during a drill.",
+          "options": [
+            "Ignore balance and trust system.",
+            "Overcompensate airflow manually.",
+            "Continuously adjust scrubbers.",
+            "Request medical to monitor crew only.",
+            "Shut scrubbers down."
+          ],
+          "points": [
+            2,
+            5,
+            9,
+            3,
+            1
+          ]
+        },
+        {
+          "id": "AR2",
+          "title": "Deck Balance Simulation",
+          "description": "Cadets balance atmosphere levels across multiple decks.",
+          "options": [
+            "Reroute airflow manually.",
+            "Wait for system to stabilize itself.",
+            "Ignore entire simulation.",
+            "Seal off decks and ignore problem.",
+            "Adjust by equalizing across ship."
+          ],
+          "points": [
+            9,
+            3,
+            1,
+            2,
+            8
+          ]
+        },
+        {
+          "id": "AR3",
+          "title": "Scrubber Efficiency Test",
+          "description": "Cadets test efficiency under maximum crew load.",
+          "options": [
+            "Delegate results to automation.",
+            "Ignore results.",
+            "Increase cycle frequency.",
+            "Run partial cycle.",
+            "Delay test."
+          ],
+          "points": [
+            4,
+            1,
+            9,
+            3,
+            2
+          ]
+        },
+        {
+          "id": "AR4",
+          "title": "Simulation Monitoring",
+          "description": "Cadets monitor life signs and adjust scrubbers during exercise.",
+          "options": [
+            "Let computer balance automatically.",
+            "Ignore life signs.",
+            "Abandon drill.",
+            "Track life signs closely.",
+            "Record only anomalies."
+          ],
+          "points": [
+            6,
+            1,
+            2,
+            9,
+            5
+          ]
+        },
+        {
+          "id": "AR5",
+          "title": "Instructor Check",
+          "description": "Instructor tests cadets on quick adjustment ability.",
+          "options": [
+            "Refuse exercise.",
+            "Delay for analysis.",
+            "Ask for instructions.",
+            "Adjust airflow immediately.",
+            "Ignore order."
+          ],
+          "points": [
+            2,
+            5,
+            6,
+            9,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Thermal Control & Climate Stability",
+      "scenarios": [
+        {
+          "id": "TC1",
+          "title": "Cargo Bay Stability",
+          "description": "Cadets regulate temperature for sensitive cargo.",
+          "options": [
+            "Adjust thermal regulators gradually.",
+            "Overcool entire bay.",
+            "Request cargo relocation.",
+            "Ignore stability requirement.",
+            "Shut system off."
+          ],
+          "points": [
+            9,
+            6,
+            5,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "TC2",
+          "title": "Crew Deck Adjustment",
+          "description": "Cadets maintain thermal comfort across crew quarters.",
+          "options": [
+            "Overheat decks to stress-test system.",
+            "Shut down climate system entirely.",
+            "Favor officer quarters only.",
+            "Balance thermal regulators by deck.",
+            "Ignore crew comfort."
+          ],
+          "points": [
+            4,
+            3,
+            2,
+            9,
+            1
+          ]
+        },
+        {
+          "id": "TC3",
+          "title": "Lab Temperature Control",
+          "description": "Cadets stabilize climate for sensitive science experiments.",
+          "options": [
+            "Move experiments to cargo bay instead.",
+            "Overcool labs to guarantee equipment safety.",
+            "Assign climate control to computer automation only.",
+            "Ignore minor fluctuations.",
+            "Maintain precise lab temperature via direct monitoring."
+          ],
+          "points": [
+            2,
+            6,
+            5,
+            3,
+            9
+          ]
+        },
+        {
+          "id": "TC4",
+          "title": "Engineering Bay Stability",
+          "description": "Cadets regulate heat output from heavy machinery in engineering.",
+          "options": [
+            "Run fans only instead of full regulation.",
+            "Overcool engineering deck unnecessarily.",
+            "Balance cooling with machinery operation levels.",
+            "Ignore hot spots and continue work.",
+            "Request instructor intervention."
+          ],
+          "points": [
+            2,
+            4,
+            9,
+            3,
+            6
+          ]
+        },
+        {
+          "id": "TC5",
+          "title": "Instructor Thermal Drill",
+          "description": "Instructor simulates rising heat across ship; cadets respond.",
+          "options": [
+            "Delegate control to holodeck AI.",
+            "Adjust regulators shipwide to stabilize.",
+            "Ignore drill until alarms escalate.",
+            "Overpower cooling systems despite energy costs.",
+            "Seal affected decks and abandon them."
+          ],
+          "points": [
+            4,
+            9,
+            1,
+            7,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Biohazard Containment Protocols",
+      "scenarios": [
+        {
+          "id": "BC1",
+          "title": "Containment Drill",
+          "description": "Cadets practice sealing ventilation after simulated biohazard alert.",
+          "options": [
+            "Shut down life support across ship.",
+            "Seal ducts and activate biofilters.",
+            "Ignore warning alarms.",
+            "Overpower scrubbers at max setting.",
+            "Wait for medical staff to respond."
+          ],
+          "points": [
+            2,
+            9,
+            1,
+            7,
+            5
+          ]
+        },
+        {
+          "id": "BC2",
+          "title": "Decontamination Exercise",
+          "description": "Cadets run a controlled decon cycle in cargo bay.",
+          "options": [
+            "Skip sweep for speed.",
+            "Overpower filters to finish faster.",
+            "Shut down bay instead of cleaning.",
+            "Activate biofilter sweep and monitor progress.",
+            "Delegate to another team."
+          ],
+          "points": [
+            1,
+            6,
+            2,
+            9,
+            4
+          ]
+        },
+        {
+          "id": "BC3",
+          "title": "Simulation Containment",
+          "description": "Instructor simulates pathogen spread; cadets isolate zones.",
+          "options": [
+            "Deactivate scrubbers to conserve power.",
+            "Evacuate crew only without sealing.",
+            "Move all crew to one deck instead.",
+            "Ignore containment order.",
+            "Seal bulkheads and reroute air circulation."
+          ],
+          "points": [
+            2,
+            5,
+            4,
+            1,
+            9
+          ]
+        },
+        {
+          "id": "BC4",
+          "title": "Medical Coordination",
+          "description": "Cadets coordinate with sickbay during simulated biohazard.",
+          "options": [
+            "Follow medical instructions for filter settings.",
+            "Ignore medical requests.",
+            "Shut down all systems entirely.",
+            "Apply random filter cycles.",
+            "Run maximum sterilization without approval."
+          ],
+          "points": [
+            9,
+            1,
+            2,
+            3,
+            6
+          ]
+        },
+        {
+          "id": "BC5",
+          "title": "Instructor Biohazard Test",
+          "description": "Instructor demands quick containment during drill.",
+          "options": [
+            "Seal ducts instantly and engage biofilters.",
+            "Request instructor assistance.",
+            "Shut down entire life support grid.",
+            "Ignore drill until later.",
+            "Wait for confirmation before acting."
+          ],
+          "points": [
+            9,
+            5,
+            2,
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pattern Buffer Operations",
+      "scenarios": [
+        {
+          "id": "PBO1",
+          "title": "Buffer Management Drill",
+          "description": "Cadets manage transporter buffer loads during training.",
+          "options": [
+            "Ignore overload warnings.",
+            "Drop passengers mid-transfer.",
+            "Delegate to automation only.",
+            "Balance queues across auxiliary buffers.",
+            "Abort drill entirely."
+          ],
+          "points": [
+            1,
+            2,
+            6,
+            9,
+            3
+          ]
+        },
+        {
+          "id": "PBO2",
+          "title": "Evacuation Queue",
+          "description": "Cadets simulate mass evacuation through transporter.",
+          "options": [
+            "Stagger cycles to prevent overload.",
+            "Ignore and beam everyone at once.",
+            "Run partial transports only.",
+            "Shut down transporter mid-use.",
+            "Reroute excess to cargo transporter."
+          ],
+          "points": [
+            9,
+            1,
+            3,
+            2,
+            8
+          ]
+        },
+        {
+          "id": "PBO3",
+          "title": "Buffer Prioritization",
+          "description": "Cadets must prioritize officer ranks in evacuation drill.",
+          "options": [
+            "Cancel exercise midway.",
+            "Ignore orders and beam randomly.",
+            "Beam civilians first against orders.",
+            "Let automation decide priorities.",
+            "Follow evacuation priority orders."
+          ],
+          "points": [
+            2,
+            1,
+            6,
+            4,
+            9
+          ]
+        },
+        {
+          "id": "PBO4",
+          "title": "Cycle Timing Drill",
+          "description": "Cadets adjust timing cycles to increase throughput.",
+          "options": [
+            "Overclock buffer regardless of risk.",
+            "Shorten cycles drastically for speed.",
+            "Keep default timing only.",
+            "Shorten cycles slightly with monitoring.",
+            "Ask instructor to adjust timing."
+          ],
+          "points": [
+            2,
+            5,
+            6,
+            9,
+            3
+          ]
+        },
+        {
+          "id": "PBO5",
+          "title": "Instructor Buffer Test",
+          "description": "Instructor tests cadets under heavy load conditions.",
+          "options": [
+            "Balance loads across all buffers carefully.",
+            "Transfer to cargo transporter for backup.",
+            "Abort drill early to avoid risk.",
+            "Ignore overload signs until failure.",
+            "Allow automation to fail safely."
+          ],
+          "points": [
+            9,
+            8,
+            3,
+            1,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Biofilter Safety & Tuning",
+      "scenarios": [
+        {
+          "id": "BST1",
+          "title": "Scan Setup Drill",
+          "description": "Cadets configure biofilters before away team beam-in.",
+          "options": [
+            "Ignore filters entirely.",
+            "Apply narrow scan only.",
+            "Skip filters for speed.",
+            "Run outdated presets.",
+            "Set parameters for broad-spectrum scan."
+          ],
+          "points": [
+            2,
+            6,
+            1,
+            3,
+            9
+          ]
+        },
+        {
+          "id": "BST2",
+          "title": "Microbe Filter Drill",
+          "description": "Cadets fine-tune filters for alien microbes.",
+          "options": [
+            "Ignore unusual readings.",
+            "Overpower filter indiscriminately.",
+            "Request sickbay to handle later.",
+            "Test and calibrate filter bands.",
+            "Abort drill mid-way."
+          ],
+          "points": [
+            1,
+            4,
+            5,
+            9,
+            2
+          ]
+        },
+        {
+          "id": "BST3",
+          "title": "Quarantine Exercise",
+          "description": "Cadets simulate quarantining patterns in buffer.",
+          "options": [
+            "Wait for medical confirmation only.",
+            "Skip quarantine to save time.",
+            "Purge patterns without analysis.",
+            "Isolate patterns safely in quarantine buffer.",
+            "Beam subjects directly aboard."
+          ],
+          "points": [
+            7,
+            2,
+            3,
+            9,
+            1
+          ]
+        },
+        {
+          "id": "BST4",
+          "title": "Precision Filter Training",
+          "description": "Cadets adjust filters to catch rare trace pathogens.",
+          "options": [
+            "Ignore minor contaminants.",
+            "Overpower filter and risk damage.",
+            "Delegate filter to automation.",
+            "Cancel transport mid-cycle.",
+            "Carefully tune and monitor output."
+          ],
+          "points": [
+            2,
+            4,
+            6,
+            3,
+            9
+          ]
+        },
+        {
+          "id": "BST5",
+          "title": "Instructor Biofilter Drill",
+          "description": "Instructor simulates hazardous organism return.",
+          "options": [
+            "Shut down transporter completely.",
+            "Ignore organism warning.",
+            "Release subjects directly.",
+            "Isolate patterns immediately.",
+            "Overpower filter field."
+          ],
+          "points": [
+            3,
+            1,
+            2,
+            9,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Emergency Transporter Protocols",
+      "scenarios": [
+        {
+          "id": "ETP1",
+          "title": "Emergency Evacuation Drill",
+          "description": "Cadets perform rapid evacuation using transporters.",
+          "options": [
+            "Delay evacuation until safe.",
+            "Ignore priority and beam randomly.",
+            "Abort drill entirely.",
+            "Prioritize medical and civilians.",
+            "Beam cargo first."
+          ],
+          "points": [
+            1,
+            2,
+            3,
+            9,
+            4
+          ]
+        },
+        {
+          "id": "ETP2",
+          "title": "Bridge Evacuation",
+          "description": "Cadets practice emergency bridge crew beam-out.",
+          "options": [
+            "Beam one at a time.",
+            "Run partial evacuation only.",
+            "Ignore orders.",
+            "Request automation to finish.",
+            "Transport all officers simultaneously."
+          ],
+          "points": [
+            6,
+            4,
+            1,
+            5,
+            9
+          ]
+        },
+        {
+          "id": "ETP3",
+          "title": "Medical Priority Transport",
+          "description": "Cadets handle evacuation with injured personnel.",
+          "options": [
+            "Ignore injuries.",
+            "Prioritize medical cases.",
+            "Beam equipment first.",
+            "Abort medical beam-out.",
+            "Overpower buffers for speed."
+          ],
+          "points": [
+            2,
+            9,
+            1,
+            3,
+            6
+          ]
+        },
+        {
+          "id": "ETP4",
+          "title": "Critical System Evacuation",
+          "description": "Cadets beam engineering teams during reactor simulation.",
+          "options": [
+            "Delegate to computer.",
+            "Beam engineers first to safety.",
+            "Abort evacuation mid-way.",
+            "Ignore engineers and save others.",
+            "Overpower transporter output."
+          ],
+          "points": [
+            4,
+            9,
+            3,
+            2,
+            5
+          ]
+        },
+        {
+          "id": "ETP5",
+          "title": "Instructor Emergency Drill",
+          "description": "Instructor demands complete ship evacuation simulation.",
+          "options": [
+            "Overload transporters recklessly.",
+            "Follow evacuation plan precisely.",
+            "Ignore plan and improvise.",
+            "Abort drill early.",
+            "Request instructor help."
+          ],
+          "points": [
+            3,
+            9,
+            2,
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Safety Interlocks & Fail-Safes",
+      "scenarios": [
+        {
+          "id": "SIFS1",
+          "title": "Holodeck Safety Setup",
+          "description": "Cadets configure safety interlocks before exercise.",
+          "options": [
+            "Disable safeties for realism.",
+            "Ignore setup and run program.",
+            "Skip safety entirely.",
+            "Delegate to computer defaults.",
+            "Enable all safeties per manual."
+          ],
+          "points": [
+            1,
+            2,
+            3,
+            6,
+            9
+          ]
+        },
+        {
+          "id": "SIFS2",
+          "title": "Force Threshold Drill",
+          "description": "Cadets adjust safety force thresholds.",
+          "options": [
+            "Set maximum threshold dangerously.",
+            "Cancel drill.",
+            "Delegate to automation.",
+            "Set safe but challenging threshold.",
+            "Ignore adjustment."
+          ],
+          "points": [
+            2,
+            3,
+            4,
+            9,
+            1
+          ]
+        },
+        {
+          "id": "SIFS3",
+          "title": "AI Restraint Setup",
+          "description": "Cadets configure behavioral safety limits on holodeck AI.",
+          "options": [
+            "Enable ethical restraints fully.",
+            "Abort setup.",
+            "Ignore restraints.",
+            "Overpower AI settings recklessly.",
+            "Delegate setup to computer."
+          ],
+          "points": [
+            9,
+            3,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "id": "SIFS4",
+          "title": "Emergency Stop Drill",
+          "description": "Cadets practice activating emergency stop.",
+          "options": [
+            "Trigger stop instantly when alarm sounds.",
+            "Delay stop intentionally.",
+            "Ignore alarm and continue.",
+            "Cancel drill.",
+            "Delegate to instructor."
+          ],
+          "points": [
+            9,
+            3,
+            1,
+            2,
+            5
+          ]
+        },
+        {
+          "id": "SIFS5",
+          "title": "Instructor Safety Test",
+          "description": "Instructor disables safeties; cadets must react.",
+          "options": [
+            "Complain about test.",
+            "Ignore and proceed unsafely.",
+            "Shut down holodeck entirely.",
+            "Re-enable safeties immediately.",
+            "Delegate to automation."
+          ],
+          "points": [
+            2,
+            1,
+            7,
+            9,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Holoemitter Maintenance & Coverage",
+      "scenarios": [
+        {
+          "id": "HMC1",
+          "title": "Coverage Setup",
+          "description": "Cadets configure emitters for full holodeck coverage.",
+          "options": [
+            "Ignore coverage gaps.",
+            "Overpower emitters dangerously.",
+            "Abort setup.",
+            "Delegate to automation.",
+            "Position emitters correctly."
+          ],
+          "points": [
+            2,
+            1,
+            3,
+            6,
+            9
+          ]
+        },
+        {
+          "id": "HMC2",
+          "title": "Emitter Calibration",
+          "description": "Cadets calibrate emitters during training.",
+          "options": [
+            "Overpower calibration.",
+            "Skip calibration.",
+            "Calibrate per manual.",
+            "Abort calibration.",
+            "Delegate to computer."
+          ],
+          "points": [
+            2,
+            1,
+            9,
+            3,
+            6
+          ]
+        },
+        {
+          "id": "HMC3",
+          "title": "Emitter Relay Test",
+          "description": "Cadets run emitter relay checks.",
+          "options": [
+            "Abort cycle.",
+            "Delegate to automation.",
+            "Skip cycle.",
+            "Run partial checks.",
+            "Run full check cycle."
+          ],
+          "points": [
+            2,
+            6,
+            1,
+            4,
+            9
+          ]
+        },
+        {
+          "id": "HMC4",
+          "title": "Coverage Simulation",
+          "description": "Cadets adjust emitters during complex simulation.",
+          "options": [
+            "Delegate to automation only.",
+            "Ignore coverage drift.",
+            "Monitor and adjust actively.",
+            "Overpower emitters regardless.",
+            "Abort sim when issues arise."
+          ],
+          "points": [
+            6,
+            1,
+            9,
+            4,
+            2
+          ]
+        },
+        {
+          "id": "HMC5",
+          "title": "Instructor Emitter Test",
+          "description": "Instructor disables part of emitter array.",
+          "options": [
+            "Compensate using others.",
+            "Overpower remaining emitters.",
+            "Delegate fix to automation.",
+            "Abort sim.",
+            "Ignore and proceed."
+          ],
+          "points": [
+            9,
+            3,
+            6,
+            4,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Emergency Shutdown Procedures",
+      "scenarios": [
+        {
+          "id": "ESP1",
+          "title": "Shutdown Drill",
+          "description": "Cadets practice full holodeck shutdown.",
+          "options": [
+            "Delegate to automation.",
+            "Abort drill.",
+            "Ignore shutdown request.",
+            "Skip steps.",
+            "Follow manual procedure."
+          ],
+          "points": [
+            6,
+            1,
+            3,
+            2,
+            9
+          ]
+        },
+        {
+          "id": "ESP2",
+          "title": "Timed Shutdown",
+          "description": "Cadets perform shutdown under time limit.",
+          "options": [
+            "Refuse timed test.",
+            "Delegate to automation.",
+            "Abort under pressure.",
+            "Skip checks for speed.",
+            "Execute quickly but correctly."
+          ],
+          "points": [
+            1,
+            6,
+            2,
+            3,
+            9
+          ]
+        },
+        {
+          "id": "ESP3",
+          "title": "Emergency Simulation Abort",
+          "description": "Cadets stop hazardous sim instantly.",
+          "options": [
+            "Delay abort.",
+            "Abort improperly.",
+            "Trigger emergency abort immediately.",
+            "Ignore hazard.",
+            "Delegate to instructor."
+          ],
+          "points": [
+            3,
+            2,
+            9,
+            1,
+            5
+          ]
+        },
+        {
+          "id": "ESP4",
+          "title": "System Reset Drill",
+          "description": "Cadets perform system reset after shutdown.",
+          "options": [
+            "Reset step by step.",
+            "Abort reset.",
+            "Skip reset.",
+            "Delegate to automation.",
+            "Perform partial reset."
+          ],
+          "points": [
+            9,
+            1,
+            2,
+            6,
+            4
+          ]
+        },
+        {
+          "id": "ESP5",
+          "title": "Instructor Shutdown Test",
+          "description": "Instructor simulates runaway program.",
+          "options": [
+            "Shut down immediately.",
+            "Delay until safe.",
+            "Abort exercise.",
+            "Ignore runaway.",
+            "Delegate to automation."
+          ],
+          "points": [
+            9,
+            4,
+            3,
+            1,
+            5
+          ]
+        }
+      ]
+    }
+  ]
+}
