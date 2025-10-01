@@ -1,0 +1,605 @@
+{
+  "department": "Command",
+  "study": [
+    {
+      "scenario": "Crew Morale Crisis",
+      "summary": "Starfleet crews operate under isolation, stress, and the constant specter of danger. Morale is not a luxury; it is a mission-critical factor. High morale preserves efficiency, discipline, and the ability to function as a unified team. Command officers must actively protect their crew\u2019s spirit to maintain readiness.",
+      "answers": [
+        {
+          "text": "Privately meet with department heads.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Privately meet with department heads.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Authorize extra shore leave at the next port.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Authorize extra shore leave at the next port.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Order both divisions to cooperate immediately.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Order both divisions to cooperate immediately.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Cadet Disobedience",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Discuss privately to understand their reasoning.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Discuss privately to understand their reasoning.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Report cadet to Academy Command.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Report cadet to Academy Command.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "File an immediate disciplinary report.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** File an immediate disciplinary report.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Medical Officer Protest",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Request medical officer propose alternatives.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Request medical officer propose alternatives.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Follow medical advice and halt mission.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Follow medical advice and halt mission.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Slow pace but continue mission.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Slow pace but continue mission.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Conflicting Orders",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Clarify conflict before acting.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Clarify conflict before acting.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Ask both for joint clarification.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Ask both for joint clarification.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Follow highest-ranking officer.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Follow highest-ranking officer.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Rescue Priority",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Split forces to attempt both.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Split forces to attempt both.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Rescue Federation ship first.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Rescue Federation ship first.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Rescue Klingon ship first.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Rescue Klingon ship first.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Sensor Ghosts",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Attempt sensor sweep.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Attempt sensor sweep.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Alter course to avoid ambush.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Alter course to avoid ambush.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Raise shields and arm weapons.",
+          "score": 5,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Raise shields and arm weapons.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Diplomatic Escort",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Maintain steady pace and visible presence.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Maintain steady pace and visible presence.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Take indirect route to avoid detection.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Take indirect route to avoid detection.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Travel at maximum warp to minimize exposure.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Travel at maximum warp to minimize exposure.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Romulan Intrusion",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Shadow them and call reinforcements.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Shadow them and call reinforcements.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Hail and demand explanation.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Hail and demand explanation.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Intercept to block path.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Intercept to block path.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Asteroid Threat",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Split resources between tasks.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Split resources between tasks.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Call for reinforcements.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Call for reinforcements.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Destroy asteroid with torpedoes.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Destroy asteroid with torpedoes.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Fleet Exercise",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Split into pairs for flexibility.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Split into pairs for flexibility.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Send half to flank enemy.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Send half to flank enemy.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Keep squadron tightly grouped.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Keep squadron tightly grouped.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Warp Core Breach",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Eject the core.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Eject the core.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Boost containment fields.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Boost containment fields.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Send engineers for repairs.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Send engineers for repairs.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Shuttle Bay Fire",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Send suppression teams.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Send suppression teams.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Vent atmosphere.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Vent atmosphere.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Evacuate shuttle bay personnel.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Evacuate shuttle bay personnel.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "First Contact",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Hail with Federation greeting.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Hail with Federation greeting.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Send away team.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Send away team.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Wait to be hailed first.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Wait to be hailed first.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Computer Failure",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Switch to manual control.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Switch to manual control.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Shut down non-essentials.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Shut down non-essentials.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Request engineering override.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Request engineering override.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Kobayashi Maru",
+      "summary": "Starfleet\u2019s charter includes rendering aid where possible, but captains must weigh humanitarian duty against operational risk. Reckless rescue attempts can cost lives, while ignoring distress calls undermines Federation principles.",
+      "answers": [
+        {
+          "text": "Devise unorthodox solution.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Devise unorthodox solution.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Call reinforcements first.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Call reinforcements first.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Attempt rescue anyway.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Attempt rescue anyway.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Asteroid Field",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Plot safe manual course.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Plot safe manual course.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Slow to impulse.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Slow to impulse.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Use autopilot.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Use autopilot.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Battle Maneuvers",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Perform evasive pattern Delta.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Perform evasive pattern Delta.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Dive into nebula for cover.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Dive into nebula for cover.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Attempt risky warp jumps.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Attempt risky warp jumps.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Impulse Power Loss",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Switch to auxiliary power.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Switch to auxiliary power.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Engage RCS thrusters.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Engage RCS thrusters.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Attempt emergency restart.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Attempt emergency restart.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Collision Course",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Adjust course manually.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Adjust course manually.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Execute emergency stop.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Execute emergency stop.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Hail freighter immediately.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Hail freighter immediately.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Docking Procedure",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Manually calculate trajectory.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Manually calculate trajectory.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Follow autopilot.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Follow autopilot.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Request tug assistance.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Request tug assistance.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Gravitational Anomaly",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Launch probe.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Launch probe.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Plot course around it.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Plot course around it.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Wait it out.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Wait it out.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Chart Discrepancy",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Update charts.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Update charts.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Re-scan with secondary sensors.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Re-scan with secondary sensors.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Launch probe.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Launch probe.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Nebula Shortcut",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Avoid nebula entirely.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Avoid nebula entirely.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Send probe first.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Send probe first.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Skirt edges cautiously.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Skirt edges cautiously.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Sensor Ghosts",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Run diagnostics.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Run diagnostics.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Investigate with shuttle.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Investigate with shuttle.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Hail Starfleet.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Hail Starfleet.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Slingshot Maneuver",
+      "summary": "Every command decision reflects the dual responsibilities of safety and principle. Captains must act with clarity, balancing tactical readiness, ethical codes, and Federation values in the face of uncertainty.",
+      "answers": [
+        {
+          "text": "Calculate exact trajectory.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Calculate exact trajectory.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Simulate first in holodeck.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Simulate first in holodeck.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Use autopilot.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Use autopilot.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    }
+  ]
+}
