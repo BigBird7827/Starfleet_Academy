@@ -65,7 +65,7 @@
     .orientation-title {
       font-size: 32pt;
       margin-top: 40px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: gold;
       text-shadow: -1px -1px 0 #000,  
                    1px -1px 0 #000,  
@@ -73,8 +73,21 @@
                    1px  1px 0 #000;
       text-align: center;
     }
+    .orientation-text {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      padding: 0 20px;
+      font-size: 16pt;
+      line-height: 1.5em;
+      color: gold;
+      text-align: center;
+      text-shadow: -1px -1px 0 #000,  
+                   1px -1px 0 #000,  
+                  -1px  1px 0 #000,  
+                   1px  1px 0 #000;
+    }
     .button-box {
-      margin-top: 150px;
+      margin-top: 50px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
@@ -144,8 +157,6 @@
     document.getElementById("entryForm").addEventListener("submit", function(e) {
       e.preventDefault();
       const name = document.getElementById("name").value;
-      const species = document.getElementById("species").value;
-      const department = document.getElementById("department").value;
 
       // Clear the page content
       document.body.innerHTML = "";
@@ -155,6 +166,12 @@
       title.className = "orientation-title";
       title.textContent = "Welcome to Starfleet Orientation";
       document.body.appendChild(title);
+
+      // Orientation text
+      const text = document.createElement("div");
+      text.className = "orientation-text";
+      text.innerHTML = `Congratulations on your acceptance to Starfleet Academy. You have chosen a field to specialize in, but you must complete all sections below to graduate. You may complete the modules below in any order, but once started, you must complete the module before moving to another.<br><br>There is no time limit to complete the modules themselves, but you have only 4 years to complete all of the modules.`;
+      document.body.appendChild(text);
 
       // Button box
       const buttonBox = document.createElement("div");
