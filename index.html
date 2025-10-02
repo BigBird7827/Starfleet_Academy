@@ -23,14 +23,19 @@
       text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
       text-align:center;
     }
+    /* Generic container (orientation, training) */
     .container {
       background:rgba(0,0,0,0.8);
       padding:20px 30px;
       border-radius:12px;
       box-shadow:0 0 20px var(--gold);
-      width:550px; /* narrower menu like before */
+      width:900px;
       margin:0 auto;
       text-align:left;
+    }
+    /* Main screen container should be narrower */
+    #mainScreen .container {
+      width:500px;
     }
     label{ display:block; margin:12px 0 5px; }
     input,select,button{ width:100%; padding:8px; margin-bottom:15px; border:none; border-radius:6px; }
