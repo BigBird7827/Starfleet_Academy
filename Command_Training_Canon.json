@@ -1,0 +1,605 @@
+{
+  "department": "Command",
+  "study": [
+    {
+      "scenario": "Crew Morale Crisis",
+      "summary": "Starfleet crews operate under isolation, stress, and the constant specter of danger. Morale is not a luxury; it is a mission-critical factor. High morale preserves efficiency, discipline, and the ability to function as a unified team. Command officers must actively protect their crew\u2019s spirit to maintain readiness.",
+      "answers": [
+        {
+          "text": "Privately meet with department heads.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Privately meet with department heads.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Authorize extra shore leave at the next port.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Authorize extra shore leave at the next port.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Order both divisions to cooperate immediately.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Order both divisions to cooperate immediately.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Cadet Disobedience",
+      "summary": "Starfleet expects cadets to put duty and truth above loyalty to peers. Academy precedent (e.g., inquiries like those faced by Nova Squadron) stresses candid debriefs and corrective mentorship over public humiliation, reinforcing that a command officer models integrity first.",
+      "answers": [
+        {
+          "text": "Discuss privately to understand their reasoning.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Discuss privately to understand their reasoning.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Report cadet to Academy Command.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Report cadet to Academy Command.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "File an immediate disciplinary report.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** File an immediate disciplinary report.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Medical Officer Protest",
+      "summary": "Under Starfleet Medical Regulation 121, Section A, a chief medical officer can relieve a superior, even the captain, if they are medically unfit or judgment is impaired. A commanding officer should solicit the CMO\u2019s alternatives and document risk acceptance before proceeding.",
+      "answers": [
+        {
+          "text": "Request medical officer propose alternatives.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Request medical officer propose alternatives.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Follow medical advice and halt mission.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Follow medical advice and halt mission.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Slow pace but continue mission.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Slow pace but continue mission.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Conflicting Orders",
+      "summary": "When orders conflict, officers confirm the most recent lawful directive through the chain of command (cf. Order 104 on command authority). Command\u2019s job is to seek clarification, preserve mission intent, and avoid unnecessary escalation while Prime Directive constraints remain in force.",
+      "answers": [
+        {
+          "text": "Clarify conflict before acting.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Clarify conflict before acting.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Ask both for joint clarification.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Ask both for joint clarification.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Follow highest-ranking officer.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Follow highest-ranking officer.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Rescue Priority",
+      "summary": "Federation doctrine prioritizes preservation of life, including former adversaries, while safeguarding the ship. Captains evaluate distress calls, threat environment, and treaty space before acting, coordinating with Starfleet if time permits and attempting parallel actions where feasible.",
+      "answers": [
+        {
+          "text": "Split forces to attempt both.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Split forces to attempt both.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Rescue Federation ship first.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Rescue Federation ship first.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Rescue Klingon ship first.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Rescue Klingon ship first.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Sensor Ghosts",
+      "summary": "Cloaking technology and interference (as seen in Neutral Zone engagements) can create phantom contacts and degraded returns. Best practice is to verify with multi-spectrum sweeps, passive tracking, and controlled readiness rather than revealing position with hasty weapons locks.",
+      "answers": [
+        {
+          "text": "Attempt sensor sweep.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Attempt sensor sweep.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Alter course to avoid ambush.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Alter course to avoid ambush.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Raise shields and arm weapons.",
+          "score": 5,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Raise shields and arm weapons.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Diplomatic Escort",
+      "summary": "Diplomatic transports emphasize visibility, neutrality, and control of approach vectors\u2014akin to missions ferrying ambassadors to Babel. Courses balance deterrence with de\u2011escalation, keeping sensors wide and responses measured to avoid incidents that could derail talks.",
+      "answers": [
+        {
+          "text": "Maintain steady pace and visible presence.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Maintain steady pace and visible presence.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Take indirect route to avoid detection.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Take indirect route to avoid detection.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Travel at maximum warp to minimize exposure.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Travel at maximum warp to minimize exposure.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Romulan Intrusion",
+      "summary": "Violations near the Romulan Neutral Zone require restraint, documentation, and notification to Starfleet. Shadow and report while avoiding treaty breaches; prepare for cloaked opponents and plasma or disruptor volleys, and call reinforcements rather than provoking a border incident.",
+      "answers": [
+        {
+          "text": "Shadow them and call reinforcements.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Shadow them and call reinforcements.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Hail and demand explanation.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Hail and demand explanation.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Intercept to block path.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Intercept to block path.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Asteroid Threat",
+      "summary": "Planetary defense playbooks combine deflection, fragmentation risk analysis, and civil\u2011defense coordination. Starships use tractor beams, ramscoops, or deflector harmonics and call for additional assets if time to impact and mass exceed one ship\u2019s capability.",
+      "answers": [
+        {
+          "text": "Split resources between tasks.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Split resources between tasks.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Call for reinforcements.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Call for reinforcements.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Destroy asteroid with torpedoes.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Destroy asteroid with torpedoes.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Fleet Exercise",
+      "summary": "War\u2011game exercises develop coordination and deception tactics under observation, with an emphasis on learning outcomes rather than \u2018winning.\u2019 Distributed elements, surprise constraints, and red\u2011cell tricks are common; captains are graded on adaptability and crew development.",
+      "answers": [
+        {
+          "text": "Split into pairs for flexibility.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Split into pairs for flexibility.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Send half to flank enemy.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Send half to flank enemy.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Keep squadron tightly grouped.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Keep squadron tightly grouped.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Warp Core Breach",
+      "summary": "If containment fails, procedure escalates from field reinforcement to rapid shutdown and, as a last resort, warp\u2011core ejection. Ejection sacrifices warp capability but preserves the crew; bridge must secure clearance, clear the ejection path, and brace for impulse\u2011only operations.",
+      "answers": [
+        {
+          "text": "Eject the core.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Eject the core.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Boost containment fields.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Boost containment fields.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Send engineers for repairs.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Send engineers for repairs.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Shuttle Bay Fire",
+      "summary": "Damage control doctrine prioritizes isolation, firefighting teams, and atmosphere management in hangars loaded with volatiles. Venting can be effective but risks hull integrity and casualties; commanders coordinate with Ops and Environmental for phased suppression and evacuation.",
+      "answers": [
+        {
+          "text": "Send suppression teams.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Send suppression teams.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Vent atmosphere.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Vent atmosphere.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Evacuate shuttle bay personnel.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Evacuate shuttle bay personnel.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "First Contact",
+      "summary": "First contact protocols favor communication, cultural due\u2011diligence, and non\u2011interference\u2014especially with pre\u2011warp societies. Standard procedure is to hail with a clear Federation introduction, establish intent, and proceed cautiously with linguistics and diplomatic support.",
+      "answers": [
+        {
+          "text": "Hail with Federation greeting.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Hail with Federation greeting.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Send away team.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Send away team.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Wait to be hailed first.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Wait to be hailed first.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Computer Failure",
+      "summary": "When primary systems falter, starships revert to manual control and isolate faults. Command sets reduced\u2011automation profiles, sheds non\u2011essentials, and coordinates with Engineering for bypasses while Ops runs diagnostics and restores redundancy.",
+      "answers": [
+        {
+          "text": "Switch to manual control.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Switch to manual control.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Shut down non-essentials.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Shut down non-essentials.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Request engineering override.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Request engineering override.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Kobayashi Maru",
+      "summary": "The Academy\u2019s no\u2011win scenario teaches that some situations cannot be solved by tactics alone. Evaluation focuses on leadership under pressure, ethical priorities, and the ability to accept loss while protecting as many lives as possible\u2014or, for some, redefining the problem.",
+      "answers": [
+        {
+          "text": "Devise unorthodox solution.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Devise unorthodox solution.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Call reinforcements first.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Call reinforcements first.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Attempt rescue anyway.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Attempt rescue anyway.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Asteroid Field",
+      "summary": "Standard navigation calls for dropping to impulse, plotting a manual course, and using sensors to map relative motion and safe corridors. Automated pilots are avoided when latency or sensor occlusion could cause collision cascades.",
+      "answers": [
+        {
+          "text": "Plot safe manual course.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Plot safe manual course.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Slow to impulse.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Slow to impulse.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Use autopilot.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Use autopilot.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Battle Maneuvers",
+      "summary": "Evasive patterns (e.g., Delta, Riker\u2011alpha variants) shift vectors and signatures to break target locks. Nebulae and anomalies can mask emissions but also degrade sensors; captains weigh cover against blindness and friendly\u2011fire risk.",
+      "answers": [
+        {
+          "text": "Perform evasive pattern Delta.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Perform evasive pattern Delta.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Dive into nebula for cover.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Dive into nebula for cover.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Attempt risky warp jumps.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Attempt risky warp jumps.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Impulse Power Loss",
+      "summary": "Without impulse power, RCS thrusters maintain attitude and minimal translation. Bridge shifts to auxiliary and battery power, prioritizes life support and shields, and coordinates with Engineering on grid reroutes and emergency restarts.",
+      "answers": [
+        {
+          "text": "Switch to auxiliary power.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Switch to auxiliary power.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Engage RCS thrusters.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Engage RCS thrusters.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Attempt emergency restart.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Attempt emergency restart.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Collision Course",
+      "summary": "COLLISION protocols emphasize immediate vector change, short\u2011burst reverse, and active hails. Helm executes manual corrections while Ops assigns proximity alerts and Navigation computes least\u2011energy diverge solutions.",
+      "answers": [
+        {
+          "text": "Adjust course manually.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Adjust course manually.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Execute emergency stop.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Execute emergency stop.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Hail freighter immediately.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Hail freighter immediately.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Docking Procedure",
+      "summary": "Manual docking uses relative\u2011velocity control, station approach windows, and tractor assists if available. Autopilots are helpful but crews train for manual solutions in case sensors or guidance degrade in traffic.",
+      "answers": [
+        {
+          "text": "Manually calculate trajectory.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Manually calculate trajectory.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Follow autopilot.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Follow autopilot.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Request tug assistance.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Request tug assistance.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Gravitational Anomaly",
+      "summary": "Unknown gravitic phenomena demand remote characterization\u2014launch probes, maintain standoff, and log trajectory perturbations. Command adjusts course on verified data and avoids extrapolations that could strand the ship.",
+      "answers": [
+        {
+          "text": "Launch probe.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Launch probe.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Plot course around it.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Plot course around it.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Wait it out.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Wait it out.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Chart Discrepancy",
+      "summary": "When stellar cartography conflicts with local reality, ships resurvey, cross\u2011check with secondary arrays, and submit updates to Starfleet Cartography. Probes and caution flags are issued to protect follow\u2011on traffic.",
+      "answers": [
+        {
+          "text": "Update charts.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Update charts.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Re-scan with secondary sensors.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Re-scan with secondary sensors.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Launch probe.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Launch probe.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Nebula Shortcut",
+      "summary": "Nebelas mask ships but disrupt sensors, comms, and shields. The safe course is to avoid entry; if unavoidable, skirt fringes at low speed with beacons and probes ahead and clear abort vectors plotted.",
+      "answers": [
+        {
+          "text": "Avoid nebula entirely.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Avoid nebula entirely.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Send probe first.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Send probe first.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Skirt edges cautiously.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Skirt edges cautiously.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Sensor Ghosts",
+      "summary": "Cloaking technology and interference (as seen in Neutral Zone engagements) can create phantom contacts and degraded returns. Best practice is to verify with multi-spectrum sweeps, passive tracking, and controlled readiness rather than revealing position with hasty weapons locks.",
+      "answers": [
+        {
+          "text": "Run diagnostics.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Run diagnostics.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Investigate with shuttle.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Investigate with shuttle.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Hail Starfleet.",
+          "score": 7,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Hail Starfleet.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    },
+    {
+      "scenario": "Slingshot Maneuver",
+      "summary": "The light\u2011speed breakaway \u2018slingshot\u2019 around a massive body is an extreme, high\u2011risk technique associated with time\u2011warp side\u2011effects. It requires precise calculations and is never attempted without extraordinary justification and command authorization.",
+      "answers": [
+        {
+          "text": "Calculate exact trajectory.",
+          "score": 9,
+          "type": "best",
+          "details": "**Best Answer:** Calculate exact trajectory.. This response exemplifies Starfleet ideals\u2014it balances duty, safety, and foresight, producing the highest likelihood of success while honoring Federation principles."
+        },
+        {
+          "text": "Simulate first in holodeck.",
+          "score": 8,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Simulate first in holodeck.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        },
+        {
+          "text": "Use autopilot.",
+          "score": 6,
+          "type": "alternate",
+          "details": "**Alternate Answer:** Use autopilot.. This option carries some merit and reflects Starfleet reasoning, but falls short of the optimal response. It may address the issue partially or introduce risks that the best answer avoids."
+        }
+      ]
+    }
+  ]
+}
