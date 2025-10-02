@@ -28,7 +28,7 @@
       padding:20px 30px;
       border-radius:12px;
       box-shadow:0 0 20px var(--gold);
-      width:900px;
+      width:550px; /* narrower menu like before */
       margin:0 auto;
       text-align:left;
     }
@@ -49,8 +49,8 @@
     .orientation-title{ font-family:'Orbitron', sans-serif; font-size:32pt; margin-top:60px; margin-bottom:20px; text-align:center; color:gold; text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; }
     .orientation-text{ max-width:800px; margin:0 auto 40px auto; padding:0 20px; font-size:16pt; line-height:1.5em; text-align:center; font-family:'Roboto', sans-serif; }
     .button-box{ margin-top:30px; display:grid; grid-template-columns:1fr 1fr; gap:20px; background:rgba(0,0,0,0.4); padding:30px; border-radius:12px; box-shadow:0 0 15px var(--gold); }
-    .button-box button{ font-size:20pt; padding:15px 25px; border-radius:12px; }
-    .return-btn{ padding:10px 20px; font-size:14pt; }
+    .button-box button{ font-size:20pt; padding:15px 25px; border-radius:12px; width:auto; }
+    .return-btn{ padding:10px 25px; font-size:14pt; width:auto; margin-top:20px; }
     #trainingPage { display:none; padding:20px; height:100vh; overflow-y:auto; -webkit-overflow-scrolling:touch; }
     .training-title { font-family:'Orbitron', sans-serif; font-size:28pt; margin-bottom:20px; text-align:center; color:gold; text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; }
     .training-section { margin-bottom:35px; padding-bottom:20px; border-bottom:1px solid #444; }
@@ -66,7 +66,7 @@
     .fixed-return {
       position:fixed;
       bottom:20px;
-      left:20px; /* near left margin */
+      left:20px;
       z-index:1000;
       width:auto;
     }
