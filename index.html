@@ -23,7 +23,6 @@
       text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
       text-align:center;
     }
-    /* Generic container (orientation, training) */
     .container {
       background:rgba(0,0,0,0.8);
       padding:20px 30px;
@@ -33,7 +32,6 @@
       margin:0 auto;
       text-align:left;
     }
-    /* Main screen container should be narrower */
     #mainScreen .container {
       width:500px;
     }
@@ -126,7 +124,7 @@
   <script>
     let player={ name:"" };
     const modules={
-      "Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
+      "Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command_Training_Canon.json",
       "Diplomacy":"Starfleet Academy - Diplomacy.json",
       "Engineering":"Starfleet Academy - Engineering.json",
       "Science":"Starfleet Academy - Science.json",
@@ -165,7 +163,8 @@
             data.study.forEach(item=>{
               const section=document.createElement("div");
               section.className="training-section";
-              let html = `<h3>${item.scenario}</h3><p>${item.summary}</p>`;
+              let summaryText = item.summary ? item.summary : "(No summary available)";
+              let html = `<h3>${item.scenario}</h3><p>${summaryText}</p>`;
               if(item.answers){
                 html += `<div class="answers">`;
                 item.answers.forEach(ans=>{
