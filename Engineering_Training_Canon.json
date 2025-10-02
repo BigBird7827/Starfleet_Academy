@@ -1,0 +1,1805 @@
+{
+  "department": "Engineering",
+  "study": [
+    {
+      "scenario": "Core Startup Drill",
+      "summary": "Starfleet engineering cadets must demonstrate mastery of controlled warp core startup, balancing antimatter injection with magnetic constriction fields to safely achieve ignition.",
+      "answers": [
+        {
+          "text": "Engage antimatter flow after diagnostic checks.",
+          "score": 9,
+          "type": "best",
+          "details": "Engage antimatter flow after diagnostic checks. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Run partial test cycle before full ignition.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Run partial test cycle before full ignition. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Engage matter/antimatter injectors simultaneously.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Engage matter/antimatter injectors simultaneously. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Core Balancing Exercise",
+      "summary": "Maintaining warp plasma balance requires precision in EPS flow regulation and field coil harmonics, preventing stress cascades across the system.",
+      "answers": [
+        {
+          "text": "Adjust injectors gradually while monitoring readouts.",
+          "score": 9,
+          "type": "best",
+          "details": "Adjust injectors gradually while monitoring readouts. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Call for command to authorize manual override.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Call for command to authorize manual override. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overcompensate flow to reach balance faster.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Overcompensate flow to reach balance faster. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Core Monitoring Assignment",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Core Monitoring Assignment.",
+      "answers": [
+        {
+          "text": "Track injector variance and report anomalies.",
+          "score": 9,
+          "type": "best",
+          "details": "Track injector variance and report anomalies. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Simulate fault conditions to test monitoring.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Simulate fault conditions to test monitoring. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Note only critical alerts for efficiency.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Note only critical alerts for efficiency. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Core Shutdown Sequence",
+      "summary": "Warp core shutdown drills emphasize staged antimatter cutoff, thermal bleed-off, and safing of magnetic containment to prevent destabilization.",
+      "answers": [
+        {
+          "text": "Follow full shutdown checklist step by step.",
+          "score": 9,
+          "type": "best",
+          "details": "Follow full shutdown checklist step by step. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Deactivate injectors in reverse order.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Deactivate injectors in reverse order. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Shut down only primary injectors.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Shut down only primary injectors. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Core Drill Coordination",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Core Drill Coordination.",
+      "answers": [
+        {
+          "text": "Synchronize output with helm for acceleration bursts.",
+          "score": 9,
+          "type": "best",
+          "details": "Synchronize output with helm for acceleration bursts. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Run at steady output regardless of helm requests.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Run at steady output regardless of helm requests. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Refuse coordination and log only readings.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Refuse coordination and log only readings. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Field Shaping Drill",
+      "summary": "Shaping warp or structural fields involves precise modulation of graviton polarity and alignment, ensuring vessel stability under varying conditions.",
+      "answers": [
+        {
+          "text": "Alter geometry for minimum drag through dense regions.",
+          "score": 9,
+          "type": "best",
+          "details": "Alter geometry for minimum drag through dense regions. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Request autopilot field configuration.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Request autopilot field configuration. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Ignore helm input and adjust independently.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Ignore helm input and adjust independently. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Efficiency Optimization",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Efficiency Optimization.",
+      "answers": [
+        {
+          "text": "Tighten field geometry to reduce waste.",
+          "score": 9,
+          "type": "best",
+          "details": "Tighten field geometry to reduce waste. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Balance efficiency against travel time.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Balance efficiency against travel time. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Shut down warp early to save resources.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Shut down warp early to save resources. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Course Correction Exercise",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Course Correction Exercise.",
+      "answers": [
+        {
+          "text": "Adjust field coils in sync with navigational inputs.",
+          "score": 9,
+          "type": "best",
+          "details": "Adjust field coils in sync with navigational inputs. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Ask command for permission to bypass coils.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Ask command for permission to bypass coils. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overcompensate to test field limits.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Overcompensate to test field limits. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Efficiency Test Logging",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Efficiency Test Logging.",
+      "answers": [
+        {
+          "text": "Log data precisely and suggest optimizations.",
+          "score": 9,
+          "type": "best",
+          "details": "Log data precisely and suggest optimizations. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Record only start and end points.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Record only start and end points. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to computer and skip logging.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Delegate to computer and skip logging. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Instructor Challenge",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Instructor Challenge.",
+      "answers": [
+        {
+          "text": "Continuously fine-tune geometry in sync with helm.",
+          "score": 9,
+          "type": "best",
+          "details": "Continuously fine-tune geometry in sync with helm. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overpower field coils for sharper turns.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Overpower field coils for sharper turns. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Hold geometry constant despite course changes.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Hold geometry constant despite course changes. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Rapid Shutdown Drill",
+      "summary": "Warp core shutdown drills emphasize staged antimatter cutoff, thermal bleed-off, and safing of magnetic containment to prevent destabilization.",
+      "answers": [
+        {
+          "text": "Follow emergency shutdown checklist exactly.",
+          "score": 9,
+          "type": "best",
+          "details": "Follow emergency shutdown checklist exactly. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Drop antimatter flow immediately to stop quickly.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Drop antimatter flow immediately to stop quickly. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delay shutdown until command confirms.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Delay shutdown until command confirms. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Controlled Drop",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Controlled Drop.",
+      "answers": [
+        {
+          "text": "Gradually reduce field strength per manual.",
+          "score": 9,
+          "type": "best",
+          "details": "Gradually reduce field strength per manual. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate exit to autopilot.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate exit to autopilot. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Cut all power simultaneously.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Cut all power simultaneously. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Team Coordination",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Team Coordination.",
+      "answers": [
+        {
+          "text": "Synchronize shutdown timing with navigational input.",
+          "score": 9,
+          "type": "best",
+          "details": "Synchronize shutdown timing with navigational input. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delay shutdown until after maneuver.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delay shutdown until after maneuver. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Let computer decide optimal timing.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Let computer decide optimal timing. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Systems Lockdown Drill",
+      "summary": "Computer system scenarios emphasize isolation of malfunctioning subroutines, protection of LCARS control, and restoration of ship automation.",
+      "answers": [
+        {
+          "text": "Seal injectors and activate magnetic containment.",
+          "score": 9,
+          "type": "best",
+          "details": "Seal injectors and activate magnetic containment. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate security to engineering computer.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Delegate security to engineering computer. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Purge antimatter to space immediately.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Purge antimatter to space immediately. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Instructor Review",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Instructor Review.",
+      "answers": [
+        {
+          "text": "Follow full checklist quickly but accurately.",
+          "score": 9,
+          "type": "best",
+          "details": "Follow full checklist quickly but accurately. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Rely on computer automation.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Rely on computer automation. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Skip steps to improve speed.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Skip steps to improve speed. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Mission Power Planning",
+      "summary": "Power distribution training involves rerouting via EPS taps, balancing between primary systems, and avoiding overload of auxiliary relays.",
+      "answers": [
+        {
+          "text": "Favor sensors and reroute from non-critical systems.",
+          "score": 9,
+          "type": "best",
+          "details": "Favor sensors and reroute from non-critical systems. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Cut replicators to boost propulsion.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Cut replicators to boost propulsion. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Balance evenly across all systems.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Balance evenly across all systems. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Combat Distribution Drill",
+      "summary": "Power distribution training involves rerouting via EPS taps, balancing between primary systems, and avoiding overload of auxiliary relays.",
+      "answers": [
+        {
+          "text": "Prioritize shields and weapons.",
+          "score": 9,
+          "type": "best",
+          "details": "Prioritize shields and weapons. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Keep propulsion as top priority.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Keep propulsion as top priority. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Balance all systems equally.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Balance all systems equally. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Survey Mission Allocation",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Survey Mission Allocation.",
+      "answers": [
+        {
+          "text": "Prioritize sensors and lab modules.",
+          "score": 9,
+          "type": "best",
+          "details": "Prioritize sensors and lab modules. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Cut propulsion for maximum sensor output.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Cut propulsion for maximum sensor output. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Balance all ship functions.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Balance all ship functions. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Adaptive Reallocation",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Adaptive Reallocation.",
+      "answers": [
+        {
+          "text": "Shift from sensors to shields and weapons.",
+          "score": 9,
+          "type": "best",
+          "details": "Shift from sensors to shields and weapons. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Ask bridge for confirmation before changing.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Ask bridge for confirmation before changing. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Cut all labs offline immediately.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Cut all labs offline immediately. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Instructor Challenge",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Instructor Challenge.",
+      "answers": [
+        {
+          "text": "Continuously adjust EPS allocations.",
+          "score": 9,
+          "type": "best",
+          "details": "Continuously adjust EPS allocations. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Request assistance from senior officer.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Request assistance from senior officer. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to autopilot systems.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Delegate to autopilot systems. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Diagnostics Scheduling",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Diagnostics Scheduling.",
+      "answers": [
+        {
+          "text": "Schedule during low-traffic hours.",
+          "score": 9,
+          "type": "best",
+          "details": "Schedule during low-traffic hours. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Balance partial diagnostics across systems.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Balance partial diagnostics across systems. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Run diagnostics immediately regardless.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Run diagnostics immediately regardless. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "System Load Balancing",
+      "summary": "Maintaining warp plasma balance requires precision in EPS flow regulation and field coil harmonics, preventing stress cascades across the system.",
+      "answers": [
+        {
+          "text": "Shift workloads to auxiliary processors.",
+          "score": 9,
+          "type": "best",
+          "details": "Shift workloads to auxiliary processors. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Prioritize bridge functions.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Prioritize bridge functions. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to autopilot completely.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate to autopilot completely. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Log Management",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Log Management.",
+      "answers": [
+        {
+          "text": "Sort logs and archive by system.",
+          "score": 9,
+          "type": "best",
+          "details": "Sort logs and archive by system. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Export logs to portable storage.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Export logs to portable storage. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Fabricate log entries for efficiency.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Fabricate log entries for efficiency. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Software Update Drill",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Software Update Drill.",
+      "answers": [
+        {
+          "text": "Update in phases with testing.",
+          "score": 9,
+          "type": "best",
+          "details": "Update in phases with testing. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Install all updates immediately.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Install all updates immediately. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delay updates until end of mission.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Delay updates until end of mission. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "System Prioritization",
+      "summary": "Computer system scenarios emphasize isolation of malfunctioning subroutines, protection of LCARS control, and restoration of ship automation.",
+      "answers": [
+        {
+          "text": "Favor navigation and tactical.",
+          "score": 9,
+          "type": "best",
+          "details": "Favor navigation and tactical. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Favor science labs and sensors.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Favor science labs and sensors. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Equal distribution across systems.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Equal distribution across systems. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Pattern Test",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Pattern Test.",
+      "answers": [
+        {
+          "text": "Check molecular integrity for each tool.",
+          "score": 9,
+          "type": "best",
+          "details": "Check molecular integrity for each tool. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Run only one replication test.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Run only one replication test. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate testing to another cadet.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Delegate testing to another cadet. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Nutritional Verification",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Nutritional Verification.",
+      "answers": [
+        {
+          "text": "Run scans for molecular balance.",
+          "score": 9,
+          "type": "best",
+          "details": "Run scans for molecular balance. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Ask medical staff to confirm.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Ask medical staff to confirm. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Taste-test only.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Taste-test only. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Supply Programming",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Supply Programming.",
+      "answers": [
+        {
+          "text": "Load supply patterns and verify checksums.",
+          "score": 9,
+          "type": "best",
+          "details": "Load supply patterns and verify checksums. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Request instructor to load patterns.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Request instructor to load patterns. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Skip checksum verification.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Skip checksum verification. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Emergency Reprogramming",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Emergency Reprogramming.",
+      "answers": [
+        {
+          "text": "Load verified medical pattern libraries.",
+          "score": 9,
+          "type": "best",
+          "details": "Load verified medical pattern libraries. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Attempt to improvise formula manually.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Attempt to improvise formula manually. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delay programming.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Delay programming. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Diagnostics Cycle",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Diagnostics Cycle.",
+      "answers": [
+        {
+          "text": "Run full diagnostic cycle.",
+          "score": 9,
+          "type": "best",
+          "details": "Run full diagnostic cycle. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Run minimal tests only.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Run minimal tests only. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to automation.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Delegate to automation. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Oxygen Mix Drill",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Oxygen Mix Drill.",
+      "answers": [
+        {
+          "text": "Continuously adjust scrubbers.",
+          "score": 9,
+          "type": "best",
+          "details": "Continuously adjust scrubbers. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overcompensate airflow manually.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Overcompensate airflow manually. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Request medical to monitor crew only.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Request medical to monitor crew only. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Deck Balance Simulation",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Deck Balance Simulation.",
+      "answers": [
+        {
+          "text": "Reroute airflow manually.",
+          "score": 9,
+          "type": "best",
+          "details": "Reroute airflow manually. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Adjust by equalizing across ship.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Adjust by equalizing across ship. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Wait for system to stabilize itself.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Wait for system to stabilize itself. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Scrubber Efficiency Test",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Scrubber Efficiency Test.",
+      "answers": [
+        {
+          "text": "Increase cycle frequency.",
+          "score": 9,
+          "type": "best",
+          "details": "Increase cycle frequency. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate results to automation.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Delegate results to automation. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Run partial cycle.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Run partial cycle. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Simulation Monitoring",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Simulation Monitoring.",
+      "answers": [
+        {
+          "text": "Track life signs closely.",
+          "score": 9,
+          "type": "best",
+          "details": "Track life signs closely. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Let computer balance automatically.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Let computer balance automatically. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Record only anomalies.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Record only anomalies. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Instructor Check",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Instructor Check.",
+      "answers": [
+        {
+          "text": "Adjust airflow immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Adjust airflow immediately. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Ask for instructions.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Ask for instructions. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delay for analysis.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Delay for analysis. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Cargo Bay Stability",
+      "summary": "Maintaining warp plasma balance requires precision in EPS flow regulation and field coil harmonics, preventing stress cascades across the system.",
+      "answers": [
+        {
+          "text": "Adjust thermal regulators gradually.",
+          "score": 9,
+          "type": "best",
+          "details": "Adjust thermal regulators gradually. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overcool entire bay.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Overcool entire bay. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Request cargo relocation.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Request cargo relocation. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Crew Deck Adjustment",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Crew Deck Adjustment.",
+      "answers": [
+        {
+          "text": "Balance thermal regulators by deck.",
+          "score": 9,
+          "type": "best",
+          "details": "Balance thermal regulators by deck. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overheat decks to stress-test system.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Overheat decks to stress-test system. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Shut down climate system entirely.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Shut down climate system entirely. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Lab Temperature Control",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Lab Temperature Control.",
+      "answers": [
+        {
+          "text": "Maintain precise lab temperature via direct monitoring.",
+          "score": 9,
+          "type": "best",
+          "details": "Maintain precise lab temperature via direct monitoring. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overcool labs to guarantee equipment safety.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Overcool labs to guarantee equipment safety. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Assign climate control to computer automation only.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Assign climate control to computer automation only. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Engineering Bay Stability",
+      "summary": "Maintaining warp plasma balance requires precision in EPS flow regulation and field coil harmonics, preventing stress cascades across the system.",
+      "answers": [
+        {
+          "text": "Balance cooling with machinery operation levels.",
+          "score": 9,
+          "type": "best",
+          "details": "Balance cooling with machinery operation levels. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Request instructor intervention.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Request instructor intervention. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overcool engineering deck unnecessarily.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Overcool engineering deck unnecessarily. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Instructor Thermal Drill",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Instructor Thermal Drill.",
+      "answers": [
+        {
+          "text": "Adjust regulators shipwide to stabilize.",
+          "score": 9,
+          "type": "best",
+          "details": "Adjust regulators shipwide to stabilize. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overpower cooling systems despite energy costs.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Overpower cooling systems despite energy costs. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate control to holodeck AI.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Delegate control to holodeck AI. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Containment Drill",
+      "summary": "Containment scenarios stress emergency procedures for antimatter regulation, rapid field reinforcement, and plasma venting to avert catastrophic failure.",
+      "answers": [
+        {
+          "text": "Seal ducts and activate biofilters.",
+          "score": 9,
+          "type": "best",
+          "details": "Seal ducts and activate biofilters. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overpower scrubbers at max setting.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Overpower scrubbers at max setting. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Wait for medical staff to respond.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Wait for medical staff to respond. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Decontamination Exercise",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Decontamination Exercise.",
+      "answers": [
+        {
+          "text": "Activate biofilter sweep and monitor progress.",
+          "score": 9,
+          "type": "best",
+          "details": "Activate biofilter sweep and monitor progress. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overpower filters to finish faster.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Overpower filters to finish faster. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to another team.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Delegate to another team. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Simulation Containment",
+      "summary": "Containment scenarios stress emergency procedures for antimatter regulation, rapid field reinforcement, and plasma venting to avert catastrophic failure.",
+      "answers": [
+        {
+          "text": "Seal bulkheads and reroute air circulation.",
+          "score": 9,
+          "type": "best",
+          "details": "Seal bulkheads and reroute air circulation. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Evacuate crew only without sealing.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Evacuate crew only without sealing. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Move all crew to one deck instead.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Move all crew to one deck instead. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Medical Coordination",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Medical Coordination.",
+      "answers": [
+        {
+          "text": "Follow medical instructions for filter settings.",
+          "score": 9,
+          "type": "best",
+          "details": "Follow medical instructions for filter settings. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Run maximum sterilization without approval.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Run maximum sterilization without approval. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Apply random filter cycles.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Apply random filter cycles. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Instructor Biohazard Test",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Instructor Biohazard Test.",
+      "answers": [
+        {
+          "text": "Seal ducts instantly and engage biofilters.",
+          "score": 9,
+          "type": "best",
+          "details": "Seal ducts instantly and engage biofilters. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Request instructor assistance.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Request instructor assistance. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Wait for confirmation before acting.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Wait for confirmation before acting. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Buffer Management Drill",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Buffer Management Drill.",
+      "answers": [
+        {
+          "text": "Balance queues across auxiliary buffers.",
+          "score": 9,
+          "type": "best",
+          "details": "Balance queues across auxiliary buffers. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to automation only.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate to automation only. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Abort drill entirely.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Abort drill entirely. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Evacuation Queue",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Evacuation Queue.",
+      "answers": [
+        {
+          "text": "Stagger cycles to prevent overload.",
+          "score": 9,
+          "type": "best",
+          "details": "Stagger cycles to prevent overload. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Reroute excess to cargo transporter.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Reroute excess to cargo transporter. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Run partial transports only.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Run partial transports only. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Buffer Prioritization",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Buffer Prioritization.",
+      "answers": [
+        {
+          "text": "Follow evacuation priority orders.",
+          "score": 9,
+          "type": "best",
+          "details": "Follow evacuation priority orders. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Beam civilians first against orders.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Beam civilians first against orders. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Let automation decide priorities.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Let automation decide priorities. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Cycle Timing Drill",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Cycle Timing Drill.",
+      "answers": [
+        {
+          "text": "Shorten cycles slightly with monitoring.",
+          "score": 9,
+          "type": "best",
+          "details": "Shorten cycles slightly with monitoring. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Keep default timing only.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Keep default timing only. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Shorten cycles drastically for speed.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Shorten cycles drastically for speed. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Instructor Buffer Test",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Instructor Buffer Test.",
+      "answers": [
+        {
+          "text": "Balance loads across all buffers carefully.",
+          "score": 9,
+          "type": "best",
+          "details": "Balance loads across all buffers carefully. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Transfer to cargo transporter for backup.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Transfer to cargo transporter for backup. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Allow automation to fail safely.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Allow automation to fail safely. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Scan Setup Drill",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Scan Setup Drill.",
+      "answers": [
+        {
+          "text": "Set parameters for broad-spectrum scan.",
+          "score": 9,
+          "type": "best",
+          "details": "Set parameters for broad-spectrum scan. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Apply narrow scan only.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Apply narrow scan only. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Run outdated presets.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Run outdated presets. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Microbe Filter Drill",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Microbe Filter Drill.",
+      "answers": [
+        {
+          "text": "Test and calibrate filter bands.",
+          "score": 9,
+          "type": "best",
+          "details": "Test and calibrate filter bands. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Request sickbay to handle later.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Request sickbay to handle later. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overpower filter indiscriminately.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Overpower filter indiscriminately. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Quarantine Exercise",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Quarantine Exercise.",
+      "answers": [
+        {
+          "text": "Isolate patterns safely in quarantine buffer.",
+          "score": 9,
+          "type": "best",
+          "details": "Isolate patterns safely in quarantine buffer. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Wait for medical confirmation only.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Wait for medical confirmation only. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Purge patterns without analysis.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Purge patterns without analysis. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Precision Filter Training",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Precision Filter Training.",
+      "answers": [
+        {
+          "text": "Carefully tune and monitor output.",
+          "score": 9,
+          "type": "best",
+          "details": "Carefully tune and monitor output. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate filter to automation.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate filter to automation. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overpower filter and risk damage.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Overpower filter and risk damage. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Instructor Biofilter Drill",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Instructor Biofilter Drill.",
+      "answers": [
+        {
+          "text": "Isolate patterns immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Isolate patterns immediately. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overpower filter field.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Overpower filter field. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Shut down transporter completely.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Shut down transporter completely. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Emergency Evacuation Drill",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Emergency Evacuation Drill.",
+      "answers": [
+        {
+          "text": "Prioritize medical and civilians.",
+          "score": 9,
+          "type": "best",
+          "details": "Prioritize medical and civilians. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Beam cargo first.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Beam cargo first. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Abort drill entirely.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Abort drill entirely. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Bridge Evacuation",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Bridge Evacuation.",
+      "answers": [
+        {
+          "text": "Transport all officers simultaneously.",
+          "score": 9,
+          "type": "best",
+          "details": "Transport all officers simultaneously. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Beam one at a time.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Beam one at a time. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Request automation to finish.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Request automation to finish. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Medical Priority Transport",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Medical Priority Transport.",
+      "answers": [
+        {
+          "text": "Prioritize medical cases.",
+          "score": 9,
+          "type": "best",
+          "details": "Prioritize medical cases. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overpower buffers for speed.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Overpower buffers for speed. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Abort medical beam-out.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Abort medical beam-out. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Critical System Evacuation",
+      "summary": "Computer system scenarios emphasize isolation of malfunctioning subroutines, protection of LCARS control, and restoration of ship automation.",
+      "answers": [
+        {
+          "text": "Beam engineers first to safety.",
+          "score": 9,
+          "type": "best",
+          "details": "Beam engineers first to safety. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overpower transporter output.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Overpower transporter output. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to computer.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Delegate to computer. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Instructor Emergency Drill",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Instructor Emergency Drill.",
+      "answers": [
+        {
+          "text": "Follow evacuation plan precisely.",
+          "score": 9,
+          "type": "best",
+          "details": "Follow evacuation plan precisely. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Request instructor help.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Request instructor help. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overload transporters recklessly.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Overload transporters recklessly. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Holodeck Safety Setup",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Holodeck Safety Setup.",
+      "answers": [
+        {
+          "text": "Enable all safeties per manual.",
+          "score": 9,
+          "type": "best",
+          "details": "Enable all safeties per manual. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to computer defaults.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate to computer defaults. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Skip safety entirely.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Skip safety entirely. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Force Threshold Drill",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Force Threshold Drill.",
+      "answers": [
+        {
+          "text": "Set safe but challenging threshold.",
+          "score": 9,
+          "type": "best",
+          "details": "Set safe but challenging threshold. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to automation.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Delegate to automation. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Cancel drill.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Cancel drill. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "AI Restraint Setup",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: AI Restraint Setup.",
+      "answers": [
+        {
+          "text": "Enable ethical restraints fully.",
+          "score": 9,
+          "type": "best",
+          "details": "Enable ethical restraints fully. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate setup to computer.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Delegate setup to computer. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Abort setup.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Abort setup. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Emergency Stop Drill",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Emergency Stop Drill.",
+      "answers": [
+        {
+          "text": "Trigger stop instantly when alarm sounds.",
+          "score": 9,
+          "type": "best",
+          "details": "Trigger stop instantly when alarm sounds. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to instructor.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Delegate to instructor. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delay stop intentionally.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Delay stop intentionally. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Instructor Safety Test",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Instructor Safety Test.",
+      "answers": [
+        {
+          "text": "Re-enable safeties immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Re-enable safeties immediately. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Shut down holodeck entirely.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Shut down holodeck entirely. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to automation.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Delegate to automation. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Coverage Setup",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Coverage Setup.",
+      "answers": [
+        {
+          "text": "Position emitters correctly.",
+          "score": 9,
+          "type": "best",
+          "details": "Position emitters correctly. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to automation.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate to automation. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Abort setup.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Abort setup. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Emitter Calibration",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Emitter Calibration.",
+      "answers": [
+        {
+          "text": "Calibrate per manual.",
+          "score": 9,
+          "type": "best",
+          "details": "Calibrate per manual. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to computer.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate to computer. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Abort calibration.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Abort calibration. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Emitter Relay Test",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Emitter Relay Test.",
+      "answers": [
+        {
+          "text": "Run full check cycle.",
+          "score": 9,
+          "type": "best",
+          "details": "Run full check cycle. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to automation.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate to automation. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Run partial checks.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Run partial checks. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Coverage Simulation",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Coverage Simulation.",
+      "answers": [
+        {
+          "text": "Monitor and adjust actively.",
+          "score": 9,
+          "type": "best",
+          "details": "Monitor and adjust actively. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to automation only.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate to automation only. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Overpower emitters regardless.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Overpower emitters regardless. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Instructor Emitter Test",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Instructor Emitter Test.",
+      "answers": [
+        {
+          "text": "Compensate using others.",
+          "score": 9,
+          "type": "best",
+          "details": "Compensate using others. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate fix to automation.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate fix to automation. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Abort sim.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Abort sim. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Shutdown Drill",
+      "summary": "Warp core shutdown drills emphasize staged antimatter cutoff, thermal bleed-off, and safing of magnetic containment to prevent destabilization.",
+      "answers": [
+        {
+          "text": "Follow manual procedure.",
+          "score": 9,
+          "type": "best",
+          "details": "Follow manual procedure. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to automation.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate to automation. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Ignore shutdown request.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Ignore shutdown request. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Timed Shutdown",
+      "summary": "Warp core shutdown drills emphasize staged antimatter cutoff, thermal bleed-off, and safing of magnetic containment to prevent destabilization.",
+      "answers": [
+        {
+          "text": "Execute quickly but correctly.",
+          "score": 9,
+          "type": "best",
+          "details": "Execute quickly but correctly. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to automation.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate to automation. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Skip checks for speed.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Skip checks for speed. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Emergency Simulation Abort",
+      "summary": "Engineering cadets must resolve a technical challenge consistent with Starfleet safety and Federation engineering protocols: Emergency Simulation Abort.",
+      "answers": [
+        {
+          "text": "Trigger emergency abort immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Trigger emergency abort immediately. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to instructor.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Delegate to instructor. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delay abort.",
+          "score": 3,
+          "type": "alternate",
+          "details": "Delay abort. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "System Reset Drill",
+      "summary": "Computer system scenarios emphasize isolation of malfunctioning subroutines, protection of LCARS control, and restoration of ship automation.",
+      "answers": [
+        {
+          "text": "Reset step by step.",
+          "score": 9,
+          "type": "best",
+          "details": "Reset step by step. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to automation.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Delegate to automation. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Perform partial reset.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Perform partial reset. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    },
+    {
+      "scenario": "Instructor Shutdown Test",
+      "summary": "Warp core shutdown drills emphasize staged antimatter cutoff, thermal bleed-off, and safing of magnetic containment to prevent destabilization.",
+      "answers": [
+        {
+          "text": "Shut down immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Shut down immediately. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delegate to automation.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Delegate to automation. is consistent with Starfleet engineering practice in this context."
+        },
+        {
+          "text": "Delay until safe.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Delay until safe. is consistent with Starfleet engineering practice in this context."
+        }
+      ]
+    }
+  ]
+}
