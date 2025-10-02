@@ -1,0 +1,725 @@
+{
+  "department": "Diplomacy",
+  "study": [
+    {
+      "scenario": "Trade Dispute",
+      "summary": "Federation trade negotiations emphasize balanced access, transparent verification, and dispute boards to prevent one-sided advantage.",
+      "answers": [
+        {
+          "text": "Mediate fair agreement.",
+          "score": 9,
+          "type": "best",
+          "details": "Mediate fair agreement. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Propose joint operation.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Propose joint operation. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Escalate to Federation Council.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Escalate to Federation Council. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Border Resource Talks",
+      "summary": "Border resource talks separate extraction rights from territorial sovereignty, often using neutral surveys and shared royalties.",
+      "answers": [
+        {
+          "text": "Propose shared operation.",
+          "score": 9,
+          "type": "best",
+          "details": "Propose shared operation. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Offer economic incentives.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Offer economic incentives. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Involve Federation Council.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Involve Federation Council. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Colony Secession",
+      "summary": "Secession movements are addressed with Federation Charter provisions; negotiated autonomy avoids escalation while preserving humanitarian ties.",
+      "answers": [
+        {
+          "text": "Request mediation team.",
+          "score": 9,
+          "type": "best",
+          "details": "Request mediation team. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Negotiate new terms.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Negotiate new terms. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Offer incentives to stay.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Offer incentives to stay. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Scientific Collaboration",
+      "summary": "Joint research projects require clear agreements on data ownership, publication, and safety oversight to maintain interstellar trust.",
+      "answers": [
+        {
+          "text": "Propose shared ownership.",
+          "score": 9,
+          "type": "best",
+          "details": "Propose shared ownership. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Forward issue to Federation Science Council.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Forward issue to Federation Science Council. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Offer Starfleet mediation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Offer Starfleet mediation. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Resource Shortage",
+      "summary": "Relief allocation follows transparent triage by need and vulnerability, ensuring aid is not politicized or diverted.",
+      "answers": [
+        {
+          "text": "Favor most critical need.",
+          "score": 9,
+          "type": "best",
+          "details": "Favor most critical need. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Divide supplies equally.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Divide supplies equally. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Settle with Federation arbitration.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Settle with Federation arbitration. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Ceasefire Talks",
+      "summary": "Ceasefires endure when monitored neutrally, phased withdrawals are synchronized, and verification prevents accidental escalation.",
+      "answers": [
+        {
+          "text": "Insist on neutral terms.",
+          "score": 9,
+          "type": "best",
+          "details": "Insist on neutral terms. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Recommend observers attend.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Recommend observers attend. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Push immediate ceasefire.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Push immediate ceasefire. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Cultural Standoff",
+      "summary": "Cultural disputes ease through caucuses, symbolic gestures, and face-saving compromises that respect dignity while resolving issues.",
+      "answers": [
+        {
+          "text": "Host mediation session.",
+          "score": 9,
+          "type": "best",
+          "details": "Host mediation session. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Propose cultural exchange.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Propose cultural exchange. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Escalate to Federation diplomats.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Escalate to Federation diplomats. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Workplace Conflict",
+      "summary": "Starfleet workplace disputes use chain-of-command mediation and counseling, balancing mission safety with fairness and cohesion.",
+      "answers": [
+        {
+          "text": "Host mediation meeting.",
+          "score": 9,
+          "type": "best",
+          "details": "Host mediation meeting. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Offer rewards for cooperation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Offer rewards for cooperation. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Force collaboration.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Force collaboration. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Territorial Dispute",
+      "summary": "Territorial disputes are stabilized through interim boundaries, patrol schedules, and neutral monitoring while permanent settlements are pursued.",
+      "answers": [
+        {
+          "text": "Propose shared administration.",
+          "score": 9,
+          "type": "best",
+          "details": "Propose shared administration. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Draw temporary boundaries.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Draw temporary boundaries. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Forward to Federation Council.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Forward to Federation Council. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Disciplinary Conflict",
+      "summary": "Disciplinary conflicts demand fairness, mentoring, and proportionate remedies to preserve discipline without alienation.",
+      "answers": [
+        {
+          "text": "Investigate thoroughly.",
+          "score": 9,
+          "type": "best",
+          "details": "Investigate thoroughly. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Mediate between cadets.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Mediate between cadets. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Refer to Academy Command.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Refer to Academy Command. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "First Contact Customs",
+      "summary": "First contacts are guided by the Prime Directive, with humility and minimal commitments until customs are fully understood.",
+      "answers": [
+        {
+          "text": "Respect customs.",
+          "score": 9,
+          "type": "best",
+          "details": "Respect customs. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Improvise respectful gesture.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Improvise respectful gesture. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Request clarification.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Request clarification. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Banquet Etiquette",
+      "summary": "Banquet etiquette balances cultural respect with safety scans and sampling to avoid offense or harm.",
+      "answers": [
+        {
+          "text": "Scan food first.",
+          "score": 9,
+          "type": "best",
+          "details": "Scan food first. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Sample respectfully.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Sample respectfully. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Ignore food, focus on talk.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Ignore food, focus on talk. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Cultural Insult",
+      "summary": "After cultural missteps, prompt acknowledgement and reparative gestures restore trust and prevent escalation.",
+      "answers": [
+        {
+          "text": "Apologize immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Apologize immediately. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Offer symbolic gift.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Offer symbolic gift. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Blame translation error.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Blame translation error. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Joint Project",
+      "summary": "Collaborative projects thrive through co-design, small shared successes, and mutual exchanges that build enduring trust.",
+      "answers": [
+        {
+          "text": "Provide cultural training.",
+          "score": 9,
+          "type": "best",
+          "details": "Provide cultural training. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Assign mediators.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Assign mediators. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Divide project tasks.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Divide project tasks. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Religious Festival",
+      "summary": "Religious observances are respected within safety constraints, with accommodations that balance freedom and crew welfare.",
+      "answers": [
+        {
+          "text": "Attend respectfully.",
+          "score": 9,
+          "type": "best",
+          "details": "Attend respectfully. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Send symbolic representative.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Send symbolic representative. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Decline politely.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Decline politely. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Prime Directive",
+      "summary": "The Prime Directive limits interference with pre-warp civilizations, requiring indirect aid and strict documentation.",
+      "answers": [
+        {
+          "text": "Do nothing (Prime Directive).",
+          "score": 9,
+          "type": "best",
+          "details": "Do nothing (Prime Directive). reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Request Council ruling.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Request Council ruling. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Assist indirectly.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Assist indirectly. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Prisoner Treatment",
+      "summary": "Federation law mandates humane detainee treatment, ensuring medical care, legal rights, and prevention of reprisals.",
+      "answers": [
+        {
+          "text": "Grant rights.",
+          "score": 9,
+          "type": "best",
+          "details": "Grant rights. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Request legal counsel.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Request legal counsel. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Follow local laws.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Follow local laws. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Territorial Breach",
+      "summary": "Territorial breaches are resolved by withdrawal, sensor data sharing, and avoiding escalation without conceding sovereignty.",
+      "answers": [
+        {
+          "text": "Apologize and withdraw.",
+          "score": 9,
+          "type": "best",
+          "details": "Apologize and withdraw. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Request investigation.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Request investigation. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Deny violation.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Deny violation. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Asylum Request",
+      "summary": "Asylum claims require credible fear and intent; Starfleet protects claimants while managing treaty consequences.",
+      "answers": [
+        {
+          "text": "Grant asylum.",
+          "score": 9,
+          "type": "best",
+          "details": "Grant asylum. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Protect in custody.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Protect in custody. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Delay decision.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Delay decision. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Arms Smuggling",
+      "summary": "Arms smuggling cases balance interdiction with proportionality and chain-of-evidence integrity to prevent wider conflict.",
+      "answers": [
+        {
+          "text": "Report immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Report immediately. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Investigate quietly.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Investigate quietly. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Request Federation legal review.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Request Federation legal review. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Distress Signal",
+      "summary": "Distress calls are authenticated before committing assets, using probes and verification to avoid ambushes.",
+      "answers": [
+        {
+          "text": "Decrypt transmission.",
+          "score": 9,
+          "type": "best",
+          "details": "Decrypt transmission. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Boost comms sensors.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Boost comms sensors. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Send probe.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Send probe. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Jammed Signal",
+      "summary": "Signal jamming is countered with frequency agility, boosted arrays, and attribution efforts for legal response.",
+      "answers": [
+        {
+          "text": "Boost array.",
+          "score": 9,
+          "type": "best",
+          "details": "Boost array. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Switch frequencies.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Switch frequencies. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Deploy relay buoy.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Deploy relay buoy. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Emergency Broadcast",
+      "summary": "Emergency broadcasts must prioritize clarity and calm, with multilingual channels and regular updates.",
+      "answers": [
+        {
+          "text": "Acknowledge immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Acknowledge immediately. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Relay to Starfleet.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Relay to Starfleet. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Send scout ship.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Send scout ship. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Hailing Failure",
+      "summary": "Failed hails require alternate communication methods, while ensuring silence is not hostile deception.",
+      "answers": [
+        {
+          "text": "Repair immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Repair immediately. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Switch to backup array.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Switch to backup array. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Use shuttle comms.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Use shuttle comms. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Emergency Override",
+      "summary": "Emergency overrides require authenticated verification to prevent spoofing or hostile misuse.",
+      "answers": [
+        {
+          "text": "Trace source.",
+          "score": 9,
+          "type": "best",
+          "details": "Trace source. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Shut down array.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Shut down array. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Jam enemy signal.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Jam enemy signal. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Translator Malfunction",
+      "summary": "UT malfunctions demand backups like gestures, pictographs, and universal references while linguists rebuild translation matrices.",
+      "answers": [
+        {
+          "text": "Request linguist help.",
+          "score": 9,
+          "type": "best",
+          "details": "Request linguist help. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Attempt manual translation.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Attempt manual translation. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Use gestures.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Use gestures. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Language Barrier",
+      "summary": "Language barriers are overcome by phonetic clustering, parallel corpora, and confirmation loops to avoid miscommunication.",
+      "answers": [
+        {
+          "text": "Run phonetic analysis.",
+          "score": 9,
+          "type": "best",
+          "details": "Run phonetic analysis. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Attempt trial translations.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Attempt trial translations. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Use symbolic language.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Use symbolic language. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Coded Transmission",
+      "summary": "Encrypted transmissions are assessed for legality and security; decryption proceeds carefully to avoid escalation.",
+      "answers": [
+        {
+          "text": "Forward to Starfleet.",
+          "score": 9,
+          "type": "best",
+          "details": "Forward to Starfleet. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Attempt decryption.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Attempt decryption. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Jam transmission.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Jam transmission. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "Cultural Phrases",
+      "summary": "Idioms and cultural phrases are handled by clarification, back-translation, and avoiding assumptions.",
+      "answers": [
+        {
+          "text": "Request clarification.",
+          "score": 9,
+          "type": "best",
+          "details": "Request clarification. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Use database to interpret.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Use database to interpret. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Attempt direct translation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Attempt direct translation. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    },
+    {
+      "scenario": "False Translation",
+      "summary": "False translations are mitigated by redundancy, independent interpreters, and prompt correction to preserve credibility.",
+      "answers": [
+        {
+          "text": "Apologize and correct.",
+          "score": 9,
+          "type": "best",
+          "details": "Apologize and correct. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Offer symbolic gesture.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Offer symbolic gesture. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        },
+        {
+          "text": "Blame translator failure.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Blame translator failure. reflects diplomatic practice in this context, balancing Federation principles with pragmatic outcomes."
+        }
+      ]
+    }
+  ]
+}
