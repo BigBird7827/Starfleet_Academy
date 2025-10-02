@@ -44,15 +44,14 @@
     }
     button:hover{ background:linear-gradient(to bottom,#2a5298,#111); transform:translateY(-2px); }
     body.orientation { background:#000 !important; overflow:hidden; }
-    body.orientation.training-scroll { overflow-y:auto; }
+    body.orientation.allow-scroll { overflow-y:auto; }
     .orientation-root{ position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; margin:0 auto; }
     .orientation-title{ font-family:'Orbitron', sans-serif; font-size:32pt; margin-top:60px; margin-bottom:20px; text-align:center; color:gold; text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; }
     .orientation-text{ max-width:800px; margin:0 auto 40px auto; padding:0 20px; font-size:16pt; line-height:1.5em; text-align:center; font-family:'Roboto', sans-serif; }
     .button-box{ margin-top:30px; display:grid; grid-template-columns:1fr 1fr; gap:20px; background:rgba(0,0,0,0.4); padding:30px; border-radius:12px; box-shadow:0 0 15px var(--gold); }
     .button-box button{ font-size:20pt; padding:15px 25px; border-radius:12px; }
     .return-btn{ margin-top:30px; padding:10px 20px; font-size:14pt; }
-    #trainingPage { display:none; padding:20px; min-height:100vh; }
-    #trainingPage .container{ max-height:none; overflow:visible; }
+    #trainingPage { display:none; padding:20px; height:100vh; overflow-y:auto; -webkit-overflow-scrolling:touch; }
     .training-title { font-family:'Orbitron', sans-serif; font-size:28pt; margin-bottom:20px; text-align:center; color:gold; text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; }
     .training-section { margin-bottom:35px; padding-bottom:20px; border-bottom:1px solid #444; }
     .training-section h3 { font-family:'Orbitron', sans-serif; font-size:20pt; margin-bottom:10px; color:var(--gold); }
@@ -60,6 +59,10 @@
     .answers { margin-left:20px; }
     .answer-block { margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05); border-radius:8px; }
     .answer-block strong { color:#00ffcc; }
+    #trainingPage::-webkit-scrollbar { width:10px; }
+    #trainingPage::-webkit-scrollbar-track { background:#111; }
+    #trainingPage::-webkit-scrollbar-thumb { background:#555; border-radius:8px; border:2px solid #111; }
+    #trainingPage::-webkit-scrollbar-thumb:hover { background:#888; }
   </style>
 </head>
 <body>
@@ -139,11 +142,9 @@
       document.getElementById("orientationPage").style.display="none";
       document.getElementById("trainingPage").style.display="block";
       document.getElementById("trainingDeptTitle").textContent=`${dept} Training`;
-      document.body.classList.add('training-scroll');
-
+      document.body.classList.add("allow-scroll");
       const content=document.getElementById("trainingContent");
       content.innerHTML="<p>Loading training material...</p>";
-
       fetch(modules[dept])
         .then(r=>r.json())
         .then(data=>{
@@ -179,14 +180,14 @@
 
     document.getElementById("returnMain").addEventListener("click",()=>{
       document.getElementById("orientationPage").style.display="none";
-      document.body.classList.remove("orientation","training-scroll");
+      document.body.classList.remove("orientation","allow-scroll");
       document.getElementById("mainScreen").style.display="block";
     });
 
     document.getElementById("returnOrientation").addEventListener("click",()=>{
       document.getElementById("trainingPage").style.display="none";
       document.getElementById("orientationPage").style.display="block";
-      document.body.classList.remove('training-scroll');
+      document.body.classList.remove("allow-scroll");
     });
   </script>
 </body>
