@@ -112,7 +112,7 @@
   <script>
     let player={ name:"" };
     const modules={
-      "Command":"Command Training.json",   // local file in same folder
+      "Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
       "Diplomacy":"Starfleet Academy - Diplomacy.json",
       "Engineering":"Starfleet Academy - Engineering.json",
       "Science":"Starfleet Academy - Science.json",
@@ -153,10 +153,8 @@
               const section=document.createElement("div");
               section.className="training-section";
 
-              // Scenario title and summary
               let html = `<h3>${item.scenario}</h3><p>${item.summary}</p>`;
 
-              // Show answers with details
               if(item.answers){
                 html += `<div class="answers">`;
                 item.answers.forEach(ans=>{
