@@ -1,0 +1,605 @@
+{
+  "department": "Command",
+  "study": [
+    {
+      "scenario": "Crew Morale Crisis",
+      "summary": "Sustaining crew morale under long-duration missions is a command responsibility. Starfleet practice uses department-head sensing sessions, transparent messaging, and targeted relief to stabilize performance without compromising readiness.",
+      "answers": [
+        {
+          "text": "Privately meet with department heads.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Mentoring, transparency, and targeted relief stabilize cohesion during long deployments. Action: Privately meet with department heads."
+        },
+        {
+          "text": "Authorize extra shore leave at the next port.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Mentoring, transparency, and targeted relief stabilize cohesion during long deployments. Action: Authorize extra shore leave at the next port."
+        },
+        {
+          "text": "Order both divisions to cooperate immediately.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate rationale: Mentoring, transparency, and targeted relief stabilize cohesion during long deployments. Action: Order both divisions to cooperate immediately."
+        }
+      ]
+    },
+    {
+      "scenario": "Cadet Disobedience",
+      "summary": "Cadet disobedience is handled through chain\u2011of\u2011command counseling, documentation, and proportional discipline, balancing mentorship with the necessity to uphold lawful orders on a starship.",
+      "answers": [
+        {
+          "text": "Discuss privately to understand their reasoning.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Discuss privately to understand their reasoning."
+        },
+        {
+          "text": "Report cadet to Academy Command.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Report cadet to Academy Command."
+        },
+        {
+          "text": "File an immediate disciplinary report.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: File an immediate disciplinary report."
+        }
+      ]
+    },
+    {
+      "scenario": "Medical Officer Protest",
+      "summary": "Medical officers can voice safety concerns, but command must weigh mission risk, medical ethics, and General Orders. Proper process is to hear the protest, document, and decide with medical data in hand.",
+      "answers": [
+        {
+          "text": "Request medical officer propose alternatives.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Request medical officer propose alternatives."
+        },
+        {
+          "text": "Follow medical advice and halt mission.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Follow medical advice and halt mission."
+        },
+        {
+          "text": "Slow pace but continue mission.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Slow pace but continue mission."
+        }
+      ]
+    },
+    {
+      "scenario": "Conflicting Orders",
+      "summary": "When orders conflict, captains clarify superior intent, confirm current ROE and General Orders, and select the course that preserves lives and treaty compliance while maintaining mission objectives.",
+      "answers": [
+        {
+          "text": "Clarify conflict before acting.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Clarify conflict before acting."
+        },
+        {
+          "text": "Ask both for joint clarification.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Ask both for joint clarification."
+        },
+        {
+          "text": "Follow highest-ranking officer.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Follow highest-ranking officer."
+        }
+      ]
+    },
+    {
+      "scenario": "Rescue Priority",
+      "summary": "Rescue priorities follow lifesaving triage and treaty obligations. Captains coordinate with local authority, vet threat exposure, and commit assets with contingency cover to avoid compounding casualties.",
+      "answers": [
+        {
+          "text": "Split forces to attempt both.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Split forces to attempt both."
+        },
+        {
+          "text": "Rescue Federation ship first.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Rescue Federation ship first."
+        },
+        {
+          "text": "Rescue Klingon ship first.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Rescue Klingon ship first."
+        }
+      ]
+    },
+    {
+      "scenario": "Sensor Ghosts",
+      "summary": "False contacts arise from interference, nebular scatter, or hostile deception. Starfleet SOP is corroboration with secondary sensors, short\u2011range probes, and visual confirmation before escalating force.",
+      "answers": [
+        {
+          "text": "Attempt sensor sweep.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Corroborate contacts with probes and visuals before escalating posture. Action: Attempt sensor sweep."
+        },
+        {
+          "text": "Alter course to avoid ambush.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Corroborate contacts with probes and visuals before escalating posture. Action: Alter course to avoid ambush."
+        },
+        {
+          "text": "Raise shields and arm weapons.",
+          "score": 5,
+          "type": "alternate",
+          "details": "Alternate rationale: Corroborate contacts with probes and visuals before escalating posture. Action: Raise shields and arm weapons."
+        }
+      ]
+    },
+    {
+      "scenario": "Diplomatic Escort",
+      "summary": "Diplomatic escorts require tight schedules, secure corridors, and incident de\u2011escalation planning. The captain preserves neutrality and safety while respecting diplomatic protocol.",
+      "answers": [
+        {
+          "text": "Maintain steady pace and visible presence.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Maintain steady pace and visible presence."
+        },
+        {
+          "text": "Take indirect route to avoid detection.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Take indirect route to avoid detection."
+        },
+        {
+          "text": "Travel at maximum warp to minimize exposure.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Travel at maximum warp to minimize exposure."
+        }
+      ]
+    },
+    {
+      "scenario": "Romulan Intrusion",
+      "summary": "The Romulan Neutral Zone is an act\u2011of\u2011war boundary. Any incursion demands verification, sensor logging, and a measured posture that avoids escalation while protecting Federation space.",
+      "answers": [
+        {
+          "text": "Shadow them and call reinforcements.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Respect treaty boundaries and avoid unintended escalation while protecting Federation space. Action: Shadow them and call reinforcements."
+        },
+        {
+          "text": "Hail and demand explanation.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Respect treaty boundaries and avoid unintended escalation while protecting Federation space. Action: Hail and demand explanation."
+        },
+        {
+          "text": "Intercept to block path.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Respect treaty boundaries and avoid unintended escalation while protecting Federation space. Action: Intercept to block path."
+        }
+      ]
+    },
+    {
+      "scenario": "Asteroid Threat",
+      "summary": "Deflection options include tractor beams, precision phaser ablation, or micro\u2011warhead nudging\u2014sequenced to minimize fragmentation risk to inhabited targets and traffic lanes.",
+      "answers": [
+        {
+          "text": "Split resources between tasks.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Prefer trajectory solutions; use tractors or controlled ablation only as needed. Action: Split resources between tasks."
+        },
+        {
+          "text": "Call for reinforcements.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Prefer trajectory solutions; use tractors or controlled ablation only as needed. Action: Call for reinforcements."
+        },
+        {
+          "text": "Destroy asteroid with torpedoes.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Prefer trajectory solutions; use tractors or controlled ablation only as needed. Action: Destroy asteroid with torpedoes."
+        }
+      ]
+    },
+    {
+      "scenario": "Fleet Exercise",
+      "summary": "Fleet exercises evaluate communications discipline, formation integrity, and coordinated responses\u2014including deception counters like rapid vector changes and sensor confusion tactics.",
+      "answers": [
+        {
+          "text": "Split into pairs for flexibility.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Split into pairs for flexibility."
+        },
+        {
+          "text": "Send half to flank enemy.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Send half to flank enemy."
+        },
+        {
+          "text": "Keep squadron tightly grouped.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Keep squadron tightly grouped."
+        }
+      ]
+    },
+    {
+      "scenario": "Warp Core Breach",
+      "summary": "A developing warp\u2011core breach triggers immediate containment reinforcement, ejection readiness, and evacuation of engineering spaces; the captain authorizes ejection if stabilization fails.",
+      "answers": [
+        {
+          "text": "Eject the core.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Reinforce containment, prepare ejection, and evacuate engineering per emergency core procedures. Action: Eject the core."
+        },
+        {
+          "text": "Boost containment fields.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Reinforce containment, prepare ejection, and evacuate engineering per emergency core procedures. Action: Boost containment fields."
+        },
+        {
+          "text": "Send engineers for repairs.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Reinforce containment, prepare ejection, and evacuate engineering per emergency core procedures. Action: Send engineers for repairs."
+        }
+      ]
+    },
+    {
+      "scenario": "Shuttle Bay Fire",
+      "summary": "Hangar fires require atmospheric isolation, emergency foam and force\u2011field barriers, and rapid fuel cell safing while keeping flight ops suspended until decks are cleared.",
+      "answers": [
+        {
+          "text": "Send suppression teams.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Isolate the compartment, suppress the fire, and safe volatile stores before restoring ops. Action: Send suppression teams."
+        },
+        {
+          "text": "Vent atmosphere.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Isolate the compartment, suppress the fire, and safe volatile stores before restoring ops. Action: Vent atmosphere."
+        },
+        {
+          "text": "Evacuate shuttle bay personnel.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Isolate the compartment, suppress the fire, and safe volatile stores before restoring ops. Action: Evacuate shuttle bay personnel."
+        }
+      ]
+    },
+    {
+      "scenario": "First Contact",
+      "summary": "First contact is governed by Starfleet protocols: thorough cultural study, non\u2011threatening posture, clear consent to engage, and strict adherence to the Prime Directive.",
+      "answers": [
+        {
+          "text": "Hail with Federation greeting.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Follow first-contact protocol and the Prime Directive; avoid cultural contamination. Action: Hail with Federation greeting."
+        },
+        {
+          "text": "Send away team.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Follow first-contact protocol and the Prime Directive; avoid cultural contamination. Action: Send away team."
+        },
+        {
+          "text": "Wait to be hailed first.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate rationale: Follow first-contact protocol and the Prime Directive; avoid cultural contamination. Action: Wait to be hailed first."
+        }
+      ]
+    },
+    {
+      "scenario": "Computer Failure",
+      "summary": "When core systems fail, isolate compromised subsystems, shift to protected control paths, and reestablish navigation/helm redundancies before resuming operations.",
+      "answers": [
+        {
+          "text": "Switch to manual control.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Switch to manual control."
+        },
+        {
+          "text": "Shut down non-essentials.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Shut down non-essentials."
+        },
+        {
+          "text": "Request engineering override.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Request engineering override."
+        }
+      ]
+    },
+    {
+      "scenario": "Kobayashi Maru",
+      "summary": "The Kobayashi Maru is a no\u2011win command evaluation. The objective is not victory but leadership under loss\u2014prioritizing lives, clarity, and integrity when a perfect outcome is impossible.",
+      "answers": [
+        {
+          "text": "Devise unorthodox solution.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Demonstrate leadership under loss; communicate priorities and own the consequences. Action: Devise unorthodox solution."
+        },
+        {
+          "text": "Call reinforcements first.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Demonstrate leadership under loss; communicate priorities and own the consequences. Action: Call reinforcements first."
+        },
+        {
+          "text": "Attempt rescue anyway.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate rationale: Demonstrate leadership under loss; communicate priorities and own the consequences. Action: Attempt rescue anyway."
+        }
+      ]
+    },
+    {
+      "scenario": "Asteroid Field",
+      "summary": "Asteroid transits use station\u2011keeping thrusters, relative\u2011velocity management, and sensor\u2011led pathfinding; weapons fire is a last resort due to ricochet and fragmentation hazards.",
+      "answers": [
+        {
+          "text": "Plot safe manual course.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Prefer trajectory solutions; use tractors or controlled ablation only as needed. Action: Plot safe manual course."
+        },
+        {
+          "text": "Slow to impulse.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Prefer trajectory solutions; use tractors or controlled ablation only as needed. Action: Slow to impulse."
+        },
+        {
+          "text": "Use autopilot.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate rationale: Prefer trajectory solutions; use tractors or controlled ablation only as needed. Action: Use autopilot."
+        }
+      ]
+    },
+    {
+      "scenario": "Battle Maneuvers",
+      "summary": "Engagement doctrine emphasizes power management, vector deception, and timing\u2014examples include brief warp hops to confuse targeting and synchronized shield modulation.",
+      "answers": [
+        {
+          "text": "Perform evasive pattern Delta.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Manage power/shields and use vector deception to disrupt enemy targeting. Action: Perform evasive pattern Delta."
+        },
+        {
+          "text": "Dive into nebula for cover.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Manage power/shields and use vector deception to disrupt enemy targeting. Action: Dive into nebula for cover."
+        },
+        {
+          "text": "Attempt risky warp jumps.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Manage power/shields and use vector deception to disrupt enemy targeting. Action: Attempt risky warp jumps."
+        }
+      ]
+    },
+    {
+      "scenario": "Impulse Power Loss",
+      "summary": "Loss of impulse power shifts control to RCS thrusters and auxiliary feeds; the bridge conserves power, stabilizes attitude, and prioritizes life support while engineering restores drive.",
+      "answers": [
+        {
+          "text": "Switch to auxiliary power.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Shift to RCS attitude control and protect life support while restoring drive. Action: Switch to auxiliary power."
+        },
+        {
+          "text": "Engage RCS thrusters.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Shift to RCS attitude control and protect life support while restoring drive. Action: Engage RCS thrusters."
+        },
+        {
+          "text": "Attempt emergency restart.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Shift to RCS attitude control and protect life support while restoring drive. Action: Attempt emergency restart."
+        }
+      ]
+    },
+    {
+      "scenario": "Collision Course",
+      "summary": "Collision threats are addressed through vector changes, tractor intervention, and if necessary controlled debris shaping\u2014always coordinated with nearby traffic control.",
+      "answers": [
+        {
+          "text": "Adjust course manually.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Prefer trajectory solutions; use tractors or controlled ablation only as needed. Action: Adjust course manually."
+        },
+        {
+          "text": "Execute emergency stop.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Prefer trajectory solutions; use tractors or controlled ablation only as needed. Action: Execute emergency stop."
+        },
+        {
+          "text": "Hail freighter immediately.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Prefer trajectory solutions; use tractors or controlled ablation only as needed. Action: Hail freighter immediately."
+        }
+      ]
+    },
+    {
+      "scenario": "Docking Procedure",
+      "summary": "Docking relies on mooring beams/tractor alignment, thruster micro\u2011bursts, and clearances with station control; abort criteria are rehearsed before final approach.",
+      "answers": [
+        {
+          "text": "Manually calculate trajectory.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Use mooring beams/tractors, micro\u2011thrusters, and abort criteria aligned with station control. Action: Manually calculate trajectory."
+        },
+        {
+          "text": "Follow autopilot.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Use mooring beams/tractors, micro\u2011thrusters, and abort criteria aligned with station control. Action: Follow autopilot."
+        },
+        {
+          "text": "Request tug assistance.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate rationale: Use mooring beams/tractors, micro\u2011thrusters, and abort criteria aligned with station control. Action: Request tug assistance."
+        }
+      ]
+    },
+    {
+      "scenario": "Gravitational Anomaly",
+      "summary": "Unknown gravitic phenomena can drain power or distort navigation. SOP is to drop to safe velocity, probe the field, and avoid injecting excess energy that could worsen the effect.",
+      "answers": [
+        {
+          "text": "Launch probe.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Minimize power injection, gather data with probes, and maintain a safe standoff. Action: Launch probe."
+        },
+        {
+          "text": "Plot course around it.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Minimize power injection, gather data with probes, and maintain a safe standoff. Action: Plot course around it."
+        },
+        {
+          "text": "Wait it out.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate rationale: Minimize power injection, gather data with probes, and maintain a safe standoff. Action: Wait it out."
+        }
+      ]
+    },
+    {
+      "scenario": "Chart Discrepancy",
+      "summary": "Chart conflicts trigger an immediate survey pass and update workflow with stellar cartography; navigation defers to fresh sensor truth over legacy maps.",
+      "answers": [
+        {
+          "text": "Update charts.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Update charts."
+        },
+        {
+          "text": "Re-scan with secondary sensors.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Re-scan with secondary sensors."
+        },
+        {
+          "text": "Launch probe.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Launch probe."
+        }
+      ]
+    },
+    {
+      "scenario": "Nebula Shortcut",
+      "summary": "Nebulae degrade sensors and shields. Captains route conservatively, deploy beacons or relays, and avoid emissions that could trigger unstable pockets.",
+      "answers": [
+        {
+          "text": "Avoid nebula entirely.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Conserve power, deploy relays, and avoid emissions that destabilize local pockets. Action: Avoid nebula entirely."
+        },
+        {
+          "text": "Send probe first.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Conserve power, deploy relays, and avoid emissions that destabilize local pockets. Action: Send probe first."
+        },
+        {
+          "text": "Skirt edges cautiously.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Conserve power, deploy relays, and avoid emissions that destabilize local pockets. Action: Skirt edges cautiously."
+        }
+      ]
+    },
+    {
+      "scenario": "Sensor Ghosts",
+      "summary": "False contacts arise from interference, nebular scatter, or hostile deception. Starfleet SOP is corroboration with secondary sensors, short\u2011range probes, and visual confirmation before escalating force.",
+      "answers": [
+        {
+          "text": "Run diagnostics.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Corroborate contacts with probes and visuals before escalating posture. Action: Run diagnostics."
+        },
+        {
+          "text": "Investigate with shuttle.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Corroborate contacts with probes and visuals before escalating posture. Action: Investigate with shuttle."
+        },
+        {
+          "text": "Hail Starfleet.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate rationale: Corroborate contacts with probes and visuals before escalating posture. Action: Hail Starfleet."
+        }
+      ]
+    },
+    {
+      "scenario": "Slingshot Maneuver",
+      "summary": "The slingshot effect demands extreme precision. It is not undertaken without orders and modeling, given the risk of time\u2011warp and structural stress.",
+      "answers": [
+        {
+          "text": "Calculate exact trajectory.",
+          "score": 9,
+          "type": "best",
+          "details": "Best rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Calculate exact trajectory."
+        },
+        {
+          "text": "Simulate first in holodeck.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Simulate first in holodeck."
+        },
+        {
+          "text": "Use autopilot.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate rationale: Apply Starfleet doctrine, safeguard lives, and preserve mission objectives. Action: Use autopilot."
+        }
+      ]
+    }
+  ]
+}
