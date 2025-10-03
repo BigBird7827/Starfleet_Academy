@@ -59,7 +59,7 @@
     .button-box button{ font-size:20pt; padding:15px 25px; border-radius:12px; width:auto; }
     .return-btn{ padding:10px 25px; font-size:14pt; width:auto; margin-top:20px; }
 
-    /* Training page styling (Command-approved look) */
+    /* Training page styling */
     #trainingPage { display:none; padding:20px; height:100vh; overflow-y:auto; -webkit-overflow-scrolling:touch; }
     .training-title { font-family:'Orbitron', sans-serif; font-size:28pt; margin-bottom:20px; text-align:center; color:gold; text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; }
     .training-section { margin-bottom:35px; padding-bottom:20px; border-bottom:1px solid #444; }
@@ -142,6 +142,13 @@
       "Security": "Security_Training.json"
     };
 
+    const prefaces = {
+      "Command": "Command is not about absolute authority; it is about absolute responsibility. Every decision you make will weigh the balance of lives, mission objectives, and Federation principles. In this training, remember at all times: you are the captain. Orders must be clear, discipline must be firm but fair, and the Federation flag you carry demands integrity at all times. You will be tested not only on your ability to win but also on your ability to lead when victory is impossible — the very essence of the Kobayashi Maru.",
+      "Diplomacy": "Diplomacy is the Federation’s first line of defense. As a cadet in this simulation, you step into the captain’s role, responsible for every word and gesture. You must learn to listen as carefully as you speak, to negotiate from strength without arrogance, and to recognize when compromise honors our ideals more than confrontation. Remember: as captain, your words may avert wars, your patience may save lives, and your restraint may preserve the values of the Federation.",
+      "Engineering": "Starfleet ships are the finest vessels in the galaxy, but even they are only as strong as their engineers. In this training, you will command the ship in situations where engineering skill is as vital as tactical judgment. You are the captain, responsible for directing damage control, enforcing safety protocols, and trusting your crew while keeping the vessel operational. Your ingenuity and clarity of command can spell the difference between survival and disaster.",
+      "Science": "Exploration is the Federation’s mandate, and science is its spearhead. As captain in this module, you must interpret data, weigh theories against risk, and decide when curiosity must yield to caution. Scientific opportunities will tempt you with discovery, but never lose sight of your command role. You are responsible for balancing the pursuit of knowledge with the safety of your crew and adherence to Federation law."
+    };
+
     document.getElementById("entryForm").addEventListener("submit", e=>{
       e.preventDefault();
       document.getElementById("mainScreen").style.display="none";
@@ -170,6 +177,12 @@
         .then(r=>r.json())
         .then(data=>{
           content.innerHTML="";
+          if(prefaces[dept]){
+            const preface=document.createElement("div");
+            preface.className="training-section";
+            preface.innerHTML = `<p>${prefaces[dept]}</p>`;
+            content.appendChild(preface);
+          }
           if(data.study){
             data.study.forEach(item=>{
               const section=document.createElement("div");
