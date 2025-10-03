@@ -1,0 +1,725 @@
+{
+  "department": "Diplomacy",
+  "study": [
+    {
+      "scenario": "At Starbase 214, a Federation-aligned world impounds a Tellarite freighter over new tariffs. Merchants threaten a boycott and local authorities demand Starfleet support. As captain, you must defuse the crisis, restore commerce, and avoid setting a precedent that undermines Federation trade fairness.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Mediate fair agreement.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Mediate fair agreement.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Propose joint operation.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Propose joint operation.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Escalate to Federation Council.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Escalate to Federation Council.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "Survey data shows dilithium veins straddling a disputed border between two powers. Each claims exclusive rights; miners are already mobilizing. You are ordered to host talks aboard your ship and prevent escalation.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Propose shared operation.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Propose shared operation.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Offer economic incentives.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Offer economic incentives.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Involve Federation Council.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Involve Federation Council.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "A Federation colony has voted to secede after years of neglect charges. Security on both sides is tense; local leaders request Starfleet mediation to keep the process peaceful and lawful.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Request mediation team.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Request mediation team.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Negotiate new terms.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Negotiate new terms.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Offer incentives to stay.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Offer incentives to stay.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "A joint research outpost proposes sharing subspace sensor data with a historically adversarial power. Your task is to structure cooperation that advances science without compromising Federation security or treaties.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Propose shared ownership.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Propose shared ownership.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Forward issue to Federation Science Council.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Forward issue to Federation Science Council.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Offer Starfleet mediation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Offer Starfleet mediation.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "A humanitarian shortage on a frontier world worsens as a neighbor insists on full payment and escorts convoys with gunboats. You must secure relief without igniting a regional conflict.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Favor most critical need.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Favor most critical need.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Divide supplies equally.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Divide supplies equally.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Settle with Federation arbitration.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Settle with Federation arbitration.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "A fragile ceasefire is unraveling after border skirmishes. You\u2019ve been asked to shuttle between sides, draft verifiable steps, and keep fighters from returning to open war.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Insist on neutral terms.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Insist on neutral terms.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Recommend observers attend.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Recommend observers attend.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Push immediate ceasefire.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Push immediate ceasefire.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "A Klingon delegation halts talks after a perceived slight in ceremonial protocol. They threaten to depart and take their security escorts with them. You must salvage the summit without surrendering leverage.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Host mediation session.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Host mediation session.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Propose cultural exchange.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Propose cultural exchange.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Escalate to Federation diplomats.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Escalate to Federation diplomats.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "Tension between your science and engineering chiefs is spilling into a joint diplomatic project with a partner species. You must restore a functioning team before the visiting scientists lose confidence in Starfleet.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Host mediation meeting.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Host mediation meeting.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Offer rewards for cooperation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Offer rewards for cooperation.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Force collaboration.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate: Force collaboration.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "Two neighboring systems claim an uninhabited moon that commands a vital corridor. Ancient ruins complicate the picture. You\u2019re asked to stabilize the situation and propose a path forward.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Propose shared administration.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Propose shared administration.. This course manages border sensitivities by confirming facts, documenting intentions, and offering verifiable steps such as neutral observation or beacon deployment. It reduces miscalculation while signaling resolve."
+        },
+        {
+          "text": "Draw temporary boundaries.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Draw temporary boundaries.. This could be read as either weakness or provocation along a tense border. Without verification and clear communication, it might trigger reciprocal moves that spiral."
+        },
+        {
+          "text": "Forward to Federation Council.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Forward to Federation Council.. This could be read as either weakness or provocation along a tense border. Without verification and clear communication, it might trigger reciprocal moves that spiral."
+        }
+      ]
+    },
+    {
+      "scenario": "A visiting magistrate demands jurisdiction over one of your officers after an altercation planetside. Local law asserts the right to try the case; your crew\u2019s rights and Status of Forces agreements are at stake.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Investigate thoroughly.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Investigate thoroughly.. This balances humanitarian obligations with legal frameworks, documenting status and ensuring due process in line with Federation law and interstellar conventions."
+        },
+        {
+          "text": "Mediate between cadets.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Mediate between cadets.. A hurried stance here could violate rights or treaty norms, undermining Starfleet credibility and inviting reprisals."
+        },
+        {
+          "text": "Refer to Academy Command.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Refer to Academy Command.. A hurried stance here could violate rights or treaty norms, undermining Starfleet credibility and inviting reprisals."
+        }
+      ]
+    },
+    {
+      "scenario": "A newly warp-capable species insists on a pre-meeting rite that conflicts with Federation sensibilities. Refusal could be seen as an insult; compliance may set an awkward precedent. You must find a respectful alternative.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Respect customs.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Respect customs.. This respects cultural autonomy and minimizes contamination risk, consistent with the Prime Directive. It seeks informed consent and gradual engagement supported by clean chains of evidence."
+        },
+        {
+          "text": "Improvise respectful gesture.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Improvise respectful gesture.. This risks cultural pressure or inadvertent interference. Even helpful actions can distort development if not carefully bounded and reversible."
+        },
+        {
+          "text": "Request clarification.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Request clarification.. This risks cultural pressure or inadvertent interference. Even helpful actions can distort development if not carefully bounded and reversible."
+        }
+      ]
+    },
+    {
+      "scenario": "A state dinner will open high-stakes negotiations. Seating charts, toasts, and dietary taboos carry political meanings. One mistake could sink the talks before they begin.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Scan food first.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Scan food first.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Sample respectfully.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Sample respectfully.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Ignore food, focus on talk.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Ignore food, focus on talk.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "A junior officer\u2019s offhand remark is interpreted as an insult to the host government. They demand a public apology and punitive measures. You must respond without humiliating Starfleet or poisoning relations.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Apologize immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Apologize immediately.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Offer symbolic gift.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Offer symbolic gift.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Blame translation error.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate: Blame translation error.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "A long-planned joint project is behind schedule and over budget. Partners want more control over Starfleet assets in exchange for continued funding. You must restructure the partnership or walk away.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Provide cultural training.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Provide cultural training.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Assign mediators.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Assign mediators.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Divide project tasks.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Divide project tasks.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "A religious procession will pass near your secure perimeter during a summit. Local authorities ask you to relax measures; your security chief objects. You must balance respect and risk.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Attend respectfully.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Attend respectfully.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Send symbolic representative.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Send symbolic representative.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Decline politely.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate: Decline politely.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "Evidence suggests an off-world actor is covertly manipulating a pre-warp society for profit. Intervention could expose Starfleet; inaction allows exploitation to continue. You must choose a lawful, ethical course.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Do nothing (Prime Directive).",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Do nothing (Prime Directive).. This respects cultural autonomy and minimizes contamination risk, consistent with the Prime Directive. It seeks informed consent and gradual engagement supported by clean chains of evidence."
+        },
+        {
+          "text": "Request Council ruling.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Request Council ruling.. This risks cultural pressure or inadvertent interference. Even helpful actions can distort development if not carefully bounded and reversible."
+        },
+        {
+          "text": "Assist indirectly.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Assist indirectly.. This risks cultural pressure or inadvertent interference. Even helpful actions can distort development if not carefully bounded and reversible."
+        }
+      ]
+    },
+    {
+      "scenario": "During a prisoner exchange, the detainee alleges mistreatment by the other side. Proceeding without inquiry may violate Federation standards; delay could collapse the exchange. You must navigate both.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Grant rights.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Grant rights.. This balances humanitarian obligations with legal frameworks, documenting status and ensuring due process in line with Federation law and interstellar conventions."
+        },
+        {
+          "text": "Request legal counsel.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Request legal counsel.. A hurried stance here could violate rights or treaty norms, undermining Starfleet credibility and inviting reprisals."
+        },
+        {
+          "text": "Follow local laws.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate: Follow local laws.. A hurried stance here could violate rights or treaty norms, undermining Starfleet credibility and inviting reprisals."
+        }
+      ]
+    },
+    {
+      "scenario": "A patrol from the neighboring state briefly crossed into Federation space during a storm of sensor interference. They apologize but your border worlds are alarmed. You must respond firmly without inviting escalation.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Apologize and withdraw.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Apologize and withdraw.. This course manages border sensitivities by confirming facts, documenting intentions, and offering verifiable steps such as neutral observation or beacon deployment. It reduces miscalculation while signaling resolve."
+        },
+        {
+          "text": "Request investigation.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Request investigation.. This could be read as either weakness or provocation along a tense border. Without verification and clear communication, it might trigger reciprocal moves that spiral."
+        },
+        {
+          "text": "Deny violation.",
+          "score": 4,
+          "type": "alternate",
+          "details": "Alternate: Deny violation.. This could be read as either weakness or provocation along a tense border. Without verification and clear communication, it might trigger reciprocal moves that spiral."
+        }
+      ]
+    },
+    {
+      "scenario": "A dissident flees to your ship and requests asylum, claiming certain death if returned. Granting asylum could destabilize negotiations already on a knife\u2019s edge.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Grant asylum.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Grant asylum.. This balances humanitarian obligations with legal frameworks, documenting status and ensuring due process in line with Federation law and interstellar conventions."
+        },
+        {
+          "text": "Protect in custody.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Protect in custody.. A hurried stance here could violate rights or treaty norms, undermining Starfleet credibility and inviting reprisals."
+        },
+        {
+          "text": "Delay decision.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Delay decision.. A hurried stance here could violate rights or treaty norms, undermining Starfleet credibility and inviting reprisals."
+        }
+      ]
+    },
+    {
+      "scenario": "Intelligence suggests a diplomatic pouch on a neutral freighter contains weapon components. Interdiction risks a scandal; inaction risks a massacre. You must thread the needle legally and diplomatically.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Report immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Report immediately.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Investigate quietly.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Investigate quietly.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Request Federation legal review.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Request Federation legal review.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "An enemy warship transmits a genuine-sounding distress call from a contested system. Rescue could save lives\u2014or be an ambush. You\u2019re in command of the response.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Decrypt transmission.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Decrypt transmission.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Boost comms sensors.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Boost comms sensors.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Send probe.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Send probe.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "On approach to a negotiation site, your communications are jammed intermittently. It could be hostile interference or a technical fault. Your next move will set the tone for talks.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Boost array.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Boost array.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Switch frequencies.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Switch frequencies.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Deploy relay buoy.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Deploy relay buoy.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "A planetary broadcast accuses Starfleet of undermining local sovereignty. Crowds mobilize as negotiators look to you. You must answer quickly and credibly.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Acknowledge immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Acknowledge immediately.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Relay to Starfleet.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Relay to Starfleet.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Send scout ship.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Send scout ship.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "Your hails go unanswered by a jittery defense force near a sensitive installation. Any maneuver may be misread. You must create safe conditions for dialogue.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Repair immediately.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Repair immediately.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Switch to backup array.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Switch to backup array.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Use shuttle comms.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Use shuttle comms.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "A foreign captain demands you lower shields so they can 'assist' with a crisis on your ship. Their solution could be sabotage\u2014or necessary help. You must decide under pressure.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Trace source.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Trace source.. This approach prioritizes verification, proportionality, and pathways that preserve face for all parties. It aligns with Starfleet diplomatic doctrine emphasizing de\u2011escalation and respect for lawful process."
+        },
+        {
+          "text": "Shut down array.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Shut down array.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        },
+        {
+          "text": "Jam enemy signal.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Jam enemy signal.. This path is plausible but elevates risk\u2014of misinterpretation, escalation, or loss of leverage. It may be acceptable as a contingency if safeguards and transparent follow\u2011ups are in place."
+        }
+      ]
+    },
+    {
+      "scenario": "The universal translator is struggling with a high-context language. Key terms in the draft accord keep shifting meaning. Talks are at risk of collapse.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Request linguist help.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Request linguist help.. This strengthens the information channel first\u2014clarifying terminology, authenticating messages, and creating shared glossaries\u2014before committing to binding positions."
+        },
+        {
+          "text": "Attempt manual translation.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Attempt manual translation.. Advancing without linguistic clarity or verified provenance invites error and bad\u2011faith exploitation."
+        },
+        {
+          "text": "Use gestures.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Use gestures.. Advancing without linguistic clarity or verified provenance invites error and bad\u2011faith exploitation."
+        }
+      ]
+    },
+    {
+      "scenario": "The counterpart\u2019s language avoids direct refusal; your 'yes/no' questions stall progress. You must adapt your approach to reach clarity without offense.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Run phonetic analysis.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Run phonetic analysis.. This strengthens the information channel first\u2014clarifying terminology, authenticating messages, and creating shared glossaries\u2014before committing to binding positions."
+        },
+        {
+          "text": "Attempt trial translations.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Attempt trial translations.. Advancing without linguistic clarity or verified provenance invites error and bad\u2011faith exploitation."
+        },
+        {
+          "text": "Use symbolic language.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Use symbolic language.. Advancing without linguistic clarity or verified provenance invites error and bad\u2011faith exploitation."
+        }
+      ]
+    },
+    {
+      "scenario": "An allied intelligence service asks you to relay an encrypted message during talks\u2014off the record. If discovered, the negotiations could implode.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Forward to Starfleet.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Forward to Starfleet.. This strengthens the information channel first\u2014clarifying terminology, authenticating messages, and creating shared glossaries\u2014before committing to binding positions."
+        },
+        {
+          "text": "Attempt decryption.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Attempt decryption.. Advancing without linguistic clarity or verified provenance invites error and bad\u2011faith exploitation."
+        },
+        {
+          "text": "Jam transmission.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate: Jam transmission.. Advancing without linguistic clarity or verified provenance invites error and bad\u2011faith exploitation."
+        }
+      ]
+    },
+    {
+      "scenario": "Idioms in the counterpart\u2019s language have double meanings that could be inflammatory if repeated. Your team needs guidance before the press conference.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Request clarification.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Request clarification.. This strengthens the information channel first\u2014clarifying terminology, authenticating messages, and creating shared glossaries\u2014before committing to binding positions."
+        },
+        {
+          "text": "Use database to interpret.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Use database to interpret.. Advancing without linguistic clarity or verified provenance invites error and bad\u2011faith exploitation."
+        },
+        {
+          "text": "Attempt direct translation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate: Attempt direct translation.. Advancing without linguistic clarity or verified provenance invites error and bad\u2011faith exploitation."
+        }
+      ]
+    },
+    {
+      "scenario": "A leaked transcript suggests your side made a hostile statement\u2014one that no one remembers saying. You suspect manipulation of the translation layer. You must verify, correct the record, and protect the process.",
+      "summary": "This simulation tests diplomatic command under pressure. As captain, you must protect lives, uphold treaty obligations, and honor the Prime Directive while building durable trust. Effective responses emphasize verification over assumption, de\u2011escalation over bravado, and solutions that let all parties claim legitimacy without sacrificing Federation ethics. Your tone, timing, and transparency matter as much as the outcome.",
+      "answers": [
+        {
+          "text": "Apologize and correct.",
+          "score": 9,
+          "type": "best",
+          "details": "Best: Apologize and correct.. This strengthens the information channel first\u2014clarifying terminology, authenticating messages, and creating shared glossaries\u2014before committing to binding positions."
+        },
+        {
+          "text": "Offer symbolic gesture.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate: Offer symbolic gesture.. Advancing without linguistic clarity or verified provenance invites error and bad\u2011faith exploitation."
+        },
+        {
+          "text": "Blame translator failure.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Alternate: Blame translator failure.. Advancing without linguistic clarity or verified provenance invites error and bad\u2011faith exploitation."
+        }
+      ]
+    }
+  ]
+}
