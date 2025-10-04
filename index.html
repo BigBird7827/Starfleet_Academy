@@ -135,12 +135,63 @@
       "Medical": "Medical_Training.json",
       "Security": "Security_Training.json"
     };
+
     const prefaces = {
-      "Command": "Command is not about absolute authority; it is about absolute responsibility. Every decision you make will weigh the balance of lives, mission objectives, and Federation principles. In this training, remember at all times: you are the captain. Orders must be clear, discipline must be firm but fair, and the Federation flag you carry demands integrity at all times. You will be tested not only on your ability to win but also on your ability to lead when victory is impossible — the very essence of the Kobayashi Maru.",
-      "Diplomacy": "Diplomacy is the Federation’s first line of defense. As a cadet in this simulation, you step into the captain’s role, responsible for every word and gesture. You must learn to listen as carefully as you speak, to negotiate from strength without arrogance, and to recognize when compromise honors our ideals more than confrontation. Remember: as captain, your words may avert wars, your patience may save lives, and your restraint may preserve the values of the Federation.",
-      "Engineering": "Starfleet ships are the finest vessels in the galaxy, but even they are only as strong as their engineers. In this training, you will command the ship in situations where engineering skill is as vital as tactical judgment. You are the captain, responsible for directing damage control, enforcing safety protocols, and trusting your crew while keeping the vessel operational. Your ingenuity and clarity of command can spell the difference between survival and disaster.",
-      "Science": "Exploration is the Federation’s mandate, and science is its spearhead. As captain in this module, you must interpret data, weigh theories against risk, and decide when curiosity must yield to caution. Scientific opportunities will tempt you with discovery, but never lose sight of your command role. You are responsible for balancing the pursuit of knowledge with the safety of your crew and adherence to Federation law."
+      "Command": 
+        "Command is not about absolute authority; it is about absolute responsibility. "
+        + "Every decision you make will weigh the balance of lives, mission objectives, "
+        + "and Federation principles. In this training, remember at all times: you are the captain. "
+        + "Orders must be clear, discipline must be firm but fair, and the Federation flag you carry "
+        + "demands integrity at all times. You will be tested not only on your ability to win but also "
+        + "on your ability to lead when victory is impossible — the very essence of the Kobayashi Maru.",
+
+      "Diplomacy": 
+        "Diplomacy is the Federation’s first line of defense, and the captain is its first practitioner. "
+        + "As captain, you embody the Federation’s principles in every encounter — from first contact "
+        + "to crisis resolution. If official diplomacy deems it necessary, a Federation Ambassador may "
+        + "be assigned, but until then, you are the Federation’s voice. You must learn to listen as "
+        + "carefully as you speak, to negotiate from strength without arrogance, and to recognize when "
+        + "compromise honors our ideals more than confrontation. Remember: you are the Captain. Your "
+        + "words may avert wars, your patience may save lives, and your restraint may preserve the "
+        + "values of the Federation.",
+
+      "Engineering": 
+        "Starfleet ships are the finest vessels in the galaxy, but even they are only as strong as their engineers. "
+        + "In this training, you will face crises where engineering skill, composure, and leadership are vital to survival. "
+        + "You are the Chief Engineer, charged with the beating heart of your vessel — the warp core. You must direct "
+        + "damage control, maintain efficiency under fire, and ensure the safety of every crew member who depends on "
+        + "your systems. Remember: as Chief Engineer, you are the lifeline of the ship. When the lights go dim and the "
+        + "power fails, it is your ingenuity that keeps the Federation’s promise alive.",
+
+      "Science": 
+        "Exploration is the Federation’s highest calling, and science is the key to that journey. "
+        + "In this training, you will serve as the Science Officer, charged with uncovering truth "
+        + "amid the unknown. "
+        + "You will interpret stellar phenomena, analyze alien life, and provide the data that "
+        + "guides command decisions. "
+        + "Your duty is not only to discover but to question — to seek knowledge while respecting "
+        + "the limits of safety and ethics. "
+        + "Remember: every discovery carries responsibility, and true science serves both understanding "
+        + "and the greater good.",
+
+      "Medical": 
+        "The health of a crew is the foundation of every mission. In this module, you will lead through crises "
+        + "of life and death, where compassion, precision, and ethical clarity must guide every order. You are "
+        + "the Chief Medical Officer, entrusted with every heartbeat aboard your ship. Remember: medicine in "
+        + "Starfleet is more than science — it is a reflection of the Federation’s respect for all life, and "
+        + "your duty is to preserve it at any cost.",
+
+      "Security": 
+        "Starfleet’s strength is not conquest, but protection. "
+        + "In this training, you will oversee both shipboard security and tactical readiness — "
+        + "including phasers, photon torpedoes, and defensive systems. "
+        + "You are the Chief of Security and Tactical Operations, responsible for safeguarding your crew "
+        + "from threats both within and without. "
+        + "Your duty is to defend the vessel, enforce discipline, and ensure that force is used only when "
+        + "necessity and principle align. "
+        + "Remember: strength without principle is tyranny, and true security lies in courage tempered by restraint."
     };
+
     document.getElementById("entryForm").addEventListener("submit", e=>{
       e.preventDefault();
       document.getElementById("mainScreen").style.display="none";
@@ -154,6 +205,7 @@
         btnBox.appendChild(b);
       });
     });
+
     function loadTraining(dept){
       document.getElementById("orientationPage").style.display="none";
       document.getElementById("trainingPage").style.display="block";
@@ -203,11 +255,13 @@
           content.innerHTML="<p>Failed to load training material.</p>";
         });
     }
+
     document.getElementById("returnMain").addEventListener("click",()=>{
       document.getElementById("orientationPage").style.display="none";
       document.body.classList.remove("orientation","allow-scroll");
       document.getElementById("mainScreen").style.display="block";
     });
+
     document.getElementById("returnOrientation").addEventListener("click",()=>{
       document.getElementById("trainingPage").style.display="none";
       document.getElementById("orientationPage").style.display="block";
