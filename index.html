@@ -6,11 +6,14 @@
 <title>Starfleet Academy</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root { --gold:#ffd84d; }
+:root {
+  --gold:#ffd84d;
+  --blue:#00aaff;
+}
 html,body{height:100%;margin:0;padding:0;overflow:hidden;}
 body{
-font-family:'Roboto',sans-serif;
 background:#000;
+font-family:'Roboto',sans-serif;
 color:var(--gold);
 display:flex;
 flex-direction:column;
@@ -19,18 +22,95 @@ justify-content:center;
 text-align:center;
 position:relative;
 }
+
+/* LCARS Accent Bars */
+.lcars-bar{
+position:absolute;
+left:0;
+width:100%;
+height:8px;
+animation:pulse 6s infinite alternate;
+}
+.lcars-top{top:0;}
+.lcars-bottom{bottom:0;}
+@keyframes pulse{
+0%{background:linear-gradient(90deg,var(--gold),var(--blue));}
+50%{background:linear-gradient(90deg,var(--blue),var(--gold));}
+100%{background:linear-gradient(90deg,var(--gold),var(--blue));}
+}
+
+/* Corner Insignias */
 .corner-image{
 position:absolute;
 top:10px;
 width:180px;
 height:auto;
 object-fit:contain;
-z-index:1;
+z-index:2;
 pointer-events:none;
 opacity:0.9;
 }
 .corner-left{left:10px;}
 .corner-right{right:10px;}
+
+/* LOGIN */
+#loginScreen{
+position:absolute;
+top:50%;left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+z-index:3;
+}
+.login-box{
+background:rgba(0,0,0,0.85);
+border:2px solid var(--gold);
+padding:25px 30px;
+border-radius:12px;
+box-shadow:0 0 20px var(--gold);
+width:380px;
+max-width:90%;
+}
+.login-box h2{
+font-family:'Orbitron',sans-serif;
+font-size:24pt;
+margin-bottom:20px;
+}
+.login-box label{
+display:block;
+margin:10px 0 5px;
+font-size:12pt;
+}
+.login-box input,.login-box select{
+width:100%;
+padding:8px;
+border:none;
+border-radius:6px;
+background:#111;
+color:#fff;
+font-size:12pt;
+font-family:'Roboto',sans-serif;
+}
+.login-box button{
+margin-top:15px;
+padding:10px 18px;
+border-radius:8px;
+border:2px solid var(--gold);
+background:linear-gradient(to bottom,#1e3c72,#000);
+color:var(--gold);
+font-weight:bold;
+font-size:13pt;
+cursor:pointer;
+}
+.login-box button:hover{background:linear-gradient(to bottom,#2a5298,#111);}
+#accessMessage{
+margin-top:10px;
+color:#fff;
+opacity:0;
+transition:opacity 0.5s;
+}
+
+/* MAIN SCREEN */
+#mainScreen{display:none;opacity:0;transition:opacity 3s;}
 .page-title{
 font-family:'Orbitron',sans-serif;
 font-size:32pt;
@@ -76,13 +156,45 @@ button:hover{background:linear-gradient(to bottom,#2a5298,#111);transform:transl
 </style>
 </head>
 <body>
-<!-- MAIN SCREEN -->
-<div id="mainScreen">
-  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/refs/heads/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/refs/heads/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+<div class="lcars-bar lcars-top"></div>
+<div class="lcars-bar lcars-bottom"></div>
 
-  <div class="page-title">Welcome to Starfleet Academy</div>
-  <div class="welcome-text">
+<img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/refs/heads/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+<img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/refs/heads/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+
+<!-- LOGIN -->
+<div id="loginScreen">
+  <div class="login-box">
+    <h2>Cadet Login</h2>
+    <label for="cadetName">Cadet Name</label>
+    <input type="text" id="cadetName" placeholder="Enter your name">
+    <label for="species">Species</label>
+    <select id="species">
+      <option value="">-- Select Species --</option>
+      <option>Human</option>
+      <option>Vulcan</option>
+      <option>Andorian</option>
+      <option>Tellarite</option>
+      <option>Bajoran</option>
+      <option>Betazoid</option>
+      <option>Trill</option>
+      <option>Bolian</option>
+      <option>Klingon</option>
+      <option>Ferengi</option>
+      <option>Denobulan</option>
+      <option>Orion</option>
+      <option>Caitian</option>
+      <option>Benzite</option>
+    </select>
+    <button id="loginBtn">Login</button>
+    <div id="accessMessage"></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="mainScreen">
+  <div class="page-title" id="mainTitle">Welcome to Starfleet Academy</div>
+  <div class="welcome-text" id="welcomeText">
     Welcome, Cadet — and congratulations. Few are chosen to stand where you stand now.<br><br>
     Starfleet Academy is where the Federation’s future officers are shaped. Here, among peers from worlds across known space, you will be challenged to think critically, act decisively, and serve with integrity. The Academy is not merely a place of study — it is a proving ground where intellect, discipline, and character are tested every day.<br><br>
     You will explore the principles of command, the responsibilities of discovery, and the ethics of leadership. You will learn not only how to navigate the stars, but how to uphold the ideals of the United Federation of Planets.<br><br>
@@ -118,6 +230,7 @@ button:hover{background:linear-gradient(to bottom,#2a5298,#111);transform:transl
 </div>
 
 <script>
+let cadetName="",species="";
 const trainingFiles={
 "Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
 "Diplomacy":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
@@ -135,6 +248,21 @@ const labFiles={
 "Medical":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
 };
 
+document.getElementById("loginBtn").onclick=()=>{
+cadetName=document.getElementById("cadetName").value.trim();
+species=document.getElementById("species").value.trim();
+if(!cadetName||!species)return;
+const msg=document.getElementById("accessMessage");
+msg.innerHTML=`Access Granted — Welcome, Cadet ${cadetName} of ${species}`;
+msg.style.opacity=1;
+setTimeout(()=>{
+document.getElementById("loginScreen").style.display="none";
+const main=document.getElementById("mainScreen");
+main.style.display="block";
+setTimeout(()=>{main.style.opacity=1;},50);
+},1000);
+};
+
 let currentMode="training";
 document.getElementById("enterTraining").onclick=()=>{currentMode="training";showOrientation();};
 document.getElementById("enterLab").onclick=()=>{currentMode="lab";showOrientation();};
@@ -142,7 +270,9 @@ document.getElementById("enterLab").onclick=()=>{currentMode="lab";showOrientati
 function showOrientation(){
 document.getElementById("mainScreen").style.display="none";
 document.getElementById("orientationPage").style.display="block";
-document.getElementById("orientationTitle").textContent=currentMode==="training"?"Select a Department for Training":"Select a Department for Lab";
+document.getElementById("orientationTitle").textContent=currentMode==="training"
+?`Select a Department for Training, Cadet ${cadetName} of ${species}`
+:`Select a Department for Lab, Cadet ${cadetName} of ${species}`;
 const btnBox=document.getElementById("moduleButtons");
 btnBox.innerHTML="";
 const source=currentMode==="training"?trainingFiles:labFiles;
@@ -157,7 +287,7 @@ btnBox.appendChild(b);
 function loadTraining(dept){
 document.getElementById("orientationPage").style.display="none";
 document.getElementById("trainingPage").style.display="block";
-document.getElementById("trainingDeptTitle").textContent=`${dept} Training`;
+document.getElementById("trainingDeptTitle").textContent=`${dept} Training — Cadet ${cadetName} of ${species}`;
 fetch(trainingFiles[dept])
 .then(r=>r.json())
 .then(data=>{
@@ -181,7 +311,7 @@ content.appendChild(section);
 function loadLab(dept){
 document.getElementById("orientationPage").style.display="none";
 document.getElementById("labPage").style.display="block";
-document.getElementById("labDeptTitle").textContent=`${dept} Lab`;
+document.getElementById("labDeptTitle").textContent=`${dept} Lab — Cadet ${cadetName} of ${species}`;
 fetch(labFiles[dept])
 .then(r=>r.json())
 .then(data=>{
@@ -203,7 +333,7 @@ answersDiv.appendChild(btn);
 });
 content.appendChild(answersDiv);
 }
-function evaluate(ans,item,btn){
+function evaluate(ans,item){
 document.querySelectorAll(".answers button").forEach(b=>b.disabled=true);
 let feedback=document.createElement("div");
 feedback.className="feedback";
