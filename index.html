@@ -7,25 +7,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --gold: #FFCC66;
-      --pale-canary: #FFFF99;
-      --tanoi: #FFCC99;
-      --golden-tanoi: #FFCC66;
-      --neon-carrot: #FF9933;
-      --eggplant: #664466;
-      --anakiwa: #99CCFF;
-      --mariner: #3366CC;
-      --bahama: #006699;
-      --screen-bg: #000000;
+      --lcars-eggplant: #330033;
+      --lcars-lilac: #CC99CC;
+      --lcars-blue: #6699CC;
+      --lcars-cyan: #99CCFF;
+      --lcars-orange: #FF9966;
+      --lcars-yellow: #FFCC66;
+      --lcars-gold: #FFCC33;
+      --lcars-bg: #000;
+      --text: #FFFFCC;
     }
+
     html, body {
       height: 100%;
       margin: 0;
       padding: 0;
-      background: var(--screen-bg);
+      background: var(--lcars-bg);
       font-family: 'Roboto', sans-serif;
-      color: var(--gold);
+      color: var(--text);
     }
+
     #loginScreen {
       position: relative;
       height: 100vh;
@@ -33,111 +34,198 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: #000;
+      overflow: hidden;
+      background: var(--lcars-bg);
     }
-    #loginScreen::before {
-      content: "";
+
+    .lcars-frame {
       position: absolute;
       top: 0;
       left: 0;
-      width: 40%;
-      height: 8px;
-      background: var(--neon-carrot);
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
     }
-    #loginScreen::after {
-      content: "";
+
+    .lcars-bar {
       position: absolute;
+      height: 32px;
+      width: 100%;
+    }
+
+    .lcars-bar.top {
+      top: 0;
+      background: linear-gradient(to right, var(--lcars-eggplant), var(--lcars-gold));
+    }
+
+    .lcars-bar.bottom {
       bottom: 0;
-      right: 0;
-      width: 40%;
-      height: 8px;
-      background: var(--anakiwa);
+      background: linear-gradient(to left, var(--lcars-blue), var(--lcars-gold));
     }
-    .lcars-elbow-left {
+
+    .lcars-column-left, .lcars-column-right {
       position: absolute;
-      top: 50%;
+      top: 0;
+      bottom: 0;
+      width: 100px;
+    }
+
+    .lcars-column-left {
       left: 0;
-      width: 60px;
-      height: 60px;
-      background: var(--eggplant);
-      border-radius: 0 60px 60px 0;
-      transform: translateY(-50%);
+      background: linear-gradient(to bottom, var(--lcars-lilac), var(--lcars-orange));
+      border-radius: 0 100px 100px 0;
     }
-    .lcars-elbow-right {
-      position: absolute;
-      top: 50%;
+
+    .lcars-column-right {
       right: 0;
-      width: 60px;
-      height: 60px;
-      background: var(--bahama);
-      border-radius: 60px 0 0 60px;
-      transform: translateY(-50%);
+      background: linear-gradient(to bottom, var(--lcars-cyan), var(--lcars-blue));
+      border-radius: 100px 0 0 100px;
     }
+
     .page-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 36pt;
-      margin: 20px 0 40px;
-      color: var(--pale-canary);
+      font-size: 42pt;
+      color: var(--lcars-gold);
+      text-shadow: 0 0 10px var(--lcars-gold);
+      margin-bottom: 40px;
+      z-index: 2;
+      position: relative;
     }
+
     .container {
       background: rgba(0,0,0,0.8);
-      padding: 30px 40px;
-      border-radius: 12px;
-      width: 360px;
-      box-shadow: 0 0 20px var(--golden-tanoi);
+      padding: 40px 50px;
+      border-radius: 20px;
+      width: 420px;
+      box-shadow: 0 0 25px var(--lcars-gold);
+      border: 2px solid var(--lcars-lilac);
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
+
     label {
       display: block;
-      margin: 12px 0 4px;
-      font-size: 13pt;
-      color: var(--gold);
+      margin: 12px 0 6px;
+      font-size: 15pt;
+      color: var(--lcars-gold);
     }
+
     input, select {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       background: #111;
       color: #fff;
       font-size: 14pt;
       outline: none;
     }
+
     button {
       width: 100%;
       padding: 12px;
-      background: var(--mariner);
-      color: var(--gold);
+      background: var(--lcars-orange);
+      color: #000;
       font-family: 'Orbitron', sans-serif;
       font-size: 18pt;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      box-shadow: 0 0 15px rgba(255,204,102,0.4);
+      box-shadow: 0 0 10px var(--lcars-gold);
       transition: transform 0.2s, box-shadow 0.2s;
     }
+
     button:hover {
       transform: scale(1.03);
-      box-shadow: 0 0 25px var(--gold);
+      box-shadow: 0 0 20px var(--lcars-gold);
     }
+
     #accessMessage {
       text-align: center;
-      color: var(--gold);
+      color: var(--lcars-gold);
       font-family: 'Orbitron', sans-serif;
       font-size: 16pt;
       margin-top: 12px;
       opacity: 0;
       transition: opacity 0.5s ease-in;
     }
+
+    .corner-image {
+      position: fixed;
+      width: 2.5in;
+      height: 2.5in;
+      top: 10px;
+      object-fit: contain;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .corner-left { left: 10px; }
+    .corner-right { right: 10px; }
+
+    .orientation-root {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+    .orientation-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 32pt;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: gold;
+    }
+
+    .orientation-text {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      padding: 0 20px;
+      font-size: 16pt;
+      line-height: 1.5em;
+      text-align: center;
+    }
+
+    .button-box {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      background: rgba(0,0,0,0.4);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px var(--lcars-gold);
+    }
+
+    .button-box button {
+      font-size: 20pt;
+      padding: 15px 25px;
+      border-radius: 12px;
+      width: 100%;
+    }
+
+    .return-btn {
+      padding: 10px 25px;
+      font-size: 14pt;
+      width: auto;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
   <div id="loginScreen">
-    <div class="lcars-elbow-left"></div>
-    <div class="lcars-elbow-right"></div>
-    <div class="page-title">WELCOME</div>
+    <div class="lcars-frame">
+      <div class="lcars-bar top"></div>
+      <div class="lcars-bar bottom"></div>
+      <div class="lcars-column-left"></div>
+      <div class="lcars-column-right"></div>
+    </div>
+    <div class="page-title">STARFLEET ACADEMY</div>
     <div class="container">
       <label for="cadetName">Cadet Name</label>
       <input type="text" id="cadetName" required>
@@ -187,6 +275,7 @@
       </div>
     </div>
   </div>
+
   <div id="orientationPage" style="display:none;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -197,22 +286,25 @@
       <button class="return-btn" id="returnMain">Return to Main</button>
     </div>
   </div>
+
   <div id="trainingPage" style="display:none;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
     <div class="page-title" id="trainingDeptTitle"></div>
-    <div style="text-align:center;color:var(--gold);font-size:18pt;" id="trainingCadetInfo"></div>
+    <div style="text-align:center;color:var(--lcars-gold);font-size:18pt;" id="trainingCadetInfo"></div>
     <div class="container" id="trainingContent" style="width:calc(100% - 320px);margin:0 auto;"></div>
     <button class="return-btn fixed-return" id="returnOrientationTrain">Back to Departments</button>
   </div>
+
   <div id="labPage" style="display:none;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
     <div class="page-title" id="labDeptTitle"></div>
-    <div style="text-align:center;color:var(--gold);font-size:18pt;" id="labCadetInfo"></div>
+    <div style="text-align:center;color:var(--lcars-gold);font-size:18pt;" id="labCadetInfo"></div>
     <div class="container" id="labContent" style="width:calc(100% - 320px);margin:0 auto;"></div>
     <button class="return-btn fixed-return" id="returnOrientationLab">Back to Departments</button>
   </div>
+
   <div id="examPage" style="display:none;">
     <div id="examScoreboard">
       <h3>Class Rankings</h3>
@@ -220,43 +312,11 @@
       <table id="cadetTable"></table>
     </div>
     <div class="page-title" id="examDeptTitle"></div>
-    <div style="text-align:center;color:var(--gold);font-size:18pt;" id="examCadetInfo"></div>
+    <div style="text-align:center;color:var(--lcars-gold);font-size:18pt;" id="examCadetInfo"></div>
     <div class="container" id="examContent" style="width:calc(100% - 320px);margin:0 auto;"></div>
     <button class="return-btn fixed-return" id="returnOrientationExam">Back to Departments</button>
   </div>
   <script>
-    const trainingFiles = {
-      "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
-      "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
-      "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Training.json",
-      "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Training.json",
-      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training.json",
-      "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Training.json"
-    };
-
-    const labFiles = {
-      "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Lab.json",
-      "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Lab.json",
-      "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Lab.json",
-      "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Lab.json",
-      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
-      "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
-    };
-
-    const examFiles = { ...trainingFiles };
-
-    const prefaces = {
-      "Command": "Command is not about absolute authority; it is about absolute responsibility. Every decision you make will weigh the balance of lives, mission objectives, and Federation principles.",
-      "Diplomacy": "Diplomacy is the Federation’s first line of defense. Your words may avert wars, your patience may save lives, and your restraint may preserve the values of the Federation.",
-      "Engineering": "Starfleet ships are only as strong as their engineers. You direct damage control, enforce safety, and keep the vessel operational under pressure.",
-      "Science": "Exploration is our mandate. Balance curiosity with caution, and interpret data to guide the mission safely and ethically.",
-      "Medical": "You are responsible for the health and safety of every crew member. Combine empathy, expertise, and decisive action.",
-      "Security": "Maintain order, enforce protocols, and respond to threats with precision while balancing defense with operational priorities."
-    };
-
-    let cadetName = "";
-    let species = "";
-
     const homeworlds = {
       "Human": "Earth", "Vulcan": "Vulcan", "Andorian": "Andoria", "Tellarite": "Tellar Prime",
       "Bajoran": "Bajor", "Betazoid": "Betazed", "Bolian": "Bolarus IX", "Trill": "Trill",
@@ -265,8 +325,8 @@
     };
 
     document.getElementById("loginBtn").addEventListener("click", () => {
-      cadetName = document.getElementById("cadetName").value.trim();
-      species = document.getElementById("species").value;
+      const cadetName = document.getElementById("cadetName").value.trim();
+      const species = document.getElementById("species").value;
       if (!cadetName || !species) return alert("Enter name and species first.");
       const msg = document.getElementById("accessMessage");
       msg.textContent = `ACCESS GRANTED — Cadet ${cadetName} of ${homeworlds[species]}`;
@@ -277,248 +337,6 @@
         document.getElementById("mainScreen").style.display = "block";
       }, 5000);
     });
-
-    document.getElementById("trainingBtn").addEventListener("click", () => openOrientation("training"));
-    document.getElementById("labBtn").addEventListener("click", () => openOrientation("lab"));
-    document.getElementById("examBtn").addEventListener("click", () => openOrientation("exam"));
-
-    function openOrientation(mode) {
-      document.getElementById("mainScreen").style.display = "none";
-      const title = document.getElementById("orientationTitle");
-      title.textContent = mode === "exam" ? "Select Exam Department" :
-                          mode === "lab"  ? "Select Lab Department"  :
-                                            "Select Training Department";
-
-      const btnBox = document.getElementById("moduleButtons");
-      btnBox.innerHTML = "";
-      Object.keys(trainingFiles).forEach(dept => {
-        const b = document.createElement("button");
-        b.textContent = dept;
-        b.onclick = () => {
-          if (mode === "training") loadTraining(dept);
-          else if (mode === "lab") loadLab(dept);
-          else loadExam(dept);
-        };
-        btnBox.appendChild(b);
-      });
-      document.getElementById("orientationPage").style.display = "block";
-    }
-
-    document.getElementById("returnMain").onclick = () => {
-      document.getElementById("orientationPage").style.display = "none";
-      document.getElementById("mainScreen").style.display = "block";
-    };
-
-    document.getElementById("returnOrientationTrain").onclick = () => {
-      document.getElementById("trainingPage").style.display = "none";
-      document.getElementById("orientationPage").style.display = "block";
-    };
-
-    document.getElementById("returnOrientationLab").onclick = () => {
-      document.getElementById("labPage").style.display = "none";
-      document.getElementById("orientationPage").style.display = "block";
-    };
-
-    document.getElementById("returnOrientationExam").onclick = () => {
-      document.getElementById("examPage").style.display = "none";
-      document.getElementById("orientationPage").style.display = "block";
-    };
-
-    function loadTraining(dept) {
-      document.getElementById("orientationPage").style.display = "none";
-      document.getElementById("trainingPage").style.display = "block";
-
-      document.getElementById("trainingDeptTitle").textContent = `${dept} Training`;
-      document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
-
-      const content = document.getElementById("trainingContent");
-      content.innerHTML = "<p>Loading...</p>";
-
-      fetch(trainingFiles[dept])
-        .then(r => r.json())
-        .then(data => {
-          content.innerHTML = "";
-          if (prefaces[dept]) {
-            const pre = document.createElement("div");
-            pre.className = "training-section";
-            pre.innerHTML = `<p>${prefaces[dept]}</p>`;
-            content.appendChild(pre);
-          }
-          if (data.study) {
-            data.study.forEach(item => {
-              const section = document.createElement("div");
-              section.className = "training-section";
-              section.innerHTML = `<h3>${item.scenario}</h3><p>${item.summary || ""}</p>`;
-              if (item.answers) {
-                const answersDiv = document.createElement("div");
-                answersDiv.className = "answers";
-                item.answers.forEach(ans => {
-                  const block = document.createElement("div");
-                  block.className = "answer-block";
-                  const label = ans.type === "best" ? "⭐ Best Answer" : "Alternate Answer";
-                  block.innerHTML = `<p><strong>${label}:</strong> ${ans.text}</p><p><em>Score:</em> ${ans.score}</p><p>${ans.details || ""}</p>`;
-                  answersDiv.appendChild(block);
-                });
-                section.appendChild(answersDiv);
-              }
-              content.appendChild(section);
-            });
-          } else {
-            content.innerHTML = "<p>No training items found.</p>";
-          }
-        });
-    }
-
-    function loadLab(dept) {
-      document.getElementById("orientationPage").style.display = "none";
-      document.getElementById("labPage").style.display = "block";
-
-      document.getElementById("labDeptTitle").textContent = `${dept} Lab`;
-      document.getElementById("labCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
-
-      const content = document.getElementById("labContent");
-      content.innerHTML = "<p>Loading...</p>";
-
-      fetch(labFiles[dept])
-        .then(r => r.json())
-        .then(data => {
-          content.innerHTML = "";
-          if (!(data.lab && data.lab.length)) {
-            content.innerHTML = "<p>No lab scenarios found.</p>";
-            return;
-          }
-          let index = 0;
-          function renderScenario() {
-            const item = data.lab[index];
-            content.innerHTML = `
-              <div class='training-section'>
-                <h3>${item.scenario}</h3>
-                <p>${item.summary || ""}</p>
-              </div>
-            `;
-            const answersDiv = document.createElement("div");
-            answersDiv.className = "answers";
-            item.answers.forEach(ans => {
-              const btn = document.createElement("button");
-              btn.textContent = ans.text;
-              btn.onclick = () => evaluate(ans, item);
-              answersDiv.appendChild(btn);
-            });
-            content.appendChild(answersDiv);
-          }
-          function evaluate(ans, item) {
-            document.querySelectorAll("#labContent .answers button").forEach(b => b.disabled = true);
-            const best = item.answers.find(a => a.type === "best");
-            const feedback = document.createElement("div");
-            if (ans.type === "best") {
-              feedback.innerHTML = `<strong>Correct.</strong> ${ans.details}`;
-            } else if (ans.type === "alternate") {
-              feedback.innerHTML = `<strong>Acceptable.</strong> ${ans.details}<br><br>The best action would have been:<br><em>${best.text}</em>`;
-            } else {
-              feedback.innerHTML = `<strong>Incorrect.</strong> ${ans.details}<br><br>The correct course of action:<br><em>${best.text}</em>`;
-            }
-            content.appendChild(feedback);
-            const next = document.createElement("button");
-            next.textContent = index < data.lab.length - 1 ? "Next Scenario" : "Finish Lab";
-            next.onclick = () => {
-              index++;
-              if (index < data.lab.length) renderScenario();
-              else content.innerHTML = `<h3>Lab Complete</h3>`;
-            };
-            content.appendChild(next);
-          }
-          renderScenario();
-        });
-    }
-
-    function loadExam(dept) {
-      document.getElementById("orientationPage").style.display = "none";
-      document.getElementById("examPage").style.display = "block";
-
-      document.getElementById("examDeptTitle").textContent = `${dept} Exam`;
-      document.getElementById("examCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
-
-      const content = document.getElementById("examContent");
-      const table = document.getElementById("cadetTable");
-      const progress = document.getElementById("examProgress");
-
-      const classmates = [
-        { name: cadetName, gpa: 0.00, self: true },
-        { name: "T'Lor", gpa: 0.00 }, { name: "Dax", gpa: 0.00 }, { name: "Nog", gpa: 0.00 },
-        { name: "Paris", gpa: 0.00 }, { name: "Vorik", gpa: 0.00 }, { name: "Ro", gpa: 0.00 },
-        { name: "O'Brien", gpa: 0.00 }, { name: "Leeta", gpa: 0.00 }, { name: "Torres", gpa: 0.00 }
-      ];
-
-      let answered = 0, total = 0;
-
-      function updateScoreboard() {
-        const rows = [...classmates].sort((a,b)=>b.gpa-a.gpa)
-          .map(c => `<tr class='${c.self ? "highlight" : ""}'><td>${c.self ? "You" : c.name}</td><td style="text-align:right;">${c.gpa.toFixed(2)}</td></tr>`)
-          .join("");
-        table.innerHTML = rows;
-        progress.textContent = `Questions Answered: ${answered}`;
-      }
-
-      fetch(examFiles[dept])
-        .then(r => r.json())
-        .then(data => {
-          const questions = data.study.slice(0, 15);
-          let index = 0;
-          function renderQuestion() {
-            const q = questions[index];
-            content.innerHTML = `
-              <div class='training-section'>
-                <h3>${q.scenario}</h3>
-                <p>${q.summary || ""}</p>
-              </div>
-            `;
-            const answersDiv = document.createElement("div");
-            answersDiv.className = "answers";
-            let allAnswers = [...q.answers];
-            if (allAnswers.length < 5) {
-              allAnswers.push({ text: "Reroute main deflector through EPS grid.", score: 0, type: "wrong", details: "This would destabilize the system." });
-              allAnswers.push({ text: "Ignore the situation and await orders.", score: 0, type: "wrong", details: "Inaction in crisis situations is unacceptable in Starfleet." });
-            }
-            allAnswers.sort(() => Math.random() - 0.5);
-            allAnswers.forEach(a => {
-              const btn = document.createElement("button");
-              btn.textContent = a.text;
-              btn.onclick = () => evaluate(a, q);
-              answersDiv.appendChild(btn);
-            });
-            content.appendChild(answersDiv);
-          }
-          function evaluate(ans, q) {
-            document.querySelectorAll("#examContent .answers button").forEach(b => b.disabled = true);
-            const best = q.answers.find(a => a.type === "best");
-            const feedback = document.createElement("div");
-            if (ans.type === "best") {
-              feedback.innerHTML = `<strong>Correct.</strong> ${ans.details}`;
-              total += ans.score;
-            } else if (ans.type === "alternate") {
-              feedback.innerHTML = `<strong>Acceptable.</strong> ${ans.details}<br><br>The best answer was:<br><em>${best.text}</em>`;
-              total += ans.score;
-            } else {
-              feedback.innerHTML = `<strong>Incorrect.</strong> ${ans.details}<br><br>The correct response was:<br><em>${best.text}</em>`;
-            }
-            content.appendChild(feedback);
-            answered++;
-            const gpa = ((total / (answered * 10)) * 4) || 0;
-            classmates.find(c => c.self).gpa = gpa;
-            updateScoreboard();
-            const next = document.createElement("button");
-            next.textContent = index < questions.length - 1 ? "Next Question" : "Finish Exam";
-            next.onclick = () => {
-              index++;
-              if (index < questions.length) renderQuestion();
-              else content.innerHTML = `<h3>Exam Complete</h3><p>Your total score: ${total}<br>Your final GPA: ${gpa.toFixed(2)}</p>`;
-            };
-            content.appendChild(next);
-          }
-          updateScoreboard();
-          renderQuestion();
-        });
-    }
   </script>
 </body>
 </html>
