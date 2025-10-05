@@ -153,6 +153,21 @@ button:hover{background:linear-gradient(to bottom,#2a5298,#111);transform:transl
 .feedback{margin-top:15px;padding:15px;background:rgba(255,255,255,0.1);border-radius:8px;color:#fff;font-size:14pt;}
 .answers button{display:block;width:100%;margin-top:10px;}
 .return-btn{padding:8px 20px;font-size:13pt;width:auto;margin-top:20px;}
+
+/* TRAINING LAYOUT RESTORED */
+.training-title {font-family:'Orbitron',sans-serif;font-size:24pt;margin-bottom:20px;text-align:center;color:var(--gold);}
+.training-section {margin-bottom:35px;padding-bottom:20px;border-bottom:1px solid #444;}
+.training-section h3 {font-family:'Roboto',sans-serif;font-size:15pt;margin-bottom:10px;color:var(--gold);}
+.training-section p {font-size:14pt;line-height:1.6em;margin:0 0 10px 0;color:#fff;}
+.answers {margin-left:20px;}
+.answer-block {margin-bottom:15px;padding:10px;background:rgba(255,255,255,0.05);border-radius:8px;}
+.answer-block strong {color:#00ffcc;}
+.answer-block p {color:#fff;}
+#trainingPage {padding:20px;height:100vh;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+#trainingPage::-webkit-scrollbar {width:10px;}
+#trainingPage::-webkit-scrollbar-track {background:#111;}
+#trainingPage::-webkit-scrollbar-thumb {background:#555;border-radius:8px;border:2px solid #111;}
+#trainingPage::-webkit-scrollbar-thumb:hover {background:#888;}
 </style>
 </head>
 <body>
@@ -171,20 +186,11 @@ button:hover{background:linear-gradient(to bottom,#2a5298,#111);transform:transl
     <label for="species">Species</label>
     <select id="species">
       <option value="">-- Select Species --</option>
-      <option>Human</option>
-      <option>Vulcan</option>
-      <option>Andorian</option>
-      <option>Tellarite</option>
-      <option>Bajoran</option>
-      <option>Betazoid</option>
-      <option>Trill</option>
-      <option>Bolian</option>
-      <option>Klingon</option>
-      <option>Ferengi</option>
-      <option>Denobulan</option>
-      <option>Orion</option>
-      <option>Caitian</option>
-      <option>Benzite</option>
+      <option>Human</option><option>Vulcan</option><option>Andorian</option>
+      <option>Tellarite</option><option>Bajoran</option><option>Betazoid</option>
+      <option>Trill</option><option>Bolian</option><option>Klingon</option>
+      <option>Ferengi</option><option>Denobulan</option><option>Orion</option>
+      <option>Caitian</option><option>Benzite</option>
     </select>
     <button id="loginBtn">Login</button>
     <div id="accessMessage"></div>
@@ -198,7 +204,6 @@ button:hover{background:linear-gradient(to bottom,#2a5298,#111);transform:transl
     Welcome, Cadet — and congratulations. Few are chosen to stand where you stand now.<br><br>
     Starfleet Academy is where the Federation’s future officers are shaped. Here, among peers from worlds across known space, you will be challenged to think critically, act decisively, and serve with integrity. The Academy is not merely a place of study — it is a proving ground where intellect, discipline, and character are tested every day.<br><br>
     You will explore the principles of command, the responsibilities of discovery, and the ethics of leadership. You will learn not only how to navigate the stars, but how to uphold the ideals of the United Federation of Planets.<br><br>
-    The path ahead will demand your best. But when you graduate, you will be ready to carry the Federation’s banner into the unknown.<br><br>
     <strong>Ex Astris, Scientia.</strong>
   </div>
   <div class="container">
@@ -260,7 +265,7 @@ document.getElementById("loginScreen").style.display="none";
 const main=document.getElementById("mainScreen");
 main.style.display="block";
 setTimeout(()=>{main.style.opacity=1;},50);
-},1000);
+},3000);
 };
 
 let currentMode="training";
@@ -294,14 +299,26 @@ fetch(trainingFiles[dept])
 const content=document.getElementById("trainingContent");
 content.innerHTML="";
 if(data.study){
+if(data.preface){
+const preface=document.createElement("div");
+preface.className="training-section";
+preface.innerHTML=`<p>${data.preface}</p>`;
+content.appendChild(preface);
+}
 data.study.forEach(item=>{
 const section=document.createElement("div");
-section.innerHTML=`<h3>${item.scenario}</h3><p>${item.summary}</p>`;
+section.className="training-section";
+const summaryText=item.summary?item.summary:"(No summary available)";
+let html=`<h3>${item.scenario}</h3><p>${summaryText}</p>`;
 if(item.answers){
+html+=`<div class="answers">`;
 item.answers.forEach(ans=>{
-section.innerHTML+=`<p><strong>${ans.type==="best"?"⭐ Best Answer":"Alternate Answer"}:</strong> ${ans.text}<br><em>Score:</em> ${ans.score}<br>${ans.details||""}</p>`;
+const label=ans.type==="best"?"⭐ Best Answer":"Alternate Answer";
+html+=`<div class="answer-block"><p><strong>${label}:</strong> ${ans.text}</p><p><em>Score:</em> ${ans.score}</p><p>${ans.details||""}</p></div>`;
 });
+html+=`</div>`;
 }
+section.innerHTML=html;
 content.appendChild(section);
 });
 }
