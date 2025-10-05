@@ -7,119 +7,124 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --black: #000000;
-      --blue-dark: #0a1a3f;
-      --blue-mid: #143d7a;
-      --blue-light: #2c65c8;
-      --gold: #ffd84d;
-      --red: #b30000;
-      --text-light: #e0e0e0;
+      --gold: #ffcc66;
+      --blue: #0077cc;
+      --dark-blue: #001933;
+      --black: #000;
+      --text: #e6e6e6;
     }
 
     html, body {
-      height: 100%;
       margin: 0;
       padding: 0;
+      height: 100%;
       background: var(--black);
       font-family: 'Roboto', sans-serif;
-      color: var(--text-light);
+      color: var(--text);
     }
 
     #loginScreen {
       position: relative;
       height: 100vh;
-      background: linear-gradient(135deg, var(--black) 60%, var(--blue-dark) 100%);
+      width: 100%;
+      background: var(--black);
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       overflow: hidden;
     }
 
-    .lcars-panel {
+    .lcars-left {
       position: absolute;
       top: 0;
       left: 0;
-      width: 12%;
+      width: 240px;
       height: 100%;
-      background: linear-gradient(to bottom, var(--blue-mid), var(--blue-light));
-      border-right: 4px solid var(--gold);
+      background: var(--dark-blue);
+      border-right: 6px solid var(--gold);
     }
 
-    .lcars-accent {
+    .lcars-top {
       position: absolute;
       top: 0;
-      right: 0;
-      width: 8px;
-      height: 100%;
-      background: var(--red);
-      box-shadow: 0 0 20px var(--red);
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: var(--gold);
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 0;
+    }
+
+    .lcars-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: var(--gold);
+      border-top-left-radius: 50px;
     }
 
     .page-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 40pt;
+      font-size: 36pt;
       color: var(--gold);
       text-align: center;
       letter-spacing: 2px;
-      text-shadow: 0 0 15px var(--gold);
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     .container {
       position: relative;
-      background: rgba(10, 25, 70, 0.85);
-      border: 2px solid var(--gold);
-      border-radius: 12px;
-      box-shadow: 0 0 25px var(--blue-light);
-      padding: 40px;
-      width: 420px;
       z-index: 2;
+      background: linear-gradient(to bottom right, var(--dark-blue), var(--blue));
+      padding: 40px;
+      border-radius: 12px;
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 25px var(--blue);
+      width: 420px;
     }
 
     label {
       display: block;
-      margin: 12px 0 6px;
-      font-size: 15pt;
       color: var(--gold);
-      text-transform: uppercase;
+      font-size: 14pt;
+      margin-bottom: 6px;
     }
 
     input, select {
       width: 100%;
       padding: 10px;
       margin-bottom: 18px;
-      background: var(--black);
-      color: var(--text-light);
-      border: 1px solid var(--blue-light);
-      border-radius: 6px;
+      background: #000;
+      border: 1px solid var(--blue);
+      color: var(--text);
       font-size: 14pt;
+      border-radius: 6px;
       outline: none;
-      transition: border 0.2s;
     }
 
     input:focus, select:focus {
-      border: 1px solid var(--gold);
+      border-color: var(--gold);
     }
 
     button {
       width: 100%;
       padding: 12px;
-      background: linear-gradient(to bottom, var(--blue-light), var(--blue-mid));
+      background: var(--blue);
+      border: 2px solid var(--gold);
+      border-radius: 8px;
       color: var(--gold);
       font-family: 'Orbitron', sans-serif;
       font-size: 18pt;
-      border: 2px solid var(--gold);
-      border-radius: 8px;
-      cursor: pointer;
       text-transform: uppercase;
-      box-shadow: 0 0 15px var(--blue-light);
-      transition: 0.2s ease;
+      cursor: pointer;
+      transition: 0.3s ease;
     }
 
     button:hover {
-      background: linear-gradient(to bottom, var(--blue-mid), var(--blue-dark));
-      transform: scale(1.02);
-      box-shadow: 0 0 25px var(--gold);
+      background: var(--dark-blue);
+      box-shadow: 0 0 20px var(--gold);
     }
 
     #accessMessage {
@@ -200,8 +205,9 @@
 </head>
 <body>
   <div id="loginScreen">
-    <div class="lcars-panel"></div>
-    <div class="lcars-accent"></div>
+    <div class="lcars-left"></div>
+    <div class="lcars-top"></div>
+    <div class="lcars-bottom"></div>
     <div class="container">
       <div class="page-title">STARFLEET ACADEMY</div>
       <label for="cadetName">Cadet Name</label>
@@ -272,7 +278,6 @@
     <div class="container" id="trainingContent" style="width:calc(100% - 320px);margin:0 auto;"></div>
     <button class="return-btn fixed-return" id="returnOrientationTrain">Back to Departments</button>
   </div>
-
   <div id="labPage" style="display:none;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -293,6 +298,7 @@
     <div class="container" id="examContent" style="width:calc(100% - 320px);margin:0 auto;"></div>
     <button class="return-btn fixed-return" id="returnOrientationExam">Back to Departments</button>
   </div>
+
   <script>
     const homeworlds = {
       "Human": "Earth", "Vulcan": "Vulcan", "Andorian": "Andoria", "Tellarite": "Tellar Prime",
