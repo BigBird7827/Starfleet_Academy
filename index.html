@@ -141,14 +141,20 @@
       position: fixed;
       width: 2.5in;
       height: 2.5in;
-      top: 10px;
       object-fit: contain;
       z-index: 0;
       pointer-events: none;
     }
 
-    .corner-left { left: 10px; }
-    .corner-right { right: 10px; }
+    .corner-left {
+      top: 10px;
+      left: 10px;
+    }
+
+    .corner-right {
+      top: 10px;
+      right: 10px;
+    }
 
     .fixed-return {
       position: fixed;
@@ -248,25 +254,30 @@
       <p id="accessMessage">Access Granted</p>
     </div>
   </div>
-  <div id="mainScreen" style="display:none;display:flex;justify-content:center;align-items:center;height:100vh;">
-    <div class="container" style="background:#000;border:2px solid var(--gold);box-shadow:0 0 20px var(--blue);text-align:center;max-width:700px;">
-      <div class="page-title">Welcome to Starfleet Academy</div>
-      <div id="mainWelcome" style="color:var(--gold);font-size:18pt;margin-bottom:20px;"></div>
-      <p style="font-size:14pt;color:#fff;margin-bottom:20px;">
-        Congratulations, Cadet. You have been accepted into Starfleet Academy,
-        where the finest minds of the Federation prepare to serve in the vast
-        frontier of space. Here, you will learn the disciplines of command,
-        diplomacy, science, engineering, medicine, and security — each a vital
-        pillar in the exploration and defense of the Federation.
-      </p>
-      <p style="font-size:14pt;color:#fff;margin-bottom:40px;">
-        Choose your path and begin your training or participate in interactive
-        labs and exams to test your readiness for active duty.
-      </p>
-      <div style="display:flex;justify-content:center;gap:25px;flex-wrap:wrap;">
-        <button id="trainingBtn" style="width:200px;font-size:16pt;">Training</button>
-        <button id="labBtn" style="width:200px;font-size:16pt;">Labs</button>
-        <button id="examBtn" style="width:200px;font-size:16pt;">Exams</button>
+  <div id="mainScreen" style="display:none;position:relative;height:100vh;">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+
+    <div style="display:flex;justify-content:center;align-items:center;height:100vh;padding-top:120px;">
+      <div class="container" style="background:#000;border:2px solid var(--gold);box-shadow:0 0 20px var(--blue);text-align:center;max-width:900px;">
+        <div class="page-title">Welcome to Starfleet Academy</div>
+        <div id="mainWelcome" style="color:var(--gold);font-size:18pt;margin-bottom:20px;"></div>
+        <p style="font-size:14pt;color:#fff;margin-bottom:20px;">
+          Congratulations, Cadet. You have been accepted into Starfleet Academy,
+          where the finest minds of the Federation prepare to serve in the vast
+          frontier of space. Here, you will learn the disciplines of command,
+          diplomacy, science, engineering, medicine, and security — each a vital
+          pillar in the exploration and defense of the Federation.
+        </p>
+        <p style="font-size:14pt;color:#fff;margin-bottom:40px;">
+          Choose your path and begin your training or participate in interactive
+          labs and exams to test your readiness for active duty.
+        </p>
+        <div style="display:flex;justify-content:center;gap:35px;flex-wrap:wrap;">
+          <button id="trainingBtn" style="width:220px;font-size:16pt;">Training</button>
+          <button id="labBtn" style="width:220px;font-size:16pt;">Labs</button>
+          <button id="examBtn" style="width:220px;font-size:16pt;">Exams</button>
+        </div>
       </div>
     </div>
   </div>
@@ -290,6 +301,7 @@
     <div class="container" id="trainingContent" style="width:calc(100% - 320px);margin:0 auto;"></div>
     <button class="return-btn fixed-return" id="returnOrientationTrain">Back to Departments</button>
   </div>
+
   <div id="labPage" style="display:none;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -298,7 +310,6 @@
     <div class="container" id="labContent" style="width:calc(100% - 320px);margin:0 auto;"></div>
     <button class="return-btn fixed-return" id="returnOrientationLab">Back to Departments</button>
   </div>
-
   <div id="examPage" style="display:none;">
     <div id="examScoreboard">
       <h3>Class Rankings</h3>
@@ -329,7 +340,7 @@
       setTimeout(() => {
         document.getElementById("loginScreen").style.display = "none";
         document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
-        document.getElementById("mainScreen").style.display = "flex";
+        document.getElementById("mainScreen").style.display = "block";
       }, 5000);
     });
   </script>
