@@ -216,9 +216,14 @@ button:hover{background:linear-gradient(to bottom,#2a5298,#111);transform:transl
 .fixed-return {
   position:fixed;
   bottom:20px;
-  left:20px;
+  left:10px;
   z-index:1000;
   width:auto;
+}
+
+/* Equal button width */
+#moduleButtons button{
+width:220px;
 }
 </style>
 </head>
@@ -286,7 +291,7 @@ button:hover{background:linear-gradient(to bottom,#2a5298,#111);transform:transl
 <div id="labPage">
   <div class="page-title" id="labDeptTitle"></div>
   <div class="container" id="labContent"></div>
-  <button class="return-btn" id="returnOrientation2">Back to Departments</button>
+  <button class="return-btn" id="returnOrientation2" style="left:10px;">Back to Departments</button>
 </div>
 
 <script>
@@ -296,7 +301,14 @@ const homeworlds={
 "Betazoid":"Betazed","Trill":"Trill","Bolian":"Bolarus IX","Klingon":"Qo'noS","Ferengi":"Ferenginar",
 "Denobulan":"Denobula","Orion":"Orion","Caitian":"Cait","Benzite":"Benzar"
 };
-
+const prefaces={
+"Command":"Command is not about absolute authority; it is about absolute responsibility. Every decision you make will weigh the balance of lives, mission objectives, and Federation principles.",
+"Diplomacy":"Diplomacy is the Federation’s first line of defense. As a cadet in this simulation, you step into the captain’s role, responsible for every word and gesture.",
+"Engineering":"Starfleet ships are the finest vessels in the galaxy, but even they are only as strong as their engineers.",
+"Science":"Exploration is the Federation’s mandate, and science is its spearhead.",
+"Medical":"As Chief Medical Officer, you are responsible for the health and safety of every crew member.",
+"Security":"As Chief of Security, you oversee the safety of the ship and crew, balancing defensive measures with operational priorities."
+};
 const trainingFiles={
 "Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
 "Diplomacy":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
@@ -313,7 +325,6 @@ const labFiles={
 "Science":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
 "Medical":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
 };
-
 document.getElementById("loginBtn").onclick=()=>{
 cadetName=document.getElementById("cadetName").value.trim();
 species=document.getElementById("species").value.trim();
@@ -329,11 +340,9 @@ main.style.display="block";
 setTimeout(()=>{main.style.opacity=1;},50);
 },3000);
 };
-
 let currentMode="training";
 document.getElementById("enterTraining").onclick=()=>{currentMode="training";showOrientation();};
 document.getElementById("enterLab").onclick=()=>{currentMode="lab";showOrientation();};
-
 function showOrientation(){
 document.getElementById("mainScreen").style.display="none";
 document.getElementById("orientationPage").style.display="block";
@@ -346,11 +355,11 @@ const source=currentMode==="training"?trainingFiles:labFiles;
 Object.keys(source).forEach(dept=>{
 const b=document.createElement("button");
 b.textContent=dept;
+b.style.width="220px";
 b.onclick=()=>{currentMode==="training"?loadTraining(dept):loadLab(dept);};
 btnBox.appendChild(b);
 });
 }
-
 function loadTraining(dept){
 document.getElementById("orientationPage").style.display="none";
 document.getElementById("trainingPage").style.display="block";
@@ -361,6 +370,12 @@ fetch(trainingFiles[dept])
 .then(data=>{
 const content=document.getElementById("trainingContent");
 content.innerHTML="";
+if(prefaces[dept]){
+const preface=document.createElement("div");
+preface.className="training-section";
+preface.innerHTML=`<p>${prefaces[dept]}</p>`;
+content.appendChild(preface);
+}
 if(data.study){
 data.study.forEach(item=>{
 const section=document.createElement("div");
@@ -381,7 +396,6 @@ content.appendChild(section);
 }
 });
 }
-
 function loadLab(dept){
 document.getElementById("orientationPage").style.display="none";
 document.getElementById("labPage").style.display="block";
@@ -402,6 +416,7 @@ answersDiv.className="answers";
 item.answers.forEach(ans=>{
 const btn=document.createElement("button");
 btn.textContent=ans.text;
+btn.style.width="220px";
 btn.onclick=()=>evaluate(ans,item,btn);
 answersDiv.appendChild(btn);
 });
@@ -421,22 +436,18 @@ score+=ans.score;
 feedback.innerHTML=`<strong>Incorrect.</strong> ${ans.details}<br><br>The correct course of action:<br><em>${item.answers.find(a=>a.type==="best").text}</em>`;
 }
 content.appendChild(feedback);
-const nextBtn=document.createElement("button");
-nextBtn.textContent=index<data.lab.length-1?"Next Scenario":"Finish Lab";
-nextBtn.onclick=()=>{
+setTimeout(()=>{
 index++;
 if(index<data.lab.length){showScenario();}
-else{content.innerHTML=`<h2>Lab Complete</h2><p>Your total performance score: ${score}</p>`;}
-};
-content.appendChild(nextBtn);
+else{
+content.innerHTML=`<h3>Lab Complete</h3><p>Your final score: ${score}</p>`;
+}
+},3000);
 }
 }
 });
 }
-
 document.getElementById("returnMain").onclick=()=>{
-document.getElementById("trainingPage").style.display="none";
-document.getElementById("labPage").style.display="none";
 document.getElementById("orientationPage").style.display="none";
 document.getElementById("mainScreen").style.display="block";
 };
