@@ -20,75 +20,64 @@
     #loginScreen {
       position: relative;
       height: 100vh;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: #000;
-    }
-
-    #loginScreen::before, #loginScreen::after {
-      content: "";
-      position: absolute;
-      border-radius: 0 100px 100px 0;
-      z-index: 0;
+      background: radial-gradient(ellipse at center, #000 70%, #020202 100%);
+      overflow: hidden;
     }
 
     #loginScreen::before {
+      content: "";
+      position: absolute;
       top: 0;
       left: 0;
-      width: 300px;
-      height: 100%;
-      background: linear-gradient(to bottom, var(--blue), var(--red));
+      width: 35%;
+      height: 6px;
+      background: linear-gradient(to right, var(--red), var(--gold));
+      border-radius: 0 4px 4px 0;
     }
 
     #loginScreen::after {
+      content: "";
+      position: absolute;
       bottom: 0;
       right: 0;
-      width: 250px;
-      height: 100%;
-      background: linear-gradient(to top, var(--blue), var(--red));
-      border-radius: 100px 0 0 100px;
+      width: 35%;
+      height: 6px;
+      background: linear-gradient(to left, var(--blue), var(--gold));
+      border-radius: 4px 0 0 4px;
     }
+
+    .lcars-side {
+      position: absolute;
+      top: 10%;
+      bottom: 10%;
+      width: 10px;
+      background: linear-gradient(to bottom, var(--blue), var(--gold), var(--red));
+      border-radius: 6px;
+      opacity: 0.5;
+    }
+
+    .lcars-left { left: 3%; }
+    .lcars-right { right: 3%; }
 
     .page-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 42pt;
+      font-size: 40pt;
       color: var(--gold);
-      text-shadow: 0 0 15px var(--gold);
+      text-shadow: 0 0 8px var(--gold);
       margin-bottom: 40px;
-      z-index: 1;
       position: relative;
-    }
-
-    .lcars-bar-top {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 80px;
-      width: 100%;
-      background: linear-gradient(to right, var(--red), var(--blue));
-      border-radius: 0 0 50px 50px;
-      z-index: 0;
-    }
-
-    .lcars-bar-bottom {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 60px;
-      width: 100%;
-      background: linear-gradient(to right, var(--blue), var(--red));
-      border-radius: 50px 50px 0 0;
-      z-index: 0;
+      z-index: 1;
     }
 
     .container {
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.85);
       padding: 30px 40px;
-      border-radius: 20px;
-      box-shadow: 0 0 25px var(--gold);
+      border-radius: 14px;
+      box-shadow: 0 0 15px rgba(255,216,77,0.3);
       width: 400px;
       text-align: left;
       position: relative;
@@ -97,7 +86,7 @@
 
     label {
       display: block;
-      margin: 15px 0 5px;
+      margin: 12px 0 5px;
       font-weight: bold;
       font-size: 14pt;
       color: var(--gold);
@@ -109,11 +98,11 @@
       margin-bottom: 15px;
       border: none;
       border-radius: 8px;
-      background: #222;
+      background: #111;
       color: #fff;
       font-size: 14pt;
       outline: none;
-      box-shadow: inset 0 0 10px #000;
+      box-shadow: inset 0 0 8px #000;
     }
 
     button {
@@ -124,15 +113,15 @@
       font-family: 'Orbitron', sans-serif;
       font-size: 18pt;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       cursor: pointer;
-      box-shadow: 0 0 20px rgba(255,216,77,0.6);
+      box-shadow: 0 0 10px rgba(255,216,77,0.5);
       transition: all 0.2s ease;
     }
 
     button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px var(--gold);
+      transform: scale(1.03);
+      box-shadow: 0 0 20px var(--gold);
     }
 
     #accessMessage {
@@ -144,16 +133,12 @@
       opacity: 0;
       transition: opacity 2s ease-in;
     }
-
-    #mainScreen, #orientationPage, #trainingPage, #labPage, #examPage {
-      display: none;
-    }
   </style>
 </head>
 <body>
   <div id="loginScreen">
-    <div class="lcars-bar-top"></div>
-    <div class="lcars-bar-bottom"></div>
+    <div class="lcars-side lcars-left"></div>
+    <div class="lcars-side lcars-right"></div>
     <div class="page-title">Welcome to Starfleet Academy</div>
     <div class="container">
       <label for="cadetName">Cadet Name</label>
@@ -180,7 +165,6 @@
       <p id="accessMessage">Access Granted</p>
     </div>
   </div>
-
   <div id="mainScreen" style="display:none;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -247,38 +231,6 @@
     <button class="return-btn fixed-return" id="returnOrientationExam">Back to Departments</button>
   </div>
   <script>
-    const trainingFiles = {
-      "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
-      "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
-      "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Training.json",
-      "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Training.json",
-      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training.json",
-      "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Training.json"
-    };
-
-    const labFiles = {
-      "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Lab.json",
-      "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Lab.json",
-      "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Lab.json",
-      "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Lab.json",
-      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
-      "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
-    };
-
-    const examFiles = { ...trainingFiles };
-
-    const prefaces = {
-      "Command": "Command is not about absolute authority; it is about absolute responsibility. Every decision you make will weigh the balance of lives, mission objectives, and Federation principles.",
-      "Diplomacy": "Diplomacy is the Federation’s first line of defense. Your words may avert wars, your patience may save lives, and your restraint may preserve the values of the Federation.",
-      "Engineering": "Starfleet ships are only as strong as their engineers. You direct damage control, enforce safety, and keep the vessel operational under pressure.",
-      "Science": "Exploration is our mandate. Balance curiosity with caution, and interpret data to guide the mission safely and ethically.",
-      "Medical": "You are responsible for the health and safety of every crew member. Combine empathy, expertise, and decisive action.",
-      "Security": "Maintain order, enforce protocols, and respond to threats with precision while balancing defense with operational priorities."
-    };
-
-    let cadetName = "";
-    let species = "";
-
     const homeworlds = {
       "Human": "Earth", "Vulcan": "Vulcan", "Andorian": "Andoria", "Tellarite": "Tellar Prime",
       "Bajoran": "Bajor", "Betazoid": "Betazed", "Bolian": "Bolarus IX", "Trill": "Trill",
@@ -287,8 +239,8 @@
     };
 
     document.getElementById("loginBtn").addEventListener("click", () => {
-      cadetName = document.getElementById("cadetName").value.trim();
-      species = document.getElementById("species").value;
+      const cadetName = document.getElementById("cadetName").value.trim();
+      const species = document.getElementById("species").value;
       if (!cadetName || !species) return alert("Enter name and species first.");
       const msg = document.getElementById("accessMessage");
       msg.textContent = `Access Granted — Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
@@ -302,54 +254,6 @@
         document.getElementById("mainScreen").style.display = "block";
       }, 5000);
     });
-
-    document.getElementById("trainingBtn").addEventListener("click", () => openOrientation("training"));
-    document.getElementById("labBtn").addEventListener("click", () => openOrientation("lab"));
-    document.getElementById("examBtn").addEventListener("click", () => openOrientation("exam"));
-
-    function openOrientation(mode) {
-      document.getElementById("mainScreen").style.display = "none";
-      const title = document.getElementById("orientationTitle");
-      title.textContent = mode === "exam" ? "Select Exam Department" :
-                          mode === "lab"  ? "Select Lab Department"  :
-                                            "Select Training Department";
-
-      const btnBox = document.getElementById("moduleButtons");
-      btnBox.innerHTML = "";
-      Object.keys(trainingFiles).forEach(dept => {
-        const b = document.createElement("button");
-        b.textContent = dept;
-        b.onclick = () => {
-          if (mode === "training") loadTraining(dept);
-          else if (mode === "lab") loadLab(dept);
-          else loadExam(dept);
-        };
-        btnBox.appendChild(b);
-      });
-      document.getElementById("orientationPage").style.display = "block";
-    }
-
-    document.getElementById("returnMain").onclick = () => {
-      document.getElementById("orientationPage").style.display = "none";
-      document.getElementById("mainScreen").style.display = "block";
-    };
-
-    document.getElementById("returnOrientationTrain").onclick = () => {
-      document.getElementById("trainingPage").style.display = "none";
-      document.getElementById("orientationPage").style.display = "block";
-    };
-
-    document.getElementById("returnOrientationLab").onclick = () => {
-      document.getElementById("labPage").style.display = "none";
-      document.getElementById("orientationPage").style.display = "block";
-    };
-
-    document.getElementById("returnOrientationExam").onclick = () => {
-      document.getElementById("examPage").style.display = "none";
-      document.getElementById("orientationPage").style.display = "block";
-    };
-
-    /* remaining training/lab/exam functions unchanged from your previous version */
   </script>
 </body>
 </html>
