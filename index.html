@@ -9,20 +9,35 @@
 :root { --gold:#ffd84d; }
 html,body{height:100%;}
 body{
-margin:0;padding:0;
+margin:0;
+padding:0;
 font-family:'Roboto',sans-serif;
+background:url("Starfleet Academy Logo.jpeg") no-repeat center center fixed;
+background-size:contain;
 background-color:#000;
 color:var(--gold);
 min-height:100vh;
 text-align:center;
 }
+
+/* translucent layer for readability */
+body::before{
+content:"";
+position:absolute;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.75);
+z-index:0;
+}
 .page-title{
 margin-top:60px;margin-bottom:30px;
 font-family:'Orbitron',sans-serif;
-font-size:42pt;color:gold;text-align:center;
+font-size:42pt;color:var(--gold);
+text-align:center;
+position:relative;z-index:1;
 }
 .container{
-background:rgba(0,0,0,0.8);
+background:rgba(0,0,0,0.85);
 padding:20px 30px;
 border-radius:12px;
 box-shadow:0 0 20px var(--gold);
@@ -30,6 +45,7 @@ width:900px;
 max-width:90%;
 margin:0 auto;
 text-align:center;
+position:relative;z-index:1;
 }
 button{
 background:linear-gradient(to bottom,#1e3c72,#000);
@@ -39,16 +55,14 @@ box-shadow:inset 0 2px 5px rgba(255,255,255,.3),0 5px 15px rgba(0,0,0,.6);
 font-family:'Roboto',sans-serif;
 border-radius:8px;
 padding:12px 20px;font-size:16pt;margin:10px;
+position:relative;z-index:1;
 }
 button:hover{background:linear-gradient(to bottom,#2a5298,#111);transform:translateY(-2px);}
 #orientationPage,#trainingPage,#labPage{display:none;}
 .feedback{
-margin-top:15px;
-padding:15px;
+margin-top:15px;padding:15px;
 background:rgba(255,255,255,0.1);
-border-radius:8px;
-color:#fff;
-font-size:14pt;
+border-radius:8px;color:#fff;font-size:14pt;
 }
 .answers button{display:block;width:100%;margin-top:10px;}
 .return-btn{padding:10px 25px;font-size:14pt;width:auto;margin-top:20px;}
