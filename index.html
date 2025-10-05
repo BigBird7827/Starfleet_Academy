@@ -7,99 +7,72 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --lcars-eggplant: #330033;
-      --lcars-lilac: #CC99CC;
-      --lcars-blue: #6699CC;
-      --lcars-cyan: #99CCFF;
-      --lcars-orange: #FF9966;
-      --lcars-yellow: #FFCC66;
-      --lcars-gold: #FFCC33;
-      --lcars-bg: #000;
-      --text: #FFFFCC;
+      --black: #000000;
+      --blue-dark: #0a1a3f;
+      --blue-mid: #143d7a;
+      --blue-light: #2c65c8;
+      --gold: #ffd84d;
+      --red: #b30000;
+      --text-light: #e0e0e0;
     }
 
     html, body {
       height: 100%;
       margin: 0;
       padding: 0;
-      background: var(--lcars-bg);
+      background: var(--black);
       font-family: 'Roboto', sans-serif;
-      color: var(--text);
+      color: var(--text-light);
     }
 
     #loginScreen {
       position: relative;
       height: 100vh;
+      background: linear-gradient(135deg, var(--black) 60%, var(--blue-dark) 100%);
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      background: var(--lcars-bg);
     }
 
-    .lcars-frame {
+    .lcars-panel {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
+      width: 12%;
       height: 100%;
-      pointer-events: none;
+      background: linear-gradient(to bottom, var(--blue-mid), var(--blue-light));
+      border-right: 4px solid var(--gold);
     }
 
-    .lcars-bar {
-      position: absolute;
-      height: 32px;
-      width: 100%;
-    }
-
-    .lcars-bar.top {
-      top: 0;
-      background: linear-gradient(to right, var(--lcars-eggplant), var(--lcars-gold));
-    }
-
-    .lcars-bar.bottom {
-      bottom: 0;
-      background: linear-gradient(to left, var(--lcars-blue), var(--lcars-gold));
-    }
-
-    .lcars-column-left, .lcars-column-right {
+    .lcars-accent {
       position: absolute;
       top: 0;
-      bottom: 0;
-      width: 100px;
-    }
-
-    .lcars-column-left {
-      left: 0;
-      background: linear-gradient(to bottom, var(--lcars-lilac), var(--lcars-orange));
-      border-radius: 0 100px 100px 0;
-    }
-
-    .lcars-column-right {
       right: 0;
-      background: linear-gradient(to bottom, var(--lcars-cyan), var(--lcars-blue));
-      border-radius: 100px 0 0 100px;
+      width: 8px;
+      height: 100%;
+      background: var(--red);
+      box-shadow: 0 0 20px var(--red);
     }
 
     .page-title {
       font-family: 'Orbitron', sans-serif;
-      font-size: 42pt;
-      color: var(--lcars-gold);
-      text-shadow: 0 0 10px var(--lcars-gold);
-      margin-bottom: 40px;
-      z-index: 2;
-      position: relative;
+      font-size: 40pt;
+      color: var(--gold);
+      text-align: center;
+      letter-spacing: 2px;
+      text-shadow: 0 0 15px var(--gold);
+      margin-bottom: 50px;
     }
 
     .container {
-      background: rgba(0,0,0,0.8);
-      padding: 40px 50px;
-      border-radius: 20px;
-      width: 420px;
-      box-shadow: 0 0 25px var(--lcars-gold);
-      border: 2px solid var(--lcars-lilac);
       position: relative;
+      background: rgba(10, 25, 70, 0.85);
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      box-shadow: 0 0 25px var(--blue-light);
+      padding: 40px;
+      width: 420px;
       z-index: 2;
     }
 
@@ -107,43 +80,51 @@
       display: block;
       margin: 12px 0 6px;
       font-size: 15pt;
-      color: var(--lcars-gold);
+      color: var(--gold);
+      text-transform: uppercase;
     }
 
     input, select {
       width: 100%;
       padding: 10px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 8px;
-      background: #111;
-      color: #fff;
+      margin-bottom: 18px;
+      background: var(--black);
+      color: var(--text-light);
+      border: 1px solid var(--blue-light);
+      border-radius: 6px;
       font-size: 14pt;
       outline: none;
+      transition: border 0.2s;
+    }
+
+    input:focus, select:focus {
+      border: 1px solid var(--gold);
     }
 
     button {
       width: 100%;
       padding: 12px;
-      background: var(--lcars-orange);
-      color: #000;
+      background: linear-gradient(to bottom, var(--blue-light), var(--blue-mid));
+      color: var(--gold);
       font-family: 'Orbitron', sans-serif;
       font-size: 18pt;
-      border: none;
+      border: 2px solid var(--gold);
       border-radius: 8px;
       cursor: pointer;
-      box-shadow: 0 0 10px var(--lcars-gold);
-      transition: transform 0.2s, box-shadow 0.2s;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px var(--blue-light);
+      transition: 0.2s ease;
     }
 
     button:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 20px var(--lcars-gold);
+      background: linear-gradient(to bottom, var(--blue-mid), var(--blue-dark));
+      transform: scale(1.02);
+      box-shadow: 0 0 25px var(--gold);
     }
 
     #accessMessage {
       text-align: center;
-      color: var(--lcars-gold);
+      color: var(--gold);
       font-family: 'Orbitron', sans-serif;
       font-size: 16pt;
       margin-top: 12px;
@@ -199,7 +180,7 @@
       background: rgba(0,0,0,0.4);
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 15px var(--lcars-gold);
+      box-shadow: 0 0 15px var(--gold);
     }
 
     .button-box button {
@@ -219,14 +200,10 @@
 </head>
 <body>
   <div id="loginScreen">
-    <div class="lcars-frame">
-      <div class="lcars-bar top"></div>
-      <div class="lcars-bar bottom"></div>
-      <div class="lcars-column-left"></div>
-      <div class="lcars-column-right"></div>
-    </div>
-    <div class="page-title">STARFLEET ACADEMY</div>
+    <div class="lcars-panel"></div>
+    <div class="lcars-accent"></div>
     <div class="container">
+      <div class="page-title">STARFLEET ACADEMY</div>
       <label for="cadetName">Cadet Name</label>
       <input type="text" id="cadetName" required>
       <label for="species">Species</label>
@@ -247,8 +224,8 @@
         <option>Caitian</option>
         <option>Benzite</option>
       </select>
-      <button id="loginBtn">LOGIN</button>
-      <p id="accessMessage">ACCESS GRANTED</p>
+      <button id="loginBtn">Login</button>
+      <p id="accessMessage">Access Granted</p>
     </div>
   </div>
   <div id="mainScreen" style="display:none;">
@@ -291,7 +268,7 @@
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
     <div class="page-title" id="trainingDeptTitle"></div>
-    <div style="text-align:center;color:var(--lcars-gold);font-size:18pt;" id="trainingCadetInfo"></div>
+    <div style="text-align:center;color:var(--gold);font-size:18pt;" id="trainingCadetInfo"></div>
     <div class="container" id="trainingContent" style="width:calc(100% - 320px);margin:0 auto;"></div>
     <button class="return-btn fixed-return" id="returnOrientationTrain">Back to Departments</button>
   </div>
@@ -300,7 +277,7 @@
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
     <div class="page-title" id="labDeptTitle"></div>
-    <div style="text-align:center;color:var(--lcars-gold);font-size:18pt;" id="labCadetInfo"></div>
+    <div style="text-align:center;color:var(--gold);font-size:18pt;" id="labCadetInfo"></div>
     <div class="container" id="labContent" style="width:calc(100% - 320px);margin:0 auto;"></div>
     <button class="return-btn fixed-return" id="returnOrientationLab">Back to Departments</button>
   </div>
@@ -312,7 +289,7 @@
       <table id="cadetTable"></table>
     </div>
     <div class="page-title" id="examDeptTitle"></div>
-    <div style="text-align:center;color:var(--lcars-gold);font-size:18pt;" id="examCadetInfo"></div>
+    <div style="text-align:center;color:var(--gold);font-size:18pt;" id="examCadetInfo"></div>
     <div class="container" id="examContent" style="width:calc(100% - 320px);margin:0 auto;"></div>
     <button class="return-btn fixed-return" id="returnOrientationExam">Back to Departments</button>
   </div>
@@ -329,7 +306,7 @@
       const species = document.getElementById("species").value;
       if (!cadetName || !species) return alert("Enter name and species first.");
       const msg = document.getElementById("accessMessage");
-      msg.textContent = `ACCESS GRANTED — Cadet ${cadetName} of ${homeworlds[species]}`;
+      msg.textContent = `Access Granted — Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
       msg.style.opacity = 1;
       setTimeout(() => {
         document.getElementById("loginScreen").style.display = "none";
