@@ -258,7 +258,7 @@
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
     <div style="display:flex;justify-content:center;align-items:flex-start;height:100vh;padding-top:140px;">
-      <div class="container" style="background:#000;border:2px solid var(--gold);box-shadow:0 0 20px var(--blue);text-align:center;width: min(calc(100% - 9in), 1200px);">
+      <div class="container" style="background:#000;border:2px solid var(--gold);box-shadow:0 0 20px var(--blue);text-align:center;width:min(calc(100% - 6in),1400px);">
         <div class="page-title">Welcome to Starfleet Academy</div>
         <div id="mainWelcome" style="color:var(--gold);font-size:18pt;margin-bottom:20px;"></div>
         <p style="font-size:14pt;color:#fff;margin-bottom:20px;">
@@ -273,9 +273,9 @@
           labs and exams to test your readiness for active duty.
         </p>
         <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;">
-          <button id="trainingBtn" style="width:240px;font-size:16pt;background:linear-gradient(to bottom, #002e66, #001933);border:2px solid var(--gold);color:var(--gold);box-shadow:inset 0 6px 8px rgba(255,255,255,0.06), inset 0 -6px 10px rgba(0,0,0,0.6), 0 8px 18px rgba(0,0,0,0.9);">Training</button>
-          <button id="labBtn" style="width:240px;font-size:16pt;background:linear-gradient(to bottom, #002e66, #001933);border:2px solid var(--gold);color:var(--gold);box-shadow:inset 0 6px 8px rgba(255,255,255,0.06), inset 0 -6px 10px rgba(0,0,0,0.6), 0 8px 18px rgba(0,0,0,0.9);">Labs</button>
-          <button id="examBtn" style="width:240px;font-size:16pt;background:linear-gradient(to bottom, #002e66, #001933);border:2px solid var(--gold);color:var(--gold);box-shadow:inset 0 6px 8px rgba(255,255,255,0.06), inset 0 -6px 10px rgba(0,0,0,0.6), 0 8px 18px rgba(0,0,0,0.9);">Exams</button>
+          <button id="trainingBtn" style="width:240px;font-size:16pt;background:linear-gradient(to bottom,#002e66,#001933);border:2px solid var(--gold);color:var(--gold);box-shadow:inset 0 6px 8px rgba(255,255,255,0.06),inset 0 -6px 10px rgba(0,0,0,0.6),0 8px 18px rgba(0,0,0,0.9);">Training</button>
+          <button id="labBtn" style="width:240px;font-size:16pt;background:linear-gradient(to bottom,#002e66,#001933);border:2px solid var(--gold);color:var(--gold);box-shadow:inset 0 6px 8px rgba(255,255,255,0.06),inset 0 -6px 10px rgba(0,0,0,0.6),0 8px 18px rgba(0,0,0,0.9);">Labs</button>
+          <button id="examBtn" style="width:240px;font-size:16pt;background:linear-gradient(to bottom,#002e66,#001933);border:2px solid var(--gold);color:var(--gold);box-shadow:inset 0 6px 8px rgba(255,255,255,0.06),inset 0 -6px 10px rgba(0,0,0,0.6),0 8px 18px rgba(0,0,0,0.9);">Exams</button>
         </div>
       </div>
     </div>
@@ -322,6 +322,35 @@
   </div>
 
   <script>
+    const trainingFiles = {
+      "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
+      "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
+      "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Training.json",
+      "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Training.json",
+      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training.json",
+      "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Training.json"
+    };
+
+    const labFiles = {
+      "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Lab.json",
+      "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Lab.json",
+      "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Lab.json",
+      "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Lab.json",
+      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
+      "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
+    };
+
+    const examFiles = { ...trainingFiles };
+
+    const prefaces = {
+      "Command": "Command is not about absolute authority; it is about absolute responsibility.",
+      "Diplomacy": "Diplomacy is the Federation’s first line of defense.",
+      "Engineering": "Starfleet ships are only as strong as their engineers.",
+      "Science": "Exploration is our mandate.",
+      "Medical": "You are responsible for the health and safety of every crew member.",
+      "Security": "Maintain order, enforce protocols, and respond to threats with precision."
+    };
+
     const homeworlds = {
       "Human": "Earth", "Vulcan": "Vulcan", "Andorian": "Andoria", "Tellarite": "Tellar Prime",
       "Bajoran": "Bajor", "Betazoid": "Betazed", "Bolian": "Bolarus IX", "Trill": "Trill",
@@ -329,13 +358,16 @@
       "Caitian": "Cait", "Benzite": "Benzar"
     };
 
+    let cadetName = "", species = "";
+
     document.getElementById("loginBtn").addEventListener("click", () => {
-      const cadetName = document.getElementById("cadetName").value.trim();
-      const species = document.getElementById("species").value;
+      cadetName = document.getElementById("cadetName").value.trim();
+      species = document.getElementById("species").value;
       if (!cadetName || !species) return alert("Enter name and species first.");
       const msg = document.getElementById("accessMessage");
       msg.textContent = `Access Granted — Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
       msg.style.opacity = 1;
+
       setTimeout(() => {
         document.getElementById("loginScreen").style.display = "none";
         document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
@@ -373,68 +405,24 @@
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("mainScreen").style.display = "block";
     };
-
     document.getElementById("returnOrientationTrain").onclick = () => {
       document.getElementById("trainingPage").style.display = "none";
       document.getElementById("orientationPage").style.display = "block";
     };
-
     document.getElementById("returnOrientationLab").onclick = () => {
       document.getElementById("labPage").style.display = "none";
       document.getElementById("orientationPage").style.display = "block";
     };
-
     document.getElementById("returnOrientationExam").onclick = () => {
       document.getElementById("examPage").style.display = "none";
       document.getElementById("orientationPage").style.display = "block";
     };
 
-    const trainingFiles = {
-      "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
-      "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
-      "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Training.json",
-      "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Training.json",
-      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training.json",
-      "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Training.json"
-    };
-
-    const labFiles = {
-      "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Lab.json",
-      "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Lab.json",
-      "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Lab.json",
-      "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Lab.json",
-      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
-      "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
-    };
-
-    const examFiles = { ...trainingFiles };
-
-    const prefaces = {
-      "Command": "Command is not about absolute authority; it is about absolute responsibility. Every decision you make will weigh the balance of lives, mission objectives, and Federation principles.",
-      "Diplomacy": "Diplomacy is the Federation’s first line of defense. Your words may avert wars, your patience may save lives, and your restraint may preserve the values of the Federation.",
-      "Engineering": "Starfleet ships are only as strong as their engineers. You direct damage control, enforce safety, and keep the vessel operational under pressure.",
-      "Science": "Exploration is our mandate. Balance curiosity with caution, and interpret data to guide the mission safely and ethically.",
-      "Medical": "You are responsible for the health and safety of every crew member. Combine empathy, expertise, and decisive action.",
-      "Security": "Maintain order, enforce protocols, and respond to threats with precision while balancing defense with operational priorities."
-    };
-
-    let cadetName = "";
-    let species = "";
-
-    const homeworlds = {
-      "Human": "Earth", "Vulcan": "Vulcan", "Andorian": "Andoria", "Tellarite": "Tellar Prime",
-      "Bajoran": "Bajor", "Betazoid": "Betazed", "Bolian": "Bolarus IX", "Trill": "Trill",
-      "Klingon": "Qo'noS", "Ferengi": "Ferenginar", "Denobulan": "Denobula", "Orion": "Orion",
-      "Caitian": "Cait", "Benzite": "Benzar"
-    };
-
     function loadTraining(dept) {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("trainingPage").style.display = "block";
-
       document.getElementById("trainingDeptTitle").textContent = `${dept} Training`;
       document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
-
       const content = document.getElementById("trainingContent");
       content.innerHTML = "<p>Loading...</p>";
 
@@ -442,12 +430,7 @@
         .then(r => r.json())
         .then(data => {
           content.innerHTML = "";
-          if (prefaces[dept]) {
-            const pre = document.createElement("div");
-            pre.className = "training-section";
-            pre.innerHTML = `<p>${prefaces[dept]}</p>`;
-            content.appendChild(pre);
-          }
+          if (prefaces[dept]) content.innerHTML += `<div class='training-section'><p>${prefaces[dept]}</p></div>`;
           if (data.study) {
             data.study.forEach(item => {
               const section = document.createElement("div");
@@ -467,19 +450,15 @@
               }
               content.appendChild(section);
             });
-          } else {
-            content.innerHTML = "<p>No training items found.</p>";
-          }
+          } else content.innerHTML = "<p>No training items found.</p>";
         });
     }
 
     function loadLab(dept) {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("labPage").style.display = "block";
-
       document.getElementById("labDeptTitle").textContent = `${dept} Lab`;
       document.getElementById("labCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
-
       const content = document.getElementById("labContent");
       content.innerHTML = "<p>Loading...</p>";
 
@@ -494,12 +473,7 @@
           let index = 0;
           function renderScenario() {
             const item = data.lab[index];
-            content.innerHTML = `
-              <div class='training-section'>
-                <h3>${item.scenario}</h3>
-                <p>${item.summary || ""}</p>
-              </div>
-            `;
+            content.innerHTML = `<div class='training-section'><h3>${item.scenario}</h3><p>${item.summary || ""}</p></div>`;
             const answersDiv = document.createElement("div");
             answersDiv.className = "answers";
             item.answers.forEach(ans => {
@@ -514,13 +488,11 @@
             document.querySelectorAll("#labContent .answers button").forEach(b => b.disabled = true);
             const best = item.answers.find(a => a.type === "best");
             const feedback = document.createElement("div");
-            if (ans.type === "best") {
-              feedback.innerHTML = `<strong>Correct.</strong> ${ans.details}`;
-            } else if (ans.type === "alternate") {
+            if (ans.type === "best") feedback.innerHTML = `<strong>Correct.</strong> ${ans.details}`;
+            else if (ans.type === "alternate")
               feedback.innerHTML = `<strong>Acceptable.</strong> ${ans.details}<br><br>The best action would have been:<br><em>${best.text}</em>`;
-            } else {
-              feedback.innerHTML = `<strong>Incorrect.</strong> ${ans.details}<br><br>The correct course of action:<br><em>${best.text}</em>`;
-            }
+            else
+              feedback.innerHTML = `<strong>Incorrect.</strong> ${ans.details}<br><br>The correct course:<br><em>${best.text}</em>`;
             content.appendChild(feedback);
             const next = document.createElement("button");
             next.textContent = index < data.lab.length - 1 ? "Next Scenario" : "Finish Lab";
@@ -538,84 +510,66 @@
     function loadExam(dept) {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("examPage").style.display = "block";
-
       document.getElementById("examDeptTitle").textContent = `${dept} Exam`;
       document.getElementById("examCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
-
       const content = document.getElementById("examContent");
       const table = document.getElementById("cadetTable");
       const progress = document.getElementById("examProgress");
-
       const classmates = [
         { name: cadetName, gpa: 0.00, self: true },
         { name: "T'Lor", gpa: 0.00 }, { name: "Dax", gpa: 0.00 }, { name: "Nog", gpa: 0.00 },
         { name: "Paris", gpa: 0.00 }, { name: "Vorik", gpa: 0.00 }, { name: "Ro", gpa: 0.00 },
         { name: "O'Brien", gpa: 0.00 }, { name: "Leeta", gpa: 0.00 }, { name: "Torres", gpa: 0.00 }
       ];
-
       let answered = 0, total = 0;
-
       function updateScoreboard() {
         const rows = [...classmates].sort((a,b)=>b.gpa-a.gpa)
-          .map(c => `<tr class='${c.self ? "highlight" : ""}'><td>${c.self ? "You" : c.name}</td><td style="text-align:right;">${c.gpa.toFixed(2)}</td></tr>`)
-          .join("");
+          .map(c=>`<tr class='${c.self?"highlight":""}'><td>${c.self?"You":c.name}</td><td style='text-align:right;'>${c.gpa.toFixed(2)}</td></tr>`).join("");
         table.innerHTML = rows;
         progress.textContent = `Questions Answered: ${answered}`;
       }
-
       fetch(examFiles[dept])
-        .then(r => r.json())
-        .then(data => {
-          const questions = data.study.slice(0, 15);
-          let index = 0;
-          function renderQuestion() {
-            const q = questions[index];
-            content.innerHTML = `
-              <div class='training-section'>
-                <h3>${q.scenario}</h3>
-                <p>${q.summary || ""}</p>
-              </div>
-            `;
-            const answersDiv = document.createElement("div");
-            answersDiv.className = "answers";
-            let allAnswers = [...q.answers];
-            if (allAnswers.length < 5) {
-              allAnswers.push({ text: "Reroute main deflector through EPS grid.", score: 0, type: "wrong", details: "This would destabilize the system." });
-              allAnswers.push({ text: "Ignore the situation and await orders.", score: 0, type: "wrong", details: "Inaction in crisis situations is unacceptable in Starfleet." });
+        .then(r=>r.json())
+        .then(data=>{
+          const questions = data.study.slice(0,15);
+          let index=0;
+          function renderQuestion(){
+            const q=questions[index];
+            content.innerHTML=`<div class='training-section'><h3>${q.scenario}</h3><p>${q.summary||""}</p></div>`;
+            const answersDiv=document.createElement("div");
+            answersDiv.className="answers";
+            let allAnswers=[...q.answers];
+            if(allAnswers.length<5){
+              allAnswers.push({text:"Reroute main deflector through EPS grid.",score:0,type:"wrong",details:"This would destabilize the system."});
+              allAnswers.push({text:"Ignore the situation and await orders.",score:0,type:"wrong",details:"Inaction is unacceptable."});
             }
-            allAnswers.sort(() => Math.random() - 0.5);
-            allAnswers.forEach(a => {
-              const btn = document.createElement("button");
-              btn.textContent = a.text;
-              btn.onclick = () => evaluate(a, q);
+            allAnswers.sort(()=>Math.random()-0.5);
+            allAnswers.forEach(a=>{
+              const btn=document.createElement("button");
+              btn.textContent=a.text;
+              btn.onclick=()=>evaluate(a,q);
               answersDiv.appendChild(btn);
             });
             content.appendChild(answersDiv);
           }
-          function evaluate(ans, q) {
-            document.querySelectorAll("#examContent .answers button").forEach(b => b.disabled = true);
-            const best = q.answers.find(a => a.type === "best");
-            const feedback = document.createElement("div");
-            if (ans.type === "best") {
-              feedback.innerHTML = `<strong>Correct.</strong> ${ans.details}`;
-              total += ans.score;
-            } else if (ans.type === "alternate") {
-              feedback.innerHTML = `<strong>Acceptable.</strong> ${ans.details}<br><br>The best answer was:<br><em>${best.text}</em>`;
-              total += ans.score;
-            } else {
-              feedback.innerHTML = `<strong>Incorrect.</strong> ${ans.details}<br><br>The correct response was:<br><em>${best.text}</em>`;
-            }
+          function evaluate(ans,q){
+            document.querySelectorAll("#examContent .answers button").forEach(b=>b.disabled=true);
+            const best=q.answers.find(a=>a.type==="best");
+            const feedback=document.createElement("div");
+            if(ans.type==="best"){feedback.innerHTML=`<strong>Correct.</strong> ${ans.details}`;total+=ans.score;}
+            else if(ans.type==="alternate"){feedback.innerHTML=`<strong>Acceptable.</strong> ${ans.details}<br><br>The best answer was:<br><em>${best.text}</em>`;total+=ans.score;}
+            else{feedback.innerHTML=`<strong>Incorrect.</strong> ${ans.details}<br><br>The correct response was:<br><em>${best.text}</em>`;}
             content.appendChild(feedback);
             answered++;
-            const gpa = ((total / (answered * 10)) * 4) || 0;
-            classmates.find(c => c.self).gpa = gpa;
+            const gpa=((total/(answered*10))*4)||0;
+            classmates.find(c=>c.self).gpa=gpa;
             updateScoreboard();
-            const next = document.createElement("button");
-            next.textContent = index < questions.length - 1 ? "Next Question" : "Finish Exam";
-            next.onclick = () => {
+            const next=document.createElement("button");
+            next.textContent=index<questions.length-1?"Next Question":"Finish Exam";
+            next.onclick=()=>{
               index++;
-              if (index < questions.length) renderQuestion();
-              else content.innerHTML = `<h3>Exam Complete</h3><p>Your total score: ${total}<br>Your final GPA: ${gpa.toFixed(2)}</p>`;
+              if(index<questions.length)renderQuestion();
+              else content.innerHTML=`<h3>Exam Complete</h3><p>Your total score: ${total}<br>Your final GPA: ${gpa.toFixed(2)}</p>`;
             };
             content.appendChild(next);
           }
