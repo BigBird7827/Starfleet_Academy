@@ -1,0 +1,545 @@
+{
+  "department": "Engineering",
+  "lab": [
+    {
+      "scenario": "Computer Virus in Engineering Subsystem",
+      "summary": "A foreign data signature infiltrates the ship\u2019s engineering control subroutines.",
+      "answers": [
+        {
+          "text": "Isolate the engineering core network and purge affected subroutines from backup.",
+          "score": 9,
+          "type": "best",
+          "details": "Protects ship systems and aligns with Starfleet cybersecurity protocols."
+        },
+        {
+          "text": "Run a controlled diagnostic sweep while maintaining critical operations.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent containment while monitoring system health; slower than full isolation but safe."
+        },
+        {
+          "text": "Ignore the alert; likely a false positive.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Technically low-risk if accurate, but less proactive and not recommended."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Deflector Phase Shift",
+      "summary": "Deflector emitters drift off frequency after micrometeoroid impacts.",
+      "answers": [
+        {
+          "text": "Scan harmonics, retune emitters, and cycle backups.",
+          "score": 9,
+          "type": "best",
+          "details": "Maintains navigational and shield integrity; textbook Starfleet response."
+        },
+        {
+          "text": "Engage secondary emitters to cover gaps while tuning continues.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Provides coverage and maintains safety; slower than full retuning but competent."
+        },
+        {
+          "text": "Disable emitters to reduce power drain.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe but reduces full protection capability; less effective than previous two options."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Transporter Power Loss",
+      "summary": "A planetary evacuation is underway when a power fluctuation knocks out one of the transporter emitters.",
+      "answers": [
+        {
+          "text": "Reroute power from secondary systems to restore the emitter and confirm pattern integrity before resuming transport.",
+          "score": 9,
+          "type": "best",
+          "details": "Prioritizes lives while maintaining transporter safety margins\u2014the Federation standard."
+        },
+        {
+          "text": "Bring up backup emitters and temporarily split transport loads between them.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains operational continuity with a slight delay; safe and competent but slower than primary restoration."
+        },
+        {
+          "text": "Attempt manual energize sequence without full diagnostics.",
+          "score": 7,
+          "type": "alternate",
+          "details": "A controlled attempt under supervision, less optimal than proper power rerouting but still preserves some functionality."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Deuterium Flow Obstruction",
+      "summary": "During preflight checks, the deuterium injector feed shows inconsistent pressure readings.",
+      "answers": [
+        {
+          "text": "Purge the injector assembly and perform manual pressure equalization.",
+          "score": 9,
+          "type": "best",
+          "details": "Corrects flow irregularity at the source; adheres to Starfleet procedural thoroughness."
+        },
+        {
+          "text": "Monitor pressure while gradually adjusting injector pulses to compensate.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent and controlled approach; mitigates risk while preparing for permanent adjustment, though slower than full purge."
+        },
+        {
+          "text": "Proceed to launch; minor fluctuations are within margin.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Acceptable under supervision for small deviations; not optimal but preserves schedule."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Fusion Reactor Overpressure Warning",
+      "summary": "A fusion reactor registers a sharp pressure spike in the magnetic containment chamber.",
+      "answers": [
+        {
+          "text": "Initiate immediate pressure venting and recalibrate containment fields.",
+          "score": 9,
+          "type": "best",
+          "details": "Demonstrates proper adherence to reactor safety code and calm response to rising pressure."
+        },
+        {
+          "text": "Reduce fuel injection rates gradually to ease chamber pressure while monitoring.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent mitigation; slower than immediate venting but still effective and safe."
+        },
+        {
+          "text": "Ignore transient spikes; rely on system stabilizers.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe if minor, but less proactive and potentially less reliable."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "EPS Conduit Surge",
+      "summary": "A power surge in an EPS conduit threatens to overload secondary systems.",
+      "answers": [
+        {
+          "text": "Isolate the affected conduit and reroute power through auxiliary grids.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents damage and protects critical systems, fully aligning with Starfleet engineering best practices."
+        },
+        {
+          "text": "Divert excess power to noncritical systems to relieve the surge while maintaining main grid function.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains operational safety and reduces immediate risk, but slower and less comprehensive than full isolation."
+        },
+        {
+          "text": "Apply temporary magnetic constriction to stabilize plasma flow.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Technically competent; buys time for intervention but doesn\u2019t fully address the root cause."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Antimatter Pod Alarm",
+      "summary": "Containment fields drop slightly below nominal on an antimatter pod.",
+      "answers": [
+        {
+          "text": "Reinforce containment and vent through auxiliary systems.",
+          "score": 9,
+          "type": "best",
+          "details": "Highest safety priority; stabilizes pod and protects the ship."
+        },
+        {
+          "text": "Switch to redundant containment systems to stabilize temporarily.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent measure; keeps the pod safe but slower than full emergency venting."
+        },
+        {
+          "text": "Monitor fluctuations without immediate action.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Acceptable short-term for minor deviations; less proactive than containment measures."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Warp Core Plasma Fluctuation",
+      "summary": "During a training simulation, a warp core begins showing minor plasma instability, threatening system integrity.",
+      "answers": [
+        {
+          "text": "Engage intermix calibration and verify magnetic constrictor fields before correcting plasma flow.",
+          "score": 9,
+          "type": "best",
+          "details": "Follows full safety protocols and ensures containment integrity, demonstrating complete technical mastery."
+        },
+        {
+          "text": "Reduce warp power slightly while monitoring plasma flow to stabilize the core gradually.",
+          "score": 8,
+          "type": "alternate",
+          "details": "A careful, technically sound approach that maintains system safety but is slower and less precise than full calibration."
+        },
+        {
+          "text": "Continue normal operations and rely on automated safety protocols.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Allows the situation to stabilize without direct intervention; safe but not proactive."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Holodeck Power Feedback",
+      "summary": "Feedback surge from the holodeck\u2019s energy grid begins drawing from the ship\u2019s shield reserves.",
+      "answers": [
+        {
+          "text": "Isolate holodeck power couplings and shunt feedback to auxiliary capacitors.",
+          "score": 9,
+          "type": "best",
+          "details": "Protects both system integrity and crew safety; reflects Starfleet\u2019s principle of containment over convenience."
+        },
+        {
+          "text": "Shut down the holodeck main emitter array immediately.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Stops the drain quickly; competent short-term mitigation though may risk data corruption."
+        },
+        {
+          "text": "Divert more power to shields to counter the drain.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Treats the symptom rather than the cause; less effective than isolating the source."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Environmental Control System Overload",
+      "summary": "Environmental systems overload after a coolant loop failure, raising temperatures throughout crew quarters.",
+      "answers": [
+        {
+          "text": "Divert power from secondary subsystems and reroute airflow through backup exchangers.",
+          "score": 9,
+          "type": "best",
+          "details": "Maintains habitability efficiently; precise and ethical prioritization of crew well-being."
+        },
+        {
+          "text": "Shut down non-critical life support to allow system cooldown.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent temporary mitigation; preserves equipment but slower than full reroute."
+        },
+        {
+          "text": "Ignore heat rise; tolerable levels don\u2019t require immediate action.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Acceptable short-term; safe but less proactive than intervention."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Impulse Manifold Leak",
+      "summary": "During docking maneuvers, plasma levels in the impulse manifold rise beyond safety thresholds.",
+      "answers": [
+        {
+          "text": "Isolate the leaking manifold and reroute power through auxiliary impulse regulators.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents plasma fire and preserves thrust control; aligns with Starfleet engineering best practices."
+        },
+        {
+          "text": "Increase coolant flow to absorb the excess heat.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Mitigates the symptom temporarily; effective but less comprehensive than isolation and reroute."
+        },
+        {
+          "text": "Ignore the alert until after docking sequence completes.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe only if monitored; less proactive approach and slower to resolve the hazard."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Holodeck Feedback Surge",
+      "summary": "Holodeck energy surge draws from shield reserves.",
+      "answers": [
+        {
+          "text": "Isolate holodeck power and shunt feedback to auxiliary capacitors.",
+          "score": 9,
+          "type": "best",
+          "details": "Protects systems and crew; optimal Starfleet action."
+        },
+        {
+          "text": "Temporarily disable nonessential holodeck subsystems to reduce feedback.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent and safe, mitigates risk while allowing controlled response; slower than full isolation."
+        },
+        {
+          "text": "Divert power to shields to counter drain.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Effective but does not solve root problem; less efficient."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Atmospheric Processor Malfunction",
+      "summary": "Carbon dioxide levels rise in a cadet simulator compartment due to a processor fault.",
+      "answers": [
+        {
+          "text": "Activate emergency override, isolate the compartment, and flush scrubbers.",
+          "score": 9,
+          "type": "best",
+          "details": "Ensures immediate breathable air and demonstrates responsible engineering leadership."
+        },
+        {
+          "text": "Redirect airflow from adjacent compartments to dilute CO2 until repair is executed.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Effectively reduces hazard while repair preparations are made; competent and safe but slower than a direct override."
+        },
+        {
+          "text": "Shut down processor and wait for instructor guidance.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe approach but passive; does not actively resolve the hazard."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Impulse Manifold Leak",
+      "summary": "During docking maneuvers, plasma levels in the impulse manifold rise beyond safety thresholds.",
+      "answers": [
+        {
+          "text": "Isolate the leaking manifold and reroute power through auxiliary impulse regulators.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents plasma fire and preserves thrust control\u2014precisely the response taught in Starfleet Engineering 302."
+        },
+        {
+          "text": "Increase coolant flow to manage temperature until repair crews can act.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Reduces immediate risk and buys time; safe and competent but slower and less decisive than full isolation."
+        },
+        {
+          "text": "Ignore the alert until after docking sequence completes.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Minimal intervention; tolerable if other safeguards are active, but not optimal for rapid containment."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    },
+    {
+      "scenario": "Power Relay Cascade Failure",
+      "summary": "A damaged relay junction threatens a cascading power loss across multiple decks.",
+      "answers": [
+        {
+          "text": "Initiate sectional power isolation and reroute through undamaged relays.",
+          "score": 9,
+          "type": "best",
+          "details": "Efficient and prevents catastrophic grid collapse\u2014fundamental Starfleet engineering discipline."
+        },
+        {
+          "text": "Manually engage local backup circuits to stabilize critical systems while isolation proceeds.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Mitigates risk and maintains essential operations; less optimal than full rerouting but technically sound."
+        },
+        {
+          "text": "Cut main power entirely to halt cascade.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Stops propagation but sacrifices operational continuity; safe but less effective overall."
+        },
+        {
+          "text": "Attempt a manual bypass without diagnostics to save time.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Skipping diagnostics risks system instability and violates Starfleet engineering protocols."
+        },
+        {
+          "text": "Ignore the issue and trust automation to stabilize the system over time.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive response that may lead to catastrophic failure; contradicts Starfleet engineering doctrine."
+        }
+      ]
+    }
+  ]
+}
