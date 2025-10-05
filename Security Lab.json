@@ -1,0 +1,545 @@
+{
+  "department": "Security",
+  "lab": [
+    {
+      "scenario": "Hacking Attempt on Armory Controls",
+      "summary": "External access attempts detected targeting the armory control authentication service.",
+      "answers": [
+        {
+          "text": "Isolate the armory network, enforce multi-factor manual authentication for weapons access, and initiate a full forensics sweep.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents unauthorized access while enabling investigators to trace intrusion vectors and actors."
+        },
+        {
+          "text": "Shut down remote weapon access entirely until the intrusion source is eliminated.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Effective immediate protection but reduces readiness and may hinder legitimate urgent access."
+        },
+        {
+          "text": "Monitor the intrusion to gather intelligence on the attacker\u2019s methods before cutting access.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Potentially valuable intel but risks the attacker succeeding if monitoring delays isolation."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "Hostile Negotiation Escalation",
+      "summary": "A diplomatic security detail encounters an armed separatist group demanding the release of prisoners.",
+      "answers": [
+        {
+          "text": "Maintain cover, de-escalate verbally while tactical units prepare a silent takedown at a commander\u2019s go.",
+          "score": 9,
+          "type": "best",
+          "details": "Prioritizes saving lives while preparing decisive intervention if negotiations fail."
+        },
+        {
+          "text": "Refuse demands and demonstrate force posture to intimidate the group into surrender.",
+          "score": 8,
+          "type": "alternate",
+          "details": "May compel surrender but risks provoking immediate violence and civilian casualties."
+        },
+        {
+          "text": "Comply with demands to buy time and avoid bloodshed, planning to recapture later.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Temporary peace but concedes tactical advantage and may embolden future demands."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "Chain-of-Command Breakdown During Emergency",
+      "summary": "Multiple conflicting orders are issued during a hull breach response, causing team paralysis.",
+      "answers": [
+        {
+          "text": "Assert security command control, re-establish clear single-point orders, and document deviations for after-action review.",
+          "score": 9,
+          "type": "best",
+          "details": "Restores decisive action and creates accountability to correct leadership issues."
+        },
+        {
+          "text": "Hold current positions until a higher-ranking officer clarifies instructions.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Reduces risk of conflicting movement but delays urgent actions needed to save lives."
+        },
+        {
+          "text": "Allow squad leaders to act independently to solve local problems quickly.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Empowers initiative but risks uncoordinated efforts that may conflict strategically."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "Phaser Misfire During Training",
+      "summary": "A phaser discharged during a training session fails to cycle correctly and emits an atypical beam.",
+      "answers": [
+        {
+          "text": "Quarantine weapons, secure the firing range, and run diagnostic and maintenance protocols before further use.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents further misfires and ensures weapons are safe and reliable before returning to service."
+        },
+        {
+          "text": "Continue training with reduced power settings while techs monitor performance.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Keeps schedule but risks repeat malfunction and unsafe conditions."
+        },
+        {
+          "text": "Ignore the anomaly as an isolated sensor glitch and resume normal training.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Quick fix but may allow dangerous weapons faults to persist."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "Sensor Jam During Docking",
+      "summary": "External sensor jamming makes it difficult to identify small craft approaching during a busy docking maneuver.",
+      "answers": [
+        {
+          "text": "Switch to manual visual confirmation via ports and deploy security shuttles to intercept unknown contacts.",
+          "score": 9,
+          "type": "best",
+          "details": "Maintains situational awareness and intercepts potential threats while navigation completes docking safely."
+        },
+        {
+          "text": "Abort docking until jamming source is identified and cleared.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Conservative solution that prioritizes safety but disrupts schedule and logistics."
+        },
+        {
+          "text": "Proceed using assumption-based sensor filters and rely on automated collision avoidance.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Risky when identification is uncertain; may place ship in danger if jamming conceals hostile craft."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "Biometric Override Attempt",
+      "summary": "Someone attempts to access a secure vault using a cloned biometric signature.",
+      "answers": [
+        {
+          "text": "Require secondary manual authentication and camera verification, detain the user for investigation, and audit biometric logs.",
+          "score": 9,
+          "type": "best",
+          "details": "Combines layered security and human verification to stop sophisticated cloning attacks."
+        },
+        {
+          "text": "Allow access but flag the session and trace activity for evidence collection.",
+          "score": 8,
+          "type": "alternate",
+          "details": "May collect attacker intel but risks exposure of secured assets during the session."
+        },
+        {
+          "text": "Disable biometric access entirely and switch to code locks until biometrics can be reissued.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Effective short-term shield but disrupts normal operations and can be socially disruptive."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "Intruder Alert on Deck Three",
+      "summary": "Motion sensors report unauthorized movement near crew quarters during off-watch hours.",
+      "answers": [
+        {
+          "text": "Lockdown the corridor, dispatch security teams to sweep, and use biometric logs to identify the intruder.",
+          "score": 9,
+          "type": "best",
+          "details": "Immediate containment minimizes risk to crew; biometric cross-checks help identify intent and prevent escape."
+        },
+        {
+          "text": "Sound general alarm and evacuate nearby compartments while calling for backup.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Rapid evacuation protects civilians but may allow intruder to move into less-populated areas; useful if threat level unclear."
+        },
+        {
+          "text": "Monitor sensors and attempt to track intruder remotely before committing teams.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Less proactive; avoids unnecessary confrontation but risks intruder reaching critical areas if tracking fails."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "Coordinated Small-Craft Swarm",
+      "summary": "A swarm of small, weaponized craft approaches the ship using hit-and-run tactics to overwhelm point defenses.",
+      "answers": [
+        {
+          "text": "Activate layered defensive patterns, soft-block swarms with EMP bursts, and deploy interceptor drones to thin numbers.",
+          "score": 9,
+          "type": "best",
+          "details": "Combines area suppression, electronic countermeasures, and active interception to neutralize swarm threats efficiently."
+        },
+        {
+          "text": "Focus all fire on the largest craft assuming it is the command node to disrupt coordination.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Potentially cripples swarm command but risks allowing many attackers to persist."
+        },
+        {
+          "text": "Evasive maneuvers at high speed to outrun swarm engagement windows.",
+          "score": 7,
+          "type": "alternate",
+          "details": "May avoid damage but can be fuel-intensive and unsuitable in constrained space."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "Prisoner Transport Riot",
+      "summary": "A detained suspect incites other prisoners, overwhelming nearby security personnel.",
+      "answers": [
+        {
+          "text": "Deploy non-lethal area suppression, segregate instigators, and secure transport protocols to move prisoners to reinforced cells.",
+          "score": 9,
+          "type": "best",
+          "details": "Minimizes injuries, removes leadership of the riot, and restores order without escalating force."
+        },
+        {
+          "text": "Call engineering to seal ventilation and lock down sections while awaiting reinforcements.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Effective containment but risks suffocating or creating panic among detainees if misused."
+        },
+        {
+          "text": "Use lethal force to neutralize primary threats immediately to prevent further spread.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Guaranteed suppression but may lead to legal and ethical consequences."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "False Positive Explosive Alert",
+      "summary": "Security scanners flag a container as explosive, but visual inspection suggests packaging error.",
+      "answers": [
+        {
+          "text": "Evacuate nearby areas, use remote handling rigs to isolate and x-ray the container, then neutralize if confirmed.",
+          "score": 9,
+          "type": "best",
+          "details": "Prioritizes safety while minimizing crew exposure and preserving evidence for chain-of-custody."
+        },
+        {
+          "text": "Open the container in place using standard protocols since visual cues show non-threatening contents.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Faster resolution but risks accidental detonation if scanner was accurate."
+        },
+        {
+          "text": "Label as false positive and return to normal operations to avoid disrupting logistics.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Efficient for benign errors but dangerous if misclassification occurs."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "Sabotaged Emergency Beacon Signals",
+      "summary": "Rescue beacons in a sector are found emitting false coordinates, potentially luring ships into traps.",
+      "answers": [
+        {
+          "text": "Disable suspect beacons, circulate updated NAV alerts, and establish verification protocols for future emergency signals.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents further trap exploitation and restores trust in emergency systems via stronger verification."
+        },
+        {
+          "text": "Respond to beacons with armed escort to mitigate potential ambushes.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains rescue posture but risks escort crews being drawn into prepared traps."
+        },
+        {
+          "text": "Ignore the beacons until HQ confirms legitimacy to avoid baiting a trap.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe but may abandon genuine distress calls and cost lives."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "False Mutiny Broadcast",
+      "summary": "A forged transmission claims senior officers have ordered mutiny, causing confusion among lower-deck crew.",
+      "answers": [
+        {
+          "text": "Secure official communications channels, broadcast authenticated counter-orders, and detain anyone propagating the false transmission.",
+          "score": 9,
+          "type": "best",
+          "details": "Restores legitimate chain of command and deters further misinformation by swift, authoritative correction."
+        },
+        {
+          "text": "Lock down internal comms and vet messages manually to prevent spread until source identified.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Prevents further spread but slows normal operations and may cause frustration."
+        },
+        {
+          "text": "Ignore and continue with existing mission orders assuming crew will recognize falsehood quickly.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Avoids overreaction but risks sinking morale and allowing confusion to grow."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "Unauthorized Weapons Discharge",
+      "summary": "A phaser discharge is logged in a non-combat zone with no authorized training scheduled.",
+      "answers": [
+        {
+          "text": "Secure the area, account for all personnel, and perform weapon system diagnostics and ammo logs to trace the source.",
+          "score": 9,
+          "type": "best",
+          "details": "Combines safety, accountability, and technical verification to determine whether incident is accidental or malicious."
+        },
+        {
+          "text": "Place the ship on heightened alert for internal threats while awaiting a commander-led inquiry.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Proactive security posture but may cause unnecessary alarm to crew and hamper normal operations."
+        },
+        {
+          "text": "Assume accidental discharge and issue a formal reprimand after a brief investigation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Quick and administratively light but risks missing deliberate misuse or system faults."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "Counterfeit IDs Circulating Among Crew",
+      "summary": "Security receives reports of forged crew IDs used to access restricted areas.",
+      "answers": [
+        {
+          "text": "Run a shipwide authentication sweep, invalidate suspect badges, and require biometric re-enrollment.",
+          "score": 9,
+          "type": "best",
+          "details": "Restores access integrity and ensures only verified personnel can enter sensitive zones."
+        },
+        {
+          "text": "Increase random spot checks at critical access points and monitor for repeat offenders.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Deters casual misuse but may miss coordinated forgery rings."
+        },
+        {
+          "text": "Assume administrative error and update badge reader firmware to reduce false acceptance.",
+          "score": 7,
+          "type": "alternate",
+          "details": "May reduce technical false positives but does not address intentional forgery."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    },
+    {
+      "scenario": "Hostile Planetary Patrol Confrontation",
+      "summary": "A security patrol is confronted by armed locals enforcing a restricted zone while conducting surface rescue ops.",
+      "answers": [
+        {
+          "text": "Use non-lethal area denial to create space, communicate intent, and offer to coordinate through neutral mediators.",
+          "score": 9,
+          "type": "best",
+          "details": "De-escalates potential violence and preserves diplomatic channels while ensuring mission completion."
+        },
+        {
+          "text": "Raise weapons and assert authority to push through the patrol.",
+          "score": 8,
+          "type": "alternate",
+          "details": "May complete mission faster but risks casualties and diplomatic fallout."
+        },
+        {
+          "text": "Abort surface operation and withdraw to ship to avoid engagement.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Preserves crew safety but fails mission objectives and concedes ground."
+        },
+        {
+          "text": "Open fire immediately on any potential threat without verification.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Premature engagement risks collateral damage and breaches Starfleet rules of engagement."
+        },
+        {
+          "text": "Disable internal sensors and rely solely on personal judgment for threat detection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting automated safeguards eliminates situational awareness and endangers the crew."
+        }
+      ]
+    }
+  ]
+}
