@@ -22,209 +22,213 @@ justify-content:center;
 text-align:center;
 position:relative;
 }
-
-/* LCARS Accent Bars */
-.lcars-bar{
-position:absolute;
-left:0;
-width:100%;
-height:8px;
-animation:pulse 6s infinite alternate;
-}
-.lcars-top{top:0;}
-.lcars-bottom{bottom:0;}
-@keyframes pulse{
-0%{background:linear-gradient(90deg,var(--gold),var(--blue));}
-50%{background:linear-gradient(90deg,var(--blue),var(--gold));}
-100%{background:linear-gradient(90deg,var(--gold),var(--blue));}
-}
-
-/* Corner Insignias */
-.corner-image{
-position:absolute;
-top:10px;
-width:180px;
-height:auto;
-object-fit:contain;
-z-index:2;
-pointer-events:none;
-opacity:0.9;
-}
-.corner-left{left:10px;}
-.corner-right{right:10px;}
-
-/* LOGIN */
-#loginScreen{
-position:absolute;
-top:50%;left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-z-index:3;
-}
-.login-box{
-background:rgba(0,0,0,0.85);
-border:2px solid var(--gold);
-padding:25px 30px;
-border-radius:12px;
-box-shadow:0 0 20px var(--gold);
-width:380px;
-max-width:90%;
-}
-.login-box h2{
-font-family:'Orbitron',sans-serif;
-font-size:24pt;
-margin-bottom:20px;
-}
-.login-box label{
-display:block;
-margin:10px 0 5px;
-font-size:12pt;
-}
-.login-box input,.login-box select{
-width:100%;
-padding:8px;
-border:none;
-border-radius:6px;
-background:#111;
-color:#fff;
-font-size:12pt;
-font-family:'Roboto',sans-serif;
-}
-.login-box button{
-margin-top:15px;
-padding:10px 18px;
-border-radius:8px;
-border:2px solid var(--gold);
-background:linear-gradient(to bottom,#1e3c72,#000);
-color:var(--gold);
-font-weight:bold;
-font-size:13pt;
-cursor:pointer;
-}
+.lcars-bar{position:absolute;left:0;width:100%;height:8px;animation:pulse 6s infinite alternate;}
+.lcars-top{top:0;} .lcars-bottom{bottom:0;}
+@keyframes pulse{0%{background:linear-gradient(90deg,var(--gold),var(--blue));}50%{background:linear-gradient(90deg,var(--blue),var(--gold));}100%{background:linear-gradient(90deg,var(--gold),var(--blue));}}
+.corner-image{position:absolute;top:10px;width:180px;height:auto;object-fit:contain;z-index:2;pointer-events:none;opacity:0.9;}
+.corner-left{left:10px;} .corner-right{right:10px;}
+#loginScreen{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:3;}
+.login-box{background:rgba(0,0,0,0.85);border:2px solid var(--gold);padding:25px 30px;border-radius:12px;box-shadow:0 0 20px var(--gold);width:380px;max-width:90%;}
+.login-box h2{font-family:'Orbitron',sans-serif;font-size:24pt;margin-bottom:20px;}
+.login-box label{display:block;margin:10px 0 5px;font-size:12pt;}
+.login-box input,.login-box select{width:100%;padding:8px;border:none;border-radius:6px;background:#111;color:#fff;font-size:12pt;font-family:'Roboto',sans-serif;}
+.login-box button{margin-top:15px;padding:10px 18px;border-radius:8px;border:2px solid var(--gold);background:linear-gradient(to bottom,#1e3c72,#000);color:var(--gold);font-weight:bold;font-size:13pt;cursor:pointer;}
 .login-box button:hover{background:linear-gradient(to bottom,#2a5298,#111);}
-#accessMessage{
-margin-top:10px;
-color:#fff;
-opacity:0;
-transition:opacity 0.5s;
-}
-
-/* MAIN SCREEN */
+#accessMessage{margin-top:10px;color:#fff;opacity:0;transition:opacity 0.5s;}
 #mainScreen{display:none;opacity:0;transition:opacity 3s;}
-.page-title{
-font-family:'Orbitron',sans-serif;
-font-size:32pt;
-margin:0 0 10px 0;
-color:var(--gold);
-text-shadow:0 0 10px rgba(255,216,77,0.4);
-}
-.welcome-text{
-max-width:820px;
-font-size:12pt;
-line-height:1.45em;
-color:#fff;
-margin:0 auto 20px auto;
-padding:0 15px;
-}
-.container{
-background:rgba(0,0,0,0.85);
-padding:15px 20px;
-border-radius:10px;
-box-shadow:0 0 15px var(--gold);
-width:500px;
-max-width:90%;
-margin:10px auto 0 auto;
-}
-button{
-background:linear-gradient(to bottom,#1e3c72,#000);
-color:var(--gold);
-font-weight:bold;
-border:2px solid var(--gold);
-cursor:pointer;
-box-shadow:inset 0 2px 5px rgba(255,255,255,.3),0 5px 10px rgba(0,0,0,.6);
-font-family:'Roboto',sans-serif;
-border-radius:8px;
-padding:10px 16px;
-font-size:14pt;
-margin:8px;
-}
+.page-title{font-family:'Orbitron',sans-serif;font-size:32pt;margin:0 0 10px 0;color:var(--gold);text-shadow:0 0 10px rgba(255,216,77,0.4);}
+.welcome-text{max-width:820px;font-size:12pt;line-height:1.45em;color:#fff;margin:0 auto 20px auto;padding:0 15px;}
+.container{background:rgba(0,0,0,0.85);padding:15px 20px;border-radius:10px;box-shadow:0 0 15px var(--gold);width:500px;max-width:90%;margin:10px auto 0 auto;}
+button{background:linear-gradient(to bottom,#1e3c72,#000);color:var(--gold);font-weight:bold;border:2px solid var(--gold);cursor:pointer;box-shadow:inset 0 2px 5px rgba(255,255,255,.3),0 5px 10px rgba(0,0,0,.6);font-family:'Roboto',sans-serif;border-radius:8px;padding:10px 16px;font-size:14pt;margin:8px;}
 button:hover{background:linear-gradient(to bottom,#2a5298,#111);transform:translateY(-2px);}
 #orientationPage,#trainingPage,#labPage{display:none;}
 .feedback{margin-top:15px;padding:15px;background:rgba(255,255,255,0.1);border-radius:8px;color:#fff;font-size:14pt;}
 .answers button{display:block;width:100%;margin-top:10px;}
 .return-btn{padding:8px 20px;font-size:13pt;width:auto;margin-top:20px;}
+#trainingPage,#labPage{padding:20px;height:100vh;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+.training-container,.lab-container{background:rgba(0,0,0,0.85);width:90%;max-width:1100px;margin:0 auto;padding:20px 30px;border-radius:12px;box-shadow:0 0 20px var(--gold);}
+.training-title,.lab-title{font-family:'Orbitron',sans-serif;font-size:26pt;color:var(--gold);margin-bottom:5px;}
+.training-subtitle,.lab-subtitle{font-family:'Roboto',sans-serif;font-size:14pt;color:#fff;margin-bottom:25px;}
+.training-section{margin-bottom:35px;padding-bottom:20px;border-bottom:1px solid #444;text-align:left;}
+.training-section h3{font-family:'Roboto',sans-serif;font-size:15pt;margin-bottom:10px;color:var(--gold);}
+.training-section p{font-size:14pt;line-height:1.6em;margin:0 0 10px 0;color:#fff;}
+.answers{margin-left:20px;}
+.answer-block{margin-bottom:15px;padding:10px;background:rgba(255,255,255,0.05);border-radius:8px;}
+.answer-block strong{color:#00ffcc;}
+.answer-block p{color:#fff;}
+#trainingPage::-webkit-scrollbar,#labPage::-webkit-scrollbar{width:10px;}
+#trainingPage::-webkit-scrollbar-track,#labPage::-webkit-scrollbar-track{background:#111;}
+#trainingPage::-webkit-scrollbar-thumb,#labPage::-webkit-scrollbar-thumb{background:#555;border-radius:8px;border:2px solid #111;}
+#trainingPage::-webkit-scrollbar-thumb:hover,#labPage::-webkit-scrollbar-thumb:hover{background:#888;}
+.fixed-return{position:fixed;bottom:20px;left:10px;z-index:1000;width:auto;}
+#moduleButtons button{width:220px;}
+</style>
+</head>
+<body>
+<div class="lcars-bar lcars-top"></div>
+<div class="lcars-bar lcars-bottom"></div>
+<img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/refs/heads/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left">
+<img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/refs/heads/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right">
 
-/* TRAINING LAYOUT */
-#trainingPage {
-  padding:20px;
-  height:100vh;
-  overflow-y:auto;
-  -webkit-overflow-scrolling:touch;
-}
-.training-container {
-  background:rgba(0,0,0,0.85);
-  width:90%;
-  max-width:1100px;
-  margin:0 auto;
-  padding:20px 30px;
-  border-radius:12px;
-  box-shadow:0 0 20px var(--gold);
-}
-.training-title {
-  font-family:'Orbitron',sans-serif;
-  font-size:26pt;
-  color:var(--gold);
-  margin-bottom:5px;
-}
-.training-subtitle {
-  font-family:'Roboto',sans-serif;
-  font-size:14pt;
-  color:#fff;
-  margin-bottom:25px;
-}
-.training-section {
-  margin-bottom:35px;
-  padding-bottom:20px;
-  border-bottom:1px solid #444;
-  text-align:left;
-}
-.training-section h3 {
-  font-family:'Roboto',sans-serif;
-  font-size:15pt;
-  margin-bottom:10px;
-  color:var(--gold);
-}
-.training-section p {
-  font-size:14pt;
-  line-height:1.6em;
-  margin:0 0 10px 0;
-  color:#fff;
-}
-.answers {margin-left:20px;}
-.answer-block {
-  margin-bottom:15px;
-  padding:10px;
-  background:rgba(255,255,255,0.05);
-  border-radius:8px;
-}
-.answer-block strong {color:#00ffcc;}
-.answer-block p {color:#fff;}
-#trainingPage::-webkit-scrollbar {width:10px;}
-#trainingPage::-webkit-scrollbar-track {background:#111;}
-#trainingPage::-webkit-scrollbar-thumb {background:#555;border-radius:8px;border:2px solid #111;}
-#trainingPage::-webkit-scrollbar-thumb:hover {background:#888;}
-.fixed-return {
-  position:fixed;
-  bottom:20px;
-  left:10px;
-  z-index:1000;
-  width:auto;
-}
+<div id="loginScreen">
+  <div class="login-box">
+    <h2>Cadet Login</h2>
+    <label for="cadetName">Cadet Name</label>
+    <input type="text" id="cadetName">
+    <label for="species">Species</label>
+    <select id="species">
+      <option value="">-- Select Species --</option>
+      <option>Human</option><option>Vulcan</option><option>Andorian</option>
+      <option>Tellarite</option><option>Bajoran</option><option>Betazoid</option>
+      <option>Trill</option><option>Bolian</option><option>Klingon</option>
+      <option>Ferengi</option><option>Denobulan</option><option>Orion</option>
+      <option>Caitian</option><option>Benzite</option>
+    </select>
+    <button id="loginBtn">Login</button>
+    <div id="accessMessage"></div>
+  </div>
+</div>
 
-/* Equal button width */
-#moduleButtons button{
-width:220px;
+<div id="mainScreen">
+  <div class="page-title" id="mainTitle">Welcome to Starfleet Academy</div>
+  <div class="welcome-text">
+    Welcome, Cadet — and congratulations. Few are chosen to stand where you stand now.<br><br>
+    Starfleet Academy is where the Federation’s future officers are shaped. Here, among peers from worlds across known space, you will be challenged to think critically, act decisively, and serve with integrity. The Academy is not merely a place of study — it is a proving ground where intellect, discipline, and character are tested every day.<br><br>
+    You will explore the principles of command, the responsibilities of discovery, and the ethics of leadership. You will learn not only how to navigate the stars, but how to uphold the ideals of the United Federation of Planets.<br><br>
+    <strong>Ex Astris, Scientia.</strong>
+  </div>
+  <div class="container">
+    <p style="font-size:14pt;margin-bottom:10px;">Select your training path:</p>
+    <button id="enterTraining">Enter Training</button>
+    <button id="enterLab">Enter Lab</button>
+  </div>
+</div>
+
+<div id="orientationPage">
+  <div class="page-title" id="orientationTitle"></div>
+  <div class="container" id="moduleButtons"></div>
+  <button class="return-btn" id="returnMain">Return to Main</button>
+</div>
+
+<div id="trainingPage">
+  <div class="training-container">
+    <div class="training-title" id="trainingDeptTitle"></div>
+    <div class="training-subtitle" id="trainingCadetTitle"></div>
+    <div id="trainingContent"></div>
+  </div>
+  <button class="return-btn fixed-return" id="returnOrientation1">Back to Departments</button>
+</div>
+
+<div id="labPage">
+  <div class="lab-container">
+    <div class="lab-title" id="labDeptTitle"></div>
+    <div class="lab-subtitle" id="labCadetTitle"></div>
+    <div id="labContent"></div>
+  </div>
+  <button class="return-btn fixed-return" id="returnOrientation2">Back to Departments</button>
+</div>
+
+<script>
+let cadetName="",species="",homeworld="";
+const homeworlds={"Human":"Earth","Vulcan":"Vulcan","Andorian":"Andoria","Tellarite":"Tellar Prime","Bajoran":"Bajor","Betazoid":"Betazed","Trill":"Trill","Bolian":"Bolarus IX","Klingon":"Qo'noS","Ferengi":"Ferenginar","Denobulan":"Denobula","Orion":"Orion","Caitian":"Cait","Benzite":"Benzar"};
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Starfleet Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root { --gold:#ffd84d; --blue:#00aaff; }
+html,body{height:100%;margin:0;padding:0;overflow:hidden;}
+body{
+  background:#000; color:var(--gold);
+  font-family:'Roboto',sans-serif; text-align:center;
+  display:flex; align-items:center; justify-content:center; position:relative;
 }
+/* LCARS bars */
+.lcars-bar{position:absolute;left:0;width:100%;height:8px;animation:pulse 6s infinite alternate;}
+.lcars-top{top:0;} .lcars-bottom{bottom:0;}
+@keyframes pulse{
+  0%{background:linear-gradient(90deg,var(--gold),var(--blue));}
+  50%{background:linear-gradient(90deg,var(--blue),var(--gold));}
+  100%{background:linear-gradient(90deg,var(--gold),var(--blue));}
+}
+/* Corners */
+.corner-image{
+  position:absolute; top:10px; width:180px; height:auto; object-fit:contain;
+  z-index:2; pointer-events:none; opacity:0.9;
+}
+.corner-left{left:10px;} .corner-right{right:10px;}
+/* Login */
+#loginScreen{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  text-align:center; z-index:3; opacity:1; transition:opacity 3s ease;
+}
+.login-box{
+  background:rgba(0,0,0,0.85); border:2px solid var(--gold);
+  padding:25px 30px; border-radius:12px; box-shadow:0 0 20px var(--gold);
+  width:380px; max-width:90%;
+}
+.login-box h2{font-family:'Orbitron',sans-serif; font-size:24pt; margin:0 0 20px;}
+.login-box label{display:block;margin:10px 0 5px;font-size:12pt;}
+.login-box input,.login-box select{
+  width:100%; padding:8px; border:none; border-radius:6px; background:#111; color:#fff; font-size:12pt;
+}
+.login-box button{
+  margin-top:15px; padding:10px 18px; border-radius:8px; border:2px solid var(--gold);
+  background:linear-gradient(to bottom,#1e3c72,#000); color:var(--gold); font-weight:bold; font-size:13pt; cursor:pointer;
+}
+.login-box button:hover{background:linear-gradient(to bottom,#2a5298,#111);}
+#accessMessage{margin-top:10px;color:#fff;opacity:0;transition:opacity 0.5s;}
+/* Main */
+#mainScreen{display:none; opacity:0; transition:opacity 3s ease;}
+.page-title{
+  font-family:'Orbitron',sans-serif; font-size:32pt; margin:0 0 10px; color:var(--gold);
+  text-shadow:0 0 10px rgba(255,216,77,0.4);
+}
+.welcome-text{max-width:820px; font-size:12pt; line-height:1.45em; color:#fff; margin:0 auto 20px; padding:0 15px;}
+.container{
+  background:rgba(0,0,0,0.85); padding:15px 20px; border-radius:10px; box-shadow:0 0 15px var(--gold);
+  width:500px; max-width:90%; margin:10px auto 0;
+}
+button{
+  background:linear-gradient(to bottom,#1e3c72,#000); color:var(--gold); font-weight:bold; border:2px solid var(--gold);
+  cursor:pointer; box-shadow:inset 0 2px 5px rgba(255,255,255,.3),0 5px 10px rgba(0,0,0,.6);
+  font-family:'Roboto',sans-serif; border-radius:8px; padding:10px 16px; font-size:14pt; margin:8px;
+}
+button:hover{background:linear-gradient(to bottom,#2a5298,#111); transform:translateY(-2px);}
+#orientationPage,#trainingPage,#labPage{display:none;}
+/* Orientation */
+#moduleButtons button{width:220px;}
+/* Training & Lab shared page shells */
+#trainingPage,#labPage{padding:20px; height:100vh; overflow-y:auto; -webkit-overflow-scrolling:touch;}
+.training-container,.lab-container{
+  background:rgba(0,0,0,0.85); width:90%; max-width:1100px; margin:0 auto; padding:20px 30px;
+  border-radius:12px; box-shadow:0 0 20px var(--gold); text-align:left;
+}
+.training-title,.lab-title{font-family:'Orbitron',sans-serif; font-size:26pt; color:var(--gold); margin:0 0 5px;}
+.training-subtitle,.lab-subtitle{font-size:14pt; color:#fff; margin:0 0 25px;}
+.training-section{
+  margin-bottom:35px; padding-bottom:20px; border-bottom:1px solid #444;
+}
+.training-section h3{font-size:15pt; margin:0 0 10px; color:var(--gold);}
+.training-section p{font-size:14pt; line-height:1.6em; margin:0 0 10px; color:#fff;}
+.answers{margin-left:20px;}
+.answer-block{margin-bottom:15px; padding:10px; background:rgba(255,255,255,0.05); border-radius:8px;}
+.answer-block strong{color:#00ffcc;}
+.answer-block p{color:#fff;}
+/* Scrollbars */
+#trainingPage::-webkit-scrollbar,#labPage::-webkit-scrollbar{width:10px;}
+#trainingPage::-webkit-scrollbar-track,#labPage::-webkit-scrollbar-track{background:#111;}
+#trainingPage::-webkit-scrollbar-thumb,#labPage::-webkit-scrollbar-thumb{background:#555; border-radius:8px; border:2px solid #111;}
+#trainingPage::-webkit-scrollbar-thumb:hover,#labPage::-webkit-scrollbar-thumb:hover{background:#888;}
+/* Return buttons */
+.fixed-return{position:fixed; bottom:20px; left:10px; z-index:1000; width:auto;}
+.feedback{margin-top:15px; padding:15px; background:rgba(255,255,255,0.1); border-radius:8px; color:#fff; font-size:14pt;}
 </style>
 </head>
 <body>
@@ -289,175 +293,227 @@ width:220px;
 
 <!-- LAB -->
 <div id="labPage">
-  <div class="page-title" id="labDeptTitle"></div>
-  <div class="container" id="labContent"></div>
-  <button class="return-btn" id="returnOrientation2" style="left:10px;">Back to Departments</button>
+  <div class="lab-container">
+    <div class="lab-title" id="labDeptTitle"></div>
+    <div class="lab-subtitle" id="labCadetTitle"></div>
+    <div id="labContent"></div>
+  </div>
+  <button class="return-btn fixed-return" id="returnOrientation2">Back to Departments</button>
 </div>
 
 <script>
-let cadetName="",species="",homeworld="";
+let cadetName="", species="", homeworld="";
+
+/* Homeworld mapping */
 const homeworlds={
-"Human":"Earth","Vulcan":"Vulcan","Andorian":"Andoria","Tellarite":"Tellar Prime","Bajoran":"Bajor",
-"Betazoid":"Betazed","Trill":"Trill","Bolian":"Bolarus IX","Klingon":"Qo'noS","Ferengi":"Ferenginar",
-"Denobulan":"Denobula","Orion":"Orion","Caitian":"Cait","Benzite":"Benzar"
+  "Human":"Earth","Vulcan":"Vulcan","Andorian":"Andoria","Tellarite":"Tellar Prime","Bajoran":"Bajor",
+  "Betazoid":"Betazed","Trill":"Trill","Bolian":"Bolarus IX","Klingon":"Qo'noS","Ferengi":"Ferenginar",
+  "Denobulan":"Denobula","Orion":"Orion","Caitian":"Cait","Benzite":"Benzar"
 };
+
+/* Prefaces for training pages (restored) */
 const prefaces={
-"Command":"Command is not about absolute authority; it is about absolute responsibility. Every decision you make will weigh the balance of lives, mission objectives, and Federation principles.",
-"Diplomacy":"Diplomacy is the Federation’s first line of defense. As a cadet in this simulation, you step into the captain’s role, responsible for every word and gesture.",
-"Engineering":"Starfleet ships are the finest vessels in the galaxy, but even they are only as strong as their engineers.",
-"Science":"Exploration is the Federation’s mandate, and science is its spearhead.",
-"Medical":"As Chief Medical Officer, you are responsible for the health and safety of every crew member.",
-"Security":"As Chief of Security, you oversee the safety of the ship and crew, balancing defensive measures with operational priorities."
+  "Command":"Command is not about absolute authority; it is about absolute responsibility. Every decision you make will weigh the balance of lives, mission objectives, and Federation principles. In this training, remember at all times: you are the captain. Orders must be clear, discipline must be firm but fair, and the Federation flag you carry demands integrity at all times. You will be tested not only on your ability to win but also on your ability to lead when victory is impossible — the very essence of the Kobayashi Maru.",
+  "Diplomacy":"Diplomacy is the Federation’s first line of defense. As a cadet in this simulation, you step into the captain’s role, responsible for every word and gesture. You must learn to listen as carefully as you speak, to negotiate from strength without arrogance, and to recognize when compromise honors our ideals more than confrontation. Remember: as captain, your words may avert wars, your patience may save lives, and your restraint may preserve the values of the Federation.",
+  "Engineering":"Starfleet ships are the finest vessels in the galaxy, but even they are only as strong as their engineers. In this training, you will serve as the Chief Engineer. You are responsible for directing damage control, enforcing safety protocols, and keeping the vessel operational. Your ingenuity and clarity of command can spell the difference between survival and disaster.",
+  "Science":"Exploration is the Federation’s mandate, and science is its spearhead. As the Science Officer in this module, you must interpret data, weigh theories against risk, and decide when curiosity must yield to caution. Scientific opportunities will tempt you with discovery, but never lose sight of your command role. You are responsible for balancing the pursuit of knowledge with the safety of your crew and adherence to Federation law.",
+  "Medical":"As Chief Medical Officer, you are responsible for the health and safety of every crew member. In this training, you will manage medical crises, triage, and preventive care. Your judgment must combine empathy, technical expertise, and decisive action under pressure to uphold Starfleet’s commitment to life.",
+  "Security":"As Chief of Security, you oversee the safety of the ship and crew, including weapons systems, phasers, and photon torpedoes. You must maintain order, enforce protocols, and respond to threats with calculated precision, balancing defensive measures with operational priorities."
 };
+
+/* Training and Lab sources */
 const trainingFiles={
-"Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
-"Diplomacy":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
-"Engineering":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Training.json",
-"Science":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training.json",
-"Medical":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Training.json",
-"Security":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Training.json"
+  "Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
+  "Diplomacy":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
+  "Engineering":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Training.json",
+  "Science":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training.json",
+  "Medical":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Training.json",
+  "Security":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Training.json"
 };
 const labFiles={
-"Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Lab.json",
-"Diplomacy":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Lab.json",
-"Engineering":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Lab.json",
-"Security":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Lab.json",
-"Science":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
-"Medical":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
+  "Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Lab.json",
+  "Diplomacy":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Lab.json",
+  "Engineering":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Lab.json",
+  "Security":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Lab.json",
+  "Science":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
+  "Medical":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
 };
+
+/* Login flow: show message, fade login over 3s, then reveal main */
 document.getElementById("loginBtn").onclick=()=>{
-cadetName=document.getElementById("cadetName").value.trim();
-species=document.getElementById("species").value.trim();
-if(!cadetName||!species)return;
-homeworld=homeworlds[species]||species;
-const msg=document.getElementById("accessMessage");
-msg.innerHTML=`Access Granted — Welcome, Cadet ${cadetName} of ${homeworld}`;
-msg.style.opacity=1;
-setTimeout(()=>{
-document.getElementById("loginScreen").style.display="none";
-const main=document.getElementById("mainScreen");
-main.style.display="block";
-setTimeout(()=>{main.style.opacity=1;},50);
-},3000);
+  cadetName=document.getElementById("cadetName").value.trim();
+  species=document.getElementById("species").value.trim();
+  if(!cadetName||!species) return;
+  homeworld=homeworlds[species]||species;
+
+  const msg=document.getElementById("accessMessage");
+  msg.textContent=`Access Granted — Welcome, Cadet ${cadetName} of ${homeworld}`;
+  msg.style.opacity=1;
+
+  const login=document.getElementById("loginScreen");
+  // start fade-out immediately (3s via CSS), then hide and show main
+  requestAnimationFrame(()=>{ login.style.opacity=0; });
+  setTimeout(()=>{
+    login.style.display="none";
+    const main=document.getElementById("mainScreen");
+    main.style.display="block";
+    requestAnimationFrame(()=>{ main.style.opacity=1; });
+  },3000);
 };
+
 let currentMode="training";
-document.getElementById("enterTraining").onclick=()=>{currentMode="training";showOrientation();};
-document.getElementById("enterLab").onclick=()=>{currentMode="lab";showOrientation();};
+document.getElementById("enterTraining").onclick=()=>{ currentMode="training"; showOrientation(); };
+document.getElementById("enterLab").onclick=()=>{ currentMode="lab"; showOrientation(); };
+
 function showOrientation(){
-document.getElementById("mainScreen").style.display="none";
-document.getElementById("orientationPage").style.display="block";
-document.getElementById("orientationTitle").textContent=currentMode==="training"
-?`Select a Department for Training, Cadet ${cadetName} of ${homeworld}`
-:`Select a Department for Lab, Cadet ${cadetName} of ${homeworld}`;
-const btnBox=document.getElementById("moduleButtons");
-btnBox.innerHTML="";
-const source=currentMode==="training"?trainingFiles:labFiles;
-Object.keys(source).forEach(dept=>{
-const b=document.createElement("button");
-b.textContent=dept;
-b.style.width="220px";
-b.onclick=()=>{currentMode==="training"?loadTraining(dept):loadLab(dept);};
-btnBox.appendChild(b);
-});
+  document.getElementById("mainScreen").style.display="none";
+  document.getElementById("orientationPage").style.display="block";
+  document.getElementById("orientationTitle").textContent =
+    currentMode==="training"
+      ? `Select a Department for Training, Cadet ${cadetName} of ${homeworld}`
+      : `Select a Department for Lab, Cadet ${cadetName} of ${homeworld}`;
+
+  const btnBox=document.getElementById("moduleButtons");
+  btnBox.innerHTML="";
+  const source=currentMode==="training"?trainingFiles:labFiles;
+  Object.keys(source).forEach(dept=>{
+    const b=document.createElement("button");
+    b.textContent=dept; b.style.width="220px";
+    b.onclick=()=>{ currentMode==="training" ? loadTraining(dept) : loadLab(dept); };
+    btnBox.appendChild(b);
+  });
 }
+
+/* TRAINING */
 function loadTraining(dept){
-document.getElementById("orientationPage").style.display="none";
-document.getElementById("trainingPage").style.display="block";
-document.getElementById("trainingDeptTitle").textContent=`${dept} Training`;
-document.getElementById("trainingCadetTitle").textContent=`Cadet ${cadetName} of ${homeworld}`;
-fetch(trainingFiles[dept])
-.then(r=>r.json())
-.then(data=>{
-const content=document.getElementById("trainingContent");
-content.innerHTML="";
-if(prefaces[dept]){
-const preface=document.createElement("div");
-preface.className="training-section";
-preface.innerHTML=`<p>${prefaces[dept]}</p>`;
-content.appendChild(preface);
+  document.getElementById("orientationPage").style.display="none";
+  document.getElementById("trainingPage").style.display="block";
+  document.getElementById("trainingDeptTitle").textContent=`${dept} Training`;
+  document.getElementById("trainingCadetTitle").textContent=`Cadet ${cadetName} of ${homeworld}`;
+
+  fetch(trainingFiles[dept])
+    .then(r=>r.json())
+    .then(data=>{
+      const content=document.getElementById("trainingContent");
+      content.innerHTML="";
+
+      if(prefaces[dept]){
+        const preface=document.createElement("div");
+        preface.className="training-section";
+        preface.innerHTML=`<p>${prefaces[dept]}</p>`;
+        content.appendChild(preface);
+      }
+
+      if(data.study){
+        data.study.forEach(item=>{
+          const section=document.createElement("div");
+          section.className="training-section";
+          const summaryText=item.summary?item.summary:"(No summary available)";
+          let html=`<h3>${item.scenario}</h3><p>${summaryText}</p>`;
+          if(item.answers){
+            html+=`<div class="answers">`;
+            item.answers.forEach(ans=>{
+              const label=ans.type==="best"?"⭐ Best Answer":"Alternate Answer";
+              html+=`<div class="answer-block">
+                       <p><strong>${label}:</strong> ${ans.text}</p>
+                       <p><em>Score:</em> ${ans.score}</p>
+                       <p>${ans.details||""}</p>
+                     </div>`;
+            });
+            html+=`</div>`;
+          }
+          section.innerHTML=html;
+          content.appendChild(section);
+        });
+      } else {
+        content.innerHTML="<p>No training items found.</p>";
+      }
+    })
+    .catch(()=>{ document.getElementById("trainingContent").innerHTML="<p>Failed to load training material.</p>"; });
 }
-if(data.study){
-data.study.forEach(item=>{
-const section=document.createElement("div");
-section.className="training-section";
-const summaryText=item.summary?item.summary:"(No summary available)";
-let html=`<h3>${item.scenario}</h3><p>${summaryText}</p>`;
-if(item.answers){
-html+=`<div class="answers">`;
-item.answers.forEach(ans=>{
-const label=ans.type==="best"?"⭐ Best Answer":"Alternate Answer";
-html+=`<div class="answer-block"><p><strong>${label}:</strong> ${ans.text}</p><p><em>Score:</em> ${ans.score}</p><p>${ans.details||""}</p></div>`;
-});
-html+=`</div>`;
-}
-section.innerHTML=html;
-content.appendChild(section);
-});
-}
-});
-}
+
+/* LAB */
 function loadLab(dept){
-document.getElementById("orientationPage").style.display="none";
-document.getElementById("labPage").style.display="block";
-document.getElementById("labDeptTitle").textContent=`${dept} Lab — Cadet ${cadetName} of ${homeworld}`;
-fetch(labFiles[dept])
-.then(r=>r.json())
-.then(data=>{
-const content=document.getElementById("labContent");
-content.innerHTML="";
-if(data.lab&&data.lab.length>0){
-let index=0,score=0;
-showScenario();
-function showScenario(){
-const item=data.lab[index];
-content.innerHTML=`<h3>${item.scenario}</h3><p>${item.summary}</p>`;
-const answersDiv=document.createElement("div");
-answersDiv.className="answers";
-item.answers.forEach(ans=>{
-const btn=document.createElement("button");
-btn.textContent=ans.text;
-btn.style.width="220px";
-btn.onclick=()=>evaluate(ans,item,btn);
-answersDiv.appendChild(btn);
-});
-content.appendChild(answersDiv);
+  document.getElementById("orientationPage").style.display="none";
+  document.getElementById("labPage").style.display="block";
+  document.getElementById("labDeptTitle").textContent=`${dept} Lab`;
+  document.getElementById("labCadetTitle").textContent=`Cadet ${cadetName} of ${homeworld}`;
+
+  fetch(labFiles[dept])
+    .then(r=>r.json())
+    .then(data=>{
+      const content=document.getElementById("labContent");
+      content.innerHTML="";
+      if(!(data.lab&&data.lab.length)){ content.innerHTML="<p>No lab scenarios found.</p>"; return; }
+
+      let index=0, score=0;
+
+      function renderScenario(){
+        const item=data.lab[index];
+        content.innerHTML=`<div class="training-section">
+          <h3>${item.scenario}</h3>
+          <p>${item.summary||""}</p>
+        </div>`;
+
+        const answersDiv=document.createElement("div");
+        answersDiv.className="answers";
+        item.answers.forEach(ans=>{
+          const btn=document.createElement("button");
+          btn.textContent=ans.text;
+          btn.style.width="220px";
+          btn.onclick=()=>evaluate(ans,item);
+          answersDiv.appendChild(btn);
+        });
+        content.appendChild(answersDiv);
+      }
+
+      function evaluate(ans,item){
+        document.querySelectorAll("#labContent .answers button").forEach(b=>b.disabled=true);
+        const best=item.answers.find(a=>a.type==="best");
+
+        const feedback=document.createElement("div");
+        feedback.className="feedback";
+
+        if(ans.type==="best"){
+          feedback.innerHTML=`<strong>Correct.</strong> ${ans.details}`;
+          score+=ans.score;
+        } else if(ans.type==="alternate"){
+          feedback.innerHTML=`<strong>Acceptable.</strong> ${ans.details}<br><br>
+                              The best action would have been:<br><em>${best.text}</em>`;
+          score+=ans.score;
+        } else {
+          feedback.innerHTML=`<strong>Incorrect.</strong> ${ans.details}<br><br>
+                              The correct course of action:<br><em>${best.text}</em>`;
+        }
+        content.appendChild(feedback);
+
+        const next=document.createElement("button");
+        next.textContent=index<data.lab.length-1?"Next Scenario":"Finish Lab";
+        next.onclick=()=>{
+          index++;
+          if(index<data.lab.length){ renderScenario(); }
+          else { content.innerHTML=`<h3>Lab Complete</h3><p>Your final score: ${score}</p>`; }
+        };
+        content.appendChild(next);
+      }
+
+      renderScenario();
+    })
+    .catch(()=>{ document.getElementById("labContent").innerHTML="<p>Failed to load lab material.</p>"; });
 }
-function evaluate(ans,item){
-document.querySelectorAll(".answers button").forEach(b=>b.disabled=true);
-let feedback=document.createElement("div");
-feedback.className="feedback";
-if(ans.type==="best"){
-feedback.innerHTML=`<strong>Correct.</strong> ${ans.details}`;
-score+=ans.score;
-}else if(ans.type==="alternate"){
-feedback.innerHTML=`<strong>Acceptable.</strong> ${ans.details}<br><br>The best action would have been:<br><em>${item.answers.find(a=>a.type==="best").text}</em>`;
-score+=ans.score;
-}else{
-feedback.innerHTML=`<strong>Incorrect.</strong> ${ans.details}<br><br>The correct course of action:<br><em>${item.answers.find(a=>a.type==="best").text}</em>`;
-}
-content.appendChild(feedback);
-setTimeout(()=>{
-index++;
-if(index<data.lab.length){showScenario();}
-else{
-content.innerHTML=`<h3>Lab Complete</h3><p>Your final score: ${score}</p>`;
-}
-},3000);
-}
-}
-});
-}
+
+/* Returns */
 document.getElementById("returnMain").onclick=()=>{
-document.getElementById("orientationPage").style.display="none";
-document.getElementById("mainScreen").style.display="block";
+  document.getElementById("orientationPage").style.display="none";
+  document.getElementById("mainScreen").style.display="block";
 };
 document.getElementById("returnOrientation1").onclick=()=>{
-document.getElementById("trainingPage").style.display="none";
-document.getElementById("orientationPage").style.display="block";
+  document.getElementById("trainingPage").style.display="none";
+  document.getElementById("orientationPage").style.display="block";
 };
 document.getElementById("returnOrientation2").onclick=()=>{
-document.getElementById("labPage").style.display="none";
-document.getElementById("orientationPage").style.display="block";
+  document.getElementById("labPage").style.display="none";
+  document.getElementById("orientationPage").style.display="block";
 };
 </script>
 </body>
