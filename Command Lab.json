@@ -1,0 +1,545 @@
+{
+  "department": "Command",
+  "lab": [
+    {
+      "scenario": "Conflicting Orders",
+      "summary": "Sealed instructions from intelligence conflict with tasking from sector command. Your XO questions the ethics of proceeding. You must verify, document, and decide without fracturing the bridge team.",
+      "answers": [
+        {
+          "text": "Authenticate both directives on a secure channel, request precedence clarification, and proceed per the confirmed chain while logging rationale to the captain\u2019s log.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents split\u2011authority errors and preserves auditability under pressure."
+        },
+        {
+          "text": "Convene a brief tri\u2011party call to seek a joint instruction before acting.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Builds consensus, but burns time if the window is short."
+        },
+        {
+          "text": "Execute the time\u2011critical directive while forwarding notice of conflict to the other command.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Buys tempo at the risk of diplomatic friction if you guessed wrong on precedence."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Live Exercise Adjudication",
+      "summary": "A multi\u2011ship exercise tests coordination and rules of engagement under pressure. A misread could cause real damage. You must set clear objectives and keep competition from turning hazardous.",
+      "answers": [
+        {
+          "text": "Pair units into mixed teams with strict ROE and safeties; run time\u2011boxed problems, then hot\u2011wash with metrics and corrective actions.",
+          "score": 9,
+          "type": "best",
+          "details": "Builds interoperability and captures lessons without real risk."
+        },
+        {
+          "text": "Split the force and conduct a flanking maneuver competition.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Encourages initiative but can devolve into showboating."
+        },
+        {
+          "text": "Keep the squadron tightly grouped under one lead for simplicity.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Safe, yet teaches little about decentralized decision\u2011making."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Crew Morale Crisis",
+      "summary": "Two divisions aboard your ship have fallen into open friction after an extended patrol. Sickbay reports rising fatigue, and performance metrics show spikes in errors. You must restore cohesion without undermining departmental authority, while keeping the mission on schedule.",
+      "answers": [
+        {
+          "text": "Meet with both department heads, review Sickbay\u2019s fatigue/error data, and have them co\u2011author a unified duty rotation and morale plan with weekly mixed\u2011team tasks.",
+          "score": 9,
+          "type": "best",
+          "details": "Restores cohesion through leadership and shared ownership, protecting tempo without bypassing the chain of command."
+        },
+        {
+          "text": "Run a supervised mixed\u2011division drill under the XO to force coordination and surface frictions in a controlled setting.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Builds cooperation under pressure, but public mistakes can harden resentments if overused."
+        },
+        {
+          "text": "Lighten duty for two rotations and expand holodeck/recreation time to bleed off stress before resuming full tempo.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Eases strain quickly but risks signaling that operational pressure, not leadership, solves conflict."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Containment Emergency",
+      "summary": "The warp core shows rising variance after a coolant fault. Evacuation is possible but would strand a relief mission. You must stabilize the core or order a separation before limits are exceeded.",
+      "answers": [
+        {
+          "text": "Initiate reactor SCRAM, vent plasma, shunt to auxiliary containment, and prep core ejection if thresholds don\u2019t normalize on the countdown.",
+          "score": 9,
+          "type": "best",
+          "details": "Prioritizes ship survival with staged, reversible steps."
+        },
+        {
+          "text": "Overpower the magnetic bottle to hold the reaction in place.",
+          "score": 8,
+          "type": "alternate",
+          "details": "May stabilize briefly but risks catastrophic failure if it slips."
+        },
+        {
+          "text": "Send a repair team into the compartment to patch coils on the fly.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Brave, but exposes crew to lethal risk during instability."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Tight-Quarters Docking",
+      "summary": "You are presented with a complex command dilemma that requires balancing mission, law, crew safety, and Federation ideals. Your decision will shape outcomes beyond the immediate tactical picture.",
+      "answers": [
+        {
+          "text": "Hand\u2011dock at thruster speeds using tugs on standby and external cams; suspend non\u2011essential traffic until secured.",
+          "score": 9,
+          "type": "best",
+          "details": "Gives maximum control and margin in a constricted bay."
+        },
+        {
+          "text": "Let the autopilot handle docking while crew monitors.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Efficient, but brittle if the environment is atypical."
+        },
+        {
+          "text": "Request full tug control and ride the tractors in.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Safest, but relinquishes shiphandling practice."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Planetary Impact Interdiction",
+      "summary": "Long\u2011period objects on a collision vector threaten a colony world. Deflection windows are narrow and local politics are heated. You must coordinate a planetary defense quickly and lawfully.",
+      "answers": [
+        {
+          "text": "Task Engineering and Science to compute a deflection window; use tractors/deflector pusher burns on the lead body while civilian craft handle fragments.",
+          "score": 9,
+          "type": "best",
+          "details": "Balances precision and speed, reducing debris risk to the surface."
+        },
+        {
+          "text": "Request starbase support and wait for heavier craft before attempting deflection.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Adds capability but may miss the critical window."
+        },
+        {
+          "text": "Detonate torpedoes to fragment the object and hope dispersion suffices.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Fast, but multiplies debris if calculations are off."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Neutral Zone Rescue Dilemma",
+      "summary": "Multiple distress beacons activate in the same sector with limited rescue capacity. You must establish priorities that save the most lives while preserving the ship\u2019s ability to continue operations.",
+      "answers": [
+        {
+          "text": "Launch probes and buoy beacons, coordinate both sides to move casualties just outside the line, then render aid without crossing.",
+          "score": 9,
+          "type": "best",
+          "details": "Saves lives while honoring treaty constraints."
+        },
+        {
+          "text": "Request a joint waiver to enter together under mutual observation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Legible and legal, but burns precious minutes."
+        },
+        {
+          "text": "Cross the line to begin rescue immediately and explain later.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Humanitarian, yet invites diplomatic crisis."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Intercept Risk Decision",
+      "summary": "A fast\u2011moving object plots a collision track with your ship. Intent is unclear. You must choose between evasive action, interception, or a posture that invites communication without inviting ramming.",
+      "answers": [
+        {
+          "text": "Adjust vector for a safe closest\u2011approach, drop to yellow alert, and hail on guard to coordinate crossing with the freighter\u2019s helm.",
+          "score": 9,
+          "type": "best",
+          "details": "Defuses risk early while staying predictable."
+        },
+        {
+          "text": "Perform a full stop until the freighter passes.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Zero risk of crossing, moderate schedule impact."
+        },
+        {
+          "text": "Maintain course and request the freighter alter theirs.",
+          "score": 7,
+          "type": "alternate",
+          "details": "May be read as inflexible if they\u2019re already committed."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Nebula Transit Decision",
+      "summary": "A nebula shortcut promises a faster arrival but will degrade sensors and shields. You must decide whether the risk to navigation and readiness outweighs the schedule benefit.",
+      "answers": [
+        {
+          "text": "Route around the nebula entirely and avoid sensor blackout and static discharges.",
+          "score": 9,
+          "type": "best",
+          "details": "Eliminates a known hazard with predictable timing."
+        },
+        {
+          "text": "Send a probe ahead to chart a narrow corridor, then consider transit.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Balances caution with progress."
+        },
+        {
+          "text": "Skim the edge at low impulse with shields up and active pings.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Doable, but invites static hits and poor visibility."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Medical Protest and Relief Authority",
+      "summary": "Your chief medical officer formally protests a planned operation as medically unsafe for part of the crew. Regulations empower medical to relieve command with evidence. You must weigh mission urgency against medical authority and crew welfare.",
+      "answers": [
+        {
+          "text": "Convene CMO and Ops, adjust the mission plan to the CMO\u2019s medical limits, and publish clear go/no\u2011go physiological thresholds to the bridge.",
+          "score": 9,
+          "type": "best",
+          "details": "Centers medical expertise while preserving tempo with transparent risk gates."
+        },
+        {
+          "text": "Halt operations to adopt the CMO\u2019s most conservative posture until new supplies or staff arrive.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Safest medically, but high operational cost and morale impact."
+        },
+        {
+          "text": "Proceed at reduced tempo with expanded Sickbay monitoring and emergency teams staged.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Maintains progress, though risk accumulates if conditions worsen."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Multi\u2011Casualty Triage Priority",
+      "summary": "Multiple distress beacons activate in the same sector with limited rescue capacity. You must establish priorities that save the most lives while preserving the ship\u2019s ability to continue operations.",
+      "answers": [
+        {
+          "text": "Split assets: stage transporter triage, dispatch shuttle/Runabout support, and allocate care by greatest lives\u2011saved while coordinating with local SAR.",
+          "score": 9,
+          "type": "best",
+          "details": "Maximizes survival and aligns with Starfleet humanitarian doctrine."
+        },
+        {
+          "text": "Prioritize the Federation vessel first, then swing to remaining casualties.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Simplifies choices but can cost more lives overall."
+        },
+        {
+          "text": "Prioritize allied personnel to preserve the partnership and return later for others.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Supports alliance optics, potentially at humanitarian expense."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Gravity Shear Corridor",
+      "summary": "A corridor of gravity shear splits your route. Transit would save days but stresses the hull. You must balance engineering limits against mission urgency.",
+      "answers": [
+        {
+          "text": "Launch a probe to map shear intensity and lanes, then choose pass/avoid based on the return.",
+          "score": 9,
+          "type": "best",
+          "details": "Measures risk before committing crew and hull."
+        },
+        {
+          "text": "Go around the corridor and add distance to the route.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Avoids hazard, costs time."
+        },
+        {
+          "text": "Hold position and wait for the shear to subside.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Safer later, but uncertain delay."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Cadet Disobedience Hearing",
+      "summary": "During a live drill, a cadet disobeys a direct order citing a perceived safety issue. The drill\u2019s timeline and the chain of command were clear. You must respond in a way that enforces discipline while developing future officers.",
+      "answers": [
+        {
+          "text": "Hold a private debrief with the cadet and instructor, capture the safety rationale, and rerun the drill with the cadet helping refine the plan and comms triggers.",
+          "score": 9,
+          "type": "best",
+          "details": "Protects authority while mentoring judgment; the rerun validates process and restores trust."
+        },
+        {
+          "text": "Issue a formal note of correction and repeat the drill without changes to reaffirm procedure.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Reasserts protocol, but misses a chance to learn from a valid safety concern."
+        },
+        {
+          "text": "Praise the cadet publicly for caution and suspend further drills pending review.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Boosts rapport, yet undercuts command unity and training cadence."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Phantom Contacts Investigation",
+      "summary": "Transient contacts appear at the edge of sensor range near restricted space. Crew tension rises as reports conflict. You must separate signal from noise without handing an adversary an excuse to escalate.",
+      "answers": [
+        {
+          "text": "Run diagnostics and re\u2011calibrate sensor pallets; compare with border station feeds while holding course.",
+          "score": 9,
+          "type": "best",
+          "details": "Discriminates spoofing/noise from real targets without overreacting."
+        },
+        {
+          "text": "Alter course away from the returns until the picture clears.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Cautious, but delays the mission."
+        },
+        {
+          "text": "Arm torpedoes and power phasers while you sort it out.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Protective, yet escalatory if someone\u2019s watching."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    },
+    {
+      "scenario": "Unscheduled Contact Dilemma",
+      "summary": "An unexpected interaction with a near\u2011warp culture follows a reconnaissance mishap. Any move could shape that world\u2019s development. You must extract your people and contain exposure\u2014or deliver a measured introduction.",
+      "answers": [
+        {
+          "text": "Transmit the standard Federation greeting on open bands, acknowledge presence, and invite controlled dialogue while keeping away teams aboard.",
+          "score": 9,
+          "type": "best",
+          "details": "Respects autonomy and minimizes cultural contamination risk."
+        },
+        {
+          "text": "Hold station silently and wait to be hailed first.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Non\u2011provocative, yet can be read as standoffish or suspicious."
+        },
+        {
+          "text": "Dispatch an away team to make direct contact planetside.",
+          "score": 6,
+          "type": "alternate",
+          "details": "Proactive but risks Prime Directive violations."
+        },
+        {
+          "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+        },
+        {
+          "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Abdicating responsibility contradicts the essence of command and jeopardizes mission integrity."
+        }
+      ]
+    }
+  ]
+}
