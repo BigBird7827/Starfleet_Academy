@@ -19,8 +19,6 @@ color:var(--gold);
 min-height:100vh;
 text-align:center;
 }
-
-/* translucent layer for readability */
 body::before{
 content:"";
 position:absolute;
@@ -30,11 +28,21 @@ background:rgba(0,0,0,0.75);
 z-index:0;
 }
 .page-title{
-margin-top:60px;margin-bottom:30px;
+margin-top:60px;margin-bottom:20px;
 font-family:'Orbitron',sans-serif;
 font-size:42pt;color:var(--gold);
 text-align:center;
 position:relative;z-index:1;
+}
+.welcome-text{
+max-width:900px;
+margin:0 auto 40px auto;
+padding:0 20px;
+font-size:14pt;
+line-height:1.6em;
+color:#fff;
+position:relative;
+z-index:1;
 }
 .container{
 background:rgba(0,0,0,0.85);
@@ -72,6 +80,14 @@ border-radius:8px;color:#fff;font-size:14pt;
 <!-- MAIN MENU -->
 <div id="mainScreen">
   <div class="page-title">Welcome to Starfleet Academy</div>
+  <div class="welcome-text">
+    Welcome, Cadet — and congratulations. Few are chosen to stand where you stand now.<br><br>
+    Starfleet Academy is where the Federation’s future officers are shaped. Here, among peers from worlds across known space, you will be challenged to think critically, act decisively, and serve with integrity. The Academy is not merely a place of study — it is a proving ground where intellect, discipline, and character are tested every day.<br><br>
+    You will explore the principles of command, the responsibilities of discovery, and the ethics of leadership. You will learn not only how to navigate the stars, but how to uphold the ideals of the United Federation of Planets.<br><br>
+    The path ahead will demand your best. But when you graduate, you will be ready to carry the Federation’s banner into the unknown.<br><br>
+    Welcome to Starfleet Academy — your first step toward the stars.<br>
+    <strong>Ex Astris, Scientia.</strong>
+  </div>
   <div class="container">
     <p style="font-size:18pt;">Select your training path:</p>
     <button id="enterTraining">Enter Training</button>
