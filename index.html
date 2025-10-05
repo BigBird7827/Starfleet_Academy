@@ -52,7 +52,6 @@
       height: 50px;
       background: var(--gold);
       border-bottom-left-radius: 50px;
-      border-bottom-right-radius: 0;
     }
 
     .lcars-bottom {
@@ -111,7 +110,7 @@
     button {
       width: 100%;
       padding: 12px;
-      background: var(--blue);
+      background: linear-gradient(to bottom, #002e66, #001933);
       border: 2px solid var(--gold);
       border-radius: 8px;
       color: var(--gold);
@@ -119,12 +118,13 @@
       font-size: 18pt;
       text-transform: uppercase;
       cursor: pointer;
-      transition: 0.3s ease;
+      box-shadow: inset 0 2px 5px rgba(255,255,255,0.2), 0 5px 10px rgba(0,0,0,0.8);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     button:hover {
-      background: var(--dark-blue);
-      box-shadow: 0 0 20px var(--gold);
+      transform: scale(1.03);
+      box-shadow: inset 0 2px 5px rgba(255,255,255,0.3), 0 10px 20px rgba(0,0,0,1);
     }
 
     #accessMessage {
@@ -149,48 +149,6 @@
 
     .corner-left { left: 10px; }
     .corner-right { right: 10px; }
-
-    .training-title {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 28pt;
-      margin-bottom: 10px;
-      text-align: center;
-      color: gold;
-    }
-
-    .training-section {
-      margin-bottom: 25px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #444;
-    }
-
-    .training-section h3 {
-      font-size: 15pt;
-      margin-bottom: 10px;
-      color: var(--gold);
-    }
-
-    .training-section p {
-      font-size: 14pt;
-      line-height: 1.6em;
-      margin: 0 0 10px 0;
-      color: #fff;
-    }
-
-    .answers {
-      margin-left: 20px;
-    }
-
-    .answer-block {
-      margin-bottom: 15px;
-      padding: 10px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 8px;
-    }
-
-    .answer-block strong {
-      color: #00ffcc;
-    }
 
     .fixed-return {
       position: fixed;
@@ -290,27 +248,25 @@
       <p id="accessMessage">Access Granted</p>
     </div>
   </div>
-  <div id="mainScreen" style="display:none;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-    <div class="page-title">Welcome to Starfleet Academy</div>
-    <div id="mainWelcome"></div>
-    <div class="container" style="text-align:center;">
-      <p>
+  <div id="mainScreen" style="display:none;display:flex;justify-content:center;align-items:center;height:100vh;">
+    <div class="container" style="background:#000;border:2px solid var(--gold);box-shadow:0 0 20px var(--blue);text-align:center;max-width:700px;">
+      <div class="page-title">Welcome to Starfleet Academy</div>
+      <div id="mainWelcome" style="color:var(--gold);font-size:18pt;margin-bottom:20px;"></div>
+      <p style="font-size:14pt;color:#fff;margin-bottom:20px;">
         Congratulations, Cadet. You have been accepted into Starfleet Academy,
         where the finest minds of the Federation prepare to serve in the vast
         frontier of space. Here, you will learn the disciplines of command,
         diplomacy, science, engineering, medicine, and security — each a vital
         pillar in the exploration and defense of the Federation.
       </p>
-      <p>
+      <p style="font-size:14pt;color:#fff;margin-bottom:40px;">
         Choose your path and begin your training or participate in interactive
         labs and exams to test your readiness for active duty.
       </p>
-      <div style="margin-top:30px;">
-        <button id="trainingBtn" style="width:45%;font-size:18pt;">Training</button>
-        <button id="labBtn" style="width:45%;font-size:18pt;">Labs</button>
-        <button id="examBtn" style="width:45%;font-size:18pt;">Exams</button>
+      <div style="display:flex;justify-content:center;gap:25px;flex-wrap:wrap;">
+        <button id="trainingBtn" style="width:200px;font-size:16pt;">Training</button>
+        <button id="labBtn" style="width:200px;font-size:16pt;">Labs</button>
+        <button id="examBtn" style="width:200px;font-size:16pt;">Exams</button>
       </div>
     </div>
   </div>
@@ -373,7 +329,7 @@
       setTimeout(() => {
         document.getElementById("loginScreen").style.display = "none";
         document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
-        document.getElementById("mainScreen").style.display = "block";
+        document.getElementById("mainScreen").style.display = "flex";
       }, 5000);
     });
   </script>
