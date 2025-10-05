@@ -14,13 +14,10 @@ font-family:'Roboto',sans-serif;
 background-color:#000;
 color:var(--gold);
 min-height:100vh;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
+text-align:center;
 }
 .page-title{
-margin-bottom:30px;
+margin-top:60px;margin-bottom:30px;
 font-family:'Orbitron',sans-serif;
 font-size:42pt;color:gold;text-align:center;
 }
@@ -44,15 +41,7 @@ border-radius:8px;
 padding:12px 20px;font-size:16pt;margin:10px;
 }
 button:hover{background:linear-gradient(to bottom,#2a5298,#111);transform:translateY(-2px);}
-#mainScreen,#orientationPage,#trainingPage,#labPage {
-  display: none;
-}
-.active {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+#orientationPage,#trainingPage,#labPage{display:none;}
 .feedback{
 margin-top:15px;
 padding:15px;
@@ -66,31 +55,35 @@ font-size:14pt;
 </style>
 </head>
 <body>
-<div id="mainScreen" class="active">
-<div class="page-title">Welcome to Starfleet Academy</div>
-<div class="container">
-<p style="font-size:18pt;">Select your training path:</p>
-<button id="enterTraining">Enter Training</button>
-<button id="enterLab">Enter Lab</button>
-</div>
+<!-- MAIN MENU -->
+<div id="mainScreen">
+  <div class="page-title">Welcome to Starfleet Academy</div>
+  <div class="container">
+    <p style="font-size:18pt;">Select your training path:</p>
+    <button id="enterTraining">Enter Training</button>
+    <button id="enterLab">Enter Lab</button>
+  </div>
 </div>
 
+<!-- ORIENTATION -->
 <div id="orientationPage">
-<div class="page-title" id="orientationTitle"></div>
-<div class="container" id="moduleButtons"></div>
-<button class="return-btn" id="returnMain">Return to Main</button>
+  <div class="page-title" id="orientationTitle"></div>
+  <div class="container" id="moduleButtons"></div>
+  <button class="return-btn" id="returnMain">Return to Main</button>
 </div>
 
+<!-- TRAINING -->
 <div id="trainingPage">
-<div class="page-title" id="trainingDeptTitle"></div>
-<div class="container" id="trainingContent"></div>
-<button class="return-btn" id="returnOrientation1">Back to Departments</button>
+  <div class="page-title" id="trainingDeptTitle"></div>
+  <div class="container" id="trainingContent"></div>
+  <button class="return-btn" id="returnOrientation1">Back to Departments</button>
 </div>
 
+<!-- LAB -->
 <div id="labPage">
-<div class="page-title" id="labDeptTitle"></div>
-<div class="container" id="labContent"></div>
-<button class="return-btn" id="returnOrientation2">Back to Departments</button>
+  <div class="page-title" id="labDeptTitle"></div>
+  <div class="container" id="labContent"></div>
+  <button class="return-btn" id="returnOrientation2">Back to Departments</button>
 </div>
 
 <script>
@@ -116,8 +109,8 @@ document.getElementById("enterTraining").onclick=()=>{currentMode="training";sho
 document.getElementById("enterLab").onclick=()=>{currentMode="lab";showOrientation();};
 
 function showOrientation(){
-document.getElementById("mainScreen").classList.remove("active");
-document.getElementById("orientationPage").classList.add("active");
+document.getElementById("mainScreen").style.display="none";
+document.getElementById("orientationPage").style.display="block";
 document.getElementById("orientationTitle").textContent=currentMode==="training"?"Select a Department for Training":"Select a Department for Lab";
 const btnBox=document.getElementById("moduleButtons");
 btnBox.innerHTML="";
@@ -131,8 +124,8 @@ btnBox.appendChild(b);
 }
 
 function loadTraining(dept){
-document.getElementById("orientationPage").classList.remove("active");
-document.getElementById("trainingPage").classList.add("active");
+document.getElementById("orientationPage").style.display="none";
+document.getElementById("trainingPage").style.display="block";
 document.getElementById("trainingDeptTitle").textContent=`${dept} Training`;
 fetch(trainingFiles[dept])
 .then(r=>r.json())
@@ -155,8 +148,8 @@ content.appendChild(section);
 }
 
 function loadLab(dept){
-document.getElementById("orientationPage").classList.remove("active");
-document.getElementById("labPage").classList.add("active");
+document.getElementById("orientationPage").style.display="none";
+document.getElementById("labPage").style.display="block";
 document.getElementById("labDeptTitle").textContent=`${dept} Lab`;
 fetch(labFiles[dept])
 .then(r=>r.json())
@@ -207,16 +200,18 @@ content.appendChild(nextBtn);
 }
 
 document.getElementById("returnMain").onclick=()=>{
-document.querySelectorAll("div").forEach(d=>d.classList.remove("active"));
-document.getElementById("mainScreen").classList.add("active");
+document.getElementById("trainingPage").style.display="none";
+document.getElementById("labPage").style.display="none";
+document.getElementById("orientationPage").style.display="none";
+document.getElementById("mainScreen").style.display="block";
 };
 document.getElementById("returnOrientation1").onclick=()=>{
-document.getElementById("trainingPage").classList.remove("active");
-document.getElementById("orientationPage").classList.add("active");
+document.getElementById("trainingPage").style.display="none";
+document.getElementById("orientationPage").style.display="block";
 };
 document.getElementById("returnOrientation2").onclick=()=>{
-document.getElementById("labPage").classList.remove("active");
-document.getElementById("orientationPage").classList.add("active");
+document.getElementById("labPage").style.display="none";
+document.getElementById("orientationPage").style.display="block";
 };
 </script>
 </body>
