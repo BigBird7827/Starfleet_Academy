@@ -1,0 +1,869 @@
+{
+  "department": "Engineering",
+  "study": [
+    {
+      "scenario": "Warp Core Plasma Fluctuation",
+      "summary": "During a training simulation, a warp core begins showing minor plasma instability, threatening system integrity.",
+      "answers": [
+        {
+          "text": "Engage intermix calibration and verify magnetic constrictor fields before correcting plasma flow.",
+          "score": 9,
+          "type": "best",
+          "details": "Follows full safety protocols and ensures containment integrity, demonstrating complete technical mastery."
+        },
+        {
+          "text": "Reduce warp power slightly while monitoring plasma flow to stabilize the core gradually.",
+          "score": 8,
+          "type": "alternate",
+          "details": "A careful, technically sound approach that maintains system safety but is slower and less precise than full calibration."
+        },
+        {
+          "text": "Continue normal operations and rely on automated safety protocols.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Allows the situation to stabilize without direct intervention; safe but not proactive."
+        }
+      ]
+    },
+    {
+      "scenario": "EPS Conduit Surge",
+      "summary": "A power surge in an EPS conduit threatens to overload secondary systems.",
+      "answers": [
+        {
+          "text": "Isolate the affected conduit and reroute power through auxiliary grids.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents damage and protects critical systems, fully aligning with Starfleet engineering best practices."
+        },
+        {
+          "text": "Divert excess power to noncritical systems to relieve the surge while maintaining main grid function.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains operational safety and reduces immediate risk, but slower and less comprehensive than full isolation."
+        },
+        {
+          "text": "Apply temporary magnetic constriction to stabilize plasma flow.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Technically competent; buys time for intervention but doesn’t fully address the root cause."
+        }
+      ]
+    },
+    {
+      "scenario": "Transporter Pattern Instability",
+      "summary": "A repeated test transport shows slight pattern drift in the buffer system.",
+      "answers": [
+        {
+          "text": "Purge the buffer and recalibrate phase compensators before the next transport.",
+          "score": 9,
+          "type": "best",
+          "details": "Ensures crew safety and aligns with Starfleet zero-loss transport policy."
+        },
+        {
+          "text": "Monitor pattern drift while keeping the buffer active to collect data.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Acceptable and safe; allows analysis but does not immediately correct the drift, so slightly less effective."
+        },
+        {
+          "text": "Ignore minor drift and continue test transports.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe for non-living test matter but passive; less proactive than monitoring."
+        }
+      ]
+    },
+    {
+      "scenario": "Structural Integrity Field Fluctuation",
+      "summary": "SIF readings fluctuate during simulated high-stress warp maneuvers.",
+      "answers": [
+        {
+          "text": "Reroute EPS to stabilize SIF generators and adjust inertial dampeners.",
+          "score": 9,
+          "type": "best",
+          "details": "Maintains hull stability and crew safety; textbook Starfleet response."
+        },
+        {
+          "text": "Reduce speed to allow automated SIF stabilization routines to catch up.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Prevents damage and preserves systems but slows simulation progress; a competent but slower solution."
+        },
+        {
+          "text": "Maintain speed and rely entirely on automation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "System might correct itself, but this leaves risk unmitigated; less proactive."
+        }
+      ]
+    },
+    {
+      "scenario": "Atmospheric Processor Malfunction",
+      "summary": "Carbon dioxide levels rise in a cadet simulator compartment due to a processor fault.",
+      "answers": [
+        {
+          "text": "Activate emergency override, isolate the compartment, and flush scrubbers.",
+          "score": 9,
+          "type": "best",
+          "details": "Ensures immediate breathable air and demonstrates responsible engineering leadership."
+        },
+        {
+          "text": "Redirect airflow from adjacent compartments to dilute CO2 until repair is executed.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Effectively reduces hazard while repair preparations are made; competent and safe but slower than a direct override."
+        },
+        {
+          "text": "Shut down processor and wait for instructor guidance.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe approach but passive; does not actively resolve the hazard."
+        }
+      ]
+    },
+    {
+      "scenario": "Warp Field Asymmetry",
+      "summary": "A training vessel experiences asymmetric warp-field collapse during a maneuver.",
+      "answers": [
+        {
+          "text": "Remodulate field coils to restore phase symmetry.",
+          "score": 9,
+          "type": "best",
+          "details": "Corrects the warp field safely and efficiently; standard Starfleet procedure."
+        },
+        {
+          "text": "Drop to impulse and cycle warp systems to recalibrate.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Safe and methodical; reduces risk though slower than active remodulation."
+        },
+        {
+          "text": "Ignore the asymmetry and continue warp.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Relies on luck; not proactive, making it less optimal."
+        }
+      ]
+    },
+    {
+      "scenario": "Deflector Phase Shift",
+      "summary": "Deflector emitters drift off frequency after micrometeoroid impacts.",
+      "answers": [
+        {
+          "text": "Scan harmonics, retune emitters, and cycle backups.",
+          "score": 9,
+          "type": "best",
+          "details": "Maintains navigational and shield integrity; textbook Starfleet response."
+        },
+        {
+          "text": "Engage secondary emitters to cover gaps while tuning continues.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Provides coverage and maintains safety; slower than full retuning but competent."
+        },
+        {
+          "text": "Disable emitters to reduce power drain.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe but reduces full protection capability; less effective than previous two options."
+        }
+      ]
+    },
+    {
+      "scenario": "Antimatter Pod Alarm",
+      "summary": "Containment fields drop slightly below nominal on an antimatter pod.",
+      "answers": [
+        {
+          "text": "Reinforce containment and vent through auxiliary systems.",
+          "score": 9,
+          "type": "best",
+          "details": "Highest safety priority; stabilizes pod and protects the ship."
+        },
+        {
+          "text": "Switch to redundant containment systems to stabilize temporarily.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent measure; keeps the pod safe but slower than full emergency venting."
+        },
+        {
+          "text": "Monitor fluctuations without immediate action.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Acceptable short-term for minor deviations; less proactive than containment measures."
+        }
+      ]
+    },
+    {
+      "scenario": "Holodeck Feedback Surge",
+      "summary": "Holodeck energy surge draws from shield reserves.",
+      "answers": [
+        {
+          "text": "Isolate holodeck power and shunt feedback to auxiliary capacitors.",
+          "score": 9,
+          "type": "best",
+          "details": "Protects systems and crew; optimal Starfleet action."
+        },
+        {
+          "text": "Temporarily disable nonessential holodeck subsystems to reduce feedback.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent and safe, mitigates risk while allowing controlled response; slower than full isolation."
+        },
+        {
+          "text": "Divert power to shields to counter drain.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Effective but does not solve root problem; less efficient."
+        }
+      ]
+    },
+{
+        "scenario": "Replicator Contamination",
+      "summary": "Routine quality control finds trace deuterium imbalance in replicated rations.",
+      "answers": [
+        {
+          "text": "Purge the matter-stream filters and recalibrate molecular stabilizers.",
+          "score": 9,
+          "type": "best",
+          "details": "Ensures crew health and demonstrates ethical responsibility consistent with Federation sanitation protocols."
+        },
+        {
+          "text": "Run an immediate sterilization cycle to minimize contamination risk until full recalibration can be performed.",
+          "score": 8,
+          "type": "alternate",
+          "details": "A responsible and proactive step that mitigates short-term risk, though it doesn’t permanently fix the imbalance. Reflects strong awareness of safety standards."
+        },
+        {
+          "text": "Continue use; imbalance is within safe limits.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe for minor deviations but less effective than immediate intervention; a conservative but acceptable choice."
+        }
+      ]
+    },
+    {
+      "scenario": "Transporter Power Loss",
+      "summary": "A planetary evacuation is underway when a power fluctuation knocks out one of the transporter emitters.",
+      "answers": [
+        {
+          "text": "Reroute power from secondary systems to restore the emitter and confirm pattern integrity before resuming transport.",
+          "score": 9,
+          "type": "best",
+          "details": "Prioritizes lives while maintaining transporter safety margins—the Federation standard."
+        },
+        {
+          "text": "Bring up backup emitters and temporarily split transport loads between them.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains operational continuity with a slight delay; safe and competent but slower than primary restoration."
+        },
+        {
+          "text": "Attempt manual energize sequence without full diagnostics.",
+          "score": 7,
+          "type": "alternate",
+          "details": "A controlled attempt under supervision, less optimal than proper power rerouting but still preserves some functionality."
+        }
+      ]
+    },
+    {
+      "scenario": "Impulse Manifold Leak",
+      "summary": "During docking maneuvers, plasma levels in the impulse manifold rise beyond safety thresholds.",
+      "answers": [
+        {
+          "text": "Isolate the leaking manifold and reroute power through auxiliary impulse regulators.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents plasma fire and preserves thrust control—precisely the response taught in Starfleet Engineering 302."
+        },
+        {
+          "text": "Increase coolant flow to manage temperature until repair crews can act.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Reduces immediate risk and buys time; safe and competent but slower and less decisive than full isolation."
+        },
+        {
+          "text": "Ignore the alert until after docking sequence completes.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Minimal intervention; tolerable if other safeguards are active, but not optimal for rapid containment."
+        }
+      ]
+    },
+    {
+      "scenario": "Subspace Field Contamination",
+      "summary": "An experimental warp coil test leaves residual subspace eddies affecting communications.",
+      "answers": [
+        {
+          "text": "Stabilize the area with counter-frequency pulses to collapse the eddies.",
+          "score": 9,
+          "type": "best",
+          "details": "Shows understanding of subspace harmonics and Starfleet’s environmental responsibility."
+        },
+        {
+          "text": "Deploy temporary dampening fields while mapping eddy effects.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains communications integrity and collects data for analysis; competent but less immediate than direct pulse stabilization."
+        },
+        {
+          "text": "Allow eddies to dissipate naturally while monitoring systems.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe, low-intervention approach; does not accelerate correction but preserves operational stability."
+        }
+      ]
+    },
+    {
+      "scenario": "Power Relay Cascade Failure",
+      "summary": "A damaged relay junction threatens a cascading power loss across multiple decks.",
+      "answers": [
+        {
+          "text": "Initiate sectional power isolation and reroute through undamaged relays.",
+          "score": 9,
+          "type": "best",
+          "details": "Efficient and prevents catastrophic grid collapse—fundamental Starfleet engineering discipline."
+        },
+        {
+          "text": "Manually engage local backup circuits to stabilize critical systems while isolation proceeds.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Mitigates risk and maintains essential operations; less optimal than full rerouting but technically sound."
+        },
+        {
+          "text": "Cut main power entirely to halt cascade.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Stops propagation but sacrifices operational continuity; safe but less effective overall."
+        }
+      ]
+    },
+    {
+      "scenario": "Deuterium Flow Obstruction",
+      "summary": "During preflight checks, the deuterium injector feed shows inconsistent pressure readings.",
+      "answers": [
+        {
+          "text": "Purge the injector assembly and perform manual pressure equalization.",
+          "score": 9,
+          "type": "best",
+          "details": "Corrects flow irregularity at the source; adheres to Starfleet procedural thoroughness."
+        },
+        {
+          "text": "Monitor pressure while gradually adjusting injector pulses to compensate.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent and controlled approach; mitigates risk while preparing for permanent adjustment, though slower than full purge."
+        },
+        {
+          "text": "Proceed to launch; minor fluctuations are within margin.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Acceptable under supervision for small deviations; not optimal but preserves schedule."
+        }
+      ]
+    },
+    {
+      "scenario": "Auxiliary Generator Instability",
+      "summary": "While offline for maintenance, the ship’s auxiliary generator begins oscillating at irregular frequencies.",
+      "answers": [
+        {
+          "text": "Disengage the generator, recalibrate harmonic dampers, and run a controlled restart.",
+          "score": 9,
+          "type": "best",
+          "details": "Applies proper shutdown and calibration techniques; shows mastery of energy-field dynamics."
+        },
+        {
+          "text": "Reduce load on the generator and monitor output while preparing full recalibration.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains generator safety and reduces risk; competent but less proactive than full recalibration."
+        },
+        {
+          "text": "Ignore minor oscillations and proceed with main power checks.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe if limited, but slower to respond and less optimal for long-term stability."
+        }
+      ]
+    },
+    {
+      "scenario": "Computer Core Coolant Leak",
+      "summary": "A microfracture in the isolinear core coolant system threatens to raise CPU temperature beyond tolerance.",
+      "answers": [
+        {
+          "text": "Isolate the damaged conduit, reroute cooling loops, and purge the leak area.",
+          "score": 9,
+          "type": "best",
+          "details": "Maintains data integrity and prevents hardware damage—standard Starfleet response."
+        },
+        {
+          "text": "Divert partial coolant flow and monitor core temperature while preparing repair procedures.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Controlled and safe mitigation; reduces immediate risk though slower than full isolation."
+        },
+        {
+          "text": "Lower processing priority to limit heat buildup.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Reduces stress temporarily but does not fully address the leak; safe but suboptimal."
+        }
+      ]
+    },
+    {
+      "scenario": "Sensor Array Phase Drift",
+      "summary": "A starship’s long-range sensor array displays phase-shifted readings inconsistent with known stellar data.",
+      "answers": [
+        {
+          "text": "Realign array emitters and recalibrate subspace harmonics.",
+          "score": 9,
+          "type": "best",
+          "details": "Restores sensor accuracy and demonstrates comprehension of subspace phase theory."
+        },
+        {
+          "text": "Cross-check with navigational beacons and adjust readings while recalibrating offline.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains operational integrity while preparing proper correction; competent but slightly slower."
+        },
+        {
+          "text": "Ignore minor deviations; data is within tolerances.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Acceptable short-term; maintains function but less proactive than calibration."
+       }
+      ]
+    },
+        {
+      "scenario": "Transporter Pattern Interference from Solar Radiation",
+      "summary": "High solar radiation levels cause pattern instability during personnel beam-down.",
+      "answers": [
+        {
+          "text": "Reinforce the annular confinement beam and adjust for solar flux before transport.",
+          "score": 9,
+          "type": "best",
+          "details": "Reflects proper risk management and technical competence; ensures crew safety."
+        },
+        {
+          "text": "Proceed with transport using additional power to strengthen pattern lock.",
+          "score": 8,
+          "type": "alternate",
+          "details": "A competent adjustment under pressure; slightly slower and less controlled than full reinforcement."
+        },
+        {
+          "text": "Delay transport operations until radiation subsides.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe choice that prioritizes crew survival; effective but less proactive."
+        }
+      ]
+    },
+    {
+      "scenario": "Main Deflector Phase Distortion",
+      "summary": "Subspace lensing effects distort the main deflector field during a long-range tachyon sweep.",
+      "answers": [
+        {
+          "text": "Modulate deflector harmonics to compensate for subspace interference.",
+          "score": 9,
+          "type": "best",
+          "details": "Shows applied understanding of field mechanics and precision calibration."
+        },
+        {
+          "text": "Increase power to the deflector array to punch through the interference.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent attempt to maintain performance; less optimal due to potential long-term wear."
+        },
+        {
+          "text": "Suspend the sweep and retry after subspace settles.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe and cautious; avoids risk but delays data collection."
+        }
+      ]
+    },
+    {
+      "scenario": "Computer Virus in Engineering Subsystem",
+      "summary": "A foreign data signature infiltrates the ship’s engineering control subroutines.",
+      "answers": [
+        {
+          "text": "Isolate the engineering core network and purge affected subroutines from backup.",
+          "score": 9,
+          "type": "best",
+          "details": "Protects ship systems and aligns with Starfleet cybersecurity protocols."
+        },
+        {
+          "text": "Run a controlled diagnostic sweep while maintaining critical operations.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent containment while monitoring system health; slower than full isolation but safe."
+        },
+        {
+          "text": "Ignore the alert; likely a false positive.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Technically low-risk if accurate, but less proactive and not recommended."
+        }
+      ]
+    },
+    {
+      "scenario": "Warp Field Phase Inversion",
+      "summary": "An experimental warp field test inverts phase alignment, threatening subspace integrity.",
+      "answers": [
+        {
+          "text": "Terminate warp field generation and gradually collapse the subspace bubble.",
+          "score": 9,
+          "type": "best",
+          "details": "Safest and most precise method to restore normal-space integrity; aligns with Starfleet procedures."
+        },
+        {
+          "text": "Attempt to re-phase the field midflight under controlled monitoring.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent under supervision; slower and riskier than safe termination, but still effective."
+        },
+        {
+          "text": "Maintain warp power until inversion stabilizes naturally.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Passive approach; safe for short term but less proactive and less reliable."
+        }
+      ]
+    },
+    {
+      "scenario": "Fusion Reactor Overpressure Warning",
+      "summary": "A fusion reactor registers a sharp pressure spike in the magnetic containment chamber.",
+      "answers": [
+        {
+          "text": "Initiate immediate pressure venting and recalibrate containment fields.",
+          "score": 9,
+          "type": "best",
+          "details": "Demonstrates proper adherence to reactor safety code and calm response to rising pressure."
+        },
+        {
+          "text": "Reduce fuel injection rates gradually to ease chamber pressure while monitoring.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent mitigation; slower than immediate venting but still effective and safe."
+        },
+        {
+          "text": "Ignore transient spikes; rely on system stabilizers.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe if minor, but less proactive and potentially less reliable."
+        }
+      ]
+    },
+    {
+      "scenario": "Power Transfer Conduit Breach",
+      "summary": "A breach develops in a primary power conduit feeding warp nacelles, causing plasma venting.",
+      "answers": [
+        {
+          "text": "Isolate the conduit, vent plasma safely, and deploy field technicians for external repair.",
+          "score": 9,
+          "type": "best",
+          "details": "Prioritizes containment and safety while maintaining disciplined technical protocol."
+        },
+        {
+          "text": "Reroute power temporarily to compensate for lost conduit until repair is executed.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains operational function safely but slower than direct containment and repair."
+        },
+        {
+          "text": "Delay response until ship drops out of warp.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe in the short term but less proactive; slower containment of hazard."
+        }
+      ]
+    },
+    {
+      "scenario": "Environmental Control System Overload",
+      "summary": "Environmental systems overload after a coolant loop failure, raising temperatures throughout crew quarters.",
+      "answers": [
+        {
+          "text": "Divert power from secondary subsystems and reroute airflow through backup exchangers.",
+          "score": 9,
+          "type": "best",
+          "details": "Maintains habitability efficiently; precise and ethical prioritization of crew well-being."
+        },
+        {
+          "text": "Shut down non-critical life support to allow system cooldown.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent temporary mitigation; preserves equipment but slower than full reroute."
+        },
+        {
+          "text": "Ignore heat rise; tolerable levels don’t require immediate action.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Acceptable short-term; safe but less proactive than intervention."
+        }
+      ]
+    },
+    {
+      "scenario": "EPS Manifold Containment Seal Rupture",
+      "summary": "During warp flight, a containment seal ruptures on the EPS manifold, releasing plasma.",
+      "answers": [
+        {
+          "text": "Drop from warp, seal off manifold access, and activate internal suppression systems.",
+          "score": 9,
+          "type": "best",
+          "details": "Mitigates cascading failures decisively; follows plasma containment doctrine precisely."
+        },
+        {
+          "text": "Vent EPS flow into secondary containment while repairs are conducted.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains propulsion safely; less immediate than primary sealing but effective."
+        },
+        {
+          "text": "Ignore alarms and maintain warp field stability.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Minimal intervention; keeps ship operational but less safe and proactive."
+        }
+      ]
+    },
+    {
+      "scenario": "Warp Field Geometric Misalignment",
+      "summary": "Warp field becomes asymmetrical during a speed-change drill, threatening structural stress.",
+      "answers": [
+        {
+          "text": "Re-modulate field coils to restore phase symmetry before re-engaging warp.",
+          "score": 9,
+          "type": "best",
+          "details": "Standard corrective technique; upholds the principle of methodical calibration over brute force."
+        },
+        {
+          "text": "Drop to impulse and reboot the warp system from standby.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Safe and practical, though slower than an in-flight correction; still effective."
+        },
+        {
+          "text": "Ignore the warning and maintain warp until alignment stabilizes.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Technically possible but less proactive; relies on natural stabilization rather than active correction."
+        }
+      ]
+    },
+    {
+      "scenario": "Deflector Control Malfunction",
+      "summary": "Micrometeoroid impacts cause the navigational deflector to phase-shift off target frequency.",
+      "answers": [
+        {
+          "text": "Run a harmonic scan, re-tune the deflector emitters, and cycle through backup coils.",
+          "score": 9,
+          "type": "best",
+          "details": "Balances efficiency and safety; textbook Starfleet maintenance response."
+        },
+        {
+          "text": "Increase deflector power output by 200 percent to compensate.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Temporary adjustment; safer than ignoring issue, but less optimal than proper tuning."
+        },
+        {
+          "text": "Disable the deflector to prevent further drain on EPS power.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Mitigates power usage but leaves navigation partially unprotected; sub-optimal."
+        }
+      ]
+    },
+    {
+      "scenario": "Antimatter Containment Alarm",
+      "summary": "Containment field strength on an antimatter pod dips slightly below nominal.",
+      "answers": [
+        {
+          "text": "Engage emergency field reinforcement and initiate a controlled vent to auxiliary containment.",
+          "score": 9,
+          "type": "best",
+          "details": "Demonstrates composure and adherence to antimatter-handling regulations; prioritizes safety of ship and crew."
+        },
+        {
+          "text": "Shut down the magnetic bottle entirely to restart field coils safely.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Acceptable procedure under supervision; safe and controlled, though slightly slower than reinforcement."
+        },
+        {
+          "text": "Ignore minor fluctuations as instrumentation error.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe if minor, but does not actively mitigate the fluctuation; less optimal."
+        }
+      ]
+    },
+    {
+      "scenario": "Holodeck Power Feedback",
+      "summary": "Feedback surge from the holodeck’s energy grid begins drawing from the ship’s shield reserves.",
+      "answers": [
+        {
+          "text": "Isolate holodeck power couplings and shunt feedback to auxiliary capacitors.",
+          "score": 9,
+          "type": "best",
+          "details": "Protects both system integrity and crew safety; reflects Starfleet’s principle of containment over convenience."
+        },
+        {
+          "text": "Shut down the holodeck main emitter array immediately.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Stops the drain quickly; competent short-term mitigation though may risk data corruption."
+        },
+        {
+          "text": "Divert more power to shields to counter the drain.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Treats the symptom rather than the cause; less effective than isolating the source."
+        }
+      ]
+    },
+    {
+      "scenario": "Replicator Contamination",
+      "summary": "Routine quality control finds trace deuterium imbalance in replicated rations.",
+      "answers": [
+        {
+          "text": "Purge the matter-stream filters and recalibrate molecular stabilizers.",
+          "score": 9,
+          "type": "best",
+          "details": "Ensures crew health and demonstrates ethical responsibility consistent with Federation sanitation protocols."
+        },
+        {
+          "text": "Switch to emergency ration stores until repairs are scheduled.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Prudent temporary solution; maintains safety but does not address the underlying cause immediately."
+        },
+        {
+          "text": "Continue use; imbalance is within safe limits.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe in the short term but less proactive; underlying issue remains unresolved."
+        }
+      ]
+    },
+    {
+      "scenario": "Transporter Power Loss",
+      "summary": "A planetary evacuation is underway when a power fluctuation knocks out one of the transporter emitters.",
+      "answers": [
+        {
+          "text": "Reroute power from secondary systems to restore the emitter and confirm pattern integrity before resuming transport.",
+          "score": 9,
+          "type": "best",
+          "details": "Prioritizes lives while maintaining transporter safety margins—the Federation standard."
+        },
+        {
+          "text": "Bypass the failed emitter and continue transport with partial array capacity.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent workaround under stress; maintains function but slightly riskier than full reroute."
+        },
+        {
+          "text": "Attempt manual energize sequence without full diagnostics.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Technically feasible but less controlled; not the optimal mitigation."
+        }
+      ]
+    },
+    {
+      "scenario": "Impulse Manifold Leak",
+      "summary": "During docking maneuvers, plasma levels in the impulse manifold rise beyond safety thresholds.",
+      "answers": [
+        {
+          "text": "Isolate the leaking manifold and reroute power through auxiliary impulse regulators.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents plasma fire and preserves thrust control; aligns with Starfleet engineering best practices."
+        },
+        {
+          "text": "Increase coolant flow to absorb the excess heat.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Mitigates the symptom temporarily; effective but less comprehensive than isolation and reroute."
+        },
+        {
+          "text": "Ignore the alert until after docking sequence completes.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Safe only if monitored; less proactive approach and slower to resolve the hazard."
+        }
+      ]
+    },
+    {
+      "scenario": "Subspace Field Contamination",
+      "summary": "An experimental warp coil test leaves residual subspace eddies affecting communications.",
+      "answers": [
+        {
+          "text": "Stabilize the area with counter-frequency pulses to collapse the eddies.",
+          "score": 9,
+          "type": "best",
+          "details": "Shows understanding of subspace harmonics and Starfleet’s environmental responsibility."
+        },
+        {
+          "text": "Deploy warning buoys and allow the eddies to dissipate naturally.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Safe fallback; mitigates risk and preserves equipment while waiting for natural dissipation."
+        },
+        {
+          "text": "Attempt to counter the effect by boosting standard comm frequencies.",
+          "score": 7,
+          "type": "alternate",
+          "details": "May help temporarily but less effective than direct stabilization; lower reliability."
+        }
+      ]
+    },
+    {
+      "scenario": "Power Relay Cascade Failure",
+      "summary": "A damaged relay junction begins a cascade across multiple decks, threatening a full power loss.",
+      "answers": [
+        {
+          "text": "Initiate a sectional power isolation and reroute through undamaged relays.",
+          "score": 9,
+          "type": "best",
+          "details": "Efficient and prevents catastrophic grid collapse—fundamental Starfleet engineering discipline."
+        },
+        {
+          "text": "Cut main power entirely to stop the cascade immediately.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Stops the damage safely; less refined than targeted isolation but acceptable in emergency."
+        },
+        {
+          "text": "Attempt to compensate with automatic grid balancing software.",
+          "score": 7,
+          "type": "alternate",
+          "details": "May stabilize partially; less proactive than direct isolation and reroute."
+        }
+      ]
+    },
+        {
+      "scenario": "Deuterium Flow Obstruction",
+      "summary": "During preflight checks, the deuterium injector feed shows inconsistent pressure readings.",
+      "answers": [
+        {
+          "text": "Purge the injector assembly and perform manual pressure equalization.",
+          "score": 9,
+          "type": "best",
+          "details": "Corrects flow irregularity at the source; adheres to Starfleet procedural thoroughness."
+        },
+        {
+          "text": "Compensate electronically with higher injector pulse rates.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Competent temporary solution; safe but does not address the root hardware issue fully."
+        },
+        {
+          "text": "Proceed to launch; minor fluctuations are within margin.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Acceptable short-term; less proactive and slightly riskier than manual correction."
+        }
+      ]
+    }
+  ]
+}
