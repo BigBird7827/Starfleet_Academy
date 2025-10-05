@@ -1,0 +1,545 @@
+{
+  "department": "Science",
+  "lab": [
+    {
+      "scenario": "Alien Artifact Energy Signature",
+      "summary": "A newly recovered artifact emits intermittent subspace bursts of unknown origin.",
+      "answers": [
+        {
+          "text": "Transfer artifact to a secure containment field and perform spectral analysis under level-10 isolation.",
+          "score": 9,
+          "type": "best",
+          "details": "Ensures safety while preserving data for full spectrum analysis."
+        },
+        {
+          "text": "Attempt direct interface using adaptive holo-interface to interpret data.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Could yield faster insight but risks activating unknown systems."
+        },
+        {
+          "text": "Store artifact in cargo hold until experts can arrive.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Delays research and leaves potential hazard unsecured."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Scientific Scenario 21",
+      "summary": "Placeholder summary for scenario expansion.",
+      "answers": [
+        {
+          "text": "Best solution here.",
+          "score": 9,
+          "type": "best",
+          "details": "Best choice explanation."
+        },
+        {
+          "text": "Alternative one.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate explanation one."
+        },
+        {
+          "text": "Alternative two.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate explanation two."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Scientific Scenario 28",
+      "summary": "Placeholder summary for scenario expansion.",
+      "answers": [
+        {
+          "text": "Best solution here.",
+          "score": 9,
+          "type": "best",
+          "details": "Best choice explanation."
+        },
+        {
+          "text": "Alternative one.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate explanation one."
+        },
+        {
+          "text": "Alternative two.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate explanation two."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Scientific Scenario 24",
+      "summary": "Placeholder summary for scenario expansion.",
+      "answers": [
+        {
+          "text": "Best solution here.",
+          "score": 9,
+          "type": "best",
+          "details": "Best choice explanation."
+        },
+        {
+          "text": "Alternative one.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate explanation one."
+        },
+        {
+          "text": "Alternative two.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate explanation two."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Subsurface Life on Frozen Moon",
+      "summary": "Thermal readings indicate life signatures beneath an ice crust.",
+      "answers": [
+        {
+          "text": "Deploy drilling probe to extract samples without contaminating local biosphere.",
+          "score": 9,
+          "type": "best",
+          "details": "Preserves planetary protection directives while advancing exobiology research."
+        },
+        {
+          "text": "Land a manned away team to drill and retrieve specimens directly.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Accelerates results but risks cross-contamination."
+        },
+        {
+          "text": "Mark location for future missions and withdraw.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Ensures safety but may lose unique biological data to natural shifts."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Temporal Signal Echoes",
+      "summary": "Chronometric echoes appear in subspace, mimicking transmissions from the ship\u2019s own logs.",
+      "answers": [
+        {
+          "text": "Record and isolate signals for analysis while verifying no system self-interference.",
+          "score": 9,
+          "type": "best",
+          "details": "Preserves temporal integrity and allows safe scientific study of the phenomenon."
+        },
+        {
+          "text": "Attempt to respond to the echoes to test for causality.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Might reveal information about temporal displacement but risks paradox formation."
+        },
+        {
+          "text": "Block signal frequency to prevent feedback into communications array.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Prevents loop formation but discards potential temporal data."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Scientific Scenario 27",
+      "summary": "Placeholder summary for scenario expansion.",
+      "answers": [
+        {
+          "text": "Best solution here.",
+          "score": 9,
+          "type": "best",
+          "details": "Best choice explanation."
+        },
+        {
+          "text": "Alternative one.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate explanation one."
+        },
+        {
+          "text": "Alternative two.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate explanation two."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Scientific Scenario 23",
+      "summary": "Placeholder summary for scenario expansion.",
+      "answers": [
+        {
+          "text": "Best solution here.",
+          "score": 9,
+          "type": "best",
+          "details": "Best choice explanation."
+        },
+        {
+          "text": "Alternative one.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate explanation one."
+        },
+        {
+          "text": "Alternative two.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate explanation two."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Subspace Sensor Distortion",
+      "summary": "Long-range subspace arrays begin reporting inconsistent readings from a nearby nebula.",
+      "answers": [
+        {
+          "text": "Recalibrate sensors with localized reference points and verify through triangulated starbase data.",
+          "score": 9,
+          "type": "best",
+          "details": "Ensures accurate readings through cross-verification and methodical recalibration."
+        },
+        {
+          "text": "Dispatch a probe to relay clean telemetry for remote recalibration.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Adds confirmation data but delays result and risks probe loss in interference."
+        },
+        {
+          "text": "Ignore anomalies assuming temporary distortion from solar activity.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Quick resolution but risks missing early detection of a significant subspace phenomenon."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Unknown Microbial Bloom in Hydroponics",
+      "summary": "A sudden microbial bloom begins affecting plant growth aboard ship.",
+      "answers": [
+        {
+          "text": "Quarantine the section, analyze samples under containment, and sequence DNA for cross-species contamination.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents contamination and allows identification for targeted remediation."
+        },
+        {
+          "text": "Adjust environmental controls to inhibit growth while continuing operations.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Reduces spread but risks mutation or adaptation if cause is not removed."
+        },
+        {
+          "text": "Flush hydroponics and reseed with sterilized stock immediately.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Resolves symptoms but loses valuable samples and data for analysis."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Biosphere Collapse on Colony",
+      "summary": "Sensor scans indicate ecological collapse following recent terraforming efforts.",
+      "answers": [
+        {
+          "text": "Dispatch planetary science teams to analyze atmosphere, soil, and water chemistry.",
+          "score": 9,
+          "type": "best",
+          "details": "Identifies systemic causes and enables targeted environmental corrections."
+        },
+        {
+          "text": "Recommend immediate evacuation of all colonists pending investigation.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Protects lives but disrupts long-term colony infrastructure unnecessarily."
+        },
+        {
+          "text": "Assume data error and recheck scans after orbital cycle.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Avoids premature alarm but risks worsening irreversible collapse."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Scientific Scenario 18",
+      "summary": "Placeholder summary for scenario expansion.",
+      "answers": [
+        {
+          "text": "Best solution here.",
+          "score": 9,
+          "type": "best",
+          "details": "Best choice explanation."
+        },
+        {
+          "text": "Alternative one.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate explanation one."
+        },
+        {
+          "text": "Alternative two.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate explanation two."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Scientific Scenario 25",
+      "summary": "Placeholder summary for scenario expansion.",
+      "answers": [
+        {
+          "text": "Best solution here.",
+          "score": 9,
+          "type": "best",
+          "details": "Best choice explanation."
+        },
+        {
+          "text": "Alternative one.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate explanation one."
+        },
+        {
+          "text": "Alternative two.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate explanation two."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Scientific Scenario 26",
+      "summary": "Placeholder summary for scenario expansion.",
+      "answers": [
+        {
+          "text": "Best solution here.",
+          "score": 9,
+          "type": "best",
+          "details": "Best choice explanation."
+        },
+        {
+          "text": "Alternative one.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Alternate explanation one."
+        },
+        {
+          "text": "Alternative two.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Alternate explanation two."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    },
+    {
+      "scenario": "Unexpected Species Evolution",
+      "summary": "Lab organisms show accelerated evolutionary traits after transporter exposure.",
+      "answers": [
+        {
+          "text": "Isolate the specimens and analyze transporter logs for pattern anomalies.",
+          "score": 9,
+          "type": "best",
+          "details": "Preserves biosecurity while identifying possible transporter malfunction or breakthrough."
+        },
+        {
+          "text": "Continue observation to study accelerated evolution under containment.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Valuable research opportunity but risks spreading unknown mutations."
+        },
+        {
+          "text": "Terminate specimens to prevent any biological threat.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Guarantees safety but destroys potentially groundbreaking data."
+        },
+        {
+          "text": "Proceed without containment to maximize sample yield.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing containment protocols jeopardizes crew safety and violates scientific ethics."
+        },
+        {
+          "text": "Discard anomalous data and assume sensor malfunction.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring outliers undermines the scientific method and may overlook groundbreaking discovery."
+        }
+      ]
+    }
+  ]
+}
