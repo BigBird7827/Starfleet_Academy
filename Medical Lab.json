@@ -1,0 +1,545 @@
+{
+  "department": "Medical",
+  "lab": [
+    {
+      "scenario": "Vulcan Pon Farr Emergency",
+      "summary": "Vulcan crew member enters Pon Farr with violent neurological symptoms.",
+      "answers": [
+        {
+          "text": "Administer neural suppressants and initiate medical stasis until safe transport.",
+          "score": 9,
+          "type": "best",
+          "details": "Controls aggression safely and respects privacy."
+        },
+        {
+          "text": "Restrain patient physically.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains safety but violates cultural ethics."
+        },
+        {
+          "text": "Allow emotional release in isolated holodeck program.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Potentially therapeutic but medically irresponsible."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Psychogenic Epidemic",
+      "summary": "Crew panic manifests as psychosomatic illness during long-range mission.",
+      "answers": [
+        {
+          "text": "Introduce calming pheromone fields and conduct group therapy sessions.",
+          "score": 9,
+          "type": "best",
+          "details": "Addresses both physiological and psychological factors."
+        },
+        {
+          "text": "Administer mild tranquilizers fleetwide.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Temporarily effective but unsustainable."
+        },
+        {
+          "text": "Ignore symptoms as mass hysteria.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Neglects legitimate medical needs and undermines morale."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Telepathic Overload",
+      "summary": "Betazoid crewman collapses after exposure to collective psychic resonance.",
+      "answers": [
+        {
+          "text": "Administer neural stabilizers and induce mild sedation.",
+          "score": 9,
+          "type": "best",
+          "details": "Reduces neural hyperactivity safely."
+        },
+        {
+          "text": "Attempt telepathic contact to calm the patient.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Can help but risks spreading overload to others."
+        },
+        {
+          "text": "Isolate in darkened room and monitor naturally.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Provides comfort but no real treatment."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Medical Ethics Under Fire",
+      "summary": "Admiral orders experimental treatment without consent.",
+      "answers": [
+        {
+          "text": "Refuse order and report to Starfleet Medical Command.",
+          "score": 9,
+          "type": "best",
+          "details": "Upholds Federation bioethics and chain of command."
+        },
+        {
+          "text": "Proceed quietly for mission success.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Demonstrates obedience but violates ethics."
+        },
+        {
+          "text": "Compromise with partial treatment trial.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Mediates situation but risks moral breach."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Outbreak on a Starbase",
+      "summary": "A virulent flu strain emerges on a crowded orbital facility.",
+      "answers": [
+        {
+          "text": "Isolate infection zones, distribute vaccines, and initiate mass testing.",
+          "score": 9,
+          "type": "best",
+          "details": "Standard epidemic containment and proactive disease management."
+        },
+        {
+          "text": "Focus on treating the critically ill first.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Prioritizes survival but allows infection to spread unchecked."
+        },
+        {
+          "text": "Seal the starbase and halt all transport until the illness burns out.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Stops spread but violates Federation health ethics."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Alien Parasite Infection",
+      "summary": "Crew members exhibit neural disruption caused by an unknown parasitic organism.",
+      "answers": [
+        {
+          "text": "Quarantine the affected, perform neural scans, and attempt containment using force fields.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents spread and enables safe removal with minimal casualties."
+        },
+        {
+          "text": "Attempt direct extraction using transporter bio-filters.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Could succeed but risks incomplete removal or neurological trauma."
+        },
+        {
+          "text": "Treat symptomatically until a Federation specialist arrives.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Buys time but may allow parasite replication."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Genetic Contamination",
+      "summary": "Hybrid DNA sequence begins replicating uncontrollably within a patient\u2019s genome.",
+      "answers": [
+        {
+          "text": "Activate isolation field and perform DNA resequencing using medical transporter buffer.",
+          "score": 9,
+          "type": "best",
+          "details": "Resets genome safely with advanced Starfleet medical technology."
+        },
+        {
+          "text": "Attempt chemical suppression of replication.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Slows effects but incomplete solution."
+        },
+        {
+          "text": "Allow replication to continue for observation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Risky; could endanger patient and ship."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Surgical AI Malfunction",
+      "summary": "Automated surgery assistant begins misinterpreting commands mid-operation.",
+      "answers": [
+        {
+          "text": "Shut down AI and continue surgery manually.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents patient harm and follows Starfleet safety protocols."
+        },
+        {
+          "text": "Attempt to reset the AI mid-procedure.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Could restore function but risks critical error during surgery."
+        },
+        {
+          "text": "Allow AI to complete the operation under observation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Dangerous reliance on malfunctioning system."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Cryogenic Virus Discovery",
+      "summary": "Sample from frozen asteroid revives an ancient virus strain.",
+      "answers": [
+        {
+          "text": "Seal lab, sterilize samples, and perform controlled study remotely.",
+          "score": 9,
+          "type": "best",
+          "details": "Preserves safety while enabling scientific insight."
+        },
+        {
+          "text": "Attempt to neutralize with heat sterilization.",
+          "score": 8,
+          "type": "alternate",
+          "details": "May destroy both virus and valuable data."
+        },
+        {
+          "text": "Expose to antimatter field to ensure destruction.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Overkill; unsafe and unnecessary."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Unknown Neurotoxin",
+      "summary": "Crew exposed to alien neurotoxin causing paralysis and respiratory arrest.",
+      "answers": [
+        {
+          "text": "Analyze compound, synthesize antidote via molecular scanner, and administer intravenously.",
+          "score": 9,
+          "type": "best",
+          "details": "Correct, efficient medical protocol."
+        },
+        {
+          "text": "Use antitoxins from standard medkit.",
+          "score": 8,
+          "type": "alternate",
+          "details": "May help but not tailored to alien compound."
+        },
+        {
+          "text": "Initiate cryostasis to preserve life until cure found.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Delays solution and strains resources."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "First Contact Pathogen",
+      "summary": "A new species aboard develops a respiratory reaction after contact with oxygen.",
+      "answers": [
+        {
+          "text": "Create a controlled atmosphere chamber matching native biochemistry.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents further reaction and preserves diplomatic relations."
+        },
+        {
+          "text": "Administer universal antiallergens.",
+          "score": 8,
+          "type": "alternate",
+          "details": "May relieve symptoms but doesn\u2019t address atmospheric incompatibility."
+        },
+        {
+          "text": "Evacuate the visitors to the shuttle bay and vent contaminated air.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Solves short-term issue but risks offense and harm."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Radiation Exposure in Engineering Bay",
+      "summary": "A plasma leak exposes several crew members to high radiation levels.",
+      "answers": [
+        {
+          "text": "Stabilize the injured with hyronalin and transfer to radiation isolation for cellular regeneration.",
+          "score": 9,
+          "type": "best",
+          "details": "Immediate treatment limits long-term damage and follows Starfleet radiation protocols."
+        },
+        {
+          "text": "Administer broad-spectrum antitoxins while awaiting detailed scans.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Helpful, but not targeted to radiation poisoning; risk of delayed reaction."
+        },
+        {
+          "text": "Move the patients to sickbay and monitor vitals until symptoms progress.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Delays intervention; risks irreversible cell damage."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Holodeck Injury Lockout",
+      "summary": "Safety protocols fail and several crew are critically injured inside the holodeck.",
+      "answers": [
+        {
+          "text": "Manually disengage power, then provide emergency triage within the program space.",
+          "score": 9,
+          "type": "best",
+          "details": "Ensures immediate treatment before extraction."
+        },
+        {
+          "text": "Attempt to end program first, then assist injuries.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Logical but delays first aid."
+        },
+        {
+          "text": "Wait for engineering to restore holodeck control.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Fatal delay for critical patients."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Quarantine Violation",
+      "summary": "A cadet ignores isolation orders and infects others with a contagious virus.",
+      "answers": [
+        {
+          "text": "Enforce quarantine and initiate disciplinary report.",
+          "score": 9,
+          "type": "best",
+          "details": "Protects crew and upholds medical chain of command."
+        },
+        {
+          "text": "Treat new infections and quietly reprimand the cadet later.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Solves problem but weakens authority."
+        },
+        {
+          "text": "Ignore the incident to avoid morale issues.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Encourages negligence and undermines trust."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Nanovirus Mutation",
+      "summary": "Medical nanites begin replicating autonomously, altering crew physiology.",
+      "answers": [
+        {
+          "text": "Deploy targeted EMP pulse and isolate infected.",
+          "score": 9,
+          "type": "best",
+          "details": "Neutralizes nanites safely with minimal collateral damage."
+        },
+        {
+          "text": "Attempt to reprogram nanites in vivo.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Innovative but extremely risky."
+        },
+        {
+          "text": "Flush nanites with bloodstream filters.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Ineffective for self-replicating variants."
+        },
+        {
+          "text": "Administer untested treatments immediately to demonstrate initiative.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without diagnosis risks worsening the patient\u2019s condition and violates Federation medical protocols."
+        },
+        {
+          "text": "Disregard quarantine or ethical restrictions to expedite results.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet medical ethics and endangers both crew and patients."
+        }
+      ]
+    }
+  ]
+}
