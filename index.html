@@ -231,6 +231,14 @@
       margin-right: 270px;
       margin-left: 40px;
     }
+
+    #mainWelcome {
+      text-align: center;
+      font-size: 20pt;
+      margin-bottom: 15px;
+      color: var(--gold);
+      font-family: 'Orbitron', sans-serif;
+    }
   </style>
 </head>
 <body>
@@ -270,7 +278,7 @@
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
     <div class="page-title">Welcome to Starfleet Academy</div>
-
+    <div id="mainWelcome"></div>
     <div class="container" style="text-align:center;">
       <p>
         Congratulations, Cadet. You have been accepted into Starfleet Academy,
@@ -298,7 +306,7 @@
     <div class="orientation-root">
       <div class="orientation-title">Starfleet Orientation</div>
       <div class="orientation-text">
-        Select a department to begin your training or lab. Each department
+        Select a department to begin your training, lab, or exam. Each department
         challenges you to demonstrate your skills in leadership, analysis,
         problem-solving, and Federation values.
       </div>
@@ -387,6 +395,8 @@
         document.getElementById("loginScreen").style.opacity = 0;
         setTimeout(() => {
           document.getElementById("loginScreen").style.display = "none";
+          const mainWelcome = document.getElementById("mainWelcome");
+          mainWelcome.textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
           document.getElementById("mainScreen").style.display = "block";
         }, 5000);
       }, 1500);
