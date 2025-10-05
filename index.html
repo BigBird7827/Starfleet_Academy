@@ -6,111 +6,116 @@
   <title>Starfleet Academy</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root { --gold:#ffd84d; --orange:#ff9933; --blue:#3366ff; }
+    :root{
+      --gold:#ffd84d;
+      --amber:#ff9933;
+      --violet:#cc66ff;
+      --cyan:#33ccff;
+      --black:#000;
+    }
 
-    html, body {
-      height:100%;
+    html,body{
       margin:0;
       padding:0;
+      height:100%;
       background:#000;
       font-family:'Roboto',sans-serif;
       color:var(--gold);
       overflow:hidden;
     }
 
-    /* LCARS animated banding */
-    body::before {
-      content:"";
+    /* LCARS curved side panels */
+    .lcars-left,.lcars-right{
       position:fixed;
-      top:0;left:0;
-      width:100%;height:100%;
-      background:
-        linear-gradient(90deg, rgba(255,152,51,0.25) 0%, transparent 10%, transparent 90%, rgba(51,102,255,0.25) 100%),
-        radial-gradient(ellipse at center, rgba(255,216,77,0.15) 0%, transparent 70%);
-      background-repeat:no-repeat;
-      animation:lcarsglow 8s ease-in-out infinite alternate;
+      top:0;
+      width:120px;
+      height:100%;
+      background:linear-gradient(to bottom,var(--amber) 0%,var(--violet) 40%,var(--cyan) 100%);
+      border-radius:0 60px 60px 0;
       z-index:-1;
+      opacity:.3;
     }
-    @keyframes lcarsglow {
-      0% {opacity:0.3;}
-      100% {opacity:0.6;}
+    .lcars-right{
+      right:0;
+      left:auto;
+      border-radius:60px 0 0 60px;
+      background:linear-gradient(to bottom,var(--cyan) 0%,var(--violet) 60%,var(--amber) 100%);
     }
 
-    .page-title {
-      margin:40px 0 20px 0;
-      text-align:center;
+    /* Animated glow bar moving slowly */
+    @keyframes flow {
+      0%{background-position:0 0;}
+      100%{background-position:200% 0;}
+    }
+    .lcars-band{
+      position:absolute;
+      top:0;left:0;
+      width:100%;
+      height:15px;
+      background:linear-gradient(90deg,var(--amber),var(--violet),var(--cyan),var(--amber));
+      background-size:200% 100%;
+      animation:flow 12s linear infinite;
+      box-shadow:0 0 20px rgba(255,216,77,0.4);
+    }
+
+    .page-title{
       font-family:'Orbitron',sans-serif;
-      font-size:42pt;
+      font-size:38pt;
+      text-align:center;
       color:var(--gold);
-      text-shadow:0 0 25px rgba(255,216,77,.8);
-      position:relative;
-      z-index:1;
+      text-shadow:0 0 15px rgba(255,216,77,.8);
+      margin-top:40px;
+      margin-bottom:10px;
     }
 
-    /* LCARS panel layout */
-    .main-lcars {
+    .main-console{
       position:relative;
-      width:90%;
+      width:80%;
       max-width:900px;
-      margin:0 auto;
-      padding:40px 50px;
-      background:rgba(0,0,0,0.75);
-      border-radius:50px 10px 50px 10px;
+      margin:40px auto;
+      padding:40px 60px;
+      background:radial-gradient(circle at 50% 0%,rgba(255,255,255,0.05),rgba(0,0,0,0.85) 70%);
       border:3px solid var(--gold);
-      box-shadow:0 0 40px rgba(255,216,77,0.4);
-      overflow:hidden;
+      border-radius:30px;
+      box-shadow:0 0 25px rgba(255,216,77,0.5);
     }
 
-    .lcars-accent-top {
-      position:absolute;
-      top:-20px; left:0;
-      width:100%;
-      height:25px;
-      background:linear-gradient(to right,var(--orange),var(--gold),var(--blue));
+    .console-frame{
+      border:2px solid var(--amber);
       border-radius:20px;
-      box-shadow:0 0 15px rgba(255,216,77,0.7);
-    }
-    .lcars-accent-bottom {
-      position:absolute;
-      bottom:-20px; left:0;
-      width:100%;
-      height:25px;
-      background:linear-gradient(to right,var(--blue),var(--gold),var(--orange));
-      border-radius:20px;
-      box-shadow:0 0 15px rgba(255,216,77,0.7);
-    }
-
-    .container {
-      background:rgba(0,0,0,0.7);
-      padding:25px 30px;
-      border-radius:12px;
-      box-shadow:0 0 15px rgba(255,216,77,0.4);
-      max-width:500px;
-      margin:0 auto;
-      text-align:left;
+      padding:25px 35px;
+      background:rgba(0,0,0,0.6);
+      box-shadow:inset 0 0 15px rgba(255,216,77,0.2);
     }
 
     label{display:block;margin:12px 0 5px;}
-    input,select,button{width:100%;padding:8px;margin-bottom:15px;border:none;border-radius:6px;}
+    input,select,button{width:100%;padding:10px;margin-bottom:15px;border:none;border-radius:8px;}
     input,select{background:#222;color:#fff;}
 
-    button {
-      background:linear-gradient(to bottom,var(--blue),#000);
+    button{
+      background:linear-gradient(to bottom,var(--violet),#000);
       color:var(--gold);
       font-weight:bold;
       border:2px solid var(--gold);
-      border-radius:12px;
       cursor:pointer;
-      box-shadow:0 0 15px rgba(255,216,77,0.3);
+      border-radius:12px;
+      box-shadow:0 0 10px rgba(255,216,77,0.4);
       transition:all .2s;
     }
-    button:hover {
-      background:linear-gradient(to bottom,var(--orange),#000);
+    button:hover{
+      background:linear-gradient(to bottom,var(--cyan),#000);
+      box-shadow:0 0 25px rgba(255,216,77,0.7);
       transform:translateY(-2px);
-      box-shadow:0 0 25px rgba(255,216,77,0.6);
     }
 
-    .corner-image {
+    #accessMessage{
+      text-align:center;
+      color:var(--gold);
+      opacity:0;
+      transition:opacity .5s;
+    }
+
+    .corner-image{
       position:fixed;
       width:2.5in;
       height:2.5in;
@@ -122,15 +127,15 @@
     .corner-left{left:10px;}
     .corner-right{right:10px;}
 
-    .orientation-root {
+    .orientation-root{
       position:relative;
-      z-index:1;
       display:flex;
       flex-direction:column;
       align-items:center;
       margin:0 auto;
+      z-index:1;
     }
-    .orientation-title {
+    .orientation-title{
       font-family:'Orbitron',sans-serif;
       font-size:32pt;
       margin-top:60px;
@@ -138,7 +143,7 @@
       text-align:center;
       color:gold;
     }
-    .orientation-text {
+    .orientation-text{
       max-width:800px;
       margin:0 auto 40px auto;
       padding:0 20px;
@@ -147,7 +152,7 @@
       text-align:center;
     }
 
-    .button-box {
+    .button-box{
       margin-top:30px;
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -157,20 +162,14 @@
       border-radius:12px;
       box-shadow:0 0 15px var(--gold);
     }
-    .button-box button {
+    .button-box button{
       font-size:20pt;
       padding:15px 25px;
       border-radius:12px;
       width:100%;
     }
 
-    .return-btn {
-      padding:10px 25px;
-      font-size:14pt;
-      width:auto;
-      margin-top:20px;
-    }
-
+    .return-btn{padding:10px 25px;font-size:14pt;width:auto;margin-top:20px;}
     .training-section{margin-bottom:25px;padding-bottom:15px;border-bottom:1px solid #444;}
     .training-section h3{font-size:15pt;margin-bottom:10px;color:var(--gold);}
     .training-section p{font-size:14pt;line-height:1.6em;margin:0 0 10px 0;color:#fff;}
@@ -178,7 +177,6 @@
     .answer-block{margin-bottom:15px;padding:10px;background:rgba(255,255,255,0.05);border-radius:8px;}
     .answer-block strong{color:#00ffcc;}
     .fixed-return{position:fixed;bottom:20px;left:10px;z-index:1000;width:auto;}
-
     #examScoreboard{position:fixed;top:20px;right:20px;width:250px;background:rgba(0,0,0,0.7);border:2px solid var(--gold);border-radius:10px;padding:10px;box-shadow:0 0 10px var(--gold);color:white;font-size:12pt;}
     #examScoreboard h3{text-align:center;font-family:'Orbitron',sans-serif;font-size:16pt;color:var(--gold);margin:5px 0;}
     #examScoreboard table{width:100%;border-collapse:collapse;}
@@ -190,10 +188,11 @@
   </style>
 </head>
 <body>
-  <div id="loginScreen" class="main-lcars">
-    <div class="lcars-accent-top"></div>
-    <div class="page-title">Starfleet Academy Access Terminal</div>
-    <div class="container">
+  <div class="lcars-left"></div><div class="lcars-right"></div><div class="lcars-band"></div>
+
+  <div id="loginScreen" class="main-console">
+    <div class="page-title">Starfleet Academy Terminal Access</div>
+    <div class="console-frame">
       <label for="cadetName">Cadet Name</label>
       <input type="text" id="cadetName" required>
       <label for="species">Species</label>
@@ -204,17 +203,15 @@
         <option>Klingon</option><option>Ferengi</option><option>Denobulan</option><option>Orion</option>
         <option>Caitian</option><option>Benzite</option>
       </select>
-      <button id="loginBtn">Access Terminal</button>
-      <p id="accessMessage" style="text-align:center;color:var(--gold);opacity:0;">Access Granted</p>
+      <button id="loginBtn">Initiate Login</button>
+      <p id="accessMessage">Access Granted</p>
     </div>
-    <div class="lcars-accent-bottom"></div>
   </div>
+
   <div id="mainScreen" style="display:none;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right">
     <div class="page-title">Welcome to Starfleet Academy</div>
     <div id="mainWelcome"></div>
-    <div class="container main-lcars" style="text-align:center;">
+    <div class="console-frame" style="max-width:800px;margin:0 auto;text-align:center;">
       <p>
         Congratulations, Cadet. You have been accepted into Starfleet Academy,
         where the finest minds of the Federation prepare to serve in the vast
@@ -235,8 +232,6 @@
   </div>
 
   <div id="orientationPage" style="display:none;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right">
     <div class="orientation-root">
       <div class="orientation-title" id="orientationTitle"></div>
       <div class="orientation-text">Select a department to begin.</div>
@@ -244,10 +239,7 @@
       <button class="return-btn" id="returnMain">Return to Main</button>
     </div>
   </div>
-
   <div id="trainingPage" style="display:none;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right">
     <div class="page-title" id="trainingDeptTitle"></div>
     <div style="text-align:center;color:var(--gold);font-size:18pt;" id="trainingCadetInfo"></div>
     <div class="container" id="trainingContent"></div>
@@ -255,8 +247,6 @@
   </div>
 
   <div id="labPage" style="display:none;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right">
     <div class="page-title" id="labDeptTitle"></div>
     <div style="text-align:center;color:var(--gold);font-size:18pt;" id="labCadetInfo"></div>
     <div class="container" id="labContent"></div>
@@ -276,34 +266,6 @@
   </div>
 
   <script>
-    const trainingFiles={
-      "Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
-      "Diplomacy":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
-      "Engineering":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Training.json",
-      "Security":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Training.json",
-      "Science":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training.json",
-      "Medical":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Training.json"
-    };
-    const labFiles={
-      "Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Lab.json",
-      "Diplomacy":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Lab.json",
-      "Engineering":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Lab.json",
-      "Security":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Lab.json",
-      "Science":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
-      "Medical":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
-    };
-
-    const examFiles={...trainingFiles};
-
-    const prefaces={
-      "Command":"Command is not about authority; it is about responsibility. Your crew will follow where you lead. Every decision carries consequence—your discipline ensures their survival.",
-      "Diplomacy":"The Federation’s first weapon is its words. Your restraint, empathy, and insight preserve peace where others might unleash war.",
-      "Engineering":"A ship survives by the skill of its engineers. You hold together the dreams of exploration with plasma, metal, and logic.",
-      "Science":"The unknown is your constant companion. Your curiosity fuels discovery—but wisdom must temper every experiment.",
-      "Medical":"Compassion is your scalpel, knowledge your shield. In your care lie the lives and morale of every soul aboard.",
-      "Security":"You stand between chaos and order. Strength with judgment, courage with discipline—these are your tools in every confrontation."
-    };
-
     let cadetName="",species="";
     const homeworlds={
       "Human":"Earth","Vulcan":"Vulcan","Andorian":"Andoria","Tellarite":"Tellar Prime",
@@ -326,77 +288,6 @@
         document.getElementById("mainScreen").style.display="block";
       },5000);
     });
-
-    document.getElementById("trainingBtn").onclick=()=>openOrientation("training");
-    document.getElementById("labBtn").onclick=()=>openOrientation("lab");
-    document.getElementById("examBtn").onclick=()=>openOrientation("exam");
-
-    function openOrientation(mode){
-      document.getElementById("mainScreen").style.display="none";
-      const title=document.getElementById("orientationTitle");
-      title.textContent=mode==="exam"?"Select Exam Department":mode==="lab"?"Select Lab Department":"Select Training Department";
-      const btnBox=document.getElementById("moduleButtons");
-      btnBox.innerHTML="";
-      Object.keys(trainingFiles).forEach(dept=>{
-        const b=document.createElement("button");
-        b.textContent=dept;
-        b.onclick=()=>{if(mode==="training")loadTraining(dept);else if(mode==="lab")loadLab(dept);else loadExam(dept);};
-        btnBox.appendChild(b);
-      });
-      document.getElementById("orientationPage").style.display="block";
-    }
-
-    document.getElementById("returnMain").onclick=()=>{document.getElementById("orientationPage").style.display="none";document.getElementById("mainScreen").style.display="block";};
-    document.getElementById("returnOrientationTrain").onclick=()=>{document.getElementById("trainingPage").style.display="none";document.getElementById("orientationPage").style.display="block";};
-    document.getElementById("returnOrientationLab").onclick=()=>{document.getElementById("labPage").style.display="none";document.getElementById("orientationPage").style.display="block";};
-    document.getElementById("returnOrientationExam").onclick=()=>{document.getElementById("examPage").style.display="none";document.getElementById("orientationPage").style.display="block";};
-
-    function loadTraining(dept){/* existing logic unchanged */}
-
-    function loadLab(dept){
-      document.getElementById("orientationPage").style.display="none";
-      document.getElementById("labPage").style.display="block";
-      document.getElementById("labDeptTitle").textContent=`${dept} Lab`;
-      document.getElementById("labCadetInfo").textContent=`Cadet ${cadetName} of ${homeworlds[species]}`;
-      const content=document.getElementById("labContent");
-      content.innerHTML="<p>Loading...</p>";
-      fetch(labFiles[dept]).then(r=>r.json()).then(data=>{
-        content.innerHTML="";
-        if(!(data.lab&&data.lab.length)){content.innerHTML="<p>No lab scenarios found.</p>";return;}
-        let index=0;
-        function renderScenario(){
-          const item=data.lab[index];
-          content.innerHTML=`<div class='training-section'><h3>${item.scenario}</h3><p>${item.summary||""}</p></div>`;
-          const answersDiv=document.createElement("div");answersDiv.className="answers";
-          item.answers.forEach(ans=>{
-            const btn=document.createElement("button");
-            btn.textContent=ans.text;
-            btn.style.marginBottom="15px";
-            btn.onclick=()=>evaluate(ans,item);
-            answersDiv.appendChild(btn);
-          });
-          content.appendChild(answersDiv);
-        }
-        function evaluate(ans,item){
-          document.querySelectorAll("#labContent .answers button").forEach(b=>b.disabled=true);
-          const best=item.answers.find(a=>a.type==="best");
-          const feedback=document.createElement("div");
-          feedback.style.color="#fff";
-          if(ans.type==="best")feedback.innerHTML=`<strong>Correct.</strong> ${ans.details}`;
-          else if(ans.type==="alternate")feedback.innerHTML=`<strong>Acceptable.</strong> ${ans.details}<br><br>The best action would have been:<br><em>${best.text}</em>`;
-          else feedback.innerHTML=`<strong>Incorrect.</strong> ${ans.details}<br><br>The correct course of action:<br><em>${best.text}</em>`;
-          content.appendChild(feedback);
-          const next=document.createElement("button");
-          next.textContent=index<data.lab.length-1?"Next Scenario":"Finish Lab";
-          next.style.marginTop="15px";
-          next.onclick=()=>{index++;if(index<data.lab.length)renderScenario();else content.innerHTML=`<h3>Lab Complete</h3>`;};
-          content.appendChild(next);
-        }
-        renderScenario();
-      });
-    }
-
-    function loadExam(dept){/* unchanged from prior working version */}
   </script>
 </body>
 </html>
