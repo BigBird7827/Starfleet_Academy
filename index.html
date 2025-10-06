@@ -181,17 +181,16 @@
       text-align: center;
     }
 
-   #moduleButtons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: auto;
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
+    #moduleButtons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: auto;
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
     .fixed-return {
       position: fixed;
       bottom: 20px;
@@ -344,6 +343,7 @@
       <button class="fixed-return" id="returnMain">Return to Main</button>
     </div>
   </div>
+
   <div id="trainingPage" style="display:none;text-align:center;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -438,17 +438,16 @@
       title.textContent = mode === "exam" ? "Select Exam Department" :
                           mode === "lab"  ? "Select Lab Department"  :
                                             "Select Training Department";
-
       const btnBox = document.getElementById("moduleButtons");
       btnBox.innerHTML = "";
       Object.keys(trainingFiles).forEach(dept => {
         const b = document.createElement("button");
         b.textContent = dept;
-        b.onclick = () => {
+        b.addEventListener("click", () => {
           if (mode === "training") loadTraining(dept);
           else if (mode === "lab") loadLab(dept);
           else loadExam(dept);
-        };
+        });
         btnBox.appendChild(b);
       });
       document.getElementById("orientationPage").style.display = "block";
@@ -473,4 +472,3 @@
   </script>
 </body>
 </html>
-
