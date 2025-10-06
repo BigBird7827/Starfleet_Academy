@@ -207,9 +207,7 @@
       line-height: 1.5;
     }
 
-    .answer-block p {
-      margin: 4px 0;
-    }
+    .answer-block p { margin: 4px 0; }
 
     #labContent, #examContent {
       font-family: 'Roboto', sans-serif;
@@ -237,15 +235,9 @@
       text-align: center;
     }
 
-    #examScoreboard table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+    #examScoreboard table { width: 100%; border-collapse: collapse; }
 
-    #examScoreboard td {
-      padding: 3px;
-      color: white;
-    }
+    #examScoreboard td { padding: 3px; color: white; }
 
     #examScoreboard tr.highlight td {
       color: var(--gold);
@@ -261,7 +253,103 @@
   </style>
 </head>
 <body>
+  <div id="loginScreen">
+    <div class="lcars-left"></div>
+    <div class="lcars-top"></div>
+    <div class="lcars-bottom"></div>
+    <div class="container">
+      <div class="page-title">STARFLEET ACADEMY</div>
+      <label for="cadetName">Cadet Name</label>
+      <input type="text" id="cadetName" required>
+      <label for="species">Species</label>
+      <select id="species" required>
+        <option value="">-- Select Species --</option>
+        <option>Human</option>
+        <option>Vulcan</option>
+        <option>Andorian</option>
+        <option>Tellarite</option>
+        <option>Bajoran</option>
+        <option>Betazoid</option>
+        <option>Bolian</option>
+        <option>Trill</option>
+        <option>Klingon</option>
+        <option>Ferengi</option>
+        <option>Denobulan</option>
+        <option>Orion</option>
+        <option>Caitian</option>
+        <option>Benzite</option>
+      </select>
+      <button id="loginBtn">Login</button>
+      <p id="accessMessage">Access Granted</p>
+    </div>
+  </div>
+  <div id="mainScreen">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+    <div class="container">
+      <div class="page-title">Welcome to Starfleet Academy</div>
+      <div id="mainWelcome" style="font-size:18pt;margin-bottom:20px;"></div>
+      <p style="font-size:14pt;color:#fff;margin-bottom:20px;">
+        Congratulations, Cadet. You have been accepted into Starfleet Academy,
+        where the finest minds of the Federation prepare to serve in the vast
+        frontier of space. Here, you will learn the disciplines of command,
+        diplomacy, science, engineering, medicine, and security — each a vital
+        pillar in the exploration and defense of the Federation.
+      </p>
+      <p style="font-size:14pt;color:#fff;margin-bottom:48px;">
+        Choose your path and begin your training or participate in interactive
+        labs and exams to test your readiness for active duty.
+      </p>
+      <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;">
+        <button id="trainingBtn" style="width:240px;">Training</button>
+        <button id="labBtn" style="width:240px;">Labs</button>
+        <button id="examBtn" style="width:240px;">Exams</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="orientationPage" style="display:none;">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+    <div class="orientation-root" style="text-align:center;margin-top:100px;">
+      <div class="page-title" id="orientationTitle"></div>
+      <div style="font-size:16pt;margin-bottom:30px;">Select a department to begin.</div>
+      <div id="moduleButtons" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:800px;margin:0 auto;border:2px solid var(--gold);border-radius:12px;padding:20px;background:rgba(0,0,0,0.8);"></div>
+      <button class="fixed-return" id="returnMain">Return to Main</button>
+    </div>
+  </div>
+
+  <div id="trainingPage" style="display:none;text-align:center;">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+    <div class="page-title" id="trainingDeptTitle"></div>
+    <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+    <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <button class="fixed-return" id="returnOrientationTrain">Back to Departments</button>
+  </div>
+
+  <div id="labPage" style="display:none;text-align:center;">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+    <div class="page-title" id="labDeptTitle"></div>
+    <div id="labCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+    <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <button class="fixed-return" id="returnOrientationLab">Back to Departments</button>
+  </div>
+
+  <div id="examPage" style="display:none;text-align:center;">
+    <div id="examScoreboard">
+      <h3>Class Rankings</h3>
+      <div id="examProgress">Questions Answered: 0</div>
+      <table id="cadetTable"></table>
+    </div>
+    <div class="page-title" id="examDeptTitle"></div>
+    <div id="examCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+    <div id="examContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <button class="fixed-return" id="returnOrientationExam">Back to Departments</button>
+  </div>
   <script>
+  document.addEventListener("DOMContentLoaded", () => {
     const trainingFiles = {
       "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
       "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
@@ -389,6 +477,7 @@
           } else content.innerHTML += "<p>No training items found.</p>";
         });
     }
+  });
   </script>
 </body>
 </html>
