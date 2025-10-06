@@ -7,73 +7,73 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --gold: #ffcc66;
-      --blue: #0077cc;
-      --dark-blue: #001933;
-      --black: #000;
-      --text: #e6e6e6;
-    }
+  --gold: #ffcc66;
+  --blue: #0077cc;
+  --dark-blue: #001933;
+  --black: #000;
+  --text: #e6e6e6;
+}
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Roboto', sans-serif;
-      color: var(--text);
-      overflow-x: hidden;
-      background: url("https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20-%20San%20Francisco.gif") no-repeat center center fixed;
-      background-size: cover;
-    }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+  background: url("https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20-%20San%20Francisco.gif") no-repeat center center fixed;
+  background-size: cover;
+}
 
-    .page-title {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 36pt;
-      color: var(--gold);
-      text-align: center;
-      margin: 20px 0 10px;
-    }
+.page-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36pt;
+  color: var(--gold);
+  text-align: center;
+  margin: 20px 0 10px;
+}
 
-    #loginScreen {
-      position: relative;
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+#loginScreen {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .lcars-left, .lcars-top, .lcars-bottom {
-      position: absolute;
-      background: var(--dark-blue);
-    }
+.lcars-left, .lcars-top, .lcars-bottom {
+  position: absolute;
+  background: var(--dark-blue);
+}
 
-    .lcars-left {
-      top: 0;
-      left: 0;
-      width: 240px;
-      height: 100%;
-      border-right: 6px solid var(--gold);
-    }
+.lcars-left {
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  border-right: 6px solid var(--gold);
+}
 
-    .lcars-top {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50px;
-      background: var(--gold);
-      border-bottom-left-radius: 50px;
-    }
+.lcars-top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: var(--gold);
+  border-bottom-left-radius: 50px;
+}
 
-    .lcars-bottom {
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 40px;
-      background: var(--gold);
-      border-top-left-radius: 50px;
-    }
+.lcars-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: var(--gold);
+  border-top-left-radius: 50px;
+}
 
-    .container {
+.container {
   background: #000;
   border: 2px solid var(--gold);
   border-radius: 12px;
@@ -83,76 +83,85 @@
   z-index: 2;
 }
 
-    label {
-      display: block;
-      color: var(--gold);
-      font-size: 14pt;
-      margin-bottom: 6px;
-    }
+#loginScreen .container {
+  background: rgba(0, 0, 0, 0.7);
+}
 
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 18px;
-      background: #000;
-      border: 1px solid var(--blue);
-      color: var(--text);
-      font-size: 14pt;
-      border-radius: 6px;
-    }
+#loginScreen .page-title {
+  -webkit-text-stroke: 1px #888;
+  text-stroke: 1px #888;
+}
 
-    button {
-      background: linear-gradient(to bottom, #003366, #001933);
-      border: 2px solid var(--gold);
-      color: var(--gold);
-      font-family: 'Orbitron', sans-serif;
-      font-size: 16pt;
-      border-radius: 10px;
-      padding: 12px 20px;
-      cursor: pointer;
-      box-shadow: inset 0 6px 8px rgba(255,255,255,0.06),
-                  inset 0 -6px 10px rgba(0,0,0,0.6),
-                  0 6px 12px rgba(0,0,0,0.9);
-      transition: transform 0.2s;
-    }
+label {
+  display: block;
+  color: var(--gold);
+  font-size: 14pt;
+  margin-bottom: 6px;
+}
 
-    button:hover {
-      transform: translateY(-2px);
-      box-shadow: inset 0 6px 10px rgba(255,255,255,0.08),
-                  inset 0 -6px 12px rgba(0,0,0,0.7),
-                  0 14px 28px rgba(0,0,0,1);
-    }
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  background: #000;
+  border: 1px solid var(--blue);
+  color: var(--text);
+  font-size: 14pt;
+  border-radius: 6px;
+}
 
-    .corner-image {
-      position: fixed;
-      width: 2.5in;
-      height: 2.5in;
-      object-fit: contain;
-      pointer-events: none;
-    }
+button {
+  background: linear-gradient(to bottom, #003366, #001933);
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16pt;
+  border-radius: 10px;
+  padding: 12px 20px;
+  cursor: pointer;
+  box-shadow: inset 0 6px 8px rgba(255,255,255,0.06),
+              inset 0 -6px 10px rgba(0,0,0,0.6),
+              0 6px 12px rgba(0,0,0,0.9);
+  transition: transform 0.2s;
+}
 
-    .corner-left { top: 10px; left: 10px; }
-    .corner-right { top: 10px; right: 10px; }
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 6px 10px rgba(255,255,255,0.08),
+              inset 0 -6px 12px rgba(0,0,0,0.7),
+              0 14px 28px rgba(0,0,0,1);
+}
 
-    #accessMessage {
-      text-align: center;
-      color: var(--gold);
-      font-family: 'Orbitron', sans-serif;
-      font-size: 16pt;
-      margin-top: 12px;
-      opacity: 0;
-      transition: opacity 0.4s ease-in;
-    }
+.corner-image {
+  position: fixed;
+  width: 2.5in;
+  height: 2.5in;
+  object-fit: contain;
+  pointer-events: none;
+}
 
-    #mainScreen {
-      display: none;
-      position: relative;
-      height: 100vh;
-      overflow-y: auto;
-    }
+.corner-left { top: 10px; left: 10px; }
+.corner-right { top: 10px; right: 10px; }
 
-    #mainScreen .container {
-  background: rgba(0, 0, 0, 0.6);
+#accessMessage {
+  text-align: center;
+  color: var(--gold);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16pt;
+  margin-top: 12px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+#mainScreen {
+  display: none;
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+#mainScreen .container {
+  background: #000;
   border: 2px solid var(--gold);
   box-shadow: 0 0 20px var(--blue);
   width: min(calc(100% - 6in), 1400px);
@@ -160,91 +169,88 @@
   text-align: center;
 }
 
-    #mainScreen .page-title {
-  -webkit-text-stroke: 1px #888;
+.fixed-return {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
 }
 
-    .fixed-return {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 1000;
-    }
+.training-section {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #444;
+}
 
-    .training-section {
-      margin-bottom: 25px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #444;
-    }
+.training-section h3 {
+  font-size: 18pt;
+  color: var(--gold);
+  text-align: center;
+}
 
-    .training-section h3 {
-      font-size: 18pt;
-      color: var(--gold);
-      text-align: center;
-    }
+.answers {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
 
-    .answers {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-    }
+.answers button {
+  width: 90%;
+  max-width: 600px;
+}
 
-    .answers button {
-      width: 90%;
-      max-width: 600px;
-    }
+.answer-block {
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--text);
+  margin: 8px auto;
+  max-width: 800px;
+}
 
-    .answer-block {
-      background: rgba(255,255,255,0.05);
-      border-radius: 10px;
-      padding: 10px;
-      color: var(--text);
-      margin: 8px auto;
-      max-width: 800px;
-    }
+#examScoreboard {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 260px;
+  background: rgba(0,0,0,0.7);
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px var(--gold);
+}
 
-    #examScoreboard {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      width: 260px;
-      background: rgba(0,0,0,0.7);
-      border: 2px solid var(--gold);
-      border-radius: 10px;
-      padding: 10px;
-      box-shadow: 0 0 10px var(--gold);
-    }
+#examScoreboard h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16pt;
+  color: var(--gold);
+  text-align: center;
+}
 
-    #examScoreboard h3 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 16pt;
-      color: var(--gold);
-      text-align: center;
-    }
+#examScoreboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-    #examScoreboard table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+#examScoreboard td {
+  padding: 3px;
+  color: white;
+}
 
-    #examScoreboard td {
-      padding: 3px;
-      color: white;
-    }
+#examScoreboard tr.highlight td {
+  color: var(--gold);
+  font-weight: bold;
+}
 
-    #examScoreboard tr.highlight td {
-      color: var(--gold);
-      font-weight: bold;
-    }
+#examProgress {
+  text-align: center;
+  font-size: 13pt;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
 
-    #examProgress {
-      text-align: center;
-      font-size: 13pt;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
   </style>
 </head>
 <body>
@@ -598,6 +604,7 @@
   </script>
 </body>
 </html>
+
 
 
 
