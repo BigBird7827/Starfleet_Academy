@@ -18,10 +18,10 @@
       margin: 0;
       padding: 0;
       height: 100%;
+      background: var(--black);
       font-family: 'Roboto', sans-serif;
       color: var(--text);
       overflow-x: hidden;
-      background: var(--black);
     }
 
     .page-title {
@@ -36,11 +36,11 @@
       position: relative;
       height: 100vh;
       width: 100%;
+      background: url("Starfleet Academy - San Francisco.gif") no-repeat center center fixed;
+      background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url("https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20-%20San%20Francisco.gif") no-repeat center center fixed;
-      background-size: cover;
     }
 
     .lcars-left, .lcars-top, .lcars-bottom {
@@ -75,22 +75,13 @@
     }
 
     .container {
-      background: #000;
+      background: rgba(0,0,0,0.8);
       border: 2px solid var(--gold);
       border-radius: 12px;
       box-shadow: 0 0 20px var(--blue);
       padding: 30px 40px;
       width: 420px;
       z-index: 2;
-    }
-
-    #loginScreen .container {
-      background: rgba(0, 0, 0, 0.7);
-    }
-
-    #loginScreen .page-title {
-      -webkit-text-stroke: 1px #888;
-      text-stroke: 1px #888;
     }
 
     label {
@@ -165,31 +156,9 @@
       background: #000;
       border: 2px solid var(--gold);
       box-shadow: 0 0 20px var(--blue);
-      width: min(calc(100% - 8in), 1000px);
-      margin: 220px auto 0;
+      width: min(calc(100% - 6in), 1400px);
+      margin: 160px auto 0;
       text-align: center;
-    }
-
-    #orientationPage .orientation-box {
-      background: #000;
-      border: 2px solid var(--gold);
-      border-radius: 12px;
-      box-shadow: 0 0 20px var(--blue);
-      padding: 30px;
-      margin: 40px auto 0;
-      width: min(90%, 900px);
-      text-align: center;
-    }
-
-    #moduleButtons {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: auto;
-      gap: 20px;
-      justify-items: center;
-      align-items: center;
-      max-width: 700px;
-      margin: 0 auto;
     }
     .fixed-return {
       position: fixed;
@@ -272,6 +241,28 @@
       color: var(--gold);
       margin-bottom: 10px;
     }
+
+    .orientation-box {
+      display: inline-block;
+      padding: 30px;
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 0 15px var(--blue);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    #moduleButtons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
   </style>
 </head>
 <body>
@@ -352,7 +343,6 @@
     <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
     <button class="fixed-return" id="returnOrientationTrain">Back to Departments</button>
   </div>
-
   <div id="labPage" style="display:none;text-align:center;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -435,19 +425,21 @@
     function openOrientation(mode) {
       document.getElementById("mainScreen").style.display = "none";
       const title = document.getElementById("orientationTitle");
-      title.textContent = mode === "exam" ? "Select Exam Department" :
-                          mode === "lab"  ? "Select Lab Department"  :
-                                            "Select Training Department";
+      title.textContent =
+        mode === "exam" ? "Select Exam Department" :
+        mode === "lab" ? "Select Lab Department" :
+        "Select Training Department";
+
       const btnBox = document.getElementById("moduleButtons");
       btnBox.innerHTML = "";
       Object.keys(trainingFiles).forEach(dept => {
         const b = document.createElement("button");
         b.textContent = dept;
-        b.addEventListener("click", () => {
+        b.onclick = () => {
           if (mode === "training") loadTraining(dept);
           else if (mode === "lab") loadLab(dept);
           else loadExam(dept);
-        });
+        };
         btnBox.appendChild(b);
       });
       document.getElementById("orientationPage").style.display = "block";
@@ -457,14 +449,17 @@
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("mainScreen").style.display = "block";
     };
+
     document.getElementById("returnOrientationTrain").onclick = () => {
       document.getElementById("trainingPage").style.display = "none";
       document.getElementById("orientationPage").style.display = "block";
     };
+
     document.getElementById("returnOrientationLab").onclick = () => {
       document.getElementById("labPage").style.display = "none";
       document.getElementById("orientationPage").style.display = "block";
     };
+
     document.getElementById("returnOrientationExam").onclick = () => {
       document.getElementById("examPage").style.display = "none";
       document.getElementById("orientationPage").style.display = "block";
