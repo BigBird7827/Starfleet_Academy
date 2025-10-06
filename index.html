@@ -240,6 +240,21 @@
       color: var(--gold);
       margin-bottom: 10px;
     }
+
+    .department-buttons-box {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(0,0,0,0.8);
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 0 15px var(--blue);
+    }
   </style>
 </head>
 <body>
@@ -273,6 +288,7 @@
       <p id="accessMessage">Access Granted</p>
     </div>
   </div>
+
   <div id="mainScreen">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -290,10 +306,13 @@
         Choose your path and begin your training or participate in interactive
         labs and exams to test your readiness for active duty.
       </p>
-      <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;">
-        <button id="trainingBtn" style="width:240px;">Training</button>
-        <button id="labBtn" style="width:240px;">Labs</button>
-        <button id="examBtn" style="width:240px;">Exams</button>
+      <div class="department-buttons-box">
+        <button id="trainingBtn" style="width:200px;">Training</button>
+        <button id="labBtn" style="width:200px;">Labs</button>
+        <button id="examBtn" style="width:200px;">Exams</button>
+        <button style="width:200px;">Command</button>
+        <button style="width:200px;">Science</button>
+        <button style="width:200px;">Medical</button>
       </div>
     </div>
   </div>
@@ -304,7 +323,7 @@
     <div class="orientation-root" style="text-align:center;margin-top:100px;">
       <div class="page-title" id="orientationTitle"></div>
       <div style="font-size:16pt;margin-bottom:30px;">Select a department to begin.</div>
-      <div id="moduleButtons" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;max-width:800px;margin:0 auto;"></div>
+      <div id="moduleButtons" class="department-buttons-box"></div>
       <button class="fixed-return" id="returnMain">Return to Main</button>
     </div>
   </div>
@@ -457,7 +476,7 @@
                 section.innerHTML = `<h3>${item.scenario}</h3><p>${item.summary || ""}</p>`;
                 if (item.answers) {
                   const answersDiv = document.createElement("div");
-                  answersDiv.className = "answers";
+                  answersDiv.className = "answers department-buttons-box";
                   item.answers.forEach(ans => {
                     const block = document.createElement("div");
                     block.className = "answer-block";
@@ -470,130 +489,6 @@
                 content.appendChild(section);
               });
             } else content.innerHTML = "<p>No training items found.</p>";
-          });
-      }
-
-      function loadLab(dept) {
-        document.getElementById("orientationPage").style.display = "none";
-        document.getElementById("labPage").style.display = "block";
-        document.getElementById("labDeptTitle").textContent = `${dept} Lab`;
-        document.getElementById("labCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
-        const content = document.getElementById("labContent");
-        content.innerHTML = "<p>Loading...</p>";
-
-        fetch(labFiles[dept])
-          .then(r => r.json())
-          .then(data => {
-            content.innerHTML = "";
-            if (!(data.lab && data.lab.length)) {
-              content.innerHTML = "<p>No lab scenarios found.</p>";
-              return;
-            }
-            let index = 0;
-            function renderScenario() {
-              const item = data.lab[index];
-              content.innerHTML = `<div class='training-section'><h3>${item.scenario}</h3><p>${item.summary || ""}</p></div>`;
-              const answersDiv = document.createElement("div");
-              answersDiv.className = "answers";
-              item.answers.forEach(ans => {
-                const btn = document.createElement("button");
-                btn.textContent = ans.text;
-                btn.onclick = () => evaluate(ans, item);
-                answersDiv.appendChild(btn);
-              });
-              content.appendChild(answersDiv);
-            }
-            function evaluate(ans, item) {
-              document.querySelectorAll("#labContent .answers button").forEach(b => b.disabled = true);
-              const best = item.answers.find(a => a.type === "best");
-              const feedback = document.createElement("div");
-              if (ans.type === "best") feedback.innerHTML = `<strong>Correct.</strong> ${ans.details}`;
-              else if (ans.type === "alternate")
-                feedback.innerHTML = `<strong>Acceptable.</strong> ${ans.details}<br><br>The best action would have been:<br><em>${best.text}</em>`;
-              else
-                feedback.innerHTML = `<strong>Incorrect.</strong> ${ans.details}<br><br>The correct course:<br><em>${best.text}</em>`;
-              content.appendChild(feedback);
-              const next = document.createElement("button");
-              next.textContent = index < data.lab.length - 1 ? "Next Scenario" : "Finish Lab";
-              next.onclick = () => {
-                index++;
-                if (index < data.lab.length) renderScenario();
-                else content.innerHTML = `<h3>Lab Complete</h3>`;
-              };
-              content.appendChild(next);
-            }
-            renderScenario();
-          });
-      }
-
-      function loadExam(dept) {
-        document.getElementById("orientationPage").style.display = "none";
-        document.getElementById("examPage").style.display = "block";
-        document.getElementById("examDeptTitle").textContent = `${dept} Exam`;
-        document.getElementById("examCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
-        const content = document.getElementById("examContent");
-        const table = document.getElementById("cadetTable");
-        const progress = document.getElementById("examProgress");
-        const classmates = [
-          { name: cadetName, gpa: 0.00, self: true },
-          { name: "T'Lor", gpa: 0.00 }, { name: "Dax", gpa: 0.00 }, { name: "Nog", gpa: 0.00 },
-          { name: "Paris", gpa: 0.00 }, { name: "Vorik", gpa: 0.00 }, { name: "Ro", gpa: 0.00 },
-          { name: "O'Brien", gpa: 0.00 }, { name: "Leeta", gpa: 0.00 }, { name: "Torres", gpa: 0.00 }
-        ];
-        let answered = 0, total = 0;
-        function updateScoreboard() {
-          const rows = [...classmates].sort((a,b)=>b.gpa-a.gpa)
-            .map(c=>`<tr class='${c.self?"highlight":""}'><td>${c.self?"You":c.name}</td><td style='text-align:right;'>${c.gpa.toFixed(2)}</td></tr>`).join("");
-          table.innerHTML = rows;
-          progress.textContent = `Questions Answered: ${answered}`;
-        }
-        fetch(examFiles[dept])
-          .then(r=>r.json())
-          .then(data=>{
-            const questions = data.study.slice(0,15);
-            let index=0;
-            function renderQuestion(){
-              const q=questions[index];
-              content.innerHTML=`<div class='training-section'><h3>${q.scenario}</h3><p>${q.summary||""}</p></div>`;
-              const answersDiv=document.createElement("div");
-              answersDiv.className="answers";
-              let allAnswers=[...q.answers];
-              if(allAnswers.length<5){
-                allAnswers.push({text:"Reroute main deflector through EPS grid.",score:0,type:"wrong",details:"This would destabilize the system."});
-                allAnswers.push({text:"Ignore the situation and await orders.",score:0,type:"wrong",details:"Inaction is unacceptable."});
-              }
-              allAnswers.sort(()=>Math.random()-0.5);
-              allAnswers.forEach(a=>{
-                const btn=document.createElement("button");
-                btn.textContent=a.text;
-                btn.onclick=()=>evaluate(a,q);
-                answersDiv.appendChild(btn);
-              });
-              content.appendChild(answersDiv);
-            }
-            function evaluate(ans,q){
-              document.querySelectorAll("#examContent .answers button").forEach(b=>b.disabled=true);
-              const best=q.answers.find(a=>a.type==="best");
-              const feedback=document.createElement("div");
-              if(ans.type==="best"){feedback.innerHTML=`<strong>Correct.</strong> ${ans.details}`;total+=ans.score;}
-              else if(ans.type==="alternate"){feedback.innerHTML=`<strong>Acceptable.</strong> ${ans.details}<br><br>The best answer was:<br><em>${best.text}</em>`;total+=ans.score;}
-              else{feedback.innerHTML=`<strong>Incorrect.</strong> ${ans.details}<br><br>The correct response was:<br><em>${best.text}</em>`;}
-              content.appendChild(feedback);
-              answered++;
-              const gpa=((total/(answered*10))*4)||0;
-              classmates.find(c=>c.self).gpa=gpa;
-              updateScoreboard();
-              const next=document.createElement("button");
-              next.textContent=index<questions.length-1?"Next Question":"Finish Exam";
-              next.onclick=()=>{
-                index++;
-                if(index<questions.length)renderQuestion();
-                else content.innerHTML=`<h3>Exam Complete</h3><p>Your total score: ${total}<br>Your final GPA: ${gpa.toFixed(2)}</p>`;
-              };
-              content.appendChild(next);
-            }
-            updateScoreboard();
-            renderQuestion();
           });
       }
 
