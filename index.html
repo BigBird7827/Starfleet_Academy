@@ -170,6 +170,19 @@ button:hover {
   text-align: center;
 }
 
+#moduleButtons {
+  border: 2px solid var(--gold);
+  border-radius: 16px;
+  padding: 30px;
+  background: rgba(0,0,0,0.8);
+  box-shadow: 0 0 20px var(--blue);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .fixed-return {
   position: fixed;
   bottom: 20px;
@@ -251,7 +264,6 @@ button:hover {
   color: var(--gold);
   margin-bottom: 10px;
 }
-
 
   </style>
 </head>
@@ -606,6 +618,7 @@ button:hover {
   </script>
 </body>
 </html>
+
 
 
 
