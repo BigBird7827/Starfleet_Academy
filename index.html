@@ -6,7 +6,7 @@
   <title>Starfleet Academy</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
+:root {
   --gold:#ffcc66;
   --blue:#0077cc;
   --green:#00cc66;
@@ -88,7 +88,6 @@ button:hover{
              inset 0 -6px 12px rgba(0,0,0,0.7),
              0 14px 28px rgba(0,0,0,1);
 }
-
 .department-select-box{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -103,7 +102,6 @@ button:hover{
   padding:30px;
   box-shadow:0 0 15px var(--blue);
 }
-
 .department-buttons-box{
   display:flex;
   flex-direction:column;
@@ -175,7 +173,6 @@ button:hover{
 @media(max-width:900px){
   #trainingPage .fixed-return{top:auto;bottom:20px;transform:none;}
 }
-
   </style>
 </head>
 <body>
@@ -224,9 +221,11 @@ button:hover{
         pillar in the exploration and defense of the Federation.
       </p>
       <p style="font-size:14pt;color:#fff;margin-bottom:48px;text-align:center;max-width:900px;">
-        Choose your path and begin your training or participate in interactive
-        labs and exams to test your readiness for active duty.
-      </p>
+  Choose your path and begin studying by selecting the "Training" button below.
+  When you're ready, return to this page and choose the "Labs" to test what you've learned.
+  Once all labs are complete, you will take a final exam by choosing the "Exams" button.
+  Good luck, Cadet!
+</p>
       <div class="department-select-box" style="grid-template-columns: repeat(3, 1fr); width:auto; background:rgba(0,0,0,0.8);">
         <button id="trainingBtn" style="width:200px;">Training</button>
         <button id="labBtn" style="width:200px;">Labs</button>
@@ -234,7 +233,6 @@ button:hover{
       </div>
     </div>
   </div>
-
   <div id="orientationPage" style="display:none;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -263,6 +261,7 @@ button:hover{
     <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
     <button class="fixed-return" id="returnOrientationLab">Back to Departments</button>
   </div>
+
   <script>
   document.addEventListener("DOMContentLoaded", () => {
 
@@ -292,14 +291,18 @@ button:hover{
     };
 
     const prefaces = {
-      "Command": "Command is not about absolute authority; it is about absolute responsibility.",
-      "Diplomacy": "Diplomacy is the Federation’s first line of defense.",
-      "Engineering": "Starfleet ships are only as strong as their engineers.",
-      "Science": "Exploration is our mandate.",
-      "Medical": "You are responsible for the health and safety of every crew member.",
-      "Security": "Maintain order, enforce protocols, and respond to threats with precision."
-    };
+      "Command": "For this training, you wear the captain’s uniform. The chair is yours, and every order you give carries the weight of command. You’ll find that leadership in Starfleet isn’t about authority—it’s about responsibility. Your crew will look to you for direction, for confidence, for hope. You must earn their trust, and keep it, even when the right choice is the hardest one. There will be moments when every option feels wrong. In those moments, remember who you are, what you stand for, and the principles of the Federation you serve. A captain doesn’t seek to be obeyed. A captain seeks to be worthy of being followed.",
 
+      "Diplomacy": "In this training, you speak for the Federation itself. You will find that diplomacy demands more than calm words and protocol—it requires patience, conviction, and the courage to listen. As the officer responsible for every negotiation, you will stand where misunderstandings turn to war, and where trust must be built from suspicion. Remember: respect earns allies faster than power ever will. You are not here to win arguments—you are here to prevent battles no one should have to fight.",
+
+      "Engineering": "The heart of a starship beats in your hands. As Chief Engineer, you are the guardian of that heart—the one who keeps the lights burning, the air flowing, and the stars within reach. When systems fail, others look to you not for panic, but for precision. Know every circuit, every conduit, and every sound your ship makes. Anticipate problems before they spark, and lead your team as you would command a crew: with confidence, clarity, and absolute trust in your people.",
+
+      "Science": "Curiosity is your compass, and knowledge your constant companion. As Chief Science Officer, your duty is to seek understanding where others see only mystery. The captain relies on your insight to navigate the unknown, and your discipline ensures that discovery never comes at the cost of ethics. Never stop asking why—even when the answer is uncomfortable. The pursuit of truth is the Federation’s highest calling, and it begins with you.",
+
+      "Medical": "Every life aboard your ship depends on your steadiness and compassion. As Chief Medical Officer, you are the conscience of the command staff—the one who reminds the crew what it means to be human, Vulcan, or any being with a heart. You will face the line between science and empathy every day, where protocol meets pain. Treat every patient as though the fate of the mission rests with them—because more often than not, it does.",
+
+      "Security": "As Chief of Security, you stand between your crew and chaos. Your duty is to safeguard not just the ship, but the principles that guide it. Strength without discipline is recklessness; vigilance without judgment is fear. You must know when to act, and when to hold the line. Lead your officers by example: with resolve, integrity, and respect for every life under your protection. Remember—security is not about control; it is about trust."
+    };
     let cadetName = "", species = "";
 
     document.getElementById("loginBtn").addEventListener("click", () => {
