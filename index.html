@@ -13,7 +13,6 @@
       --black: #000;
       --text: #e6e6e6;
     }
-
     html, body {
       margin: 0;
       padding: 0;
@@ -23,7 +22,6 @@
       color: var(--text);
       overflow-x: hidden;
     }
-
     .page-title {
       font-family: 'Orbitron', sans-serif;
       font-size: 36pt;
@@ -31,7 +29,6 @@
       text-align: center;
       margin: 20px 0 10px;
     }
-
     #loginScreen {
       position: relative;
       height: 100vh;
@@ -42,12 +39,10 @@
       justify-content: center;
       align-items: center;
     }
-
     .lcars-left, .lcars-top, .lcars-bottom {
       position: absolute;
       background: var(--dark-blue);
     }
-
     .lcars-left {
       top: 0;
       left: 0;
@@ -55,7 +50,6 @@
       height: 100%;
       border-right: 6px solid var(--gold);
     }
-
     .lcars-top {
       top: 0;
       left: 0;
@@ -64,7 +58,6 @@
       background: var(--gold);
       border-bottom-left-radius: 50px;
     }
-
     .lcars-bottom {
       bottom: 0;
       left: 0;
@@ -73,7 +66,6 @@
       background: var(--gold);
       border-top-left-radius: 50px;
     }
-
     .container {
       background: rgba(0,0,0,0.8);
       border: 2px solid var(--gold);
@@ -83,14 +75,12 @@
       width: 420px;
       z-index: 2;
     }
-
     label {
       display: block;
       color: var(--gold);
       font-size: 14pt;
       margin-bottom: 6px;
     }
-
     input, select {
       width: 100%;
       padding: 10px;
@@ -101,7 +91,6 @@
       font-size: 14pt;
       border-radius: 6px;
     }
-
     button {
       background: linear-gradient(to bottom, #003366, #001933);
       border: 2px solid var(--gold);
@@ -116,14 +105,12 @@
                   0 6px 12px rgba(0,0,0,0.9);
       transition: transform 0.2s;
     }
-
     button:hover {
       transform: translateY(-2px);
       box-shadow: inset 0 6px 10px rgba(255,255,255,0.08),
                   inset 0 -6px 12px rgba(0,0,0,0.7),
                   0 14px 28px rgba(0,0,0,1);
     }
-
     .corner-image {
       position: fixed;
       width: 2.5in;
@@ -131,10 +118,8 @@
       object-fit: contain;
       pointer-events: none;
     }
-
     .corner-left { top: 10px; left: 10px; }
     .corner-right { top: 10px; right: 10px; }
-
     #accessMessage {
       text-align: center;
       color: var(--gold);
@@ -144,14 +129,12 @@
       opacity: 0;
       transition: opacity 0.4s ease-in;
     }
-
     #mainScreen {
       display: none;
       position: relative;
       height: 100vh;
       overflow-y: auto;
     }
-
     #mainScreen .container {
       background: #000;
       border: 2px solid var(--gold);
@@ -160,26 +143,22 @@
       margin: 160px auto 0;
       text-align: center;
     }
-
     .fixed-return {
       position: fixed;
       bottom: 20px;
       left: 20px;
       z-index: 1000;
     }
-
     .training-section {
       margin-bottom: 25px;
       padding-bottom: 15px;
       border-bottom: 1px solid #444;
     }
-
     .training-section h3 {
       font-size: 18pt;
       color: var(--gold);
       text-align: center;
     }
-
     .answers {
       margin-top: 10px;
       display: flex;
@@ -187,19 +166,16 @@
       gap: 10px;
       align-items: center;
     }
-
     .answers button {
       width: 90%;
       max-width: 600px;
     }
-
     #labContent, #examContent {
       font-family: 'Roboto', sans-serif;
       font-size: 14pt;
       color: #ffffff;
       line-height: 1.6;
     }
-
     #examScoreboard {
       position: fixed;
       top: 20px;
@@ -211,36 +187,30 @@
       padding: 10px;
       box-shadow: 0 0 10px var(--gold);
     }
-
     #examScoreboard h3 {
       font-family: 'Orbitron', sans-serif;
       font-size: 16pt;
       color: var(--gold);
       text-align: center;
     }
-
     #examScoreboard table {
       width: 100%;
       border-collapse: collapse;
     }
-
     #examScoreboard td {
       padding: 3px;
       color: white;
     }
-
     #examScoreboard tr.highlight td {
       color: var(--gold);
       font-weight: bold;
     }
-
     #examProgress {
       text-align: center;
       font-size: 13pt;
       color: var(--gold);
       margin-bottom: 10px;
     }
-
     .department-buttons-box {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -288,7 +258,6 @@
       <p id="accessMessage">Access Granted</p>
     </div>
   </div>
-
   <div id="mainScreen">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -310,13 +279,9 @@
         <button id="trainingBtn" style="width:200px;">Training</button>
         <button id="labBtn" style="width:200px;">Labs</button>
         <button id="examBtn" style="width:200px;">Exams</button>
-        <button style="width:200px;">Command</button>
-        <button style="width:200px;">Science</button>
-        <button style="width:200px;">Medical</button>
       </div>
     </div>
   </div>
-
   <div id="orientationPage" style="display:none;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -327,7 +292,6 @@
       <button class="fixed-return" id="returnMain">Return to Main</button>
     </div>
   </div>
-
   <div id="trainingPage" style="display:none;text-align:center;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -336,7 +300,6 @@
     <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
     <button class="fixed-return" id="returnOrientationTrain">Back to Departments</button>
   </div>
-
   <div id="labPage" style="display:none;text-align:center;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -345,7 +308,6 @@
     <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
     <button class="fixed-return" id="returnOrientationLab">Back to Departments</button>
   </div>
-
   <div id="examPage" style="display:none;text-align:center;">
     <div id="examScoreboard">
       <h3>Class Rankings</h3>
@@ -359,7 +321,6 @@
   </div>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-
       const trainingFiles = {
         "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
         "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
@@ -368,7 +329,6 @@
         "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training.json",
         "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Training.json"
       };
-
       const labFiles = {
         "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Lab.json",
         "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Lab.json",
@@ -377,9 +337,7 @@
         "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
         "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
       };
-
       const examFiles = { ...trainingFiles };
-
       const prefaces = {
         "Command": "Command is not about absolute authority; it is about absolute responsibility.",
         "Diplomacy": "Diplomacy is the Federation’s first line of defense.",
@@ -388,16 +346,13 @@
         "Medical": "You are responsible for the health and safety of every crew member.",
         "Security": "Maintain order, enforce protocols, and respond to threats with precision."
       };
-
       const homeworlds = {
         "Human": "Earth", "Vulcan": "Vulcan", "Andorian": "Andoria", "Tellarite": "Tellar Prime",
         "Bajoran": "Bajor", "Betazoid": "Betazed", "Bolian": "Bolarus IX", "Trill": "Trill",
         "Klingon": "Qo'noS", "Ferengi": "Ferenginar", "Denobulan": "Denobula", "Orion": "Orion",
         "Caitian": "Cait", "Benzite": "Benzar"
       };
-
       let cadetName = "", species = "";
-
       document.getElementById("loginBtn").addEventListener("click", () => {
         cadetName = document.getElementById("cadetName").value.trim();
         species = document.getElementById("species").value;
@@ -405,25 +360,21 @@
         const msg = document.getElementById("accessMessage");
         msg.textContent = `Access Granted — Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
         msg.style.opacity = 1;
-
         setTimeout(() => {
           document.getElementById("loginScreen").style.display = "none";
           document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
           document.getElementById("mainScreen").style.display = "block";
         }, 5000);
       });
-
       document.getElementById("trainingBtn").addEventListener("click", () => openOrientation("training"));
       document.getElementById("labBtn").addEventListener("click", () => openOrientation("lab"));
       document.getElementById("examBtn").addEventListener("click", () => openOrientation("exam"));
-
       function openOrientation(mode) {
         document.getElementById("mainScreen").style.display = "none";
         const title = document.getElementById("orientationTitle");
         title.textContent = mode === "exam" ? "Select Exam Department" :
                             mode === "lab"  ? "Select Lab Department"  :
                                               "Select Training Department";
-
         const btnBox = document.getElementById("moduleButtons");
         btnBox.innerHTML = "";
         Object.keys(trainingFiles).forEach(dept => {
@@ -438,7 +389,6 @@
         });
         document.getElementById("orientationPage").style.display = "block";
       }
-
       document.getElementById("returnMain").onclick = () => {
         document.getElementById("orientationPage").style.display = "none";
         document.getElementById("mainScreen").style.display = "block";
@@ -455,7 +405,6 @@
         document.getElementById("examPage").style.display = "none";
         document.getElementById("orientationPage").style.display = "block";
       };
-
       function loadTraining(dept) {
         document.getElementById("orientationPage").style.display = "none";
         document.getElementById("trainingPage").style.display = "block";
@@ -463,7 +412,6 @@
         document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
         const content = document.getElementById("trainingContent");
         content.innerHTML = "<p>Loading...</p>";
-
         fetch(trainingFiles[dept])
           .then(r => r.json())
           .then(data => {
@@ -491,7 +439,6 @@
             } else content.innerHTML = "<p>No training items found.</p>";
           });
       }
-
     });
   </script>
 </body>
