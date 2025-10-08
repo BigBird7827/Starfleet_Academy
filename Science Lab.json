@@ -1,723 +1,182 @@
 {
-  "department": "Science",
   "lab": [
     {
-      "scenario": "Subspace Sensor Distortion",
-      "summary": "Long-range subspace arrays begin reporting inconsistent readings from a nearby nebula.",
+      "scenario": "Subspace Field Distortion",
+      "summary": "Sensor readings show a local subspace distortion near the ship\u2019s warp field boundary.",
       "answers": [
         {
-          "text": "Recalibrate sensors with localized reference points and verify through triangulated starbase data.",
+          "text": "Recalibrate the subspace field sensors and conduct a low-level warp field modulation test.",
           "score": 9,
           "type": "best",
-          "details": "Ensures accurate readings through cross-verification and methodical recalibration."
+          "details": "Maintains safety margins while verifying sensor reliability and field stability."
         },
         {
-          "text": "Dispatch a probe to relay clean telemetry for remote recalibration.",
+          "text": "Run a gravimetric scan to determine if the distortion is naturally occurring or induced.",
           "score": 8,
           "type": "alternate",
-          "details": "Adds confirmation data but delays result and risks probe loss in interference."
+          "details": "Identifies the nature of the anomaly, though not an immediate corrective action."
         },
         {
-          "text": "Ignore anomalies assuming temporary distortion from solar activity.",
+          "text": "Notify Engineering to temporarily increase warp core output for better data resolution.",
           "score": 7,
           "type": "alternate",
-          "details": "Quick resolution but risks missing early detection of a significant subspace phenomenon."
+          "details": "Provides higher data fidelity but risks additional field disturbance."
+        },
+        {
+          "text": "Ignore the readings; subspace anomalies are common and usually self-correcting.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Neglects potential hazards; subspace fluctuations can destabilize warp geometry."
+        },
+        {
+          "text": "Attempt to neutralize the distortion by generating a counter-frequency pulse without analysis.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Acting without diagnostic confirmation risks amplifying the anomaly."
         }
       ]
     },
     {
-      "scenario": "Unknown Microbial Bloom in Hydroponics",
-      "summary": "A sudden microbial bloom begins affecting plant growth aboard ship.",
+      "scenario": "Unidentified Microbial Lifeform",
+      "summary": "A newly discovered microbial organism exhibits rapid adaptation to containment protocols.",
       "answers": [
         {
-          "text": "Quarantine the section, analyze samples under containment, and sequence DNA for cross-species contamination.",
+          "text": "Quarantine the organism under level-4 containment and analyze its adaptive genome in isolation.",
           "score": 9,
           "type": "best",
-          "details": "Prevents contamination and allows identification for targeted remediation."
+          "details": "Ensures safety and enables scientific study within secure conditions."
         },
         {
-          "text": "Adjust environmental controls to inhibit growth while continuing operations.",
+          "text": "Adjust containment frequency fields incrementally while monitoring mutation rate.",
           "score": 8,
           "type": "alternate",
-          "details": "Reduces spread but risks mutation or adaptation if cause is not removed."
+          "details": "Adaptive containment shows initiative but carries moderate exposure risk."
         },
         {
-          "text": "Flush hydroponics and reseed with sterilized stock immediately.",
+          "text": "Deploy a sterilization field to eliminate all traces immediately.",
           "score": 7,
           "type": "alternate",
-          "details": "Resolves symptoms but loses valuable samples and data for analysis."
+          "details": "Prevents spread but forfeits valuable research potential."
+        },
+        {
+          "text": "Lower containment levels to test the organism\u2019s tolerance thresholds.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Unethical and dangerous; violates Starfleet xenobiology protocol."
+        },
+        {
+          "text": "Expose the organism to transporter pattern filters to \u2018edit out\u2019 unwanted traits.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Transporter-based genetic manipulation without clearance breaches Federation medical law."
         }
       ]
     },
     {
-      "scenario": "Unstable Quantum Filament",
-      "summary": "A passing quantum filament interferes with navigation and power regulation.",
+      "scenario": "Sensor Data Corruption",
+      "summary": "Astrometric data from long-range sensors returns contradictory readings on stellar mass composition.",
       "answers": [
         {
-          "text": "Divert power to deflector shields, recalibrate sensors, and maintain minimum safe distance.",
+          "text": "Cross-reference with nearby probe telemetry and recalibrate the sensor array\u2019s spectral filters.",
           "score": 9,
           "type": "best",
-          "details": "Balances safety and data collection while avoiding destructive interference."
+          "details": "Standard Starfleet correction ensuring data integrity and alignment with probe standards."
         },
         {
-          "text": "Attempt to harness the filament’s energy output for study.",
+          "text": "Conduct a diagnostic on the sensor grid using controlled subspace interference patterns.",
           "score": 8,
           "type": "alternate",
-          "details": "Potential discovery but dangerously unpredictable energy levels."
+          "details": "Effective for isolating distortion sources in the long-range sensor network."
         },
         {
-          "text": "Proceed through filament at reduced speed to minimize exposure.",
+          "text": "Recompile previous scans using predictive data smoothing algorithms.",
           "score": 7,
           "type": "alternate",
-          "details": "Risky maneuver that could cause cascading failures in ship systems."
+          "details": "Reasonable for trend analysis, though it risks masking real anomalies."
+        },
+        {
+          "text": "Dismiss the discrepancy as software drift and proceed with current readings.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Fails to verify data reliability; Starfleet science demands empirical accuracy."
+        },
+        {
+          "text": "Attempt to compensate by amplifying the array\u2019s subspace gain beyond calibration limits.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Overamplification risks permanent sensor damage and false-positive readings."
         }
       ]
     },
     {
-      "scenario": "Unexpected Species Evolution",
-      "summary": "Lab organisms show accelerated evolutionary traits after transporter exposure.",
+      "scenario": "Unexpected Energy Signature",
+      "summary": "A spatial survey detects an intermittent energy signature with no apparent source or pattern.",
       "answers": [
         {
-          "text": "Isolate the specimens and analyze transporter logs for pattern anomalies.",
+          "text": "Record the phenomenon and deploy a Class-II probe to gather localized readings.",
           "score": 9,
           "type": "best",
-          "details": "Preserves biosecurity while identifying possible transporter malfunction or breakthrough."
+          "details": "Follows Starfleet scientific procedure for safe remote data collection."
         },
         {
-          "text": "Continue observation to study accelerated evolution under containment.",
+          "text": "Adjust sensor modulation to enhance detection range and frequency discrimination.",
           "score": 8,
           "type": "alternate",
-          "details": "Valuable research opportunity but risks spreading unknown mutations."
+          "details": "Improves signal clarity while maintaining safe observational distance."
         },
         {
-          "text": "Terminate specimens to prevent any biological threat.",
+          "text": "Compare the readings to known subspace interference patterns from previous missions.",
           "score": 7,
           "type": "alternate",
-          "details": "Guarantees safety but destroys potentially groundbreaking data."
+          "details": "Provides useful context but does not directly verify the anomaly\u2019s cause."
+        },
+        {
+          "text": "Initiate direct energy scans without containment protocols.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Risks feedback interference; unsafe without field dampeners in place."
+        },
+        {
+          "text": "Attempt to match the frequency and emit a return pulse to 'communicate' with the anomaly.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Speculative and hazardous; risks resonance or subspace rupture."
         }
       ]
     },
     {
-      "scenario": "Graviton Wave Anomaly",
-      "summary": "Localized graviton fluctuations threaten sensor calibration and could distort nearby starship traffic.",
+      "scenario": "Warp Core Radiation Leak",
+      "summary": "A trace radiation leak is detected near the warp core\u2019s plasma conduit junctions.",
       "answers": [
         {
-          "text": "Plot and map fluctuation fields, issue navigational warnings, and record gravimetric readings for later modeling.",
+          "text": "Evacuate engineering staff, seal affected sections, and deploy containment fields.",
           "score": 9,
           "type": "best",
-          "details": "Collects critical data safely while warning others to avoid hazard zone."
+          "details": "Prioritizes crew safety and follows Starfleet emergency radiation protocols."
         },
         {
-          "text": "Attempt to stabilize graviton field with inverse-frequency pulses.",
+          "text": "Conduct a level-2 diagnostic to identify microfractures in the plasma conduits.",
           "score": 8,
           "type": "alternate",
-          "details": "Proactive but risky; may worsen oscillations if miscalculated."
+          "details": "Efficient diagnostic approach that isolates potential structural issues safely."
         },
         {
-          "text": "Ignore readings until interference subsides naturally.",
+          "text": "Deploy sensor drones to scan the core environment for radiation variance.",
           "score": 7,
           "type": "alternate",
-          "details": "Avoids immediate risk but forfeits vital research opportunity."
-        }
-      ]
-    },
-    {
-      "scenario": "Alien Artifact Energy Signature",
-      "summary": "A newly recovered artifact emits intermittent subspace bursts of unknown origin.",
-      "answers": [
-        {
-          "text": "Transfer artifact to a secure containment field and perform spectral analysis under level-10 isolation.",
-          "score": 9,
-          "type": "best",
-          "details": "Ensures safety while preserving data for full spectrum analysis."
+          "details": "Effective remote scanning solution with minimal exposure risk."
         },
         {
-          "text": "Attempt direct interface using adaptive holo-interface to interpret data.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Could yield faster insight but risks activating unknown systems."
+          "text": "Increase ventilation flow to disperse radiation particles naturally.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Ineffective and unsafe; dispersal spreads contamination instead of containing it."
         },
         {
-          "text": "Store artifact in cargo hold until experts can arrive.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Delays research and leaves potential hazard unsecured."
-        }
-      ]
-    },
-    {
-      "scenario": "Biosphere Collapse on Colony",
-      "summary": "Sensor scans indicate ecological collapse following recent terraforming efforts.",
-      "answers": [
-        {
-          "text": "Dispatch planetary science teams to analyze atmosphere, soil, and water chemistry.",
-          "score": 9,
-          "type": "best",
-          "details": "Identifies systemic causes and enables targeted environmental corrections."
-        },
-        {
-          "text": "Recommend immediate evacuation of all colonists pending investigation.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Protects lives but disrupts long-term colony infrastructure unnecessarily."
-        },
-        {
-          "text": "Assume data error and recheck scans after orbital cycle.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Avoids premature alarm but risks worsening irreversible collapse."
-        }
-      ]
-    },
-    {
-      "scenario": "Temporal Signal Echoes",
-      "summary": "Chronometric echoes appear in subspace, mimicking transmissions from the ship’s own logs.",
-      "answers": [
-        {
-          "text": "Record and isolate signals for analysis while verifying no system self-interference.",
-          "score": 9,
-          "type": "best",
-          "details": "Preserves temporal integrity and allows safe scientific study of the phenomenon."
-        },
-        {
-          "text": "Attempt to respond to the echoes to test for causality.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Might reveal information about temporal displacement but risks paradox formation."
-        },
-        {
-          "text": "Block signal frequency to prevent feedback into communications array.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Prevents loop formation but discards potential temporal data."
-        }
-      ]
-    },
-    {
-      "scenario": "Crystal Growth in Warp Core Housing",
-      "summary": "Crystalline structures begin forming around plasma conduits.",
-      "answers": [
-        {
-          "text": "Deactivate plasma flow, analyze composition, and remove crystals under containment.",
-          "score": 9,
-          "type": "best",
-          "details": "Eliminates hazard and yields data on possible energy-matter anomalies."
-        },
-        {
-          "text": "Increase plasma flow to burn off formations safely.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Quickly clears obstruction but risks thermal stress damage."
-        },
-        {
-          "text": "Ignore as minor mineral accumulation from coolant condensation.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Assumes harmless residue; could result in containment breach."
-        }
-      ]
-    },
-    {
-      "scenario": "Rogue Nanites in Medical Bay",
-      "summary": "Microscopic self-replicating nanites appear to be modifying biobed systems autonomously.",
-      "answers": [
-        {
-          "text": "Seal bay, isolate network interfaces, and apply EM dampening field to deactivate rogue nanites.",
-          "score": 9,
-          "type": "best",
-          "details": "Halts spread immediately and preserves samples for analysis."
-        },
-        {
-          "text": "Attempt to communicate with nanites using standard Federation protocols for machine intelligence.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Potential diplomatic breakthrough if sentient but carries unknown risk."
-        },
-        {
-          "text": "Purge nanites by venting atmosphere and decontaminating equipment.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Guaranteed neutralization but destroys research potential."
-        }
-      ]
-    },
-    {
-      "scenario": "Unknown Element Discovered in Nebula",
-      "summary": "Spectroscopy identifies matter inconsistent with known periodic elements.",
-      "answers": [
-        {
-          "text": "Collect controlled samples via remote drones for lab synthesis.",
-          "score": 9,
-          "type": "best",
-          "details": "Enables safe isolation and replication for study without endangering ship."
-        },
-        {
-          "text": "Bring direct samples aboard for immediate study.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Yields faster data but risks contamination or instability."
-        },
-        {
-          "text": "Share findings but postpone study until support vessels arrive.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Defers discovery and risks claim disputes from other factions."
-        }
-      ]
-    },
-    {
-      "scenario": "Subsurface Life on Frozen Moon",
-      "summary": "Thermal readings indicate life signatures beneath an ice crust.",
-      "answers": [
-        {
-          "text": "Deploy drilling probe to extract samples without contaminating local biosphere.",
-          "score": 9,
-          "type": "best",
-          "details": "Preserves planetary protection directives while advancing exobiology research."
-        },
-        {
-          "text": "Land a manned away team to drill and retrieve specimens directly.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Accelerates results but risks cross-contamination."
-        },
-        {
-          "text": "Mark location for future missions and withdraw.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Ensures safety but may lose unique biological data to natural shifts."
-        }
-      ]
-    },
-    {
-      "scenario": "Radiation Spike During Survey",
-      "summary": "Survey instruments detect lethal but fluctuating gamma radiation pockets.",
-      "answers": [
-        {
-          "text": "Cease all operations, recalibrate shields, and remap area from a safe orbit.",
-          "score": 9,
-          "type": "best",
-          "details": "Protects crew and collects useful data safely for astrophysics analysis."
-        },
-        {
-          "text": "Continue survey using automated drones only.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Maintains mission pace but risks losing equipment."
-        },
-        {
-          "text": "Ignore transient spikes assuming background variation.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Neglects possible discovery of exotic radiation source."
-        }
-      ]
-    },
-    {
-      "scenario": "Artificial Comet Core",
-      "summary": "Spectral analysis reveals manufactured alloys within a comet nucleus.",
-      "answers": [
-        {
-          "text": "Collect fragments for metallurgical analysis and track orbital decay.",
-          "score": 9,
-          "type": "best",
-          "details": "Preserves integrity and uncovers evidence of artificial construction."
-        },
-        {
-          "text": "Attempt to tractor comet to stable orbit for long-term study.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Facilitates extended research but risks structural fragmentation."
-        },
-        {
-          "text": "Broadcast discovery immediately to claim priority.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Draws recognition but may violate First Contact or artifact protocols."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 15",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 16",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 17",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 18",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 19",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 20",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 21",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 22",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 23",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 24",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 25",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 26",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 27",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 28",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 29",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
-        }
-      ]
-    },
-    {
-      "scenario": "Scientific Scenario 30",
-      "summary": "Placeholder summary for scenario expansion.",
-      "answers": [
-        {
-          "text": "Best solution here.",
-          "score": 9,
-          "type": "best",
-          "details": "Best choice explanation."
-        },
-        {
-          "text": "Alternative one.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Alternate explanation one."
-        },
-        {
-          "text": "Alternative two.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Alternate explanation two."
+          "text": "Bypass the containment alert system to avoid false positives until further notice.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates Starfleet safety regulations; endangers crew and ship integrity."
         }
       ]
     }
