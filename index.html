@@ -383,7 +383,6 @@
           b.addEventListener("click", () => {
             if (mode === "training") loadTraining(dept);
             else if (mode === "lab") loadLab(dept);
-            else loadExam(dept);
           });
           btnBox.appendChild(b);
         });
@@ -399,10 +398,6 @@
       };
       document.getElementById("returnOrientationLab").onclick = () => {
         document.getElementById("labPage").style.display = "none";
-        document.getElementById("orientationPage").style.display = "block";
-      };
-      document.getElementById("returnOrientationExam").onclick = () => {
-        document.getElementById("examPage").style.display = "none";
         document.getElementById("orientationPage").style.display = "block";
       };
       function loadTraining(dept) {
@@ -437,6 +432,39 @@
                 content.appendChild(section);
               });
             } else content.innerHTML = "<p>No training items found.</p>";
+          });
+      }
+      function loadLab(dept) {
+        document.getElementById("orientationPage").style.display = "none";
+        document.getElementById("labPage").style.display = "block";
+        document.getElementById("labDeptTitle").textContent = `${dept} Lab`;
+        document.getElementById("labCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+        const content = document.getElementById("labContent");
+        content.innerHTML = "<p>Loading...</p>";
+        fetch(labFiles[dept])
+          .then(r => r.json())
+          .then(data => {
+            content.innerHTML = "";
+            if (prefaces[dept]) content.innerHTML += `<div class='training-section'><p>${prefaces[dept]}</p></div>`;
+            if (data.experiments) {
+              data.experiments.forEach(item => {
+                const section = document.createElement("div");
+                section.className = "training-section";
+                section.innerHTML = `<h3>${item.title}</h3><p>${item.description || ""}</p>`;
+                if (item.steps) {
+                  const stepsDiv = document.createElement("div");
+                  stepsDiv.className = "answers department-buttons-box";
+                  item.steps.forEach(step => {
+                    const block = document.createElement("div");
+                    block.className = "answer-block";
+                    block.innerHTML = `<p>${step}</p>`;
+                    stepsDiv.appendChild(block);
+                  });
+                  section.appendChild(stepsDiv);
+                }
+                content.appendChild(section);
+              });
+            } else content.innerHTML = "<p>No lab experiments found.</p>";
           });
       }
     });
