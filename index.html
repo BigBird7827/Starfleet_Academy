@@ -88,6 +88,7 @@ button:hover{
              inset 0 -6px 12px rgba(0,0,0,0.7),
              0 14px 28px rgba(0,0,0,1);
 }
+
 .department-select-box{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -102,6 +103,7 @@ button:hover{
   padding:30px;
   box-shadow:0 0 15px var(--blue);
 }
+
 .department-buttons-box{
   display:flex;
   flex-direction:column;
@@ -170,9 +172,33 @@ button:hover{
   z-index:1000;
   bottom:auto;
 }
+
 @media(max-width:900px){
   #trainingPage .fixed-return{top:auto;bottom:20px;transform:none;}
 }
+
+.training-section h3,
+.training-section > p {
+  color: var(--gold);
+}
+
+.training-section:first-of-type p {
+  color: var(--text);
+}
+
+#trainingContent .answers.department-buttons-box {
+  align-items: flex-start !important;
+}
+
+#trainingContent .answers p,
+#trainingContent .answers div {
+  text-align: left !important;
+}
+
+#trainingContent .answers p strong {
+  color: var(--blue);
+}
+
   </style>
 </head>
 <body>
@@ -190,6 +216,7 @@ button:hover{
         <option>Human</option>
         <option>Vulcan</option>
         <option>Andorian</option>
+        <option>Aenar</option>
         <option>Tellarite</option>
         <option>Bajoran</option>
         <option>Betazoid</option>
@@ -221,18 +248,19 @@ button:hover{
         pillar in the exploration and defense of the Federation.
       </p>
       <p style="font-size:14pt;color:#fff;margin-bottom:48px;text-align:center;max-width:900px;">
-  Choose your path and begin studying by selecting the "Training" button below.
-  When you're ready, return to this page and choose the "Labs" to test what you've learned.
-  Once all labs are complete, you will take a final exam by choosing the "Exams" button.
-  Good luck, Cadet!
-</p>
+        Choose your path and begin studying by selecting the "Study" button below.
+        When you're ready, return to this page and choose the "Labs" to test what you've learned.
+        Once all labs are complete, you will take a final exam by choosing the "Exams" button.
+        Good luck, Cadet!
+      </p>
       <div class="department-select-box" style="grid-template-columns: repeat(3, 1fr); width:auto; background:rgba(0,0,0,0.8);">
-        <button id="trainingBtn" style="width:200px;">Training</button>
+        <button id="trainingBtn" style="width:200px;">Study</button>
         <button id="labBtn" style="width:200px;">Labs</button>
         <button id="examBtn" style="width:200px;">Exams</button>
       </div>
     </div>
   </div>
+
   <div id="orientationPage" style="display:none;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -261,7 +289,6 @@ button:hover{
     <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
     <button class="fixed-return" id="returnOrientationLab">Back to Departments</button>
   </div>
-
   <script>
   document.addEventListener("DOMContentLoaded", () => {
 
@@ -284,7 +311,7 @@ button:hover{
     };
 
     const homeworlds = {
-      "Human": "Earth", "Vulcan": "Vulcan", "Andorian": "Andoria", "Tellarite": "Tellar Prime",
+      "Human": "Earth", "Vulcan": "Vulcan", "Andorian": "Andoria", "Aenar": "Andoria", "Tellarite": "Tellar Prime",
       "Bajoran": "Bajor", "Betazoid": "Betazed", "Bolian": "Bolarus IX", "Trill": "Trill",
       "Klingon": "Qo'noS", "Ferengi": "Ferenginar", "Denobulan": "Denobula", "Orion": "Orion",
       "Caitian": "Cait", "Benzite": "Benzar"
@@ -303,6 +330,7 @@ button:hover{
 
       "Security": "As Chief of Security, you stand between your crew and chaos. Your duty is to safeguard not just the ship, but the principles that guide it. Strength without discipline is recklessness; vigilance without judgment is fear. You must know when to act, and when to hold the line. Lead your officers by example: with resolve, integrity, and respect for every life under your protection. Remember—security is not about control; it is about trust."
     };
+
     let cadetName = "", species = "";
 
     document.getElementById("loginBtn").addEventListener("click", () => {
@@ -325,7 +353,7 @@ button:hover{
     function openOrientation(mode) {
       document.getElementById("mainScreen").style.display = "none";
       const title = document.getElementById("orientationTitle");
-      title.textContent = mode === "lab" ? "Select Lab Department" : "Select Training Department";
+      title.textContent = mode === "lab" ? "Select Lab Department" : "Select Study Department";
       const btnBox = document.getElementById("moduleButtons");
       btnBox.className = "department-select-box";
       btnBox.innerHTML = "";
@@ -357,7 +385,7 @@ button:hover{
     function loadTraining(dept) {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("trainingPage").style.display = "block";
-      document.getElementById("trainingDeptTitle").textContent = `${dept} Training`;
+      document.getElementById("trainingDeptTitle").textContent = `${dept} Study`;
       document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
       const content = document.getElementById("trainingContent");
       content.innerHTML = "<p>Loading...</p>";
@@ -366,7 +394,7 @@ button:hover{
         .then(r => r.json())
         .then(data => {
           content.innerHTML = "";
-          if (prefaces[dept]) content.innerHTML += `<div class='training-section'><p>${prefaces[dept]}</p></div>`;
+          if (prefaces[dept]) content.innerHTML += `<div class='training-preface'><p>${prefaces[dept]}</p></div>`;
           if (data.study) {
             data.study.forEach(item => {
               const section = document.createElement("div");
@@ -386,7 +414,7 @@ button:hover{
               }
               content.appendChild(section);
             });
-          } else content.innerHTML = "<p>No training items found.</p>";
+          } else content.innerHTML = "<p>No study items found.</p>";
         });
     }
 
