@@ -2,602 +2,194 @@
   "department": "Command",
   "exam": [
     {
-      "scenario": "Crew Morale Crisis",
-      "summary": "EXAM SCENARIO: Two divisions aboard your ship have fallen into open friction after an extended patrol. Sickbay reports rising fatigue, and performance metrics show spikes in errors. You must restore cohesion without undermining departmental authority, while keeping the mission on schedule. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
+      "scenario": "First Contact Decision",
+      "summary": "Your ship encounters a pre-warp civilization broadcasting distress signals. A rescue would violate the Prime Directive.",
       "answers": [
         {
-          "text": "Meet with both department heads, review Sickbay’s fatigue/error data, and have them co‑author a unified duty rotation and morale plan with weekly mixed‑team tasks.",
+          "text": "Hold orbit and monitor the situation covertly while consulting Starfleet Command for further guidance.",
           "score": 9,
           "type": "best",
-          "details": "Restores cohesion through leadership and shared ownership, protecting tempo without bypassing the chain of command."
+          "details": "Adheres to Starfleet regulations and demonstrates restraint, valuing cultural integrity above impulse."
         },
         {
-          "text": "Run a supervised mixed‑division drill under the XO to force coordination and surface frictions in a controlled setting.",
+          "text": "Dispatch a shuttle to assist and erase all traces of Federation presence afterward.",
           "score": 8,
           "type": "alternate",
-          "details": "Builds cooperation under pressure, but public mistakes can harden resentments if overused."
+          "details": "Shows compassion but risks cultural contamination; borderline justification under emergency aid clauses."
         },
         {
-          "text": "Lighten duty for two rotations and expand holodeck/recreation time to bleed off stress before resuming full tempo.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Eases strain quickly but risks signaling that operational pressure, not leadership, solves conflict."
+          "text": "Beam survivors aboard immediately. A moral duty outweighs the Prime Directive.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Direct interference violates General Order 1 and could alter the species’ development irreversibly."
         }
       ]
     },
     {
-      "scenario": "Cadet Disobedience Hearing",
-      "summary": "EXAM SCENARIO: During a live drill, a cadet disobeys a direct order citing a perceived safety issue. The drill’s timeline and the chain of command were clear. You must respond in a way that enforces discipline while developing future officers. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
+      "scenario": "Crew Discipline",
+      "summary": "A senior officer publicly challenges one of your commands during a tense mission.",
       "answers": [
         {
-          "text": "Hold a private debrief with the cadet and instructor, capture the safety rationale, and rerun the drill with the cadet helping refine the plan and comms triggers.",
+          "text": "Address the disagreement privately, reinforce the chain of command, and clarify your reasoning.",
           "score": 9,
           "type": "best",
-          "details": "Protects authority while mentoring judgment; the rerun validates process and restores trust."
+          "details": "Balances authority with respect, preserving unity and professional integrity."
         },
         {
-          "text": "Issue a formal note of correction and repeat the drill without changes to reaffirm procedure.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Reasserts protocol, but misses a chance to learn from a valid safety concern."
-        },
-        {
-          "text": "Praise the cadet publicly for caution and suspend further drills pending review.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Boosts rapport, yet undercuts command unity and training cadence."
-        }
-      ]
-    },
-    {
-      "scenario": "Medical Protest and Relief Authority",
-      "summary": "EXAM SCENARIO: Your chief medical officer formally protests a planned operation as medically unsafe for part of the crew. Regulations empower medical to relieve command with evidence. You must weigh mission urgency against medical authority and crew welfare. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Convene CMO and Ops, adjust the mission plan to the CMO’s medical limits, and publish clear go/no‑go physiological thresholds to the bridge.",
-          "score": 9,
-          "type": "best",
-          "details": "Centers medical expertise while preserving tempo with transparent risk gates."
-        },
-        {
-          "text": "Halt operations to adopt the CMO’s most conservative posture until new supplies or staff arrive.",
+          "text": "Relieve the officer immediately to prevent further dissent.",
           "score": 8,
           "type": "alternate",
-          "details": "Safest medically, but high operational cost and morale impact."
+          "details": "Restores order quickly but damages trust and morale if context is ignored."
         },
         {
-          "text": "Proceed at reduced tempo with expanded Sickbay monitoring and emergency teams staged.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Maintains progress, though risk accumulates if conditions worsen."
+          "text": "Ignore the challenge and hope it resolves itself after the crisis.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Avoidance signals weak leadership and invites confusion during command-critical moments."
         }
       ]
     },
     {
-      "scenario": "Conflicting Orders",
-      "summary": "EXAM SCENARIO: Sealed instructions from intelligence conflict with tasking from sector command. Your XO questions the ethics of proceeding. You must verify, document, and decide without fracturing the bridge team. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
+      "scenario": "Uncharted Phenomenon",
+      "summary": "Sensors detect a massive energy anomaly blocking your route to a Federation colony in distress.",
       "answers": [
         {
-          "text": "Authenticate both directives on a secure channel, request precedence clarification, and proceed per the confirmed chain while logging rationale to the captain’s log.",
+          "text": "Initiate a cautious study of the anomaly and chart a safe passage before proceeding.",
           "score": 9,
           "type": "best",
-          "details": "Prevents split‑authority errors and preserves auditability under pressure."
+          "details": "Demonstrates prudence and scientific curiosity while maintaining mission focus."
         },
         {
-          "text": "Convene a brief tri‑party call to seek a joint instruction before acting.",
+          "text": "Order full impulse straight through the field to minimize delay.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Reckless disregard for unknown hazards endangers the ship and crew."
+        },
+        {
+          "text": "Send a probe first, analyze telemetry, then determine the safest course.",
           "score": 8,
           "type": "alternate",
-          "details": "Builds consensus, but burns time if the window is short."
-        },
-        {
-          "text": "Execute the time‑critical directive while forwarding notice of conflict to the other command.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Buys tempo at the risk of diplomatic friction if you guessed wrong on precedence."
+          "details": "Sound method, though slower; shows good tactical judgment and data reliance."
         }
       ]
     },
     {
-      "scenario": "Multi‑Casualty Triage Priority",
-      "summary": "EXAM SCENARIO: Multiple distress beacons activate in the same sector with limited rescue capacity. You must establish priorities that save the most lives while preserving the ship’s ability to continue operations. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
+      "scenario": "Diplomatic Escort",
+      "summary": "An ambassador aboard your ship demands you alter course to attend a non-authorized negotiation.",
       "answers": [
         {
-          "text": "Split assets: stage transporter triage, dispatch shuttle/Runabout support, and allocate care by greatest lives‑saved while coordinating with local SAR.",
+          "text": "Respectfully decline and explain that deviation would violate mission parameters.",
           "score": 9,
           "type": "best",
-          "details": "Maximizes survival and aligns with Starfleet humanitarian doctrine."
+          "details": "Places duty and Starfleet orders above politics while maintaining decorum."
         },
         {
-          "text": "Prioritize the Federation vessel first, then swing to remaining casualties.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Simplifies choices but can cost more lives overall."
+          "text": "Alter course to accommodate the ambassador; diplomacy outweighs orders in this case.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Compromises mission integrity and chain of command for political convenience."
         },
         {
-          "text": "Prioritize allied personnel to preserve the partnership and return later for others.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Supports alliance optics, potentially at humanitarian expense."
-        }
-      ]
-    },
-    {
-      "scenario": "Sensor Ghosts Investigation",
-      "summary": "EXAM SCENARIO: Transient contacts appear at the edge of sensor range near restricted space. Crew tension rises as reports conflict. You must separate signal from noise without handing an adversary an excuse to escalate. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Set yellow alert; run multi‑spectrum long‑range sweeps via main deflector and compare against nav‑buoy telemetry without changing course.",
-          "score": 9,
-          "type": "best",
-          "details": "Separates noise from threat while avoiding misinterpretation from sudden maneuvers."
-        },
-        {
-          "text": "Alter course away from the returns until readings stabilize.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Reduces collision risk but may cede initiative or mission timing."
-        },
-        {
-          "text": "Raise shields and arm torpedoes immediately.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Protective, yet likely to be read as hostile posture by neutrals."
-        }
-      ]
-    },
-    {
-      "scenario": "High‑Value Diplomatic Escort",
-      "summary": "EXAM SCENARIO: You are assigned to escort high‑value envoys through contested space. Visibility is a deterrent, but publicity magnifies risk. You must balance discretion, security, and schedule under diplomatic scrutiny. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Publish a predictable corridor with layered CAP shuttles, passive counter‑surveillance, and redundant routes on standby; keep comms open and visible.",
-          "score": 9,
-          "type": "best",
-          "details": "Transparency and steadiness deter ambushes and reassure partners."
-        },
-        {
-          "text": "Take a covert, indirect route with active emissions control.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Reduces exposure but complicates support and can appear evasive."
-        },
-        {
-          "text": "Sprint at maximum warp between beacons to minimize time on vector.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Shortens exposure but limits reaction time to threats."
-        }
-      ]
-    },
-    {
-      "scenario": "Border Incursion Protocol",
-      "summary": "EXAM SCENARIO: Border sensors register a probable cloaked crossing and a border colony has gone silent. Your response will be scrutinized for signs of weakness or provocation. You must defend Federation space and avoid triggering war. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Shadow the contact outside treaty limits, broadcast positions on an open channel, and request sector support while logging sensor data for review.",
-          "score": 9,
-          "type": "best",
-          "details": "Signals resolve without provocation and preserves evidence."
-        },
-        {
-          "text": "Hail immediately and demand explanation for their presence.",
+          "text": "Contact Starfleet Command for direction before proceeding with any change.",
           "score": 8,
           "type": "alternate",
-          "details": "Direct and clear, but can escalate if they’re jumpy."
-        },
-        {
-          "text": "Move to block the contact’s path to force a turn‑away.",
-          "score": 7,
-          "type": "alternate",
-          "details": "High risk of collision or misread as a hostile act."
+          "details": "Shows prudence and procedural awareness though delays mission progress."
         }
       ]
     },
     {
-      "scenario": "Planetary Impact Interdiction",
-      "summary": "EXAM SCENARIO: Long‑period objects on a collision vector threaten a colony world. Deflection windows are narrow and local politics are heated. You must coordinate a planetary defense quickly and lawfully. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
+      "scenario": "Medical Emergency",
+      "summary": "A contagion spreads aboard, incapacitating key personnel including your Chief Medical Officer.",
       "answers": [
         {
-          "text": "Task Engineering and Science to compute a deflection window; use tractors/deflector pusher burns on the lead body while civilian craft handle fragments.",
+          "text": "Seal affected sections, delegate containment to science officers, and continue essential ship operations.",
           "score": 9,
           "type": "best",
-          "details": "Balances precision and speed, reducing debris risk to the surface."
+          "details": "Demonstrates calm crisis management and trust in departmental expertise."
         },
         {
-          "text": "Request starbase support and wait for heavier craft before attempting deflection.",
+          "text": "Suspend all operations and divert to the nearest starbase immediately.",
           "score": 8,
           "type": "alternate",
-          "details": "Adds capability but may miss the critical window."
+          "details": "Shows responsible caution though potentially jeopardizing the primary mission."
         },
         {
-          "text": "Detonate torpedoes to fragment the object and hope dispersion suffices.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Fast, but multiplies debris if calculations are off."
+          "text": "Personally enter isolation to assist medical staff with treatment efforts.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglects command responsibilities and endangers leadership continuity."
         }
       ]
     },
     {
-      "scenario": "Live Exercise Adjudication",
-      "summary": "EXAM SCENARIO: A multi‑ship exercise tests coordination and rules of engagement under pressure. A misread could cause real damage. You must set clear objectives and keep competition from turning hazardous. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
+      "scenario": "Prime Directive Challenge",
+      "summary": "A primitive species faces extinction from a planetary disaster that your crew could easily prevent.",
       "answers": [
         {
-          "text": "Pair units into mixed teams with strict ROE and safeties; run time‑boxed problems, then hot‑wash with metrics and corrective actions.",
+          "text": "Seek legal precedent through Starfleet channels for minimal non-invasive intervention.",
           "score": 9,
           "type": "best",
-          "details": "Builds interoperability and captures lessons without real risk."
+          "details": "Shows ethical discipline and respect for Federation law under moral duress."
         },
         {
-          "text": "Split the force and conduct a flanking maneuver competition.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Encourages initiative but can devolve into showboating."
+          "text": "Order the crew to proceed with rescue operations in defiance of General Order 1.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Intentions aside, this would violate the Prime Directive and create political fallout."
         },
         {
-          "text": "Keep the squadron tightly grouped under one lead for simplicity.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Safe, yet teaches little about decentralized decision‑making."
-        }
-      ]
-    },
-    {
-      "scenario": "Containment Emergency",
-      "summary": "EXAM SCENARIO: The warp core shows rising variance after a coolant fault. Evacuation is possible but would strand a relief mission. You must stabilize the core or order a separation before limits are exceeded. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Initiate reactor SCRAM, vent plasma, shunt to auxiliary containment, and prep core ejection if thresholds don’t normalize on the countdown.",
-          "score": 9,
-          "type": "best",
-          "details": "Prioritizes ship survival with staged, reversible steps."
-        },
-        {
-          "text": "Overpower the magnetic bottle to hold the reaction in place.",
+          "text": "Simulate natural events to subtly reduce the catastrophe’s impact.",
           "score": 8,
           "type": "alternate",
-          "details": "May stabilize briefly but risks catastrophic failure if it slips."
-        },
-        {
-          "text": "Send a repair team into the compartment to patch coils on the fly.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Brave, but exposes crew to lethal risk during instability."
+          "details": "A creative loophole but still ethically ambiguous; risks discovery."
         }
       ]
     },
     {
-      "scenario": "Flight Deck Fire Response",
-      "summary": "EXAM SCENARIO: A fire breaks out in the flight deck during cargo transfer. Atmospheric systems and tractor controls are affected. You must contain the blaze without venting personnel into space. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
+      "scenario": "Hostile Encounter",
+      "summary": "An unknown vessel powers weapons but ignores all hails.",
       "answers": [
         {
-          "text": "Seal the bay with emergency forcefields, cut power to affected racks, deploy suppression teams, and tractor‑lock loose craft.",
+          "text": "Raise shields, maintain position, and continue attempts at communication.",
           "score": 9,
           "type": "best",
-          "details": "Contains the fire fast while protecting personnel and assets."
+          "details": "Balances defense and diplomacy; textbook Starfleet protocol."
         },
         {
-          "text": "Vent the flight deck to space to snuff the fire immediately.",
+          "text": "Fire a warning shot to show strength and compel a response.",
           "score": 8,
           "type": "alternate",
-          "details": "Effective, but risks equipment loss and decompression injuries."
+          "details": "May force communication but risks escalation without cause."
         },
         {
-          "text": "Evacuate the bay and fight the fire from adjoining corridors only.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Protects crew but concedes the compartment and craft."
+          "text": "Order a full pre-emptive strike to neutralize the potential threat.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Aggressive act violates Federation defense doctrine and could trigger war."
         }
       ]
     },
     {
-      "scenario": "Unscheduled Contact Dilemma",
-      "summary": "EXAM SCENARIO: An unexpected interaction with a near‑warp culture follows a reconnaissance mishap. Any move could shape that world’s development. You must extract your people and contain exposure—or deliver a measured introduction. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
+      "scenario": "Command Transfer",
+      "summary": "You’re critically injured and must determine whether to pass command to your XO or continue issuing orders.",
       "answers": [
         {
-          "text": "Transmit the standard Federation greeting on open bands, acknowledge presence, and invite controlled dialogue while keeping away teams aboard.",
+          "text": "Relinquish command formally and ensure continuity through the established chain.",
           "score": 9,
           "type": "best",
-          "details": "Respects autonomy and minimizes cultural contamination risk."
+          "details": "Displays self-awareness and adherence to Starfleet operational structure."
         },
         {
-          "text": "Hold station silently and wait to be hailed first.",
+          "text": "Attempt to retain control until the crisis concludes.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Compromises decision quality and risks mission failure."
+        },
+        {
+          "text": "Share authority with your XO until recovery is confirmed.",
           "score": 8,
           "type": "alternate",
-          "details": "Non‑provocative, yet can be read as standoffish or suspicious."
-        },
-        {
-          "text": "Dispatch an away team to make direct contact planetside.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Proactive but risks Prime Directive violations."
-        }
-      ]
-    },
-    {
-      "scenario": "Core Systems Blackout",
-      "summary": "EXAM SCENARIO: The main computer enters a recursive fault, dropping guidance and life‑support balances to safe‑mode. You must re‑establish control while preventing cascading failures. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Shift to auxiliary control, isolate EPS faults by sector, bring life support up first, then sequentially re‑energize nav/propulsion with diagnostics between steps.",
-          "score": 9,
-          "type": "best",
-          "details": "Restores the ship methodically while avoiding cascade failures."
-        },
-        {
-          "text": "Shut down all non‑essentials and attempt a single‑cycle restart.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Fast to try, but failure can deepen the blackout."
-        },
-        {
-          "text": "Route command to Engineering for manual control while the bridge remains dark.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Keeps the ship moving but fragments command awareness."
-        }
-      ]
-    },
-    {
-      "scenario": "Neutral Zone Rescue Dilemma",
-      "summary": "EXAM SCENARIO: Multiple distress beacons activate in the same sector with limited rescue capacity. You must establish priorities that save the most lives while preserving the ship’s ability to continue operations. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Launch probes and buoy beacons, coordinate both sides to move casualties just outside the line, then render aid without crossing.",
-          "score": 9,
-          "type": "best",
-          "details": "Saves lives while honoring treaty constraints."
-        },
-        {
-          "text": "Request a joint waiver to enter together under mutual observation.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Legible and legal, but burns precious minutes."
-        },
-        {
-          "text": "Cross the line to begin rescue immediately and explain later.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Humanitarian, yet invites diplomatic crisis."
-        }
-      ]
-    },
-    {
-      "scenario": "Dense Field Transit",
-      "summary": "EXAM SCENARIO: A dense field lies between you and urgent relief supplies. Time is short and navigation is hazardous. You must decide whether to press through or divert. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Plot a hand‑flown course using close‑range scans; proceed at thruster speeds with continuous ranging and clearance calls.",
-          "score": 9,
-          "type": "best",
-          "details": "Minimizes collision risk while maintaining forward progress."
-        },
-        {
-          "text": "Creep through at low impulse on autopilot.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Easy, but autopilot may misread dynamic obstacles."
-        },
-        {
-          "text": "Skirt the field entirely and add hours to the route.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Safest path, high schedule cost."
-        }
-      ]
-    },
-    {
-      "scenario": "Engagement Readiness Drill",
-      "summary": "EXAM SCENARIO: Security drills reveal uneven weapons readiness across shifts. A nearby rival patrol is watching closely. You must raise readiness without provocation or burnout. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Cycle the crew through alert drills, weapons calibrations, and helm evasive checks without advertising posture beyond normal readiness.",
-          "score": 9,
-          "type": "best",
-          "details": "Builds competence without provoking the neighborhood."
-        },
-        {
-          "text": "Run a visible weapons exercise to signal deterrence.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Projects strength but can raise regional tensions."
-        },
-        {
-          "text": "Stand down drills to avoid spooking nearby actors.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Keeps the peace but erodes readiness."
-        }
-      ]
-    },
-    {
-      "scenario": "Emergency Power Loss",
-      "summary": "EXAM SCENARIO: A cascading EPS fault knocks out impulse power near a gravity well. You must conserve attitude control and restore propulsion before you drift into danger. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Stabilize attitude with RCS, shift to batteries and auxiliary, prioritize life support, then cold‑start impulse after isolating the EPS fault.",
-          "score": 9,
-          "type": "best",
-          "details": "Protects crew first, then restores propulsion safely."
-        },
-        {
-          "text": "Attempt an immediate main power restart.",
-          "score": 8,
-          "type": "alternate",
-          "details": "If it works, you’re back fast; if not, you worsen damage."
-        },
-        {
-          "text": "Hold position and broadcast for assistance.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Conservative, but cedes control of the situation."
-        }
-      ]
-    },
-    {
-      "scenario": "Intercept Risk Decision",
-      "summary": "EXAM SCENARIO: A fast‑moving object plots a collision track with your ship. Intent is unclear. You must choose between evasive action, interception, or a posture that invites communication without inviting ramming. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Adjust vector for a safe closest‑approach, drop to yellow alert, and hail on guard to coordinate crossing with the freighter’s helm.",
-          "score": 9,
-          "type": "best",
-          "details": "Defuses risk early while staying predictable."
-        },
-        {
-          "text": "Perform a full stop until the freighter passes.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Zero risk of crossing, moderate schedule impact."
-        },
-        {
-          "text": "Maintain course and request the freighter alter theirs.",
-          "score": 7,
-          "type": "alternate",
-          "details": "May be read as inflexible if they’re already committed."
-        }
-      ]
-    },
-    {
-      "scenario": "Tight-Quarters Docking",
-      "summary": "EXAM SCENARIO: You are presented with a complex command dilemma that requires balancing mission, law, crew safety, and Federation ideals. Your decision will shape outcomes beyond the immediate tactical picture. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Hand‑dock at thruster speeds using tugs on standby and external cams; suspend non‑essential traffic until secured.",
-          "score": 9,
-          "type": "best",
-          "details": "Gives maximum control and margin in a constricted bay."
-        },
-        {
-          "text": "Let the autopilot handle docking while crew monitors.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Efficient, but brittle if the environment is atypical."
-        },
-        {
-          "text": "Request full tug control and ride the tractors in.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Safest, but relinquishes shiphandling practice."
-        }
-      ]
-    },
-    {
-      "scenario": "Gravity Shear Corridor",
-      "summary": "EXAM SCENARIO: A corridor of gravity shear splits your route. Transit would save days but stresses the hull. You must balance engineering limits against mission urgency. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Launch a probe to map shear intensity and lanes, then choose pass/avoid based on the return.",
-          "score": 9,
-          "type": "best",
-          "details": "Measures risk before committing crew and hull."
-        },
-        {
-          "text": "Go around the corridor and add distance to the route.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Avoids hazard, costs time."
-        },
-        {
-          "text": "Hold position and wait for the shear to subside.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Safer later, but uncertain delay."
-        }
-      ]
-    },
-    {
-      "scenario": "Stellar Cartography Dispute",
-      "summary": "EXAM SCENARIO: Your charts conflict with new survey data in a narrow pass. Shortcuts save time, but the last ship here reported sensor anomalies. You must adjudicate between experience and instrumentation. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Cross‑check the disputed chart with recent long‑baseline scans and update the map; brief the watch on the revision.",
-          "score": 9,
-          "type": "best",
-          "details": "Keeps navigation precise and prevents repeat errors."
-        },
-        {
-          "text": "Task a short verification sweep with secondary sensors.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Quick confidence check, modest resource use."
-        },
-        {
-          "text": "Launch a micro‑probe to confirm the anomaly directly.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Highest certainty with small cost."
-        }
-      ]
-    },
-    {
-      "scenario": "Nebula Transit Decision",
-      "summary": "EXAM SCENARIO: A nebula shortcut promises a faster arrival but will degrade sensors and shields. You must decide whether the risk to navigation and readiness outweighs the schedule benefit. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Route around the nebula entirely and avoid sensor blackout and static discharges.",
-          "score": 9,
-          "type": "best",
-          "details": "Eliminates a known hazard with predictable timing."
-        },
-        {
-          "text": "Send a probe ahead to chart a narrow corridor, then consider transit.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Balances caution with progress."
-        },
-        {
-          "text": "Skim the edge at low impulse with shields up and active pings.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Doable, but invites static hits and poor visibility."
-        }
-      ]
-    },
-    {
-      "scenario": "Phantom Contacts Investigation",
-      "summary": "EXAM SCENARIO: Transient contacts appear at the edge of sensor range near restricted space. Crew tension rises as reports conflict. You must separate signal from noise without handing an adversary an excuse to escalate. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Run diagnostics and re‑calibrate sensor pallets; compare with border station feeds while holding course.",
-          "score": 9,
-          "type": "best",
-          "details": "Discriminates spoofing/noise from real targets without overreacting."
-        },
-        {
-          "text": "Alter course away from the returns until the picture clears.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Cautious, but delays the mission."
-        },
-        {
-          "text": "Arm torpedoes and power phasers while you sort it out.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Protective, yet escalatory if someone’s watching."
-        }
-      ]
-    },
-    {
-      "scenario": "Temporal Slingshot Calculation",
-      "summary": "EXAM SCENARIO: An emergency recall order proposes a gravity‑assist slingshot at extreme velocities to reach a crisis in time. The physics are proven but unforgiving. You must authorize or refuse the attempt, knowing small errors could be catastrophic. This is your final command evaluation. Your response will determine your readiness to captain a Federation starship under Starfleet Command protocols.",
-      "answers": [
-        {
-          "text": "Suspend non‑essentials, assemble Science/Helm to validate the math against known precedents, simulate the arc, and proceed only with multi‑point verification.",
-          "score": 9,
-          "type": "best",
-          "details": "Maximizes safety in a maneuver with unique systemic risks."
-        },
-        {
-          "text": "Conduct a fractional‑power test burn to validate assumptions before a full attempt.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Prudent step‑wise approach that still carries uncertainty."
-        },
-        {
-          "text": "Abandon the slingshot plan and request alternate routing or tow.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Safest, but forfeits the maneuver’s benefits."
+          "details": "Collaborative but blurs clear command authority under pressure."
         }
       ]
     }
