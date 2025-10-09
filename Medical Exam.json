@@ -1,0 +1,605 @@
+{
+  "department": "Medical",
+  "exam": [
+    {
+      "scenario": "Radiation Exposure in Engineering Bay",
+      "summary": "EXAM SCENARIO: A plasma leak exposes several crew members to high radiation levels. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Stabilize the injured with hyronalin and transfer to radiation isolation for cellular regeneration.",
+          "score": 9,
+          "type": "best",
+          "details": "Immediate treatment limits long-term damage and follows Starfleet radiation protocols."
+        },
+        {
+          "text": "Administer broad-spectrum antitoxins while awaiting detailed scans.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Helpful, but not targeted to radiation poisoning; risk of delayed reaction."
+        },
+        {
+          "text": "Move the patients to sickbay and monitor vitals until symptoms progress.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Delays intervention; risks irreversible cell damage."
+        }
+      ]
+    },
+    {
+      "scenario": "Alien Parasite Infection",
+      "summary": "EXAM SCENARIO: Crew members exhibit neural disruption caused by an unknown parasitic organism. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Quarantine the affected, perform neural scans, and attempt containment using force fields.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents spread and enables safe removal with minimal casualties."
+        },
+        {
+          "text": "Attempt direct extraction using transporter bio-filters.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Could succeed but risks incomplete removal or neurological trauma."
+        },
+        {
+          "text": "Treat symptomatically until a Federation specialist arrives.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Buys time but may allow parasite replication."
+        }
+      ]
+    },
+    {
+      "scenario": "Outbreak on a Starbase",
+      "summary": "EXAM SCENARIO: A virulent flu strain emerges on a crowded orbital facility. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Isolate infection zones, distribute vaccines, and initiate mass testing.",
+          "score": 9,
+          "type": "best",
+          "details": "Standard epidemic containment and proactive disease management."
+        },
+        {
+          "text": "Focus on treating the critically ill first.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Prioritizes survival but allows infection to spread unchecked."
+        },
+        {
+          "text": "Seal the starbase and halt all transport until the illness burns out.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Stops spread but violates Federation health ethics."
+        }
+      ]
+    },
+    {
+      "scenario": "Cryostasis Malfunction",
+      "summary": "EXAM SCENARIO: A long-term cryostasis pod malfunctions mid-transit. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Manually override temperature controls and revive the patient slowly under observation.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents cellular shock and maintains vital function integrity."
+        },
+        {
+          "text": "Bypass safety systems to accelerate thawing and begin revival immediately.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Fast action saves time but risks organ failure."
+        },
+        {
+          "text": "Maintain stasis until technical crews arrive.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Avoids immediate risk but could result in total system failure."
+        }
+      ]
+    },
+    {
+      "scenario": "First Contact Pathogen",
+      "summary": "EXAM SCENARIO: A new species aboard develops a respiratory reaction after contact with oxygen. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Create a controlled atmosphere chamber matching native biochemistry.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents further reaction and preserves diplomatic relations."
+        },
+        {
+          "text": "Administer universal antiallergens.",
+          "score": 8,
+          "type": "alternate",
+          "details": "May relieve symptoms but doesn’t address atmospheric incompatibility."
+        },
+        {
+          "text": "Evacuate the visitors to the shuttle bay and vent contaminated air.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Solves short-term issue but risks offense and harm."
+        }
+      ]
+    },
+    {
+      "scenario": "Phaser Burn Trauma",
+      "summary": "EXAM SCENARIO: Crewman suffers extensive third-degree burns after weapon discharge accident. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Stabilize vitals, apply dermaline gel, and initiate regenerative therapy.",
+          "score": 9,
+          "type": "best",
+          "details": "Standard trauma procedure ensures optimal recovery."
+        },
+        {
+          "text": "Sedate the patient and await surgical assistance.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Minimizes pain but delays critical care."
+        },
+        {
+          "text": "Apply pressure dressings and monitor.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Insufficient; risks infection and permanent scarring."
+        }
+      ]
+    },
+    {
+      "scenario": "Telepathic Overload",
+      "summary": "EXAM SCENARIO: Betazoid crewman collapses after exposure to collective psychic resonance. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Administer neural stabilizers and induce mild sedation.",
+          "score": 9,
+          "type": "best",
+          "details": "Reduces neural hyperactivity safely."
+        },
+        {
+          "text": "Attempt telepathic contact to calm the patient.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Can help but risks spreading overload to others."
+        },
+        {
+          "text": "Isolate in darkened room and monitor naturally.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Provides comfort but no real treatment."
+        }
+      ]
+    },
+    {
+      "scenario": "Medical Transporter Glitch",
+      "summary": "EXAM SCENARIO: Transporter buffer begins scrambling molecular data during patient beam-out. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Abort transport, rematerialize buffer signal in diagnostic pattern, and perform molecular reintegration.",
+          "score": 9,
+          "type": "best",
+          "details": "Saves patient without permanent degradation."
+        },
+        {
+          "text": "Force complete transport and attempt genetic reconstruction post-materialization.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Might work but risks molecular loss."
+        },
+        {
+          "text": "Shut down transporter and wait for engineering.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Causes fatal delay; not viable in emergency."
+        }
+      ]
+    },
+    {
+      "scenario": "Psychogenic Epidemic",
+      "summary": "EXAM SCENARIO: Crew panic manifests as psychosomatic illness during long-range mission. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Introduce calming pheromone fields and conduct group therapy sessions.",
+          "score": 9,
+          "type": "best",
+          "details": "Addresses both physiological and psychological factors."
+        },
+        {
+          "text": "Administer mild tranquilizers fleetwide.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Temporarily effective but unsustainable."
+        },
+        {
+          "text": "Ignore symptoms as mass hysteria.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Neglects legitimate medical needs and undermines morale."
+        }
+      ]
+    },
+    {
+      "scenario": "Genetic Contamination",
+      "summary": "EXAM SCENARIO: Hybrid DNA sequence begins replicating uncontrollably within a patient’s genome. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Activate isolation field and perform DNA resequencing using medical transporter buffer.",
+          "score": 9,
+          "type": "best",
+          "details": "Resets genome safely with advanced Starfleet medical technology."
+        },
+        {
+          "text": "Attempt chemical suppression of replication.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Slows effects but incomplete solution."
+        },
+        {
+          "text": "Allow replication to continue for observation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Risky; could endanger patient and ship."
+        }
+      ]
+    },
+    {
+      "scenario": "Holodeck Injury Lockout",
+      "summary": "EXAM SCENARIO: Safety protocols fail and several crew are critically injured inside the holodeck. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Manually disengage power, then provide emergency triage within the program space.",
+          "score": 9,
+          "type": "best",
+          "details": "Ensures immediate treatment before extraction."
+        },
+        {
+          "text": "Attempt to end program first, then assist injuries.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Logical but delays first aid."
+        },
+        {
+          "text": "Wait for engineering to restore holodeck control.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Fatal delay for critical patients."
+        }
+      ]
+    },
+    {
+      "scenario": "Quarantine Violation",
+      "summary": "EXAM SCENARIO: A cadet ignores isolation orders and infects others with a contagious virus. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Enforce quarantine and initiate disciplinary report.",
+          "score": 9,
+          "type": "best",
+          "details": "Protects crew and upholds medical chain of command."
+        },
+        {
+          "text": "Treat new infections and quietly reprimand the cadet later.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Solves problem but weakens authority."
+        },
+        {
+          "text": "Ignore the incident to avoid morale issues.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Encourages negligence and undermines trust."
+        }
+      ]
+    },
+    {
+      "scenario": "Unknown Neurotoxin",
+      "summary": "EXAM SCENARIO: Crew exposed to alien neurotoxin causing paralysis and respiratory arrest. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Analyze compound, synthesize antidote via molecular scanner, and administer intravenously.",
+          "score": 9,
+          "type": "best",
+          "details": "Correct, efficient medical protocol."
+        },
+        {
+          "text": "Use antitoxins from standard medkit.",
+          "score": 8,
+          "type": "alternate",
+          "details": "May help but not tailored to alien compound."
+        },
+        {
+          "text": "Initiate cryostasis to preserve life until cure found.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Delays solution and strains resources."
+        }
+      ]
+    },
+    {
+      "scenario": "Nanovirus Mutation",
+      "summary": "EXAM SCENARIO: Medical nanites begin replicating autonomously, altering crew physiology. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Deploy targeted EMP pulse and isolate infected.",
+          "score": 9,
+          "type": "best",
+          "details": "Neutralizes nanites safely with minimal collateral damage."
+        },
+        {
+          "text": "Attempt to reprogram nanites in vivo.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Innovative but extremely risky."
+        },
+        {
+          "text": "Flush nanites with bloodstream filters.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Ineffective for self-replicating variants."
+        }
+      ]
+    },
+    {
+      "scenario": "Surgical AI Malfunction",
+      "summary": "EXAM SCENARIO: Automated surgery assistant begins misinterpreting commands mid-operation. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Shut down AI and continue surgery manually.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents patient harm and follows Starfleet safety protocols."
+        },
+        {
+          "text": "Attempt to reset the AI mid-procedure.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Could restore function but risks critical error during surgery."
+        },
+        {
+          "text": "Allow AI to complete the operation under observation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Dangerous reliance on malfunctioning system."
+        }
+      ]
+    },
+    {
+      "scenario": "Cryogenic Virus Discovery",
+      "summary": "EXAM SCENARIO: Sample from frozen asteroid revives an ancient virus strain. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Seal lab, sterilize samples, and perform controlled study remotely.",
+          "score": 9,
+          "type": "best",
+          "details": "Preserves safety while enabling scientific insight."
+        },
+        {
+          "text": "Attempt to neutralize with heat sterilization.",
+          "score": 8,
+          "type": "alternate",
+          "details": "May destroy both virus and valuable data."
+        },
+        {
+          "text": "Expose to antimatter field to ensure destruction.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Overkill; unsafe and unnecessary."
+        }
+      ]
+    },
+    {
+      "scenario": "Vulcan Pon Farr Emergency",
+      "summary": "EXAM SCENARIO: Vulcan crew member enters Pon Farr with violent neurological symptoms. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Administer neural suppressants and initiate medical stasis until safe transport.",
+          "score": 9,
+          "type": "best",
+          "details": "Controls aggression safely and respects privacy."
+        },
+        {
+          "text": "Restrain patient physically.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains safety but violates cultural ethics."
+        },
+        {
+          "text": "Allow emotional release in isolated holodeck program.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Potentially therapeutic but medically irresponsible."
+        }
+      ]
+    },
+    {
+      "scenario": "Mass Casualty Incident",
+      "summary": "EXAM SCENARIO: Shuttle explosion causes multiple critical injuries simultaneously. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Establish triage priority and assign surgical teams by survival probability.",
+          "score": 9,
+          "type": "best",
+          "details": "Maximizes survival rate and resource allocation."
+        },
+        {
+          "text": "Treat commanding officer first.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Symbolically appropriate but tactically poor."
+        },
+        {
+          "text": "Attempt to treat all simultaneously.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Spreads resources too thin; reduces survival rates."
+        }
+      ]
+    },
+    {
+      "scenario": "Zoonotic Transmission",
+      "summary": "EXAM SCENARIO: Alien pet transmits unknown disease to crew members. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Perform genome sequencing on both species and develop cross-immunity serum.",
+          "score": 9,
+          "type": "best",
+          "details": "Addresses root cause with proper medical process."
+        },
+        {
+          "text": "Quarantine infected crew and the animal separately.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Good containment but lacks cure."
+        },
+        {
+          "text": "Euthanize the animal to stop transmission.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Cruel and unnecessary under Federation ethics."
+        }
+      ]
+    },
+    {
+      "scenario": "Ethical Organ Donation",
+      "summary": "EXAM SCENARIO: Critically injured officer’s organs could save others but consent unclear. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Confirm consent and Starfleet bioethics compliance before proceeding.",
+          "score": 9,
+          "type": "best",
+          "details": "Respects autonomy and Starfleet ethical directives."
+        },
+        {
+          "text": "Proceed with transplants to save multiple lives.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Saves more lives but violates Federation ethics."
+        },
+        {
+          "text": "Do nothing until clarity from command.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Avoids violation but sacrifices patients needlessly."
+        }
+      ]
+    },
+    {
+      "scenario": "Rapid Aging Syndrome",
+      "summary": "EXAM SCENARIO: Crew affected by temporal radiation begin aging decades in hours. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Stabilize metabolic rate and reverse quantum decay using temporal stasis field.",
+          "score": 9,
+          "type": "best",
+          "details": "Directly addresses cause with advanced Federation tech."
+        },
+        {
+          "text": "Administer anti-radiation compounds only.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Partially effective but not curative."
+        },
+        {
+          "text": "Isolate affected crew and study progression.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Delays treatment; increases mortality."
+        }
+      ]
+    },
+    {
+      "scenario": "Viral Computer-Human Interface",
+      "summary": "EXAM SCENARIO: Cybernetic officer contracts digital virus crossing biological barriers. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Use dual bio-digital firewall and nanite antivirus integration.",
+          "score": 9,
+          "type": "best",
+          "details": "Addresses both cyber and biological systems safely."
+        },
+        {
+          "text": "Isolate patient’s cybernetics and perform wipe.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Effective but risks permanent system damage."
+        },
+        {
+          "text": "Disconnect implants entirely.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Ensures safety but cripples patient permanently."
+        }
+      ]
+    },
+    {
+      "scenario": "Synthetic Life Pregnancy",
+      "summary": "EXAM SCENARIO: An android exhibits signs of mechanical 'gestation' after anomaly exposure. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Run diagnostics under containment and consult cybernetics division.",
+          "score": 9,
+          "type": "best",
+          "details": "Appropriate caution and scientific curiosity."
+        },
+        {
+          "text": "Attempt manual termination of the process.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Reduces risk but may destroy unique life event."
+        },
+        {
+          "text": "Ignore until system integrity compromised.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Neglects potential scientific breakthrough."
+        }
+      ]
+    },
+    {
+      "scenario": "Medical Ethics Under Fire",
+      "summary": "EXAM SCENARIO: Admiral orders experimental treatment without consent. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Refuse order and report to Starfleet Medical Command.",
+          "score": 9,
+          "type": "best",
+          "details": "Upholds Federation bioethics and chain of command."
+        },
+        {
+          "text": "Proceed quietly for mission success.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Demonstrates obedience but violates ethics."
+        },
+        {
+          "text": "Compromise with partial treatment trial.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Mediates situation but risks moral breach."
+        }
+      ]
+    },
+    {
+      "scenario": "Unknown Psychic Plague",
+      "summary": "EXAM SCENARIO: Telepathic crew share hallucinations after contact with anomaly. This is your final assessment as a Starfleet medical officer. Your decision here may determine the survival of your crew or the success of the mission.",
+      "answers": [
+        {
+          "text": "Apply psi-shielding and sedative therapy under isolation.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents mental contagion and allows recovery."
+        },
+        {
+          "text": "Attempt to telepathically link for diagnosis.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Innovative but spreads affliction risk."
+        },
+        {
+          "text": "Quarantine ship and cease communication.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Containment without cure or support."
+        }
+      ]
+    }
+  ]
+}

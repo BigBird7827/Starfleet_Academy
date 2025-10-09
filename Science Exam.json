@@ -1,0 +1,545 @@
+{
+  "department": "Science",
+  "exam": [
+    {
+      "scenario": "Subspace Sensor Distortion",
+      "summary": "EXAM SCENARIO: Long-range subspace arrays begin reporting inconsistent readings from a nearby nebula. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Recalibrate sensors with localized reference points and verify through triangulated starbase data.",
+          "score": 9,
+          "type": "best",
+          "details": "Ensures accurate readings through cross-verification and methodical recalibration."
+        },
+        {
+          "text": "Dispatch a probe to relay clean telemetry for remote recalibration.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Adds confirmation data but delays result and risks probe loss in interference."
+        },
+        {
+          "text": "Ignore anomalies assuming temporary distortion from solar activity.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Quick resolution but risks missing early detection of a significant subspace phenomenon."
+        },
+        {
+          "text": "Emit a full-power counter-frequency without prior characterization.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without spectral characterization risks resonance, feedback, or rupture of the phenomenon."
+        },
+        {
+          "text": "Ignore readings as transient noise and continue normal operations.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Dismisses potentially hazardous physics; Starfleet procedure mandates verification and mitigation."
+        }
+      ]
+    },
+    {
+      "scenario": "Unknown Microbial Bloom in Hydroponics",
+      "summary": "EXAM SCENARIO: A sudden microbial bloom begins affecting plant growth aboard ship. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Quarantine the section, analyze samples under containment, and sequence DNA for cross-species contamination.",
+          "score": 9,
+          "type": "best",
+          "details": "Prevents contamination and allows identification for targeted remediation."
+        },
+        {
+          "text": "Adjust environmental controls to inhibit growth while continuing operations.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Reduces spread but risks mutation or adaptation if cause is not removed."
+        },
+        {
+          "text": "Flush hydroponics and reseed with sterilized stock immediately.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Resolves symptoms but loses valuable samples and data for analysis."
+        },
+        {
+          "text": "Reduce containment level to observe adaptation in a naturalistic setting.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Contravenes xenobiology protocol; containment must never be lowered to provoke responses."
+        },
+        {
+          "text": "Test exposure on a live crew volunteer to accelerate data collection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Human experimentation without clearance violates Federation bioethics and Starfleet Medical directives."
+        }
+      ]
+    },
+    {
+      "scenario": "Unstable Quantum Filament",
+      "summary": "EXAM SCENARIO: A passing quantum filament interferes with navigation and power regulation. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Divert power to deflector shields, recalibrate sensors, and maintain minimum safe distance.",
+          "score": 9,
+          "type": "best",
+          "details": "Balances safety and data collection while avoiding destructive interference."
+        },
+        {
+          "text": "Attempt to harness the filament’s energy output for study.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Potential discovery but dangerously unpredictable energy levels."
+        },
+        {
+          "text": "Proceed through filament at reduced speed to minimize exposure.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Risky maneuver that could cause cascading failures in ship systems."
+        },
+        {
+          "text": "Emit a full-power counter-frequency without prior characterization.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without spectral characterization risks resonance, feedback, or rupture of the phenomenon."
+        },
+        {
+          "text": "Ignore readings as transient noise and continue normal operations.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Dismisses potentially hazardous physics; Starfleet procedure mandates verification and mitigation."
+        }
+      ]
+    },
+    {
+      "scenario": "Unexpected Species Evolution",
+      "summary": "EXAM SCENARIO: Lab organisms show accelerated evolutionary traits after transporter exposure. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Isolate the specimens and analyze transporter logs for pattern anomalies.",
+          "score": 9,
+          "type": "best",
+          "details": "Preserves biosecurity while identifying possible transporter malfunction or breakthrough."
+        },
+        {
+          "text": "Continue observation to study accelerated evolution under containment.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Valuable research opportunity but risks spreading unknown mutations."
+        },
+        {
+          "text": "Terminate specimens to prevent any biological threat.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Guarantees safety but destroys potentially groundbreaking data."
+        },
+        {
+          "text": "Reduce containment level to observe adaptation in a naturalistic setting.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Contravenes xenobiology protocol; containment must never be lowered to provoke responses."
+        },
+        {
+          "text": "Test exposure on a live crew volunteer to accelerate data collection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Human experimentation without clearance violates Federation bioethics and Starfleet Medical directives."
+        }
+      ]
+    },
+    {
+      "scenario": "Graviton Wave Anomaly",
+      "summary": "EXAM SCENARIO: Localized graviton fluctuations threaten sensor calibration and could distort nearby starship traffic. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Plot and map fluctuation fields, issue navigational warnings, and record gravimetric readings for later modeling.",
+          "score": 9,
+          "type": "best",
+          "details": "Collects critical data safely while warning others to avoid hazard zone."
+        },
+        {
+          "text": "Attempt to stabilize graviton field with inverse-frequency pulses.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Proactive but risky; may worsen oscillations if miscalculated."
+        },
+        {
+          "text": "Ignore readings until interference subsides naturally.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Avoids immediate risk but forfeits vital research opportunity."
+        },
+        {
+          "text": "Emit a full-power counter-frequency without prior characterization.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without spectral characterization risks resonance, feedback, or rupture of the phenomenon."
+        },
+        {
+          "text": "Ignore readings as transient noise and continue normal operations.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Dismisses potentially hazardous physics; Starfleet procedure mandates verification and mitigation."
+        }
+      ]
+    },
+    {
+      "scenario": "Alien Artifact Energy Signature",
+      "summary": "EXAM SCENARIO: A newly recovered artifact emits intermittent subspace bursts of unknown origin. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Transfer artifact to a secure containment field and perform spectral analysis under level-10 isolation.",
+          "score": 9,
+          "type": "best",
+          "details": "Ensures safety while preserving data for full spectrum analysis."
+        },
+        {
+          "text": "Attempt direct interface using adaptive holo-interface to interpret data.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Could yield faster insight but risks activating unknown systems."
+        },
+        {
+          "text": "Store artifact in cargo hold until experts can arrive.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Delays research and leaves potential hazard unsecured."
+        },
+        {
+          "text": "Interface directly via manual contact to speed translation of unknown systems.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypasses isolation; unknown tech requires remote, sandboxed analysis under containment."
+        },
+        {
+          "text": "Grant shipwide network access so the system can self-configure safely.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Violates cyber-containment; risks uncontrolled propagation through critical systems."
+        }
+      ]
+    },
+    {
+      "scenario": "Biosphere Collapse on Colony",
+      "summary": "EXAM SCENARIO: Sensor scans indicate ecological collapse following recent terraforming efforts. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Dispatch planetary science teams to analyze atmosphere, soil, and water chemistry.",
+          "score": 9,
+          "type": "best",
+          "details": "Identifies systemic causes and enables targeted environmental corrections."
+        },
+        {
+          "text": "Recommend immediate evacuation of all colonists pending investigation.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Protects lives but disrupts long-term colony infrastructure unnecessarily."
+        },
+        {
+          "text": "Assume data error and recheck scans after orbital cycle.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Avoids premature alarm but risks worsening irreversible collapse."
+        },
+        {
+          "text": "Reduce containment level to observe adaptation in a naturalistic setting.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Contravenes xenobiology protocol; containment must never be lowered to provoke responses."
+        },
+        {
+          "text": "Test exposure on a live crew volunteer to accelerate data collection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Human experimentation without clearance violates Federation bioethics and Starfleet Medical directives."
+        }
+      ]
+    },
+    {
+      "scenario": "Temporal Signal Echoes",
+      "summary": "EXAM SCENARIO: Chronometric echoes appear in subspace, mimicking transmissions from the ship’s own logs. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Record and isolate signals for analysis while verifying no system self-interference.",
+          "score": 9,
+          "type": "best",
+          "details": "Preserves temporal integrity and allows safe scientific study of the phenomenon."
+        },
+        {
+          "text": "Attempt to respond to the echoes to test for causality.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Might reveal information about temporal displacement but risks paradox formation."
+        },
+        {
+          "text": "Block signal frequency to prevent feedback into communications array.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Prevents loop formation but discards potential temporal data."
+        },
+        {
+          "text": "Reply to the signal to establish a closed causal loop for data integrity.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Interacting with one's own timeline risks paradox; temporal protocols prohibit causal loop creation."
+        },
+        {
+          "text": "Insert a test beacon into the echo to 'anchor' the timeline.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Unapproved temporal manipulation breaches the Temporal Prime Directive and can destabilize chronology."
+        }
+      ]
+    },
+    {
+      "scenario": "Crystal Growth in Warp Core Housing",
+      "summary": "EXAM SCENARIO: Crystalline structures begin forming around plasma conduits. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Deactivate plasma flow, analyze composition, and remove crystals under containment.",
+          "score": 9,
+          "type": "best",
+          "details": "Eliminates hazard and yields data on possible energy-matter anomalies."
+        },
+        {
+          "text": "Increase plasma flow to burn off formations safely.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Quickly clears obstruction but risks thermal stress damage."
+        },
+        {
+          "text": "Ignore as minor mineral accumulation from coolant condensation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Assumes harmless residue; could result in containment breach."
+        },
+        {
+          "text": "Increase warp or power output to drown out interference immediately.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Overdriving fields under anomaly stress amplifies instabilities; diagnostics and dampening come first."
+        },
+        {
+          "text": "Override safety interlocks to expedite field alignment under load.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Disabling safeties during an unknown condition violates engineering protocols and endangers the ship."
+        }
+      ]
+    },
+    {
+      "scenario": "Rogue Nanites in Medical Bay",
+      "summary": "EXAM SCENARIO: Microscopic self-replicating nanites appear to be modifying biobed systems autonomously. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Seal bay, isolate network interfaces, and apply EM dampening field to deactivate rogue nanites.",
+          "score": 9,
+          "type": "best",
+          "details": "Halts spread immediately and preserves samples for analysis."
+        },
+        {
+          "text": "Attempt to communicate with nanites using standard Federation protocols for machine intelligence.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Potential diplomatic breakthrough if sentient but carries unknown risk."
+        },
+        {
+          "text": "Purge nanites by venting atmosphere and decontaminating equipment.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Guaranteed neutralization but destroys research potential."
+        },
+        {
+          "text": "Reduce containment level to observe adaptation in a naturalistic setting.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Contravenes xenobiology protocol; containment must never be lowered to provoke responses."
+        },
+        {
+          "text": "Test exposure on a live crew volunteer to accelerate data collection.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Human experimentation without clearance violates Federation bioethics and Starfleet Medical directives."
+        }
+      ]
+    },
+    {
+      "scenario": "Unknown Element Discovered in Nebula",
+      "summary": "EXAM SCENARIO: Spectroscopy identifies matter inconsistent with known periodic elements. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Collect controlled samples via remote drones for lab synthesis.",
+          "score": 9,
+          "type": "best",
+          "details": "Enables safe isolation and replication for study without endangering ship."
+        },
+        {
+          "text": "Bring direct samples aboard for immediate study.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Yields faster data but risks contamination or instability."
+        },
+        {
+          "text": "Share findings but postpone study until support vessels arrive.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Defers discovery and risks claim disputes from other factions."
+        },
+        {
+          "text": "Proceed based on intuition rather than diagnostics to preserve schedule.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Starfleet science prioritizes method and safety over speed; diagnostics are required."
+        },
+        {
+          "text": "Circumvent review by classifying the experiment as routine maintenance.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Misrepresentation violates duty regulations and bypasses essential safety checks."
+        }
+      ]
+    },
+    {
+      "scenario": "Subsurface Life on Frozen Moon",
+      "summary": "EXAM SCENARIO: Thermal readings indicate life signatures beneath an ice crust. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Deploy drilling probe to extract samples without contaminating local biosphere.",
+          "score": 9,
+          "type": "best",
+          "details": "Preserves planetary protection directives while advancing exobiology research."
+        },
+        {
+          "text": "Land a manned away team to drill and retrieve specimens directly.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Accelerates results but risks cross-contamination."
+        },
+        {
+          "text": "Mark location for future missions and withdraw.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Ensures safety but may lose unique biological data to natural shifts."
+        },
+        {
+          "text": "Emit a full-power counter-frequency without prior characterization.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Acting without spectral characterization risks resonance, feedback, or rupture of the phenomenon."
+        },
+        {
+          "text": "Ignore readings as transient noise and continue normal operations.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Dismisses potentially hazardous physics; Starfleet procedure mandates verification and mitigation."
+        }
+      ]
+    },
+    {
+      "scenario": "Radiation Spike During Survey",
+      "summary": "EXAM SCENARIO: Survey instruments detect lethal but fluctuating gamma radiation pockets. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Cease all operations, recalibrate shields, and remap area from a safe orbit.",
+          "score": 9,
+          "type": "best",
+          "details": "Protects crew and collects useful data safely for astrophysics analysis."
+        },
+        {
+          "text": "Continue survey using automated drones only.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Maintains mission pace but risks losing equipment."
+        },
+        {
+          "text": "Ignore transient spikes assuming background variation.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Neglects possible discovery of exotic radiation source."
+        },
+        {
+          "text": "Increase warp or power output to drown out interference immediately.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Overdriving fields under anomaly stress amplifies instabilities; diagnostics and dampening come first."
+        },
+        {
+          "text": "Override safety interlocks to expedite field alignment under load.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Disabling safeties during an unknown condition violates engineering protocols and endangers the ship."
+        }
+      ]
+    },
+    {
+      "scenario": "Artificial Comet Core",
+      "summary": "EXAM SCENARIO: Spectral analysis reveals manufactured alloys within a comet nucleus. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Collect fragments for metallurgical analysis and track orbital decay.",
+          "score": 9,
+          "type": "best",
+          "details": "Preserves integrity and uncovers evidence of artificial construction."
+        },
+        {
+          "text": "Attempt to tractor comet to stable orbit for long-term study.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Facilitates extended research but risks structural fragmentation."
+        },
+        {
+          "text": "Broadcast discovery immediately to claim priority.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Draws recognition but may violate First Contact or artifact protocols."
+        },
+        {
+          "text": "Increase warp or power output to drown out interference immediately.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Overdriving fields under anomaly stress amplifies instabilities; diagnostics and dampening come first."
+        },
+        {
+          "text": "Override safety interlocks to expedite field alignment under load.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Disabling safeties during an unknown condition violates engineering protocols and endangers the ship."
+        }
+      ]
+    },
+    {
+      "scenario": "Subspace Resonance Cascade",
+      "summary": "EXAM SCENARIO: During a sensor calibration near a binary pulsar, the ship's subspace transceivers begin to resonate, causing feedback through communications and warp field systems. The interference is spreading geometrically. In this final assessment, you must decide how to respond under operational conditions. Your answer will determine the safety of the ship and the integrity of Starfleet's scientific mission.",
+      "answers": [
+        {
+          "text": "Initiate phased dampening across the subspace bandwidth and modulate warp field harmonics inversely.",
+          "score": 9,
+          "type": "best",
+          "details": "Applies Starfleet protocol for resonance containment; counter-harmonics dissipate the cascade safely."
+        },
+        {
+          "text": "Shut down all subspace emitters and engage structural field isolation.",
+          "score": 8,
+          "type": "alternate",
+          "details": "A solid fallback; stops spread but risks temporary sensor and comms blackout."
+        },
+        {
+          "text": "Route the feedback through the deflector dish to vent energy into normal space.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Partially effective but risks deflector overload; lacks controlled frequency management."
+        },
+        {
+          "text": "Increase warp field output to overpower the resonance and reassert control.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Overdriving warp fields in a resonance condition amplifies feedback; contrary to engineering and physics protocols."
+        },
+        {
+          "text": "Ignore the readings until communications stabilize naturally.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passive inaction during an escalating resonance violates Starfleet safety standards and risks cascade failure."
+        }
+      ]
+    }
+  ]
+}

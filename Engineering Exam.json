@@ -1,0 +1,113 @@
+{
+  "department": "Engineering",
+  "exam": [
+    {
+      "scenario": "Warp Core Plasma Fluctuation",
+      "summary": "EXAM SCENARIO: During a training simulation, a warp core begins showing minor plasma instability, threatening system integrity. This is your final engineering qualification test. Your decisions here will determine your readiness to serve as Chief Engineer aboard a Federation starship.",
+      "answers": [
+        {
+          "text": "Engage intermix calibration and verify magnetic constrictor fields before correcting plasma flow.",
+          "score": 9,
+          "type": "best",
+          "details": "Follows full safety protocols and ensures containment integrity, demonstrating disciplined engineering leadership."
+        },
+        {
+          "text": "Divert power from secondary systems to reinforce plasma injectors while running core diagnostics.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Sound engineering solution, though riskier without first confirming constrictor field stability."
+        },
+        {
+          "text": "Run a rapid plasma flush to clear the conduits before diagnostics complete.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Quick but risky; could worsen instability if the cause is electromagnetic feedback rather than blockage."
+        },
+        {
+          "text": "Increase warp field output to mask fluctuation readings and maintain power balance.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Overdriving the warp field in an unstable plasma condition violates Starfleet safety procedures."
+        },
+        {
+          "text": "Ignore readings; fluctuations at this level typically self-correct.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting a plasma irregularity risks containment breach and catastrophic drive failure."
+        }
+      ]
+    },
+    {
+      "scenario": "EPS Power Surge",
+      "summary": "EXAM SCENARIO: During bridge maneuvers, the Engineering console alerts to a rising EPS pressure spike across three decks. This is your final engineering qualification test. Your decisions here will determine your readiness to serve as Chief Engineer aboard a Federation starship.",
+      "answers": [
+        {
+          "text": "Isolate the affected conduits and reroute power through auxiliary transfer nodes.",
+          "score": 9,
+          "type": "best",
+          "details": "Textbook containment procedure per Starfleet power management guidelines."
+        },
+        {
+          "text": "Manually vent plasma from the EPS manifold to stabilize flow immediately.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Effective in emergencies but risks radiation exposure if performed outside containment protocols."
+        },
+        {
+          "text": "Trigger a shipwide power reset to reinitialize EPS regulators.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Can work, but causes total systems loss and violates operational safety during maneuvers."
+        },
+        {
+          "text": "Bypass flow regulators and run power directly to maintain output.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Bypassing regulators risks a cascade failure and violates engineering safety codes."
+        },
+        {
+          "text": "Allow the surge to dissipate naturally; pressure will normalize post-maneuver.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring EPS pressure anomalies can cause conduit rupture and deck-level fire risk."
+        }
+      ]
+    },
+    {
+      "scenario": "Impulse Engine Coolant Leak",
+      "summary": "EXAM SCENARIO: Engineering reports a coolant leak in the impulse drive assembly during atmospheric operations. This is your final engineering qualification test. Your decisions here will determine your readiness to serve as Chief Engineer aboard a Federation starship.",
+      "answers": [
+        {
+          "text": "Shut down the affected engine, reroute thrust, and activate emergency coolant seals.",
+          "score": 9,
+          "type": "best",
+          "details": "Safely neutralizes the fault and preserves ship control per Starfleet mechanical safety standards."
+        },
+        {
+          "text": "Engage auxiliary venting to space and continue low-thrust operation until stable orbit is achieved.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Acceptable short-term fix but risks atmospheric contamination."
+        },
+        {
+          "text": "Divert coolant through the warp intercooler grid to maintain system temperature.",
+          "score": 7,
+          "type": "alternate",
+          "details": "Works temporarily but risks contamination of warp coolant circuits."
+        },
+        {
+          "text": "Increase engine output to vaporize leaking coolant faster.",
+          "score": 3,
+          "type": "incorrect",
+          "details": "Thermal overdrive under leak conditions can rupture manifolds and ignite plasma conduits."
+        },
+        {
+          "text": "Deactivate alarms and log the incident for later review.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignoring leaks endangers crew and ship; violates Federation safety directives."
+        }
+      ]
+    }
+  ]
+}
