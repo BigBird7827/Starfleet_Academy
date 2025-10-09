@@ -2,818 +2,194 @@
   "department": "Security",
   "exam": [
     {
-      "scenario": "Intruder Alert on Deck Three",
-      "summary": "EXAM SCENARIO: Motion sensors report unauthorized movement near crew quarters during off-watch hours. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
+      "scenario": "Intruder Alert",
+      "summary": "Internal sensors detect an unauthorized life-form moving toward Main Engineering.",
       "answers": [
         {
-          "text": "Lockdown the corridor, dispatch security teams to sweep, and use biometric logs to identify the intruder.",
+          "text": "Seal all affected decks, dispatch two containment teams, and coordinate with internal sensors for live tracking.",
           "score": 9,
           "type": "best",
-          "details": "Immediate containment minimizes risk to crew; biometric cross-checks help identify intent and prevent escape."
+          "details": "Combines caution, coordination, and minimal risk to crew or ship systems."
         },
         {
-          "text": "Sound general alarm and evacuate nearby compartments while calling for backup.",
+          "text": "Send a single armed officer to intercept immediately.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Overconfident approach that risks injury and loss of containment."
+        },
+        {
+          "text": "Lock down Engineering only and await further movement before acting.",
           "score": 8,
           "type": "alternate",
-          "details": "Rapid evacuation protects civilians but may allow intruder to move into less-populated areas; useful if threat level unclear."
-        },
-        {
-          "text": "Monitor sensors and attempt to track intruder remotely before committing teams.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Less proactive; avoids unnecessary confrontation but risks intruder reaching critical areas if tracking fails."
+          "details": "Containment-oriented but reactive; loses initiative if intruder redirects."
         }
       ]
     },
     {
-      "scenario": "Sabotage Signals in Life Support",
-      "summary": "EXAM SCENARIO: Unauthorized attempts to alter life-support setpoints are detected in engineering logs. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
+      "scenario": "Weapon Discharge on Deck",
+      "summary": "A phaser goes off in a crowded corridor, injuring a civilian technician.",
       "answers": [
         {
-          "text": "Isolate life-support controls to maintenance mode, switch to manual overrides, and detain any suspicious personnel in engineering.",
+          "text": "Secure the weapon, assist medical personnel, and initiate a full forensic scan of the emitter.",
           "score": 9,
           "type": "best",
-          "details": "Protects crew immediately and secures systems; manual control prevents automated tampering from taking effect."
+          "details": "Follows Starfleet investigative sequence while prioritizing safety."
         },
         {
-          "text": "Restore previous safe setpoints from backups and continue system monitoring while investigating.",
+          "text": "Question nearby witnesses immediately before medical aid arrives.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglects primary duty to preserve life and scene safety."
+        },
+        {
+          "text": "Evacuate civilians, seal the area, and delegate evidence collection to forensics.",
           "score": 8,
           "type": "alternate",
-          "details": "Restores safety but may leave a window for repeat tampering if malicious actor remains free."
-        },
-        {
-          "text": "Alert command and wait for orders before taking action to avoid misidentifying a maintenance routine.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Cautious approach reduces false-positive risk but delays response to an active sabotage attempt."
+          "details": "Procedurally sound but delays immediate aid and identification of the shooter."
         }
       ]
     },
     {
-      "scenario": "Away Team Ambush - Jungle Clearing",
-      "summary": "EXAM SCENARIO: Security personnel on an away mission are caught in a planned ambush while moving through dense foliage. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
+      "scenario": "Suspicious Cargo",
+      "summary": "Scans reveal a container emitting faint tritanium resonance not listed on the manifest.",
       "answers": [
         {
-          "text": "Establish immediate perimeter, return fire to suppress attackers, and execute a phased withdrawal to a defensible extraction point.",
+          "text": "Move the cargo to a secure bay, maintain environmental isolation, and perform a controlled scan.",
           "score": 9,
           "type": "best",
-          "details": "Suppressive action and an organized withdrawal preserve team integrity and create space for medevac if needed."
+          "details": "Standard Starfleet hazardous-material containment protocol."
         },
         {
-          "text": "Scatter and attempt to regroup at previously agreed rendezvous coordinates.",
+          "text": "Open the container carefully to identify contents firsthand.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Bypasses containment procedure and endangers the inspection team."
+        },
+        {
+          "text": "Request engineering to remotely analyze the container’s molecular composition.",
           "score": 8,
           "type": "alternate",
-          "details": "Can reduce casualties if perimeter breached but risks isolating team members and complicating rescue."
-        },
-        {
-          "text": "Push forward aggressively to seize the high ground and deny enemy firing positions.",
-          "score": 7,
-          "type": "alternate",
-          "details": "High-risk, high-reward; may end ambush quickly but could increase exposure to hidden threats."
+          "details": "Technically safe but delays action if the material is volatile."
         }
       ]
     },
     {
-      "scenario": "Unauthorized Weapons Discharge",
-      "summary": "EXAM SCENARIO: A phaser discharge is logged in a non-combat zone with no authorized training scheduled. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
+      "scenario": "Crew Confrontation",
+      "summary": "Two officers escalate a personal dispute to physical aggression in a public area.",
       "answers": [
         {
-          "text": "Secure the area, account for all personnel, and perform weapon system diagnostics and ammo logs to trace the source.",
+          "text": "Separate the individuals, remove them from duty, and file an immediate incident report.",
           "score": 9,
           "type": "best",
-          "details": "Combines safety, accountability, and technical verification to determine whether incident is accidental or malicious."
+          "details": "Restores order swiftly and preserves the integrity of the chain of command."
         },
         {
-          "text": "Place the ship on heightened alert for internal threats while awaiting a commander-led inquiry.",
+          "text": "Issue verbal warnings and order both officers back to their stations.",
           "score": 8,
           "type": "alternate",
-          "details": "Proactive security posture but may cause unnecessary alarm to crew and hamper normal operations."
+          "details": "Quick resolution but lacks disciplinary follow-through; may invite repetition."
         },
         {
-          "text": "Assume accidental discharge and issue a formal reprimand after a brief investigation.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Quick and administratively light but risks missing deliberate misuse or system faults."
+          "text": "Allow the argument to finish to identify the aggressor.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Unacceptable lapse in containment; jeopardizes bystanders."
         }
       ]
     },
     {
-      "scenario": "Hacking Attempt on Armory Controls",
-      "summary": "EXAM SCENARIO: External access attempts detected targeting the armory control authentication service. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
+      "scenario": "Security System Override",
+      "summary": "A computer lockdown bypasses your access codes across all decks.",
       "answers": [
         {
-          "text": "Isolate the armory network, enforce multi-factor manual authentication for weapons access, and initiate a full forensics sweep.",
+          "text": "Initiate a manual isolation of security nodes and coordinate with engineering to trace the breach.",
           "score": 9,
           "type": "best",
-          "details": "Prevents unauthorized access while enabling investigators to trace intrusion vectors and actors."
+          "details": "Integrates multidisciplinary response while maintaining compartmental integrity."
         },
         {
-          "text": "Shut down remote weapon access entirely until the intrusion source is eliminated.",
+          "text": "Force a reboot of shipwide computer functions to restore control.",
           "score": 8,
           "type": "alternate",
-          "details": "Effective immediate protection but reduces readiness and may hinder legitimate urgent access."
+          "details": "Potentially restores access but disrupts all ship systems mid-operation."
         },
         {
-          "text": "Monitor the intrusion to gather intelligence on the attacker’s methods before cutting access.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Potentially valuable intel but risks the attacker succeeding if monitoring delays isolation."
+          "text": "Abandon computer systems and focus on physical patrols instead.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Ignores digital threat source and compromises monitoring capacity."
         }
       ]
     },
     {
-      "scenario": "Prisoner Transport Riot",
-      "summary": "EXAM SCENARIO: A detained suspect incites other prisoners, overwhelming nearby security personnel. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
+      "scenario": "Hostage Scenario",
+      "summary": "An intruder traps civilians in a shuttle bay, demanding transport off the ship.",
       "answers": [
         {
-          "text": "Deploy non-lethal area suppression, segregate instigators, and secure transport protocols to move prisoners to reinforced cells.",
+          "text": "Establish communication, stall for time, and assemble a tactical team with full containment fields.",
           "score": 9,
           "type": "best",
-          "details": "Minimizes injuries, removes leadership of the riot, and restores order without escalating force."
+          "details": "Prioritizes negotiation and minimizes casualties consistent with Federation law enforcement doctrine."
         },
         {
-          "text": "Call engineering to seal ventilation and lock down sections while awaiting reinforcements.",
+          "text": "Authorize a precision phaser strike to eliminate the threat immediately.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Premature use of lethal force; violates Starfleet Rules of Engagement."
+        },
+        {
+          "text": "Cut power to the shuttle bay and attempt an environmental knockout via anesthetic gas.",
           "score": 8,
           "type": "alternate",
-          "details": "Effective containment but risks suffocating or creating panic among detainees if misused."
-        },
-        {
-          "text": "Use lethal force to neutralize primary threats immediately to prevent further spread.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Guaranteed suppression but may lead to legal and ethical consequences."
+          "details": "Viable non-lethal option though risky for hostages with medical vulnerabilities."
         }
       ]
     },
     {
-      "scenario": "Sensor Jam During Docking",
-      "summary": "EXAM SCENARIO: External sensor jamming makes it difficult to identify small craft approaching during a busy docking maneuver. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
+      "scenario": "Sabotage Suspicion",
+      "summary": "Critical systems fail after maintenance by a newly transferred crew member.",
       "answers": [
         {
-          "text": "Switch to manual visual confirmation via ports and deploy security shuttles to intercept unknown contacts.",
+          "text": "Secure the officer, restrict access privileges, and conduct a technical audit of recent work logs.",
           "score": 9,
           "type": "best",
-          "details": "Maintains situational awareness and intercepts potential threats while navigation completes docking safely."
+          "details": "Balanced response preserving security and due process."
         },
         {
-          "text": "Abort docking until jamming source is identified and cleared.",
+          "text": "Accuse the officer publicly to deter further sabotage.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Destroys morale and violates investigative confidentiality."
+        },
+        {
+          "text": "Increase security monitoring silently while gathering additional evidence.",
           "score": 8,
           "type": "alternate",
-          "details": "Conservative solution that prioritizes safety but disrupts schedule and logistics."
-        },
-        {
-          "text": "Proceed using assumption-based sensor filters and rely on automated collision avoidance.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Risky when identification is uncertain; may place ship in danger if jamming conceals hostile craft."
+          "details": "Cautious and professional though slower to contain risk if sabotage is ongoing."
         }
       ]
     },
     {
-      "scenario": "Insider Threat - Suspicious Maintenance Logs",
-      "summary": "EXAM SCENARIO: Repeated maintenance overrides by a technician appear outside scheduled windows and with odd justifications. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
+      "scenario": "Alien Boarding Attempt",
+      "summary": "Unknown vessels engage tractor beams and begin transporting boarding parties.",
       "answers": [
         {
-          "text": "Privately interview the technician under security observation and audit their recent access logs and communications.",
+          "text": "Raise shields, jam transport signatures, and coordinate with tactical for counter-transport protocols.",
           "score": 9,
           "type": "best",
-          "details": "Direct scrutiny uncovers intent while minimizing crew alarm and preserving evidence chain."
+          "details": "Demonstrates readiness and multi-system defense coordination."
         },
         {
-          "text": "Revoke the technician’s access pending a wider security review of maintenance protocols.",
+          "text": "Target the attacking ships’ engines immediately to disable them.",
           "score": 8,
           "type": "alternate",
-          "details": "Immediate risk mitigation but may damage trust and delay essential repairs."
+          "details": "Aggressive yet defensible; risk of escalation remains high."
         },
         {
-          "text": "Monitor activity silently to gather more evidence before making any personnel moves.",
-          "score": 7,
-          "type": "alternate",
-          "details": "May build a stronger case but allows continued risk if the technician acts maliciously again."
-        }
-      ]
-    },
-    {
-      "scenario": "Chemical Agent Detected in Cargo Hold",
-      "summary": "EXAM SCENARIO: Environmentals detect trace levels of a toxic compound in an incoming cargo manifest. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Quarantine the cargo hold, activate filtration and decontamination protocols, and call medical for exposure assessment.",
-          "score": 9,
-          "type": "best",
-          "details": "Protects crew health and contains contamination while enabling safe handling and investigation."
-        },
-        {
-          "text": "Offload cargo to exposed quarantine containers for analysis at the next port.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Removes hazard from ship but requires safe transfer procedures and may spread risk if mishandled."
-        },
-        {
-          "text": "Ignore initial trace levels if within acceptable thresholds and re-inspect at scheduled intervals.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Low disruption but risks gradual exposure if readings were underreported or worsen."
-        }
-      ]
-    },
-    {
-      "scenario": "Hostile Boarding Party Detected",
-      "summary": "EXAM SCENARIO: Multiple hull breaches and unauthorized boarding signatures are detected near engineering. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Seal bulkhead compartments, engage automated defense turrets, and deploy armed response teams to contain and eject boarders.",
-          "score": 9,
-          "type": "best",
-          "details": "Combines passive containment, automated defense, and focused team action to stop boarding before it spreads."
-        },
-        {
-          "text": "Attempt to negotiate with boarding party via hailing frequencies while preparing boarding teams.",
-          "score": 8,
-          "type": "alternate",
-          "details": "May de-escalate if attackers seek ransom or communication; riskier if attackers are intent on sabotage."
-        },
-        {
-          "text": "Initiate self-destruct of affected micro-sectors to eliminate boarders' foothold.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Extreme measure that denies boarders but risks significant ship damage and crew safety."
-        }
-      ]
-    },
-    {
-      "scenario": "Recon Drone Compromised",
-      "summary": "EXAM SCENARIO: A deployed recon drone in hostile territory begins relaying altered telemetry and audiovisual feeds. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Terminate the drone’s uplink, perform a remote forensic dump, and self-destruct it to prevent compromise spread.",
-          "score": 9,
-          "type": "best",
-          "details": "Protects intel integrity, prevents adversaries from using drone as a backdoor, and recovers evidence for analysis."
-        },
-        {
-          "text": "Attempt to retake control and land the drone for inspection if signal remains stable.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Recovers asset and data but risks further compromise if attacker retains partial control."
-        },
-        {
-          "text": "Ignore anomalies and continue mission to maintain cover in hostile environment.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Maintains mission presence; risky because compromised feeds could mislead operators."
-        }
-      ]
-    },
-    {
-      "scenario": "False Positive Explosive Alert",
-      "summary": "EXAM SCENARIO: Security scanners flag a container as explosive, but visual inspection suggests packaging error. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Evacuate nearby areas, use remote handling rigs to isolate and x-ray the container, then neutralize if confirmed.",
-          "score": 9,
-          "type": "best",
-          "details": "Prioritizes safety while minimizing crew exposure and preserving evidence for chain-of-custody."
-        },
-        {
-          "text": "Open the container in place using standard protocols since visual cues show non-threatening contents.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Faster resolution but risks accidental detonation if scanner was accurate."
-        },
-        {
-          "text": "Label as false positive and return to normal operations to avoid disrupting logistics.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Efficient for benign errors but dangerous if misclassification occurs."
-        }
-      ]
-    },
-    {
-      "scenario": "Counterfeit IDs Circulating Among Crew",
-      "summary": "EXAM SCENARIO: Security receives reports of forged crew IDs used to access restricted areas. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Run a shipwide authentication sweep, invalidate suspect badges, and require biometric re-enrollment.",
-          "score": 9,
-          "type": "best",
-          "details": "Restores access integrity and ensures only verified personnel can enter sensitive zones."
-        },
-        {
-          "text": "Increase random spot checks at critical access points and monitor for repeat offenders.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Deters casual misuse but may miss coordinated forgery rings."
-        },
-        {
-          "text": "Assume administrative error and update badge reader firmware to reduce false acceptance.",
-          "score": 7,
-          "type": "alternate",
-          "details": "May reduce technical false positives but does not address intentional forgery."
-        }
-      ]
-    },
-    {
-      "scenario": "Hostile Negotiation Escalation",
-      "summary": "EXAM SCENARIO: A diplomatic security detail encounters an armed separatist group demanding the release of prisoners. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Maintain cover, de-escalate verbally while tactical units prepare a silent takedown at a commander’s go.",
-          "score": 9,
-          "type": "best",
-          "details": "Prioritizes saving lives while preparing decisive intervention if negotiations fail."
-        },
-        {
-          "text": "Refuse demands and demonstrate force posture to intimidate the group into surrender.",
-          "score": 8,
-          "type": "alternate",
-          "details": "May compel surrender but risks provoking immediate violence and civilian casualties."
-        },
-        {
-          "text": "Comply with demands to buy time and avoid bloodshed, planning to recapture later.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Temporary peace but concedes tactical advantage and may embolden future demands."
-        }
-      ]
-    },
-    {
-      "scenario": "Smuggling of Restricted Tech",
-      "summary": "EXAM SCENARIO: Cargo manifests show discrepancies suggesting illicit transport of contraband technologies. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Hold the vessel at customs, perform a targeted search of suspect containers, and detain implicated crew for questioning.",
-          "score": 9,
-          "type": "best",
-          "details": "Direct action prevents contraband from moving and preserves legal caseability against smugglers."
-        },
-        {
-          "text": "Track the shipment covertly to identify the broader smuggling network before intervening.",
-          "score": 8,
-          "type": "alternate",
-          "details": "May dismantle network but risks contraband reaching end-users during surveillance."
-        },
-        {
-          "text": "Flag as paperwork error and release the shipment to avoid disrupting trade relations.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Avoids friction but allows potential contraband to circulate."
-        }
-      ]
-    },
-    {
-      "scenario": "Active Shooter Drill Confusion",
-      "summary": "EXAM SCENARIO: A scheduled active-shooter training is mistaken for a real event by junior crew, causing panic. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Immediately broadcast a clear all-hands message clarifying the exercise, pause the drill, and counsel affected crew.",
-          "score": 9,
-          "type": "best",
-          "details": "Restores order, reduces trauma, and provides learning opportunity to improve drill protocols."
-        },
-        {
-          "text": "Continue the drill to capitalize on realistic reactions as a training opportunity.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Maximizes training fidelity but risks real psychological harm and undermines trust."
-        },
-        {
-          "text": "Cancel the exercise and discipline organizers for poor communication.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Establishes accountability but loses pedagogical value and may be excessively punitive."
-        }
-      ]
-    },
-    {
-      "scenario": "Sealed Compartment with Unknown Life Signs",
-      "summary": "EXAM SCENARIO: A sealed maintenance compartment returns faint non-human life signs on thermal scans. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Approach with hazard protocols, use remote manipulation to open, and be prepared for containment or first contact procedures.",
-          "score": 9,
-          "type": "best",
-          "details": "Balances safety with compassion and readiness for biological unknowns or surprise threats."
-        },
-        {
-          "text": "Vent the compartment to the exterior and neutralize any life signs as potential hazard.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Defensive and safe but risks violating ethical first-contact protocols."
-        },
-        {
-          "text": "Ignore ambiguous readings as sensor noise and reopen normally during scheduled maintenance.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Minimal disruption but risks exposing crew to unknown organisms or traps."
-        }
-      ]
-    },
-    {
-      "scenario": "Unauthorized Boarding by Small Ferry",
-      "summary": "EXAM SCENARIO: A local ferry approaches with insufficient clearance codes and requests emergency docking. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Hold the ferry at remote docking, perform a remote scan, and verify identities before granting access.",
-          "score": 9,
-          "type": "best",
-          "details": "Prevents hostage or infiltration scenarios while providing aid if genuine emergency."
-        },
-        {
-          "text": "Allow immediate docking to offer humanitarian assistance, trusting local authority signals.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Helps genuine cases quickly but may allow hostile actors aboard."
-        },
-        {
-          "text": "Refuse docking and advise the ferry to seek assistance at nearest port.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Safe refusal but may abandon legitimate civilians in need."
-        }
-      ]
-    },
-    {
-      "scenario": "Phaser Misfire During Training",
-      "summary": "EXAM SCENARIO: A phaser discharged during a training session fails to cycle correctly and emits an atypical beam. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Quarantine weapons, secure the firing range, and run diagnostic and maintenance protocols before further use.",
-          "score": 9,
-          "type": "best",
-          "details": "Prevents further misfires and ensures weapons are safe and reliable before returning to service."
-        },
-        {
-          "text": "Continue training with reduced power settings while techs monitor performance.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Keeps schedule but risks repeat malfunction and unsafe conditions."
-        },
-        {
-          "text": "Ignore the anomaly as an isolated sensor glitch and resume normal training.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Quick fix but may allow dangerous weapons faults to persist."
-        }
-      ]
-    },
-    {
-      "scenario": "Chain-of-Command Breakdown During Emergency",
-      "summary": "EXAM SCENARIO: Multiple conflicting orders are issued during a hull breach response, causing team paralysis. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Assert security command control, re-establish clear single-point orders, and document deviations for after-action review.",
-          "score": 9,
-          "type": "best",
-          "details": "Restores decisive action and creates accountability to correct leadership issues."
-        },
-        {
-          "text": "Hold current positions until a higher-ranking officer clarifies instructions.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Reduces risk of conflicting movement but delays urgent actions needed to save lives."
-        },
-        {
-          "text": "Allow squad leaders to act independently to solve local problems quickly.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Empowers initiative but risks uncoordinated efforts that may conflict strategically."
-        }
-      ]
-    },
-    {
-      "scenario": "Saboteur Planting Tracking Beacons",
-      "summary": "EXAM SCENARIO: Unidentified micro-beacons are found attached to hull fittings suggesting tracking by hostile actors. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Remove and catalog beacons for forensic analysis, sweep hull for additional devices, and harden external protocols.",
-          "score": 9,
-          "type": "best",
-          "details": "Preserves evidence, prevents additional tracking, and informs counter-surveillance measures."
-        },
-        {
-          "text": "Ignore as cosmetic debris unless telemetry confirms hostile usage.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Minimizes disruption but risks missing coordinated espionage operations."
-        },
-        {
-          "text": "Broadcast publicly that beacons will be removed to deter further placements.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Deterrent effect may be limited and alerts adversaries to security responses."
-        }
-      ]
-    },
-    {
-      "scenario": "Hostile Planetary Patrol Confrontation",
-      "summary": "EXAM SCENARIO: A security patrol is confronted by armed locals enforcing a restricted zone while conducting surface rescue ops. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Use non-lethal area denial to create space, communicate intent, and offer to coordinate through neutral mediators.",
-          "score": 9,
-          "type": "best",
-          "details": "De-escalates potential violence and preserves diplomatic channels while ensuring mission completion."
-        },
-        {
-          "text": "Raise weapons and assert authority to push through the patrol.",
-          "score": 8,
-          "type": "alternate",
-          "details": "May complete mission faster but risks casualties and diplomatic fallout."
-        },
-        {
-          "text": "Abort surface operation and withdraw to ship to avoid engagement.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Preserves crew safety but fails mission objectives and concedes ground."
-        }
-      ]
-    },
-    {
-      "scenario": "Biometric Override Attempt",
-      "summary": "EXAM SCENARIO: Someone attempts to access a secure vault using a cloned biometric signature. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Require secondary manual authentication and camera verification, detain the user for investigation, and audit biometric logs.",
-          "score": 9,
-          "type": "best",
-          "details": "Combines layered security and human verification to stop sophisticated cloning attacks."
-        },
-        {
-          "text": "Allow access but flag the session and trace activity for evidence collection.",
-          "score": 8,
-          "type": "alternate",
-          "details": "May collect attacker intel but risks exposure of secured assets during the session."
-        },
-        {
-          "text": "Disable biometric access entirely and switch to code locks until biometrics can be reissued.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Effective short-term shield but disrupts normal operations and can be socially disruptive."
-        }
-      ]
-    },
-    {
-      "scenario": "Riot Control on Colony Surface",
-      "summary": "EXAM SCENARIO: Civil unrest on a colony surface threatens both civilians and security teams trying to stabilize the area. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Establish secure corridors for evacuation, deploy non-lethal crowd control, and work with local leaders to open dialogue.",
-          "score": 9,
-          "type": "best",
-          "details": "Protects lives, reduces confrontation, and targets root causes by involving community leadership."
-        },
-        {
-          "text": "Use precision strikes to remove instigators and restore order by force.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Quick suppression but risks civilian casualties and long-term resentment."
-        },
-        {
-          "text": "Enforce a curfew and hold positions until civil order returns naturally.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Low-contact approach but may prolong unrest and risk spread of violence."
-        }
-      ]
-    },
-    {
-      "scenario": "Tampered Safety Protocols in Shuttle Bay",
-      "summary": "EXAM SCENARIO: Safety interlocks in the shuttle bay have been bypassed, risking uncontrolled launches. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Lock down shuttle bay operations, run a full audit of recent access, and re-engage interlocks with forced authentication.",
-          "score": 9,
-          "type": "best",
-          "details": "Immediate prevention of accidental or malicious launches and identification of perpetrators."
-        },
-        {
-          "text": "Run controlled test launches under supervision to verify systems before resuming full ops.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Validates operability but risks initiating an incident if tampering remains undetected."
-        },
-        {
-          "text": "Assume a maintenance error and reset protocols to factory defaults to clear overrides.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Quick technical reset but may erase forensic data and hide malicious intent."
-        }
-      ]
-    },
-    {
-      "scenario": "Encrypted Threats to Command Staff",
-      "summary": "EXAM SCENARIO: Command staff receives anonymous encrypted threats referencing classified operations. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Trace message headers, isolate affected staff for protection, and coordinate with intelligence for attribution.",
-          "score": 9,
-          "type": "best",
-          "details": "Protects potential targets while pursuing the originator through technical and HUMINT methods."
-        },
-        {
-          "text": "Treat as prank and increase personal security awareness without formal escalation.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Avoids panic but risks underestimating genuine threats."
-        },
-        {
-          "text": "Publicize the threats to deter attackers and encourage witnesses to come forward.",
-          "score": 7,
-          "type": "alternate",
-          "details": "May mobilize community support but leaks classified references and can escalate fear."
-        }
-      ]
-    },
-    {
-      "scenario": "False Mutiny Broadcast",
-      "summary": "EXAM SCENARIO: A forged transmission claims senior officers have ordered mutiny, causing confusion among lower-deck crew. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Secure official communications channels, broadcast authenticated counter-orders, and detain anyone propagating the false transmission.",
-          "score": 9,
-          "type": "best",
-          "details": "Restores legitimate chain of command and deters further misinformation by swift, authoritative correction."
-        },
-        {
-          "text": "Lock down internal comms and vet messages manually to prevent spread until source identified.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Prevents further spread but slows normal operations and may cause frustration."
-        },
-        {
-          "text": "Ignore and continue with existing mission orders assuming crew will recognize falsehood quickly.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Avoids overreaction but risks sinking morale and allowing confusion to grow."
-        }
-      ]
-    },
-    {
-      "scenario": "Radiation Leak Used as Diversion",
-      "summary": "EXAM SCENARIO: A localized radiation leak coincides with a theft from a secure lab, suggesting coordinated diversion tactics. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Contain the leak with engineering, prioritize victim rescue, then preserve crime scene for investigation once safe.",
-          "score": 9,
-          "type": "best",
-          "details": "Balances humanitarian response with preservation of evidence to identify culprits once area is safe."
-        },
-        {
-          "text": "Pursue suspects immediately while containment continues to prevent further thefts.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Aggressive approach may recover property but risks crew exposure to radiation."
-        },
-        {
-          "text": "Treat as two unrelated incidents to avoid overcomplicating response chains.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Simplifies response but misses chance to expose coordinated hostile activity."
-        }
-      ]
-    },
-    {
-      "scenario": "Sabotaged Emergency Beacon Signals",
-      "summary": "EXAM SCENARIO: Rescue beacons in a sector are found emitting false coordinates, potentially luring ships into traps. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Disable suspect beacons, circulate updated NAV alerts, and establish verification protocols for future emergency signals.",
-          "score": 9,
-          "type": "best",
-          "details": "Prevents further trap exploitation and restores trust in emergency systems via stronger verification."
-        },
-        {
-          "text": "Respond to beacons with armed escort to mitigate potential ambushes.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Maintains rescue posture but risks escort crews being drawn into prepared traps."
-        },
-        {
-          "text": "Ignore the beacons until HQ confirms legitimacy to avoid baiting a trap.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Safe but may abandon genuine distress calls and cost lives."
-        }
-      ]
-    },
-    {
-      "scenario": "Undercover Agent Exposure",
-      "summary": "EXAM SCENARIO: An undercover security informant embedded in a crime ring risks being revealed after a compromised rendezvous. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Execute an extraction plan immediately, provide witness protection, and feed false leads to misdirect adversaries.",
-          "score": 9,
-          "type": "best",
-          "details": "Removes the asset from danger, preserves their intelligence value, and disrupts adversary responses."
-        },
-        {
-          "text": "Abort extraction to avoid exposing wider operations and re-plan a more covert retrieval.",
-          "score": 8,
-          "type": "alternate",
-          "details": "May keep broader ops intact but endangers the agent if delay allows exposure."
-        },
-        {
-          "text": "Signal the agent to cease contact and continue observation remotely.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Preserves surveillance but increases risk to the asset on the ground."
-        }
-      ]
-    },
-    {
-      "scenario": "Sabotage of Navigation Buoys",
-      "summary": "EXAM SCENARIO: Multiple navigation buoys near a shipping lane are found repositioned to cause collisions. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Reposition buoys to safe coordinates, notify maritime traffic, and investigate origin points for prosecution.",
-          "score": 9,
-          "type": "best",
-          "details": "Immediate hazard removal combined with investigation protects civilians and deters repetition."
-        },
-        {
-          "text": "Monitor traffic closely and issue temporary speed limits to reduce collision risk.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Mitigates some risk but does not remove the underlying navigational hazard."
-        },
-        {
-          "text": "Assume natural displacement and recalibrate buoys during scheduled maintenance.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Low urgency response that may allow further incidents if deliberate tampering continues."
-        }
-      ]
-    },
-    {
-      "scenario": "Cyber-Physical Attack on Cargo Robotics",
-      "summary": "EXAM SCENARIO: Malware causes cargo-handling robots to misplace or damage sensitive shipments. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Isolate robotics network, switch to manual handling with human oversight, and perform a full cyber-forensic sweep.",
-          "score": 9,
-          "type": "best",
-          "details": "Stops ongoing damage, secures evidence for attribution, and restores safe operations under manual control."
-        },
-        {
-          "text": "Patch systems live to close vulnerability while continuing automated handling with increased monitoring.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Maintains throughput but risks incomplete remediation if attack persists."
-        },
-        {
-          "text": "Restart robot clusters to clear transient faults and resume operations.",
-          "score": 7,
-          "type": "alternate",
-          "details": "May temporarily clear symptoms but can erase volatile forensic data and not prevent reinfection."
-        }
-      ]
-    },
-    {
-      "scenario": "Coordinated Small-Craft Swarm",
-      "summary": "EXAM SCENARIO: A swarm of small, weaponized craft approaches the ship using hit-and-run tactics to overwhelm point defenses. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Activate layered defensive patterns, soft-block swarms with EMP bursts, and deploy interceptor drones to thin numbers.",
-          "score": 9,
-          "type": "best",
-          "details": "Combines area suppression, electronic countermeasures, and active interception to neutralize swarm threats efficiently."
-        },
-        {
-          "text": "Focus all fire on the largest craft assuming it is the command node to disrupt coordination.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Potentially cripples swarm command but risks allowing many attackers to persist."
-        },
-        {
-          "text": "Evasive maneuvers at high speed to outrun swarm engagement windows.",
-          "score": 7,
-          "type": "alternate",
-          "details": "May avoid damage but can be fuel-intensive and unsuitable in constrained space."
-        }
-      ]
-    },
-    {
-      "scenario": "Deceptive Distress Call During Blockade",
-      "summary": "EXAM SCENARIO: An incoming ship calls for help claiming hull failure but arrives under blockade where smugglers operate. As a final test, you are presented with a live Starfleet situation requiring immediate judgment. Select the most appropriate action in keeping with Federation principles and operational safety.",
-      "answers": [
-        {
-          "text": "Approach with caution, validate hull integrity remotely, and send under-escort teams with non-lethal posture until cleared.",
-          "score": 9,
-          "type": "best",
-          "details": "Balances humanitarian assistance with security, reducing chances of being used as a trojan for hostile actors."
-        },
-        {
-          "text": "Grant emergency entry to expedite assistance without escort to preserve life.",
-          "score": 8,
-          "type": "alternate",
-          "details": "May save lives quickly but increases risk of infiltration or contraband transfer."
-        },
-        {
-          "text": "Deny entry and direct the ship to nearest port due to high-risk blockade protocols.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Defensive posture that prioritizes ship security but may cause preventable loss of life."
+          "text": "Evacuate lower decks and seal off the rest of the ship manually.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Overly reactive; sacrifices control of strategic sections unnecessarily."
         }
       ]
     }
