@@ -275,7 +275,6 @@ button:hover{
   <script>
   document.addEventListener("DOMContentLoaded", () => {
 
-    // --- Login Variables ---
     let cadetName = "", species = "";
     const homeworlds = {
       "Human":"Earth","Vulcan":"Vulcan","Andorian":"Andoria","Aenar":"Andoria (Polar Region)",
@@ -284,7 +283,7 @@ button:hover{
       "Orion":"Orion","Caitian":"Cait","Benzite":"Benzar"
     };
 
-    // --- Login Functionality ---
+    // Login
     document.getElementById("loginBtn").onclick = () => {
       cadetName = document.getElementById("cadetName").value.trim();
       species = document.getElementById("species").value;
@@ -306,45 +305,43 @@ button:hover{
       }, 2000);
     };
 
-    // --- File Maps ---
     const trainingFiles = {
-      "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
-      "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
-      "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Training.json",
-      "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Training.json",
-      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training.json",
-      "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Training.json"
+      "Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
+      "Diplomacy":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
+      "Engineering":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Training.json",
+      "Security":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Training.json",
+      "Science":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training.json",
+      "Medical":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Training.json"
     };
 
     const labFiles = {
-      "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Lab.json",
-      "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Lab.json",
-      "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Lab.json",
-      "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Lab.json",
-      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
-      "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
+      "Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Lab.json",
+      "Diplomacy":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Lab.json",
+      "Engineering":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Lab.json",
+      "Security":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Lab.json",
+      "Science":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
+      "Medical":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
     };
 
     const examFiles = {
-      "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Exam.json",
-      "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Exam.json",
-      "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Exam.json",
-      "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Exam.json",
-      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Exam.json",
-      "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Exam.json"
+      "Command":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Exam.json",
+      "Diplomacy":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Exam.json",
+      "Engineering":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Exam.json",
+      "Security":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Exam.json",
+      "Science":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Exam.json",
+      "Medical":"https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Exam.json"
     };
 
-    // --- Prefaces (restored) ---
     const prefaces = {
-      "Command":"For this training, you wear the captain’s uniform. The chair is yours...",
-      "Diplomacy":"In this training, you speak for the Federation itself...",
+      "Command":"For this training, you wear the captain’s uniform...",
+      "Diplomacy":"In this training, you speak for the Federation...",
       "Engineering":"The heart of a starship beats in your hands...",
-      "Science":"Curiosity is your compass, and knowledge your constant companion...",
-      "Medical":"Every life aboard your ship depends on your steadiness and compassion...",
+      "Science":"Curiosity is your compass...",
+      "Medical":"Every life aboard your ship depends on your steadiness...",
       "Security":"As Chief of Security, you stand between your crew and chaos..."
     };
 
-    // --- Navigation ---
+    // Navigation
     document.getElementById("trainingBtn").onclick = () => openOrientation("training");
     document.getElementById("labBtn").onclick = () => openOrientation("lab");
     document.getElementById("examBtn").onclick = () => openOrientation("exam");
@@ -352,9 +349,10 @@ button:hover{
     function openOrientation(mode) {
       document.getElementById("mainScreen").style.display = "none";
       const title = document.getElementById("orientationTitle");
-      title.textContent = mode === "lab" ? "Select Lab Department"
-                        : mode === "exam" ? "Select Exam Department"
-                        : "Select Study Department";
+      title.textContent =
+        mode === "lab" ? "Select Lab Department" :
+        mode === "exam" ? "Select Exam Department" :
+        "Select Study Department";
       const btnBox = document.getElementById("moduleButtons");
       btnBox.innerHTML = "";
       Object.keys(trainingFiles).forEach(dept => {
@@ -370,7 +368,7 @@ button:hover{
       document.getElementById("orientationPage").style.display = "block";
     }
 
-    // --- Return Buttons (fixed) ---
+    // Return buttons
     document.getElementById("returnMain").onclick = () => {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("mainScreen").style.display = "flex";
@@ -494,6 +492,7 @@ button:hover{
               };
               answersDiv.appendChild(btn);
             });
+
             section.appendChild(answersDiv);
             content.appendChild(section);
           }
@@ -501,7 +500,7 @@ button:hover{
         .catch(() => (content.innerHTML = "<p>Error loading lab data.</p>"));
     }
 
-    // --- Load Exam ---
+    // --- Load Exam with Live Competition ---
     function loadExam(dept) {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("examPage").style.display = "block";
@@ -519,13 +518,49 @@ button:hover{
             content.innerHTML = "<p>No exam data found.</p>";
             return;
           }
-          let score = 0;
+
+          const cadets = [
+            { name: `Cadet ${cadetName} (You)`, score: 0, type: "real" },
+            { name: "Cadet T'Lenn", bias: { best: 0.8, alternate: 0.15, incorrect: 0.05 }, score: 0 },
+            { name: "Cadet Drax", bias: { best: 0.3, alternate: 0.4, incorrect: 0.3 }, score: 0 },
+            { name: "Cadet Mira", bias: { best: 0.6, alternate: 0.3, incorrect: 0.1 }, score: 0 },
+            { name: "Cadet Korval", bias: { best: 0.4, alternate: 0.4, incorrect: 0.2 }, score: 0 },
+            { name: "Cadet Jalen", bias: { best: 0.5, alternate: 0.4, incorrect: 0.1 }, score: 0 },
+            { name: "Cadet Sira", bias: { best: 0.7, alternate: 0.2, incorrect: 0.1 }, score: 0 },
+            { name: "Cadet Brin", bias: { best: 0.45, alternate: 0.35, incorrect: 0.2 }, score: 0 },
+            { name: "Cadet Threx", bias: { best: 0.35, alternate: 0.35, incorrect: 0.3 }, score: 0 },
+            { name: "Cadet Nira", bias: { best: 0.55, alternate: 0.3, incorrect: 0.15 }, score: 0 }
+          ];
+
+          const maxScore = items.length * 9;
           let index = 0;
-          nextQuestion();
+
+          function renderScoreboard() {
+            const sorted = [...cadets].sort((a, b) => b.score - a.score);
+            sorted.forEach((c, i) => (c.rank = i + 1));
+            let html = `<div style="background:rgba(0,0,0,0.8);padding:10px;border:1px solid var(--gold);
+              border-radius:8px;margin-bottom:15px;text-align:left;">
+              <h3 style="color:var(--gold);text-align:center;">Exam Standings</h3>
+              <table style="width:100%;color:var(--text);border-collapse:collapse;font-size:12pt;">
+                <tr style="color:var(--gold);">
+                  <th align="left">Cadet</th><th>Score</th><th>GPA</th><th>Rank</th>
+                </tr>`;
+            sorted.forEach(c => {
+              const gpa = ((c.score / maxScore) * 4).toFixed(2);
+              html += `<tr>
+                <td>${c.name}</td>
+                <td align="center">${c.score}</td>
+                <td align="center">${gpa}</td>
+                <td align="center">${c.rank}</td>
+              </tr>`;
+            });
+            html += "</table></div>";
+            return html;
+          }
 
           function nextQuestion() {
             const q = items[index];
-            content.innerHTML = "";
+            content.innerHTML = renderScoreboard();
             const section = document.createElement("div");
             section.className = "training-section";
             section.innerHTML = `<h3>${q.scenario}</h3><p>${q.summary || ""}</p>`;
@@ -540,12 +575,25 @@ button:hover{
                 answersDiv.querySelectorAll("button").forEach(b => (b.disabled = true));
                 const fb = document.createElement("div");
                 fb.className = "feedback";
+
+                cadets[0].score += ans.score || 0;
+                // Simulated cadet performance
+                cadets.slice(1).forEach(sim => {
+                  const roll = Math.random();
+                  let pick;
+                  if (roll < sim.bias.best) pick = q.answers.find(a => a.type === "best");
+                  else if (roll < sim.bias.best + sim.bias.alternate)
+                    pick = q.answers.find(a => a.type === "alternate");
+                  else pick = q.answers.find(a => a.type === "incorrect");
+                  if (pick) sim.score += pick.score || 0;
+                });
+
                 if (ans.type === "best") {
                   fb.innerHTML = `<span class='best-answer'>✅ Correct!</span><p>${ans.details}</p>`;
-                  score += ans.score || 10;
                 } else {
                   fb.innerHTML = `<span class='incorrect-answer'>❌ Incorrect.</span>`;
                 }
+
                 const next = document.createElement("button");
                 next.textContent = index < items.length - 1 ? "Next Question ➡️" : "View Results";
                 next.onclick = () => {
@@ -556,26 +604,62 @@ button:hover{
                 };
                 fb.appendChild(next);
                 answersDiv.appendChild(fb);
+
+                // Refresh scoreboard
+                content.innerHTML = renderScoreboard();
+                content.appendChild(section);
+                section.appendChild(answersDiv);
               };
               answersDiv.appendChild(btn);
             });
+
             section.appendChild(answersDiv);
             content.appendChild(section);
           }
 
           function showResults() {
-            content.innerHTML = `<div style="text-align:center;">
+            const sorted = [...cadets].sort((a, b) => b.score - a.score);
+            const player = cadets[0];
+            const playerGPA = ((player.score / maxScore) * 4).toFixed(2);
+            const playerRank = sorted.findIndex(c => c.name === player.name) + 1;
+            const passed = playerGPA >= 3.0;
+
+            let resultHTML = `<div style="text-align:center;">
               <h2 class="page-title">Exam Complete</h2>
-              <p style="font-size:18pt;">Final Score: <strong>${score}</strong> points</p>
-              <p style="font-size:14pt;">Excellent work, Cadet ${cadetName} of ${homeworlds[species]}.
-              You have completed the ${dept} Final Exam.</p>
+              <p style="font-size:18pt;">Final GPA: <strong>${playerGPA}</strong> — ${passed ? "✅ Passed" : "❌ Did Not Pass"}</p>
+              <p style="font-size:14pt;">Rank: <strong>${playerRank}/${cadets.length}</strong></p>
+              <h3 style="color:var(--gold);margin-top:25px;">Final Standings</h3>
+              <table style="width:80%;margin:0 auto;color:var(--text);border-collapse:collapse;">
+                <tr style="color:var(--gold);">
+                  <th align="left">Cadet</th><th>Score</th><th>GPA</th><th>Rank</th>
+                </tr>`;
+
+            sorted.forEach(c => {
+              const gpa = ((c.score / maxScore) * 4).toFixed(2);
+              resultHTML += `<tr>
+                <td>${c.name}</td>
+                <td align="center">${c.score}</td>
+                <td align="center">${gpa}</td>
+                <td align="center">${c.rank}</td>
+              </tr>`;
+            });
+
+            resultHTML += `</table>
+              <p style="margin-top:25px;font-size:13pt;">${passed 
+                ? "Congratulations, Cadet. You have met the minimum GPA requirement of 3.0 and are hereby eligible to graduate from Starfleet Academy." 
+                : "Unfortunately, your GPA fell below the 3.0 requirement. You may retake the final exam during the next evaluation period."}</p>
               <button id="examReturn">Return to Departments</button>
             </div>`;
+
+            content.innerHTML = resultHTML;
             document.getElementById("examReturn").onclick = () => {
               document.getElementById("examPage").style.display = "none";
               document.getElementById("orientationPage").style.display = "block";
             };
           }
+
+          // Start first question
+          nextQuestion();
         })
         .catch(() => (content.innerHTML = "<p>Error loading exam data.</p>"));
     }
