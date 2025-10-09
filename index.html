@@ -177,26 +177,13 @@ button:hover{
 }
 
 .training-section h3,
-.training-section > p {
-  color: var(--gold);
-}
+.training-section > p { color: var(--gold); }
 
-.training-section:first-of-type p {
-  color: var(--text);
-}
+.training-section:first-of-type p { color: var(--text); }
 
-#trainingContent .answers.department-buttons-box {
-  align-items: flex-start !important;
-}
-
-#trainingContent .answers p,
-#trainingContent .answers div {
-  text-align: left !important;
-}
-
-#trainingContent .answers p strong {
-  color: var(--blue);
-}
+#trainingContent .answers.department-buttons-box { align-items:flex-start !important; }
+#trainingContent .answers p, #trainingContent .answers div { text-align:left !important; }
+#trainingContent .answers p strong { color:var(--blue); }
   </style>
 </head>
 <body>
@@ -211,21 +198,10 @@ button:hover{
       <label for="species">Species</label>
       <select id="species" required>
         <option value="">-- Select Species --</option>
-        <option>Human</option>
-        <option>Vulcan</option>
-        <option>Andorian</option>
-        <option>Aenar</option>
-        <option>Tellarite</option>
-        <option>Bajoran</option>
-        <option>Betazoid</option>
-        <option>Bolian</option>
-        <option>Trill</option>
-        <option>Klingon</option>
-        <option>Ferengi</option>
-        <option>Denobulan</option>
-        <option>Orion</option>
-        <option>Caitian</option>
-        <option>Benzite</option>
+        <option>Human</option><option>Vulcan</option><option>Andorian</option><option>Aenar</option>
+        <option>Tellarite</option><option>Bajoran</option><option>Betazoid</option><option>Bolian</option>
+        <option>Trill</option><option>Klingon</option><option>Ferengi</option><option>Denobulan</option>
+        <option>Orion</option><option>Caitian</option><option>Benzite</option>
       </select>
       <button id="loginBtn">Login</button>
       <p id="accessMessage">Access Granted</p>
@@ -269,19 +245,46 @@ button:hover{
       <button class="fixed-return" id="returnMain">Return to Main</button>
     </div>
   </div>
+  <div id="trainingPage" style="display:none;text-align:center;">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+    <div class="page-title" id="trainingDeptTitle"></div>
+    <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+    <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <button class="fixed-return" id="returnOrientationTrain">Back to Departments</button>
+  </div>
+
+  <div id="labPage" style="display:none;text-align:center;">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+    <div class="page-title" id="labDeptTitle"></div>
+    <div id="labCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+    <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <button class="fixed-return" id="returnOrientationLab">Back to Departments</button>
+  </div>
+
+  <div id="examPage" style="display:none;text-align:center;">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+    <div class="page-title" id="examDeptTitle"></div>
+    <div id="examCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+    <div id="examContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <button class="fixed-return" id="returnOrientationExam">Back to Departments</button>
+  </div>
+
   <script>
   document.addEventListener("DOMContentLoaded", () => {
 
-    // === LOGIN VARIABLES AND HOMEWORLDS ===
+    // --- Login Variables ---
     let cadetName = "", species = "";
     const homeworlds = {
-      "Human": "Earth", "Vulcan": "Vulcan", "Andorian": "Andoria", "Aenar": "Andoria (Polar Region)",
-      "Tellarite": "Tellar Prime", "Bajoran": "Bajor", "Betazoid": "Betazed", "Bolian": "Bolarus IX",
-      "Trill": "Trill", "Klingon": "Qo'noS", "Ferengi": "Ferenginar", "Denobulan": "Denobula",
-      "Orion": "Orion", "Caitian": "Cait", "Benzite": "Benzar"
+      "Human":"Earth","Vulcan":"Vulcan","Andorian":"Andoria","Aenar":"Andoria (Polar Region)",
+      "Tellarite":"Tellar Prime","Bajoran":"Bajor","Betazoid":"Betazed","Bolian":"Bolarus IX",
+      "Trill":"Trill","Klingon":"Qo'noS","Ferengi":"Ferenginar","Denobulan":"Denobula",
+      "Orion":"Orion","Caitian":"Cait","Benzite":"Benzar"
     };
 
-    // === LOGIN LOGIC ===
+    // --- Login Functionality ---
     document.getElementById("loginBtn").onclick = () => {
       cadetName = document.getElementById("cadetName").value.trim();
       species = document.getElementById("species").value;
@@ -297,13 +300,13 @@ button:hover{
       msg.style.opacity = 1;
       setTimeout(() => {
         document.getElementById("loginScreen").style.display = "none";
-        document.getElementById("mainWelcome").innerHTML = 
+        document.getElementById("mainWelcome").innerHTML =
           `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
         document.getElementById("mainScreen").style.display = "flex";
       }, 2000);
     };
 
-    // === FILE MAPS ===
+    // --- File Maps ---
     const trainingFiles = {
       "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
       "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
@@ -331,7 +334,17 @@ button:hover{
       "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Exam.json"
     };
 
-    // === PAGE NAVIGATION ===
+    // --- Prefaces (restored) ---
+    const prefaces = {
+      "Command":"For this training, you wear the captain’s uniform. The chair is yours...",
+      "Diplomacy":"In this training, you speak for the Federation itself...",
+      "Engineering":"The heart of a starship beats in your hands...",
+      "Science":"Curiosity is your compass, and knowledge your constant companion...",
+      "Medical":"Every life aboard your ship depends on your steadiness and compassion...",
+      "Security":"As Chief of Security, you stand between your crew and chaos..."
+    };
+
+    // --- Navigation ---
     document.getElementById("trainingBtn").onclick = () => openOrientation("training");
     document.getElementById("labBtn").onclick = () => openOrientation("lab");
     document.getElementById("examBtn").onclick = () => openOrientation("exam");
@@ -339,10 +352,9 @@ button:hover{
     function openOrientation(mode) {
       document.getElementById("mainScreen").style.display = "none";
       const title = document.getElementById("orientationTitle");
-      title.textContent =
-        mode === "lab" ? "Select Lab Department" :
-        mode === "exam" ? "Select Exam Department" :
-        "Select Study Department";
+      title.textContent = mode === "lab" ? "Select Lab Department"
+                        : mode === "exam" ? "Select Exam Department"
+                        : "Select Study Department";
       const btnBox = document.getElementById("moduleButtons");
       btnBox.innerHTML = "";
       Object.keys(trainingFiles).forEach(dept => {
@@ -351,31 +363,37 @@ button:hover{
         b.onclick = () => {
           if (mode === "training") loadTraining(dept);
           else if (mode === "lab") loadLab(dept);
-          else if (mode === "exam") loadExam(dept);
+          else loadExam(dept);
         };
         btnBox.appendChild(b);
       });
       document.getElementById("orientationPage").style.display = "block";
     }
 
+    // --- Return Buttons (fixed) ---
     document.getElementById("returnMain").onclick = () => {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("mainScreen").style.display = "flex";
     };
-    ["Train","Lab","Exam"].forEach(type => {
-      const id = type.toLowerCase();
-      document.getElementById(`returnOrientation${type}`).onclick = () => {
-        document.getElementById(`${id}Page`).style.display = "none";
-        document.getElementById("orientationPage").style.display = "block";
-      };
-    });
-
-    // === LOAD TRAINING ===
+    document.getElementById("returnOrientationTrain").onclick = () => {
+      document.getElementById("trainingPage").style.display = "none";
+      document.getElementById("orientationPage").style.display = "block";
+    };
+    document.getElementById("returnOrientationLab").onclick = () => {
+      document.getElementById("labPage").style.display = "none";
+      document.getElementById("orientationPage").style.display = "block";
+    };
+    document.getElementById("returnOrientationExam").onclick = () => {
+      document.getElementById("examPage").style.display = "none";
+      document.getElementById("orientationPage").style.display = "block";
+    };
+    // --- Load Training ---
     function loadTraining(dept) {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("trainingPage").style.display = "block";
       document.getElementById("trainingDeptTitle").textContent = `${dept} Study`;
-      document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+      document.getElementById("trainingCadetInfo").textContent =
+        `Cadet ${cadetName} of ${homeworlds[species]}`;
       const content = document.getElementById("trainingContent");
       content.innerHTML = "<p>Loading...</p>";
 
@@ -383,45 +401,51 @@ button:hover{
         .then(r => r.json())
         .then(data => {
           content.innerHTML = "";
-          const items = data.study || [];
-          if (!items.length) return content.innerHTML = "<p>No study items found.</p>";
-          items.forEach(item => {
+          if (prefaces[dept])
+            content.innerHTML += `<div class='training-preface'><p>${prefaces[dept]}</p></div>`;
+          const list = data.study || [];
+          list.forEach(item => {
             const section = document.createElement("div");
             section.className = "training-section";
             section.innerHTML = `<h3>${item.scenario}</h3><p>${item.summary || ""}</p>`;
             if (item.answers) {
               const answersDiv = document.createElement("div");
               answersDiv.className = "answers department-buttons-box";
-              item.answers.slice(0,3).forEach(ans => {
+              item.answers.slice(0, 3).forEach(ans => {
                 const block = document.createElement("div");
-                block.innerHTML = `<p><strong>${ans.type === "best" ? "⭐ Best Answer" : "Alternate Answer"}:</strong> ${ans.text}</p>
-                                   <p><em>Score:</em> ${ans.score}</p>
-                                   <p>${ans.details || ""}</p>`;
+                block.innerHTML =
+                  `<p><strong>${ans.type === "best" ? "⭐ Best Answer" : "Alternate Answer"}:</strong> ${ans.text}</p>
+                   <p><em>Score:</em> ${ans.score}</p><p>${ans.details || ""}</p>`;
                 answersDiv.appendChild(block);
               });
               section.appendChild(answersDiv);
             }
             content.appendChild(section);
           });
-        });
+        })
+        .catch(() => content.innerHTML = "<p>Error loading training data.</p>");
     }
 
-    // === LOAD LAB ===
+    // --- Load Lab ---
     function loadLab(dept) {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("labPage").style.display = "block";
       document.getElementById("labDeptTitle").textContent = `${dept} Lab`;
-      document.getElementById("labCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+      document.getElementById("labCadetInfo").textContent =
+        `Cadet ${cadetName} of ${homeworlds[species]}`;
       const content = document.getElementById("labContent");
       content.innerHTML = "<p>Loading...</p>";
 
       fetch(labFiles[dept])
         .then(r => r.json())
         .then(data => {
-          const items = data.lab || [];
-          if (!items.length) return content.innerHTML = "<p>No lab data found.</p>";
-          let index = 0;
-          showScenario(index);
+          const items = data.lab || data.study || data.experiments || [];
+          if (!items.length) {
+            content.innerHTML = "<p>No lab data found.</p>";
+            return;
+          }
+          let current = 0;
+          showScenario(current);
 
           function showScenario(i) {
             const item = items[i];
@@ -432,68 +456,74 @@ button:hover{
             const answersDiv = document.createElement("div");
             answersDiv.className = "lab-answers";
 
-            const shuffled = [...item.answers].sort(() => Math.random() - 0.5);
-            shuffled.forEach(ans => {
+            const randomized = [...item.answers].sort(() => Math.random() - 0.5);
+            randomized.forEach(ans => {
               const btn = document.createElement("button");
               btn.textContent = ans.text;
               btn.onclick = () => {
-                answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
-                const feedback = document.createElement("div");
-                feedback.className = "feedback";
+                answersDiv.querySelectorAll("button").forEach(b => (b.disabled = true));
+                const fb = document.createElement("div");
+                fb.className = "feedback";
                 if (ans.type === "best") {
-                  feedback.innerHTML = `<span class="best-answer">✅ Correct — Best Answer!</span><p>${ans.details}</p>`;
+                  fb.innerHTML = `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`;
                 } else {
-                  feedback.innerHTML = `<span class="incorrect-answer">❌ Incorrect</span>`;
+                  fb.innerHTML = `<span class='incorrect-answer'>❌ Incorrect</span>`;
                   const best = item.answers.find(a => a.type === "best");
-                  const alts = item.answers.filter(a => a.type === "alternate");
+                  const alternates = item.answers.filter(a => a.type === "alternate").slice(0, 2);
                   const reveal = document.createElement("div");
-                  reveal.innerHTML = `<p class="best-answer"><strong>⭐ BEST:</strong> ${best.text} — ${best.details}</p>`;
-                  alts.forEach(a => {
+                  reveal.innerHTML = `<p class='best-answer'><strong>⭐ BEST:</strong> ${best.text} — ${best.details}</p>`;
+                  alternates.forEach(a => {
                     const alt = document.createElement("p");
                     alt.className = "alternate-answer";
                     alt.innerHTML = `<strong>Alternate:</strong> ${a.text} — ${a.details}`;
                     reveal.appendChild(alt);
                   });
-                  feedback.appendChild(reveal);
+                  fb.appendChild(reveal);
                 }
-                const nextBtn = document.createElement("button");
-                nextBtn.textContent = i < items.length - 1 ? "Next Scenario ➡️" : "Return to Departments";
-                nextBtn.onclick = () => {
+                const next = document.createElement("button");
+                next.textContent = i < items.length - 1 ? "Next Scenario ➡️" : "Return to Departments";
+                next.onclick = () => {
                   if (i < items.length - 1) showScenario(i + 1);
                   else {
                     document.getElementById("labPage").style.display = "none";
                     document.getElementById("orientationPage").style.display = "block";
                   }
                 };
-                feedback.appendChild(nextBtn);
-                answersDiv.appendChild(feedback);
+                fb.appendChild(next);
+                answersDiv.appendChild(fb);
               };
               answersDiv.appendChild(btn);
             });
             section.appendChild(answersDiv);
             content.appendChild(section);
           }
-        });
+        })
+        .catch(() => (content.innerHTML = "<p>Error loading lab data.</p>"));
     }
 
-    // === LOAD EXAM ===
+    // --- Load Exam ---
     function loadExam(dept) {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("examPage").style.display = "block";
       document.getElementById("examDeptTitle").textContent = `${dept} Final Exam`;
-      document.getElementById("examCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+      document.getElementById("examCadetInfo").textContent =
+        `Cadet ${cadetName} of ${homeworlds[species]}`;
       const content = document.getElementById("examContent");
-      content.innerHTML = "<p>Loading exam...</p>";
+      content.innerHTML = "<p>Loading...</p>";
 
       fetch(examFiles[dept])
         .then(r => r.json())
         .then(data => {
           const items = data.exam || [];
-          if (!items.length) return content.innerHTML = "<p>No exam data found.</p>";
-          let score = 0, i = 0;
-          showQuestion(i);
+          if (!items.length) {
+            content.innerHTML = "<p>No exam data found.</p>";
+            return;
+          }
+          let score = 0;
+          let index = 0;
+          nextQuestion();
 
-          function showQuestion(index) {
+          function nextQuestion() {
             const q = items[index];
             content.innerHTML = "";
             const section = document.createElement("div");
@@ -502,26 +532,30 @@ button:hover{
             const answersDiv = document.createElement("div");
             answersDiv.className = "lab-answers";
 
-            const shuffled = [...q.answers].sort(() => Math.random() - 0.5);
-            shuffled.forEach(ans => {
+            const randomized = [...q.answers].sort(() => Math.random() - 0.5);
+            randomized.forEach(ans => {
               const btn = document.createElement("button");
               btn.textContent = ans.text;
               btn.onclick = () => {
-                answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
-                const feedback = document.createElement("div");
-                feedback.className = "feedback";
-                score += ans.score || 0;
-                feedback.innerHTML = ans.type === "best"
-                  ? `<span class="best-answer">✅ Correct — Best Answer!</span><p>${ans.details}</p>`
-                  : `<span class="incorrect-answer">❌ Incorrect</span><p>${ans.details}</p>`;
-                const nextBtn = document.createElement("button");
-                nextBtn.textContent = index < items.length - 1 ? "Next Question ➡️" : "View Results";
-                nextBtn.onclick = () => {
-                  if (index < items.length - 1) showQuestion(index + 1);
-                  else showResults();
+                answersDiv.querySelectorAll("button").forEach(b => (b.disabled = true));
+                const fb = document.createElement("div");
+                fb.className = "feedback";
+                if (ans.type === "best") {
+                  fb.innerHTML = `<span class='best-answer'>✅ Correct!</span><p>${ans.details}</p>`;
+                  score += ans.score || 10;
+                } else {
+                  fb.innerHTML = `<span class='incorrect-answer'>❌ Incorrect.</span>`;
+                }
+                const next = document.createElement("button");
+                next.textContent = index < items.length - 1 ? "Next Question ➡️" : "View Results";
+                next.onclick = () => {
+                  if (index < items.length - 1) {
+                    index++;
+                    nextQuestion();
+                  } else showResults();
                 };
-                feedback.appendChild(nextBtn);
-                answersDiv.appendChild(feedback);
+                fb.appendChild(next);
+                answersDiv.appendChild(fb);
               };
               answersDiv.appendChild(btn);
             });
@@ -530,52 +564,22 @@ button:hover{
           }
 
           function showResults() {
-            content.innerHTML = `<h3>Exam Complete</h3><p>Your total score: <strong>${score}</strong></p>`;
-            const remarks = document.createElement("p");
-            remarks.innerHTML = score >= 120
-              ? "Outstanding performance, Cadet. You have passed with honors!"
-              : score >= 90
-              ? "Satisfactory work. You are cleared for duty."
-              : "Further study recommended. You may retake the exam after review.";
-            content.appendChild(remarks);
-            const btn = document.createElement("button");
-            btn.textContent = "Return to Departments";
-            btn.onclick = () => {
+            content.innerHTML = `<div style="text-align:center;">
+              <h2 class="page-title">Exam Complete</h2>
+              <p style="font-size:18pt;">Final Score: <strong>${score}</strong> points</p>
+              <p style="font-size:14pt;">Excellent work, Cadet ${cadetName} of ${homeworlds[species]}.
+              You have completed the ${dept} Final Exam.</p>
+              <button id="examReturn">Return to Departments</button>
+            </div>`;
+            document.getElementById("examReturn").onclick = () => {
               document.getElementById("examPage").style.display = "none";
               document.getElementById("orientationPage").style.display = "block";
             };
-            content.appendChild(btn);
           }
-        });
+        })
+        .catch(() => (content.innerHTML = "<p>Error loading exam data.</p>"));
     }
   });
   </script>
-
-  <div id="trainingPage" style="display:none;text-align:center;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-    <div class="page-title" id="trainingDeptTitle"></div>
-    <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-    <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-    <button class="fixed-return" id="returnOrientationTrain">Back to Departments</button>
-  </div>
-
-  <div id="labPage" style="display:none;text-align:center;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-    <div class="page-title" id="labDeptTitle"></div>
-    <div id="labCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-    <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-    <button class="fixed-return" id="returnOrientationLab">Back to Departments</button>
-  </div>
-
-  <div id="examPage" style="display:none;text-align:center;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-    <div class="page-title" id="examDeptTitle"></div>
-    <div id="examCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-    <div id="examContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-    <button class="fixed-return" id="returnOrientationExam">Back to Departments</button>
-  </div>
 </body>
 </html>
