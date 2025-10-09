@@ -2,110 +2,194 @@
   "department": "Engineering",
   "exam": [
     {
-      "scenario": "Warp Core Plasma Fluctuation",
-      "summary": "EXAM SCENARIO: During a training simulation, a warp core begins showing minor plasma instability, threatening system integrity. This is your final engineering qualification test. Your decisions here will determine your readiness to serve as Chief Engineer aboard a Federation starship.",
+      "scenario": "Warp Core Fluctuation",
+      "summary": "During high warp, the intermix chamber begins oscillating beyond tolerance limits.",
       "answers": [
         {
-          "text": "Engage intermix calibration and verify magnetic constrictor fields before correcting plasma flow.",
+          "text": "Stabilize the reaction by recalibrating magnetic constrictors and gradually reducing power to zero-point margin.",
           "score": 9,
           "type": "best",
-          "details": "Follows full safety protocols and ensures containment integrity, demonstrating disciplined engineering leadership."
+          "details": "Methodical and safe; preserves containment while preventing full shutdown damage."
         },
         {
-          "text": "Divert power from secondary systems to reinforce plasma injectors while running core diagnostics.",
-          "score": 8,
-          "type": "alternate",
-          "details": "Sound engineering solution, though riskier without first confirming constrictor field stability."
-        },
-        {
-          "text": "Run a rapid plasma flush to clear the conduits before diagnostics complete.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Quick but risky; could worsen instability if the cause is electromagnetic feedback rather than blockage."
-        },
-        {
-          "text": "Increase warp field output to mask fluctuation readings and maintain power balance.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Overdriving the warp field in an unstable plasma condition violates Starfleet safety procedures."
-        },
-        {
-          "text": "Ignore readings; fluctuations at this level typically self-correct.",
+          "text": "Bypass the safety interlocks and vent plasma to space to cool the core faster.",
           "score": 0,
           "type": "incorrect",
-          "details": "Neglecting a plasma irregularity risks containment breach and catastrophic drive failure."
+          "details": "Endangers crew and violates core safety protocols; could destabilize warp containment."
+        },
+        {
+          "text": "Shift plasma flow through auxiliary manifolds while preparing a backup warp field to absorb load.",
+          "score": 8,
+          "type": "alternate",
+          "details": "A clever approach that maintains control but risks subsystem overload if prolonged."
         }
       ]
     },
     {
-      "scenario": "EPS Power Surge",
-      "summary": "EXAM SCENARIO: During bridge maneuvers, the Engineering console alerts to a rising EPS pressure spike across three decks. This is your final engineering qualification test. Your decisions here will determine your readiness to serve as Chief Engineer aboard a Federation starship.",
+      "scenario": "Power Distribution Failure",
+      "summary": "A sudden EPS grid overload disables life support in two decks.",
       "answers": [
         {
-          "text": "Isolate the affected conduits and reroute power through auxiliary transfer nodes.",
+          "text": "Isolate damaged EPS relays, reroute power manually, and coordinate with environmental systems.",
           "score": 9,
           "type": "best",
-          "details": "Textbook containment procedure per Starfleet power management guidelines."
+          "details": "Textbook crisis management that protects lives and maintains system integrity."
         },
         {
-          "text": "Manually vent plasma from the EPS manifold to stabilize flow immediately.",
+          "text": "Cut power to the entire grid and attempt a cold restart of ship systems.",
           "score": 8,
           "type": "alternate",
-          "details": "Effective in emergencies but risks radiation exposure if performed outside containment protocols."
+          "details": "Effective but risks losing critical control subsystems during restart."
         },
         {
-          "text": "Trigger a shipwide power reset to reinitialize EPS regulators.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Can work, but causes total systems loss and violates operational safety during maneuvers."
-        },
-        {
-          "text": "Bypass flow regulators and run power directly to maintain output.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Bypassing regulators risks a cascade failure and violates engineering safety codes."
-        },
-        {
-          "text": "Allow the surge to dissipate naturally; pressure will normalize post-maneuver.",
+          "text": "Increase power throughput to compensate for failing relays.",
           "score": 0,
           "type": "incorrect",
-          "details": "Ignoring EPS pressure anomalies can cause conduit rupture and deck-level fire risk."
+          "details": "Would worsen the overload and cause additional system failures."
         }
       ]
     },
     {
-      "scenario": "Impulse Engine Coolant Leak",
-      "summary": "EXAM SCENARIO: Engineering reports a coolant leak in the impulse drive assembly during atmospheric operations. This is your final engineering qualification test. Your decisions here will determine your readiness to serve as Chief Engineer aboard a Federation starship.",
+      "scenario": "Transporter Malfunction",
+      "summary": "A matter stream destabilizes mid-transport with a crew member in transit.",
       "answers": [
         {
-          "text": "Shut down the affected engine, reroute thrust, and activate emergency coolant seals.",
+          "text": "Engage pattern buffer isolation and manually rephase the matter stream using harmonic feedback.",
           "score": 9,
           "type": "best",
-          "details": "Safely neutralizes the fault and preserves ship control per Starfleet mechanical safety standards."
+          "details": "Shows precision control and calm response; protects molecular integrity."
         },
         {
-          "text": "Engage auxiliary venting to space and continue low-thrust operation until stable orbit is achieved.",
+          "text": "Abort the transport and attempt a secondary beam-in from backup coordinates.",
           "score": 8,
           "type": "alternate",
-          "details": "Acceptable short-term fix but risks atmospheric contamination."
+          "details": "Sometimes effective but risks fragmentation if the buffer remains unstable."
         },
         {
-          "text": "Divert coolant through the warp intercooler grid to maintain system temperature.",
-          "score": 7,
-          "type": "alternate",
-          "details": "Works temporarily but risks contamination of warp coolant circuits."
-        },
-        {
-          "text": "Increase engine output to vaporize leaking coolant faster.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Thermal overdrive under leak conditions can rupture manifolds and ignite plasma conduits."
-        },
-        {
-          "text": "Deactivate alarms and log the incident for later review.",
+          "text": "Deactivate the system and reboot the transporter control matrix immediately.",
           "score": 0,
           "type": "incorrect",
-          "details": "Ignoring leaks endangers crew and ship; violates Federation safety directives."
+          "details": "Interrupting during active dematerialization could result in fatal pattern loss."
+        }
+      ]
+    },
+    {
+      "scenario": "Hull Microfractures",
+      "summary": "Sensors detect small but increasing structural fractures along the secondary hull.",
+      "answers": [
+        {
+          "text": "Deploy structural integrity fields and initiate automated microsealant drones to contain damage.",
+          "score": 9,
+          "type": "best",
+          "details": "Efficient, safe, and minimally invasive to ship operations."
+        },
+        {
+          "text": "Divert warp power directly into hull reinforcement emitters.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Unsafe energy transfer may trigger cascade failures in secondary conduits."
+        },
+        {
+          "text": "Conduct a full scan to identify the stress points, then schedule an EVA patching team.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Procedurally sound though slower; prioritizes diagnostics over speed."
+        }
+      ]
+    },
+    {
+      "scenario": "Computer Core Compromise",
+      "summary": "An alien program infiltrates the ship’s main computer, altering diagnostic subroutines.",
+      "answers": [
+        {
+          "text": "Isolate the affected subroutines and restore control from an independent system core image.",
+          "score": 9,
+          "type": "best",
+          "details": "Restores functionality safely without compromising ship data."
+        },
+        {
+          "text": "Purge all computer memory to guarantee removal of the intrusion.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Effective but results in catastrophic data loss and system downtime."
+        },
+        {
+          "text": "Attempt to trace the alien signal while the system is still operational.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Risky; further contamination could spread through linked control subsystems."
+        }
+      ]
+    },
+    {
+      "scenario": "Warp Field Instability",
+      "summary": "A harmonic imbalance threatens to tear the ship’s warp bubble apart mid-flight.",
+      "answers": [
+        {
+          "text": "Shut down warp drive immediately and vent residual plasma through impulse manifolds.",
+          "score": 9,
+          "type": "best",
+          "details": "Prioritizes containment and safety before reestablishing warp symmetry."
+        },
+        {
+          "text": "Adjust the phase variance to counter the imbalance and continue at reduced warp.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Technically sound but risky if imbalance exceeds tolerance before correction."
+        },
+        {
+          "text": "Ignore the fluctuations until reaching the next navigational checkpoint.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Neglecting warp instability invites catastrophic field collapse."
+        }
+      ]
+    },
+    {
+      "scenario": "Impulse Engine Contamination",
+      "summary": "Radiation from a nearby pulsar is degrading the impulse drive injectors.",
+      "answers": [
+        {
+          "text": "Reroute the magnetic shielding matrix and cycle impulse injectors through secondary channels.",
+          "score": 9,
+          "type": "best",
+          "details": "Practical engineering fix that preserves thrust control."
+        },
+        {
+          "text": "Shut down impulse systems and rely solely on thrusters until the radiation subsides.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Safe but inefficient; may limit maneuverability during hazard avoidance."
+        },
+        {
+          "text": "Maintain impulse output to burn through the contamination faster.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Accelerates degradation and could permanently damage drive components."
+        }
+      ]
+    },
+    {
+      "scenario": "Replicator Power Surge",
+      "summary": "An unexplained surge causes all replicators to malfunction simultaneously.",
+      "answers": [
+        {
+          "text": "Cut power to the replicator grid and perform a phased diagnostic of the EPS relays.",
+          "score": 9,
+          "type": "best",
+          "details": "Demonstrates composure and systematic analysis under pressure."
+        },
+        {
+          "text": "Order all personnel to avoid replicator use until the surge resolves itself.",
+          "score": 0,
+          "type": "incorrect",
+          "details": "Passivity wastes time and may allow system instability to spread."
+        },
+        {
+          "text": "Bypass the faulty power distribution node and reroute through cargo bay substations.",
+          "score": 8,
+          "type": "alternate",
+          "details": "Restores function temporarily; acceptable short-term workaround."
         }
       ]
     }
