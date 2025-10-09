@@ -127,6 +127,7 @@ button:hover{
   font-size:16pt;margin-top:12px;opacity:0;
   transition:opacity .4s ease-in;
 }
+
 .lab-answers{
   display:flex;
   flex-direction:column;
@@ -171,7 +172,6 @@ button:hover{
   z-index:1000;
   bottom:auto;
 }
-
 @media(max-width:900px){
   #trainingPage .fixed-return{top:auto;bottom:20px;transform:none;}
 }
@@ -232,7 +232,7 @@ button:hover{
     </div>
   </div>
 
-  <div id="mainScreen">
+  <div id="mainScreen" style="display:none;">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
     <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
     <div class="container">
@@ -269,41 +269,47 @@ button:hover{
       <button class="fixed-return" id="returnMain">Return to Main</button>
     </div>
   </div>
-  <div id="trainingPage" style="display:none;text-align:center;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-    <div class="page-title" id="trainingDeptTitle"></div>
-    <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-    <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-    <button class="fixed-return" id="returnOrientationTrain">Back to Departments</button>
-  </div>
-
-  <div id="labPage" style="display:none;text-align:center;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-    <div class="page-title" id="labDeptTitle"></div>
-    <div id="labCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-    <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-    <button class="fixed-return" id="returnOrientationLab">Back to Departments</button>
-  </div>
-
-  <div id="examPage" style="display:none;text-align:center;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-    <div class="page-title" id="examDeptTitle"></div>
-    <div id="examCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-    <div id="examContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-    <button class="fixed-return" id="returnOrientationExam">Back to Departments</button>
-  </div>
-
   <script>
   document.addEventListener("DOMContentLoaded", () => {
+
+    // === LOGIN VARIABLES AND HOMEWORLDS ===
+    let cadetName = "", species = "";
+    const homeworlds = {
+      "Human": "Earth", "Vulcan": "Vulcan", "Andorian": "Andoria", "Aenar": "Andoria (Polar Region)",
+      "Tellarite": "Tellar Prime", "Bajoran": "Bajor", "Betazoid": "Betazed", "Bolian": "Bolarus IX",
+      "Trill": "Trill", "Klingon": "Qo'noS", "Ferengi": "Ferenginar", "Denobulan": "Denobula",
+      "Orion": "Orion", "Caitian": "Cait", "Benzite": "Benzar"
+    };
+
+    // === LOGIN LOGIC ===
+    document.getElementById("loginBtn").onclick = () => {
+      cadetName = document.getElementById("cadetName").value.trim();
+      species = document.getElementById("species").value;
+      const msg = document.getElementById("accessMessage");
+      if (!cadetName || !species) {
+        msg.textContent = "Please enter name and species.";
+        msg.style.color = "red";
+        msg.style.opacity = 1;
+        return;
+      }
+      msg.textContent = `Access Granted — Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
+      msg.style.color = "var(--gold)";
+      msg.style.opacity = 1;
+      setTimeout(() => {
+        document.getElementById("loginScreen").style.display = "none";
+        document.getElementById("mainWelcome").innerHTML = 
+          `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
+        document.getElementById("mainScreen").style.display = "flex";
+      }, 2000);
+    };
+
+    // === FILE MAPS ===
     const trainingFiles = {
       "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
       "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
       "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Training.json",
       "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Training.json",
-      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training%20(finalized%20+%20incorrects).json",
+      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training.json",
       "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Training.json"
     };
 
@@ -312,7 +318,7 @@ button:hover{
       "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Lab.json",
       "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Lab.json",
       "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Lab.json",
-      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab%20(from%20finalized%20training).json",
+      "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
       "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
     };
 
@@ -325,6 +331,7 @@ button:hover{
       "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Exam.json"
     };
 
+    // === PAGE NAVIGATION ===
     document.getElementById("trainingBtn").onclick = () => openOrientation("training");
     document.getElementById("labBtn").onclick = () => openOrientation("lab");
     document.getElementById("examBtn").onclick = () => openOrientation("exam");
@@ -332,9 +339,9 @@ button:hover{
     function openOrientation(mode) {
       document.getElementById("mainScreen").style.display = "none";
       const title = document.getElementById("orientationTitle");
-      title.textContent = 
-        mode === "lab" ? "Select Lab Department" : 
-        mode === "exam" ? "Select Exam Department" : 
+      title.textContent =
+        mode === "lab" ? "Select Lab Department" :
+        mode === "exam" ? "Select Exam Department" :
         "Select Study Department";
       const btnBox = document.getElementById("moduleButtons");
       btnBox.innerHTML = "";
@@ -350,23 +357,20 @@ button:hover{
       });
       document.getElementById("orientationPage").style.display = "block";
     }
+
     document.getElementById("returnMain").onclick = () => {
       document.getElementById("orientationPage").style.display = "none";
-      document.getElementById("mainScreen").style.display = "block";
+      document.getElementById("mainScreen").style.display = "flex";
     };
-    document.getElementById("returnOrientationTrain").onclick = () => {
-      document.getElementById("trainingPage").style.display = "none";
-      document.getElementById("orientationPage").style.display = "block";
-    };
-    document.getElementById("returnOrientationLab").onclick = () => {
-      document.getElementById("labPage").style.display = "none";
-      document.getElementById("orientationPage").style.display = "block";
-    };
-    document.getElementById("returnOrientationExam").onclick = () => {
-      document.getElementById("examPage").style.display = "none";
-      document.getElementById("orientationPage").style.display = "block";
-    };
+    ["Train","Lab","Exam"].forEach(type => {
+      const id = type.toLowerCase();
+      document.getElementById(`returnOrientation${type}`).onclick = () => {
+        document.getElementById(`${id}Page`).style.display = "none";
+        document.getElementById("orientationPage").style.display = "block";
+      };
+    });
 
+    // === LOAD TRAINING ===
     function loadTraining(dept) {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("trainingPage").style.display = "block";
@@ -402,6 +406,7 @@ button:hover{
         });
     }
 
+    // === LOAD LAB ===
     function loadLab(dept) {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("labPage").style.display = "block";
@@ -415,11 +420,11 @@ button:hover{
         .then(data => {
           const items = data.lab || [];
           if (!items.length) return content.innerHTML = "<p>No lab data found.</p>";
-          let currentIndex = 0;
-          showScenario(currentIndex);
+          let index = 0;
+          showScenario(index);
 
-          function showScenario(index) {
-            const item = items[index];
+          function showScenario(i) {
+            const item = items[i];
             content.innerHTML = "";
             const section = document.createElement("div");
             section.className = "training-section";
@@ -452,9 +457,9 @@ button:hover{
                   feedback.appendChild(reveal);
                 }
                 const nextBtn = document.createElement("button");
-                nextBtn.textContent = index < items.length - 1 ? "Next Scenario ➡️" : "Return to Departments";
+                nextBtn.textContent = i < items.length - 1 ? "Next Scenario ➡️" : "Return to Departments";
                 nextBtn.onclick = () => {
-                  if (index < items.length - 1) showScenario(index + 1);
+                  if (i < items.length - 1) showScenario(i + 1);
                   else {
                     document.getElementById("labPage").style.display = "none";
                     document.getElementById("orientationPage").style.display = "block";
@@ -471,6 +476,7 @@ button:hover{
         });
     }
 
+    // === LOAD EXAM ===
     function loadExam(dept) {
       document.getElementById("orientationPage").style.display = "none";
       document.getElementById("examPage").style.display = "block";
@@ -484,11 +490,11 @@ button:hover{
         .then(data => {
           const items = data.exam || [];
           if (!items.length) return content.innerHTML = "<p>No exam data found.</p>";
-          let score = 0, index = 0;
-          showQuestion(index);
+          let score = 0, i = 0;
+          showQuestion(i);
 
-          function showQuestion(i) {
-            const q = items[i];
+          function showQuestion(index) {
+            const q = items[index];
             content.innerHTML = "";
             const section = document.createElement("div");
             section.className = "training-section";
@@ -509,9 +515,9 @@ button:hover{
                   ? `<span class="best-answer">✅ Correct — Best Answer!</span><p>${ans.details}</p>`
                   : `<span class="incorrect-answer">❌ Incorrect</span><p>${ans.details}</p>`;
                 const nextBtn = document.createElement("button");
-                nextBtn.textContent = i < items.length - 1 ? "Next Question ➡️" : "View Results";
+                nextBtn.textContent = index < items.length - 1 ? "Next Question ➡️" : "View Results";
                 nextBtn.onclick = () => {
-                  if (i < items.length - 1) showQuestion(i + 1);
+                  if (index < items.length - 1) showQuestion(index + 1);
                   else showResults();
                 };
                 feedback.appendChild(nextBtn);
@@ -544,5 +550,32 @@ button:hover{
     }
   });
   </script>
+
+  <div id="trainingPage" style="display:none;text-align:center;">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+    <div class="page-title" id="trainingDeptTitle"></div>
+    <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+    <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <button class="fixed-return" id="returnOrientationTrain">Back to Departments</button>
+  </div>
+
+  <div id="labPage" style="display:none;text-align:center;">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+    <div class="page-title" id="labDeptTitle"></div>
+    <div id="labCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+    <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <button class="fixed-return" id="returnOrientationLab">Back to Departments</button>
+  </div>
+
+  <div id="examPage" style="display:none;text-align:center;">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+    <div class="page-title" id="examDeptTitle"></div>
+    <div id="examCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+    <div id="examContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <button class="fixed-return" id="returnOrientationExam">Back to Departments</button>
+  </div>
 </body>
 </html>
