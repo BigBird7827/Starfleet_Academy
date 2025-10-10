@@ -92,7 +92,6 @@ html, body {
   animation: panelFadeIn 1.4s ease-in-out;
   color: var(--text);
 }
-
 @keyframes panelFadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
@@ -212,6 +211,7 @@ button:hover {
   flex-direction: column;
   gap: 15px;
   align-items: stretch;
+  font-family: Arial, sans-serif;
 }
 .lab-answers button {
   width: 100%;
@@ -221,6 +221,9 @@ button:hover {
   line-height: 1.4;
   box-sizing: border-box;
   margin: 5px 0;
+}
+.scenario {
+  font-family: Arial, sans-serif;
 }
 .best-answer {
   color: var(--green);
@@ -292,6 +295,7 @@ button:hover {
 #trainingContent .answers p strong {
   color: var(--blue);
 }
+
 
   </style>
 </head>
@@ -599,5 +603,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
