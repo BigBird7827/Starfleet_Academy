@@ -6,19 +6,19 @@
       "summary": "Sealed instructions from intelligence conflict with tasking from sector command. Your XO questions the ethics of proceeding. You must verify, document, and decide without fracturing the bridge team.",
       "answers": [
         {
-          "text": "Authenticate both directives on a secure channel, request precedence clarification, and proceed per the confirmed chain while logging rationale to the captain\u2019s log.",
+          "text": "Verify both directives on a secure channel, get precedence clarification, , follow the confirmed.",
           "score": 9,
           "type": "best",
-          "details": "Prevents split\u2011authority errors and preserves auditability under pressure."
+          "details": "Prevents split‑authority errors and preserves auditability under pressure."
         },
         {
-          "text": "Convene a brief tri\u2011party call to seek a joint instruction before acting.",
+          "text": "Convene a brief tri‑party call to seek a joint instruction before acting.",
           "score": 8,
           "type": "alternate",
           "details": "Builds consensus, but burns time if the window is short."
         },
         {
-          "text": "Execute the time\u2011critical directive while forwarding notice of conflict to the other command.",
+          "text": "Execute the time‑critical directive while forwarding notice of conflict to the other command.",
           "score": 6,
           "type": "alternate",
           "details": "Buys tempo at the risk of diplomatic friction if you guessed wrong on precedence."
@@ -27,7 +27,7 @@
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -39,10 +39,10 @@
     },
     {
       "scenario": "Live Exercise Adjudication",
-      "summary": "A multi\u2011ship exercise tests coordination and rules of engagement under pressure. A misread could cause real damage. You must set clear objectives and keep competition from turning hazardous.",
+      "summary": "A multi‑ship exercise tests coordination and rules of engagement under pressure. A misread could cause real damage. You must set clear objectives and keep competition from turning hazardous.",
       "answers": [
         {
-          "text": "Pair units into mixed teams with strict ROE and safeties; run time\u2011boxed problems, then hot\u2011wash with metrics and corrective actions.",
+          "text": "Pair units into mixed teams with tight ROE, safeties, run time‑boxed problems",
           "score": 9,
           "type": "best",
           "details": "Builds interoperability and captures lessons without real risk."
@@ -57,13 +57,13 @@
           "text": "Keep the squadron tightly grouped under one lead for simplicity.",
           "score": 6,
           "type": "alternate",
-          "details": "Safe, yet teaches little about decentralized decision\u2011making."
+          "details": "Safe, yet teaches little about decentralized decision‑making."
         },
         {
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -78,13 +78,13 @@
       "summary": "Two divisions aboard your ship have fallen into open friction after an extended patrol. Sickbay reports rising fatigue, and performance metrics show spikes in errors. You must restore cohesion without undermining departmental authority, while keeping the mission on schedule.",
       "answers": [
         {
-          "text": "Meet with both department heads, review Sickbay\u2019s fatigue/error data, and have them co\u2011author a unified duty rotation and morale plan with weekly mixed\u2011team tasks.",
+          "text": "Meet with both dept heads, review Sickbay’s fatigue/error data, have them co‑author a joint duty rotation",
           "score": 9,
           "type": "best",
           "details": "Restores cohesion through leadership and shared ownership, protecting tempo without bypassing the chain of command."
         },
         {
-          "text": "Run a supervised mixed\u2011division drill under the XO to force coordination and surface frictions in a controlled setting.",
+          "text": "Run a supervised mixed‑division drill under the XO to force coordination and surface frictions in a controlled setting.",
           "score": 8,
           "type": "alternate",
           "details": "Builds cooperation under pressure, but public mistakes can harden resentments if overused."
@@ -99,7 +99,7 @@
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -114,7 +114,7 @@
       "summary": "The warp core shows rising variance after a coolant fault. Evacuation is possible but would strand a relief mission. You must stabilize the core or order a separation before limits are exceeded.",
       "answers": [
         {
-          "text": "Initiate reactor SCRAM, vent plasma, shunt to auxiliary containment, and prep core ejection if thresholds don\u2019t normalize on the countdown.",
+          "text": "Start reactor SCRAM, vent plasma, route to auxiliary containment",
           "score": 9,
           "type": "best",
           "details": "Prioritizes ship survival with staged, reversible steps."
@@ -135,7 +135,7 @@
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -150,7 +150,7 @@
       "summary": "You are presented with a complex command dilemma that requires balancing mission, law, crew safety, and Federation ideals. Your decision will shape outcomes beyond the immediate tactical picture.",
       "answers": [
         {
-          "text": "Hand\u2011dock at thruster speeds using tugs on standby and external cams; suspend non\u2011essential traffic until secured.",
+          "text": "Hand‑dock at thruster speeds using tugs on standby , external cams, pause non‑essential traffic u.",
           "score": 9,
           "type": "best",
           "details": "Gives maximum control and margin in a constricted bay."
@@ -171,7 +171,7 @@
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -183,10 +183,10 @@
     },
     {
       "scenario": "Planetary Impact Interdiction",
-      "summary": "Long\u2011period objects on a collision vector threaten a colony world. Deflection windows are narrow and local politics are heated. You must coordinate a planetary defense quickly and lawfully.",
+      "summary": "Long‑period objects on a collision vector threaten a colony world. Deflection windows are narrow and local politics are heated. You must coordinate a planetary defense quickly and lawfully.",
       "answers": [
         {
-          "text": "Task Engineering and Science to compute a deflection window; use tractors/deflector pusher burns on the lead body while civilian craft handle fragments.",
+          "text": "Task Engineering , Science to compute a deflection window, use tractors/deflector pusher burns on.",
           "score": 9,
           "type": "best",
           "details": "Balances precision and speed, reducing debris risk to the surface."
@@ -207,7 +207,7 @@
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -219,10 +219,10 @@
     },
     {
       "scenario": "Neutral Zone Rescue Dilemma",
-      "summary": "Multiple distress beacons activate in the same sector with limited rescue capacity. You must establish priorities that save the most lives while preserving the ship\u2019s ability to continue operations.",
+      "summary": "Multiple distress beacons activate in the same sector with limited rescue capacity. You must establish priorities that save the most lives while preserving the ship’s ability to continue operations.",
       "answers": [
         {
-          "text": "Launch probes and buoy beacons, coordinate both sides to move casualties just outside the line, then render aid without crossing.",
+          "text": "Launch probes, buoy beacons, sync both sides to move casualties just outside the line",
           "score": 9,
           "type": "best",
           "details": "Saves lives while honoring treaty constraints."
@@ -243,7 +243,7 @@
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -255,10 +255,10 @@
     },
     {
       "scenario": "Intercept Risk Decision",
-      "summary": "A fast\u2011moving object plots a collision track with your ship. Intent is unclear. You must choose between evasive action, interception, or a posture that invites communication without inviting ramming.",
+      "summary": "A fast‑moving object plots a collision track with your ship. Intent is unclear. You must choose between evasive action, interception, or a posture that invites communication without inviting ramming.",
       "answers": [
         {
-          "text": "Adjust vector for a safe closest\u2011approach, drop to yellow alert, and hail on guard to coordinate crossing with the freighter\u2019s helm.",
+          "text": "Adjust vector for a safe closest‑approach, drop to yellow alert, , hail on guard to sync crossing.",
           "score": 9,
           "type": "best",
           "details": "Defuses risk early while staying predictable."
@@ -273,13 +273,13 @@
           "text": "Maintain course and request the freighter alter theirs.",
           "score": 7,
           "type": "alternate",
-          "details": "May be read as inflexible if they\u2019re already committed."
+          "details": "May be read as inflexible if they’re already committed."
         },
         {
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -315,7 +315,7 @@
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -330,13 +330,13 @@
       "summary": "Your chief medical officer formally protests a planned operation as medically unsafe for part of the crew. Regulations empower medical to relieve command with evidence. You must weigh mission urgency against medical authority and crew welfare.",
       "answers": [
         {
-          "text": "Convene CMO and Ops, adjust the mission plan to the CMO\u2019s medical limits, and publish clear go/no\u2011go physiological thresholds to the bridge.",
+          "text": "Convene CMO, Ops, adjust the mission plan to the CMO’s medical limits",
           "score": 9,
           "type": "best",
           "details": "Centers medical expertise while preserving tempo with transparent risk gates."
         },
         {
-          "text": "Halt operations to adopt the CMO\u2019s most conservative posture until new supplies or staff arrive.",
+          "text": "Halt operations to adopt the CMO’s most conservative posture until new supplies or staff arrive.",
           "score": 8,
           "type": "alternate",
           "details": "Safest medically, but high operational cost and morale impact."
@@ -351,7 +351,7 @@
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -362,11 +362,11 @@
       ]
     },
     {
-      "scenario": "Multi\u2011Casualty Triage Priority",
-      "summary": "Multiple distress beacons activate in the same sector with limited rescue capacity. You must establish priorities that save the most lives while preserving the ship\u2019s ability to continue operations.",
+      "scenario": "Multi‑Casualty Triage Priority",
+      "summary": "Multiple distress beacons activate in the same sector with limited rescue capacity. You must establish priorities that save the most lives while preserving the ship’s ability to continue operations.",
       "answers": [
         {
-          "text": "Split assets: stage transporter triage, dispatch shuttle/Runabout support, and allocate care by greatest lives\u2011saved while coordinating with local SAR.",
+          "text": "Split assets: stage transporter triage, dispatch shuttle/Runabout support, , allocate care by gre.",
           "score": 9,
           "type": "best",
           "details": "Maximizes survival and aligns with Starfleet humanitarian doctrine."
@@ -387,7 +387,7 @@
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -423,7 +423,7 @@
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -435,10 +435,10 @@
     },
     {
       "scenario": "Cadet Disobedience Hearing",
-      "summary": "During a live drill, a cadet disobeys a direct order citing a perceived safety issue. The drill\u2019s timeline and the chain of command were clear. You must respond in a way that enforces discipline while developing future officers.",
+      "summary": "During a live drill, a cadet disobeys a direct order citing a perceived safety issue. The drill’s timeline and the chain of command were clear. You must respond in a way that enforces discipline while developing future officers.",
       "answers": [
         {
-          "text": "Hold a private debrief with the cadet and instructor, capture the safety rationale, and rerun the drill with the cadet helping refine the plan and comms triggers.",
+          "text": "Hold a private debrief with the cadet, instructor, capture the safety rationale",
           "score": 9,
           "type": "best",
           "details": "Protects authority while mentoring judgment; the rerun validates process and restores trust."
@@ -459,7 +459,7 @@
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -474,7 +474,7 @@
       "summary": "Transient contacts appear at the edge of sensor range near restricted space. Crew tension rises as reports conflict. You must separate signal from noise without handing an adversary an excuse to escalate.",
       "answers": [
         {
-          "text": "Run diagnostics and re\u2011calibrate sensor pallets; compare with border station feeds while holding course.",
+          "text": "Run diagnostics , re‑calibrate sensor pallets, compare with border station feeds.",
           "score": 9,
           "type": "best",
           "details": "Discriminates spoofing/noise from real targets without overreacting."
@@ -489,13 +489,13 @@
           "text": "Arm torpedoes and power phasers while you sort it out.",
           "score": 7,
           "type": "alternate",
-          "details": "Protective, yet escalatory if someone\u2019s watching."
+          "details": "Protective, yet escalatory if someone’s watching."
         },
         {
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
@@ -507,10 +507,10 @@
     },
     {
       "scenario": "Unscheduled Contact Dilemma",
-      "summary": "An unexpected interaction with a near\u2011warp culture follows a reconnaissance mishap. Any move could shape that world\u2019s development. You must extract your people and contain exposure\u2014or deliver a measured introduction.",
+      "summary": "An unexpected interaction with a near‑warp culture follows a reconnaissance mishap. Any move could shape that world’s development. You must extract your people and contain exposure—or deliver a measured introduction.",
       "answers": [
         {
-          "text": "Transmit the standard Federation greeting on open bands, acknowledge presence, and invite controlled dialogue while keeping away teams aboard.",
+          "text": "Transmit the standard Federation greeting on open bands, acknowledge presence, , invite controlle.",
           "score": 9,
           "type": "best",
           "details": "Respects autonomy and minimizes cultural contamination risk."
@@ -519,7 +519,7 @@
           "text": "Hold station silently and wait to be hailed first.",
           "score": 8,
           "type": "alternate",
-          "details": "Non\u2011provocative, yet can be read as standoffish or suspicious."
+          "details": "Non‑provocative, yet can be read as standoffish or suspicious."
         },
         {
           "text": "Dispatch an away team to make direct contact planetside.",
@@ -531,7 +531,7 @@
           "text": "Ignore the developing situation and maintain current orders, assuming the issue will self-correct.",
           "score": 3,
           "type": "incorrect",
-          "details": "Neglecting a developing situation violates Starfleet\u2019s proactive command principles and risks escalation."
+          "details": "Neglecting a developing situation violates Starfleet’s proactive command principles and risks escalation."
         },
         {
           "text": "Delegate command authority to subordinates and disengage from direct decision-making.",
