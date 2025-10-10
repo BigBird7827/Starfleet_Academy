@@ -3,10 +3,10 @@
   "lab": [
     {
       "scenario": "Computer Virus in Engineering Subsystem",
-      "summary": "A foreign data signature infiltrates the ship\u2019s engineering control subroutines.",
+      "summary": "A foreign data signature infiltrates the ship’s engineering control subroutines.",
       "answers": [
         {
-          "text": "Isolate the engineering core network and purge affected subroutines from backup.",
+          "text": "Isolate the engineering core network , purge affected subroutines from.",
           "score": 9,
           "type": "best",
           "details": "Protects ship systems and aligns with Starfleet cybersecurity protocols."
@@ -78,10 +78,10 @@
       "summary": "A planetary evacuation is underway when a power fluctuation knocks out one of the transporter emitters.",
       "answers": [
         {
-          "text": "Reroute power from secondary systems to restore the emitter and confirm pattern integrity before resuming transport.",
+          "text": "Reroute power from secondary systems to restore the emitter , confirm patte.",
           "score": 9,
           "type": "best",
-          "details": "Prioritizes lives while maintaining transporter safety margins\u2014the Federation standard."
+          "details": "Prioritizes lives while maintaining transporter safety margins—the Federation standard."
         },
         {
           "text": "Bring up backup emitters and temporarily split transport loads between them.",
@@ -201,7 +201,7 @@
           "text": "Apply temporary magnetic constriction to stabilize plasma flow.",
           "score": 7,
           "type": "alternate",
-          "details": "Technically competent; buys time for intervention but doesn\u2019t fully address the root cause."
+          "details": "Technically competent; buys time for intervention but doesn’t fully address the root cause."
         },
         {
           "text": "Attempt a manual bypass without diagnostics to save time.",
@@ -258,7 +258,7 @@
       "summary": "During a training simulation, a warp core begins showing minor plasma instability, threatening system integrity.",
       "answers": [
         {
-          "text": "Engage intermix calibration and verify magnetic constrictor fields before correcting plasma flow.",
+          "text": "Engage intermix tuning , verify mag constrictors before correcting plasma flow.",
           "score": 9,
           "type": "best",
           "details": "Follows full safety protocols and ensures containment integrity, demonstrating complete technical mastery."
@@ -291,13 +291,13 @@
     },
     {
       "scenario": "Holodeck Power Feedback",
-      "summary": "Feedback surge from the holodeck\u2019s energy grid begins drawing from the ship\u2019s shield reserves.",
+      "summary": "Feedback surge from the holodeck’s energy grid begins drawing from the ship’s shield reserves.",
       "answers": [
         {
-          "text": "Isolate holodeck power couplings and shunt feedback to auxiliary capacitors.",
+          "text": "Isolate holodeck power couplings , route feedback to auxiliary capacito.",
           "score": 9,
           "type": "best",
-          "details": "Protects both system integrity and crew safety; reflects Starfleet\u2019s principle of containment over convenience."
+          "details": "Protects both system integrity and crew safety; reflects Starfleet’s principle of containment over convenience."
         },
         {
           "text": "Shut down the holodeck main emitter array immediately.",
@@ -330,7 +330,7 @@
       "summary": "Environmental systems overload after a coolant loop failure, raising temperatures throughout crew quarters.",
       "answers": [
         {
-          "text": "Divert power from secondary subsystems and reroute airflow through backup exchangers.",
+          "text": "Divert power from secondary subsystems , reroute airflow through backup.",
           "score": 9,
           "type": "best",
           "details": "Maintains habitability efficiently; precise and ethical prioritization of crew well-being."
@@ -342,7 +342,7 @@
           "details": "Competent temporary mitigation; preserves equipment but slower than full reroute."
         },
         {
-          "text": "Ignore heat rise; tolerable levels don\u2019t require immediate action.",
+          "text": "Ignore heat rise; tolerable levels don’t require immediate action.",
           "score": 7,
           "type": "alternate",
           "details": "Acceptable short-term; safe but less proactive than intervention."
@@ -366,7 +366,7 @@
       "summary": "During docking maneuvers, plasma levels in the impulse manifold rise beyond safety thresholds.",
       "answers": [
         {
-          "text": "Isolate the leaking manifold and reroute power through auxiliary impulse regulators.",
+          "text": "Isolate the leaking manifold , reroute power through auxiliary impulse.",
           "score": 9,
           "type": "best",
           "details": "Prevents plasma fire and preserves thrust control; aligns with Starfleet engineering best practices."
@@ -474,10 +474,10 @@
       "summary": "During docking maneuvers, plasma levels in the impulse manifold rise beyond safety thresholds.",
       "answers": [
         {
-          "text": "Isolate the leaking manifold and reroute power through auxiliary impulse regulators.",
+          "text": "Isolate the leaking manifold , reroute power through auxiliary impulse.",
           "score": 9,
           "type": "best",
-          "details": "Prevents plasma fire and preserves thrust control\u2014precisely the response taught in Starfleet Engineering 302."
+          "details": "Prevents plasma fire and preserves thrust control—precisely the response taught in Starfleet Engineering 302."
         },
         {
           "text": "Increase coolant flow to manage temperature until repair crews can act.",
@@ -513,7 +513,7 @@
           "text": "Initiate sectional power isolation and reroute through undamaged relays.",
           "score": 9,
           "type": "best",
-          "details": "Efficient and prevents catastrophic grid collapse\u2014fundamental Starfleet engineering discipline."
+          "details": "Efficient and prevents catastrophic grid collapse—fundamental Starfleet engineering discipline."
         },
         {
           "text": "Manually engage local backup circuits to stabilize critical systems while isolation proceeds.",
