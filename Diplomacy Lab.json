@@ -6,7 +6,7 @@
       "summary": "Intelligence suggests a diplomatic pouch on a neutral freighter contains weapon components. Interdiction risks a scandal; inaction risks a massacre. You must thread the needle legally and diplomatically.",
       "answers": [
         {
-          "text": "Request the owner state open the pouch voluntarily in the presence of both teams; if refused, route the ship to a neutral port for joint inspection under treaty.",
+          "text": "Request the owner state open the pouch voluntarily in the presence of both team.",
           "score": 9,
           "type": "best",
           "details": "Offers a lawful path that preserves dignity while addressing risk."
@@ -38,11 +38,11 @@
       ]
     },
     {
-      "scenario": "Pre\u2011meeting rite conflict",
+      "scenario": "Pre‑meeting rite conflict",
       "summary": "A newly warp-capable species insists on a pre-meeting rite that conflicts with Federation sensibilities. Refusal could be seen as an insult; compliance may set an awkward precedent. You must find a respectful alternative.",
       "answers": [
         {
-          "text": "Offer an alternative gesture with equivalent respect\u2014such as a gift exchange or pledge\u2014while explaining your policy constraints in private.",
+          "text": "Offer an alternative gesture with equivalent respect—such as a gift exchange or.",
           "score": 9,
           "type": "best",
           "details": "Finds cultural parity without violating policy or embarrassing the hosts."
@@ -75,19 +75,19 @@
     },
     {
       "scenario": "Leaked transcript dispute",
-      "summary": "A leaked transcript suggests your side made a hostile statement\u2014one that no one remembers saying. You suspect manipulation of the translation layer. You must verify, correct the record, and protect the process.",
+      "summary": "A leaked transcript suggests your side made a hostile statement—one that no one remembers saying. You suspect manipulation of the translation layer. You must verify, correct the record, and protect the process.",
       "answers": [
         {
-          "text": "Authenticate the transcript, release the correct excerpt with time codes, and invite neutral observers to verify the source chain.",
+          "text": "Verify the transcript, release the correct excerpt with timecodes, , invite neu.",
           "score": 9,
           "type": "best",
-          "details": "Evidence\u2011forward correction repairs trust without grandstanding."
+          "details": "Evidence‑forward correction repairs trust without grandstanding."
         },
         {
           "text": "Deny the transcript categorically without releasing any evidence.",
           "score": 8,
           "type": "alternate",
-          "details": "Hard denial feeds suspicion if you don\u2019t show your work."
+          "details": "Hard denial feeds suspicion if you don’t show your work."
         },
         {
           "text": "Ignore the leak and push ahead with the next session.",
@@ -111,10 +111,10 @@
     },
     {
       "scenario": "Indirect refusal culture",
-      "summary": "The counterpart\u2019s language avoids direct refusal; your 'yes/no' questions stall progress. You must adapt your approach to reach clarity without offense.",
+      "summary": "The counterpart’s language avoids direct refusal; your 'yes/no' questions stall progress. You must adapt your approach to reach clarity without offense.",
       "answers": [
         {
-          "text": "Reframe questions into options and stories; ask what would be acceptable rather than whether they agree, and summarize aloud for consent.",
+          "text": "Reframe questions into options, stories, ask what would be acceptable rather th.",
           "score": 9,
           "type": "best",
           "details": "Adapts to cultural logic and still produces clear agreements."
@@ -146,11 +146,11 @@
       ]
     },
     {
-      "scenario": "Off\u2011record allied relay",
-      "summary": "An allied intelligence service asks you to relay an encrypted message during talks\u2014off the record. If discovered, the negotiations could implode.",
+      "scenario": "Off‑record allied relay",
+      "summary": "An allied intelligence service asks you to relay an encrypted message during talks—off the record. If discovered, the negotiations could implode.",
       "answers": [
         {
-          "text": "Decline the covert relay; offer to open a formal channel that preserves deniability for both sides while keeping the talks insulated.",
+          "text": "Decline the covert relay, offer to open a formal channel that preserves deniabi.",
           "score": 9,
           "type": "best",
           "details": "Protects the negotiation from taint while keeping alliance options open."
@@ -162,7 +162,7 @@
           "details": "Helps your ally but contaminates the talks if discovered."
         },
         {
-          "text": "Report the request publicly to warn counterparts you won\u2019t be used.",
+          "text": "Report the request publicly to warn counterparts you won’t be used.",
           "score": 6,
           "type": "alternate",
           "details": "Maximally transparent yet needlessly incendiary."
@@ -186,7 +186,7 @@
       "summary": "A patrol from the neighboring state briefly crossed into Federation space during a storm of sensor interference. They apologize but your border worlds are alarmed. You must respond firmly without inviting escalation.",
       "answers": [
         {
-          "text": "Share your sensor track, invite theirs for comparison, and propose a mutual warning protocol for boundary drift events.",
+          "text": "Share your sensor track, invite theirs for comparison, , propose a mutual warni.",
           "score": 9,
           "type": "best",
           "details": "Data transparency reduces accusations and prevents repeats."
@@ -195,13 +195,13 @@
           "text": "Issue a formal protest and move a patrol line closer as a reminder.",
           "score": 8,
           "type": "alternate",
-          "details": "Clear signal but can start a tit\u2011for\u2011tat posture contest."
+          "details": "Clear signal but can start a tit‑for‑tat posture contest."
         },
         {
           "text": "Let the incident pass without comment to avoid making it larger.",
           "score": 4,
           "type": "alternate",
-          "details": "De\u2011escalatory now, but invites future \u2018accidental\u2019 crossings."
+          "details": "De‑escalatory now, but invites future ‘accidental’ crossings."
         },
         {
           "text": "Respond with overt hostility to assert Starfleet authority over the negotiation.",
@@ -222,13 +222,13 @@
       "summary": "A Federation colony has voted to secede after years of neglect charges. Security on both sides is tense; local leaders request Starfleet mediation to keep the process peaceful and lawful.",
       "answers": [
         {
-          "text": "Recognize the vote, request legislative minutes and rolls, and mediate a timetable covering assets, citizenship options, and mutual defense while keeping civil services uninterrupted.",
+          "text": "Recognize the vote, get legislative minutes, rolls",
           "score": 9,
           "type": "best",
-          "details": "Centers self\u2011determination while preventing a service vacuum or security gap."
+          "details": "Centers self‑determination while preventing a service vacuum or security gap."
         },
         {
-          "text": "Back the parent world\u2019s challenge to the vote and suspend talks until courts rule.",
+          "text": "Back the parent world’s challenge to the vote and suspend talks until courts rule.",
           "score": 8,
           "type": "alternate",
           "details": "Signals favoritism and risks protests and violence."
@@ -258,7 +258,7 @@
       "summary": "A religious procession will pass near your secure perimeter during a summit. Local authorities ask you to relax measures; your security chief objects. You must balance respect and risk.",
       "answers": [
         {
-          "text": "Create a safe corridor with sensors in passive mode, brief both sides, and pause non\u2011essential movements during the procession.",
+          "text": "Create a safe corridor with sensors in passive mode, brief both sides, , pause.",
           "score": 9,
           "type": "best",
           "details": "Respects the rite while maintaining quiet safety measures."
@@ -294,7 +294,7 @@
       "summary": "A planetary broadcast accuses Starfleet of undermining local sovereignty. Crowds mobilize as negotiators look to you. You must answer quickly and credibly.",
       "answers": [
         {
-          "text": "Release a brief, factual statement with logs attached; invite third\u2011party journalists to review the data on site and ask questions.",
+          "text": "Release a brief, factual statement w/logs, invite third‑party journalists to re.",
           "score": 9,
           "type": "best",
           "details": "Transparency with evidence undercuts propaganda without theatrics."
@@ -303,13 +303,13 @@
           "text": "Ignore the broadcast to avoid amplifying disinformation.",
           "score": 8,
           "type": "alternate",
-          "details": "Sometimes works, but leaves the field to the accusation\u2019s authors."
+          "details": "Sometimes works, but leaves the field to the accusation’s authors."
         },
         {
           "text": "Respond with a strongly worded rebuttal denouncing the claim.",
           "score": 7,
           "type": "alternate",
-          "details": "Signals confidence but feeds the narrative of a cover\u2011up."
+          "details": "Signals confidence but feeds the narrative of a cover‑up."
         },
         {
           "text": "Respond with overt hostility to assert Starfleet authority over the negotiation.",
@@ -330,7 +330,7 @@
       "summary": "On approach to a negotiation site, your communications are jammed intermittently. It could be hostile interference or a technical fault. Your next move will set the tone for talks.",
       "answers": [
         {
-          "text": "Deploy a line\u2011of\u2011sight relay drone, broadcast standard approach profiles, and hold a predictable course while you confirm the fault is technical.",
+          "text": "Deploy a line‑of‑sight relay drone, broadcast standard approach profiles, , hol.",
           "score": 9,
           "type": "best",
           "details": "Predictability reduces misreads during communications outages."
@@ -363,10 +363,10 @@
     },
     {
       "scenario": "Assistance with shield demand",
-      "summary": "A foreign captain demands you lower shields so they can 'assist' with a crisis on your ship. Their solution could be sabotage\u2014or necessary help. You must decide under pressure.",
+      "summary": "A foreign captain demands you lower shields so they can 'assist' with a crisis on your ship. Their solution could be sabotage—or necessary help. You must decide under pressure.",
       "answers": [
         {
-          "text": "Keep shields at minimal defensive strength, offer to receive assistance in a secured bay, and share only the diagnostics necessary for help.",
+          "text": "Keep shields at minimal defensive strength, offer to receive assistance in a se.",
           "score": 9,
           "type": "best",
           "details": "Accepts help while preventing tampering or covert boarding."
@@ -398,14 +398,14 @@
       ]
     },
     {
-      "scenario": "High\u2011context language barrier",
+      "scenario": "High‑context language barrier",
       "summary": "The universal translator is struggling with a high-context language. Key terms in the draft accord keep shifting meaning. Talks are at risk of collapse.",
       "answers": [
         {
-          "text": "Switch to shared references: visual aids, demonstrations, and agreed metaphors; slow the tempo and confirm meaning before each commitment.",
+          "text": "Switch to shared references: visual aids, demonstrations, agreed metaphors",
           "score": 9,
           "type": "best",
-          "details": "Shared references (\u00e0 la \u2018Darmok\u2019) bridge gaps without halting progress."
+          "details": "Shared references (à la ‘Darmok’) bridge gaps without halting progress."
         },
         {
           "text": "Press on with standard phrasing and trust the translator to catch up.",
@@ -434,11 +434,11 @@
       ]
     },
     {
-      "scenario": "Covert off\u2011world interference",
+      "scenario": "Covert off‑world interference",
       "summary": "Evidence suggests an off-world actor is covertly manipulating a pre-warp society for profit. Intervention could expose Starfleet; inaction allows exploitation to continue. You must choose a lawful, ethical course.",
       "answers": [
         {
-          "text": "Open a quiet back\u2011channel to the local authority, present verified evidence, and request a joint counter\u2011interference protocol with limited disclosure.",
+          "text": "Open a quiet back‑channel to the local authority, present verified evidence.",
           "score": 9,
           "type": "best",
           "details": "Protects the process while limiting escalation and panic."
@@ -471,10 +471,10 @@
     },
     {
       "scenario": "Enemy distress call risk",
-      "summary": "An enemy warship transmits a genuine-sounding distress call from a contested system. Rescue could save lives\u2014or be an ambush. You\u2019re in command of the response.",
+      "summary": "An enemy warship transmits a genuine-sounding distress call from a contested system. Rescue could save lives—or be an ambush. You’re in command of the response.",
       "answers": [
         {
-          "text": "Approach at cautionary posture: send a drone first, hold at standoff range, and open video\u2011verified hails before committing rescue craft.",
+          "text": "Approach at cautionary posture: send a drone first, hold at standoff range, , op.",
           "score": 9,
           "type": "best",
           "details": "Balances humanitarian duty with prudent verification."
@@ -510,7 +510,7 @@
       "summary": "A Klingon delegation halts talks after a perceived slight in ceremonial protocol. They threaten to depart and take their security escorts with them. You must salvage the summit without surrendering leverage.",
       "answers": [
         {
-          "text": "Acknowledge the misstep, invite the senior Klingon to a brief private exchange to honor custom, and resume talks with the corrected protocol on the agenda.",
+          "text": "Acknowledge the misstep, invite the senior Klingon to a brief private exchange to honor custom, , r.",
           "score": 9,
           "type": "best",
           "details": "Shows respect without sacrificing substance; private correction preserves face on both sides."
