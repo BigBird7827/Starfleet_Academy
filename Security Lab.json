@@ -6,7 +6,7 @@
       "summary": "External access attempts detected targeting the armory control authentication service.",
       "answers": [
         {
-          "text": "Isolate the armory network, enforce multi-factor manual authentication for weapons access, and initiate a full forensics sweep.",
+          "text": "Isolate the armory network, enforce multi-factor manual authentication for weapons access.",
           "score": 9,
           "type": "best",
           "details": "Prevents unauthorized access while enabling investigators to trace intrusion vectors and actors."
@@ -18,7 +18,7 @@
           "details": "Effective immediate protection but reduces readiness and may hinder legitimate urgent access."
         },
         {
-          "text": "Monitor the intrusion to gather intelligence on the attacker\u2019s methods before cutting access.",
+          "text": "Monitor the intrusion to gather intelligence on the attacker’s methods before cutting access.",
           "score": 7,
           "type": "alternate",
           "details": "Potentially valuable intel but risks the attacker succeeding if monitoring delays isolation."
@@ -42,7 +42,7 @@
       "summary": "A diplomatic security detail encounters an armed separatist group demanding the release of prisoners.",
       "answers": [
         {
-          "text": "Maintain cover, de-escalate verbally while tactical units prepare a silent takedown at a commander\u2019s go.",
+          "text": "Maintain cover, de-escalate verbally.",
           "score": 9,
           "type": "best",
           "details": "Prioritizes saving lives while preparing decisive intervention if negotiations fail."
@@ -78,7 +78,7 @@
       "summary": "Multiple conflicting orders are issued during a hull breach response, causing team paralysis.",
       "answers": [
         {
-          "text": "Assert security command control, re-establish clear single-point orders, and document deviations for after-action review.",
+          "text": "Assert security command control, re-establish clear single-point orders, , documen.",
           "score": 9,
           "type": "best",
           "details": "Restores decisive action and creates accountability to correct leadership issues."
@@ -114,7 +114,7 @@
       "summary": "A phaser discharged during a training session fails to cycle correctly and emits an atypical beam.",
       "answers": [
         {
-          "text": "Quarantine weapons, secure the firing range, and run diagnostic and maintenance protocols before further use.",
+          "text": "Quarantine weapons, secure the firing range, run diagnostic",
           "score": 9,
           "type": "best",
           "details": "Prevents further misfires and ensures weapons are safe and reliable before returning to service."
@@ -150,7 +150,7 @@
       "summary": "External sensor jamming makes it difficult to identify small craft approaching during a busy docking maneuver.",
       "answers": [
         {
-          "text": "Switch to manual visual confirmation via ports and deploy security shuttles to intercept unknown contacts.",
+          "text": "Switch to manual visual confirmation via ports , deploy security shuttles to intercept.",
           "score": 9,
           "type": "best",
           "details": "Maintains situational awareness and intercepts potential threats while navigation completes docking safely."
@@ -186,7 +186,7 @@
       "summary": "Someone attempts to access a secure vault using a cloned biometric signature.",
       "answers": [
         {
-          "text": "Require secondary manual authentication and camera verification, detain the user for investigation, and audit biometric logs.",
+          "text": "Require secondary manual authentication, camera verification, detain the user for investiga.",
           "score": 9,
           "type": "best",
           "details": "Combines layered security and human verification to stop sophisticated cloning attacks."
@@ -222,7 +222,7 @@
       "summary": "Motion sensors report unauthorized movement near crew quarters during off-watch hours.",
       "answers": [
         {
-          "text": "Lockdown the corridor, dispatch security teams to sweep, and use biometric logs to identify the intruder.",
+          "text": "Lockdown the corridor, dispatch security teams to sweep, , use biometric logs to i.",
           "score": 9,
           "type": "best",
           "details": "Immediate containment minimizes risk to crew; biometric cross-checks help identify intent and prevent escape."
@@ -258,7 +258,7 @@
       "summary": "A swarm of small, weaponized craft approaches the ship using hit-and-run tactics to overwhelm point defenses.",
       "answers": [
         {
-          "text": "Activate layered defensive patterns, soft-block swarms with EMP bursts, and deploy interceptor drones to thin numbers.",
+          "text": "Activate layered defensive patterns, soft-block swarms with EMP bursts, , deploy intercepto.",
           "score": 9,
           "type": "best",
           "details": "Combines area suppression, electronic countermeasures, and active interception to neutralize swarm threats efficiently."
@@ -294,7 +294,7 @@
       "summary": "A detained suspect incites other prisoners, overwhelming nearby security personnel.",
       "answers": [
         {
-          "text": "Deploy non-lethal area suppression, segregate instigators, and secure transport protocols to move prisoners to reinforced cells.",
+          "text": "Deploy non-lethal area suppression, segregate instigators, , secure transport protocols t.",
           "score": 9,
           "type": "best",
           "details": "Minimizes injuries, removes leadership of the riot, and restores order without escalating force."
@@ -330,7 +330,7 @@
       "summary": "Security scanners flag a container as explosive, but visual inspection suggests packaging error.",
       "answers": [
         {
-          "text": "Evacuate nearby areas, use remote handling rigs to isolate and x-ray the container, then neutralize if confirmed.",
+          "text": "Evacuate nearby areas, use remote handling rigs to isolate, x-ray the container",
           "score": 9,
           "type": "best",
           "details": "Prioritizes safety while minimizing crew exposure and preserving evidence for chain-of-custody."
@@ -366,7 +366,7 @@
       "summary": "Rescue beacons in a sector are found emitting false coordinates, potentially luring ships into traps.",
       "answers": [
         {
-          "text": "Disable suspect beacons, circulate updated NAV alerts, and establish verification protocols for future emergency signals.",
+          "text": "Disable suspect beacons, circulate updated NAV alerts, , establish verification pr.",
           "score": 9,
           "type": "best",
           "details": "Prevents further trap exploitation and restores trust in emergency systems via stronger verification."
@@ -402,7 +402,7 @@
       "summary": "A forged transmission claims senior officers have ordered mutiny, causing confusion among lower-deck crew.",
       "answers": [
         {
-          "text": "Secure official communications channels, broadcast authenticated counter-orders, and detain anyone propagating the false transmission.",
+          "text": "Secure official communications channels, broadcast authenticated counter-orders, , detain anyon.",
           "score": 9,
           "type": "best",
           "details": "Restores legitimate chain of command and deters further misinformation by swift, authoritative correction."
@@ -438,7 +438,7 @@
       "summary": "A phaser discharge is logged in a non-combat zone with no authorized training scheduled.",
       "answers": [
         {
-          "text": "Secure the area, account for all personnel, and perform weapon system diagnostics and ammo logs to trace the source.",
+          "text": "Secure the area, account for all personnel, run weapon system diagnostics",
           "score": 9,
           "type": "best",
           "details": "Combines safety, accountability, and technical verification to determine whether incident is accidental or malicious."
@@ -474,7 +474,7 @@
       "summary": "Security receives reports of forged crew IDs used to access restricted areas.",
       "answers": [
         {
-          "text": "Run a shipwide authentication sweep, invalidate suspect badges, and require biometric re-enrollment.",
+          "text": "Run a shipwide authentication sweep, invalidate suspect badges, , require biometric re-.",
           "score": 9,
           "type": "best",
           "details": "Restores access integrity and ensures only verified personnel can enter sensitive zones."
@@ -510,7 +510,7 @@
       "summary": "A security patrol is confronted by armed locals enforcing a restricted zone while conducting surface rescue ops.",
       "answers": [
         {
-          "text": "Use non-lethal area denial to create space, communicate intent, and offer to coordinate through neutral mediators.",
+          "text": "Use non-lethal area denial to create space, communicate intent, , offer to sync th.",
           "score": 9,
           "type": "best",
           "details": "De-escalates potential violence and preserves diplomatic channels while ensuring mission completion."
