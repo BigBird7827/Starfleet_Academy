@@ -6,7 +6,7 @@
       "summary": "Long-range subspace arrays begin reporting inconsistent readings from a nearby nebula.",
       "answers": [
         {
-          "text": "Recalibrate sensors with localized reference points and verify through triangulated starbase data.",
+          "text": "Recalibrate sensors with localized reference points , verify throu.",
           "score": 9,
           "type": "best",
           "details": "Ensures accurate readings through cross-verification and methodical recalibration."
@@ -42,7 +42,7 @@
       "summary": "A sudden microbial bloom begins affecting plant growth aboard ship.",
       "answers": [
         {
-          "text": "Quarantine the section, analyze samples under containment, and sequence DNA for cross-species contamination.",
+          "text": "Quarantine the section, analyze samples in containment, , sequence DNA for.",
           "score": 9,
           "type": "best",
           "details": "Prevents contamination and allows identification for targeted remediation."
@@ -78,7 +78,7 @@
       "summary": "A passing quantum filament interferes with navigation and power regulation.",
       "answers": [
         {
-          "text": "Divert power to deflector shields, recalibrate sensors, and maintain minimum safe distance.",
+          "text": "Divert power to deflector shields, retune sensors, , maintain mini.",
           "score": 9,
           "type": "best",
           "details": "Balances safety and data collection while avoiding destructive interference."
@@ -114,7 +114,7 @@
       "summary": "Lab organisms show accelerated evolutionary traits after transporter exposure.",
       "answers": [
         {
-          "text": "Isolate the specimens and analyze transporter logs for pattern anomalies.",
+          "text": "Isolate the specimens , analyze transporter logs for pattern anomalies.",
           "score": 9,
           "type": "best",
           "details": "Preserves biosecurity while identifying possible transporter malfunction or breakthrough."
@@ -150,7 +150,7 @@
       "summary": "Localized graviton fluctuations threaten sensor calibration and could distort nearby starship traffic.",
       "answers": [
         {
-          "text": "Plot and map fluctuation fields, issue navigational warnings, and record gravimetric readings for later modeling.",
+          "text": "Plot, map fluctuation fields, send navigational warnings",
           "score": 9,
           "type": "best",
           "details": "Collects critical data safely while warning others to avoid hazard zone."
@@ -186,7 +186,7 @@
       "summary": "A newly recovered artifact emits intermittent subspace bursts of unknown origin.",
       "answers": [
         {
-          "text": "Transfer artifact to a secure containment field and perform spectral analysis under level-10 isolation.",
+          "text": "Transfer artifact to a secure containment field , run spectral analysis under.",
           "score": 9,
           "type": "best",
           "details": "Ensures safety while preserving data for full spectrum analysis."
@@ -222,7 +222,7 @@
       "summary": "Sensor scans indicate ecological collapse following recent terraforming efforts.",
       "answers": [
         {
-          "text": "Dispatch planetary science teams to analyze atmosphere, soil, and water chemistry.",
+          "text": "Dispatch planetary science teams to analyze atmosphere, soil, , water ch.",
           "score": 9,
           "type": "best",
           "details": "Identifies systemic causes and enables targeted environmental corrections."
@@ -258,7 +258,7 @@
       "summary": "Chronometric echoes appear in subspace, mimicking transmissions from the ship’s own logs.",
       "answers": [
         {
-          "text": "Record and isolate signals for analysis while verifying no system self-interference.",
+          "text": "Record , isolate signals for analysis.",
           "score": 9,
           "type": "best",
           "details": "Preserves temporal integrity and allows safe scientific study of the phenomenon."
@@ -294,7 +294,7 @@
       "summary": "Crystalline structures begin forming around plasma conduits.",
       "answers": [
         {
-          "text": "Deactivate plasma flow, analyze composition, and remove crystals under containment.",
+          "text": "Deactivate plasma flow, analyze composition, , remove crystals in c.",
           "score": 9,
           "type": "best",
           "details": "Eliminates hazard and yields data on possible energy-matter anomalies."
@@ -402,7 +402,7 @@
       "summary": "Thermal readings indicate life signatures beneath an ice crust.",
       "answers": [
         {
-          "text": "Deploy drilling probe to extract samples without contaminating local biosphere.",
+          "text": "Deploy drilling probe to extract samples without contaminating loc.",
           "score": 9,
           "type": "best",
           "details": "Preserves planetary protection directives while advancing exobiology research."
@@ -438,7 +438,7 @@
       "summary": "Survey instruments detect lethal but fluctuating gamma radiation pockets.",
       "answers": [
         {
-          "text": "Cease all operations, recalibrate shields, and remap area from a safe orbit.",
+          "text": "Cease all operations, retune shields, , remap area from a safe orbi.",
           "score": 9,
           "type": "best",
           "details": "Protects crew and collects useful data safely for astrophysics analysis."
@@ -474,7 +474,7 @@
       "summary": "Spectral analysis reveals manufactured alloys within a comet nucleus.",
       "answers": [
         {
-          "text": "Collect fragments for metallurgical analysis and track orbital decay.",
+          "text": "Collect fragments for metallurgical analysis , track orbital decay.",
           "score": 9,
           "type": "best",
           "details": "Preserves integrity and uncovers evidence of artificial construction."
@@ -510,7 +510,7 @@
       "summary": "During a sensor calibration near a binary pulsar, the ship's subspace transceivers begin to resonate, causing feedback through communications and warp field systems. The interference is spreading geometrically.",
       "answers": [
         {
-          "text": "Initiate phased dampening across the subspace bandwidth and modulate warp field harmonics inversely.",
+          "text": "Start phased dampening across the subspace bandwidth , modulate warp field har.",
           "score": 9,
           "type": "best",
           "details": "Applies Starfleet protocol for resonance containment; counter-harmonics dissipate the cascade safely."
