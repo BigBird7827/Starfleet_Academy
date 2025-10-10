@@ -211,7 +211,6 @@ button:hover {
   flex-direction: column;
   gap: 15px;
   align-items: stretch;
-  font-family: Arial, sans-serif;
 }
 .lab-answers button {
   width: 100%;
@@ -221,9 +220,6 @@ button:hover {
   line-height: 1.4;
   box-sizing: border-box;
   margin: 5px 0;
-}
-.scenario {
-  font-family: Arial, sans-serif;
 }
 .best-answer {
   color: var(--green);
@@ -268,11 +264,6 @@ button:hover {
   padding: 8px 18px;
   border-radius: 8px;
 }
-    .lab-answers,
-.scenario {
-  font-family: Arial, sans-serif !important;
-}
-
 @media (max-width: 900px) {
   #trainingPage .fixed-return,
   #labPage .fixed-return,
@@ -300,8 +291,10 @@ button:hover {
 #trainingContent .answers p strong {
   color: var(--blue);
 }
-
-
+#labContent,
+#labContent * {
+  font-family: Arial, sans-serif !important;
+}
   </style>
 </head>
 <body>
@@ -608,6 +601,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
 
 
 
