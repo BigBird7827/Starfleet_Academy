@@ -1,0 +1,345 @@
+[
+  {
+    "id": "start",
+    "text": "You are the commanding officer of the USS Valiant on a routine training cruise near the Neutral Zone. Suddenly, a faint distress call comes through static...",
+    "color": "normal",
+    "options": [
+      {
+        "label": "Acknowledge the transmission",
+        "next": "distress_call"
+      },
+      {
+        "label": "Ignore it and maintain course",
+        "next": "ignore_signal"
+      }
+    ]
+  },
+  {
+    "id": "distress_call",
+    "text": "\"Imperative! This is the Kobayashi Maru, nineteen periods out of Altair VI. We've struck a gravitic mine and have lost all power! Hull breaches... casualties! Can you assist us?\"",
+    "color": "warning",
+    "options": [
+      {
+        "label": "Request exact coordinates",
+        "next": "coordinates"
+      },
+      {
+        "label": "Relay distress to Starfleet Command",
+        "next": "relay_command"
+      },
+      {
+        "label": "Order immediate course change to assist",
+        "next": "cross_warning"
+      }
+    ]
+  },
+  {
+    "id": "coordinates",
+    "text": "Navigation confirms the freighter's position in Gamma Hydra, Section 10\u2014deep within the Klingon Neutral Zone.",
+    "color": "warning",
+    "options": [
+      {
+        "label": "Enter the Neutral Zone to attempt rescue",
+        "next": "enter_zone"
+      },
+      {
+        "label": "Hold position and monitor",
+        "next": "hold_position"
+      }
+    ]
+  },
+  {
+    "id": "relay_command",
+    "text": "Starfleet Command acknowledges, but due to subspace lag, no orders are received. Time is running out.",
+    "color": "warning",
+    "options": [
+      {
+        "label": "Proceed without orders",
+        "next": "enter_zone"
+      },
+      {
+        "label": "Maintain position and await response",
+        "next": "hold_position"
+      }
+    ]
+  },
+  {
+    "id": "ignore_signal",
+    "text": "You continue your patrol. Hours later, Starfleet reports that the Kobayashi Maru was lost with all hands. You respected the treaty, but others question your inaction.",
+    "color": "normal",
+    "options": [
+      {
+        "label": "End Simulation",
+        "next": "debrief_caution"
+      }
+    ]
+  },
+  {
+    "id": "hold_position",
+    "text": "You hold outside the Zone. The distress call fades. Sensors detect faint Klingon warp signatures. The Kobayashi Maru\u2019s life signs vanish.",
+    "color": "warning",
+    "options": [
+      {
+        "label": "End Simulation",
+        "next": "debrief_observe"
+      },
+      {
+        "label": "Cross into the Neutral Zone anyway",
+        "next": "enter_zone"
+      }
+    ]
+  },
+  {
+    "id": "cross_warning",
+    "text": "Helm hesitates: \u201cCaptain, that\u2019s a treaty breach.\u201d Tactical warns of possible Klingon response. All eyes are on you.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "Confirm order to cross",
+        "next": "enter_zone"
+      },
+      {
+        "label": "Cancel and hold position",
+        "next": "hold_position"
+      }
+    ]
+  },
+  {
+    "id": "enter_zone",
+    "text": "Your ship crosses into the Neutral Zone. You locate the Kobayashi Maru\u2014adrift, venting plasma. As you prepare transport, sensors detect three Klingon battlecruisers approaching.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "Attempt hailing the Klingons",
+        "next": "hail_klingons"
+      },
+      {
+        "label": "Raise shields and prepare for combat",
+        "next": "combat_engage"
+      },
+      {
+        "label": "Begin emergency beam-out of survivors",
+        "next": "rescue_attempt"
+      }
+    ]
+  },
+  {
+    "id": "hail_klingons",
+    "text": "You open a channel. The Klingon commander responds: \u201cYou violate our space and now claim mercy? You will have none.\u201d Weapons lock detected.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "Attempt negotiation",
+        "next": "negotiate"
+      },
+      {
+        "label": "Evasive maneuvers",
+        "next": "evade"
+      }
+    ]
+  },
+  {
+    "id": "negotiate",
+    "text": "Your diplomatic appeal is met with laughter. The Klingons fire first. Shields drop to 60%. Engineering reports plasma leaks.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "Return fire",
+        "next": "combat_engage"
+      },
+      {
+        "label": "Attempt retreat",
+        "next": "retreat"
+      }
+    ]
+  },
+  {
+    "id": "evade",
+    "text": "Evasive pattern initiated. Two torpedoes narrowly miss, but a third hits the port nacelle. Impulse drive is failing.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "Return fire",
+        "next": "combat_engage"
+      },
+      {
+        "label": "Abandon ship",
+        "next": "abandon_ship"
+      }
+    ]
+  },
+  {
+    "id": "combat_engage",
+    "text": "The Klingons open fire. Phaser arrays overheat. Hull integrity down to 45%. You damage one cruiser, but the others close in.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "Divert power to shields",
+        "next": "damage_control"
+      },
+      {
+        "label": "Order full retreat",
+        "next": "retreat"
+      },
+      {
+        "label": "Protect the Kobayashi Maru at all costs",
+        "next": "sacrifice"
+      }
+    ]
+  },
+  {
+    "id": "damage_control",
+    "text": "Engineering reroutes power. Shields briefly strengthen, but the warp core is unstable. The ship won\u2019t hold much longer.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "Attempt emergency warp",
+        "next": "warp_fail"
+      },
+      {
+        "label": "Abandon ship",
+        "next": "abandon_ship"
+      }
+    ]
+  },
+  {
+    "id": "warp_fail",
+    "text": "You engage warp. The drive sputters, then detonates. The ship is destroyed instantly.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "End Simulation",
+        "next": "debrief_fail"
+      }
+    ]
+  },
+  {
+    "id": "rescue_attempt",
+    "text": "Transporter locks onto survivors, but Klingon fire disrupts the beam. You save a handful before systems collapse.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "Hold position and continue rescue",
+        "next": "sacrifice"
+      },
+      {
+        "label": "Break off and retreat",
+        "next": "retreat"
+      }
+    ]
+  },
+  {
+    "id": "sacrifice",
+    "text": "You interpose your ship between the freighter and the Klingons. Your shields fail under combined fire. Both ships are lost, but your crew fought to the end.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "End Simulation",
+        "next": "debrief_sacrifice"
+      }
+    ]
+  },
+  {
+    "id": "retreat",
+    "text": "You attempt to escape. Klingon cruisers pursue. A torpedo strikes the aft section. Your ship drifts, crippled.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "Abandon ship",
+        "next": "abandon_ship"
+      },
+      {
+        "label": "Fight to the end",
+        "next": "combat_end"
+      }
+    ]
+  },
+  {
+    "id": "abandon_ship",
+    "text": "You order the crew to abandon ship. Escape pods jettison into the void. A final blast consumes the bridge.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "End Simulation",
+        "next": "debrief_abandon"
+      }
+    ]
+  },
+  {
+    "id": "combat_end",
+    "text": "Your ship explodes in a brilliant flash, taking one Klingon vessel with it. There are no survivors.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "End Simulation",
+        "next": "debrief_combat"
+      }
+    ]
+  },
+  {
+    "id": "debrief_caution",
+    "text": "Simulation complete. You preserved peace, but at the cost of innocent lives. Command notes excessive caution.",
+    "color": "normal",
+    "options": [
+      {
+        "label": "Restart Simulation",
+        "next": "start"
+      }
+    ]
+  },
+  {
+    "id": "debrief_observe",
+    "text": "Simulation complete. You chose to wait, showing prudence and patience. Unfortunately, the freighter\u2019s crew perished.",
+    "color": "warning",
+    "options": [
+      {
+        "label": "Restart Simulation",
+        "next": "start"
+      }
+    ]
+  },
+  {
+    "id": "debrief_sacrifice",
+    "text": "Simulation complete. You gave your life to save others. Starfleet honors your courage, but questions your tactical judgment.",
+    "color": "warning",
+    "options": [
+      {
+        "label": "Restart Simulation",
+        "next": "start"
+      }
+    ]
+  },
+  {
+    "id": "debrief_abandon",
+    "text": "Simulation complete. You saved some of your crew but lost the mission. Command deems your actions humane but inconclusive.",
+    "color": "warning",
+    "options": [
+      {
+        "label": "Restart Simulation",
+        "next": "start"
+      }
+    ]
+  },
+  {
+    "id": "debrief_combat",
+    "text": "Simulation complete. You fought with valor until the end. Starfleet notes your tenacity but reminds you: no one wins the Kobayashi Maru.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "Restart Simulation",
+        "next": "start"
+      }
+    ]
+  },
+  {
+    "id": "debrief_fail",
+    "text": "Simulation complete. Catastrophic systems failure led to total loss. Command stresses the importance of knowing when not to risk everything.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "Restart Simulation",
+        "next": "start"
+      }
+    ]
+  }
+]
