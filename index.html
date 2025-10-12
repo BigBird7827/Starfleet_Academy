@@ -46,14 +46,11 @@ html, body {
   align-items: center;
   z-index: 0;
 }
-.lcars-top {
+.lcars-top, .lcars-bottom {
   position: absolute;
-  top: 0;
   left: 0;
   width: 100%;
-  height: 50px;
   background: var(--gold);
-  border-bottom-left-radius: 50px;
   font-family: 'Final Frontier', sans-serif;
   font-size: 24pt;
   color: #001933;
@@ -63,22 +60,15 @@ html, body {
   text-transform: uppercase;
   font-weight: bold;
 }
+.lcars-top {
+  top: 0;
+  height: 50px;
+  border-bottom-left-radius: 50px;
+}
 .lcars-bottom {
-  position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
   height: 40px;
-  background: var(--gold);
   border-top-left-radius: 50px;
-  font-family: 'Final Frontier', sans-serif;
-  font-size: 24pt;
-  color: #001933;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  font-weight: bold;
 }
 .glass-panel {
   background: rgba(30, 40, 60, 0.25);
@@ -127,9 +117,7 @@ input, select {
   font-size: 14pt;
   border-radius: 6px;
 }
-::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
+::placeholder { color: rgba(255, 255, 255, 0.7); }
 button {
   font-family: 'Orbitron', sans-serif;
   background: linear-gradient(to bottom, #003366, #001933);
@@ -140,18 +128,20 @@ button {
   padding: 12px 25px;
   margin: 10px;
   cursor: pointer;
-  box-shadow:
-    inset 0 6px 8px rgba(255, 255, 255, 0.06),
-    inset 0 -6px 10px rgba(0, 0, 0, 0.6),
-    0 6px 12px rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 6px 8px rgba(255, 255, 255, 0.06),
+              inset 0 -6px 10px rgba(0, 0, 0, 0.6),
+              0 6px 12px rgba(0, 0, 0, 0.9);
   transition: transform .2s, box-shadow .2s;
 }
 button:hover {
   transform: translateY(-2px);
-  box-shadow:
-    inset 0 6px 10px rgba(255, 255, 255, 0.08),
-    inset 0 -6px 12px rgba(0, 0, 0, 0.7),
-    0 14px 28px rgba(0, 0, 0, 1);
+  box-shadow: inset 0 6px 10px rgba(255, 255, 255, 0.08),
+              inset 0 -6px 12px rgba(0, 0, 0, 0.7),
+              0 14px 28px rgba(0, 0, 0, 1);
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 .glow-message {
   text-align: center;
@@ -163,9 +153,7 @@ button:hover {
   opacity: 0;
   transition: opacity .6s ease-in;
 }
-#accessMessage.active {
-  opacity: 1;
-}
+#accessMessage.active { opacity: 1; }
 .corner-image {
   position: fixed;
   width: 2.5in;
@@ -174,14 +162,8 @@ button:hover {
   pointer-events: none;
   z-index: 10;
 }
-.corner-left {
-  top: 10px;
-  left: 10px;
-}
-.corner-right {
-  top: 10px;
-  right: 10px;
-}
+.corner-left { top: 10px; left: 10px; }
+.corner-right { top: 10px; right: 10px; }
 .container {
   background: rgba(0, 0, 0, 0.8);
   border: 2px solid var(--gold);
@@ -206,29 +188,18 @@ button:hover {
   padding: 30px;
   box-shadow: 0 0 15px var(--blue);
 }
-.lab-answers {
+.km-button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+.lab-answers, .exam-answers {
   display: flex;
   flex-direction: column;
   gap: 15px;
   align-items: stretch;
-}
-.lab-answers button {
-  width: 100%;
-  max-width: 100%;
-  flex: 0 0 auto;
-  white-space: normal;
-  line-height: 1.4;
-  box-sizing: border-box;
-  margin: 5px 0;
-}
-.best-answer {
-  color: var(--green);
-}
-.alternate-answer {
-  color: var(--blue);
-}
-.incorrect-answer {
-  color: var(--red);
+  font-family: Arial, sans-serif;
 }
 .feedback {
   text-align: center;
@@ -274,32 +245,96 @@ button:hover {
     transform: none;
   }
 }
-.training-section h3,
-.training-section > p {
-  color: var(--gold);
+.training-section {
+  position: relative;
+  background: rgba(15, 20, 35, 0.78);
+  border: 2px solid var(--gold);
+  border-radius: 14px;
+  padding: 50px 36px 30px 36px;
+  margin: 50px auto;
+  box-shadow: 0 0 25px rgba(255, 212, 122, 0.25);
+  max-width: 950px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  overflow: hidden;
 }
-.training-section:first-of-type p {
+.training-section:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 40px rgba(255, 212, 122, 0.35);
+}
+.training-header-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background: linear-gradient(to right, var(--gold), var(--blue));
+  border-bottom: 2px solid var(--gold);
+  text-align: right;
+  padding-right: 18px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #000;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+  line-height: 28px;
+}
+.training-section h3 {
+  color: var(--green);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+  font-size: 20pt;
+  letter-spacing: 1px;
+}
+.training-section p {
+  font-size: 13.5pt;
   color: var(--text);
+  line-height: 1.6;
+  margin: 10px 0;
 }
-#trainingContent .answers.department-buttons-box {
-  align-items: flex-start !important;
+.training-answers {
+  margin-top: 20px;
+  padding: 18px 24px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.45);
+  border-left: 5px solid var(--gold);
 }
-#trainingContent .answers p,
-#trainingContent .answers div {
-  text-align: left !important;
+.training-answers p {
+  margin: 12px 0;
+  padding-left: 8px;
+  line-height: 1.5;
+  font-size: 13.5pt;
 }
-#trainingContent .answers p strong {
-  color: var(--blue);
+.training-answers p strong {
+  display: block;
+  font-size: 13pt;
+  margin-bottom: 3px;
 }
-#labContent,
-#labContent * {
-  font-family: Arial, sans-serif !important;
+.training-preface {
+  text-align: center;
+  font-size: 14pt;
+  color: var(--gold);
+  margin: 25px auto 40px;
+  line-height: 1.5;
+  max-width: 850px;
+}
+.training-section p strong[style*="green"]::before {
+  content: "▮ ";
+  color: var(--green);
+}
+.training-section p strong[style*="teal"]::before {
+  content: "▮ ";
+  color: teal;
+}
+.training-section p strong[style*="slategray"]::before {
+  content: "▮ ";
+  color: slategray;
 }
   </style>
 </head>
 <body>
 <div id="loginScreen">
-  <div class="lcars-left"></div>
   <div class="lcars-top">Starfleet Academy - Established 2161</div>
   <div class="lcars-bottom">Ex Astris Scientia</div>
   <div class="container glass-panel">
@@ -334,7 +369,7 @@ button:hover {
 <div id="mainScreen" style="display:none;">
   <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
   <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-  <div class="container" style="width:calc(min(calc(100% - 6in), 1400px) - 100px);margin:100px auto 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+  <div class="container">
     <div class="page-title">Welcome to Starfleet Academy</div>
     <div id="mainWelcome" style="font-size:18pt;margin-bottom:20px;"></div>
     <p style="font-size:14pt;color:#fff;margin-bottom:20px;text-align:center;max-width:900px;">
@@ -350,10 +385,13 @@ button:hover {
       Once all labs are complete, you will take a final exam by choosing the "Exams" button.
       Good luck, Cadet!
     </p>
-    <div class="department-select-box" style="grid-template-columns: repeat(3, 1fr); width:auto; background:rgba(0,0,0,0.8);">
+    <div class="department-select-box" style="grid-template-columns: repeat(3, 1fr); width:auto;">
       <button id="trainingBtn" style="width:200px;">Study</button>
       <button id="labBtn" style="width:200px;">Labs</button>
-      <button id="examBtn" style="width:200px;">Exams</button>
+      <button id="examBtn" style="width:200px;" disabled>Exams</button>
+    </div>
+    <div class="km-button-box">
+      <button id="finalExamBtn" style="width:300px;" disabled>Kobayashi Maru - Locked</button>
     </div>
   </div>
 </div>
@@ -397,37 +435,32 @@ button:hover {
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const trainingFiles = {
-    "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Training.json",
-    "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Training.json",
-    "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Training.json",
-    "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Training.json",
-    "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Training.json",
-    "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Training.json"
-  };
-  const labFiles = {
-    "Command": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Command%20Lab.json",
-    "Diplomacy": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Diplomacy%20Lab.json",
-    "Engineering": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Engineering%20Lab.json",
-    "Security": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Security%20Lab.json",
-    "Science": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Science%20Lab.json",
-    "Medical": "https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Medical%20Lab.json"
-  };
+  const departments = ["Command", "Diplomacy", "Engineering", "Security", "Science", "Medical"];
+  const trainingFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Training.json`]));
+  const labFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Lab.json`]));
+  const examFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Exam.json`]));
+  const progress = { labs: {}, exams: {} };
+
   const homeworlds = {
-    "Human": "Earth", "Vulcan": "Vulcan", "Andorian": "Andoria", "Aenar": "Andoria", "Tellarite": "Tellar Prime",
-    "Bajoran": "Bajor", "Betazoid": "Betazed", "Bolian": "Bolarus IX", "Trill": "Trill",
-    "Klingon": "Qo'noS", "Ferengi": "Ferenginar", "Denobulan": "Denobula", "Orion": "Orion",
-    "Caitian": "Cait", "Benzite": "Benzar"
+    "Human": "Earth","Vulcan": "Vulcan","Andorian": "Andoria","Aenar": "Andoria","Tellarite": "Tellar Prime",
+    "Bajoran": "Bajor","Betazoid": "Betazed","Bolian": "Bolarus IX","Trill": "Trill","Klingon": "Qo'noS",
+    "Ferengi": "Ferenginar","Denobulan": "Denobula","Orion": "Orion","Caitian": "Cait","Benzite": "Benzar"
   };
-  const prefaces = {
-    "Command": "You are in command of a Federation starship. The decisions you make will determine not only the success of your mission, but the safety and unity of those who serve under you. In this training, you’ll confront situations that demand clarity under pressure and restraint in the face of uncertainty. You’ll be tested on your ability to lead with integrity, to weigh the letter of Starfleet protocol against the spirit of exploration, and to make choices that reflect both duty and compassion. The stars will not wait — and neither will those who look to you for direction.",
-    "Diplomacy": "You represent the Federation’s voice among the stars. In this training, you’ll take on the role of a Federation envoy, navigating delicate negotiations, first contact scenarios, and interstellar disputes. You’ll learn how to interpret cultural nuance, balance compassion with caution, and safeguard the Federation’s ideals through dialogue rather than force. The stability of entire sectors can hinge on your words — and your silence.",
-    "Engineering": "You serve as the ship’s Chief of Engineering — the one who keeps its systems alive when the void grows hostile. In this division, you’ll manage warp dynamics, power distribution, and emergency repairs under pressure. You’ll learn to diagnose the impossible, rebuild what others have written off as lost, and keep the ship running when every system is failing. The crew depends on your expertise, your composure, and your ability to turn chaos into order before the lights go dark.",
-    "Science": "You are assigned as the ship’s Science Officer, charged with turning the unknown into understanding. In this training, you’ll analyze stellar phenomena, identify anomalies, and conduct experiments that expand the Federation’s collective knowledge. You’ll learn to trust data, challenge assumptions, and face the mysteries of space with curiosity and rigor. Discovery isn’t just your mission — it’s your duty.",
-    "Medical": "You take on the role of Chief Medical Officer — the guardian of life aboard ship. This training will test your knowledge of Federation medicine and your composure under crisis conditions. You’ll encounter diverse species and uncharted pathogens, making decisions where seconds decide fates. Your responsibility extends beyond the biobed; you’ll preserve morale, compassion, and the very humanity that defines Starfleet.",
-    "Security": "You are the ship’s Chief Security Officer — protector of crew, vessel, and mission. This training places you at the forefront of tactical readiness, internal security, and crisis response. You’ll learn how to evaluate threats, coordinate defensive actions, and uphold Starfleet law while respecting Federation ethics. Every alert will demand balance between force and restraint, between instinct and duty. The ship’s safety will rest squarely on your vigilance."
-  };
+
   let cadetName = "", species = "";
+  const examBtn = document.getElementById("examBtn");
+  const finalExamBtn = document.getElementById("finalExamBtn");
+
+  function checkProgress() {
+    const allLabsDone = departments.every(d => progress.labs[d]);
+    const allExamsDone = departments.every(d => progress.exams[d]);
+    if (allLabsDone) examBtn.disabled = false;
+    if (allLabsDone && allExamsDone) {
+      finalExamBtn.disabled = false;
+      finalExamBtn.textContent = "Kobayashi Maru - Available";
+    }
+  }
+
   document.getElementById("loginBtn").addEventListener("click", () => {
     cadetName = document.getElementById("cadetName").value.trim();
     species = document.getElementById("species").value;
@@ -441,6 +474,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("mainScreen").style.display = "block";
     }, 4000);
   });
+
   document.getElementById("trainingBtn").onclick = () => openOrientation("training");
   document.getElementById("labBtn").onclick = () => openOrientation("lab");
   document.getElementById("examBtn").onclick = () => openOrientation("exam");
@@ -448,23 +482,13 @@ document.addEventListener("DOMContentLoaded", () => {
   function openOrientation(mode) {
     document.getElementById("mainScreen").style.display = "none";
     const title = document.getElementById("orientationTitle");
-    title.textContent =
-      mode === "lab"
-        ? "Select Lab Department"
-        : mode === "exam"
-        ? "Select Exam Department"
-        : "Select Study Department";
+    title.textContent = mode === "lab" ? "Select Lab Department" : mode === "exam" ? "Select Exam Department" : "Select Study Department";
     const btnBox = document.getElementById("moduleButtons");
-    btnBox.className = "department-select-box";
     btnBox.innerHTML = "";
-    Object.keys(trainingFiles).forEach(dept => {
+    departments.forEach(dept => {
       const b = document.createElement("button");
       b.textContent = dept;
-      b.onclick = () => {
-        if (mode === "training") loadTraining(dept);
-        else if (mode === "lab") loadLab(dept);
-        else if (mode === "exam") loadExam(dept);
-      };
+      b.onclick = () => { mode === "training" ? loadTraining(dept) : mode === "lab" ? loadLab(dept) : loadExam(dept); };
       btnBox.appendChild(b);
     });
     document.getElementById("orientationPage").style.display = "block";
@@ -473,6 +497,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("returnMain").onclick = () => {
     document.getElementById("orientationPage").style.display = "none";
     document.getElementById("mainScreen").style.display = "block";
+    checkProgress();
   };
   document.getElementById("returnOrientationTrain").onclick = () => {
     document.getElementById("trainingPage").style.display = "none";
@@ -481,128 +506,157 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("returnOrientationLab").onclick = () => {
     document.getElementById("labPage").style.display = "none";
     document.getElementById("orientationPage").style.display = "block";
+    checkProgress();
   };
   document.getElementById("returnOrientationExam").onclick = () => {
     document.getElementById("examPage").style.display = "none";
     document.getElementById("orientationPage").style.display = "block";
+    checkProgress();
   };
 
-  function loadTraining(dept) {
+  async function loadTraining(dept) {
     document.getElementById("orientationPage").style.display = "none";
     document.getElementById("trainingPage").style.display = "block";
     document.getElementById("trainingDeptTitle").textContent = `${dept} Study`;
     document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
     const content = document.getElementById("trainingContent");
     content.innerHTML = "<p>Loading...</p>";
-    fetch(trainingFiles[dept])
-      .then(r => r.json())
-      .then(data => {
-        content.innerHTML = "";
-        if (prefaces[dept]) content.innerHTML += `<div class='training-preface'><p>${prefaces[dept]}</p></div>`;
-        if (data.study) {
-          data.study.forEach(item => {
-            const section = document.createElement("div");
-            section.className = "training-section";
-            section.innerHTML = `<h3>${item.scenario}</h3><p>${item.summary || ""}</p>`;
-            if (item.answers) {
-              const answersDiv = document.createElement("div");
-              answersDiv.className = "answers department-buttons-box";
-              item.answers.slice(0, 3).forEach(ans => {
-                const block = document.createElement("div");
-                block.innerHTML = `<p><strong>${ans.type === "best" ? "⭐ Best Answer" : "Alternate Answer"}:</strong> ${ans.text}</p>
-                                   <p><em>Score:</em> ${ans.score}</p>
-                                   <p>${ans.details || ""}</p>`;
-                answersDiv.appendChild(block);
-              });
-              section.appendChild(answersDiv);
-            }
-            content.appendChild(section);
-          });
-        } else content.innerHTML = "<p>No study items found.</p>";
+    const res = await fetch(trainingFiles[dept]);
+    const data = await res.json();
+    content.innerHTML = "";
+    data.study?.forEach(item => {
+      const section = document.createElement("div");
+      section.className = "training-section";
+      const header = document.createElement("div");
+      header.className = "training-header-bar";
+      header.textContent = `${dept.toUpperCase()} DIVISION`;
+      section.appendChild(header);
+      const scenario = document.createElement("h3");
+      scenario.textContent = item.scenario;
+      section.appendChild(scenario);
+      const summary = document.createElement("p");
+      summary.textContent = item.summary;
+      section.appendChild(summary);
+      const answersDiv = document.createElement("div");
+      answersDiv.className = "training-answers";
+      item.answers.forEach((ans, i) => {
+        const p = document.createElement("p");
+        const strong = document.createElement("strong");
+        strong.style.color = i === 0 ? "green" : i === 1 ? "teal" : "slategray";
+        strong.textContent = ans.text;
+        const span = document.createElement("span");
+        span.textContent = ans.details;
+        p.appendChild(strong);
+        p.appendChild(span);
+        answersDiv.appendChild(p);
       });
+      section.appendChild(answersDiv);
+      content.appendChild(section);
+    });
   }
 
-  function loadLab(dept) {
+  async function loadLab(dept) {
     document.getElementById("orientationPage").style.display = "none";
     document.getElementById("labPage").style.display = "block";
     document.getElementById("labDeptTitle").textContent = `${dept} Lab`;
     document.getElementById("labCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
     const content = document.getElementById("labContent");
     content.innerHTML = "<p>Loading...</p>";
-    fetch(labFiles[dept])
-      .then(r => r.json())
-      .then(data => {
-        const items = data.lab || data.study || data.experiments || [];
-        if (items.length === 0) { content.innerHTML = "<p>No lab data found.</p>"; return; }
-        let currentIndex = 0;
-        showScenario(currentIndex);
-        function showScenario(index) {
-          const item = items[index];
-          content.innerHTML = "";
-          const section = document.createElement("div");
-          section.className = "training-section";
-          section.innerHTML = `<h3>${item.scenario}</h3><p>${item.summary || ""}</p>`;
-          const answersDiv = document.createElement("div");
-          answersDiv.className = "lab-answers";
-          const shuffledAnswers = [...item.answers].sort(() => Math.random() - 0.5);
-          shuffledAnswers.forEach(ans => {
-            const btn = document.createElement("button");
-            btn.textContent = ans.text;
-            btn.onclick = () => {
-              const all = answersDiv.querySelectorAll("button");
-              all.forEach(b => b.disabled = true);
-              const feedback = document.createElement("div");
-              feedback.className = "feedback";
-              if (ans.type === "best") {
-                feedback.innerHTML = `<span class="best-answer">✅ Correct — Best Answer!</span><p>${ans.details}</p>`;
-              } else {
-                feedback.innerHTML = `<span class="incorrect-answer">❌ Incorrect</span>`;
-                const best = item.answers.find(a => a.type === "best");
-                const alternates = item.answers.filter(a => a.type === "alternate").slice(0,2);
-                const reveal = document.createElement("div");
-                reveal.innerHTML = `<p class="best-answer"><strong>⭐ BEST:</strong> ${best.text} — ${best.details}</p>`;
-                alternates.forEach(a => {
-                  const alt = document.createElement("p");
-                  alt.className = "alternate-answer";
-                  alt.innerHTML = `<strong>Alternate:</strong> ${a.text} — ${a.details}`;
-                  reveal.appendChild(alt);
-                });
-                feedback.appendChild(reveal);
-              }
-              const nextBtn = document.createElement("button");
-              nextBtn.textContent = index < items.length - 1 ? "Next Scenario ➡️" : "Return to Departments";
-              nextBtn.onclick = () => {
-                if (index < items.length - 1) showScenario(index + 1);
-                else {
-                  document.getElementById("labPage").style.display = "none";
-                  document.getElementById("orientationPage").style.display = "block";
-                }
-              };
-              feedback.appendChild(nextBtn);
-              answersDiv.appendChild(feedback);
-            };
-            answersDiv.appendChild(btn);
-          });
-          section.appendChild(answersDiv);
-          content.appendChild(section);
-        }
+    const res = await fetch(labFiles[dept]);
+    const data = await res.json();
+    const items = data.lab || [];
+    let currentIndex = 0;
+    showScenario(currentIndex);
+    function showScenario(i) {
+      const item = items[i];
+      content.innerHTML = `<div class="training-section"><h3>${item.scenario}</h3><p>${item.summary || ""}</p></div>`;
+      const answersDiv = document.createElement("div");
+      answersDiv.className = "lab-answers";
+      [...item.answers].sort(() => Math.random() - 0.5).forEach(ans => {
+        const btn = document.createElement("button");
+        btn.textContent = ans.text;
+        btn.onclick = () => {
+          answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
+          const feedback = document.createElement("div");
+          feedback.className = "feedback";
+          feedback.innerHTML = ans.type === "best"
+            ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
+            : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
+          const next = document.createElement("button");
+          next.textContent = i < items.length - 1 ? "Next Scenario ➡️" : "Return to Departments";
+          next.onclick = () => {
+            if (i < items.length - 1) showScenario(i + 1);
+            else {
+              progress.labs[dept] = true;
+              document.getElementById("labPage").style.display = "none";
+              document.getElementById("orientationPage").style.display = "block";
+              checkProgress();
+            }
+          };
+          feedback.appendChild(next);
+          answersDiv.appendChild(feedback);
+        };
+        answersDiv.appendChild(btn);
       });
+      content.appendChild(answersDiv);
+    }
   }
 
-  function loadExam(dept) {
+  async function loadExam(dept) {
     document.getElementById("orientationPage").style.display = "none";
     document.getElementById("examPage").style.display = "block";
     document.getElementById("examDeptTitle").textContent = `${dept} Exam`;
     document.getElementById("examCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
     const content = document.getElementById("examContent");
-    content.innerHTML = "<p>Exam protocols will be uploaded soon, Cadet.</p>";
+    content.innerHTML = "<p>Loading...</p>";
+    const res = await fetch(examFiles[dept]);
+    const data = await res.json();
+    const items = data.exam || [];
+    let currentIndex = 0;
+    showQuestion(currentIndex);
+    function showQuestion(i) {
+      const item = items[i];
+      content.innerHTML = `<div class="training-section"><h3>${item.scenario}</h3></div>`;
+      const answersDiv = document.createElement("div");
+      answersDiv.className = "exam-answers";
+      [...item.answers].forEach(ans => {
+        const btn = document.createElement("button");
+        btn.textContent = ans.text;
+        btn.onclick = () => {
+          answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
+          const feedback = document.createElement("div");
+          feedback.className = "feedback";
+          feedback.innerHTML = ans.type === "best"
+            ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
+            : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
+          const next = document.createElement("button");
+          next.textContent = i < items.length - 1 ? "Next Question ➡️" : "Return to Departments";
+          next.onclick = () => {
+            if (i < items.length - 1) showQuestion(i + 1);
+            else {
+              progress.exams[dept] = true;
+              document.getElementById("examPage").style.display = "none";
+              document.getElementById("orientationPage").style.display = "block";
+              checkProgress();
+            }
+          };
+          feedback.appendChild(next);
+          answersDiv.appendChild(feedback);
+        };
+        answersDiv.appendChild(btn);
+      });
+      content.appendChild(answersDiv);
+    }
   }
+
+  finalExamBtn.disabled = false;
+  finalExamBtn.textContent = "Kobayashi Maru - Engage";
+
+  finalExamBtn.onclick = () => {
+    window.open("https://bigbird7827.github.io/Starfleet_Academy/Final_exam/Final_Exam.html", "_blank");
+  };
 });
 </script>
 </body>
 </html>
-
-
-
-
 
