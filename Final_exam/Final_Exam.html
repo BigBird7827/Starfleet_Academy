@@ -1,212 +1,224 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Final Exam - Kobayashi Maru Simulation</title>
-<style>
-:root {
-  --gold: #ffd47a;
-  --blue: #4ab0ff;
-  --red: #cc0033;
-  --dark-blue: #001933;
-  --text: #e6e6e6;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  background: black;
-  font-family: 'Orbitron', sans-serif;
-  color: var(--text);
-}
-
-/* LCARS banners */
-.lcars-top, .lcars-bottom {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  background: var(--gold);
-  color: var(--dark-blue);
-  font-family: 'Final Frontier', sans-serif;
-  font-size: 24pt;
-  text-transform: uppercase;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
-}
-.lcars-top { top: 0; height: 50px; border-bottom-left-radius: 50px; }
-.lcars-bottom { bottom: 0; height: 40px; border-top-left-radius: 50px; }
-
-/* Starfield */
-canvas#starfield {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse at bottom, #020111 0%, #000000 100%);
-  z-index: 0;
-}
-
-/* UI overlay */
-#interface {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
-  bottom: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 2;
-  text-align: center;
-}
-button {
-  background: linear-gradient(to bottom, #003366, #001933);
-  border: 2px solid var(--gold);
-  color: var(--gold);
-  font-size: 16pt;
-  border-radius: 10px;
-  padding: 10px 25px;
-  cursor: pointer;
-  transition: transform .2s, box-shadow .2s;
-}
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 20px var(--gold);
-}
-#status {
-  margin-top: 25px;
-  font-size: 14pt;
-  color: var(--blue);
-}
-
-/* Ship sprites (simple placeholders) */
-.ship {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-#enterprise {
-  background: var(--blue);
-  box-shadow: 0 0 15px var(--blue);
-}
-.enemy {
-  background: var(--red);
-  box-shadow: 0 0 15px var(--red);
-}
-</style>
-</head>
-<body>
-<div class="lcars-top">Starfleet Academy - Final Exam</div>
-<canvas id="starfield"></canvas>
-
-<div id="interface">
-  <h1 style="color:var(--gold);margin-bottom:20px;">Kobayashi Maru Simulation</h1>
-  <button id="beginBtn">Begin Simulation</button>
-  <div id="status"></div>
-</div>
-
-<div class="lcars-bottom">Ex Astris Scientia</div>
-
 <script>
-/* Starfield animation */
-const canvas = document.getElementById('starfield');
-const ctx = canvas.getContext('2d');
-let stars = [];
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  stars = Array(300).fill().map(()=>({
-    x: Math.random()*canvas.width,
-    y: Math.random()*canvas.height,
-    z: Math.random()*canvas.width
-  }));
-}
-window.addEventListener('resize', resize);
-resize();
+document.addEventListener("DOMContentLoaded", () => {
+  const departments = ["Command", "Diplomacy", "Engineering", "Security", "Science", "Medical"];
+  const trainingFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Training.json`]));
+  const labFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Lab.json`]));
+  const examFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Exam.json`]));
+  const progress = { labs: {}, exams: {} };
 
-function animateStars() {
-  ctx.fillStyle = "black";
-  ctx.fillRect(0,0,canvas.width,canvas.height);
-  for (let s of stars) {
-    s.z -= 2;
-    if (s.z <= 0) s.z = canvas.width;
-    const k = 128.0 / s.z;
-    const px = s.x * k + canvas.width/2;
-    const py = s.y * k + canvas.height/2;
-    if (px>=0 && px<=canvas.width && py>=0 && py<=canvas.height) {
-      const size = (1 - s.z / canvas.width) * 2;
-      ctx.fillStyle = "white";
-      ctx.beginPath();
-      ctx.arc(px, py, size, 0, Math.PI*2);
-      ctx.fill();
+  const homeworlds = {
+    "Human": "Earth","Vulcan": "Vulcan","Andorian": "Andoria","Aenar": "Andoria","Tellarite": "Tellar Prime",
+    "Bajoran": "Bajor","Betazoid": "Betazed","Bolian": "Bolarus IX","Trill": "Trill","Klingon": "Qo'noS",
+    "Ferengi": "Ferenginar","Denobulan": "Denobula","Orion": "Orion","Caitian": "Cait","Benzite": "Benzar"
+  };
+
+  let cadetName = "", species = "";
+  const examBtn = document.getElementById("examBtn");
+  const finalExamBtn = document.getElementById("finalExamBtn");
+
+  function checkProgress() {
+    const allLabsDone = departments.every(d => progress.labs[d]);
+    const allExamsDone = departments.every(d => progress.exams[d]);
+    if (allLabsDone) examBtn.disabled = false;
+    if (allLabsDone && allExamsDone) {
+      finalExamBtn.disabled = false;
+      finalExamBtn.textContent = "Kobayashi Maru - Available";
     }
   }
-  requestAnimationFrame(animateStars);
-}
-animateStars();
 
-/* Simulation logic */
-const beginBtn = document.getElementById('beginBtn');
-const status = document.getElementById('status');
-const interfaceDiv = document.getElementById('interface');
-let running = false;
+  document.getElementById("loginBtn").addEventListener("click", () => {
+    cadetName = document.getElementById("cadetName").value.trim();
+    species = document.getElementById("species").value;
+    if (!cadetName || !species) return alert("Enter name and species first.");
+    const msg = document.getElementById("accessMessage");
+    msg.textContent = `Access Link Established — Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
+    msg.classList.add("active");
+    setTimeout(() => {
+      document.getElementById("loginScreen").style.display = "none";
+      document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
+      document.getElementById("mainScreen").style.display = "block";
+    }, 4000);
+  });
 
-beginBtn.onclick = () => {
-  if (running) return;
-  running = true;
-  beginBtn.style.display = 'none';
-  status.textContent = "Distress signal detected... Kobayashi Maru, bearing 320 mark 2.";
+  document.getElementById("trainingBtn").onclick = () => openOrientation("training");
+  document.getElementById("labBtn").onclick = () => openOrientation("lab");
+  document.getElementById("examBtn").onclick = () => openOrientation("exam");
 
-  // Add ship elements
-  const enterprise = document.createElement('div');
-  enterprise.id = 'enterprise';
-  enterprise.className = 'ship';
-  document.body.appendChild(enterprise);
-  enterprise.style.left = '50%';
-  enterprise.style.top = '70%';
-
-  const enemies = [];
-  for (let i=0; i<3; i++) {
-    const e = document.createElement('div');
-    e.className = 'ship enemy';
-    e.style.left = `${30 + i*15}%`;
-    e.style.top = '20%';
-    document.body.appendChild(e);
-    enemies.push(e);
-  }
-
-  // Simple animation loop
-  let time = 0;
-  function battle() {
-    time += 1;
-    enemies.forEach((e, idx) => {
-      e.style.top = `${20 + Math.sin(time/40 + idx)*5}%`;
+  function openOrientation(mode) {
+    document.getElementById("mainScreen").style.display = "none";
+    const title = document.getElementById("orientationTitle");
+    title.textContent = mode === "lab" ? "Select Lab Department" : mode === "exam" ? "Select Exam Department" : "Select Study Department";
+    const btnBox = document.getElementById("moduleButtons");
+    btnBox.innerHTML = "";
+    departments.forEach(dept => {
+      const b = document.createElement("button");
+      b.textContent = dept;
+      b.onclick = () => { mode === "training" ? loadTraining(dept) : mode === "lab" ? loadLab(dept) : loadExam(dept); };
+      btnBox.appendChild(b);
     });
-    if (time === 200) status.textContent = "Klingon vessels de-cloaking!";
-    if (time === 400) status.textContent = "Shields failing...";
-    if (time === 600) {
-      status.textContent = "Simulation complete — No-win scenario.";
-      setTimeout(()=>{ endSimulation(); }, 4000);
-      return;
-    }
-    requestAnimationFrame(battle);
+    document.getElementById("orientationPage").style.display = "block";
   }
-  battle();
-};
 
-function endSimulation() {
-  document.querySelectorAll('.ship').forEach(s=>s.remove());
-  status.textContent = "Cadet evaluation ready. Returning to Academy...";
-  setTimeout(()=>{ window.location.href="../index.html"; }, 4000);
-}
+  document.getElementById("returnMain").onclick = () => {
+    document.getElementById("orientationPage").style.display = "none";
+    document.getElementById("mainScreen").style.display = "block";
+    checkProgress();
+  };
+  document.getElementById("returnOrientationTrain").onclick = () => {
+    document.getElementById("trainingPage").style.display = "none";
+    document.getElementById("orientationPage").style.display = "block";
+  };
+  document.getElementById("returnOrientationLab").onclick = () => {
+    document.getElementById("labPage").style.display = "none";
+    document.getElementById("orientationPage").style.display = "block";
+    checkProgress();
+  };
+  document.getElementById("returnOrientationExam").onclick = () => {
+    document.getElementById("examPage").style.display = "none";
+    document.getElementById("orientationPage").style.display = "block";
+    checkProgress();
+  };
+
+  async function loadTraining(dept) {
+    document.getElementById("orientationPage").style.display = "none";
+    document.getElementById("trainingPage").style.display = "block";
+    document.getElementById("trainingDeptTitle").textContent = `${dept} Study`;
+    document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+    const content = document.getElementById("trainingContent");
+    content.innerHTML = "<p>Loading...</p>";
+    const res = await fetch(trainingFiles[dept]);
+    const data = await res.json();
+    content.innerHTML = "";
+    data.study?.forEach(item => {
+      const section = document.createElement("div");
+      section.className = "training-section";
+      const header = document.createElement("div");
+      header.className = "training-header-bar";
+      header.textContent = `${dept.toUpperCase()} DIVISION`;
+      section.appendChild(header);
+      const scenario = document.createElement("h3");
+      scenario.textContent = item.scenario;
+      section.appendChild(scenario);
+      const summary = document.createElement("p");
+      summary.textContent = item.summary;
+      section.appendChild(summary);
+      const answersDiv = document.createElement("div");
+      answersDiv.className = "training-answers";
+      item.answers.forEach((ans, i) => {
+        const p = document.createElement("p");
+        const strong = document.createElement("strong");
+        strong.style.color = i === 0 ? "green" : i === 1 ? "teal" : "slategray";
+        strong.textContent = ans.text;
+        const span = document.createElement("span");
+        span.textContent = ans.details;
+        p.appendChild(strong);
+        p.appendChild(span);
+        answersDiv.appendChild(p);
+      });
+      section.appendChild(answersDiv);
+      content.appendChild(section);
+    });
+  }
+
+  async function loadLab(dept) {
+    document.getElementById("orientationPage").style.display = "none";
+    document.getElementById("labPage").style.display = "block";
+    document.getElementById("labDeptTitle").textContent = `${dept} Lab`;
+    document.getElementById("labCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+    const content = document.getElementById("labContent");
+    content.innerHTML = "<p>Loading...</p>";
+    const res = await fetch(labFiles[dept]);
+    const data = await res.json();
+    const items = data.lab || [];
+    let currentIndex = 0;
+    showScenario(currentIndex);
+    function showScenario(i) {
+      const item = items[i];
+      content.innerHTML = `<div class="training-section"><h3>${item.scenario}</h3><p>${item.summary || ""}</p></div>`;
+      const answersDiv = document.createElement("div");
+      answersDiv.className = "lab-answers";
+      [...item.answers].sort(() => Math.random() - 0.5).forEach(ans => {
+        const btn = document.createElement("button");
+        btn.textContent = ans.text;
+        btn.onclick = () => {
+          answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
+          const feedback = document.createElement("div");
+          feedback.className = "feedback";
+          feedback.innerHTML = ans.type === "best"
+            ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
+            : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
+          const next = document.createElement("button");
+          next.textContent = i < items.length - 1 ? "Next Scenario ➡️" : "Return to Departments";
+          next.onclick = () => {
+            if (i < items.length - 1) showScenario(i + 1);
+            else {
+              progress.labs[dept] = true;
+              document.getElementById("labPage").style.display = "none";
+              document.getElementById("orientationPage").style.display = "block";
+              checkProgress();
+            }
+          };
+          feedback.appendChild(next);
+          answersDiv.appendChild(feedback);
+        };
+        answersDiv.appendChild(btn);
+      });
+      content.appendChild(answersDiv);
+    }
+  }
+
+  async function loadExam(dept) {
+    document.getElementById("orientationPage").style.display = "none";
+    document.getElementById("examPage").style.display = "block";
+    document.getElementById("examDeptTitle").textContent = `${dept} Exam`;
+    document.getElementById("examCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+    const content = document.getElementById("examContent");
+    content.innerHTML = "<p>Loading...</p>";
+    const res = await fetch(examFiles[dept]);
+    const data = await res.json();
+    const items = data.exam || [];
+    let currentIndex = 0;
+    showQuestion(currentIndex);
+    function showQuestion(i) {
+      const item = items[i];
+      content.innerHTML = `<div class="training-section"><h3>${item.scenario}</h3></div>`;
+      const answersDiv = document.createElement("div");
+      answersDiv.className = "exam-answers";
+      [...item.answers].forEach(ans => {
+        const btn = document.createElement("button");
+        btn.textContent = ans.text;
+        btn.onclick = () => {
+          answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
+          const feedback = document.createElement("div");
+          feedback.className = "feedback";
+          feedback.innerHTML = ans.type === "best"
+            ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
+            : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
+          const next = document.createElement("button");
+          next.textContent = i < items.length - 1 ? "Next Question ➡️" : "Return to Departments";
+          next.onclick = () => {
+            if (i < items.length - 1) showQuestion(i + 1);
+            else {
+              progress.exams[dept] = true;
+              document.getElementById("examPage").style.display = "none";
+              document.getElementById("orientationPage").style.display = "block";
+              checkProgress();
+            }
+          };
+          feedback.appendChild(next);
+          answersDiv.appendChild(feedback);
+        };
+        answersDiv.appendChild(btn);
+      });
+      content.appendChild(answersDiv);
+    }
+  }
+
+  finalExamBtn.disabled = false;
+  finalExamBtn.textContent = "Kobayashi Maru - Engage";
+
+  finalExamBtn.onclick = () => {
+    window.open("https://bigbird7827.github.io/Starfleet_Academy/Final_exam/Final_Exam.html", "_blank");
+  };
+});
 </script>
-</body>
-</html>
