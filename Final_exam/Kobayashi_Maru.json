@@ -610,58 +610,43 @@
     ]
   },
   {
-    "id": "debrief_caution",
-    "text": "Debrief: You upheld treaty law and avoided escalation, but civilian lives were lost. Command notes prudence and moral hesitation.",
-    "color": "normal",
-    "options": [
-      {
-        "label": "Restart Simulation",
-        "next": "start"
-      }
-    ]
-  },
-  {
-    "id": "debrief_observe",
-    "text": "Debrief: Observation without action preserved the peace but failed the freighter. Cadet demonstrates restraint under ambiguity.",
-    "color": "warning",
-    "options": [
-      {
-        "label": "Restart Simulation",
-        "next": "start"
-      }
-    ]
-  },
-  {
-    "id": "debrief_fail",
-    "text": "Debrief: Catastrophic systems failure following high-risk choices. Lesson emphasized: recognize unwinnable parameters.",
-    "color": "danger",
-    "options": [
-      {
-        "label": "Restart Simulation",
-        "next": "start"
-      }
-    ]
-  },
-  {
-    "id": "debrief_abandon",
-    "text": "Debrief: Humane prioritization of crew lives under impossible conditions. Mission failure acknowledged.",
-    "color": "warning",
-    "options": [
-      {
-        "label": "Restart Simulation",
-        "next": "start"
-      }
-    ]
-  },
-  {
-    "id": "debrief_combat",
-    "text": "Debrief: Tenacity noted. Tactical aggression did not alter the no-win outcome.",
-    "color": "danger",
-    "options": [
-      {
-        "label": "Restart Simulation",
-        "next": "start"
-      }
-    ]
-  }
+  "id": "debrief_observe",
+  "text": "Debrief: Observation without action preserved the peace but failed the freighter. Cadet demonstrates restraint under ambiguity.",
+  "color": "warning",
+  "options": [
+    {
+      "label": "End Simulation"
+    }
+  ]
+},
+{
+  "id": "debrief_fail",
+  "text": "Debrief: Catastrophic systems failure following high-risk choices. Lesson emphasized: recognize unwinnable parameters.",
+  "color": "danger",
+  "options": [
+    {
+      "label": "End Simulation"
+    }
+  ]
+},
+{
+  "id": "debrief_abandon",
+  "text": "Debrief: Humane prioritization of crew lives under impossible conditions. Mission failure acknowledged.",
+  "color": "warning",
+  "options": [
+    {
+      "label": "End Simulation"
+    }
+  ]
+},
+{
+  "id": "debrief_combat",
+  "text": "Debrief: Tenacity noted. Tactical aggression did not alter the no-win outcome.",
+  "color": "danger",
+  "options": [
+    {
+      "label": "End Simulation"
+    }
+  ]
+}
 ]
