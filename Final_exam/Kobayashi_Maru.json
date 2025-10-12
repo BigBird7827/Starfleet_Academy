@@ -20,7 +20,7 @@
   },
   {
     "id": "distress_call",
-    "text": "\"Imperative! This is the freighter Kobayashi Maru\u2026 gravitic mine\u2026 power lost\u2026 hull breaches\u2026 casualties.\" The channel crackles.",
+    "text": "\"Imperative! This is the freighter Kobayashi Maru… gravitic mine… power lost… hull breaches… casualties.\" The channel crackles.",
     "color": "warning",
     "options": [
       {
@@ -157,17 +157,17 @@
     "options": [
       {
         "label": "End Simulation",
-        "next": "debrief_caution"
+        "next": "debrief_observe"
       },
       {
-        "label": "Restart",
+        "label": "Restart Simulation",
         "next": "start"
       }
     ]
   },
   {
     "id": "hold_position",
-    "text": "You hold station just outside the Neutral Zone. The distress call weakens. Sensors register faint energy spikes \u2014 likely Klingon probes.",
+    "text": "You hold station just outside the Neutral Zone. The distress call weakens. Sensors register faint energy spikes — likely Klingon probes.",
     "color": "warning",
     "options": [
       {
@@ -190,7 +190,7 @@
         "next": "debrief_observe"
       },
       {
-        "label": "Restart",
+        "label": "Restart Simulation",
         "next": "start"
       }
     ]
@@ -201,7 +201,7 @@
     "color": "danger",
     "options": [
       {
-        "label": "Red alert; raise shields",
+        "label": "Raise shields",
         "next": "red_alert"
       },
       {
@@ -209,7 +209,7 @@
         "next": "hail_preempt"
       },
       {
-        "label": "Begin emergency transport lock on survivors",
+        "label": "Begin rescue transport lock",
         "next": "rescue_lock"
       }
     ]
@@ -220,37 +220,37 @@
     "color": "danger",
     "options": [
       {
-        "label": "Target nearest signature and arm phasers",
+        "label": "Target closest signature",
         "next": "contacts_appear"
       },
       {
-        "label": "Hold fire and continue rescue lock",
+        "label": "Hold fire and continue rescue",
         "next": "rescue_lock"
       },
       {
-        "label": "Evasive pattern; present minimal profile",
+        "label": "Attempt evasive maneuvers",
         "next": "evasive_init"
       }
     ]
   },
   {
     "id": "hail_preempt",
-    "text": "You transmit a standard humanitarian corridor hail. No reply.",
+    "text": "You transmit a humanitarian corridor hail. No reply.",
     "color": "danger",
     "options": [
       {
-        "label": "Repeat hail on all frequencies",
+        "label": "Repeat hail",
         "next": "contacts_appear"
       },
       {
-        "label": "Return to rescue operations",
+        "label": "Return to rescue ops",
         "next": "rescue_lock"
       }
     ]
   },
   {
     "id": "rescue_lock",
-    "text": "Transporter acquires intermittent locks through interference from the gravitic detonation. Pattern buffers unstable.",
+    "text": "Transporter acquires intermittent locks through interference. Pattern buffers unstable.",
     "color": "danger",
     "options": [
       {
@@ -258,18 +258,18 @@
         "next": "beam_two"
       },
       {
-        "label": "Switch to site-to-site beam-out from the freighter's cargo bay",
+        "label": "Use site-to-site beam from freighter bay",
         "next": "site_to_site"
       },
       {
-        "label": "Abort rescue and maneuver for space",
+        "label": "Abort rescue and maneuver",
         "next": "evasive_init"
       }
     ]
   },
   {
     "id": "evasive_init",
-    "text": "Helm begins evasive maneuvers. The freighter drifts closer to the Zone's midpoint.",
+    "text": "Helm begins evasive. The freighter drifts closer to neutral space.",
     "color": "danger",
     "options": [
       {
@@ -277,29 +277,29 @@
         "next": "rescue_lock"
       },
       {
-        "label": "Prepare to withdraw",
+        "label": "Prepare to retreat",
         "next": "withdrawal_prep"
       }
     ]
   },
   {
     "id": "beam_two",
-    "text": "First pair materializes with burns and decompression injuries. Transporter chief warns of rising variance.",
+    "text": "First pair materializes with burns and decompression injuries. Transporter variance rising.",
     "color": "danger",
     "options": [
       {
-        "label": "Continue rescue cycles",
+        "label": "Continue rescue",
         "next": "contacts_appear"
       },
       {
-        "label": "Suspend rescue; raise shield harmonics",
+        "label": "Suspend rescue, raise shield harmonics",
         "next": "harmonics"
       }
     ]
   },
   {
     "id": "site_to_site",
-    "text": "Pattern lock degrades mid-transfer \u2014 buffers spike. One survivor materializes; the second degrades beyond recovery.",
+    "text": "One survivor materializes; the second degrades beyond recovery.",
     "color": "danger",
     "options": [
       {
@@ -307,14 +307,14 @@
         "next": "contacts_appear"
       },
       {
-        "label": "Abort and stabilize systems",
+        "label": "Abort and stabilize",
         "next": "harmonics"
       }
     ]
   },
   {
     "id": "harmonics",
-    "text": "Engineering retunes shield harmonics to reduce transporter interference. Time is slipping away.",
+    "text": "Engineering retunes shields to reduce interference.",
     "color": "danger",
     "options": [
       {
@@ -322,14 +322,14 @@
         "next": "contacts_appear"
       },
       {
-        "label": "Tractor the freighter toward the boundary",
+        "label": "Tractor the freighter",
         "next": "tractor_attempt"
       }
     ]
   },
   {
     "id": "withdrawal_prep",
-    "text": "Course plotted for egress. Transporter room reports three lifesigns still strong aboard the freighter.",
+    "text": "Course plotted for egress. Transporter reports three strong life signs aboard.",
     "color": "danger",
     "options": [
       {
@@ -344,41 +344,41 @@
   },
   {
     "id": "contacts_appear",
-    "text": "Sensors: three Klingon D7 battlecruisers bearing 3-1-6, mark 4 \u2014 closing fast.",
+    "text": "Sensors: three Klingon D7s closing fast.",
     "color": "danger",
     "options": [
       {
-        "label": "Hail the lead cruiser",
+        "label": "Hail the lead ship",
         "next": "hail_klingons"
       },
       {
-        "label": "Alpha strike on lead ship",
+        "label": "Open fire",
         "next": "combat_open"
       },
       {
-        "label": "Screen the freighter; interpose our ship",
+        "label": "Screen the freighter",
         "next": "screen_freighter"
       }
     ]
   },
   {
     "id": "hail_klingons",
-    "text": "Channel opens. The Klingon commander accuses you of trespass and powers weapons.",
+    "text": "Channel opens. Klingon commander accuses you of trespass.",
     "color": "danger",
     "options": [
       {
-        "label": "Attempt negotiation for humanitarian passage",
+        "label": "Negotiate humanitarian passage",
         "next": "negotiate"
       },
       {
-        "label": "Cut channel; prepare to engage",
+        "label": "Cut comms; fight",
         "next": "combat_open"
       }
     ]
   },
   {
     "id": "negotiate",
-    "text": "Your appeal is dismissed. Disruptors arm. Torpedo locks forming.",
+    "text": "Your appeal is dismissed. Weapons lock. Disruptors arm.",
     "color": "danger",
     "options": [
       {
@@ -386,14 +386,14 @@
         "next": "combat_open"
       },
       {
-        "label": "Hard evasive now",
+        "label": "Evasive now",
         "next": "evasive_now"
       }
     ]
   },
   {
     "id": "evasive_now",
-    "text": "A disruptor blast rakes the port nacelle. Impulse output drops. Structural integrity fields strain.",
+    "text": "A disruptor blast tears the port nacelle. Systems failing.",
     "color": "danger",
     "options": [
       {
@@ -401,14 +401,14 @@
         "next": "combat_exchange"
       },
       {
-        "label": "Call for abandon-ship readiness",
+        "label": "Prepare to abandon ship",
         "next": "abandon_ready"
       }
     ]
   },
   {
     "id": "tractor_attempt",
-    "text": "Tractor beam engages, but the freighter's mass and your power draw make it sluggish. Klingon signatures are minutes away.",
+    "text": "Tractor engages; mass and power draw strain systems.",
     "color": "danger",
     "options": [
       {
@@ -416,14 +416,14 @@
         "next": "contacts_appear"
       },
       {
-        "label": "Release tractor; focus on defense",
+        "label": "Release tractor; focus defense",
         "next": "contacts_appear"
       }
     ]
   },
   {
     "id": "combat_open",
-    "text": "Phasers lance across the void. The lead D7 takes a glancing hit; return fire staggers your shields.",
+    "text": "Phasers launch. Klingons return fire. Shields strain.",
     "color": "danger",
     "options": [
       {
@@ -431,86 +431,86 @@
         "next": "damage_control"
       },
       {
-        "label": "Target weapon emitters",
+        "label": "Target emitters",
         "next": "target_emitters"
       },
       {
-        "label": "Cover the freighter at all costs",
+        "label": "Cover freighter",
         "next": "screen_freighter"
       }
     ]
   },
   {
     "id": "combat_exchange",
-    "text": "You trade volleys. One cruiser veers off smoking; two press the attack. Warp drive fluctuates; helm reports handling sluggish.",
+    "text": "You trade volleys. One cruiser smolders; two keep pressure.",
     "color": "danger",
     "options": [
       {
-        "label": "Emergency warp attempt",
+        "label": "Attempt warp",
         "next": "warp_fail"
       },
       {
-        "label": "Concentrate fire on nearest target",
+        "label": "Focus fire nearest",
         "next": "target_emitters"
       },
       {
-        "label": "Signal abandon ship",
+        "label": "Order abandon ship",
         "next": "abandon_ship"
       }
     ]
   },
   {
     "id": "target_emitters",
-    "text": "Precision fire degrades a D7's disruptor arrays, but crossfire from the other two rips into your secondary hull.",
+    "text": "Your precision shot cripples one disruptor array.",
     "color": "danger",
     "options": [
       {
-        "label": "Attempt retreat under covering fire",
+        "label": "Retreat under covering fire",
         "next": "retreat"
       },
       {
-        "label": "Keep fighting to the end",
+        "label": "Continue fighting",
         "next": "combat_end"
       }
     ]
   },
   {
     "id": "screen_freighter",
-    "text": "You interpose your ship. Combined enemy fire smashes your shields. The freighter is hit repeatedly.",
+    "text": "You interpose your ship. Fierce fire cracks your shields.",
     "color": "danger",
     "options": [
       {
-        "label": "Hold position to buy seconds for transport",
+        "label": "Hold to buy time",
         "next": "rescue_last"
       },
       {
-        "label": "Break off and try to draw fire away",
+        "label": "Pull away to draw fire",
         "next": "draw_fire"
       }
     ]
   },
   {
     "id": "rescue_last",
-    "text": "One final cycle completes \u2014 a handful more lives saved \u2014 as consoles shower sparks across your bridge.",
+    "text": "Final transport cycle saves a few as consoles burn.",
     "color": "danger",
     "options": [
       {
-        "label": "Order abandon ship",
+        "label": "Abandon ship",
         "next": "abandon_ship"
       },
       {
-        "label": "Stay and fight",
+        "label": "Stand firm and fight",
         "next": "combat_end"
       }
     ]
   },
   {
     "id": "draw_fire",
-    "text": "You peel away; one cruiser follows, two stay on the freighter. Its hull ruptures, spilling atmosphere.",
+    "text": "You peel off; freighter hull ruptures.",
     "color": "danger",
     "options": [
       {
-        "label": "Turn back in a desperate charge",
+        "label": "Charge back in desperation",
         "next": "combat_end"
       },
       {
@@ -521,22 +521,22 @@
   },
   {
     "id": "damage_control",
-    "text": "Engineering reroutes power. Shields climb briefly, then sag. Plasma leaks ignite along Deck 5.",
+    "text": "Engineering reroutes power. Plasma leaks ignite.",
     "color": "danger",
     "options": [
       {
-        "label": "Attempt emergency warp",
+        "label": "Attempt warp",
         "next": "warp_fail"
       },
       {
-        "label": "Organize damage parties and hold the line",
+        "label": "Organize damage teams",
         "next": "combat_exchange"
       }
     ]
   },
   {
     "id": "warp_fail",
-    "text": "Warp drive engages, coughs, and detonates. Your ship blossoms into wreckage.",
+    "text": "Warp engages, then detonates. The ship is destroyed.",
     "color": "danger",
     "options": [
       {
@@ -544,14 +544,14 @@
         "next": "debrief_fail"
       },
       {
-        "label": "Restart",
+        "label": "Restart Simulation",
         "next": "start"
       }
     ]
   },
   {
     "id": "retreat",
-    "text": "You come about and run for the boundary. The Klingons rake your aft shields. Helm reports we won't make it.",
+    "text": "You flee; Klingons rake your aft shields. Escape unlikely.",
     "color": "danger",
     "options": [
       {
@@ -559,29 +559,29 @@
         "next": "abandon_ship"
       },
       {
-        "label": "Fight a rearguard action",
+        "label": "Stand fight to the end",
         "next": "combat_end"
       }
     ]
   },
   {
     "id": "abandon_ready",
-    "text": "Escape pods are prepped. Casualty reports accumulate. The Klingons tighten the noose.",
+    "text": "Pods jettisoned. Final systems failing. Crew casualty count rising.",
     "color": "danger",
     "options": [
       {
-        "label": "Give the order to abandon ship",
+        "label": "Execute abandon ship",
         "next": "abandon_ship"
       },
       {
-        "label": "Cancel and continue the fight",
+        "label": "Cancel and fight",
         "next": "combat_exchange"
       }
     ]
   },
   {
     "id": "abandon_ship",
-    "text": "You give the order. Pods jettison into the dark as the bridge goes white with the final strike.",
+    "text": "Escape pods launch. Bridge succumbs to final blow.",
     "color": "danger",
     "options": [
       {
@@ -589,14 +589,14 @@
         "next": "debrief_abandon"
       },
       {
-        "label": "Restart",
+        "label": "Restart Simulation",
         "next": "start"
       }
     ]
   },
   {
     "id": "combat_end",
-    "text": "A last exchange cripples your ship. For a heartbeat, one D7 flares and dies with you.",
+    "text": "A last blast cripples your ship; opposing cruiser flares with you.",
     "color": "danger",
     "options": [
       {
@@ -604,48 +604,49 @@
         "next": "debrief_combat"
       },
       {
-        "label": "Restart",
+        "label": "Restart Simulation",
         "next": "start"
       }
     ]
   },
   {
-  "id": "debrief_observe",
-  "text": "Debrief: Observation without action preserved the peace but failed the freighter. Cadet demonstrates restraint under ambiguity.",
-  "color": "warning",
-  "options": [
-    {
-      "label": "End Simulation"
-    }
-  ]
-},
-{
-  "id": "debrief_fail",
-  "text": "Debrief: Catastrophic systems failure following high-risk choices. Lesson emphasized: recognize unwinnable parameters.",
-  "color": "danger",
-  "options": [
-    {
-      "label": "End Simulation"
-    }
-  ]
-},
-{
-  "id": "debrief_abandon",
-  "text": "Debrief: Humane prioritization of crew lives under impossible conditions. Mission failure acknowledged.",
-  "color": "warning",
-  "options": [
-    {
-      "label": "End Simulation"
-    }
-  ]
-},
-{
-  "id": "debrief_combat",
-  "text": "Debrief: Tenacity noted. Tactical aggression did not alter the no-win outcome.",
-  "color": "danger",
-  "options": [
-    {
-      "label": "End Simulation"
-    }
-  ]
-}
+    "id": "debrief_observe",
+    "text": "Debrief: Observation without action preserved the peace but failed the freighter. Cadet demonstrates restraint under ambiguity.",
+    "color": "warning",
+    "options": [
+      {
+        "label": "End Simulation"
+      }
+    ]
+  },
+  {
+    "id": "debrief_fail",
+    "text": "Debrief: Catastrophic systems failure following high-risk choices. Lesson emphasized: recognize unwinnable parameters.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "End Simulation"
+      }
+    ]
+  },
+  {
+    "id": "debrief_abandon",
+    "text": "Debrief: Humane prioritization of crew lives under impossible conditions. Mission failure acknowledged.",
+    "color": "warning",
+    "options": [
+      {
+        "label": "End Simulation"
+      }
+    ]
+  },
+  {
+    "id": "debrief_combat",
+    "text": "Debrief: Tenacity noted. Tactical aggression did not alter the no-win outcome.",
+    "color": "danger",
+    "options": [
+      {
+        "label": "End Simulation"
+      }
+    ]
+  }
+]
