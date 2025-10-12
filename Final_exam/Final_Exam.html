@@ -361,17 +361,19 @@
           const d = determineDebrief();
           const b1 = document.createElement('button');
           b1.textContent = "View Starfleet Debrief";
-          b1.onclick = () => typeText(d, () => {
-            buttonsBox.innerHTML = "";
-            const restart = document.createElement('button');
-            restart.textContent = "Restart Simulation";
-            restart.onclick = () => location.reload();
-            const end = document.createElement('button');
-            end.textContent = "End Simulation";
-            end.onclick = showGraduation;
-            buttonsBox.appendChild(restart);
-            buttonsBox.appendChild(end);
-          });
+          b1.onclick = () => {
+            typeText(d, () => {
+              buttonsBox.innerHTML = "";
+              const end = document.createElement('button');
+              end.textContent = "End Simulation";
+              end.onclick = showGraduation;
+              const restart = document.createElement('button');
+              restart.textContent = "Restart Simulation";
+              restart.onclick = () => location.reload();
+              buttonsBox.appendChild(end);
+              buttonsBox.appendChild(restart);
+            });
+          };
           buttonsBox.appendChild(b1);
         }
       });
