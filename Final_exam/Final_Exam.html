@@ -354,7 +354,14 @@
         (sc.options || []).forEach(o => {
           const b = document.createElement('button');
           b.textContent = o.label;
-          b.onclick = () => { recordMetrics(o.label); showScene(o.next); };
+          b.onclick = () => {
+  recordMetrics(o.label);
+  if (o.label === "End Simulation") {
+    showGraduation();
+  } else {
+    showScene(o.next);
+  }
+};
           buttonsBox.appendChild(b);
         });
         if (sc.id.startsWith("end")) {
@@ -412,3 +419,4 @@
   </script>
 </body>
 </html>
+
