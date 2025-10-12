@@ -359,18 +359,18 @@
         });
         if (sc.id.startsWith("end")) {
           const d = determineDebrief();
-          const b1 = document.createElement('button');
+          buttonsBox.innerHTML = "";
+          const b1 = document.createElement("button");
           b1.textContent = "View Starfleet Debrief";
           b1.onclick = () => {
             typeText(d, () => {
               buttonsBox.innerHTML = "";
-              const end = document.createElement('button');
-              end.textContent = "End Simulation";
-              end.onclick = showGraduation;
-              buttonsBox.appendChild(end);
+              const endBtn = document.createElement("button");
+              endBtn.textContent = "End Simulation";
+              endBtn.onclick = showGraduation;
+              buttonsBox.appendChild(endBtn);
             });
           };
-          buttonsBox.innerHTML = "";
           buttonsBox.appendChild(b1);
         }
       });
