@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Exam - Kobayashi Maru Simulation</title>
+<style>
+:root {
+  --gold: #ffd47a;
+  --blue: #4ab0ff;
+  --red: #cc0033;
+  --dark-blue: #001933;
+  --text: #e6e6e6;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  font-family: 'Orbitron', sans-serif;
+  color: var(--text);
+}
+
+/* LCARS banners */
+.lcars-top, .lcars-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: var(--gold);
+  color: var(--dark-blue);
+  font-family: 'Final Frontier', sans-serif;
+  font-size: 24pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+.lcars-top { top: 0; height: 50px; border-bottom-left-radius: 50px; }
+.lcars-bottom { bottom: 0; height: 40px; border-top-left-radius: 50px; }
+
+/* Starfield */
+canvas#starfield {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #020111 0%, #000000 100%);
+  z-index: 0;
+}
+
+/* UI overlay */
+#interface {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  text-align: center;
+}
+button {
+  background: linear-gradient(to bottom, #003366, #001933);
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-size: 16pt;
+  border-radius: 10px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px var(--gold);
+}
+#status {
+  margin-top: 25px;
+  font-size: 14pt;
+  color: var(--blue);
+}
+
+/* Ship sprites (simple placeholders) */
+.ship {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+#enterprise {
+  background: var(--blue);
+  box-shadow: 0 0 15px var(--blue);
+}
+.enemy {
+  background: var(--red);
+  box-shadow: 0 0 15px var(--red);
+}
+</style>
+</head>
+<body>
+<div class="lcars-top">Starfleet Academy - Final Exam</div>
+<canvas id="starfield"></canvas>
+
+<div id="interface">
+  <h1 style="color:var(--gold);margin-bottom:20px;">Kobayashi Maru Simulation</h1>
+  <button id="beginBtn">Begin Simulation</button>
+  <div id="status"></div>
+</div>
+
+<div class="lcars-bottom">Ex Astris Scientia</div>
+
+<script>
+/* Starfield animation */
+const canvas = document.getElementById('starfield');
+const ctx = canvas.getContext('2d');
+let stars = [];
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  stars = Array(300).fill().map(()=>({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    z: Math.random()*canvas.width
+  }));
+}
+window.addEventListener('resize', resize);
+resize();
+
+function animateStars() {
+  ctx.fillStyle = "black";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+  for (let s of stars) {
+    s.z -= 2;
+    if (s.z <= 0) s.z = canvas.width;
+    const k = 128.0 / s.z;
+    const px = s.x * k + canvas.width/2;
+    const py = s.y * k + canvas.height/2;
+    if (px>=0 && px<=canvas.width && py>=0 && py<=canvas.height) {
+      const size = (1 - s.z / canvas.width) * 2;
+      ctx.fillStyle = "white";
+      ctx.beginPath();
+      ctx.arc(px, py, size, 0, Math.PI*2);
+      ctx.fill();
+    }
+  }
+  requestAnimationFrame(animateStars);
+}
+animateStars();
+
+/* Simulation logic */
+const beginBtn = document.getElementById('beginBtn');
+const status = document.getElementById('status');
+const interfaceDiv = document.getElementById('interface');
+let running = false;
+
+beginBtn.onclick = () => {
+  if (running) return;
+  running = true;
+  beginBtn.style.display = 'none';
+  status.textContent = "Distress signal detected... Kobayashi Maru, bearing 320 mark 2.";
+
+  // Add ship elements
+  const enterprise = document.createElement('div');
+  enterprise.id = 'enterprise';
+  enterprise.className = 'ship';
+  document.body.appendChild(enterprise);
+  enterprise.style.left = '50%';
+  enterprise.style.top = '70%';
+
+  const enemies = [];
+  for (let i=0; i<3; i++) {
+    const e = document.createElement('div');
+    e.className = 'ship enemy';
+    e.style.left = `${30 + i*15}%`;
+    e.style.top = '20%';
+    document.body.appendChild(e);
+    enemies.push(e);
+  }
+
+  // Simple animation loop
+  let time = 0;
+  function battle() {
+    time += 1;
+    enemies.forEach((e, idx) => {
+      e.style.top = `${20 + Math.sin(time/40 + idx)*5}%`;
+    });
+    if (time === 200) status.textContent = "Klingon vessels de-cloaking!";
+    if (time === 400) status.textContent = "Shields failing...";
+    if (time === 600) {
+      status.textContent = "Simulation complete — No-win scenario.";
+      setTimeout(()=>{ endSimulation(); }, 4000);
+      return;
+    }
+    requestAnimationFrame(battle);
+  }
+  battle();
+};
+
+function endSimulation() {
+  document.querySelectorAll('.ship').forEach(s=>s.remove());
+  status.textContent = "Cadet evaluation ready. Returning to Academy...";
+  setTimeout(()=>{ window.location.href="../index.html"; }, 4000);
+}
+</script>
+</body>
+</html>
