@@ -358,61 +358,60 @@
           buttonsBox.appendChild(b);
         });
         if (sc.id.startsWith("end")) {
-          const d = determineDebrief();
-          const b1 = document.createElement('button');
-          b1.textContent = "View Starfleet Debrief";
-          b1.onclick = () => {
-            typeText(d, () => {
-              buttonsBox.innerHTML = "";
-              const end = document.createElement('button');
-              end.textContent = "End Simulation";
-              end.onclick = showGraduation;
-             const end = document.createElement('button');
-              end.textContent = "End Simulation";
-              end.onclick = showGraduation;
-              buttonsBox.appendChild(end);
-            });
-          };
-          buttonsBox.innerHTML = "";
-          buttonsBox.appendChild(b1);
-        }
-      });
-    }
-    function spawnBlip() {
-      if (!contactsPresent) return;
-      const angle = Math.random() * 2 * Math.PI;
-      const radius = 80;
-      const b = document.createElement('div');
-      b.className = 'blip';
-      b.style.top = 50 + radius * Math.sin(angle) + '%';
-      b.style.left = 50 + radius * Math.cos(angle) + '%';
-      tactical.appendChild(b);
-      setTimeout(() => {
-        b.style.top = '50%';
-        b.style.left = '50%';
-        b.style.opacity = 1;
-      }, 50);
-      setTimeout(() => {
-        if (b.parentNode === tactical) tactical.removeChild(b);
-      }, 9000);
-    }
-    setInterval(spawnBlip, 3000);
-    async function init() {
-      try {
-        messageBox.textContent = "Loading mission data...";
-        const res = await fetch(DATA_URL, { cache: 'no-store' });
-        const data = await res.json();
-        scenes = toMap(Array.isArray(data) ? data : (data.scenes || []));
-        if (!scenes.start) throw new Error('Missing start');
-        showScene('start');
-      } catch (e) {
-        setAlert('red');
-        messageBox.textContent = "Error loading mission data.";
-        buttonsBox.innerHTML = "";
-      }
-    }
-    document.addEventListener('DOMContentLoaded', init);
+  const d = determineDebrief();
+  const b1 = document.createElement('button');
+  b1.textContent = "View Starfleet Debrief";
+  b1.onclick = () => {
+    typeText(d, () => {
+      buttonsBox.innerHTML = "";
+      const end = document.createElement('button');
+      end.textContent = "End Simulation";
+      end.onclick = showGraduation;
+      buttonsBox.appendChild(end);
+    });
+  };
+  buttonsBox.innerHTML = "";
+  buttonsBox.appendChild(b1);
+}
+}
+}
+function spawnBlip() {
+  if (!contactsPresent) return;
+  const angle = Math.random() * 2 * Math.PI;
+  const radius = 80;
+  const b = document.createElement('div');
+  b.className = 'blip';
+  b.style.top = 50 + radius * Math.sin(angle) + '%';
+  b.style.left = 50 + radius * Math.cos(angle) + '%';
+  tactical.appendChild(b);
+  setTimeout(() => {
+    b.style.top = '50%';
+    b.style.left = '50%';
+    b.style.opacity = 1;
+  }, 50);
+  setTimeout(() => {
+    if (b.parentNode === tactical) tactical.removeChild(b);
+  }, 9000);
+}
+setInterval(spawnBlip, 3000);
+async function init() {
+  try {
+    messageBox.textContent = "Loading mission data...";
+    const res = await fetch(DATA_URL, { cache: 'no-store' });
+    const data = await res.json();
+    scenes = toMap(Array.isArray(data) ? data : (data.scenes || []));
+    if (!scenes.start) throw new Error('Missing start');
+    showScene('start');
+  } catch (e) {
+    setAlert('red');
+    messageBox.textContent = "Error loading mission data.";
+    buttonsBox.innerHTML = "";
+  }
+}
+document.addEventListener('DOMContentLoaded', init);
   </script>
 </body>
 </html>
+
+
 
