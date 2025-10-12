@@ -22,18 +22,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Quick resolution but risks missing early detection of a significant subspace phenomenon."
-        },
-        {
-          "text": "Emit a full-power counter-frequency without prior characterization.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Acting without spectral characterization risks resonance, feedback, or rupture of the phenomenon."
-        },
-        {
-          "text": "Ignore readings as transient noise and continue normal operations.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Dismisses potentially hazardous physics; Starfleet procedure mandates verification and mitigation."
         }
       ]
     },
@@ -58,18 +46,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Resolves symptoms but loses valuable samples and data for analysis."
-        },
-        {
-          "text": "Reduce containment level to observe adaptation in a naturalistic setting.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Contravenes xenobiology protocol; containment must never be lowered to provoke responses."
-        },
-        {
-          "text": "Test exposure on a live crew volunteer to accelerate data collection.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Human experimentation without clearance violates Federation bioethics and Starfleet Medical directives."
         }
       ]
     },
@@ -84,7 +60,7 @@
           "details": "Balances safety and data collection while avoiding destructive interference."
         },
         {
-          "text": "Attempt to harness the filament’s energy output for study.",
+          "text": "Attempt to harness the filament\u2019s energy output for study.",
           "score": 8,
           "type": "alternate",
           "details": "Potential discovery but dangerously unpredictable energy levels."
@@ -94,18 +70,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Risky maneuver that could cause cascading failures in ship systems."
-        },
-        {
-          "text": "Emit a full-power counter-frequency without prior characterization.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Acting without spectral characterization risks resonance, feedback, or rupture of the phenomenon."
-        },
-        {
-          "text": "Ignore readings as transient noise and continue normal operations.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Dismisses potentially hazardous physics; Starfleet procedure mandates verification and mitigation."
         }
       ]
     },
@@ -130,18 +94,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Guarantees safety but destroys potentially groundbreaking data."
-        },
-        {
-          "text": "Reduce containment level to observe adaptation in a naturalistic setting.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Contravenes xenobiology protocol; containment must never be lowered to provoke responses."
-        },
-        {
-          "text": "Test exposure on a live crew volunteer to accelerate data collection.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Human experimentation without clearance violates Federation bioethics and Starfleet Medical directives."
         }
       ]
     },
@@ -166,18 +118,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Avoids immediate risk but forfeits vital research opportunity."
-        },
-        {
-          "text": "Emit a full-power counter-frequency without prior characterization.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Acting without spectral characterization risks resonance, feedback, or rupture of the phenomenon."
-        },
-        {
-          "text": "Ignore readings as transient noise and continue normal operations.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Dismisses potentially hazardous physics; Starfleet procedure mandates verification and mitigation."
         }
       ]
     },
@@ -202,18 +142,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Delays research and leaves potential hazard unsecured."
-        },
-        {
-          "text": "Interface directly via manual contact to speed translation of unknown systems.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Bypasses isolation; unknown tech requires remote, sandboxed analysis under containment."
-        },
-        {
-          "text": "Grant shipwide network access so the system can self-configure safely.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Violates cyber-containment; risks uncontrolled propagation through critical systems."
         }
       ]
     },
@@ -238,24 +166,12 @@
           "score": 7,
           "type": "alternate",
           "details": "Avoids premature alarm but risks worsening irreversible collapse."
-        },
-        {
-          "text": "Reduce containment level to observe adaptation in a naturalistic setting.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Contravenes xenobiology protocol; containment must never be lowered to provoke responses."
-        },
-        {
-          "text": "Test exposure on a live crew volunteer to accelerate data collection.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Human experimentation without clearance violates Federation bioethics and Starfleet Medical directives."
         }
       ]
     },
     {
       "scenario": "Temporal Signal Echoes",
-      "summary": "Chronometric echoes appear in subspace, mimicking transmissions from the ship’s own logs.",
+      "summary": "Chronometric echoes appear in subspace, mimicking transmissions from the ship\u2019s own logs.",
       "answers": [
         {
           "text": "Record and isolate signals for analysis while verifying no system self-interference.",
@@ -274,18 +190,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Prevents loop formation but discards potential temporal data."
-        },
-        {
-          "text": "Reply to the signal to establish a closed causal loop for data integrity.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Interacting with one's own timeline risks paradox; temporal protocols prohibit causal loop creation."
-        },
-        {
-          "text": "Insert a test beacon into the echo to 'anchor' the timeline.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Unapproved temporal manipulation breaches the Temporal Prime Directive and can destabilize chronology."
         }
       ]
     },
@@ -310,18 +214,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Assumes harmless residue; could result in containment breach."
-        },
-        {
-          "text": "Increase warp or power output to drown out interference immediately.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Overdriving fields under anomaly stress amplifies instabilities; diagnostics and dampening come first."
-        },
-        {
-          "text": "Override safety interlocks to expedite field alignment under load.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Disabling safeties during an unknown condition violates engineering protocols and endangers the ship."
         }
       ]
     },
@@ -346,18 +238,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Guaranteed neutralization but destroys research potential."
-        },
-        {
-          "text": "Reduce containment level to observe adaptation in a naturalistic setting.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Contravenes xenobiology protocol; containment must never be lowered to provoke responses."
-        },
-        {
-          "text": "Test exposure on a live crew volunteer to accelerate data collection.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Human experimentation without clearance violates Federation bioethics and Starfleet Medical directives."
         }
       ]
     },
@@ -382,18 +262,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Defers discovery and risks claim disputes from other factions."
-        },
-        {
-          "text": "Proceed based on intuition rather than diagnostics to preserve schedule.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Starfleet science prioritizes method and safety over speed; diagnostics are required."
-        },
-        {
-          "text": "Circumvent review by classifying the experiment as routine maintenance.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Misrepresentation violates duty regulations and bypasses essential safety checks."
         }
       ]
     },
@@ -418,18 +286,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Ensures safety but may lose unique biological data to natural shifts."
-        },
-        {
-          "text": "Emit a full-power counter-frequency without prior characterization.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Acting without spectral characterization risks resonance, feedback, or rupture of the phenomenon."
-        },
-        {
-          "text": "Ignore readings as transient noise and continue normal operations.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Dismisses potentially hazardous physics; Starfleet procedure mandates verification and mitigation."
         }
       ]
     },
@@ -454,18 +310,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Neglects possible discovery of exotic radiation source."
-        },
-        {
-          "text": "Increase warp or power output to drown out interference immediately.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Overdriving fields under anomaly stress amplifies instabilities; diagnostics and dampening come first."
-        },
-        {
-          "text": "Override safety interlocks to expedite field alignment under load.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Disabling safeties during an unknown condition violates engineering protocols and endangers the ship."
         }
       ]
     },
@@ -490,18 +334,6 @@
           "score": 7,
           "type": "alternate",
           "details": "Draws recognition but may violate First Contact or artifact protocols."
-        },
-        {
-          "text": "Increase warp or power output to drown out interference immediately.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Overdriving fields under anomaly stress amplifies instabilities; diagnostics and dampening come first."
-        },
-        {
-          "text": "Override safety interlocks to expedite field alignment under load.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Disabling safeties during an unknown condition violates engineering protocols and endangers the ship."
         }
       ]
     },
@@ -526,18 +358,6 @@
           "score": 6,
           "type": "alternate",
           "details": "Partially effective but risks deflector overload; lacks controlled frequency management."
-        },
-        {
-          "text": "Increase warp field output to overpower the resonance and reassert control.",
-          "score": 3,
-          "type": "incorrect",
-          "details": "Overdriving warp fields in a resonance condition amplifies feedback; contrary to engineering and physics protocols."
-        },
-        {
-          "text": "Ignore the readings until communications stabilize naturally.",
-          "score": 0,
-          "type": "incorrect",
-          "details": "Passive inaction during an escalating resonance violates Starfleet safety standards and risks cascade failure."
         }
       ]
     }
