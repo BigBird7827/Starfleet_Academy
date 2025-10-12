@@ -653,8 +653,11 @@ document.addEventListener("DOMContentLoaded", () => {
   finalExamBtn.textContent = "Kobayashi Maru - Engage";
 
   finalExamBtn.onclick = () => {
-    window.open("https://bigbird7827.github.io/Starfleet_Academy/Final_exam/Final_Exam.html", "_blank");
-  };
+  setTimeout(() => {
+    window.open("https://bigbird7827.github.io/Starfleet_Academy/Final_exam/Final_Exam.html?cachebust=" + Date.now(), "_blank", "noopener");
+    window.location.href = "about:blank";
+  }, 100);
+};
 });
 </script>
 </body>
