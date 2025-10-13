@@ -51,6 +51,14 @@ html, body {
 #loginScreen.fade-out {
   opacity: 0;
 }
+#orientationPage.fade-in {
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 .lcars-top, .lcars-bottom {
   position: absolute;
   left: 0;
@@ -237,20 +245,6 @@ button:disabled {
   width: calc(min(calc(100% - 6in), 1400px) - 100px);
   margin: 100px auto 0 auto;
 }
-#orientationPage {
-  display: none;
-  text-align: center;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#orientationPage .department-select-box {
-  max-height: 65vh;
-  overflow-y: auto;
-}
 #trainingPage .fixed-return,
 #labPage .fixed-return,
 #examPage .fixed-return {
@@ -340,17 +334,25 @@ button:disabled {
   font-size: 13pt;
   margin-bottom: 3px;
 }
-.training-answers p strong[style*="green"]::before {
+.training-preface {
+  text-align: center;
+  font-size: 14pt;
+  color: var(--gold);
+  margin: 25px auto 40px;
+  line-height: 1.5;
+  max-width: 850px;
+}
+.training-section p strong[style*="green"]::before {
   content: "▮ ";
   color: var(--green);
 }
-.training-answers p strong[style*="yellow"]::before {
+.training-section p strong[style*="yellow"]::before {
   content: "▮ ";
-  color: #ffd700;
+  color: yellow;
 }
-.training-answers p strong[style*="red"]::before {
+.training-section p strong[style*="red"]::before {
   content: "▮ ";
-  color: var(--red);
+  color: red;
 }
   </style>
 </head>
@@ -387,7 +389,6 @@ button:disabled {
     <div id="accessMessage" class="glow-message">Authenticating...</div>
   </div>
 </div>
-
 <div id="mainScreen" style="display:none;">
   <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
   <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -431,16 +432,18 @@ button:disabled {
 
 <div id="orientationPage" style="display:none;text-align:center;">
   <div class="page-title" id="orientationTitle"></div>
-  <div id="moduleButtons" class="department-select-box"></div>
+  <div id="moduleButtons" class="department-select-box" style="margin-top:40px;max-width:800px;transform:scale(0.95);"></div>
   <button id="returnMain" class="fixed-return">Return to Main</button>
 </div>
 
 <div id="trainingPage" style="display:none;text-align:center;">
   <div class="page-title" id="trainingDeptTitle"></div>
-  <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+  <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:10px;"></div>
+  <div class="training-preface" id="trainingPreface"></div>
   <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
   <button id="returnOrientationTrain" class="fixed-return">Return to Departments</button>
 </div>
+
 <div id="labPage" style="display:none;text-align:center;">
   <div class="page-title" id="labDeptTitle"></div>
   <div id="labCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
@@ -454,7 +457,6 @@ button:disabled {
   <div id="examContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
   <button id="returnOrientationExam" class="fixed-return">Return to Departments</button>
 </div>
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const departments = ["Command", "Diplomacy", "Engineering", "Security", "Science", "Medical"];
@@ -467,6 +469,15 @@ document.addEventListener("DOMContentLoaded", () => {
     "Human": "Earth","Vulcan": "Vulcan","Andorian": "Andoria","Aenar": "Andoria","Tellarite": "Tellar Prime",
     "Bajoran": "Bajor","Betazoid": "Betazed","Bolian": "Bolarus IX","Trill": "Trill","Klingon": "Qo'noS",
     "Ferengi": "Ferenginar","Denobulan": "Denobula","Orion": "Orion","Caitian": "Cait","Benzite": "Benzar"
+  };
+
+  const trainingBlurbs = {
+    Command: "In this module, you are the Captain. You must think and act like a leader—decisive, analytical, and responsible for the lives of those under your command. This course will challenge your ability to assess situations quickly, make strategic decisions, and uphold Starfleet’s ideals under pressure.",
+    Diplomacy: "In this module, you are the Federation’s representative. You must listen, reason, and seek peaceful resolution wherever possible. Cadets will learn the subtle art of negotiation, cultural sensitivity, and the strength of restraint even when tensions rise.",
+    Engineering: "In this module, you are responsible for the lifeblood of the ship. You must diagnose, repair, and innovate under pressure. Cadets will develop the skills to maintain warp integrity, optimize ship systems, and improvise when resources are scarce.",
+    Security: "In this module, you are the shield of Starfleet. You will protect the crew, defend Federation principles, and neutralize threats with precision and discipline. Cadets will master tactical readiness, situational awareness, and the ethics of command authority.",
+    Science: "In this module, you are the seeker of truth. You must observe, hypothesize, and analyze phenomena across the galaxy. Cadets will learn to apply scientific reasoning, conduct mission-critical research, and expand Starfleet’s understanding of the universe.",
+    Medical: "In this module, you are the guardian of life. You must diagnose, treat, and care for all species under your protection. Cadets will study xenobiology, triage procedures, and the compassion required to serve both in crisis and in calm."
   };
 
   let cadetName = "", species = "";
@@ -487,18 +498,18 @@ document.addEventListener("DOMContentLoaded", () => {
     cadetName = document.getElementById("cadetName").value.trim();
     species = document.getElementById("species").value;
     if (!cadetName || !species) return alert("Enter name and species first.");
-
     const msg = document.getElementById("accessMessage");
     msg.textContent = `Access Link Established — Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
     msg.classList.add("active");
-
     setTimeout(() => {
       const login = document.getElementById("loginScreen");
       login.classList.add("fade-out");
       setTimeout(() => {
         login.style.display = "none";
+        const main = document.getElementById("mainScreen");
+        main.style.display = "block";
+        main.classList.add("fade-in");
         document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
-        document.getElementById("mainScreen").style.display = "block";
       }, 3000);
     }, 4000);
   });
@@ -519,7 +530,9 @@ document.addEventListener("DOMContentLoaded", () => {
       b.onclick = () => { mode === "training" ? loadTraining(dept) : mode === "lab" ? loadLab(dept) : loadExam(dept); };
       btnBox.appendChild(b);
     });
-    document.getElementById("orientationPage").style.display = "block";
+    const orientation = document.getElementById("orientationPage");
+    orientation.style.display = "block";
+    orientation.classList.add("fade-in");
   }
 
   document.getElementById("returnMain").onclick = () => {
@@ -541,11 +554,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("orientationPage").style.display = "block";
     checkProgress();
   };
+
   async function loadTraining(dept) {
     document.getElementById("orientationPage").style.display = "none";
     document.getElementById("trainingPage").style.display = "block";
     document.getElementById("trainingDeptTitle").textContent = `${dept} Study`;
     document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+    document.getElementById("trainingPreface").textContent = trainingBlurbs[dept];
     const content = document.getElementById("trainingContent");
     content.innerHTML = "<p>Loading...</p>";
     const res = await fetch(trainingFiles[dept]);
