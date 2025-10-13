@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kobayashi Maru Simulation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     :root {
       --accent: #35d07f;
@@ -17,7 +17,7 @@
       height: 100%;
       overflow: hidden;
       background: #000;
-      font-family: 'Roboto Condensed', sans-serif;
+      font-family: 'Roboto Mono', monospace;
       color: var(--text);
     }
     #stars {
@@ -184,97 +184,106 @@
       transition: all 6s linear;
     }
     #graduation {
-      display: none;
       position: fixed;
       inset: 0;
-      background: radial-gradient(circle at center, #0a0e14 0%, #000 100%);
-      color: #f2f2f2;
+      background: radial-gradient(circle at center, #000010 0%, #000015 70%, #000 100%);
+      display: none;
       justify-content: center;
       align-items: center;
-      font-family: 'Roboto Condensed', sans-serif;
-      padding: 2vw;
+      z-index: 100;
     }
     .certificate-frame {
       width: 88vw;
-      height: 92vh;
-      background: #0d1016;
-      border: 10px solid #c7a24c;
-      border-radius: 12px;
-      padding: 60px 90px;
+      height: 88vh;
+      border: 8px double #d1b15a;
+      background: linear-gradient(180deg, #111 0%, #151515 100%);
+      color: #f5f3e7;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 45px rgba(255, 215, 128, 0.3);
       text-align: center;
-      box-shadow: inset 0 0 0 1px #555, 0 0 60px #000;
       position: relative;
+    }
+    .corner-logos {
+      position: absolute;
+      top: 40px;
+      width: calc(100% - 80px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .corner-logos img {
+      height: 80px;
+      opacity: 0.9;
     }
     .certificate-frame h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
-      color: #c7a24c;
-      margin-bottom: 0;
-    }
-    .certificate-frame .location {
-      color: #b8cfff;
-      font-size: 1rem;
-      margin-bottom: 35px;
+      color: #d1b15a;
+      letter-spacing: 2px;
+      margin: 0;
+      font-size: 2.5rem;
     }
     .certificate-frame h2 {
       font-family: 'Orbitron', sans-serif;
-      color: #b8cfff;
-      font-size: 1.6rem;
-      margin-bottom: 15px;
+      color: #f7e7a4;
+      margin: 10px 0;
+      font-size: 1.4rem;
     }
     .certificate-frame h3 {
-      color: #35d07f;
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin: 20px 0;
+      font-family: 'Great Vibes', cursive;
+      color: #d1b15a;
+      font-size: 2.3rem;
+      margin: 12px 0;
     }
     .certificate-frame h4 {
-      color: #c7a24c;
-      text-transform: uppercase;
-      font-size: 1.4rem;
-      margin: 18px 0;
+      font-family: 'Orbitron', sans-serif;
+      color: #f7e7a4;
+      font-size: 1.3rem;
+      margin: 6px 0;
+    }
+    .certificate-frame p {
+      font-size: 1.1rem;
+      color: #f3f3f3;
+      margin: 4px 0;
     }
     .assignment {
-      margin-top: 15px;
-      color: #b8cfff;
-      font-size: 1.1rem;
-    }
-    .watermark {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0.04;
-      width: 520px;
-      pointer-events: none;
+      font-size: 1.2rem;
+      color: #fff;
+      margin-top: 10px;
     }
     .signatures {
       display: flex;
       justify-content: space-between;
-      margin-top: 70px;
-      padding: 0 80px;
+      width: 80%;
+      margin: 0 auto 20px;
+    }
+    .signature-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .hand-signature {
       font-family: 'Great Vibes', cursive;
-      font-size: 2.4rem;
+      font-size: 2rem;
       color: #d1b15a;
-      transform: rotate(-3deg);
-      margin-bottom: -8px;
-      text-shadow: 0 0 4px #000;
+      transform: rotate(-2deg);
+      margin-bottom: 2px;
     }
-    .sig-name {
-      font-size: 0.9rem;
-      border-bottom: 1px solid #777;
-      width: 260px;
-      margin: 0 auto 3px;
+    .sig-title {
+      font-size: 0.85rem;
       color: #ccc;
-    }
-    .seal {
-      margin-top: 50px;
+      border-top: 1px solid #888;
+      padding-top: 4px;
+      width: 220px;
+      text-align: center;
     }
     .seal img {
-      width: 120px;
-      opacity: 0.7;
+      width: 100px;
+      opacity: 0.75;
+      margin-top: 8px;
     }
   </style>
 </head>
@@ -303,33 +312,36 @@
       </div>
     </div>
   </div>
-  <div id="graduation" class="certificate">
+  <div id="graduation">
     <div class="certificate-frame">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Starfleet_Command_Emblem.svg" class="watermark" alt="">
-      <h1>Starfleet Academy</h1>
-      <p class="location">San Francisco, Earth — United Federation of Planets</p>
+      <div class="corner-logos">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.XpgLA1XV5J8fws0FBe-jkQHaHa?pid=Api" alt="Starfleet Delta">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.2HvaWm4oTayUpNlygRw82gHaHU?pid=Api" alt="Federation Seal">
+      </div>
+      <h1>STARFLEET ACADEMY</h1>
       <h2>Certificate of Commission</h2>
-      <p>This document certifies that</p>
+      <p>This certifies that</p>
       <h3 id="cadet-name">Cadet [Name Here]</h3>
-      <p>having successfully completed the prescribed course of study and field training,</p>
+      <p>having successfully completed the Kobayashi Maru Command Simulation,</p>
       <p>is hereby commissioned as an</p>
       <h4>Officer of Starfleet</h4>
-      <p>with the rank of <strong>Ensign</strong>, and assigned to the</p>
-      <p class="assignment"><span id="grad-dept">Command Division</span><br>USS <span id="grad-ship">Enterprise NCC-1701-D</span></p>
+      <p>with the rank of <strong>Ensign</strong>, assigned to</p>
+      <p class="assignment">
+        <span id="grad-dept">Command Division</span><br>
+        USS <span id="grad-ship">Enterprise NCC-1701-D</span>
+      </p>
       <div class="signatures">
-        <div>
-          <p class="hand-signature">A. Necheyev</p>
-          <p class="sig-name">Fleet Admiral Alynna Necheyev</p>
-          <span>Starfleet Command</span>
+        <div class="signature-block">
+          <div class="hand-signature">A. Necheyev</div>
+          <div class="sig-title">Fleet Admiral Alynna Necheyev<br>Starfleet Command</div>
         </div>
-        <div>
-          <p class="hand-signature">Jean-Luc Picard</p>
-          <p class="sig-name">Captain Jean-Luc Picard</p>
-          <span>Commandant, Starfleet Academy</span>
+        <div class="signature-block">
+          <div class="hand-signature">Jean-Luc Picard</div>
+          <div class="sig-title">Captain Jean-Luc Picard<br>Commandant, Starfleet Academy</div>
         </div>
       </div>
       <div class="seal">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/United_Federation_of_Planets_logo.svg" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/United_Federation_of_Planets_logo.svg" alt="UFP Seal">
       </div>
     </div>
   </div>
@@ -432,69 +444,6 @@
       document.getElementById("hud").style.display = "none";
       gradScreen.style.display = "flex";
     }
-    function showScene(id) {
-      const sc = scenes[id];
-      if (!sc) {
-        setAlert('red');
-        messageBox.textContent = `Scene '${id}' not found.`;
-        buttonsBox.innerHTML = "";
-        return;
-      }
-      const inferred = detectAlertFromText(sc.text || "");
-      if (inferred) setAlert(inferred);
-      if (detectContactsFromText(sc.text || "")) contactsPresent = true;
-      buttonsBox.innerHTML = "";
-      typeText(sc.text || "", () => {
-        (sc.options || []).forEach(o => {
-          const b = document.createElement('button');
-          b.textContent = o.label;
-          b.onclick = () => {
-            recordMetrics(o.label);
-            if (o.label === "End Simulation") {
-              showGraduation();
-            } else {
-              showScene(o.next);
-            }
-          };
-          buttonsBox.appendChild(b);
-        });
-        if (sc.id.startsWith("end")) {
-          const d = determineDebrief();
-          buttonsBox.innerHTML = "";
-          const b1 = document.createElement("button");
-          b1.textContent = "View Starfleet Debrief";
-          b1.onclick = () => {
-            typeText(d, () => {
-              buttonsBox.innerHTML = "";
-              const endBtn = document.createElement("button");
-              endBtn.textContent = "End Simulation";
-              endBtn.onclick = showGraduation;
-              buttonsBox.appendChild(endBtn);
-            });
-          };
-          buttonsBox.appendChild(b1);
-        }
-      });
-    }
-    function spawnBlip() {
-      if (!contactsPresent) return;
-      const angle = Math.random() * 2 * Math.PI;
-      const radius = 80;
-      const b = document.createElement('div');
-      b.className = 'blip';
-      b.style.top = 50 + radius * Math.sin(angle) + '%';
-      b.style.left = 50 + radius * Math.cos(angle) + '%';
-      tactical.appendChild(b);
-      setTimeout(() => {
-        b.style.top = '50%';
-        b.style.left = '50%';
-        b.style.opacity = 1;
-      }, 50);
-      setTimeout(() => {
-        if (b.parentNode === tactical) tactical.removeChild(b);
-      }, 9000);
-    }
-    setInterval(spawnBlip, 3000);
     async function init() {
       try {
         messageBox.textContent = "Loading mission data...";
