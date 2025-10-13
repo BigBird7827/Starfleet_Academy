@@ -46,6 +46,13 @@ html, body {
   align-items: center;
   z-index: 0;
 }
+    #loginScreen {
+  opacity: 1;
+  transition: opacity 2.5s ease-out;
+}
+#loginScreen.fade-out {
+  opacity: 0;
+}
 .lcars-top, .lcars-bottom {
   position: absolute;
   left: 0;
@@ -659,14 +666,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   finalExamBtn.onclick = () => {
   setTimeout(() => {
-    window.open("https://bigbird7827.github.io/Starfleet_Academy/Final_exam/Final_Exam.html?cachebust=" + Date.now(), "_blank", "noopener");
-    window.location.href = "about:blank";
-  }, 100);
+  const login = document.getElementById("loginScreen");
+  login.classList.add("fade-out");
+  setTimeout(() => {
+    login.style.display = "none";
+    document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
+    document.getElementById("mainScreen").style.display = "block";
+  }, 2500); // matches the 2.5s fade
+}, 4000);
+
 };
 });
 </script>
 </body>
 </html>
+
 
 
 
