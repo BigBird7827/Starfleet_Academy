@@ -196,65 +196,61 @@
       font-family: 'Orbitron', sans-serif;
       z-index: 100;
     }
+    #graduation h1 {
+      font-size: 2rem;
+      color: #35d07f;
+      margin-bottom: 40px;
+      letter-spacing: 1px;
+    }
+    #graduation p {
+      max-width: 700px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #e6e6e6;
+      text-shadow: 0 0 8px #35d07f55;
+      margin-bottom: 50px;
+    }
     #certificate {
-      width: 85vw;
-      height: 85vh;
-      max-width: 1300px;
-      background: linear-gradient(180deg, #0a0f18, #000);
-      border: 4px solid #35d07f;
-      border-radius: 20px;
-      box-shadow: 0 0 40px #35d07f55, inset 0 0 80px #001;
-      padding: 60px;
+      width: 80%;
+      height: 90%;
+      max-width: 1000px;
+      border: 3px solid #35d07f;
+      border-radius: 16px;
+      padding: 40px 60px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
+      background: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 0 25px #35d07f66, inset 0 0 35px #000;
       position: relative;
     }
     #certificate img.corner {
       position: absolute;
       top: 30px;
       width: 14%;
-      filter: drop-shadow(0 0 8px #35d07f88);
+      opacity: 0.95;
+      mix-blend-mode: screen;
     }
-    #left-seal { left: 50px; }
-    #right-seal { right: 50px; }
-    #certificate h1 {
-      font-size: 2.4rem;
-      color: #35d07f;
-      margin-top: 80px;
-      letter-spacing: 2px;
-    }
-    #certificate h2 {
-      font-size: 1.4rem;
-      color: #fff;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-    #certificate p {
-      max-width: 800px;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #dfffea;
-    }
+    #left-seal { left: 40px; }
+    #right-seal { right: 40px; }
     #signature-bar {
       width: 100%;
       display: flex;
       justify-content: space-around;
       align-items: flex-end;
-      margin-top: 40px;
+      margin-top: 20px;
     }
     .signature {
       text-align: center;
-      font-family: "Orbitron", sans-serif;
       color: #dfffea;
-      font-size: 0.9rem;
+      font-family: 'Orbitron', sans-serif;
     }
     .signature .sign {
-      font-family: "Brush Script MT", cursive;
-      font-size: 2rem;
+      font-family: 'Brush Script MT', cursive;
+      font-size: 1.8rem;
       color: #35d07f;
-      text-shadow: 0 0 8px #35d07f66;
+      margin-bottom: 6px;
     }
   </style>
 </head>
@@ -288,10 +284,9 @@
     <img id="left-seal" class="corner" src="https://upload.wikimedia.org/wikipedia/en/2/20/Starfleet_Command_emblem.png" alt="Starfleet Command Seal">
     <img id="right-seal" class="corner" src="https://upload.wikimedia.org/wikipedia/en/d/d5/United_Federation_of_Planets_logo.svg" alt="Federation Seal">
     <h1>Starfleet Academy Certificate of Graduation</h1>
-    <h2 id="cadet-name">Cadet</h2>
-    <p>This is to certify that the above cadet has successfully completed the Kobayashi Maru Simulation under the training authority of Starfleet Academy. The cadet has demonstrated conduct, decision-making, and leadership reflective of the highest ideals of the United Federation of Planets.</p>
-    <h2 id="grad-dept"></h2>
-    <h2 id="grad-ship"></h2>
+    <p>This certifies that the cadet has successfully completed the Kobayashi Maru Simulation under the authority of Starfleet Academy and has demonstrated leadership, courage, and the ideals of the United Federation of Planets.</p>
+    <div id="grad-dept"></div>
+    <div id="grad-ship"></div>
     <div id="signature-bar">
       <div class="signature">
         <div class="sign">J. T. Kirk</div>
@@ -313,7 +308,6 @@ const tactical = document.getElementById('tactical');
 const gradScreen = document.getElementById('graduation');
 const gradDept = document.getElementById('grad-dept');
 const gradShip = document.getElementById('grad-ship');
-const gradName = document.getElementById('cadet-name');
 let scenes = {};
 let currentAlert = 'green';
 let contactsPresent = false;
@@ -408,9 +402,8 @@ function determineDebrief() {
 function showGraduation() {
   const dept = departments[Math.floor(Math.random() * departments.length)];
   const ship = ships[Math.floor(Math.random() * ships.length)];
-  gradDept.textContent = dept + " Division";
-  gradShip.textContent = `USS ${ship.name} ${ship.reg}`;
-  gradName.textContent = "Cadet, Starfleet Academy";
+  gradDept.innerHTML = `<h2>${dept} Division</h2>`;
+  gradShip.innerHTML = `<h2>USS ${ship.name}, ${ship.reg}</h2>`;
   document.getElementById("hud").style.display = "none";
   gradScreen.style.display = "flex";
 }
@@ -486,10 +479,9 @@ async function init() {
     const res = await fetch(DATA_URL, { cache: 'no-store' });
     const data = await res.json();
     scenes = toMap(Array.isArray(data) ? data : (data.scenes || []));
-    if (!scenes.start) throw new Error('Missing start scene');
+    if (!scenes.start) throw new Error('Missing start');
     showScene('start');
   } catch (e) {
-    console.error(e);
     setAlert('red');
     messageBox.textContent = "Error loading mission data.";
     buttonsBox.innerHTML = "";
