@@ -112,7 +112,7 @@ label {
   margin-bottom: 6px;
   text-align: left;
 }
-    label[for="cadetName"] {
+label[for="cadetName"] {
   text-align: center;
   width: 100%;
   display: block;
@@ -127,7 +127,7 @@ input, select {
   font-size: 14pt;
   border-radius: 6px;
 }
-    #cadetName {
+#cadetName {
   width: 50%;
   margin: 0 auto 18px;
   display: block;
@@ -410,44 +410,6 @@ button:disabled {
     </div>
   </div>
 </div>
-
-<div id="orientationPage" style="display:none;">
-  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-  <div class="orientation-root" style="text-align:center;margin-top:100px;">
-    <div class="page-title" id="orientationTitle"></div>
-    <div style="font-size:16pt;margin-bottom:30px;">Select a department to begin.</div>
-    <div id="moduleButtons" class="department-select-box"></div>
-    <button class="fixed-return" id="returnMain">Return to Main</button>
-  </div>
-</div>
-
-<div id="trainingPage" style="display:none;text-align:center;">
-  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-  <div class="page-title" id="trainingDeptTitle"></div>
-  <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-  <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-  <button class="fixed-return" id="returnOrientationTrain">Back to Departments</button>
-</div>
-
-<div id="labPage" style="display:none;text-align:center;">
-  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-  <div class="page-title" id="labDeptTitle"></div>
-  <div id="labCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-  <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-  <button class="fixed-return" id="returnOrientationLab">Back to Departments</button>
-</div>
-
-<div id="examPage" style="display:none;text-align:center;">
-  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-  <div class="page-title" id="examDeptTitle"></div>
-  <div id="examCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-  <div id="examContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-  <button class="fixed-return" id="returnOrientationExam">Back to Departments</button>
-</div>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const departments = ["Command", "Diplomacy", "Engineering", "Security", "Science", "Medical"];
@@ -480,13 +442,19 @@ document.addEventListener("DOMContentLoaded", () => {
     cadetName = document.getElementById("cadetName").value.trim();
     species = document.getElementById("species").value;
     if (!cadetName || !species) return alert("Enter name and species first.");
+
     const msg = document.getElementById("accessMessage");
     msg.textContent = `Access Link Established — Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
     msg.classList.add("active");
+
     setTimeout(() => {
-      document.getElementById("loginScreen").style.display = "none";
-      document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
-      document.getElementById("mainScreen").style.display = "block";
+      const login = document.getElementById("loginScreen");
+      login.classList.add("fade-out");
+      setTimeout(() => {
+        login.style.display = "none";
+        document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
+        document.getElementById("mainScreen").style.display = "block";
+      }, 5000);
     }, 4000);
   });
 
@@ -664,31 +632,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-   finalExamBtn.disabled = false;
-finalExamBtn.textContent = "Kobayashi Maru - Engage";
-
-finalExamBtn.onclick = () => {
-  const name = encodeURIComponent(cadetName);
-  setTimeout(() => {
-    window.open(
-      `https://bigbird7827.github.io/Starfleet_Academy/Final_exam/Final_Exam.html?name=${name}&cachebust=${Date.now()}`,
-      "_blank",
-      "noopener"
-    );
-    window.location.href = "about:blank";
-  }, 100);
-};
+  finalExamBtn.disabled = false;
+  finalExamBtn.textContent = "Kobayashi Maru - Engage";
+  finalExamBtn.onclick = () => {
+    const name = encodeURIComponent(cadetName);
+    setTimeout(() => {
+      window.open(
+        `https://bigbird7827.github.io/Starfleet_Academy/Final_exam/Final_Exam.html?name=${name}&cachebust=${Date.now()}`,
+        "_blank",
+        "noopener"
+      );
+      window.location.href = "about:blank";
+    }, 100);
+  };
+});
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
