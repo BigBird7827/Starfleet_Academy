@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kobayashi Maru Simulation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --accent: #35d07f;
@@ -188,164 +188,123 @@
       inset: 0;
       background: radial-gradient(circle at center, #000010 0%, #000015 70%, #000 100%);
       display: none;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #dfffea;
+      font-family: 'Orbitron', sans-serif;
       z-index: 100;
     }
-    .certificate-frame {
-      width: 88vw;
-      height: 88vh;
-      border: 8px double #d1b15a;
-      background: linear-gradient(180deg, #111 0%, #151515 100%);
-      color: #f5f3e7;
-      padding: 40px;
+    #certificate {
+      width: 85vw;
+      height: 85vh;
+      max-width: 1300px;
+      background: linear-gradient(180deg, #0a0f18, #000);
+      border: 4px solid #35d07f;
+      border-radius: 20px;
+      box-shadow: 0 0 40px #35d07f55, inset 0 0 80px #001;
+      padding: 60px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
-      box-shadow: 0 0 45px rgba(255, 215, 128, 0.3);
-      text-align: center;
+      justify-content: space-between;
       position: relative;
     }
-    .corner-logos {
+    #certificate img.corner {
       position: absolute;
-      top: 40px;
-      width: calc(100% - 80px);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      top: 30px;
+      width: 14%;
+      filter: drop-shadow(0 0 8px #35d07f88);
     }
-    .corner-logos img {
-      height: 80px;
-      opacity: 0.9;
-    }
-    .certificate-frame h1 {
-      font-family: 'Orbitron', sans-serif;
-      color: #d1b15a;
+    #left-seal { left: 50px; }
+    #right-seal { right: 50px; }
+    #certificate h1 {
+      font-size: 2.4rem;
+      color: #35d07f;
+      margin-top: 80px;
       letter-spacing: 2px;
-      margin: 0;
-      font-size: 2.5rem;
     }
-    .certificate-frame h2 {
-      font-family: 'Orbitron', sans-serif;
-      color: #f7e7a4;
-      margin: 10px 0;
+    #certificate h2 {
       font-size: 1.4rem;
-    }
-    .certificate-frame h3 {
-      font-family: 'Great Vibes', cursive;
-      color: #d1b15a;
-      font-size: 2.3rem;
-      margin: 12px 0;
-    }
-    .certificate-frame h4 {
-      font-family: 'Orbitron', sans-serif;
-      color: #f7e7a4;
-      font-size: 1.3rem;
-      margin: 6px 0;
-    }
-    .certificate-frame p {
-      font-size: 1.1rem;
-      color: #f3f3f3;
-      margin: 4px 0;
-    }
-    .assignment {
-      font-size: 1.2rem;
       color: #fff;
-      margin-top: 10px;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
     }
-    .signatures {
+    #certificate p {
+      max-width: 800px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #dfffea;
+    }
+    #signature-bar {
+      width: 100%;
       display: flex;
-      justify-content: space-between;
-      width: 80%;
-      margin: 0 auto 20px;
+      justify-content: space-around;
+      align-items: flex-end;
+      margin-top: 40px;
     }
-    .signature-block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .hand-signature {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2rem;
-      color: #d1b15a;
-      transform: rotate(-2deg);
-      margin-bottom: 2px;
-    }
-    .sig-title {
-      font-size: 0.85rem;
-      color: #ccc;
-      border-top: 1px solid #888;
-      padding-top: 4px;
-      width: 220px;
+    .signature {
       text-align: center;
+      font-family: "Orbitron", sans-serif;
+      color: #dfffea;
+      font-size: 0.9rem;
     }
-    .seal img {
-      width: 100px;
-      opacity: 0.75;
-      margin-top: 8px;
+    .signature .sign {
+      font-family: "Brush Script MT", cursive;
+      font-size: 2rem;
+      color: #35d07f;
+      text-shadow: 0 0 8px #35d07f66;
     }
   </style>
 </head>
 <body class="alert-green">
-  <div id="stars"></div>
-  <div id="hud">
-    <div id="main-panel">
-      <div id="header">KOBAYASHI MARU — STARFLEET SIMULATION</div>
-      <div id="message">Initializing simulation...</div>
-      <div id="buttons"></div>
-      <div id="tactical"><div id="sweep"></div></div>
+<div id="stars"></div>
+<div id="hud">
+  <div id="main-panel">
+    <div id="header">KOBAYASHI MARU — STARFLEET SIMULATION</div>
+    <div id="message">Initializing simulation...</div>
+    <div id="buttons"></div>
+    <div id="tactical"><div id="sweep"></div></div>
+  </div>
+  <div id="side-panels">
+    <div id="alert-controls">
+      <h3>Alert Controls</h3>
+      <button class="alert-btn green" onclick="setAlert('green')">Green Alert</button>
+      <button class="alert-btn yellow" onclick="setAlert('yellow')">Yellow Alert</button>
+      <button class="alert-btn red" onclick="setAlert('red')">Red Alert</button>
     </div>
-    <div id="side-panels">
-      <div id="alert-controls">
-        <h3>Alert Controls</h3>
-        <button class="alert-btn green" onclick="setAlert('green')">Green Alert</button>
-        <button class="alert-btn yellow" onclick="setAlert('yellow')">Yellow Alert</button>
-        <button class="alert-btn red" onclick="setAlert('red')">Red Alert</button>
+    <div id="ship-systems">
+      <h3>Ship Systems</h3>
+      <button onclick="systemAction('Shields raised to full.')">Raise Shields</button>
+      <button onclick="systemAction('Power diverted to engines.')">Divert Power</button>
+      <button onclick="systemAction('Long-range scan initiated.')">Scan Area</button>
+      <button onclick="systemAction('Opening hailing frequencies.')">Open Hailing</button>
+    </div>
+  </div>
+</div>
+<div id="graduation">
+  <div id="certificate">
+    <img id="left-seal" class="corner" src="https://upload.wikimedia.org/wikipedia/en/2/20/Starfleet_Command_emblem.png" alt="Starfleet Command Seal">
+    <img id="right-seal" class="corner" src="https://upload.wikimedia.org/wikipedia/en/d/d5/United_Federation_of_Planets_logo.svg" alt="Federation Seal">
+    <h1>Starfleet Academy Certificate of Graduation</h1>
+    <h2 id="cadet-name">Cadet</h2>
+    <p>This is to certify that the above cadet has successfully completed the Kobayashi Maru Simulation under the training authority of Starfleet Academy. The cadet has demonstrated conduct, decision-making, and leadership reflective of the highest ideals of the United Federation of Planets.</p>
+    <h2 id="grad-dept"></h2>
+    <h2 id="grad-ship"></h2>
+    <div id="signature-bar">
+      <div class="signature">
+        <div class="sign">J. T. Kirk</div>
+        <div>Fleet Captain<br>Command Oversight</div>
       </div>
-      <div id="ship-systems">
-        <h3>Ship Systems</h3>
-        <button onclick="systemAction('Shields raised to full.')">Raise Shields</button>
-        <button onclick="systemAction('Power diverted to engines.')">Divert Power</button>
-        <button onclick="systemAction('Long-range scan initiated.')">Scan Area</button>
-        <button onclick="systemAction('Opening hailing frequencies.')">Open Hailing</button>
+      <div class="signature">
+        <div class="sign">C. Pike</div>
+        <div>Admiral<br>Starfleet Command</div>
       </div>
     </div>
   </div>
-  <div id="graduation">
-    <div class="certificate-frame">
-      <div class="corner-logos">
-        <img src="https://tse1.mm.bing.net/th/id/OIP.XpgLA1XV5J8fws0FBe-jkQHaHa?pid=Api" alt="Starfleet Delta">
-        <img src="https://tse4.mm.bing.net/th/id/OIP.2HvaWm4oTayUpNlygRw82gHaHU?pid=Api" alt="Federation Seal">
-      </div>
-      <h1>STARFLEET ACADEMY</h1>
-      <h2>Certificate of Commission</h2>
-      <p>This certifies that</p>
-      <h3 id="cadet-name">Cadet [Name Here]</h3>
-      <p>having successfully completed the Kobayashi Maru Command Simulation,</p>
-      <p>is hereby commissioned as an</p>
-      <h4>Officer of Starfleet</h4>
-      <p>with the rank of <strong>Ensign</strong>, assigned to</p>
-      <p class="assignment">
-        <span id="grad-dept">Command Division</span><br>
-        USS <span id="grad-ship">Enterprise NCC-1701-D</span>
-      </p>
-      <div class="signatures">
-        <div class="signature-block">
-          <div class="hand-signature">A. Necheyev</div>
-          <div class="sig-title">Fleet Admiral Alynna Necheyev<br>Starfleet Command</div>
-        </div>
-        <div class="signature-block">
-          <div class="hand-signature">Jean-Luc Picard</div>
-          <div class="sig-title">Captain Jean-Luc Picard<br>Commandant, Starfleet Academy</div>
-        </div>
-      </div>
-      <div class="seal">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/United_Federation_of_Planets_logo.svg" alt="UFP Seal">
-      </div>
-    </div>
-  </div>
-  <script>
+</div>
+<script>
 const DATA_URL = "Kobayashi_Maru.json";
 const messageBox = document.getElementById('message');
 const buttonsBox = document.getElementById('buttons');
@@ -376,7 +335,6 @@ const ships = [
   { name: "Titan", reg: "NCC-80102" }
 ];
 
-// background stars
 for (let i = 0; i < 220; i++) {
   const s = document.createElement('div');
   s.className = 'star';
@@ -457,7 +415,6 @@ function showGraduation() {
   gradScreen.style.display = "flex";
 }
 
-// The missing showScene function restored here:
 function showScene(id) {
   const sc = scenes[id];
   if (!sc) {
@@ -466,11 +423,9 @@ function showScene(id) {
     buttonsBox.innerHTML = "";
     return;
   }
-
   const inferred = detectAlertFromText(sc.text || "");
   if (inferred) setAlert(inferred);
   if (detectContactsFromText(sc.text || "")) contactsPresent = true;
-
   buttonsBox.innerHTML = "";
   typeText(sc.text || "", () => {
     (sc.options || []).forEach(o => {
@@ -486,7 +441,6 @@ function showScene(id) {
       };
       buttonsBox.appendChild(b);
     });
-
     if (sc.id.startsWith("end")) {
       const d = determineDebrief();
       buttonsBox.innerHTML = "";
@@ -506,7 +460,6 @@ function showScene(id) {
   });
 }
 
-// radar contact system
 function spawnBlip() {
   if (!contactsPresent) return;
   const angle = Math.random() * 2 * Math.PI;
@@ -527,7 +480,6 @@ function spawnBlip() {
 }
 setInterval(spawnBlip, 3000);
 
-// main initialization
 async function init() {
   try {
     messageBox.textContent = "Loading mission data...";
@@ -543,10 +495,7 @@ async function init() {
     buttonsBox.innerHTML = "";
   }
 }
-
 document.addEventListener('DOMContentLoaded', init);
 </script>
-
 </body>
 </html>
-
