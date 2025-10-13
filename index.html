@@ -51,6 +51,15 @@ html, body {
 #loginScreen.fade-out {
   opacity: 0;
 }
+    .fade-in {
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 .lcars-top, .lcars-bottom {
   position: absolute;
   left: 0;
@@ -456,15 +465,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const examFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Exam.json`]));
   const progress = { labs: {}, exams: {} };
 
-  const trainingBlurbs = {
-    Command: "In this module, you are the Captain. You will learn to command with authority, clarity, and composure under pressure. Each scenario will challenge your ability to assess risk, make rapid decisions, and inspire confidence in your crew. You will be tested not only on tactical awareness, but on judgment, empathy, and moral conviction — the true qualities of command.",
-    Diplomacy: "This module focuses on the art and science of interstellar relations. You will learn to navigate complex negotiations, defuse conflicts, and build consensus among diverse species and cultures. Your success will depend on patience, empathy, and the ability to find common ground — even when none seems to exist.",
-    Engineering: "In this module, you are responsible for keeping the ship operational under any condition. You will learn diagnostic reasoning, problem-solving under stress, and the creative application of limited resources. From warp core dynamics to life support systems, your duty is simple: keep the ship flying.",
-    Security: "This module will train you to think like a protector of the crew and the Federation. You will evaluate threats, plan responses, and maintain discipline under pressure. Your success will rely on vigilance, tactical precision, and an unwavering sense of duty — the shield that guards Starfleet.",
-    Science: "In this module, you are the mind of discovery. You will explore the unknown, analyze phenomena, and apply scientific principles to solve complex problems. Observation, logic, and curiosity will guide your path as you expand the frontiers of knowledge for all of Starfleet.",
-    Medical: "In this module, you are the healer. You will learn to diagnose, treat, and care for beings from across the quadrant. Your focus will be on precision, compassion, and calm under pressure. Remember: every life in your hands represents the mission and ideals of Starfleet itself."
-  };
-
   const homeworlds = {
     "Human": "Earth","Vulcan": "Vulcan","Andorian": "Andoria","Aenar": "Andoria","Tellarite": "Tellar Prime",
     "Bajoran": "Bajor","Betazoid": "Betazed","Bolian": "Bolarus IX","Trill": "Trill","Klingon": "Qo'noS",
@@ -489,16 +489,20 @@ document.addEventListener("DOMContentLoaded", () => {
     cadetName = document.getElementById("cadetName").value.trim();
     species = document.getElementById("species").value;
     if (!cadetName || !species) return alert("Enter name and species first.");
+
     const msg = document.getElementById("accessMessage");
     msg.textContent = `Access Link Established — Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
     msg.classList.add("active");
+
     setTimeout(() => {
       const login = document.getElementById("loginScreen");
       login.classList.add("fade-out");
       setTimeout(() => {
         login.style.display = "none";
+        const main = document.getElementById("mainScreen");
+        main.style.display = "block";
+        main.classList.add("fade-in");
         document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
-        document.getElementById("mainScreen").style.display = "block";
       }, 5000);
     }, 4000);
   });
@@ -522,16 +526,51 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("orientationPage").style.display = "block";
   }
 
+  document.getElementById("returnMain").onclick = () => {
+    document.getElementById("orientationPage").style.display = "none";
+    document.getElementById("mainScreen").style.display = "block";
+    checkProgress();
+  };
+  document.getElementById("returnOrientationTrain").onclick = () => {
+    document.getElementById("trainingPage").style.display = "none";
+    document.getElementById("orientationPage").style.display = "block";
+  };
+  document.getElementById("returnOrientationLab").onclick = () => {
+    document.getElementById("labPage").style.display = "none";
+    document.getElementById("orientationPage").style.display = "block";
+    checkProgress();
+  };
+  document.getElementById("returnOrientationExam").onclick = () => {
+    document.getElementById("examPage").style.display = "none";
+    document.getElementById("orientationPage").style.display = "block";
+    checkProgress();
+  };
+
   async function loadTraining(dept) {
     document.getElementById("orientationPage").style.display = "none";
     document.getElementById("trainingPage").style.display = "block";
     document.getElementById("trainingDeptTitle").textContent = `${dept} Study`;
-    document.getElementById("trainingCadetInfo").innerHTML = `Cadet ${cadetName} of ${homeworlds[species]}<br><br><em>${trainingBlurbs[dept]}</em>`;
+    document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
     const content = document.getElementById("trainingContent");
     content.innerHTML = "<p>Loading...</p>";
     const res = await fetch(trainingFiles[dept]);
     const data = await res.json();
     content.innerHTML = "";
+
+    const blurbs = {
+      Command: "In this module, you are the Captain. You will learn to command with authority, clarity, and composure under pressure. Each scenario will challenge your ability to assess risk, make rapid decisions, and inspire confidence in your crew. You will be tested not only on tactical awareness, but on judgment, empathy, and moral conviction — the true qualities of command.",
+      Diplomacy: "In this module, you are the Federation’s voice. You will learn to navigate delicate negotiations, mediate interstellar conflicts, and uphold Federation principles of peace and cooperation. Success will demand patience, logic, empathy, and a keen understanding of cultural nuance.",
+      Engineering: "In this module, you are responsible for the beating heart of the starship. You will learn to diagnose malfunctions, reroute systems under pressure, and innovate with limited resources. A true engineer keeps the ship alive when all else fails.",
+      Security: "In this module, you are the ship’s shield. You will learn to assess threats, maintain readiness, and protect both crew and vessel from harm. Your training emphasizes vigilance, discipline, and decisiveness under fire.",
+      Science: "In this module, you are the seeker of truth. You will analyze data, hypothesize, and interpret the unknown to expand the Federation’s understanding of the galaxy. Precision, curiosity, and skepticism will guide your path.",
+      Medical: "In this module, you are the healer. You will diagnose, treat, and comfort those under your care, balancing compassion with scientific rigor. Your challenge is to preserve life — sometimes against impossible odds."
+    };
+
+    const preface = document.createElement("div");
+    preface.className = "training-preface";
+    preface.textContent = blurbs[dept] || "";
+    content.appendChild(preface);
+
     data.study?.forEach(item => {
       const section = document.createElement("div");
       section.className = "training-section";
@@ -563,6 +602,100 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  async function loadLab(dept) {
+    document.getElementById("orientationPage").style.display = "none";
+    document.getElementById("labPage").style.display = "block";
+    document.getElementById("labDeptTitle").textContent = `${dept} Lab`;
+    document.getElementById("labCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+    const content = document.getElementById("labContent");
+    content.innerHTML = "<p>Loading...</p>";
+    const res = await fetch(labFiles[dept]);
+    const data = await res.json();
+    const items = data.lab || [];
+    let currentIndex = 0;
+    showScenario(currentIndex);
+    function showScenario(i) {
+      const item = items[i];
+      content.innerHTML = `<div class="training-section"><h3>${item.scenario}</h3><p>${item.summary || ""}</p></div>`;
+      const answersDiv = document.createElement("div");
+      answersDiv.className = "lab-answers";
+      [...item.answers].sort(() => Math.random() - 0.5).forEach(ans => {
+        const btn = document.createElement("button");
+        btn.textContent = ans.text;
+        btn.onclick = () => {
+          answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
+          const feedback = document.createElement("div");
+          feedback.className = "feedback";
+          feedback.innerHTML = ans.type === "best"
+            ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
+            : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
+          const next = document.createElement("button");
+          next.textContent = i < items.length - 1 ? "Next Scenario ➡️" : "Return to Departments";
+          next.onclick = () => {
+            if (i < items.length - 1) showScenario(i + 1);
+            else {
+              progress.labs[dept] = true;
+              document.getElementById("labPage").style.display = "none";
+              document.getElementById("orientationPage").style.display = "block";
+              checkProgress();
+            }
+          };
+          feedback.appendChild(next);
+          answersDiv.appendChild(feedback);
+        };
+        answersDiv.appendChild(btn);
+      });
+      content.appendChild(answersDiv);
+    }
+  }
+
+  async function loadExam(dept) {
+    document.getElementById("orientationPage").style.display = "none";
+    document.getElementById("examPage").style.display = "block";
+    document.getElementById("examDeptTitle").textContent = `${dept} Exam`;
+    document.getElementById("examCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+    const content = document.getElementById("examContent");
+    content.innerHTML = "<p>Loading...</p>";
+    const res = await fetch(examFiles[dept]);
+    const data = await res.json();
+    const items = data.exam || [];
+    let currentIndex = 0;
+    showQuestion(currentIndex);
+    function showQuestion(i) {
+      const item = items[i];
+      content.innerHTML = `<div class="training-section"><h3>${item.scenario}</h3></div>`;
+      const answersDiv = document.createElement("div");
+      answersDiv.className = "exam-answers";
+      [...item.answers].forEach(ans => {
+        const btn = document.createElement("button");
+        btn.textContent = ans.text;
+        btn.onclick = () => {
+          answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
+          const feedback = document.createElement("div");
+          feedback.className = "feedback";
+          feedback.innerHTML = ans.type === "best"
+            ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
+            : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
+          const next = document.createElement("button");
+          next.textContent = i < items.length - 1 ? "Next Question ➡️" : "Return to Departments";
+          next.onclick = () => {
+            if (i < items.length - 1) showQuestion(i + 1);
+            else {
+              progress.exams[dept] = true;
+              document.getElementById("examPage").style.display = "none";
+              document.getElementById("orientationPage").style.display = "block";
+              checkProgress();
+            }
+          };
+          feedback.appendChild(next);
+          answersDiv.appendChild(feedback);
+        };
+        answersDiv.appendChild(btn);
+      });
+      content.appendChild(answersDiv);
+    }
+  }
+
   finalExamBtn.disabled = false;
   finalExamBtn.textContent = "Kobayashi Maru - Engage";
   finalExamBtn.onclick = () => {
@@ -580,3 +713,4 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
