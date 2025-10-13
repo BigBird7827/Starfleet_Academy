@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kobayashi Maru Simulation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet"/>
-
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --accent: #35d07f;
@@ -15,19 +14,15 @@
       --blue: #4ab0ff;
       --black: #000;
     }
-
     * { box-sizing: border-box; }
-
     html, body {
       margin: 0;
       height: 100%;
       overflow: hidden;
       background: #000;
-      font-family: 'Roboto Mono', monospace;
+      font-family: Arial, sans-serif;
       color: var(--text);
     }
-
-    /* Simulation UI (unchanged) */
     #stars {
       position: absolute;
       inset: 0;
@@ -44,10 +39,9 @@
       animation: moveStars 6s linear infinite;
     }
     @keyframes moveStars {
-      0%   { transform: translateZ(0) scale(1); }
+      0% { transform: translateZ(0) scale(1); }
       100% { transform: translateZ(300px) scale(0); }
     }
-
     #hud {
       position: relative;
       z-index: 10;
@@ -65,7 +59,6 @@
     }
     #main-panel { flex: 3; display: flex; flex-direction: column; align-items: center; }
     #side-panels { flex: 1; display: flex; flex-direction: column; gap: 24px; align-items: center; justify-content: flex-start; }
-
     #header {
       font-family: 'Orbitron', sans-serif;
       font-size: 1.2rem;
@@ -104,11 +97,9 @@
       box-shadow: 0 0 22px var(--accent);
       transform: scale(1.06);
     }
-
     .alert-green { --accent: #35d07f; --accent-soft: #35d07f55; --text: #dfffea; }
     .alert-yellow { --accent: #ffd166; --accent-soft: #ffd16655; --text: #fff6db; }
-    .alert-red    { --accent: #ff4b4b; --accent-soft: #ff4b4b55; --text: #ffe5e5; }
-
+    .alert-red { --accent: #ff4b4b; --accent-soft: #ff4b4b55; --text: #ffe5e5; }
     #alert-controls, #ship-systems {
       border: 2px solid var(--accent);
       border-radius: 12px;
@@ -135,10 +126,9 @@
       font-family: 'Orbitron', sans-serif;
       letter-spacing: 0.5px;
     }
-    .green  { background-color: #35d07f; }
+    .green { background-color: #35d07f; }
     .yellow { background-color: #ffd166; }
-    .red    { background-color: #ff4b4b; }
-
+    .red { background-color: #ff4b4b; }
     #ship-systems button {
       display: block;
       width: 100%;
@@ -147,7 +137,6 @@
       font-family: 'Orbitron', sans-serif;
       padding: 8px;
     }
-
     #tactical {
       position: relative;
       width: 160px;
@@ -169,8 +158,6 @@
     }
     @keyframes sweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
     .blip { position: absolute; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; opacity: 0; transition: all 6s linear; }
-
-    /* Graduation Certificate (updated visuals only) */
     #graduation {
       position: fixed;
       inset: 0;
@@ -178,13 +165,11 @@
       align-items: center;
       justify-content: center;
       background: var(--black);
-      font-family: 'Orbitron', sans-serif;
+      font-family: Arial, sans-serif;
       z-index: 100;
     }
-
     .certificate {
       position: relative;
-      /* nearly edge-to-edge with small margin for framing */
       width: calc(100% - 48px);
       height: calc(100% - 48px);
       background: linear-gradient(180deg, #000 0%, #0a0a20 100%);
@@ -199,8 +184,6 @@
       overflow: hidden;
       color: #e8f1ff;
     }
-
-    /* inner blue keyline */
     .certificate::before {
       content: "";
       position: absolute;
@@ -210,30 +193,26 @@
       pointer-events: none;
       z-index: 0;
     }
-
-    /* Corner emblems behind text; if a white background exists on the asset, multiply helps hide it */
     .corner {
       position: absolute;
       width: min(18vw, 260px);
       height: auto;
       top: 40px;
       z-index: 0;
-      mix-blend-mode: multiply;
-      filter: brightness(1.15) contrast(1.1);
-      opacity: 0.92;
+      pointer-events: none;
+      object-fit: contain;
+      opacity: 0.95;
     }
-    .corner.left  { left: 40px; }
+    .corner.left { left: 40px; }
     .corner.right { right: 40px; }
-
-    /* Title and body copy sit over emblems */
     .certificate h1,
     .certificate p,
     .signature-row {
       position: relative;
       z-index: 2;
     }
-
     .certificate h1 {
+      font-family: 'Orbitron', sans-serif;
       margin: 0;
       font-size: clamp(2rem, 3.2vw, 3.25rem);
       color: var(--gold);
@@ -241,8 +220,8 @@
       text-align: center;
       text-shadow: 0 0 12px rgba(74,176,255,0.4);
     }
-
     .certificate p {
+      font-family: Arial, sans-serif;
       max-width: 1100px;
       margin: 16px auto 0 auto;
       font-size: clamp(1.05rem, 1.3vw, 1.35rem);
@@ -251,7 +230,6 @@
       text-align: center;
       text-shadow: 0 0 6px rgba(74,176,255,0.35);
     }
-
     .signature-row {
       width: min(92%, 1100px);
       display: flex;
@@ -259,14 +237,13 @@
       align-items: center;
       gap: 32px;
       margin-top: 32px;
+      font-family: Arial, sans-serif;
     }
-
     .signature {
       flex: 1 1 50%;
       text-align: center;
       color: var(--gold);
     }
-
     .signature-name {
       display: inline-block;
       font-family: "Brush Script MT", cursive;
@@ -278,9 +255,7 @@
       margin-bottom: 6px;
       text-shadow: 0 0 8px rgba(74,176,255,0.35);
     }
-
     .signature-title {
-      font-family: 'Orbitron', sans-serif;
       font-size: clamp(0.85rem, 1.1vw, 1rem);
       color: var(--blue);
       letter-spacing: 0.4px;
@@ -290,7 +265,6 @@
 </head>
 <body class="alert-green">
   <div id="stars"></div>
-
   <div id="hud">
     <div id="main-panel">
       <div id="header">KOBAYASHI MARU — STARFLEET SIMULATION</div>
@@ -298,7 +272,6 @@
       <div id="buttons"></div>
       <div id="tactical"><div id="sweep"></div></div>
     </div>
-
     <div id="side-panels">
       <div id="alert-controls">
         <h3>Alert Controls</h3>
@@ -306,7 +279,6 @@
         <button class="alert-btn yellow" onclick="setAlert('yellow')">Yellow Alert</button>
         <button class="alert-btn red" onclick="setAlert('red')">Red Alert</button>
       </div>
-
       <div id="ship-systems">
         <h3>Ship Systems</h3>
         <button onclick="systemAction('Shields raised to full.')">Raise Shields</button>
@@ -316,24 +288,12 @@
       </div>
     </div>
   </div>
-
-  <!-- Updated certificate visuals only; logic preserved -->
   <div id="graduation">
     <div class="certificate">
-      <img
-        class="corner left"
-        src="https://pngset.com/images/star-trek-federation-logo-starfleet-command-symbol-trademark-emblem-text-transparent-png-2703494.png"
-        alt="Starfleet Command Emblem"
-      />
-      <img
-        class="corner right"
-        src="https://tse4.mm.bing.net/th/id/OIP.1R3hD5fa-qJ_ewmyXxyS2AHaFX?cb=12&pid=Api"
-        alt="United Federation of Planets Emblem"
-      />
-
+      <img class="corner left" src="https://pngset.com/images/star-trek-federation-logo-starfleet-command-symbol-trademark-emblem-text-transparent-png-2703494.png" alt="Starfleet Command Emblem" aria-hidden="true"/>
+      <img class="corner right" src="https://tse4.mm.bing.net/th/id/OIP.1R3hD5fa-qJ_ewmyXxyS2AHaFX?cb=12&pid=Api" alt="United Federation of Planets Emblem" aria-hidden="true"/>
       <h1>Starfleet Academy Certificate of Completion</h1>
       <p id="grad-text"></p>
-
       <div class="signature-row">
         <div class="signature">
           <div class="signature-name">A. Necheyev</div>
@@ -346,39 +306,33 @@
       </div>
     </div>
   </div>
-
   <script>
     const DATA_URL = "Kobayashi_Maru.json";
-
     const messageBox = document.getElementById('message');
     const buttonsBox = document.getElementById('buttons');
     const stars = document.getElementById('stars');
     const tactical = document.getElementById('tactical');
     const gradScreen = document.getElementById('graduation');
     const gradText = document.getElementById('grad-text');
-
     let scenes = {};
     let currentAlert = 'green';
     let contactsPresent = false;
-
     const metrics = { aggression: 0, caution: 0, empathy: 0, diplomacy: 0, protocol: 0 };
     const debriefs = {
       rescue: "Cadet chose to cross the Neutral Zone and mount a rescue of the Kobayashi Maru...",
-      treaty:  "Cadet declined to violate the Neutral Zone...",
+      treaty: "Cadet declined to violate the Neutral Zone...",
       partial: "Cadet initiated a rescue operation with partial success...",
       negotiation: "Cadet opened communications with Klingon forces...",
       withdrawal: "Cadet assessed the tactical imbalance and elected to withdraw..."
     };
-
     const departments = ["Command", "Science", "Engineering", "Medical", "Security", "Tactical"];
     const ships = [
       { name: "Enterprise", reg: "NCC-1701-E" },
-      { name: "Voyager",    reg: "NCC-74656"  },
-      { name: "Defiant",    reg: "NX-74205"   },
-      { name: "Excelsior",  reg: "NCC-2000"   },
-      { name: "Titan",      reg: "NCC-80102"  }
+      { name: "Voyager", reg: "NCC-74656" },
+      { name: "Defiant", reg: "NX-74205" },
+      { name: "Excelsior", reg: "NCC-2000" },
+      { name: "Titan", reg: "NCC-80102" }
     ];
-
     for (let i = 0; i < 220; i++) {
       const s = document.createElement('div');
       s.className = 'star';
@@ -388,13 +342,11 @@
       s.style.opacity = Math.random();
       stars.appendChild(s);
     }
-
     function toMap(list) {
       const m = {};
       list.forEach(o => { if (o && o.id) m[o.id] = o; });
       return m;
     }
-
     function typeText(txt, done) {
       messageBox.textContent = "";
       let i = 0;
@@ -402,26 +354,21 @@
         if (i < txt.length) {
           messageBox.textContent += txt.charAt(i++);
           setTimeout(step, 22);
-        } else if (done) {
-          done();
-        }
+        } else if (done) done();
       })();
     }
-
     function detectAlertFromText(t) {
       const text = (t || "").toLowerCase();
-      if (text.includes('red alert'))    return 'red';
+      if (text.includes('red alert')) return 'red';
       if (text.includes('yellow alert')) return 'yellow';
-      if (text.includes('green alert'))  return 'green';
+      if (text.includes('green alert')) return 'green';
       return null;
     }
-
     function detectContactsFromText(t) {
       const text = (t || "").toLowerCase();
       if (/klingon|enemy ships|warp signatures inbound|decloak/.test(text)) return true;
       return false;
     }
-
     function setAlert(level) {
       const body = document.body;
       if (!level || level === currentAlert) return;
@@ -430,43 +377,43 @@
       body.classList.add(`alert-${level}`);
       systemAction(`Alert level set to ${level.toUpperCase()}.`);
     }
-
-    function systemAction(text) {
-      typeText(text, null);
-    }
-
+    function systemAction(text) { typeText(text, null); }
     function recordMetrics(choice) {
       const text = choice.toLowerCase();
       if (/attack|fire|engage|rescue/.test(text)) metrics.aggression++;
       if (/retreat|withdraw|stand down/.test(text)) metrics.caution++;
       if (/hail|communicate|negotiate/.test(text)) metrics.diplomacy++;
-      if (/regulation|order|protocol/.test(text))  metrics.protocol++;
-      if (/rescue|save|help/.test(text))          metrics.empathy++;
+      if (/regulation|order|protocol/.test(text)) metrics.protocol++;
+      if (/rescue|save|help/.test(text)) metrics.empathy++;
     }
-
     function determineDebrief() {
       const { aggression, caution, empathy, diplomacy, protocol } = metrics;
       if (diplomacy > aggression && diplomacy > caution) return debriefs.negotiation;
-      if (aggression > empathy && aggression > caution)  return debriefs.rescue;
-      if (empathy > aggression && empathy >= diplomacy)  return debriefs.partial;
-      if (protocol > empathy && protocol >= aggression)  return debriefs.treaty;
+      if (aggression > empathy && aggression > caution) return debriefs.rescue;
+      if (empathy > aggression && empathy >= diplomacy) return debriefs.partial;
+      if (protocol > empathy && protocol >= aggression) return debriefs.treaty;
       return debriefs.withdrawal;
     }
-
+    function getCadetName() {
+      const url = new URLSearchParams(window.location.search);
+      const fromParam = url.get('cadet') || url.get('name') || url.get('cadetName');
+      const fromSession = sessionStorage.getItem('cadetName');
+      const fromLocal = localStorage.getItem('cadetName');
+      const name = (fromParam || fromSession || fromLocal || "").trim();
+      return name || "Cadet";
+    }
     function showGraduation() {
+      const cadet = getCadetName();
       const dept = departments[Math.floor(Math.random() * departments.length)];
       const ship = ships[Math.floor(Math.random() * ships.length)];
-
       gradText.innerHTML =
-        "This certifies that Cadet has successfully completed the Starfleet Academy Command Training Program, " +
-        "including the Kobayashi Maru Simulation, and is hereby commissioned to the rank of Ensign in Starfleet." +
-        "<br><br>" +
+        `This certifies that ${cadet} has successfully completed the Starfleet Academy Command Training Program, ` +
+        `including the Kobayashi Maru Simulation, and is hereby commissioned to the rank of Ensign in Starfleet.` +
+        `<br><br>` +
         `You are directed to report to the ${dept} department onboard the USS ${ship.name}, ${ship.reg}.`;
-
       document.getElementById("hud").style.display = "none";
       gradScreen.style.display = "flex";
     }
-
     function showScene(id) {
       const sc = scenes[id];
       if (!sc) {
@@ -475,11 +422,9 @@
         buttonsBox.innerHTML = "";
         return;
       }
-
       const inferred = detectAlertFromText(sc.text || "");
       if (inferred) setAlert(inferred);
       if (detectContactsFromText(sc.text || "")) contactsPresent = true;
-
       buttonsBox.innerHTML = "";
       typeText(sc.text || "", () => {
         (sc.options || []).forEach(o => {
@@ -495,7 +440,6 @@
           };
           buttonsBox.appendChild(b);
         });
-
         if (sc.id && sc.id.startsWith("end")) {
           const d = determineDebrief();
           buttonsBox.innerHTML = "";
@@ -514,7 +458,6 @@
         }
       });
     }
-
     function spawnBlip() {
       if (!contactsPresent) return;
       const angle = Math.random() * 2 * Math.PI;
@@ -534,7 +477,6 @@
       }, 9000);
     }
     setInterval(spawnBlip, 3000);
-
     async function init() {
       try {
         messageBox.textContent = "Loading mission data...";
@@ -549,7 +491,6 @@
         buttonsBox.innerHTML = "";
       }
     }
-
     document.addEventListener('DOMContentLoaded', init);
   </script>
 </body>
