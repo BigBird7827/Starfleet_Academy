@@ -51,14 +51,6 @@ html, body {
 #loginScreen.fade-out {
   opacity: 0;
 }
-#orientationPage.fade-in {
-  opacity: 0;
-  animation: fadeIn 3s forwards;
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
 .lcars-top, .lcars-bottom {
   position: absolute;
   left: 0;
@@ -354,6 +346,32 @@ button:disabled {
   content: "▮ ";
   color: red;
 }
+#orientationPage {
+  min-height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+#orientationTitle {
+  margin: 0 0 12px 0;
+}
+#moduleButtons.department-select-box {
+  width: min(900px, 92vw);
+  padding: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 0 auto;
+}
+#orientationPage .fixed-return {
+  position: static;
+  margin-top: 16px;
+}
+@media (max-height: 720px) {
+  #orientationTitle { margin-bottom: 8px; }
+  #moduleButtons.department-select-box { padding: 12px; gap: 12px; }
+}
   </style>
 </head>
 <body>
@@ -518,42 +536,31 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("labBtn").onclick = () => openOrientation("lab");
   document.getElementById("examBtn").onclick = () => openOrientation("exam");
 
-  function openOrientation(mode) {
-    document.getElementById("mainScreen").style.display = "none";
-    const title = document.getElementById("orientationTitle");
-    title.textContent = mode === "lab" ? "Select Lab Department" : mode === "exam" ? "Select Exam Department" : "Select Study Department";
-    const btnBox = document.getElementById("moduleButtons");
-    btnBox.innerHTML = "";
-    departments.forEach(dept => {
-      const b = document.createElement("button");
-      b.textContent = dept;
-      b.onclick = () => { mode === "training" ? loadTraining(dept) : mode === "lab" ? loadLab(dept) : loadExam(dept); };
-      btnBox.appendChild(b);
-    });
-    const orientation = document.getElementById("orientationPage");
-    orientation.style.display = "block";
-    orientation.classList.add("fade-in");
-  }
-
-  document.getElementById("returnMain").onclick = () => {
-    document.getElementById("orientationPage").style.display = "none";
-    document.getElementById("mainScreen").style.display = "block";
-    checkProgress();
-  };
-  document.getElementById("returnOrientationTrain").onclick = () => {
-    document.getElementById("trainingPage").style.display = "none";
-    document.getElementById("orientationPage").style.display = "block";
-  };
-  document.getElementById("returnOrientationLab").onclick = () => {
-    document.getElementById("labPage").style.display = "none";
-    document.getElementById("orientationPage").style.display = "block";
-    checkProgress();
-  };
-  document.getElementById("returnOrientationExam").onclick = () => {
-    document.getElementById("examPage").style.display = "none";
-    document.getElementById("orientationPage").style.display = "block";
-    checkProgress();
-  };
+ function openOrientation(mode) {
+  document.getElementById("mainScreen").style.display = "none";
+  const title = document.getElementById("orientationTitle");
+  title.textContent = mode === "lab" 
+    ? "Select Lab Department" 
+    : mode === "exam" 
+    ? "Select Exam Department" 
+    : "Select Study Department";
+  const btnBox = document.getElementById("moduleButtons");
+  btnBox.innerHTML = "";
+  departments.forEach(dept => {
+    const b = document.createElement("button");
+    b.textContent = dept;
+    b.onclick = () => { 
+      mode === "training" 
+        ? loadTraining(dept) 
+        : mode === "lab" 
+        ? loadLab(dept) 
+        : loadExam(dept); 
+    };
+    btnBox.appendChild(b);
+  });
+  const orientation = document.getElementById("orientationPage");
+  orientation.style.display = "flex";
+}
 
   async function loadTraining(dept) {
     document.getElementById("orientationPage").style.display = "none";
@@ -708,3 +715,4 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
+
