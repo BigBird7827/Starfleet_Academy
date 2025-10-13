@@ -8,502 +8,447 @@
 
   <style>
     :root {
-      --gold: #ffd47a;
-      --blue: #4ab0ff;
-      --green: #00cc66;
-      --red: #cc0033;
-      --dark-blue: #001933;
-      --black: #000;
-      --text: #f3f3f3;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: var(--black);
-      font-family: 'Roboto', sans-serif;
-      color: var(--text);
-      overflow: hidden;
-    }
-
-    @font-face {
-      font-family: 'Final Frontier';
-      src: url('https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Final_Frontier.ttf') format('truetype');
-    }
-
-    .page-title {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 36pt;
-      color: var(--gold);
-      text-align: center;
-      margin: 20px 0 10px;
-    }
-
-    #loginScreen {
-      position: relative;
-      height: 100vh;
-      width: 100%;
-      background: url("Starfleet Academy - San Francisco.gif") no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 0;
-      opacity: 1;
-      transition: opacity 3s ease-out;
-    }
-
-    #loginScreen.fade-out {
-      opacity: 0;
-    }
-
-    .lcars-top,
-    .lcars-bottom {
-      position: absolute;
-      left: 0;
-      width: 100%;
-      background: var(--gold);
-      font-family: 'Final Frontier', sans-serif;
-      font-size: 24pt;
-      color: #001933;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
-    .lcars-top {
-      top: 0;
-      height: 50px;
-      border-bottom-left-radius: 50px;
-    }
-
-    .lcars-bottom {
-      bottom: 0;
-      height: 40px;
-      border-top-left-radius: 50px;
-    }
-
-    .glass-panel {
-      background: rgba(30, 40, 60, 0.125);
-      backdrop-filter: blur(20px) saturate(180%);
-      border: 2px solid var(--gold);
-      border-radius: 18px;
-      box-shadow: 0 0 25px rgba(255, 212, 122, 0.4),
-                  inset 0 0 35px rgba(74, 176, 255, 0.2);
-      padding: 40px 50px;
-      width: 680px;
-      text-align: center;
-      animation: panelFadeIn 1.4s ease-in-out;
-      color: var(--text);
-    }
-
-    @keyframes panelFadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    .login-subtext {
-      font-size: 13pt;
-      letter-spacing: 1px;
-      color: #ffffff;
-      text-shadow: 0 0 8px rgba(74, 176, 255, 0.9);
-      margin-bottom: 18px;
-    }
-
-    .lcars-divider {
-      height: 4px;
-      width: 80%;
-      margin: 0 auto 20px;
-      background: linear-gradient(to right, var(--gold), var(--blue));
-      border-radius: 2px;
-    }
-
-    label {
-      display: block;
-      color: #ffffff;
-      font-size: 14pt;
-      margin-bottom: 6px;
-      text-align: left;
-    }
-
-    label[for="cadetName"] {
-      text-align: center;
-      width: 100%;
-      display: block;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 18px;
-      background: rgba(0, 0, 0, 0.45);
-      border: 1px solid var(--blue);
-      color: #ffffff;
-      font-size: 14pt;
-      border-radius: 6px;
-    }
-
-    #cadetName {
-      width: 50%;
-      margin: 0 auto 18px;
-      display: block;
-    }
-
-    ::placeholder {
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    button {
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(to bottom, #003366, #001933);
-      border: 2px solid var(--gold);
-      color: var(--gold);
-      font-size: 15pt;
-      border-radius: 10px;
-      padding: 12px 25px;
-      margin: 10px;
-      cursor: pointer;
-      box-shadow: inset 0 6px 8px rgba(255, 255, 255, 0.06),
-                  inset 0 -6px 10px rgba(0, 0, 0, 0.6),
-                  0 6px 12px rgba(0, 0, 0, 0.9);
-      transition: transform .2s, box-shadow .2s;
-    }
-
-    button:hover {
-      transform: translateY(-2px);
-      box-shadow: inset 0 6px 10px rgba(255, 255, 255, 0.08),
-                  inset 0 -6px 12px rgba(0, 0, 0, 0.7),
-                  0 14px 28px rgba(0, 0, 0, 1);
-    }
-
-    button:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
-
-    .glow-message {
-      text-align: center;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 16pt;
-      color: #ffffff;
-      margin-top: 16px;
-      text-shadow: 0 0 15px var(--blue), 0 0 30px var(--blue);
-      opacity: 0;
-      transition: opacity .6s ease-in;
-    }
-
-    #accessMessage.active {
-      opacity: 1;
-    }
-
-    .corner-image {
-      position: fixed;
-      width: 2.5in;
-      height: 2.5in;
-      object-fit: contain;
-      pointer-events: none;
-      z-index: 10;
-    }
-
-    .corner-left { top: 10px; left: 10px; }
-    .corner-right { top: 10px; right: 10px; }
-    .container {
-      background: rgba(0, 0, 0, 0.8);
-      border: 2px solid var(--gold);
-      border-radius: 12px;
-      box-shadow: 0 0 20px var(--blue);
-      padding: 30px 40px;
-      width: 420px;
-      z-index: 2;
-      margin: auto;
-    }
-
-    .department-select-box {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      justify-items: center;
-      align-items: center;
-      max-width: 700px;
-      margin: 0 auto;
-      background: rgba(0, 0, 0, 0.8);
-      border: 2px solid var(--gold);
-      border-radius: 12px;
-      padding: 30px;
-      box-shadow: 0 0 15px var(--blue);
-    }
-
-    .km-button-box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 25px;
-    }
-
-    .lab-answers, .exam-answers {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      align-items: stretch;
-      font-family: Arial, sans-serif;
-    }
-
-    .feedback {
-      text-align: center;
-      font-size: 16pt;
-      margin-top: 15px;
-    }
-
-    #mainScreen {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      width: 100%;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    #mainScreen .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: calc(min(calc(100% - 6in), 1400px) - 100px);
-      margin: 0 auto;
-    }
-
-    .fade-in {
-      animation: fadeIn 3s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    #trainingPage .fixed-return,
-    #labPage .fixed-return,
-    #examPage .fixed-return {
-      position: fixed;
-      top: calc(50% + 250px);
-      left: 5px;
-      transform: translateY(-50%);
-      z-index: 1000;
-      bottom: auto;
-      font-size: 13pt;
-      padding: 8px 18px;
-      border-radius: 8px;
-    }
-
-    @media (max-width: 900px) {
-      #trainingPage .fixed-return,
-      #labPage .fixed-return,
-      #examPage .fixed-return {
-        top: auto;
-        bottom: 20px;
-        left: 10px;
-        transform: none;
-      }
-    }
-
-    .training-section {
-      position: relative;
-      background: rgba(15, 20, 35, 0.78);
-      border: 2px solid var(--gold);
-      border-radius: 14px;
-      padding: 50px 36px 30px 36px;
-      margin: 50px auto;
-      box-shadow: 0 0 25px rgba(255, 212, 122, 0.25);
-      max-width: 950px;
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
-      overflow: hidden;
-    }
-
-    .training-section:hover {
-      transform: scale(1.01);
-      box-shadow: 0 0 40px rgba(255, 212, 122, 0.35);
-    }
-
-    .training-header-bar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 28px;
-      background: linear-gradient(to right, var(--gold), var(--blue));
-      border-bottom: 2px solid var(--gold);
-      text-align: right;
-      padding-right: 18px;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 12pt;
-      font-weight: bold;
-      letter-spacing: 1px;
-      color: #000;
-      text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
-      line-height: 28px;
-    }
-
-    .training-section h3 {
-      color: var(--green);
-      border-bottom: 2px solid var(--gold);
-      padding-bottom: 8px;
-      margin-bottom: 18px;
-      font-size: 20pt;
-      letter-spacing: 1px;
-    }
-
-    .training-section p {
-      font-size: 13.5pt;
-      color: var(--text);
-      line-height: 1.6;
-      margin: 10px 0;
-    }
-
-    .training-answers {
-      margin-top: 20px;
-      padding: 18px 24px;
-      border-radius: 10px;
-      background: rgba(0, 0, 0, 0.45);
-      border-left: 5px solid var(--gold);
-    }
-
-    .training-answers p {
-      margin: 12px 0;
-      padding-left: 8px;
-      line-height: 1.5;
-      font-size: 13.5pt;
-    }
-
-    .training-answers p strong {
-      display: block;
-      font-size: 13pt;
-      margin-bottom: 3px;
-    }
-
-    .training-section p strong[style*="green"]::before {
-      content: "▮ ";
-      color: var(--green);
-    }
-
-    .training-section p strong[style*="teal"]::before {
-      content: "▮ ";
-      color: #ffd166;
-    }
-
-    .training-section p strong[style*="slategray"]::before {
-      content: "▮ ";
-      color: #ff4b4b;
-    }
+  --gold: #ffd47a;
+  --blue: #4ab0ff;
+  --green: #00cc66;
+  --red: #cc0033;
+  --dark-blue: #001933;
+  --black: #000;
+  --text: #f3f3f3;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--black);
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: 'Final Frontier';
+  src: url('https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Final_Frontier.ttf') format('truetype');
+}
+.page-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36pt;
+  color: var(--gold);
+  text-align: center;
+  margin: 20px 0 10px;
+}
+#loginScreen {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("Starfleet Academy - San Francisco.gif") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  opacity: 1;
+  transition: opacity 3s ease-out;
+}
+#loginScreen.fade-out {
+  opacity: 0;
+}
+.lcars-top, .lcars-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: var(--gold);
+  font-family: 'Final Frontier', sans-serif;
+  font-size: 24pt;
+  color: #001933;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.lcars-top {
+  top: 0;
+  height: 50px;
+  border-bottom-left-radius: 50px;
+}
+.lcars-bottom {
+  bottom: 0;
+  height: 40px;
+  border-top-left-radius: 50px;
+}
+.glass-panel {
+  background: rgba(30, 40, 60, 0.125);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 2px solid var(--gold);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(255, 212, 122, 0.4), inset 0 0 35px rgba(74, 176, 255, 0.2);
+  padding: 40px 50px;
+  width: 680px;
+  text-align: center;
+  animation: panelFadeIn 1.4s ease-in-out;
+  color: var(--text);
+}
+@keyframes panelFadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+.login-subtext {
+  font-size: 13pt;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(74, 176, 255, 0.9);
+  margin-bottom: 18px;
+}
+.lcars-divider {
+  height: 4px;
+  width: 80%;
+  margin: 0 auto 20px;
+  background: linear-gradient(to right, var(--gold), var(--blue));
+  border-radius: 2px;
+}
+label {
+  display: block;
+  color: #ffffff;
+  font-size: 14pt;
+  margin-bottom: 6px;
+  text-align: left;
+}
+label[for="cadetName"] {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--blue);
+  color: #ffffff;
+  font-size: 14pt;
+  border-radius: 6px;
+}
+#cadetName {
+  width: 50%;
+  margin: 0 auto 18px;
+  display: block;
+}
+::placeholder { color: rgba(255, 255, 255, 0.7); }
+button {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to bottom, #003366, #001933);
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-size: 15pt;
+  border-radius: 10px;
+  padding: 12px 25px;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: inset 0 6px 8px rgba(255, 255, 255, 0.06),
+              inset 0 -6px 10px rgba(0, 0, 0, 0.6),
+              0 6px 12px rgba(0, 0, 0, 0.9);
+  transition: transform .2s, box-shadow .2s;
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 6px 10px rgba(255, 255, 255, 0.08),
+              inset 0 -6px 12px rgba(0, 0, 0, 0.7),
+              0 14px 28px rgba(0, 0, 0, 1);
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.glow-message {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16pt;
+  color: #ffffff;
+  margin-top: 16px;
+  text-shadow: 0 0 15px var(--blue), 0 0 30px var(--blue);
+  opacity: 0;
+  transition: opacity .6s ease-in;
+}
+#accessMessage.active { opacity: 1; }
+.corner-image {
+  position: fixed;
+  width: 2.5in;
+  height: 2.5in;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 10;
+}
+.corner-left { top: 10px; left: 10px; }
+.corner-right { top: 10px; right: 10px; }
+.container {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--blue);
+  padding: 30px 40px;
+  width: 420px;
+  z-index: 2;
+  margin: auto;
+}
+#mainScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+#mainScreen .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.department-select-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.km-button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+.lab-answers, .exam-answers {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: stretch;
+  font-family: Arial, sans-serif;
+}
+.feedback {
+  text-align: center;
+  font-size: 16pt;
+  margin-top: 15px;
+}
+#trainingPage .fixed-return,
+#labPage .fixed-return,
+#examPage .fixed-return {
+  position: fixed;
+  top: calc(50% + 250px);
+  left: 5px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  bottom: auto;
+  font-size: 13pt;
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+@media (max-width: 900px) {
+  #trainingPage .fixed-return,
+  #labPage .fixed-return,
+  #examPage .fixed-return {
+    top: auto;
+    bottom: 20px;
+    left: 10px;
+    transform: none;
+  }
+}
+.training-section {
+  position: relative;
+  background: rgba(15, 20, 35, 0.78);
+  border: 2px solid var(--gold);
+  border-radius: 14px;
+  padding: 50px 36px 30px 36px;
+  margin: 50px auto;
+  box-shadow: 0 0 25px rgba(255, 212, 122, 0.25);
+  max-width: 950px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+.training-section:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 40px rgba(255, 212, 122, 0.35);
+}
+.training-header-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background: linear-gradient(to right, var(--gold), var(--blue));
+  border-bottom: 2px solid var(--gold);
+  text-align: right;
+  padding-right: 18px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #000;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+  line-height: 28px;
+}
+.training-section h3 {
+  color: var(--green);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+  font-size: 20pt;
+  letter-spacing: 1px;
+}
+.training-section p {
+  font-size: 13.5pt;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 10px 0;
+}
+.training-answers {
+  margin-top: 20px;
+  padding: 18px 24px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.45);
+  border-left: 5px solid var(--gold);
+}
+.training-answers p {
+  margin: 12px 0;
+  padding-left: 8px;
+  line-height: 1.5;
+  font-size: 13.5pt;
+}
+.training-answers p strong {
+  display: block;
+  font-size: 13pt;
+  margin-bottom: 3px;
+}
+.training-preface {
+  text-align: center;
+  font-size: 14pt;
+  color: var(--gold);
+  margin: 25px auto 40px;
+  line-height: 1.5;
+  max-width: 850px;
+}
+.training-section p strong[style*="green"]::before {
+  content: "▮ ";
+  color: var(--green);
+}
+.training-section p strong[style*="yellow"]::before {
+  content: "▮ ";
+  color: var(--yellow);
+}
+.training-section p strong[style*="red"]::before {
+  content: "▮ ";
+  color: var(--red);
+}
   </style>
 </head>
 
 <body>
   <div id="loginScreen">
-    <div class="lcars-top">Starfleet Academy - Established 2161</div>
-    <div class="lcars-bottom">Ex Astris Scientia</div>
-    <div class="container glass-panel">
-      <div class="page-title">STARFLEET ACADEMY</div>
-      <p class="login-subtext">Authorization required for Federation access</p>
-      <div class="lcars-divider"></div>
-      <label for="cadetName">Cadet Name</label>
-      <input type="text" id="cadetName" required placeholder="Enter full designation">
-      <label for="species">Species</label>
-      <select id="species" required>
-        <option value="">-- Select Species --</option>
-        <option>Human</option>
-        <option>Vulcan</option>
-        <option>Andorian</option>
-        <option>Aenar</option>
-        <option>Tellarite</option>
-        <option>Bajoran</option>
-        <option>Betazoid</option>
-        <option>Bolian</option>
-        <option>Trill</option>
-        <option>Klingon</option>
-        <option>Ferengi</option>
-        <option>Denobulan</option>
-        <option>Orion</option>
-        <option>Caitian</option>
-        <option>Benzite</option>
-      </select>
-      <button id="loginBtn">Initiate Access Protocol</button>
-      <div id="accessMessage" class="glow-message">Authenticating...</div>
-    </div>
+  <div class="lcars-top">Starfleet Academy - Established 2161</div>
+  <div class="lcars-bottom">Ex Astris Scientia</div>
+  <div class="container glass-panel">
+    <div class="page-title">STARFLEET ACADEMY</div>
+    <p class="login-subtext">Authorization required for Federation access</p>
+    <div class="lcars-divider"></div>
+    <label for="cadetName">Cadet Name</label>
+    <input type="text" id="cadetName" required placeholder="Enter full designation">
+    <label for="species">Species</label>
+    <select id="species" required>
+      <option value="">-- Select Species --</option>
+      <option>Human</option>
+      <option>Vulcan</option>
+      <option>Andorian</option>
+      <option>Aenar</option>
+      <option>Tellarite</option>
+      <option>Bajoran</option>
+      <option>Betazoid</option>
+      <option>Bolian</option>
+      <option>Trill</option>
+      <option>Klingon</option>
+      <option>Ferengi</option>
+      <option>Denobulan</option>
+      <option>Orion</option>
+      <option>Caitian</option>
+      <option>Benzite</option>
+    </select>
+    <button id="loginBtn">Initiate Access Protocol</button>
+    <div id="accessMessage" class="glow-message">Authenticating...</div>
   </div>
+</div>
 
-  <div id="mainScreen" style="display:none;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-    <div class="container">
-      <div class="page-title">Welcome to Starfleet Academy</div>
-      <div id="mainWelcome" style="font-size:18pt;margin-bottom:20px;"></div>
-      <p style="font-size:14pt;color:#fff;margin-bottom:20px;text-align:center;max-width:900px;">
-        Congratulations, Cadet. You have been accepted into Starfleet Academy,
-        where the finest minds of the Federation prepare to serve in the vast
-        frontier of space. Here, you will learn the disciplines of command,
-        diplomacy, science, engineering, medicine, and security — each a vital
-        pillar in the exploration and defense of the Federation.
+<div id="mainScreen" style="display:none;">
+  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+  <div class="container">
+    <div class="page-title">Welcome to Starfleet Academy</div>
+    <div id="mainWelcome" style="font-size:18pt;margin-bottom:20px;"></div>
+    <p style="font-size:14pt;color:#fff;margin-bottom:20px;text-align:center;max-width:900px;">
+      Congratulations, Cadet. You have been accepted into Starfleet Academy,
+      where the finest minds of the Federation prepare to serve in the vast
+      frontier of space. Here, you will learn the disciplines of command,
+      diplomacy, science, engineering, medicine, and security — each a vital
+      pillar in the exploration and defense of the Federation.
+    </p>
+    <div style="font-size:14pt;color:#fff;margin-bottom:48px;text-align:center;max-width:900px;line-height:1.6;word-wrap:break-word;">
+      <p>
+        Choose your discipline and commence your studies by selecting the "Study" button below. 
+        When you have completed your studies, return to this console and select the "Labs" button to evaluate your proficiency. 
+        Upon completion of all lab modules, return again to this console and select the "Exams" button to complete your academic requirements.
       </p>
-
-      <div style="font-size:14pt;color:#fff;margin-bottom:48px;text-align:center;max-width:900px;line-height:1.6;word-wrap:break-word;">
-        <p>
-          Choose your discipline and commence your studies by selecting the "Study" button below. 
-          When you have completed your studies, return to this console and select the "Labs" button to evaluate your proficiency. 
-          Upon completion of all lab modules, return again to this console and select the "Exams" button to complete your academic requirements.
-        </p>
-        <br>
-        <p>
-          Prior to graduation, all cadets are required to undertake the "Kobayashi Maru" simulation — a no-win scenario designed to test your command character. 
-          Your performance in this exercise does not affect your eligibility for graduation.
-        </p>
-        <br>
-        <p>Good luck, Cadet.</p>
-        <br>
-      </div>
-
-      <div class="department-select-box" style="grid-template-columns: repeat(3, 1fr); width:auto;">
-        <button id="trainingBtn" style="width:200px;">Study</button>
-        <button id="labBtn" style="width:200px;">Labs</button>
-        <button id="examBtn" style="width:200px;" disabled>Exams</button>
-      </div>
-
-      <div class="km-button-box">
-        <button id="finalExamBtn" style="width:300px;" disabled>Kobayashi Maru - Locked</button>
-      </div>
+      <br>
+      <p>
+        Prior to graduation, all cadets are required to undertake the "Kobayashi Maru" simulation — a no-win scenario designed to test your command character. 
+        Your performance in this exercise does not affect your eligibility for graduation.
+      </p>
+      <br>
+      <p>
+        Good luck, Cadet.
+      </p>
+      <br>
+    </div>
+    <div class="department-select-box" style="grid-template-columns: repeat(3, 1fr); width:auto;">
+      <button id="trainingBtn" style="width:200px;">Study</button>
+      <button id="labBtn" style="width:200px;">Labs</button>
+      <button id="examBtn" style="width:200px;" disabled>Exams</button>
+    </div>
+    <div class="km-button-box">
+      <button id="finalExamBtn" style="width:300px;" disabled>Kobayashi Maru - Locked</button>
     </div>
   </div>
+</div>
 
-  <div id="orientationPage" style="display:none;text-align:center;">
-    <div class="page-title" id="orientationTitle"></div>
-    <div id="moduleButtons" class="department-select-box"></div>
-    <button id="returnMain" class="fixed-return">Return to Main</button>
-  </div>
+<div id="orientationPage" style="display:none;text-align:center;">
+  <div class="page-title" id="orientationTitle"></div>
+  <div id="moduleButtons" class="department-select-box"></div>
+  <button id="returnMain" class="fixed-return">Return to Main</button>
+</div>
 
-  <div id="trainingPage" style="display:none;text-align:center;">
-    <div class="page-title" id="trainingDeptTitle"></div>
-    <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-    <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-    <button id="returnOrientationTrain" class="fixed-return">Return to Departments</button>
-  </div>
+<div id="trainingPage" style="display:none;text-align:center;">
+  <div class="page-title" id="trainingDeptTitle"></div>
+  <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+  <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+  <button id="returnOrientationTrain" class="fixed-return">Return to Departments</button>
+</div>
 
-  <div id="labPage" style="display:none;text-align:center;">
-    <div class="page-title" id="labDeptTitle"></div>
-    <div id="labCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-    <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-    <button id="returnOrientationLab" class="fixed-return">Return to Departments</button>
-  </div>
+<div id="labPage" style="display:none;text-align:center;">
+  <div class="page-title" id="labDeptTitle"></div>
+  <div id="labCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+  <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+  <button id="returnOrientationLab" class="fixed-return">Return to Departments</button>
+</div>
 
-  <div id="examPage" style="display:none;text-align:center;">
-    <div class="page-title" id="examDeptTitle"></div>
-    <div id="examCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-    <div id="examContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-    <button id="returnOrientationExam" class="fixed-return">Return to Departments</button>
-  </div>
+<div id="examPage" style="display:none;text-align:center;">
+  <div class="page-title" id="examDeptTitle"></div>
+  <div id="examCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+  <div id="examContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+  <button id="returnOrientationExam" class="fixed-return">Return to Departments</button>
+</div>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const departments = ["Command", "Diplomacy", "Engineering", "Security", "Science", "Medical"];
@@ -765,3 +710,4 @@
   </script>
 </body>
 </html>
+
