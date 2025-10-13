@@ -346,119 +346,207 @@
     </div>
   </div>
   <script>
-    const DATA_URL = "Kobayashi_Maru.json";
-    const messageBox = document.getElementById('message');
-    const buttonsBox = document.getElementById('buttons');
-    const stars = document.getElementById('stars');
-    const tactical = document.getElementById('tactical');
-    const gradScreen = document.getElementById('graduation');
-    const gradDept = document.getElementById('grad-dept');
-    const gradShip = document.getElementById('grad-ship');
-    const gradName = document.getElementById('cadet-name');
-    let scenes = {};
-    let currentAlert = 'green';
-    let contactsPresent = false;
-    const metrics = { aggression: 0, caution: 0, empathy: 0, diplomacy: 0, protocol: 0 };
-    const debriefs = {
-      rescue: "Cadet chose to cross the Neutral Zone and mount a rescue of the Kobayashi Maru...",
-      treaty: "Cadet declined to violate the Neutral Zone...",
-      partial: "Cadet initiated a rescue operation with partial success...",
-      negotiation: "Cadet opened communications with Klingon forces...",
-      withdrawal: "Cadet assessed the tactical imbalance and elected to withdraw..."
-    };
-    const departments = ["Command", "Science", "Engineering", "Medical", "Security", "Tactical"];
-    const ships = [
-      { name: "Enterprise", reg: "NCC-1701-D" },
-      { name: "Voyager", reg: "NCC-74656" },
-      { name: "Defiant", reg: "NX-74205" },
-      { name: "Excelsior", reg: "NCC-2000" },
-      { name: "Titan", reg: "NCC-80102" }
-    ];
-    for (let i = 0; i < 220; i++) {
-      const s = document.createElement('div');
-      s.className = 'star';
-      s.style.top = Math.random() * 100 + '%';
-      s.style.left = Math.random() * 100 + '%';
-      s.style.animationDelay = (Math.random() * 5) + 's';
-      s.style.opacity = Math.random();
-      stars.appendChild(s);
+const DATA_URL = "Kobayashi_Maru.json";
+const messageBox = document.getElementById('message');
+const buttonsBox = document.getElementById('buttons');
+const stars = document.getElementById('stars');
+const tactical = document.getElementById('tactical');
+const gradScreen = document.getElementById('graduation');
+const gradDept = document.getElementById('grad-dept');
+const gradShip = document.getElementById('grad-ship');
+const gradName = document.getElementById('cadet-name');
+let scenes = {};
+let currentAlert = 'green';
+let contactsPresent = false;
+
+const metrics = { aggression: 0, caution: 0, empathy: 0, diplomacy: 0, protocol: 0 };
+const debriefs = {
+  rescue: "Cadet chose to cross the Neutral Zone and mount a rescue of the Kobayashi Maru...",
+  treaty: "Cadet declined to violate the Neutral Zone...",
+  partial: "Cadet initiated a rescue operation with partial success...",
+  negotiation: "Cadet opened communications with Klingon forces...",
+  withdrawal: "Cadet assessed the tactical imbalance and elected to withdraw..."
+};
+const departments = ["Command", "Science", "Engineering", "Medical", "Security", "Tactical"];
+const ships = [
+  { name: "Enterprise", reg: "NCC-1701-D" },
+  { name: "Voyager", reg: "NCC-74656" },
+  { name: "Defiant", reg: "NX-74205" },
+  { name: "Excelsior", reg: "NCC-2000" },
+  { name: "Titan", reg: "NCC-80102" }
+];
+
+// background stars
+for (let i = 0; i < 220; i++) {
+  const s = document.createElement('div');
+  s.className = 'star';
+  s.style.top = Math.random() * 100 + '%';
+  s.style.left = Math.random() * 100 + '%';
+  s.style.animationDelay = (Math.random() * 5) + 's';
+  s.style.opacity = Math.random();
+  stars.appendChild(s);
+}
+
+function toMap(list) {
+  const m = {};
+  list.forEach(o => { if (o && o.id) m[o.id] = o; });
+  return m;
+}
+
+function typeText(txt, done) {
+  messageBox.textContent = "";
+  let i = 0;
+  (function step() {
+    if (i < txt.length) {
+      messageBox.textContent += txt.charAt(i++);
+      setTimeout(step, 22);
+    } else if (done) done();
+  })();
+}
+
+function detectAlertFromText(t) {
+  const text = t.toLowerCase();
+  if (/red alert/.test(text)) return 'red';
+  if (/yellow alert/.test(text)) return 'yellow';
+  if (/green alert/.test(text)) return 'green';
+  return null;
+}
+
+function detectContactsFromText(t) {
+  const text = t.toLowerCase();
+  if (/klingon|enemy ships|warp signatures inbound|decloak/.test(text)) return true;
+  return false;
+}
+
+function setAlert(level) {
+  const body = document.body;
+  if (!level || level === currentAlert) return;
+  currentAlert = level;
+  body.classList.remove('alert-green', 'alert-yellow', 'alert-red');
+  body.classList.add(`alert-${level}`);
+  systemAction(`Alert level set to ${level.toUpperCase()}.`);
+}
+
+function systemAction(text) { typeText(text, null); }
+
+function recordMetrics(choice) {
+  const text = choice.toLowerCase();
+  if (/attack|fire|engage|rescue/.test(text)) metrics.aggression++;
+  if (/retreat|withdraw|stand down/.test(text)) metrics.caution++;
+  if (/hail|communicate|negotiate/.test(text)) metrics.diplomacy++;
+  if (/regulation|order|protocol/.test(text)) metrics.protocol++;
+  if (/rescue|save|help/.test(text)) metrics.empathy++;
+}
+
+function determineDebrief() {
+  const { aggression, caution, empathy, diplomacy, protocol } = metrics;
+  if (diplomacy > aggression && diplomacy > caution) return debriefs.negotiation;
+  if (aggression > empathy && aggression > caution) return debriefs.rescue;
+  if (empathy > aggression && empathy >= diplomacy) return debriefs.partial;
+  if (protocol > empathy && protocol >= aggression) return debriefs.treaty;
+  return debriefs.withdrawal;
+}
+
+function showGraduation() {
+  const dept = departments[Math.floor(Math.random() * departments.length)];
+  const ship = ships[Math.floor(Math.random() * ships.length)];
+  gradDept.textContent = dept + " Division";
+  gradShip.textContent = `USS ${ship.name} ${ship.reg}`;
+  gradName.textContent = "Cadet, Starfleet Academy";
+  document.getElementById("hud").style.display = "none";
+  gradScreen.style.display = "flex";
+}
+
+// The missing showScene function restored here:
+function showScene(id) {
+  const sc = scenes[id];
+  if (!sc) {
+    setAlert('red');
+    messageBox.textContent = `Scene '${id}' not found.`;
+    buttonsBox.innerHTML = "";
+    return;
+  }
+
+  const inferred = detectAlertFromText(sc.text || "");
+  if (inferred) setAlert(inferred);
+  if (detectContactsFromText(sc.text || "")) contactsPresent = true;
+
+  buttonsBox.innerHTML = "";
+  typeText(sc.text || "", () => {
+    (sc.options || []).forEach(o => {
+      const b = document.createElement('button');
+      b.textContent = o.label;
+      b.onclick = () => {
+        recordMetrics(o.label);
+        if (o.label === "End Simulation") {
+          showGraduation();
+        } else {
+          showScene(o.next);
+        }
+      };
+      buttonsBox.appendChild(b);
+    });
+
+    if (sc.id.startsWith("end")) {
+      const d = determineDebrief();
+      buttonsBox.innerHTML = "";
+      const b1 = document.createElement("button");
+      b1.textContent = "View Starfleet Debrief";
+      b1.onclick = () => {
+        typeText(d, () => {
+          buttonsBox.innerHTML = "";
+          const endBtn = document.createElement("button");
+          endBtn.textContent = "End Simulation";
+          endBtn.onclick = showGraduation;
+          buttonsBox.appendChild(endBtn);
+        });
+      };
+      buttonsBox.appendChild(b1);
     }
-    function toMap(list) {
-      const m = {};
-      list.forEach(o => { if (o && o.id) m[o.id] = o; });
-      return m;
-    }
-    function typeText(txt, done) {
-      messageBox.textContent = "";
-      let i = 0;
-      (function step() {
-        if (i < txt.length) {
-          messageBox.textContent += txt.charAt(i++);
-          setTimeout(step, 22);
-        } else if (done) done();
-      })();
-    }
-    function detectAlertFromText(t) {
-      const text = t.toLowerCase();
-      if (/red alert/.test(text)) return 'red';
-      if (/yellow alert/.test(text)) return 'yellow';
-      if (/green alert/.test(text)) return 'green';
-      return null;
-    }
-    function detectContactsFromText(t) {
-      const text = t.toLowerCase();
-      if (/klingon|enemy ships|warp signatures inbound|decloak/.test(text)) return true;
-      return false;
-    }
-    function setAlert(level) {
-      const body = document.body;
-      if (!level || level === currentAlert) return;
-      currentAlert = level;
-      body.classList.remove('alert-green', 'alert-yellow', 'alert-red');
-      body.classList.add(`alert-${level}`);
-      systemAction(`Alert level set to ${level.toUpperCase()}.`);
-    }
-    function systemAction(text) { typeText(text, null); }
-    function recordMetrics(choice) {
-      const text = choice.toLowerCase();
-      if (/attack|fire|engage|rescue/.test(text)) metrics.aggression++;
-      if (/retreat|withdraw|stand down/.test(text)) metrics.caution++;
-      if (/hail|communicate|negotiate/.test(text)) metrics.diplomacy++;
-      if (/regulation|order|protocol/.test(text)) metrics.protocol++;
-      if (/rescue|save|help/.test(text)) metrics.empathy++;
-    }
-    function determineDebrief() {
-      const { aggression, caution, empathy, diplomacy, protocol } = metrics;
-      if (diplomacy > aggression && diplomacy > caution) return debriefs.negotiation;
-      if (aggression > empathy && aggression > caution) return debriefs.rescue;
-      if (empathy > aggression && empathy >= diplomacy) return debriefs.partial;
-      if (protocol > empathy && protocol >= aggression) return debriefs.treaty;
-      return debriefs.withdrawal;
-    }
-    function showGraduation() {
-      const dept = departments[Math.floor(Math.random() * departments.length)];
-      const ship = ships[Math.floor(Math.random() * ships.length)];
-      gradDept.textContent = dept + " Division";
-      gradShip.textContent = `USS ${ship.name} ${ship.reg}`;
-      gradName.textContent = "Cadet, Starfleet Academy";
-      document.getElementById("hud").style.display = "none";
-      gradScreen.style.display = "flex";
-    }
-    async function init() {
-      try {
-        messageBox.textContent = "Loading mission data...";
-        const res = await fetch(DATA_URL, { cache: 'no-store' });
-        const data = await res.json();
-        scenes = toMap(Array.isArray(data) ? data : (data.scenes || []));
-        if (!scenes.start) throw new Error('Missing start');
-        showScene('start');
-      } catch (e) {
-        setAlert('red');
-        messageBox.textContent = "Error loading mission data.";
-        buttonsBox.innerHTML = "";
-      }
-    }
-    document.addEventListener('DOMContentLoaded', init);
-  </script>
+  });
+}
+
+// radar contact system
+function spawnBlip() {
+  if (!contactsPresent) return;
+  const angle = Math.random() * 2 * Math.PI;
+  const radius = 80;
+  const b = document.createElement('div');
+  b.className = 'blip';
+  b.style.top = 50 + radius * Math.sin(angle) + '%';
+  b.style.left = 50 + radius * Math.cos(angle) + '%';
+  tactical.appendChild(b);
+  setTimeout(() => {
+    b.style.top = '50%';
+    b.style.left = '50%';
+    b.style.opacity = 1;
+  }, 50);
+  setTimeout(() => {
+    if (b.parentNode === tactical) tactical.removeChild(b);
+  }, 9000);
+}
+setInterval(spawnBlip, 3000);
+
+// main initialization
+async function init() {
+  try {
+    messageBox.textContent = "Loading mission data...";
+    const res = await fetch(DATA_URL, { cache: 'no-store' });
+    const data = await res.json();
+    scenes = toMap(Array.isArray(data) ? data : (data.scenes || []));
+    if (!scenes.start) throw new Error('Missing start scene');
+    showScene('start');
+  } catch (e) {
+    console.error(e);
+    setAlert('red');
+    messageBox.textContent = "Error loading mission data.";
+    buttonsBox.innerHTML = "";
+  }
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+
 </body>
 </html>
+
