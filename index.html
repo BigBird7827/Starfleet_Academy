@@ -16,6 +16,7 @@
   --black: #000;
   --text: #f3f3f3;
 }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -25,10 +26,12 @@ html, body {
   color: var(--text);
   overflow-x: hidden;
 }
+
 @font-face {
   font-family: 'Final Frontier';
   src: url('https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Final_Frontier.ttf') format('truetype');
 }
+
 .page-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 36pt;
@@ -36,6 +39,7 @@ html, body {
   text-align: center;
   margin: 20px 0 10px;
 }
+
 #loginScreen {
   position: relative;
   height: 100vh;
@@ -49,9 +53,11 @@ html, body {
   opacity: 1;
   transition: opacity 3s ease-out;
 }
+
 #loginScreen.fade-out {
   opacity: 0;
 }
+
 .lcars-top, .lcars-bottom {
   position: absolute;
   left: 0;
@@ -66,16 +72,19 @@ html, body {
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .lcars-top {
   top: 0;
   height: 50px;
   border-bottom-left-radius: 50px;
 }
+
 .lcars-bottom {
   bottom: 0;
   height: 40px;
   border-top-left-radius: 50px;
 }
+
 .glass-panel {
   background: rgba(30, 40, 60, 0.125);
   backdrop-filter: blur(20px) saturate(180%);
@@ -88,10 +97,12 @@ html, body {
   animation: panelFadeIn 1.4s ease-in-out;
   color: var(--text);
 }
+
 @keyframes panelFadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
+
 .login-subtext {
   font-size: 13pt;
   letter-spacing: 1px;
@@ -99,6 +110,7 @@ html, body {
   text-shadow: 0 0 8px rgba(74, 176, 255, 0.9);
   margin-bottom: 18px;
 }
+
 .lcars-divider {
   height: 4px;
   width: 80%;
@@ -106,6 +118,7 @@ html, body {
   background: linear-gradient(to right, var(--gold), var(--blue));
   border-radius: 2px;
 }
+
 label {
   display: block;
   color: #ffffff;
@@ -113,11 +126,13 @@ label {
   margin-bottom: 6px;
   text-align: left;
 }
+
 label[for="cadetName"] {
   text-align: center;
   width: 100%;
   display: block;
 }
+
 input, select {
   width: 100%;
   padding: 12px;
@@ -128,12 +143,17 @@ input, select {
   font-size: 14pt;
   border-radius: 6px;
 }
+
 #cadetName {
   width: 50%;
   margin: 0 auto 18px;
   display: block;
 }
-::placeholder { color: rgba(255, 255, 255, 0.7); }
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 button {
   font-family: 'Orbitron', sans-serif;
   background: linear-gradient(to bottom, #003366, #001933);
@@ -149,16 +169,19 @@ button {
               0 6px 12px rgba(0, 0, 0, 0.9);
   transition: transform .2s, box-shadow .2s;
 }
+
 button:hover {
   transform: translateY(-2px);
   box-shadow: inset 0 6px 10px rgba(255, 255, 255, 0.08),
               inset 0 -6px 12px rgba(0, 0, 0, 0.7),
               0 14px 28px rgba(0, 0, 0, 1);
 }
+
 button:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
+
 .glow-message {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
@@ -169,7 +192,11 @@ button:disabled {
   opacity: 0;
   transition: opacity .6s ease-in;
 }
-#accessMessage.active { opacity: 1; }
+
+#accessMessage.active {
+  opacity: 1;
+}
+
 .corner-image {
   position: fixed;
   width: 2.5in;
@@ -178,8 +205,17 @@ button:disabled {
   pointer-events: none;
   z-index: 10;
 }
-.corner-left { top: 10px; left: 10px; }
-.corner-right { top: 10px; right: 10px; }
+
+.corner-left {
+  top: 10px;
+  left: 10px;
+}
+
+.corner-right {
+  top: 10px;
+  right: 10px;
+}
+
 .container {
   background: rgba(0, 0, 0, 0.8);
   border: 2px solid var(--gold);
@@ -190,6 +226,7 @@ button:disabled {
   z-index: 2;
   margin: auto;
 }
+
 #mainScreen {
   display: flex;
   justify-content: center;
@@ -197,18 +234,20 @@ button:disabled {
   height: 100vh;
   width: 100%;
   text-align: center;
-  overflow: hidden;
+  overflow-y: auto;
 }
+
 #mainScreen .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  max-width: 1000px;
-  width: 90%;
-  margin: 0 auto;
+  justify-content: space-between;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
   box-sizing: border-box;
 }
+
 .department-select-box {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -218,24 +257,14 @@ button:disabled {
   width: 100%;
   margin-top: 10px;
 }
+
 .km-button-box {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 25px;
 }
-.lab-answers, .exam-answers {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: stretch;
-  font-family: Arial, sans-serif;
-}
-.feedback {
-  text-align: center;
-  font-size: 16pt;
-  margin-top: 15px;
-}
+
 #trainingPage .fixed-return,
 #labPage .fixed-return,
 #examPage .fixed-return {
@@ -249,6 +278,7 @@ button:disabled {
   padding: 8px 18px;
   border-radius: 8px;
 }
+
 @media (max-width: 900px) {
   #trainingPage .fixed-return,
   #labPage .fixed-return,
@@ -259,6 +289,7 @@ button:disabled {
     transform: none;
   }
 }
+
 .training-section {
   position: relative;
   background: rgba(15, 20, 35, 0.78);
@@ -271,10 +302,12 @@ button:disabled {
   transition: transform 0.2s ease, box-shadow 0.3s ease;
   overflow: hidden;
 }
+
 .training-section:hover {
   transform: scale(1.01);
   box-shadow: 0 0 40px rgba(255, 212, 122, 0.35);
 }
+
 .training-header-bar {
   position: absolute;
   top: 0;
@@ -293,6 +326,7 @@ button:disabled {
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
   line-height: 28px;
 }
+
 .training-section h3 {
   color: var(--green);
   border-bottom: 2px solid var(--gold);
@@ -301,12 +335,14 @@ button:disabled {
   font-size: 20pt;
   letter-spacing: 1px;
 }
+
 .training-section p {
   font-size: 13.5pt;
   color: var(--text);
   line-height: 1.6;
   margin: 10px 0;
 }
+
 .training-answers {
   margin-top: 20px;
   padding: 18px 24px;
@@ -314,17 +350,20 @@ button:disabled {
   background: rgba(0, 0, 0, 0.45);
   border-left: 5px solid var(--gold);
 }
+
 .training-answers p {
   margin: 12px 0;
   padding-left: 8px;
   line-height: 1.5;
   font-size: 13.5pt;
 }
+
 .training-answers p strong {
   display: block;
   font-size: 13pt;
   margin-bottom: 3px;
 }
+
 .training-preface {
   text-align: center;
   font-size: 14pt;
@@ -333,17 +372,20 @@ button:disabled {
   line-height: 1.5;
   max-width: 850px;
 }
+
 .training-section p strong[style*="green"]::before {
   content: "▮ ";
   color: var(--green);
 }
+
 .training-section p strong[style*="yellow"]::before {
   content: "▮ ";
-  color: var(--yellow);
+  color: yellow;
 }
+
 .training-section p strong[style*="red"]::before {
   content: "▮ ";
-  color: var(--red);
+  color: red;
 }
   </style>
 </head>
@@ -710,4 +752,5 @@ button:disabled {
   </script>
 </body>
 </html>
+
 
