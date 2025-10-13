@@ -665,22 +665,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
    finalExamBtn.disabled = false;
-  finalExamBtn.textContent = "Kobayashi Maru - Engage";
+finalExamBtn.textContent = "Kobayashi Maru - Engage";
 
-  finalExamBtn.onclick = () => {
-    setTimeout(() => {
-      const login = document.getElementById("loginScreen");
-      login.classList.add("fade-out");
-      setTimeout(() => {
-        login.style.display = "none";
-        document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
-        document.getElementById("mainScreen").style.display = "block";
-      }, 5000); // 5-second fade duration
-    }, 4000);
-  };
+finalExamBtn.onclick = () => {
+  const name = encodeURIComponent(cadetName);
+  setTimeout(() => {
+    window.open(
+      `https://bigbird7827.github.io/Starfleet_Academy/Final_exam/Final_Exam.html?name=${name}&cachebust=${Date.now()}`,
+      "_blank",
+      "noopener"
+    );
+    window.location.href = "about:blank";
+  }, 100);
+};
+const params = new URLSearchParams(window.location.search);
+const cadetName = params.get("name") || "Unnamed Cadet";
+document.getElementById("cadetNameDisplay").textContent = cadetName;
 </script>
 </body>
 </html>
+
 
 
 
