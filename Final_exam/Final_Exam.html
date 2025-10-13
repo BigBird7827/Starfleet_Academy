@@ -160,54 +160,63 @@ button:hover {
   position: fixed;
   inset: 0;
   display: none;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   background: #000;
-  color: #dfffea;
+  color: #f7d774;
   font-family: 'Orbitron', sans-serif;
   z-index: 100;
 }
 .certificate {
+  position: relative;
   width: 90%;
-  height: 90%;
-  background: linear-gradient(180deg, #000 0%, #000 100%);
-  border: 6px solid gold;
+  max-width: 1200px;
+  border: 4px solid #f7d774;
   border-radius: 20px;
-  padding: 3rem;
-  box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+  padding: 3rem 4rem;
+  background: linear-gradient(180deg, #000 0%, #0a0a20 100%);
+  box-shadow: 0 0 40px rgba(74,176,255,0.4);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
+  color: #dbe9ff;
+}
+.certificate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #4ab0ff;
+  border-radius: 16px;
+  pointer-events: none;
 }
 .certificate h1 {
   font-size: 2.5rem;
-  margin-top: 2rem;
-  color: gold;
-  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  color: #f7d774;
+  letter-spacing: 1px;
 }
 .certificate p {
-  max-width: 900px;
   font-size: 1.2rem;
-  line-height: 1.8;
-  color: #87cefa;
-  margin-top: 1rem;
+  max-width: 900px;
+  line-height: 1.6;
+  color: #e6e6e6;
 }
-.corner-img {
+.certificate img.corner {
   position: absolute;
-  top: 30px;
-  width: 180px;
+  width: 13%;
   height: auto;
+  opacity: 0.95;
 }
-.corner-left { left: 40px; }
-.corner-right { right: 40px; }
+.certificate img.left { top: 25px; left: 25px; }
+.certificate img.right { top: 25px; right: 25px; }
 .signature-row {
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 .signature {
   text-align: center;
@@ -215,62 +224,60 @@ button:hover {
 }
 .signature-name {
   font-family: 'Brush Script MT', cursive;
-  font-size: 2rem;
-  color: #87cefa;
-  border-bottom: 2px solid gold;
-  padding-bottom: 5px;
+  font-size: 1.8rem;
+  color: #f7d774;
 }
 .signature-title {
   font-size: 1rem;
-  color: gold;
-  margin-top: 0.4rem;
+  color: #4ab0ff;
+  margin-top: -0.4rem;
 }
 </style>
 </head>
 <body class="alert-green">
-  <div id="stars"></div>
-  <div id="hud">
-    <div id="main-panel">
-      <div id="header">KOBAYASHI MARU — STARFLEET SIMULATION</div>
-      <div id="message">Initializing simulation...</div>
-      <div id="buttons"></div>
-      <div id="tactical"><div id="sweep"></div></div>
+<div id="stars"></div>
+<div id="hud">
+  <div id="main-panel">
+    <div id="header">KOBAYASHI MARU — STARFLEET SIMULATION</div>
+    <div id="message">Initializing simulation...</div>
+    <div id="buttons"></div>
+    <div id="tactical"><div id="sweep"></div></div>
+  </div>
+  <div id="side-panels">
+    <div id="alert-controls">
+      <h3>Alert Controls</h3>
+      <button class="alert-btn green" onclick="setAlert('green')">Green Alert</button>
+      <button class="alert-btn yellow" onclick="setAlert('yellow')">Yellow Alert</button>
+      <button class="alert-btn red" onclick="setAlert('red')">Red Alert</button>
     </div>
-    <div id="side-panels">
-      <div id="alert-controls">
-        <h3>Alert Controls</h3>
-        <button class="alert-btn green" onclick="setAlert('green')">Green Alert</button>
-        <button class="alert-btn yellow" onclick="setAlert('yellow')">Yellow Alert</button>
-        <button class="alert-btn red" onclick="setAlert('red')">Red Alert</button>
-      </div>
-      <div id="ship-systems">
-        <h3>Ship Systems</h3>
-        <button onclick="systemAction('Shields raised to full.')">Raise Shields</button>
-        <button onclick="systemAction('Power diverted to engines.')">Divert Power</button>
-        <button onclick="systemAction('Long-range scan initiated.')">Scan Area</button>
-        <button onclick="systemAction('Opening hailing frequencies.')">Open Hailing</button>
-      </div>
+    <div id="ship-systems">
+      <h3>Ship Systems</h3>
+      <button onclick="systemAction('Shields raised to full.')">Raise Shields</button>
+      <button onclick="systemAction('Power diverted to engines.')">Divert Power</button>
+      <button onclick="systemAction('Long-range scan initiated.')">Scan Area</button>
+      <button onclick="systemAction('Opening hailing frequencies.')">Open Hailing</button>
     </div>
   </div>
+</div>
 
-  <div id="graduation">
-    <div class="certificate">
-      <img src="https://pngset.com/images/star-trek-federation-logo-starfleet-command-symbol-trademark-emblem-text-transparent-png-2703494.png" class="corner-img corner-left">
-      <img src="https://tse4.mm.bing.net/th/id/OIP.1R3hD5fa-qJ_ewmyXxyS2AHaFX?cb=12&pid=Api" class="corner-img corner-right">
-      <h1>Starfleet Academy Certificate of Completion</h1>
-      <p>This certifies that Cadet [Name] has successfully completed the Starfleet Academy Command Training Program, including the Kobayashi Maru Simulation, and is hereby commissioned to the rank of Ensign in Starfleet.</p>
-      <div class="signature-row">
-        <div class="signature">
-          <div class="signature-name">A. Necheyev</div>
-          <div class="signature-title">Admiral, Commandant<br>Starfleet Academy</div>
-        </div>
-        <div class="signature">
-          <div class="signature-name">Jean-Luc Picard</div>
-          <div class="signature-title">Captain, Headmaster<br>Starfleet Academy</div>
-        </div>
+<div id="graduation">
+  <div class="certificate">
+    <img src="https://pngset.com/images/star-trek-federation-logo-starfleet-command-symbol-trademark-emblem-text-transparent-png-2703494.png" class="corner left" alt="">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.1R3hD5fa-qJ_ewmyXxyS2AHaFX?cb=12&pid=Api" class="corner right" alt="">
+    <h1>Starfleet Academy Certificate of Completion</h1>
+    <p id="grad-text"></p>
+    <div class="signature-row">
+      <div class="signature">
+        <div class="signature-name">A. Necheyev</div>
+        <div class="signature-title">Admiral — Commandant, Starfleet Academy</div>
+      </div>
+      <div class="signature">
+        <div class="signature-name">Jean-Luc Picard</div>
+        <div class="signature-title">Captain — Headmaster, Starfleet Academy</div>
       </div>
     </div>
   </div>
+</div>
 
 <script>
 const DATA_URL = "Kobayashi_Maru.json";
@@ -279,10 +286,35 @@ const buttonsBox = document.getElementById('buttons');
 const stars = document.getElementById('stars');
 const tactical = document.getElementById('tactical');
 const gradScreen = document.getElementById('graduation');
+const gradText = document.getElementById('grad-text');
 let scenes = {};
 let currentAlert = 'green';
 let contactsPresent = false;
 const metrics = { aggression: 0, caution: 0, empathy: 0, diplomacy: 0, protocol: 0 };
+const debriefs = {
+  rescue: "Cadet chose to cross the Neutral Zone and mount a rescue of the Kobayashi Maru...",
+  treaty: "Cadet declined to violate the Neutral Zone...",
+  partial: "Cadet initiated a rescue operation with partial success...",
+  negotiation: "Cadet opened communications with Klingon forces...",
+  withdrawal: "Cadet assessed the tactical imbalance and elected to withdraw..."
+};
+const departments = ["Command", "Science", "Engineering", "Medical", "Security", "Tactical"];
+const ships = [
+  { name: "Enterprise", reg: "NCC-1701-E" },
+  { name: "Voyager", reg: "NCC-74656" },
+  { name: "Defiant", reg: "NX-74205" },
+  { name: "Excelsior", reg: "NCC-2000" },
+  { name: "Titan", reg: "NCC-80102" }
+];
+for (let i = 0; i < 220; i++) {
+  const s = document.createElement('div');
+  s.className = 'star';
+  s.style.top = Math.random() * 100 + '%';
+  s.style.left = Math.random() * 100 + '%';
+  s.style.animationDelay = (Math.random() * 5) + 's';
+  s.style.opacity = Math.random();
+  stars.appendChild(s);
+}
 function toMap(list) {
   const m = {};
   list.forEach(o => { if (o && o.id) m[o.id] = o; });
@@ -329,13 +361,18 @@ function recordMetrics(choice) {
 }
 function determineDebrief() {
   const { aggression, caution, empathy, diplomacy, protocol } = metrics;
-  if (diplomacy > aggression && diplomacy > caution) return "negotiation";
-  if (aggression > empathy && aggression > caution) return "rescue";
-  if (empathy > aggression && empathy >= diplomacy) return "partial";
-  if (protocol > empathy && protocol >= aggression) return "treaty";
-  return "withdrawal";
+  if (diplomacy > aggression && diplomacy > caution) return debriefs.negotiation;
+  if (aggression > empathy && aggression > caution) return debriefs.rescue;
+  if (empathy > aggression && empathy >= diplomacy) return debriefs.partial;
+  if (protocol > empathy && protocol >= aggression) return debriefs.treaty;
+  return debriefs.withdrawal;
 }
 function showGraduation() {
+  const dept = departments[Math.floor(Math.random() * departments.length)];
+  const ship = ships[Math.floor(Math.random() * ships.length)];
+  gradText.innerHTML =
+    `This certifies that Cadet has successfully completed the Starfleet Academy Command Training Program, including the Kobayashi Maru Simulation, and is hereby commissioned to the rank of Ensign in Starfleet.<br><br>` +
+    `You are directed to report to the ${dept} department onboard the USS ${ship.name}, ${ship.reg}.`;
   document.getElementById("hud").style.display = "none";
   gradScreen.style.display = "flex";
 }
@@ -365,8 +402,43 @@ function showScene(id) {
       };
       buttonsBox.appendChild(b);
     });
+    if (sc.id.startsWith("end")) {
+      const d = determineDebrief();
+      buttonsBox.innerHTML = "";
+      const b1 = document.createElement("button");
+      b1.textContent = "View Starfleet Debrief";
+      b1.onclick = () => {
+        typeText(d, () => {
+          buttonsBox.innerHTML = "";
+          const endBtn = document.createElement("button");
+          endBtn.textContent = "End Simulation";
+          endBtn.onclick = showGraduation;
+          buttonsBox.appendChild(endBtn);
+        });
+      };
+      buttonsBox.appendChild(b1);
+    }
   });
 }
+function spawnBlip() {
+  if (!contactsPresent) return;
+  const angle = Math.random() * 2 * Math.PI;
+  const radius = 80;
+  const b = document.createElement('div');
+  b.className = 'blip';
+  b.style.top = 50 + radius * Math.sin(angle) + '%';
+  b.style.left = 50 + radius * Math.cos(angle) + '%';
+  tactical.appendChild(b);
+  setTimeout(() => {
+    b.style.top = '50%';
+    b.style.left = '50%';
+    b.style.opacity = 1;
+  }, 50);
+  setTimeout(() => {
+    if (b.parentNode === tactical) tactical.removeChild(b);
+  }, 9000);
+}
+setInterval(spawnBlip, 3000);
 async function init() {
   try {
     messageBox.textContent = "Loading mission data...";
