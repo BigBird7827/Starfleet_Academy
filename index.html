@@ -114,6 +114,11 @@ label {
   margin-bottom: 6px;
   text-align: left;
 }
+    label[for="cadetName"] {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
 input, select {
   width: 100%;
   padding: 12px;
@@ -669,17 +674,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const login = document.getElementById("loginScreen");
   login.classList.add("fade-out");
   setTimeout(() => {
+  const login = document.getElementById("loginScreen");
+  login.classList.add("fade-out");
+  setTimeout(() => {
     login.style.display = "none";
     document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
     document.getElementById("mainScreen").style.display = "block";
   }, 2500); // matches the 2.5s fade
 }, 4000);
-
 };
 });
 </script>
 </body>
 </html>
+
 
 
 
