@@ -440,7 +440,7 @@ async function init() {
   }
 }
 document.addEventListener('DOMContentLoaded', init);
-  const params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search);
 const cadetName = params.get("name") || "Unnamed Cadet";
 const nameField = document.createElement("h2");
 nameField.id = "cadetNameDisplay";
@@ -449,4 +449,5 @@ document.querySelector(".certificate h1").after(nameField);
 </script>
 </body>
 </html>
+
 
