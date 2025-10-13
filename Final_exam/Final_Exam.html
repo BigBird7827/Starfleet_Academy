@@ -294,6 +294,7 @@ const tactical = document.getElementById('tactical');
 const gradScreen = document.getElementById('graduation');
 const gradDept = document.getElementById('grad-dept');
 const gradShip = document.getElementById('grad-ship');
+const gradName = document.getElementById('cadet-name');
 let scenes = {};
 let currentAlert = 'green';
 let contactsPresent = false;
@@ -315,6 +316,7 @@ const ships = [
   { name: "Titan", reg: "NCC-80102" }
 ];
 
+// background stars
 for (let i = 0; i < 220; i++) {
   const s = document.createElement('div');
   s.className = 'star';
@@ -388,12 +390,14 @@ function determineDebrief() {
 function showGraduation() {
   const dept = departments[Math.floor(Math.random() * departments.length)];
   const ship = ships[Math.floor(Math.random() * ships.length)];
-  gradDept.innerHTML = `<h2>${dept} Division</h2>`;
-  gradShip.innerHTML = `<h2>USS ${ship.name}, ${ship.reg}</h2>`;
+  gradDept.textContent = dept + " Division";
+  gradShip.textContent = `USS ${ship.name} ${ship.reg}`;
+  gradName.textContent = "Cadet, Starfleet Academy";
   document.getElementById("hud").style.display = "none";
   gradScreen.style.display = "flex";
 }
 
+// The missing showScene function restored here:
 function showScene(id) {
   const sc = scenes[id];
   if (!sc) {
@@ -402,9 +406,11 @@ function showScene(id) {
     buttonsBox.innerHTML = "";
     return;
   }
+
   const inferred = detectAlertFromText(sc.text || "");
   if (inferred) setAlert(inferred);
   if (detectContactsFromText(sc.text || "")) contactsPresent = true;
+
   buttonsBox.innerHTML = "";
   typeText(sc.text || "", () => {
     (sc.options || []).forEach(o => {
@@ -420,6 +426,7 @@ function showScene(id) {
       };
       buttonsBox.appendChild(b);
     });
+
     if (sc.id.startsWith("end")) {
       const d = determineDebrief();
       buttonsBox.innerHTML = "";
@@ -439,6 +446,7 @@ function showScene(id) {
   });
 }
 
+// radar contact system
 function spawnBlip() {
   if (!contactsPresent) return;
   const angle = Math.random() * 2 * Math.PI;
@@ -459,21 +467,24 @@ function spawnBlip() {
 }
 setInterval(spawnBlip, 3000);
 
+// main initialization
 async function init() {
   try {
     messageBox.textContent = "Loading mission data...";
     const res = await fetch(DATA_URL, { cache: 'no-store' });
     const data = await res.json();
     scenes = toMap(Array.isArray(data) ? data : (data.scenes || []));
-    if (!scenes.start) throw new Error('Missing start');
+    if (!scenes.start) throw new Error('Missing start scene');
     showScene('start');
   } catch (e) {
+    console.error(e);
     setAlert('red');
     messageBox.textContent = "Error loading mission data.";
     buttonsBox.innerHTML = "";
   }
 }
+
 document.addEventListener('DOMContentLoaded', init);
 </script>
-</body>
-</html>
+
+
