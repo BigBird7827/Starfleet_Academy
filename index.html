@@ -45,10 +45,8 @@ html, body {
   justify-content: center;
   align-items: center;
   z-index: 0;
-}
-    #loginScreen {
   opacity: 1;
-  transition: opacity 2.5s ease-out;
+  transition: opacity 5s ease-out;
 }
 #loginScreen.fade-out {
   opacity: 0;
@@ -666,27 +664,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  finalExamBtn.disabled = false;
+   finalExamBtn.disabled = false;
   finalExamBtn.textContent = "Kobayashi Maru - Engage";
 
   finalExamBtn.onclick = () => {
-  setTimeout(() => {
-  const login = document.getElementById("loginScreen");
-  login.classList.add("fade-out");
-  setTimeout(() => {
-  const login = document.getElementById("loginScreen");
-  login.classList.add("fade-out");
-  setTimeout(() => {
-    login.style.display = "none";
-    document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
-    document.getElementById("mainScreen").style.display = "block";
-  }, 2500); // matches the 2.5s fade
-}, 4000);
-};
-});
+    setTimeout(() => {
+      const login = document.getElementById("loginScreen");
+      login.classList.add("fade-out");
+      setTimeout(() => {
+        login.style.display = "none";
+        document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
+        document.getElementById("mainScreen").style.display = "block";
+      }, 5000); // 5-second fade duration
+    }, 4000);
+  };
 </script>
 </body>
 </html>
+
+
+
 
 
 
