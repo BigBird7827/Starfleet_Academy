@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Starfleet Academy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starfleet Academy</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
 :root {
   --gold: #ffd47a;
   --blue: #4ab0ff;
   --green: #00cc66;
+  --yellow: #ffeb3b;
   --red: #cc0033;
   --dark-blue: #001933;
   --black: #000;
@@ -46,16 +47,10 @@ html, body {
   align-items: center;
   z-index: 0;
   opacity: 1;
-  transition: opacity 5s ease-out;
+  transition: opacity 3s ease-out;
 }
-#loginScreen.fade-out {
-  opacity: 0;
-}
-    .fade-in {
-  opacity: 0;
-  animation: fadeIn 3s forwards;
-}
-
+#loginScreen.fade-out { opacity: 0; }
+#mainScreen.fade-in { animation: fadeIn 3s ease-in; }
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -74,16 +69,8 @@ html, body {
   text-transform: uppercase;
   font-weight: bold;
 }
-.lcars-top {
-  top: 0;
-  height: 50px;
-  border-bottom-left-radius: 50px;
-}
-.lcars-bottom {
-  bottom: 0;
-  height: 40px;
-  border-top-left-radius: 50px;
-}
+.lcars-top { top: 0; height: 50px; border-bottom-left-radius: 50px; }
+.lcars-bottom { bottom: 0; height: 40px; border-top-left-radius: 50px; }
 .glass-panel {
   background: rgba(30, 40, 60, 0.125);
   backdrop-filter: blur(20px) saturate(180%);
@@ -93,12 +80,7 @@ html, body {
   padding: 40px 50px;
   width: 680px;
   text-align: center;
-  animation: panelFadeIn 1.4s ease-in-out;
   color: var(--text);
-}
-@keyframes panelFadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
 }
 .login-subtext {
   font-size: 13pt;
@@ -163,10 +145,7 @@ button:hover {
               inset 0 -6px 12px rgba(0, 0, 0, 0.7),
               0 14px 28px rgba(0, 0, 0, 1);
 }
-button:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
+button:disabled { opacity: 0.4; cursor: not-allowed; }
 .glow-message {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
@@ -198,164 +177,7 @@ button:disabled {
   z-index: 2;
   margin: auto;
 }
-.department-select-box {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-  max-width: 700px;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.8);
-  border: 2px solid var(--gold);
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 0 15px var(--blue);
-}
-.km-button-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 25px;
-}
-.lab-answers, .exam-answers {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: stretch;
-  font-family: Arial, sans-serif;
-}
-.feedback {
-  text-align: center;
-  font-size: 16pt;
-  margin-top: 15px;
-}
-#mainScreen {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  width: 100%;
-  text-align: center;
-}
-#mainScreen .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: calc(min(calc(100% - 6in), 1400px) - 100px);
-  margin: 100px auto 0 auto;
-}
-#trainingPage .fixed-return,
-#labPage .fixed-return,
-#examPage .fixed-return {
-  position: fixed;
-  top: calc(50% + 250px);
-  left: 5px;
-  transform: translateY(-50%);
-  z-index: 1000;
-  bottom: auto;
-  font-size: 13pt;
-  padding: 8px 18px;
-  border-radius: 8px;
-}
-@media (max-width: 900px) {
-  #trainingPage .fixed-return,
-  #labPage .fixed-return,
-  #examPage .fixed-return {
-    top: auto;
-    bottom: 20px;
-    left: 10px;
-    transform: none;
-  }
-}
-.training-section {
-  position: relative;
-  background: rgba(15, 20, 35, 0.78);
-  border: 2px solid var(--gold);
-  border-radius: 14px;
-  padding: 50px 36px 30px 36px;
-  margin: 50px auto;
-  box-shadow: 0 0 25px rgba(255, 212, 122, 0.25);
-  max-width: 950px;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-}
-.training-section:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 40px rgba(255, 212, 122, 0.35);
-}
-.training-header-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 28px;
-  background: linear-gradient(to right, var(--gold), var(--blue));
-  border-bottom: 2px solid var(--gold);
-  text-align: right;
-  padding-right: 18px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 12pt;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #000;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
-  line-height: 28px;
-}
-.training-section h3 {
-  color: var(--green);
-  border-bottom: 2px solid var(--gold);
-  padding-bottom: 8px;
-  margin-bottom: 18px;
-  font-size: 20pt;
-  letter-spacing: 1px;
-}
-.training-section p {
-  font-size: 13.5pt;
-  color: var(--text);
-  line-height: 1.6;
-  margin: 10px 0;
-}
-.training-answers {
-  margin-top: 20px;
-  padding: 18px 24px;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.45);
-  border-left: 5px solid var(--gold);
-}
-.training-answers p {
-  margin: 12px 0;
-  padding-left: 8px;
-  line-height: 1.5;
-  font-size: 13.5pt;
-}
-.training-answers p strong {
-  display: block;
-  font-size: 13pt;
-  margin-bottom: 3px;
-}
-.training-preface {
-  text-align: center;
-  font-size: 14pt;
-  color: var(--gold);
-  margin: 25px auto 40px;
-  line-height: 1.5;
-  max-width: 850px;
-}
-.training-section p strong[style*="green"]::before {
-  content: "▮ ";
-  color: var(--green);
-}
-.training-section p strong[style*="yellow"]::before {
-  content: "▮ ";
-  color: yellow;
-}
-.training-section p strong[style*="red"]::before {
-  content: "▮ ";
-  color: var(--red);
-}
-  </style>
+</style>
 </head>
 <body>
 <div id="loginScreen">
@@ -390,7 +212,6 @@ button:disabled {
     <div id="accessMessage" class="glow-message">Authenticating...</div>
   </div>
 </div>
-
 <div id="mainScreen" style="display:none;">
   <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
   <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
@@ -431,7 +252,8 @@ button:disabled {
     </div>
   </div>
 </div>
-  <div id="orientationPage" style="display:none;text-align:center;">
+
+<div id="orientationPage" style="display:none;text-align:center;">
   <div class="page-title" id="orientationTitle"></div>
   <div id="moduleButtons" class="department-select-box"></div>
   <button id="returnMain" class="fixed-return">Return to Main</button>
@@ -459,31 +281,19 @@ button:disabled {
 </div>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const departments = ["Command", "Diplomacy", "Engineering", "Security", "Science", "Medical"];
+  const departments = ["Command","Diplomacy","Engineering","Security","Science","Medical"];
   const trainingFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Training.json`]));
   const labFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Lab.json`]));
   const examFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Exam.json`]));
   const progress = { labs: {}, exams: {} };
-
-  const trainingBlurbs = {
-    Command: "In this module, you are the Captain. You will learn to command with authority, clarity, and composure under pressure. Each scenario will challenge your ability to assess risk, make rapid decisions, and inspire confidence in your crew. You will be tested not only on tactical awareness, but on judgment, empathy, and moral conviction — the true qualities of command.",
-    Diplomacy: "This module focuses on the art and science of interstellar relations. You will learn to navigate complex negotiations, defuse conflicts, and build consensus among diverse species and cultures. Your success will depend on patience, empathy, and the ability to find common ground — even when none seems to exist.",
-    Engineering: "In this module, you are responsible for keeping the ship operational under any condition. You will learn diagnostic reasoning, problem-solving under stress, and the creative application of limited resources. From warp core dynamics to life support systems, your duty is simple: keep the ship flying.",
-    Security: "This module will train you to think like a protector of the crew and the Federation. You will evaluate threats, plan responses, and maintain discipline under pressure. Your success will rely on vigilance, tactical precision, and an unwavering sense of duty — the shield that guards Starfleet.",
-    Science: "In this module, you are the mind of discovery. You will explore the unknown, analyze phenomena, and apply scientific principles to solve complex problems. Observation, logic, and curiosity will guide your path as you expand the frontiers of knowledge for all of Starfleet.",
-    Medical: "In this module, you are the healer. You will learn to diagnose, treat, and care for beings from across the quadrant. Your focus will be on precision, compassion, and calm under pressure. Remember: every life in your hands represents the mission and ideals of Starfleet itself."
-  };
-
   const homeworlds = {
     "Human": "Earth","Vulcan": "Vulcan","Andorian": "Andoria","Aenar": "Andoria","Tellarite": "Tellar Prime",
     "Bajoran": "Bajor","Betazoid": "Betazed","Bolian": "Bolarus IX","Trill": "Trill","Klingon": "Qo'noS",
     "Ferengi": "Ferenginar","Denobulan": "Denobula","Orion": "Orion","Caitian": "Cait","Benzite": "Benzar"
   };
-
   let cadetName = "", species = "";
   const examBtn = document.getElementById("examBtn");
   const finalExamBtn = document.getElementById("finalExamBtn");
-
   function checkProgress() {
     const allLabsDone = departments.every(d => progress.labs[d]);
     const allExamsDone = departments.every(d => progress.exams[d]);
@@ -508,8 +318,10 @@ document.addEventListener("DOMContentLoaded", () => {
       login.classList.add("fade-out");
       setTimeout(() => {
         login.style.display = "none";
+        const main = document.getElementById("mainScreen");
+        main.style.display = "block";
+        main.classList.add("fade-in");
         document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
-        document.getElementById("mainScreen").style.display = "block";
       }, 3000);
     }, 4000);
   });
@@ -530,11 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
       b.onclick = () => { mode === "training" ? loadTraining(dept) : mode === "lab" ? loadLab(dept) : loadExam(dept); };
       btnBox.appendChild(b);
     });
-    const page = document.getElementById("orientationPage");
-    page.classList.remove("fade-in");
-    page.style.display = "block";
-    void page.offsetWidth;
-    page.classList.add("fade-in");
+    document.getElementById("orientationPage").style.display = "block";
   }
 
   document.getElementById("returnMain").onclick = () => {
@@ -544,28 +352,16 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   document.getElementById("returnOrientationTrain").onclick = () => {
     document.getElementById("trainingPage").style.display = "none";
-    const page = document.getElementById("orientationPage");
-    page.classList.remove("fade-in");
-    page.style.display = "block";
-    void page.offsetWidth;
-    page.classList.add("fade-in");
+    document.getElementById("orientationPage").style.display = "block";
   };
   document.getElementById("returnOrientationLab").onclick = () => {
     document.getElementById("labPage").style.display = "none";
-    const page = document.getElementById("orientationPage");
-    page.classList.remove("fade-in");
-    page.style.display = "block";
-    void page.offsetWidth;
-    page.classList.add("fade-in");
+    document.getElementById("orientationPage").style.display = "block";
     checkProgress();
   };
   document.getElementById("returnOrientationExam").onclick = () => {
     document.getElementById("examPage").style.display = "none";
-    const page = document.getElementById("orientationPage");
-    page.classList.remove("fade-in");
-    page.style.display = "block";
-    void page.offsetWidth;
-    page.classList.add("fade-in");
+    document.getElementById("orientationPage").style.display = "block";
     checkProgress();
   };
 
@@ -573,12 +369,28 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("orientationPage").style.display = "none";
     document.getElementById("trainingPage").style.display = "block";
     document.getElementById("trainingDeptTitle").textContent = `${dept} Study`;
-    document.getElementById("trainingCadetInfo").innerHTML = `Cadet ${cadetName} of ${homeworlds[species]}<br><br><em>${trainingBlurbs[dept]}</em>`;
+    document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
     const content = document.getElementById("trainingContent");
     content.innerHTML = "<p>Loading...</p>";
     const res = await fetch(trainingFiles[dept]);
     const data = await res.json();
     content.innerHTML = "";
+
+    const blurbs = {
+      "Command": "In this module, you will assume the responsibilities of a starship captain, learning to lead under pressure and make command decisions guided by Starfleet ethics and Federation law.",
+      "Diplomacy": "In this module, you will develop negotiation, cultural awareness, and conflict resolution skills necessary for interstellar diplomacy within the United Federation of Planets.",
+      "Engineering": "In this module, you will master the technical principles of warp propulsion, systems maintenance, and emergency repair protocols essential to Starfleet operations.",
+      "Security": "In this module, you will learn the principles of tactical readiness, shipboard defense, and the ethical use of force consistent with Starfleet security regulations.",
+      "Science": "In this module, you will apply analytical reasoning and scientific methodology to explore the unknown and expand Federation knowledge across the galaxy.",
+      "Medical": "In this module, you will study xenobiology, first contact medicine, and Starfleet medical protocols vital to the care of crews from diverse worlds."
+    };
+
+    const blurb = document.createElement("p");
+    blurb.style.color = "var(--gold)";
+    blurb.style.textAlign = "center";
+    blurb.style.marginBottom = "30px";
+    blurb.textContent = blurbs[dept];
+    content.appendChild(blurb);
     data.study?.forEach(item => {
       const section = document.createElement("div");
       section.className = "training-section";
@@ -597,7 +409,7 @@ document.addEventListener("DOMContentLoaded", () => {
       item.answers.forEach((ans, i) => {
         const p = document.createElement("p");
         const strong = document.createElement("strong");
-        strong.style.color = i === 0 ? "green" : i === 1 ? "yellow" : "red";
+        strong.style.color = i === 0 ? "var(--green)" : i === 1 ? "var(--yellow)" : "var(--red)";
         strong.textContent = ans.text;
         const span = document.createElement("span");
         span.textContent = ans.details;
@@ -644,11 +456,7 @@ document.addEventListener("DOMContentLoaded", () => {
             else {
               progress.labs[dept] = true;
               document.getElementById("labPage").style.display = "none";
-              const page = document.getElementById("orientationPage");
-              page.classList.remove("fade-in");
-              page.style.display = "block";
-              void page.offsetWidth;
-              page.classList.add("fade-in");
+              document.getElementById("orientationPage").style.display = "block";
               checkProgress();
             }
           };
@@ -695,11 +503,7 @@ document.addEventListener("DOMContentLoaded", () => {
             else {
               progress.exams[dept] = true;
               document.getElementById("examPage").style.display = "none";
-              const page = document.getElementById("orientationPage");
-              page.classList.remove("fade-in");
-              page.style.display = "block";
-              void page.offsetWidth;
-              page.classList.add("fade-in");
+              document.getElementById("orientationPage").style.display = "block";
               checkProgress();
             }
           };
@@ -729,5 +533,3 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 </body>
 </html>
-
-
