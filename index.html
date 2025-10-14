@@ -234,18 +234,23 @@ button:disabled {
   height: 100vh;
   width: 100%;
   text-align: center;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 #mainScreen .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  height: 90vh;
   max-height: 90vh;
-  overflow-y: auto;
-  padding: 20px;
+  padding: 20px 40px;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+#mainScreen .container p {
+  margin: 0;
 }
 
 .department-select-box {
@@ -391,106 +396,103 @@ button:disabled {
 </head>
 
 <body>
-  <div id="loginScreen">
-  <div class="lcars-top">Starfleet Academy - Established 2161</div>
-  <div class="lcars-bottom">Ex Astris Scientia</div>
-  <div class="container glass-panel">
-    <div class="page-title">STARFLEET ACADEMY</div>
-    <p class="login-subtext">Authorization required for Federation access</p>
-    <div class="lcars-divider"></div>
-    <label for="cadetName">Cadet Name</label>
-    <input type="text" id="cadetName" required placeholder="Enter full designation">
-    <label for="species">Species</label>
-    <select id="species" required>
-      <option value="">-- Select Species --</option>
-      <option>Human</option>
-      <option>Vulcan</option>
-      <option>Andorian</option>
-      <option>Aenar</option>
-      <option>Tellarite</option>
-      <option>Bajoran</option>
-      <option>Betazoid</option>
-      <option>Bolian</option>
-      <option>Trill</option>
-      <option>Klingon</option>
-      <option>Ferengi</option>
-      <option>Denobulan</option>
-      <option>Orion</option>
-      <option>Caitian</option>
-      <option>Benzite</option>
-    </select>
-    <button id="loginBtn">Initiate Access Protocol</button>
-    <div id="accessMessage" class="glow-message">Authenticating...</div>
-  </div>
-</div>
-
-<div id="mainScreen" style="display:none;">
-  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-  <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
-  <div class="container">
-    <div class="page-title">Welcome to Starfleet Academy</div>
-    <div id="mainWelcome" style="font-size:18pt;margin-bottom:20px;"></div>
-    <p style="font-size:14pt;color:#fff;margin-bottom:20px;text-align:center;max-width:900px;">
-      Congratulations, Cadet. You have been accepted into Starfleet Academy,
-      where the finest minds of the Federation prepare to serve in the vast
-      frontier of space. Here, you will learn the disciplines of command,
-      diplomacy, science, engineering, medicine, and security — each a vital
-      pillar in the exploration and defense of the Federation.
-    </p>
-    <div style="font-size:14pt;color:#fff;margin-bottom:48px;text-align:center;max-width:900px;line-height:1.6;word-wrap:break-word;">
-      <p>
-        Choose your discipline and commence your studies by selecting the "Study" button below. 
-        When you have completed your studies, return to this console and select the "Labs" button to evaluate your proficiency. 
-        Upon completion of all lab modules, return again to this console and select the "Exams" button to complete your academic requirements.
-      </p>
-      <br>
-      <p>
-        Prior to graduation, all cadets are required to undertake the "Kobayashi Maru" simulation — a no-win scenario designed to test your command character. 
-        Your performance in this exercise does not affect your eligibility for graduation.
-      </p>
-      <br>
-      <p>
-        Good luck, Cadet.
-      </p>
-      <br>
-    </div>
-    <div class="department-select-box" style="grid-template-columns: repeat(3, 1fr); width:auto;">
-      <button id="trainingBtn" style="width:200px;">Study</button>
-      <button id="labBtn" style="width:200px;">Labs</button>
-      <button id="examBtn" style="width:200px;" disabled>Exams</button>
-    </div>
-    <div class="km-button-box">
-      <button id="finalExamBtn" style="width:300px;" disabled>Kobayashi Maru - Locked</button>
+   <div id="loginScreen">
+    <div class="lcars-top">Starfleet Academy - Established 2161</div>
+    <div class="lcars-bottom">Ex Astris Scientia</div>
+    <div class="container glass-panel">
+      <div class="page-title">STARFLEET ACADEMY</div>
+      <p class="login-subtext">Authorization required for Federation access</p>
+      <div class="lcars-divider"></div>
+      <label for="cadetName">Cadet Name</label>
+      <input type="text" id="cadetName" required placeholder="Enter full designation">
+      <label for="species">Species</label>
+      <select id="species" required>
+        <option value="">-- Select Species --</option>
+        <option>Human</option>
+        <option>Vulcan</option>
+        <option>Andorian</option>
+        <option>Aenar</option>
+        <option>Tellarite</option>
+        <option>Bajoran</option>
+        <option>Betazoid</option>
+        <option>Bolian</option>
+        <option>Trill</option>
+        <option>Klingon</option>
+        <option>Ferengi</option>
+        <option>Denobulan</option>
+        <option>Orion</option>
+        <option>Caitian</option>
+        <option>Benzite</option>
+      </select>
+      <button id="loginBtn">Initiate Access Protocol</button>
+      <div id="accessMessage" class="glow-message">Authenticating...</div>
     </div>
   </div>
-</div>
 
-<div id="orientationPage" style="display:none;text-align:center;">
-  <div class="page-title" id="orientationTitle"></div>
-  <div id="moduleButtons" class="department-select-box"></div>
-  <button id="returnMain" class="fixed-return">Return to Main</button>
-</div>
+  <div id="mainScreen" style="display:none;">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
+    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+    <div class="container">
+      <div class="page-title">Welcome to Starfleet Academy</div>
+      <div id="mainWelcome" style="font-size:18pt;margin-bottom:10px;"></div>
+      <p style="font-size:14pt;color:#fff;margin-bottom:10px;text-align:center;max-width:800px;">
+        Congratulations, Cadet. You have been accepted into Starfleet Academy,
+        where the finest minds of the Federation prepare to serve in the vast
+        frontier of space. Here, you will learn the disciplines of command,
+        diplomacy, science, engineering, medicine, and security — each a vital
+        pillar in the exploration and defense of the Federation.
+      </p>
+      <p style="font-size:14pt;color:#fff;text-align:center;max-width:800px;line-height:1.5;">
+        Choose your discipline and commence your studies by selecting the "Study" button below.
+        When you have completed your studies, return to this console and select the "Labs" button
+        to evaluate your proficiency. Upon completion of all lab modules, return again to this console
+        and select the "Exams" button to complete your academic requirements.
+      </p>
+      <p style="font-size:14pt;color:#fff;text-align:center;max-width:800px;line-height:1.5;">
+        Prior to graduation, all cadets are required to undertake the "Kobayashi Maru" simulation — 
+        a no-win scenario designed to test your command character. Your performance in this exercise 
+        does not affect your eligibility for graduation.
+      </p>
+      <p style="font-size:14pt;color:#fff;text-align:center;margin-top:10px;">Good luck, Cadet.</p>
 
-<div id="trainingPage" style="display:none;text-align:center;">
-  <div class="page-title" id="trainingDeptTitle"></div>
-  <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-  <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-  <button id="returnOrientationTrain" class="fixed-return">Return to Departments</button>
-</div>
+      <div class="department-select-box" style="grid-template-columns: repeat(3, 1fr); width:auto;">
+        <button id="trainingBtn" style="width:200px;">Study</button>
+        <button id="labBtn" style="width:200px;">Labs</button>
+        <button id="examBtn" style="width:200px;" disabled>Exams</button>
+      </div>
 
-<div id="labPage" style="display:none;text-align:center;">
-  <div class="page-title" id="labDeptTitle"></div>
-  <div id="labCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-  <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-  <button id="returnOrientationLab" class="fixed-return">Return to Departments</button>
-</div>
+      <div class="km-button-box">
+        <button id="finalExamBtn" style="width:300px;" disabled>Kobayashi Maru - Locked</button>
+      </div>
+    </div>
+  </div>
 
-<div id="examPage" style="display:none;text-align:center;">
-  <div class="page-title" id="examDeptTitle"></div>
-  <div id="examCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-  <div id="examContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
-  <button id="returnOrientationExam" class="fixed-return">Return to Departments</button>
-</div>
+  <div id="orientationPage" style="display:none;text-align:center;">
+    <div class="page-title" id="orientationTitle"></div>
+    <div id="moduleButtons" class="department-select-box"></div>
+    <button id="returnMain" class="fixed-return">Return to Main</button>
+  </div>
+
+  <div id="trainingPage" style="display:none;text-align:center;">
+    <div class="page-title" id="trainingDeptTitle"></div>
+    <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+    <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <button id="returnOrientationTrain" class="fixed-return">Return to Departments</button>
+  </div>
+
+  <div id="labPage" style="display:none;text-align:center;">
+    <div class="page-title" id="labDeptTitle"></div>
+    <div id="labCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+    <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <button id="returnOrientationLab" class="fixed-return">Return to Departments</button>
+  </div>
+
+  <div id="examPage" style="display:none;text-align:center;">
+    <div class="page-title" id="examDeptTitle"></div>
+    <div id="examCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
+    <div id="examContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <button id="returnOrientationExam" class="fixed-return">Return to Departments</button>
+  </div>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const departments = ["Command", "Diplomacy", "Engineering", "Security", "Science", "Medical"];
@@ -752,5 +754,6 @@ button:disabled {
   </script>
 </body>
 </html>
+
 
 
