@@ -464,46 +464,64 @@ button:disabled {
         document.getElementById("orientationPage").style.display = "block";
         checkProgress();
       };
+
+      const trainingBlurbs = {
+        Command: "As a command cadet, you will face ethical and tactical decisions that test your leadership and judgment.",
+        Diplomacy: "As a diplomacy cadet, your role is to foster understanding and cooperation among diverse species.",
+        Engineering: "As an engineering cadet, you ensure that every system runs flawlessly in the harshest conditions.",
+        Security: "As a security cadet, your mission is to protect lives and uphold Federation law in all circumstances.",
+        Science: "As a science cadet, your task is to explore, analyze, and expand the frontiers of knowledge.",
+        Medical: "As a medical cadet, you are the healer of the stars, entrusted with the health of crew and colonies alike."
+};
+
       async function loadTraining(dept) {
-        document.getElementById("orientationPage").style.display = "none";
-        document.getElementById("trainingPage").style.display = "block";
-        document.getElementById("trainingDeptTitle").textContent = `${dept} Study`;
-        document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
-        const content = document.getElementById("trainingContent");
-        content.innerHTML = "<p>Loading...</p>";
-        const res = await fetch(trainingFiles[dept]);
-        const data = await res.json();
-        content.innerHTML = "";
-        data.study?.forEach(item => {
-          const section = document.createElement("div");
-          section.className = "training-section";
-          const header = document.createElement("div");
-          header.className = "training-header-bar";
-          header.textContent = `${dept.toUpperCase()} DIVISION`;
-          section.appendChild(header);
-          const scenario = document.createElement("h3");
-          scenario.textContent = item.scenario;
-          section.appendChild(scenario);
-          const summary = document.createElement("p");
-          summary.textContent = item.summary;
-          section.appendChild(summary);
-          const answersDiv = document.createElement("div");
-          answersDiv.className = "training-answers";
-          item.answers.forEach((ans, i) => {
-            const p = document.createElement("p");
-            const strong = document.createElement("strong");
-            strong.style.color = i === 0 ? "green" : i === 1 ? "yellow" : "red";
-            strong.textContent = ans.text;
-            const span = document.createElement("span");
-            span.textContent = ans.details;
-            p.appendChild(strong);
-            p.appendChild(span);
-            answersDiv.appendChild(p);
-          });
-          section.appendChild(answersDiv);
-          content.appendChild(section);
-        });
-      }
+  document.getElementById("orientationPage").style.display = "none";
+  document.getElementById("trainingPage").style.display = "block";
+  document.getElementById("trainingDeptTitle").textContent = `${dept} Study`;
+  document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+  const content = document.getElementById("trainingContent");
+  content.innerHTML = "<p>Loading...</p>";
+  
+  const blurb = document.createElement("p");
+  blurb.textContent = trainingBlurbs[dept];
+  blurb.style.marginBottom = "25px";
+  blurb.style.fontStyle = "italic";
+  blurb.style.color = "#ccc";
+  content.prepend(blurb);
+
+  const res = await fetch(trainingFiles[dept]);
+  const data = await res.json();
+  content.innerHTML = "";
+  data.study?.forEach(item => {
+    const section = document.createElement("div");
+    section.className = "training-section";
+    const header = document.createElement("div");
+    header.className = "training-header-bar";
+    header.textContent = `${dept.toUpperCase()} DIVISION`;
+    section.appendChild(header);
+    const scenario = document.createElement("h3");
+    scenario.textContent = item.scenario;
+    section.appendChild(scenario);
+    const summary = document.createElement("p");
+    summary.textContent = item.summary;
+    section.appendChild(summary);
+    const answersDiv = document.createElement("div");
+    answersDiv.className = "training-answers";
+    item.answers.forEach((ans, i) => {
+      const p = document.createElement("p");
+      const strong = document.createElement("strong");
+      strong.style.color = i === 0 ? "green" : i === 1 ? "yellow" : "red";
+      strong.textContent = ans.text;
+      const span = document.createElement("span");
+      span.textContent = ans.details;
+      p.appendChild(strong);
+      p.appendChild(span);
+      answersDiv.appendChild(p);
+    });
+    section.appendChild(answersDiv);
+    content.appendChild(section);
+  });
+}
 
       async function loadLab(dept) {
         document.getElementById("orientationPage").style.display = "none";
@@ -618,6 +636,7 @@ button:disabled {
   </script>
 </body>
 </html>
+
 
 
 
