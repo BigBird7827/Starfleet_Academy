@@ -486,10 +486,11 @@ button:disabled {
   content.innerHTML = "";
   const blurb = document.createElement("p");
   blurb.textContent = trainingBlurbs[dept];
-  blurb.style.marginBottom = "25px";
+  blurb.style.margin = "10px 0 25px 0";
   blurb.style.fontStyle = "italic";
   blurb.style.color = "#ccc";
-  content.prepend(blurb);
+  blurb.style.textAlign = "center";
+  document.getElementById("trainingCadetInfo").insertAdjacentElement("afterend", blurb);
   data.study?.forEach(item => {
     const section = document.createElement("div");
     section.className = "training-section";
@@ -520,7 +521,6 @@ button:disabled {
     content.appendChild(section);
   });
 }
-
       async function loadLab(dept) {
         document.getElementById("orientationPage").style.display = "none";
         document.getElementById("labPage").style.display = "block";
@@ -634,6 +634,7 @@ button:disabled {
   </script>
 </body>
 </html>
+
 
 
 
