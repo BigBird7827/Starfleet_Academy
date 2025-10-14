@@ -246,14 +246,14 @@ button:disabled {
   margin: 25px auto 0 auto;
 }
 
-   #returnOrientationTrain {
-  position: absolute;
-  left: calc((100vw - 1000px) / 4);
+#returnOrientationTrain {
+  position: fixed;
   top: 50%;
-  transform: translateY(-50%);
+  left: calc((100vw - min(1000px, 100vw - 80px)) / 4);
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }
-  
-  </style>
+    </style>
 </head>
 
 <body>
@@ -616,6 +616,7 @@ button:disabled {
   </script>
 </body>
 </html>
+
 
 
 
