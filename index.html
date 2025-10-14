@@ -57,6 +57,7 @@ html, body {
 #loginScreen.fade-out {
   opacity: 0;
 }
+
 .lcars-top, .lcars-bottom {
   position: absolute;
   left: 0;
@@ -97,10 +98,12 @@ html, body {
   animation: panelFadeIn 1.4s ease-in-out;
   color: var(--text);
 }
+
 @keyframes panelFadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
+
 .login-subtext {
   font-size: 13pt;
   letter-spacing: 1px;
@@ -241,12 +244,7 @@ button:disabled {
   align-items: center;
   margin-top: 10px;
 }
-    .fixed-return {
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  transform: translateY(-50%);
-}
+
 .fixed-return {
   position: absolute;
   top: 50%;
@@ -254,6 +252,33 @@ button:disabled {
   transform: translateY(-50%);
 }
 
+.training-section {
+  background: linear-gradient(145deg, #000a1e 0%, #000 100%);
+  border: 2px solid var(--gold);
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(74,176,255,0.5), inset 0 0 20px rgba(0,10,40,0.8);
+  padding: 25px 35px;
+  margin-bottom: 30px;
+  color: var(--text);
+}
+
+.training-header-bar {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 2px solid var(--blue);
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  font-size: 16pt;
+}
+
+.training-answer-box {
+  background: rgba(0,20,40,0.6);
+  border-left: 4px solid var(--blue);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 8px 0;
+}
   </style>
 </head>
 
@@ -619,6 +644,7 @@ button:disabled {
   </script>
 </body>
 </html>
+
 
 
 
