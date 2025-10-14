@@ -57,6 +57,7 @@ html, body {
 #loginScreen.fade-out {
   opacity: 0;
 }
+
 .lcars-top, .lcars-bottom {
   position: absolute;
   left: 0;
@@ -89,18 +90,19 @@ html, body {
   backdrop-filter: blur(20px) saturate(180%);
   border: 2px solid var(--gold);
   border-radius: 18px;
-  box-shadow: 0 0 25px rgba(255, 212, 122, 0.4),
-              inset 0 0 35px rgba(74, 176, 255, 0.2);
+  box-shadow: 0 0 25px rgba(255, 212, 122, 0.4), inset 0 0 35px rgba(74, 176, 255, 0.2);
   padding: 40px 50px;
   width: 500px;
   text-align: center;
   animation: panelFadeIn 1.4s ease-in-out;
   color: var(--text);
 }
+
 @keyframes panelFadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
+
 .login-subtext {
   font-size: 13pt;
   letter-spacing: 1px;
@@ -162,17 +164,13 @@ button {
   padding: 10px 20px;
   margin: 8px;
   cursor: pointer;
-  box-shadow: inset 0 6px 8px rgba(255, 255, 255, 0.06),
-              inset 0 -6px 10px rgba(0, 0, 0, 0.6),
-              0 6px 12px rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 6px 8px rgba(255, 255, 255, 0.06), inset 0 -6px 10px rgba(0, 0, 0, 0.6), 0 6px 12px rgba(0, 0, 0, 0.9);
   transition: transform .2s, box-shadow .2s;
 }
 
 button:hover {
   transform: translateY(-2px);
-  box-shadow: inset 0 6px 10px rgba(255, 255, 255, 0.08),
-              inset 0 -6px 12px rgba(0, 0, 0, 0.7),
-              0 14px 28px rgba(0, 0, 0, 1);
+  box-shadow: inset 0 6px 10px rgba(255, 255, 255, 0.08), inset 0 -6px 12px rgba(0, 0, 0, 0.7), 0 14px 28px rgba(0, 0, 0, 1);
 }
 
 button:disabled {
@@ -241,20 +239,45 @@ button:disabled {
   align-items: center;
   margin-top: 10px;
 }
-#trainingPage .fixed-return {
-  display: block;
-  margin: 25px auto 0 auto;
+
+.boxed-scenario {
+  background: linear-gradient(145deg, #000814, #001f3f);
+  border: 2px solid var(--gold);
+  border-radius: 14px;
+  padding: 20px 25px;
+  margin: 25px auto;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7), inset 0 0 12px rgba(74, 176, 255, 0.25), 0 0 18px rgba(255, 212, 122, 0.3);
+  color: var(--text);
+  max-width: 950px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#returnOrientationTrain {
-  position: fixed;
-  top: 50%;
-  left: calc((100vw - min(1000px, 100vw - 80px)) / 4 - 15px);
-  transform: translate(-50%, -50%);
-  font-size: 11pt;
-  padding: 5px 12px;
+.boxed-scenario:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8), inset 0 0 16px rgba(74, 176, 255, 0.35), 0 0 25px rgba(255, 212, 122, 0.5);
 }
 
+.boxed-scenario .training-header-bar {
+  background: var(--gold);
+  color: #001933;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.boxed-scenario h3 {
+  margin-top: 15px;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(74, 176, 255, 0.6);
+}
+
+.boxed-scenario p {
+  margin: 10px 0;
+  color: #dcdcdc;
+  line-height: 1.5;
+}
     </style>
 </head>
 
@@ -495,11 +518,10 @@ button:disabled {
   blurb.style.wordWrap = "break-word";
   blurb.style.maxWidth = "900px";
   blurb.style.margin = "10px auto 25px auto";
-
   document.getElementById("trainingCadetInfo").insertAdjacentElement("afterend", blurb);
   data.study?.forEach(item => {
     const section = document.createElement("div");
-    section.className = "training-section";
+    section.className = "training-section boxed-scenario";
     const header = document.createElement("div");
     header.className = "training-header-bar";
     header.textContent = `${dept.toUpperCase()} DIVISION`;
@@ -527,6 +549,7 @@ button:disabled {
     content.appendChild(section);
   });
 }
+
       async function loadLab(dept) {
         document.getElementById("orientationPage").style.display = "none";
         document.getElementById("labPage").style.display = "block";
@@ -640,6 +663,7 @@ button:disabled {
   </script>
 </body>
 </html>
+
 
 
 
