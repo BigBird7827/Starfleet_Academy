@@ -488,9 +488,14 @@ button:disabled {
   blurb.textContent = trainingBlurbs[dept];
   blurb.style.margin = "10px 0 25px 0";
   blurb.style.fontStyle = "italic";
-  blurb.style.fontsize = "14pt";
-  blurb.style.color = "#ccc";
+  blurb.style.fontSize = "14pt";
+  blurb.style.color = "var(--gold)";
   blurb.style.textAlign = "center";
+  blurb.style.whiteSpace = "normal";
+  blurb.style.wordWrap = "break-word";
+  blurb.style.maxWidth = "900px";
+  blurb.style.margin = "10px auto 25px auto";
+
   document.getElementById("trainingCadetInfo").insertAdjacentElement("afterend", blurb);
   data.study?.forEach(item => {
     const section = document.createElement("div");
@@ -635,6 +640,7 @@ button:disabled {
   </script>
 </body>
 </html>
+
 
 
 
