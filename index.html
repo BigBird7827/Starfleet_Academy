@@ -475,37 +475,37 @@ button:disabled {
   const data = await res.json();
   content.innerHTML = "";
 
-  data.study?.forEach(item => {
-    const section = document.createElement("div");
-    section.className = "training-section";
+  data.study.forEach(item => {
+    const box = document.createElement("div");
+    box.className = "training-section";
 
     const header = document.createElement("div");
     header.className = "training-header-bar";
     header.textContent = `${dept.toUpperCase()} DIVISION`;
-    section.appendChild(header);
+    box.appendChild(header);
 
     const scenario = document.createElement("h3");
     scenario.textContent = item.scenario;
-    section.appendChild(scenario);
+    box.appendChild(scenario);
 
     const summary = document.createElement("p");
     summary.textContent = item.summary;
-    section.appendChild(summary);
+    box.appendChild(summary);
 
-    const answersDiv = document.createElement("div");
-    answersDiv.className = "training-answers";
-
+    const answers = document.createElement("div");
+    answers.className = "training-answers";
     item.answers.forEach((ans, i) => {
       const answerBox = document.createElement("div");
       answerBox.className = "training-answer-box";
       answerBox.innerHTML = `<strong style="color:${i===0?'#00ff66':i===1?'#ffcc00':'#ff3333'};">${ans.text}</strong><br><span>${ans.details}</span>`;
-      answersDiv.appendChild(answerBox);
+      answers.appendChild(answerBox);
     });
+    box.appendChild(answers);
 
-    section.appendChild(answersDiv);
-    content.appendChild(section);
+    content.appendChild(box);
   });
 }
+
       async function loadLab(dept) {
         document.getElementById("orientationPage").style.display = "none";
         document.getElementById("labPage").style.display = "block";
@@ -619,6 +619,7 @@ button:disabled {
   </script>
 </body>
 </html>
+
 
 
 
