@@ -197,7 +197,7 @@ button:disabled {
 #mainScreen {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
   width: 100%;
   text-align: center;
@@ -207,13 +207,9 @@ button:disabled {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 88vh;
-  width: 900px;
-  max-width: 90%;
-  overflow: hidden;
-  padding: 15px 25px;
-  box-sizing: border-box;
+  justify-content: center;
+  width: calc(min(calc(100% - 6in), 1400px) - 100px);
+  margin: 100px auto 0 auto;
 }
 
 #mainScreen .container p {
@@ -225,11 +221,16 @@ button:disabled {
 .department-select-box {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 20px;
   justify-items: center;
   align-items: center;
-  width: 100%;
-  margin-top: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 15px var(--blue);
 }
 
 .km-button-box {
@@ -601,6 +602,7 @@ button:disabled {
   </script>
 </body>
 </html>
+
 
 
 
