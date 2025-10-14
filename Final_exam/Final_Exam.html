@@ -7,214 +7,417 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --accent: #35d07f;
-  --accent-soft: #35d07f33;
-  --text: #dfffea;
+  --gold: #ffd47a;
+  --blue: #4ab0ff;
+  --green: #00cc66;
+  --red: #cc0033;
+  --dark-blue: #001933;
+  --black: #000;
+  --text: #f3f3f3;
 }
-* { box-sizing: border-box; }
+
 html, body {
   margin: 0;
+  padding: 0;
   height: 100%;
-  overflow: hidden;
-  background: #000;
-  font-family: 'Roboto Mono', monospace;
+  background: var(--black);
+  font-family: 'Roboto', sans-serif;
   color: var(--text);
+  overflow-x: hidden;
 }
-#stars {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, #001 0%, #000 70%);
-  overflow: hidden;
+
+@font-face {
+  font-family: 'Final Frontier';
+  src: url('https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Final_Frontier.ttf') format('truetype');
 }
-.star {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: #fff;
-  border-radius: 50%;
-  opacity: .85;
-  animation: moveStars 6s linear infinite;
+
+.page-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 34pt;
+  color: var(--gold);
+  text-align: center;
+  margin: 15px 0 8px;
 }
-@keyframes moveStars {
-  0% { transform: translateZ(0) scale(1); }
-  100% { transform: translateZ(300px) scale(0); }
-}
-#hud {
+
+#loginScreen {
   position: relative;
-  z-index: 10;
-  width: 92%;
-  max-width: 980px;
-  margin: 5% auto;
-  background: linear-gradient(135deg, #0a0f12, #000);
-  border: 3px solid var(--accent);
-  border-radius: 22px;
-  box-shadow: 0 0 40px var(--accent-soft), inset 0 0 40px #000;
-  padding: 24px 28px;
+  height: 100vh;
+  width: 100%;
+  background: url("Starfleet Academy - San Francisco.gif") no-repeat center center fixed;
+  background-size: cover;
   display: flex;
-  flex-direction: row;
-  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  opacity: 1;
+  transition: opacity 3s ease-out;
 }
-#main-panel { flex: 3; display: flex; flex-direction: column; align-items: center; }
-#side-panels { flex: 1; display: flex; flex-direction: column; gap: 24px; align-items: center; justify-content: flex-start; }
-#header {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: var(--accent);
-  border-bottom: 2px solid var(--accent);
-  padding-bottom: 10px;
-  margin-bottom: 18px;
-  text-align: center;
-  letter-spacing: 1px;
+
+#loginScreen.fade-out {
+  opacity: 0;
 }
-#message {
-  min-height: 150px;
-  font-size: 1.06rem;
-  line-height: 1.65;
-  color: var(--text);
-  text-shadow: 0 0 10px var(--accent-soft);
-  margin-bottom: 18px;
-}
-#buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
-button {
-  background: linear-gradient(90deg, var(--accent-soft), transparent);
-  border: 1px solid var(--accent);
-  color: var(--text);
-  padding: 10px 22px;
-  border-radius: 10px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: .2s ease;
-  letter-spacing: .5px;
-  text-shadow: 0 0 10px var(--accent-soft);
-}
-button:hover {
-  background: var(--accent);
-  color: #000;
-  box-shadow: 0 0 22px var(--accent);
-  transform: scale(1.06);
-}
-.alert-green { --accent: #35d07f; --accent-soft: #35d07f55; --text: #dfffea; }
-.alert-yellow { --accent: #ffd166; --accent-soft: #ffd16655; --text: #fff6db; }
-.alert-red { --accent: #ff4b4b; --accent-soft: #ff4b4b55; --text: #ffe5e5; }
-#alert-controls, #ship-systems {
-  border: 2px solid var(--accent);
-  border-radius: 12px;
-  padding: 12px;
-  width: 100%;
-  text-align: center;
-}
-#alert-controls h3, #ship-systems h3 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: var(--accent);
-}
-.alert-btn {
-  display: block;
-  width: 100%;
-  margin: 6px 0;
-  border-radius: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #000;
-  border: none;
-  padding: 8px;
-  font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.5px;
-}
-.green { background-color: #35d07f; }
-.yellow { background-color: #ffd166; }
-.red { background-color: #ff4b4b; }
-#ship-systems button {
-  display: block;
-  width: 100%;
-  margin: 6px 0;
-  border-radius: 8px;
-  font-family: 'Orbitron', sans-serif;
-  padding: 8px;
-}
-#tactical {
-  position: relative;
-  width: 160px;
-  height: 160px;
-  border: 2px solid var(--accent);
-  border-radius: 50%;
-  overflow: hidden;
-  margin-top: 30px;
-}
-#sweep {
+
+.lcars-top, .lcars-bottom {
   position: absolute;
-  width: 50%;
-  height: 2px;
-  top: 50%;
-  left: 50%;
-  transform-origin: left center;
-  background: var(--accent);
-  animation: sweep 4s linear infinite;
+  left: 0;
+  width: 100%;
+  background: var(--gold);
+  font-family: 'Final Frontier', sans-serif;
+  font-size: 24pt;
+  color: #001933;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-@keyframes sweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-.blip { position: absolute; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; opacity: 0; transition: all 6s linear; }
+
+.lcars-top {
+  top: 0;
+  height: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.lcars-bottom {
+  bottom: 0;
+  height: 40px;
+  border-top-left-radius: 50px;
+}
+
+.glass-panel {
+  background: rgba(30, 40, 60, 0.125);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 2px solid var(--gold);
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(255, 212, 122, 0.4), inset 0 0 35px rgba(74, 176, 255, 0.2);
+  padding: 40px 50px;
+  width: 500px;
+  text-align: center;
+  animation: panelFadeIn 1.4s ease-in-out;
+  color: var(--text);
+}
+
+@keyframes panelFadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.login-subtext {
+  font-size: 13pt;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(74, 176, 255, 0.9);
+  margin-bottom: 18px;
+}
+
+.lcars-divider {
+  height: 4px;
+  width: 80%;
+  margin: 0 auto 20px;
+  background: linear-gradient(to right, var(--gold), var(--blue));
+  border-radius: 2px;
+}
+
+label {
+  display: block;
+  color: #ffffff;
+  font-size: 14pt;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+label[for="cadetName"] {
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid var(--blue);
+  color: #ffffff;
+  font-size: 14pt;
+  border-radius: 6px;
+}
+
+#cadetName {
+  width: 50%;
+  margin: 0 auto 18px;
+  display: block;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to bottom, #003366, #001933);
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  font-size: 14pt;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 8px;
+  cursor: pointer;
+  box-shadow: inset 0 6px 8px rgba(255, 255, 255, 0.06), inset 0 -6px 10px rgba(0, 0, 0, 0.6), 0 6px 12px rgba(0, 0, 0, 0.9);
+  transition: transform .2s, box-shadow .2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: inset 0 6px 10px rgba(255, 255, 255, 0.08), inset 0 -6px 12px rgba(0, 0, 0, 0.7), 0 14px 28px rgba(0, 0, 0, 1);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.corner-image {
+  position: fixed;
+  width: 2.5in;
+  height: 2.5in;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.corner-left { top: 10px; left: 10px; }
+.corner-right { top: 10px; right: 10px; }
+
+#mainScreen {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+#mainScreen .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  max-height: 90vh;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#mainScreen .container p {
+  margin: 5px 0;
+  font-size: 13pt;
+  line-height: 1.4;
+}
+
+.department-select-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--gold);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 15px var(--blue);
+}
+
+.km-button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.boxed-scenario {
+  background: linear-gradient(145deg, #000814, #001f3f);
+  border: 2px solid var(--gold);
+  border-radius: 14px;
+  padding: 20px 25px;
+  margin: 25px auto;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7), inset 0 0 12px rgba(74, 176, 255, 0.25), 0 0 18px rgba(255, 212, 122, 0.3);
+  color: var(--text);
+  max-width: 950px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boxed-scenario:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8), inset 0 0 16px rgba(74, 176, 255, 0.35), 0 0 25px rgba(255, 212, 122, 0.5);
+}
+
+.boxed-scenario .training-header-bar {
+  background: #d4af37;
+  color: #001933;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.boxed-scenario h3 {
+  margin-top: 15px;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(74, 176, 255, 0.6);
+}
+
+.boxed-scenario p {
+  margin: 10px 0;
+  color: #dcdcdc;
+  line-height: 1.5;
+}
+
+.best-answer {
+  color: limegreen;
+  font-weight: bold;
+}
 
 #graduation {
   position: fixed;
   inset: 0;
   display: none;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  background: radial-gradient(circle at center, #000010 0%, #000015 70%, #000 100%);
-  color: #dfffea;
-  font-family: 'Orbitron', sans-serif;
-  z-index: 100;
+  background: #000;
+  z-index: 1000;
+  padding: 40px 20px;
 }
+
 .certificate {
-  background: #0a0f12;
-  border: 3px solid #35d07f;
+  position: relative;
+  width: min(1100px, 92vw);
+  background: #000;
+  border: 3px solid #ffd47a;
   border-radius: 20px;
-  padding: 2rem 3rem;
-  box-shadow: 0 0 40px rgba(53, 208, 127, 0.4);
-  max-width: 1000px;
-  width: 80%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  color: #dfffea;
+  box-shadow: 0 0 40px rgba(255,212,122,.35), 0 0 60px rgba(74,176,255,.25) inset;
+  overflow: hidden;
 }
-.certificate h1 {
-  font-size: 2rem;
-  margin-top: 1rem;
-  color: #35d07f;
+
+.cert-rails .rail {
+  position: absolute;
+  background: linear-gradient(90deg, #012244 0%, #001933 60%, #000 100%);
+  box-shadow: 0 0 20px rgba(74,176,255,.35);
+}
+
+.rail-top { top: 0; left: 0; right: 0; height: 14px; }
+.rail-bottom { bottom: 0; left: 0; right: 0; height: 12px; }
+.rail-left { top: 0; bottom: 0; left: 0; width: 14px; }
+.rail-right { top: 0; bottom: 0; right: 0; width: 12px; }
+
+.cert-inner {
+  padding: 48px 56px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.cert-title {
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #ffd47a;
+  text-transform: uppercase;
+}
+
+.cert-subtitle {
+  margin-top: 6px;
+  font-size: 18px;
+  color: #4ab0ff;
   letter-spacing: 1px;
 }
-.certificate p {
-  max-width: 800px;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #e6e6e6;
+
+.cert-name {
+  margin-top: 28px;
+  font-size: 40px;
+  letter-spacing: 1px;
+  color: #ffffff;
 }
-.signature-row {
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2rem;
+
+.cert-line {
+  width: 260px;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd47a, #4ab0ff);
+  border-radius: 2px;
+  margin: 16px auto 0;
+  box-shadow: 0 0 16px rgba(74,176,255,.35);
 }
-.signature {
-  text-align: center;
+
+.cert-text {
+  margin: 26px auto 6px;
+  max-width: 820px;
   font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #eaeaea;
 }
-.signature-name {
+
+.cert-assign {
+  margin-top: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  color: #ffd47a;
+}
+
+.cert-sigs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 820px;
+  margin: 34px auto 0;
+}
+
+.sig { padding-top: 10px; border-top: 2px solid #ffd47a; }
+.sig-name {
   font-family: 'Brush Script MT', cursive;
-  font-size: 1.8rem;
-  color: #35d07f;
+  font-size: 28px;
+  color: #ffd47a;
 }
-.signature-title {
-  font-size: 0.9rem;
-  color: #dfffea;
-  margin-top: -0.5rem;
+.sig-title {
+  margin-top: -4px;
+  font-size: 12px;
+  color: #9ccfff;
+  letter-spacing: .5px;
+}
+
+.cert-buttons {
+  margin: 34px auto 10px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.cert-buttons button {
+  background: linear-gradient(180deg, #003366, #001933);
+  border: 2px solid #ffd47a;
+  color: #ffd47a;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.cert-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(255,212,122,.35);
+}
+
+@media print {
+  #hud, #stars { display: none !important; }
+  #graduation { position: static; padding: 0; background: #000; }
+  .certificate { width: 100%; border: 0; box-shadow: none; border-radius: 0; }
+  .cert-buttons { display: none; }
 }
   </style>
 </head>
@@ -244,26 +447,42 @@ button:hover {
     </div>
   </div>
 
-  <div id="graduation">
-    <div class="certificate">
-      <h1>Starfleet Academy Certificate of Completion</h1>
-      <p id="grad-text"></p>
-      <div class="signature-row">
-        <div class="signature">
-          <div class="signature-name">C. Pike</div>
-          <div class="signature-title">Fleet Captain</div>
+ <div id="graduation">
+  <div class="certificate">
+    <div class="cert-rails">
+      <div class="rail rail-top"></div>
+      <div class="rail rail-left"></div>
+      <div class="rail rail-right"></div>
+      <div class="rail rail-bottom"></div>
+    </div>
+    <div class="cert-inner">
+      <div class="cert-title">Starfleet Academy</div>
+      <div class="cert-subtitle">Certificate of Completion</div>
+      <div class="cert-name" id="certName"></div>
+      <div class="cert-line"></div>
+      <div class="cert-text" id="certText"></div>
+      <div class="cert-assign" id="certAssign"></div>
+      <div class="cert-sigs">
+        <div class="sig">
+          <div class="sig-name">C. Pike</div>
+          <div class="sig-title">Fleet Captain</div>
         </div>
-        <div class="signature">
-          <div class="signature-name">J. Kirk</div>
-          <div class="signature-title">Command Instructor</div>
+        <div class="sig">
+          <div class="sig-name">J. Kirk</div>
+          <div class="sig-title">Command Instructor</div>
         </div>
-        <div class="signature">
-          <div class="signature-name">Spock</div>
-          <div class="signature-title">Academy Dean</div>
+        <div class="sig">
+          <div class="sig-name">Spock</div>
+          <div class="sig-title">Academy Dean</div>
         </div>
+      </div>
+      <div class="cert-buttons">
+        <button id="btnDownloadCert">Download Certificate</button>
+        <button id="btnCloseCert">Close</button>
       </div>
     </div>
   </div>
+</div>
 
 <script>
 const DATA_URL = "Kobayashi_Maru.json";
@@ -356,11 +575,29 @@ function determineDebrief() {
 function showGraduation() {
   const dept = departments[Math.floor(Math.random() * departments.length)];
   const ship = ships[Math.floor(Math.random() * ships.length)];
-  gradText.innerHTML =
-    `You have successfully completed Starfleet Academy and have earned a commission as an Ensign in Starfleet.<br><br>` +
-    `You are directed to report to the ${dept} department onboard the USS ${ship.name}, ${ship.reg}.`;
+  const params = new URLSearchParams(window.location.search);
+  const cadet = params.get("name") || "Unnamed Cadet";
+  const species = params.get("species") || "";
+
   document.getElementById("hud").style.display = "none";
-  gradScreen.style.display = "flex";
+  const grad = document.getElementById("graduation");
+  const certName = document.getElementById("certName");
+  const certText = document.getElementById("certText");
+  const certAssign = document.getElementById("certAssign");
+
+  certName.textContent = cadet;
+  certText.textContent = species
+    ? "Having demonstrated proficiency in Starfleet Academy’s core disciplines and upheld the principles of the United Federation of Planets, the cadet is hereby recognized for successful completion of the Academy course of study."
+    : "Having demonstrated proficiency in Starfleet Academy’s core disciplines and upheld the principles of the United Federation of Planets, the cadet is hereby recognized for successful completion of the Academy course of study.";
+
+  certAssign.textContent = `Assignment: ${dept} Division, USS ${ship.name}, ${ship.reg}`;
+
+  grad.style.display = "flex";
+
+  const dl = document.getElementById("btnDownloadCert");
+  const close = document.getElementById("btnCloseCert");
+  dl.onclick = () => window.print();
+  close.onclick = () => { grad.style.display = "none"; document.getElementById("hud").style.display = "flex"; };
 }
 function showScene(id) {
   const sc = scenes[id];
@@ -449,5 +686,6 @@ document.querySelector(".certificate h1").after(nameField);
 </script>
 </body>
 </html>
+
 
 
