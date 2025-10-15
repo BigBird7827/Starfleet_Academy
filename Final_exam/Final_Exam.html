@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kobayashi Maru Simulation</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 :root {
   --accent: #35d07f;
@@ -167,101 +167,15 @@ button:hover {
 }
 .certificate {
   position: relative;
-  width: min(1100px, 92vw);
-  background: #000;
-  border: 3px solid #ffd47a;
-  border-radius: 20px;
-  box-shadow: 0 0 40px rgba(255,212,122,.35), 0 0 60px rgba(74,176,255,.25) inset;
-  overflow: hidden;
-}
-.cert-inner {
-  padding: 48px 56px;
+  width: 100%;
+  aspect-ratio: 11/8.5;
+  background: linear-gradient(180deg, #020614 0%, #0b1833 100%);
   color: #fff;
-  text-align: center;
   font-family: 'Orbitron', sans-serif;
-}
-.cert-title {
-  font-size: 28px;
-  letter-spacing: 2px;
-  color: #ffd47a;
-  text-transform: uppercase;
-}
-.cert-subtitle {
-  margin-top: 6px;
-  font-size: 18px;
-  color: #4ab0ff;
-  letter-spacing: 1px;
-}
-.cert-name {
-  margin-top: 28px;
-  font-size: 40px;
-  letter-spacing: 1px;
-  color: #ffffff;
-}
-.cert-line {
-  width: 260px;
-  height: 3px;
-  background: linear-gradient(90deg, #ffd47a, #4ab0ff);
-  border-radius: 2px;
-  margin: 16px auto 0;
-  box-shadow: 0 0 16px rgba(74,176,255,.35);
-}
-.cert-text {
-  margin: 26px auto 6px;
-  max-width: 820px;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #eaeaea;
-}
-.cert-assign {
-  margin-top: 10px;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 15px;
-  color: #ffd47a;
-}
-.cert-sigs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  max-width: 820px;
-  margin: 34px auto 0;
-}
-.sig {
-  padding-top: 10px;
-  border-top: 2px solid #ffd47a;
-}
-.sig-name {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 28px;
-  color: #ffd47a;
-}
-.sig-title {
-  margin-top: -4px;
-  font-size: 12px;
-  color: #9ccfff;
-  letter-spacing: .5px;
-}
-.cert-buttons {
-  margin: 34px auto 10px;
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-}
-.cert-buttons button {
-  background: linear-gradient(180deg, #003366, #001933);
-  border: 2px solid #ffd47a;
-  color: #ffd47a;
-  padding: 10px 18px;
-  border-radius: 10px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 14px;
-  cursor: pointer;
-  transition: transform .2s, box-shadow .2s;
-}
-.cert-buttons button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 16px rgba(255,212,122,.35);
+  overflow: hidden;
+  border: 4px solid #d6b25e;
+  border-radius: 16px;
+  box-shadow: 0 0 50px rgba(255,212,122,.3) inset, 0 0 50px rgba(74,176,255,.25);
 }
 </style>
 </head>
@@ -292,25 +206,46 @@ button:hover {
 </div>
 <div id="graduation">
   <div class="certificate">
-    <div class="cert-inner">
-      <div class="cert-title">Starfleet Academy</div>
-      <div class="cert-subtitle">Certificate of Completion</div>
-      <div class="cert-name" id="certName"></div>
-      <div class="cert-line"></div>
-      <div class="cert-text" id="certText"></div>
-      <div class="cert-assign" id="certAssign"></div>
-      <div class="cert-sigs">
-        <div class="sig"><div class="sig-name">C. Pike</div><div class="sig-title">Fleet Captain</div></div>
-        <div class="sig"><div class="sig-name">J. Kirk</div><div class="sig-title">Command Instructor</div></div>
-        <div class="sig"><div class="sig-name">Spock</div><div class="sig-title">Academy Dean</div></div>
+    <div style="position:absolute;inset:0;background:url('https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Enterprise%20D.jpg') center/contain no-repeat;opacity:0.12;z-index:0;"></div>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Starfleet_delta_insignia.svg"
+         style="position:absolute;left:5%;top:50%;transform:translateY(-50%);width:120px;opacity:.9;z-index:2;">
+
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/bea3b8f5-7eaf-430d-a7e1-b4faebd7d919/d7ukvnj-82e953e4-7cfc-426d-8b9c-084ebc249516.png"
+         style="position:absolute;right:5%;top:50%;transform:translateY(-50%);width:140px;opacity:.95;z-index:2;">
+
+    <div style="position:relative;z-index:3;padding:70px 100px;text-align:center;">
+      <div style="font-size:34px;letter-spacing:2px;color:#ffd47a;text-transform:uppercase;">Starfleet Academy</div>
+      <div style="font-size:20px;color:#4ab0ff;margin-top:6px;">Certificate of Graduation</div>
+
+      <div style="margin:36px auto 0;font-size:18px;max-width:900px;line-height:1.7;font-family:'Roboto Mono',monospace;color:#eaeaea;">
+        Be it known that, having completed the rigorous academic, operational and leadership requirements of Starfleet Academy,
+        and having upheld the solemn ideals of the United Federation of Planets,
+        <span id="certName" style="color:#fff;font-weight:bold;font-size:22px;"></span>
+        is hereby honored as a graduate and is elevated to the commissioned rank of Ensign in Starfleet.
       </div>
-      <div class="cert-buttons">
-        <button id="btnDownloadCert">Download Certificate</button>
-        <button id="btnCloseCert">Close</button>
+
+      <div style="width:280px;height:3px;background:linear-gradient(90deg,#ffd47a,#4ab0ff);
+                  border-radius:2px;margin:40px auto;"></div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:850px;margin:50px auto 0;">
+        <div>
+          <div style="font-family:'Great Vibes',cursive;font-size:30px;color:#ffd47a;">Alynna Necheyev</div>
+          <div style="font-size:12px;color:#9ccfff;margin-top:-4px;">Admiral – Commandant, Starfleet Academy</div>
+        </div>
+        <div>
+          <div style="font-family:'Great Vibes',cursive;font-size:30px;color:#ffd47a;">Kathryn Janeway</div>
+          <div style="font-size:12px;color:#9ccfff;margin-top:-4px;">Captain – Command Instructor</div>
+        </div>
+        <div>
+          <div style="font-family:'Great Vibes',cursive;font-size:30px;color:#ffd47a;">Jean-Luc Picard</div>
+          <div style="font-size:12px;color:#9ccfff;margin-top:-4px;">Captain – Dean of Students</div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 <script>
 const DATA_URL = "Kobayashi_Maru.json";
 const messageBox = document.getElementById('message');
@@ -319,43 +254,53 @@ const stars = document.getElementById('stars');
 const tactical = document.getElementById('tactical');
 const grad = document.getElementById('graduation');
 const certName = document.getElementById('certName');
-const certText = document.getElementById('certText');
-const certAssign = document.getElementById('certAssign');
-const btnDownloadCert = document.getElementById('btnDownloadCert');
-const btnCloseCert = document.getElementById('btnCloseCert');
 let scenes = {};
 let currentAlert = 'green';
 let contactsPresent = false;
+
 const metrics = { aggression: 0, caution: 0, empathy: 0, diplomacy: 0, protocol: 0 };
+
 const debriefs = {
-  rescue: "Cadet chose to cross the Neutral Zone and mount a rescue of the Kobayashi Maru.",
-  treaty: "Cadet declined to violate the Neutral Zone, prioritizing Federation treaties.",
-  partial: "Cadet initiated a rescue operation with partial success and tactical withdrawal.",
-  negotiation: "Cadet opened communications with Klingon forces, seeking a diplomatic resolution.",
-  withdrawal: "Cadet assessed the tactical imbalance and elected to withdraw from engagement."
+  rescue: [
+    "Cadet chose to cross the Neutral Zone and mount a daring rescue of the Kobayashi Maru, defying regulations in favor of compassion and courage. The maneuver displayed initiative and decisive command presence under extreme duress.",
+    "Despite explicit treaty boundaries, the cadet authorized a rescue attempt, prioritizing lives over politics. Tactical execution was bold, though the decision carried significant diplomatic risk.",
+    "Cadet disregarded standing orders to engage in a rescue operation, coordinating shields and tractor beam maneuvers under heavy fire. The choice reflected an unshakable moral compass aligned with Starfleet’s humanitarian values.",
+    "In a decision echoing Starfleet’s finest traditions, the cadet entered the Neutral Zone to retrieve survivors. The outcome demonstrated both tactical creativity and a willingness to bear the weight of command responsibility.",
+    "The cadet’s actions revealed leadership forged under pressure—crossing into hostile territory to save the crew of the Kobayashi Maru. Though costly, the rescue attempt embodied the principles of duty and sacrifice."
+  ],
+
+  treaty: [
+    "Cadet adhered strictly to the Treaty of Algeron, declining to enter the Neutral Zone despite distress signals. This decision showcased disciplined command judgment and commitment to Federation law.",
+    "Demonstrating restraint under pressure, the cadet refused to violate diplomatic boundaries. The analysis reflects an understanding that long-term peace often outweighs immediate gain.",
+    "Cadet declined to engage in the rescue, citing Starfleet’s commitment to interstellar treaties and order. The evaluation commends this display of composure and adherence to principle.",
+    "By upholding Federation protocol and refraining from unauthorized entry, the cadet avoided potential escalation with Klingon forces—exemplifying sound political awareness and discipline.",
+    "Faced with a moral dilemma, the cadet favored lawful conduct over emotional impulse, preserving Federation integrity and stability. The decision was tactically cautious but ethically sound."
+  ],
+
+  partial: [
+    "Cadet initiated a rescue attempt with calculated precision, managing partial recovery before enemy reinforcements arrived. The response balanced empathy with survival instinct, earning commendation for measured command.",
+    "Despite overwhelming opposition, the cadet executed a limited extraction operation, securing some survivors before withdrawal. The decision reflected strong situational awareness and crisis management.",
+    "A valiant effort yielded partial success. The cadet demonstrated resourcefulness under fire and ensured the survival of several crew members through tactical withdrawal.",
+    "The cadet’s choices showed adaptability and leadership—balancing compassion for the Kobayashi Maru crew with the necessity of preserving their own ship and crew.",
+    "A partial victory, marked by decisive action and tactical withdrawal. The cadet’s execution of this hybrid strategy revealed both empathy and realism under combat conditions."
+  ],
+
+  negotiation: [
+    "Cadet sought peaceful resolution through communication with Klingon forces, employing diplomacy under tension. Though unconventional, the approach averted greater loss and demonstrated mastery of nonviolent command.",
+    "Through precise negotiation and cultural understanding, the cadet managed to defuse hostilities temporarily. The action reflected an advanced grasp of Klingon honor and diplomacy protocols.",
+    "Choosing negotiation over aggression, the cadet used reason and empathy to engage the opposing commander. While success was limited, the effort reflected the Federation’s highest ideals.",
+    "Cadet initiated dialogue rather than battle, trading tactical advantage for moral ground. The maneuver prevented escalation and will be noted favorably in Starfleet diplomatic review.",
+    "A measured attempt to de-escalate the confrontation highlighted the cadet’s diplomatic acumen. Though risky, the choice underscored courage in seeking peace amidst chaos."
+  ],
+
+  withdrawal: [
+    "Cadet evaluated the tactical imbalance and chose strategic withdrawal, prioritizing crew safety and long-term mission capability. The decision reflected clear judgment under duress.",
+    "By ordering retreat in the face of overwhelming odds, the cadet preserved vessel and crew integrity—demonstrating leadership rooted in pragmatism and foresight.",
+    "Recognizing the futility of engagement, the cadet executed a controlled withdrawal, avoiding needless loss of life while maintaining discipline and composure.",
+    "The cadet displayed maturity beyond expectation, valuing lives over glory. Strategic retreat in such conditions remains one of command’s hardest but most honorable choices.",
+    "Cadet disengaged from combat, assessing that continued action would jeopardize Federation resources and personnel. The move was tactically sound, if emotionally taxing."
+  ]
 };
-const departments = ["Command", "Science", "Engineering", "Medical", "Security", "Tactical"];
-const ships = [
-  { name: "Enterprise", reg: "NCC-1701-E" },
-  { name: "Voyager", reg: "NCC-74656" },
-  { name: "Defiant", reg: "NX-74205" },
-  { name: "Excelsior", reg: "NCC-2000" },
-  { name: "Titan", reg: "NCC-80102" }
-];
-for (let i = 0; i < 220; i++) {
-  const s = document.createElement('div');
-  s.className = 'star';
-  s.style.top = Math.random() * 100 + '%';
-  s.style.left = Math.random() * 100 + '%';
-  s.style.animationDelay = (Math.random() * 5) + 's';
-  s.style.opacity = Math.random();
-  stars.appendChild(s);
-}
-function toMap(list) {
-  const m = {};
-  list.forEach(o => { if (o && o.id) m[o.id] = o; });
-  return m;
-}
 function typeText(txt, done) {
   messageBox.textContent = "";
   let i = 0;
@@ -366,18 +311,9 @@ function typeText(txt, done) {
     } else if (done) done();
   })();
 }
-function detectAlertFromText(t) {
-  const text = t.toLowerCase();
-  if (/red alert/.test(text)) return 'red';
-  if (/yellow alert/.test(text)) return 'yellow';
-  if (/green alert/.test(text)) return 'green';
-  return null;
-}
-function detectContactsFromText(t) {
-  const text = t.toLowerCase();
-  if (/klingon|enemy ships|warp signatures inbound|decloak/.test(text)) return true;
-  return false;
-}
+
+function systemAction(text) { typeText(text, null); }
+
 function setAlert(level) {
   const body = document.body;
   if (!level || level === currentAlert) return;
@@ -386,7 +322,7 @@ function setAlert(level) {
   body.classList.add(`alert-${level}`);
   systemAction(`Alert level set to ${level.toUpperCase()}.`);
 }
-function systemAction(text) { typeText(text, null); }
+
 function recordMetrics(choice) {
   const text = choice.toLowerCase();
   if (/attack|fire|engage|rescue/.test(text)) metrics.aggression++;
@@ -395,43 +331,34 @@ function recordMetrics(choice) {
   if (/regulation|order|protocol/.test(text)) metrics.protocol++;
   if (/rescue|save|help/.test(text)) metrics.empathy++;
 }
+
 function determineDebrief() {
   const { aggression, caution, empathy, diplomacy, protocol } = metrics;
-  if (diplomacy > aggression && diplomacy > caution) return debriefs.negotiation;
-  if (aggression > empathy && aggression > caution) return debriefs.rescue;
-  if (empathy > aggression && empathy >= diplomacy) return debriefs.partial;
-  if (protocol > empathy && protocol >= aggression) return debriefs.treaty;
-  return debriefs.withdrawal;
+  let key;
+  if (diplomacy > aggression && diplomacy > caution) key = "negotiation";
+  else if (aggression > empathy && aggression > caution) key = "rescue";
+  else if (empathy > aggression && empathy >= diplomacy) key = "partial";
+  else if (protocol > empathy && protocol >= aggression) key = "treaty";
+  else key = "withdrawal";
+  const options = debriefs[key];
+  return options[Math.floor(Math.random() * options.length)];
 }
+
 function showGraduation() {
-  const dept = departments[Math.floor(Math.random() * departments.length)];
-  const ship = ships[Math.floor(Math.random() * ships.length)];
   const params = new URLSearchParams(window.location.search);
   const cadet = params.get("name") || "Unnamed Cadet";
-  const species = params.get("species") || "";
   document.getElementById("hud").style.display = "none";
   certName.textContent = cadet;
-  certText.textContent =
-    "Having demonstrated proficiency in Starfleet Academy’s core disciplines and upheld the principles of the United Federation of Planets, the cadet is hereby recognized for successful completion of the Academy course of study.";
-  certAssign.textContent = `Assignment: ${dept} Division, USS ${ship.name}, ${ship.reg}`;
   grad.style.display = "flex";
-  btnDownloadCert.onclick = () => window.print();
-  btnCloseCert.onclick = () => {
-    grad.style.display = "none";
-    document.getElementById("hud").style.display = "flex";
-  };
 }
+
 function showScene(id) {
   const sc = scenes[id];
   if (!sc) {
-    setAlert('red');
     messageBox.textContent = `Scene '${id}' not found.`;
     buttonsBox.innerHTML = "";
     return;
   }
-  const inferred = detectAlertFromText(sc.text || "");
-  if (inferred) setAlert(inferred);
-  if (detectContactsFromText(sc.text || "")) contactsPresent = true;
   buttonsBox.innerHTML = "";
   typeText(sc.text || "", () => {
     (sc.options || []).forEach(o => {
@@ -465,6 +392,7 @@ function showScene(id) {
     }
   });
 }
+
 function spawnBlip() {
   if (!contactsPresent) return;
   const angle = Math.random() * 2 * Math.PI;
@@ -484,20 +412,32 @@ function spawnBlip() {
   }, 9000);
 }
 setInterval(spawnBlip, 3000);
+
 async function init() {
   try {
     messageBox.textContent = "Loading mission data...";
     const res = await fetch(DATA_URL, { cache: 'no-store' });
     const data = await res.json();
-    scenes = toMap(Array.isArray(data) ? data : (data.scenes || []));
-    if (!scenes.start) throw new Error('Missing start');
+    scenes = {};
+    (Array.isArray(data) ? data : (data.scenes || [])).forEach(s => {
+      if (s && s.id) scenes[s.id] = s;
+    });
     showScene('start');
-  } catch (e) {
-    setAlert('red');
+  } catch {
     messageBox.textContent = "Error loading mission data.";
-    buttonsBox.innerHTML = "";
   }
 }
+
+for (let i = 0; i < 220; i++) {
+  const s = document.createElement('div');
+  s.className = 'star';
+  s.style.top = Math.random() * 100 + '%';
+  s.style.left = Math.random() * 100 + '%';
+  s.style.animationDelay = (Math.random() * 5) + 's';
+  s.style.opacity = Math.random();
+  stars.appendChild(s);
+}
+
 document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
