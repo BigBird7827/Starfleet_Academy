@@ -1,9 +1,16 @@
 # Starfleet_Academy
 
-This is a Starfleet Academy simulator. As a new cadet, you will sign the new cadet registration and begin your training.
-You will be required to attend classes and you will study until you have completed the course work. You will be in
-competition with the other students in your class. There are 10 students per class. At the conclusion of
-your training, you will take a final exam. The results of the exam will determine if you are promoted to ensign. If you
-do not qualify for promotion, you may either "wash out" or start over.
+Starfleet Academy Simulator - Welcome to Starfleet Academy. The academy was established in 2161. Our motto is Ex Astris Scientia, or
+"From the Stars, Knowledge". Starfleet believes that exploration of the stars leads to wisdom, discovery, and progress.
 
-Candidates who qualify for promotion will have maintained a Grade Point Average (GPA) of at least 3.0. 
+In this simulator, you will begin your academics through vigorous study in Command, Diplomacy, Engineering, Security, Science and
+Medicine. Once your studies are complete, you will begin a labs section. This section provides the student with the opportunity
+to apply what they have learned through interactive scenarios. When the student has successfully completed all labs, they will
+complete exams for each department and their progress will be measured.
+
+Each student cadet will compete against 9 other students in the exams section, and each student cadet will be required to maintain
+a grade point average (GPA) of 3.0. Students who fall short will not be offered a commission in Starfleet. Students who finish
+with a 3.0 or better GPA will continue to a "Kobayashi Maru" simulation, the classic no win tactical test. The simulation does
+not impact the student's graduation. After the completion of the simulation, the student cadet will attend a debrief. Once
+all of these requirements have been met, the student cadet will be offered a commission as an Ensign in Starfleet and will be
+given their first assignment orders.
