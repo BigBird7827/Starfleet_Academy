@@ -402,7 +402,7 @@ button:disabled {
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+   document.addEventListener("DOMContentLoaded", () => {
   const departments = ["Command", "Diplomacy", "Engineering", "Security", "Science", "Medical"];
   const trainingFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Training.json`]));
   const labFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Lab.json`]));
@@ -433,6 +433,11 @@ button:disabled {
       finalExamBtn.textContent = "Kobayashi Maru - Available";
     }
   }
+
+  labBtn.disabled = true;
+  examBtn.disabled = true;
+  finalExamBtn.disabled = true;
+  checkProgress();
 
   document.getElementById("loginBtn").addEventListener("click", () => {
     cadetName = document.getElementById("cadetName").value.trim();
@@ -690,9 +695,11 @@ button:disabled {
     }, 100);
   };
 });
+
   </script>
 </body>
 </html>
+
 
 
 
