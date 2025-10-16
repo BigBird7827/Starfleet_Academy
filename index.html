@@ -419,12 +419,14 @@ button:disabled {
   const examBtn = document.getElementById("examBtn");
   const finalExamBtn = document.getElementById("finalExamBtn");
   const labBtn = document.getElementById("labBtn");
+  const trainingBtn = document.getElementById("trainingBtn");
 
   function checkProgress() {
     const allTrainingDone = departments.every(d => progress.training[d]);
     const allLabsDone = departments.every(d => progress.labs[d]);
     const allExamsDone = departments.every(d => progress.exams[d]);
     labBtn.disabled = !allTrainingDone;
+    trainingBtn.disabled = allTrainingDone;
     if (allLabsDone) examBtn.disabled = false;
     if (allLabsDone && allExamsDone) {
       finalExamBtn.disabled = false;
@@ -469,6 +471,7 @@ button:disabled {
     departments.forEach(dept => {
       const b = document.createElement("button");
       b.textContent = dept;
+      if (progress.training[dept]) b.disabled = true;
       b.onclick = () => {
         mode === "training"
           ? loadTraining(dept)
@@ -574,6 +577,10 @@ button:disabled {
       progress.training[dept] = true;
       completeBtn.disabled = true;
       completeBtn.textContent = "Module Complete";
+      const buttons = document.querySelectorAll("#moduleButtons button");
+      buttons.forEach(b => {
+        if (b.textContent === dept) b.disabled = true;
+      });
       checkProgress();
     };
     content.appendChild(completeBtn);
@@ -683,10 +690,10 @@ button:disabled {
     }, 100);
   };
 });
-
   </script>
 </body>
 </html>
+
 
 
 
