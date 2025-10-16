@@ -403,287 +403,291 @@ button:disabled {
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const departments = ["Command", "Diplomacy", "Engineering", "Security", "Science", "Medical"];
-      const trainingFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Training.json`]));
-      const labFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Lab.json`]));
-      const examFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Exam.json`]));
-      const progress = { labs: {}, exams: {} };
+  const departments = ["Command", "Diplomacy", "Engineering", "Security", "Science", "Medical"];
+  const trainingFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Training.json`]));
+  const labFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Lab.json`]));
+  const examFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Exam.json`]));
+  const progress = { training: {}, labs: {}, exams: {} };
 
-      const homeworlds = {
-        "Human": "Earth","Vulcan": "Vulcan","Andorian": "Andoria","Aenar": "Andoria","Tellarite": "Tellar Prime",
-        "Bajoran": "Bajor","Betazoid": "Betazed","Bolian": "Bolarus IX","Trill": "Trill","Klingon": "Qo'noS",
-        "Ferengi": "Ferenginar","Denobulan": "Denobula","Orion": "Orion","Caitian": "Cait","Benzite": "Benzar"
+  const homeworlds = {
+    "Human": "Earth","Vulcan": "Vulcan","Andorian": "Andoria","Aenar": "Andoria","Tellarite": "Tellar Prime",
+    "Bajoran": "Bajor","Betazoid": "Betazed","Bolian": "Bolarus IX","Trill": "Trill","Klingon": "Qo'noS",
+    "Ferengi": "Ferenginar","Denobulan": "Denobula","Orion": "Orion","Caitian": "Cait","Benzite": "Benzar"
+  };
+
+  let cadetName = "", species = "";
+  const examBtn = document.getElementById("examBtn");
+  const finalExamBtn = document.getElementById("finalExamBtn");
+  const labBtn = document.getElementById("labBtn");
+
+  function checkProgress() {
+    const allTrainingDone = departments.every(d => progress.training[d]);
+    const allLabsDone = departments.every(d => progress.labs[d]);
+    const allExamsDone = departments.every(d => progress.exams[d]);
+    labBtn.disabled = !allTrainingDone;
+    if (allLabsDone) examBtn.disabled = false;
+    if (allLabsDone && allExamsDone) {
+      finalExamBtn.disabled = false;
+      finalExamBtn.textContent = "Kobayashi Maru - Available";
+    }
+  }
+
+  document.getElementById("loginBtn").addEventListener("click", () => {
+    cadetName = document.getElementById("cadetName").value.trim();
+    species = document.getElementById("species").value;
+    if (!cadetName || !species) return alert("Enter name and species first.");
+    const msg = document.getElementById("accessMessage");
+    msg.textContent = `Access Link Established — Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
+    msg.classList.add("active");
+    setTimeout(() => {
+      const login = document.getElementById("loginScreen");
+      login.classList.add("fade-out");
+      setTimeout(() => {
+        login.style.display = "none";
+        const main = document.getElementById("mainScreen");
+        main.style.display = "block";
+        main.classList.add("fade-in");
+        document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
+      }, 3000);
+    }, 4000);
+  });
+
+  document.getElementById("trainingBtn").onclick = () => openOrientation("training");
+  document.getElementById("labBtn").onclick = () => openOrientation("lab");
+  document.getElementById("examBtn").onclick = () => openOrientation("exam");
+
+  function openOrientation(mode) {
+    document.getElementById("mainScreen").style.display = "none";
+    const title = document.getElementById("orientationTitle");
+    title.textContent = mode === "lab"
+      ? "Select Lab Department"
+      : mode === "exam"
+      ? "Select Exam Department"
+      : "Select Study Department";
+    const btnBox = document.getElementById("moduleButtons");
+    btnBox.innerHTML = "";
+    departments.forEach(dept => {
+      const b = document.createElement("button");
+      b.textContent = dept;
+      b.onclick = () => {
+        mode === "training"
+          ? loadTraining(dept)
+          : mode === "lab"
+          ? loadLab(dept)
+          : loadExam(dept);
       };
+      btnBox.appendChild(b);
+    });
+    const orientation = document.getElementById("orientationPage");
+    orientation.style.display = "flex";
+    orientation.style.flexDirection = "column";
+    orientation.style.justifyContent = "center";
+    orientation.style.alignItems = "center";
+    orientation.style.height = "100vh";
+    orientation.style.overflow = "hidden";
+  }
 
-      let cadetName = "", species = "";
-      const examBtn = document.getElementById("examBtn");
-      const finalExamBtn = document.getElementById("finalExamBtn");
+  document.getElementById("returnMain").onclick = () => {
+    document.getElementById("orientationPage").style.display = "none";
+    document.getElementById("mainScreen").style.display = "block";
+    checkProgress();
+  };
 
-      function checkProgress() {
-        const allLabsDone = departments.every(d => progress.labs[d]);
-        const allExamsDone = departments.every(d => progress.exams[d]);
-        if (allLabsDone) examBtn.disabled = false;
-        if (allLabsDone && allExamsDone) {
-          finalExamBtn.disabled = false;
-          finalExamBtn.textContent = "Kobayashi Maru - Available";
-        }
-      }
+  document.getElementById("returnOrientationTrain").onclick = () => {
+    document.getElementById("trainingPage").style.display = "none";
+    document.getElementById("orientationPage").style.display = "block";
+    checkProgress();
+  };
 
-      document.getElementById("loginBtn").addEventListener("click", () => {
-        cadetName = document.getElementById("cadetName").value.trim();
-        species = document.getElementById("species").value;
-        if (!cadetName || !species) return alert("Enter name and species first.");
+  document.getElementById("returnOrientationLab").onclick = () => {
+    document.getElementById("labPage").style.display = "none";
+    document.getElementById("orientationPage").style.display = "block";
+    checkProgress();
+  };
 
-        const msg = document.getElementById("accessMessage");
-        msg.textContent = `Access Link Established — Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
-        msg.classList.add("active");
+  document.getElementById("returnOrientationExam").onclick = () => {
+    document.getElementById("examPage").style.display = "none";
+    document.getElementById("orientationPage").style.display = "block";
+    checkProgress();
+  };
 
-        setTimeout(() => {
-          const login = document.getElementById("loginScreen");
-          login.classList.add("fade-out");
-          setTimeout(() => {
-            login.style.display = "none";
-            const main = document.getElementById("mainScreen");
-            main.style.display = "block";
-            main.classList.add("fade-in");
-            document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
-          }, 3000);
-        }, 4000);
-      });
-
-      document.getElementById("trainingBtn").onclick = () => openOrientation("training");
-      document.getElementById("labBtn").onclick = () => openOrientation("lab");
-      document.getElementById("examBtn").onclick = () => openOrientation("exam");
-
-      function openOrientation(mode) {
-        document.getElementById("mainScreen").style.display = "none";
-        const title = document.getElementById("orientationTitle");
-        title.textContent = mode === "lab"
-          ? "Select Lab Department"
-          : mode === "exam"
-          ? "Select Exam Department"
-          : "Select Study Department";
-        const btnBox = document.getElementById("moduleButtons");
-        btnBox.innerHTML = "";
-        departments.forEach(dept => {
-          const b = document.createElement("button");
-          b.textContent = dept;
-          b.onclick = () => {
-            mode === "training"
-              ? loadTraining(dept)
-              : mode === "lab"
-              ? loadLab(dept)
-              : loadExam(dept);
-          };
-          btnBox.appendChild(b);
-        });
-        const orientation = document.getElementById("orientationPage");
-        orientation.style.display = "flex";
-        orientation.style.flexDirection = "column";
-        orientation.style.justifyContent = "center";
-        orientation.style.alignItems = "center";
-        orientation.style.height = "100vh";
-        orientation.style.overflow = "hidden";
-      }
-
-      document.getElementById("returnMain").onclick = () => {
-        document.getElementById("orientationPage").style.display = "none";
-        document.getElementById("mainScreen").style.display = "block";
-        checkProgress();
-      };
-
-      document.getElementById("returnOrientationTrain").onclick = () => {
-        document.getElementById("trainingPage").style.display = "none";
-        document.getElementById("orientationPage").style.display = "block";
-      };
-
-      document.getElementById("returnOrientationLab").onclick = () => {
-        document.getElementById("labPage").style.display = "none";
-        document.getElementById("orientationPage").style.display = "block";
-        checkProgress();
-      };
-
-      document.getElementById("returnOrientationExam").onclick = () => {
-        document.getElementById("examPage").style.display = "none";
-        document.getElementById("orientationPage").style.display = "block";
-        checkProgress();
-      };
-
- const trainingBlurbs = {
-  Command: "You are the Captain of a starship, charged with the lives of your crew and the mission of the Federation itself. You will be tested in crisis decisions, chain of command dynamics, and the delicate balance between morale and duty. When lives and alliances depend on your judgment, you must act with clarity, courage, and purpose — the very qualities that define a true Starfleet officer.",
-  Diplomacy: "You are a Starfleet Diplomacy Envoy. Your mission is to bridge worlds. You will learn to negotiate treaties, interpret alien cultures, and mediate conflict where misunderstanding can ignite war. As a Diplomacy Envoy, your voice carries the promise of peace, shaping first contacts and forging alliances that strengthen the Federation’s ideals.",
-  Engineering: "Every starship in the fleet relies on those who keep its heart beating. As an Engineering Officer, you will monitor power systems, repair damage under pressure, and invent solutions where none exist. Warp drives, transporters, and shields all respond to your discipline and intuition. When systems fail and the void presses in, it is your steady hand that holds chaos at bay.",
-  Security: "In the unpredictable reaches of space, danger can appear without warning. As a Security Officer, you will defend lives, enforce regulations, and uphold the principles that define Starfleet. Your calm under fire and sense of honor shape every mission, from quelling internal conflict to facing external threats. Where others hesitate, you act — not from aggression, but duty.",
-  Science: "The stars themselves hold endless mysteries waiting to be uncovered. As a Science Officer, your curiosity drives the Federation’s greatest discoveries. You will study alien worlds, unravel cosmic phenomena, and expand humanity’s understanding of the universe. Each observation brings you closer to the truth — that exploration and discovery are themselves acts of courage.",
-  Medical: "Beyond the hum of the warp core and the glow of the bridge lies the quiet, urgent world of healing. As a Medical Officer, you safeguard the health and hope of those who serve. You will treat the injured, confront unknown diseases, and make impossible choices where seconds determine survival. In your hands lies the trust of every soul aboard — a trust you must honor with skill, compassion, and resolve."
-};
+  const trainingBlurbs = {
+    Command: "You are the Captain of a starship, charged with the lives of your crew and the mission of the Federation itself. You will be tested in crisis decisions, chain of command dynamics, and the delicate balance between morale and duty. When lives and alliances depend on your judgment, you must act with clarity, courage, and purpose — the very qualities that define a true Starfleet officer.",
+    Diplomacy: "You are a Starfleet Diplomacy Envoy. Your mission is to bridge worlds. You will learn to negotiate treaties, interpret alien cultures, and mediate conflict where misunderstanding can ignite war. As a Diplomacy Envoy, your voice carries the promise of peace, shaping first contacts and forging alliances that strengthen the Federation’s ideals.",
+    Engineering: "Every starship in the fleet relies on those who keep its heart beating. As an Engineering Officer, you will monitor power systems, repair damage under pressure, and invent solutions where none exist. Warp drives, transporters, and shields all respond to your discipline and intuition. When systems fail and the void presses in, it is your steady hand that holds chaos at bay.",
+    Security: "In the unpredictable reaches of space, danger can appear without warning. As a Security Officer, you will defend lives, enforce regulations, and uphold the principles that define Starfleet. Your calm under fire and sense of honor shape every mission, from quelling internal conflict to facing external threats. Where others hesitate, you act — not from aggression, but duty.",
+    Science: "The stars themselves hold endless mysteries waiting to be uncovered. As a Science Officer, your curiosity drives the Federation’s greatest discoveries. You will study alien worlds, unravel cosmic phenomena, and expand humanity’s understanding of the universe. Each observation brings you closer to the truth — that exploration and discovery are themselves acts of courage.",
+    Medical: "Beyond the hum of the warp core and the glow of the bridge lies the quiet, urgent world of healing. As a Medical Officer, you safeguard the health and hope of those who serve. You will treat the injured, confront unknown diseases, and make impossible choices where seconds determine survival. In your hands lies the trust of every soul aboard — a trust you must honor with skill, compassion, and resolve."
+  };
 
   async function loadTraining(dept) {
-  document.getElementById("orientationPage").style.display = "none";
-  document.getElementById("trainingPage").style.display = "block";
-  document.getElementById("trainingDeptTitle").textContent = `${dept} Study`;
-  document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
-  const content = document.getElementById("trainingContent");
-  content.innerHTML = "<p>Loading...</p>";
-  const res = await fetch(trainingFiles[dept]);
-  const data = await res.json();
-  content.innerHTML = "";
-  const blurb = document.createElement("p");
-  blurb.textContent = trainingBlurbs[dept];
-  blurb.style.margin = "10px 0 25px 0";
-  blurb.style.fontStyle = "italic";
-  blurb.style.fontSize = "14pt";
-  blurb.style.color = "#ffffff";
-  blurb.style.textAlign = "center";
-  blurb.style.whiteSpace = "normal";
-  blurb.style.wordWrap = "break-word";
-  blurb.style.maxWidth = "900px";
-  blurb.style.margin = "10px auto 25px auto";
-  document.getElementById("trainingCadetInfo").insertAdjacentElement("afterend", blurb);
-  data.study?.forEach(item => {
-    const section = document.createElement("div");
-    section.className = "training-section boxed-scenario";
-    const header = document.createElement("div");
-    header.className = "training-header-bar";
-    header.textContent = `${dept.toUpperCase()} DIVISION`;
-    section.appendChild(header);
-    const scenario = document.createElement("h3");
-    scenario.textContent = item.scenario;
-    section.appendChild(scenario);
-    const summary = document.createElement("p");
-    summary.textContent = item.summary;
-    section.appendChild(summary);
-    const answersDiv = document.createElement("div");
-    answersDiv.className = "training-answers";
-    item.answers.forEach((ans, i) => {
-      const p = document.createElement("p");
-      const strong = document.createElement("strong");
-      strong.style.color = i === 0 ? "green" : i === 1 ? "yellow" : "red";
-      strong.textContent = ans.text;
-      const span = document.createElement("span");
-      span.textContent = ans.details;
-      p.appendChild(strong);
-      p.appendChild(span);
-      answersDiv.appendChild(p);
+    document.getElementById("orientationPage").style.display = "none";
+    document.getElementById("trainingPage").style.display = "block";
+    document.getElementById("trainingDeptTitle").textContent = `${dept} Study`;
+    document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+    const content = document.getElementById("trainingContent");
+    content.innerHTML = "<p>Loading...</p>";
+    const res = await fetch(trainingFiles[dept]);
+    const data = await res.json();
+    content.innerHTML = "";
+    const blurb = document.createElement("p");
+    blurb.textContent = trainingBlurbs[dept];
+    blurb.style.margin = "10px auto 25px";
+    blurb.style.fontStyle = "italic";
+    blurb.style.fontSize = "14pt";
+    blurb.style.color = "#ffffff";
+    blurb.style.textAlign = "center";
+    blurb.style.maxWidth = "900px";
+    document.getElementById("trainingCadetInfo").insertAdjacentElement("afterend", blurb);
+    data.study?.forEach(item => {
+      const section = document.createElement("div");
+      section.className = "training-section boxed-scenario";
+      const header = document.createElement("div");
+      header.className = "training-header-bar";
+      header.textContent = `${dept.toUpperCase()} DIVISION`;
+      section.appendChild(header);
+      const scenario = document.createElement("h3");
+      scenario.textContent = item.scenario;
+      section.appendChild(scenario);
+      const summary = document.createElement("p");
+      summary.textContent = item.summary;
+      section.appendChild(summary);
+      const answersDiv = document.createElement("div");
+      answersDiv.className = "training-answers";
+      item.answers.forEach((ans, i) => {
+        const p = document.createElement("p");
+        const strong = document.createElement("strong");
+        strong.style.color = i === 0 ? "green" : i === 1 ? "yellow" : "red";
+        strong.textContent = ans.text;
+        const span = document.createElement("span");
+        span.textContent = ans.details;
+        p.appendChild(strong);
+        p.appendChild(span);
+        answersDiv.appendChild(p);
+      });
+      section.appendChild(answersDiv);
+      content.appendChild(section);
     });
-    section.appendChild(answersDiv);
-    content.appendChild(section);
-  });
-}
+    const completeBtn = document.createElement("button");
+    completeBtn.textContent = "Mark as Complete";
+    completeBtn.onclick = () => {
+      progress.training[dept] = true;
+      completeBtn.disabled = true;
+      completeBtn.textContent = "Module Complete";
+      checkProgress();
+    };
+    content.appendChild(completeBtn);
+  }
 
-      async function loadLab(dept) {
-        document.getElementById("orientationPage").style.display = "none";
-        document.getElementById("labPage").style.display = "block";
-        document.getElementById("labDeptTitle").textContent = `${dept} Lab`;
-        document.getElementById("labCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
-        const content = document.getElementById("labContent");
-        content.innerHTML = "<p>Loading...</p>";
-        const res = await fetch(labFiles[dept]);
-        const data = await res.json();
-        const items = data.lab || [];
-        let currentIndex = 0;
-        showScenario(currentIndex);
+  async function loadLab(dept) {
+    document.getElementById("orientationPage").style.display = "none";
+    document.getElementById("labPage").style.display = "block";
+    document.getElementById("labDeptTitle").textContent = `${dept} Lab`;
+    document.getElementById("labCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+    const content = document.getElementById("labContent");
+    content.innerHTML = "<p>Loading...</p>";
+    const res = await fetch(labFiles[dept]);
+    const data = await res.json();
+    const items = data.lab || [];
+    let currentIndex = 0;
+    showScenario(currentIndex);
+    function showScenario(i) {
+      const item = items[i];
+      content.innerHTML = `<div class="training-section"><h3>${item.scenario}</h3><p>${item.summary || ""}</p></div>`;
+      const answersDiv = document.createElement("div");
+      answersDiv.className = "lab-answers";
+      [...item.answers].sort(() => Math.random() - 0.5).forEach(ans => {
+        const btn = document.createElement("button");
+        btn.textContent = ans.text;
+        btn.onclick = () => {
+          answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
+          const feedback = document.createElement("div");
+          feedback.className = "feedback";
+          feedback.innerHTML = ans.type === "best"
+            ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
+            : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
+          const next = document.createElement("button");
+          next.textContent = i < items.length - 1 ? "Next Scenario ➡️" : "Return to Departments";
+          next.onclick = () => {
+            if (i < items.length - 1) showScenario(i + 1);
+            else {
+              progress.labs[dept] = true;
+              document.getElementById("labPage").style.display = "none";
+              document.getElementById("orientationPage").style.display = "block";
+              checkProgress();
+            }
+          };
+          feedback.appendChild(next);
+          answersDiv.appendChild(feedback);
+        };
+        answersDiv.appendChild(btn);
+      });
+      content.appendChild(answersDiv);
+    }
+  }
 
-        function showScenario(i) {
-          const item = items[i];
-          content.innerHTML = `<div class="training-section"><h3>${item.scenario}</h3><p>${item.summary || ""}</p></div>`;
-          const answersDiv = document.createElement("div");
-          answersDiv.className = "lab-answers";
-          [...item.answers].sort(() => Math.random() - 0.5).forEach(ans => {
-            const btn = document.createElement("button");
-            btn.textContent = ans.text;
-            btn.onclick = () => {
-              answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
-              const feedback = document.createElement("div");
-              feedback.className = "feedback";
-              feedback.innerHTML = ans.type === "best"
-                ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
-                : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
-              const next = document.createElement("button");
-              next.textContent = i < items.length - 1 ? "Next Scenario ➡️" : "Return to Departments";
-              next.onclick = () => {
-                if (i < items.length - 1) showScenario(i + 1);
-                else {
-                  progress.labs[dept] = true;
-                  document.getElementById("labPage").style.display = "none";
-                  document.getElementById("orientationPage").style.display = "block";
-                  checkProgress();
-                }
-              };
-              feedback.appendChild(next);
-              answersDiv.appendChild(feedback);
-            };
-            answersDiv.appendChild(btn);
-          });
-          content.appendChild(answersDiv);
-        }
-      }
+  async function loadExam(dept) {
+    document.getElementById("orientationPage").style.display = "none";
+    document.getElementById("examPage").style.display = "block";
+    document.getElementById("examDeptTitle").textContent = `${dept} Exam`;
+    document.getElementById("examCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
+    const content = document.getElementById("examContent");
+    content.innerHTML = "<p>Loading...</p>";
+    const res = await fetch(examFiles[dept]);
+    const data = await res.json();
+    const items = data.exam || [];
+    let currentIndex = 0;
+    showQuestion(currentIndex);
+    function showQuestion(i) {
+      const item = items[i];
+      content.innerHTML = `<div class="training-section"><h3>${item.scenario}</h3></div>`;
+      const answersDiv = document.createElement("div");
+      answersDiv.className = "exam-answers";
+      [...item.answers].forEach(ans => {
+        const btn = document.createElement("button");
+        btn.textContent = ans.text;
+        btn.onclick = () => {
+          answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
+          const feedback = document.createElement("div");
+          feedback.className = "feedback";
+          feedback.innerHTML = ans.type === "best"
+            ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
+            : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
+          const next = document.createElement("button");
+          next.textContent = i < items.length - 1 ? "Next Question ➡️" : "Return to Departments";
+          next.onclick = () => {
+            if (i < items.length - 1) showQuestion(i + 1);
+            else {
+              progress.exams[dept] = true;
+              document.getElementById("examPage").style.display = "none";
+              document.getElementById("orientationPage").style.display = "block";
+              checkProgress();
+            }
+          };
+          feedback.appendChild(next);
+          answersDiv.appendChild(feedback);
+        };
+        answersDiv.appendChild(btn);
+      });
+      content.appendChild(answersDiv);
+    }
+  }
 
-      async function loadExam(dept) {
-        document.getElementById("orientationPage").style.display = "none";
-        document.getElementById("examPage").style.display = "block";
-        document.getElementById("examDeptTitle").textContent = `${dept} Exam`;
-        document.getElementById("examCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
-        const content = document.getElementById("examContent");
-        content.innerHTML = "<p>Loading...</p>";
-        const res = await fetch(examFiles[dept]);
-        const data = await res.json();
-        const items = data.exam || [];
-        let currentIndex = 0;
-        showQuestion(currentIndex);
+  finalExamBtn.disabled = false;
+  finalExamBtn.textContent = "Kobayashi Maru - Engage";
+  finalExamBtn.onclick = () => {
+    const name = encodeURIComponent(cadetName);
+    setTimeout(() => {
+      window.open(`https://bigbird7827.github.io/Starfleet_Academy/Final_exam/Final_Exam.html?name=${name}&cachebust=${Date.now()}`, "_blank", "noopener");
+      window.location.href = "about:blank";
+    }, 100);
+  };
+});
 
-        function showQuestion(i) {
-          const item = items[i];
-          content.innerHTML = `<div class="training-section"><h3>${item.scenario}</h3></div>`;
-          const answersDiv = document.createElement("div");
-          answersDiv.className = "exam-answers";
-          [...item.answers].forEach(ans => {
-            const btn = document.createElement("button");
-            btn.textContent = ans.text;
-            btn.onclick = () => {
-              answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
-              const feedback = document.createElement("div");
-              feedback.className = "feedback";
-              feedback.innerHTML = ans.type === "best"
-                ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
-                : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
-              const next = document.createElement("button");
-              next.textContent = i < items.length - 1 ? "Next Question ➡️" : "Return to Departments";
-              next.onclick = () => {
-                if (i < items.length - 1) showQuestion(i + 1);
-                else {
-                  progress.exams[dept] = true;
-                  document.getElementById("examPage").style.display = "none";
-                  document.getElementById("orientationPage").style.display = "block";
-                  checkProgress();
-                }
-              };
-              feedback.appendChild(next);
-              answersDiv.appendChild(feedback);
-            };
-            answersDiv.appendChild(btn);
-          });
-          content.appendChild(answersDiv);
-        }
-      }
-
-      finalExamBtn.disabled = false;
-      finalExamBtn.textContent = "Kobayashi Maru - Engage";
-      finalExamBtn.onclick = () => {
-        const name = encodeURIComponent(cadetName);
-        setTimeout(() => {
-          window.open(
-            `https://bigbird7827.github.io/Starfleet_Academy/Final_exam/Final_Exam.html?name=${name}&cachebust=${Date.now()}`,
-            "_blank",
-            "noopener"
-          );
-          window.location.href = "about:blank";
-        }, 100);
-      };
-    });
   </script>
 </body>
 </html>
+
 
 
 
