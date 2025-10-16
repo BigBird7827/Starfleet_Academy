@@ -416,10 +416,10 @@ button:disabled {
   };
 
   let cadetName = "", species = "";
+  const trainingBtn = document.getElementById("trainingBtn");
+  const labBtn = document.getElementById("labBtn");
   const examBtn = document.getElementById("examBtn");
   const finalExamBtn = document.getElementById("finalExamBtn");
-  const labBtn = document.getElementById("labBtn");
-  const trainingBtn = document.getElementById("trainingBtn");
 
   function checkProgress() {
     const allTrainingDone = departments.every(d => progress.training[d]);
@@ -427,8 +427,15 @@ button:disabled {
     const allExamsDone = departments.every(d => progress.exams[d]);
     labBtn.disabled = !allTrainingDone;
     trainingBtn.disabled = allTrainingDone;
-    if (allLabsDone) examBtn.disabled = false;
-    if (allLabsDone && allExamsDone) {
+    if (allLabsDone) {
+      examBtn.disabled = false;
+      trainingBtn.disabled = true;
+      labBtn.disabled = true;
+    }
+    if (allExamsDone) {
+      trainingBtn.disabled = true;
+      labBtn.disabled = true;
+      examBtn.disabled = true;
       finalExamBtn.disabled = false;
       finalExamBtn.textContent = "Kobayashi Maru - Available";
     }
@@ -466,23 +473,17 @@ button:disabled {
   function openOrientation(mode) {
     document.getElementById("mainScreen").style.display = "none";
     const title = document.getElementById("orientationTitle");
-    title.textContent = mode === "lab"
-      ? "Select Lab Department"
-      : mode === "exam"
-      ? "Select Exam Department"
-      : "Select Study Department";
+    title.textContent = mode === "lab" ? "Select Lab Department" : mode === "exam" ? "Select Exam Department" : "Select Study Department";
     const btnBox = document.getElementById("moduleButtons");
     btnBox.innerHTML = "";
     departments.forEach(dept => {
       const b = document.createElement("button");
       b.textContent = dept;
-      if (progress.training[dept]) b.disabled = true;
+      if (mode === "training" && progress.training[dept]) b.disabled = true;
+      if (mode === "lab" && progress.labs[dept]) b.disabled = true;
+      if (mode === "exam" && progress.exams[dept]) b.disabled = true;
       b.onclick = () => {
-        mode === "training"
-          ? loadTraining(dept)
-          : mode === "lab"
-          ? loadLab(dept)
-          : loadExam(dept);
+        mode === "training" ? loadTraining(dept) : mode === "lab" ? loadLab(dept) : loadExam(dept);
       };
       btnBox.appendChild(b);
     });
@@ -619,16 +620,22 @@ button:disabled {
             ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
             : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
           const next = document.createElement("button");
-          next.textContent = i < items.length - 1 ? "Next Scenario ➡️" : "Return to Departments";
-          next.onclick = () => {
-            if (i < items.length - 1) showScenario(i + 1);
-            else {
+          if (i < items.length - 1) {
+            next.textContent = "Next Scenario ➡️";
+            next.onclick = () => showScenario(i + 1);
+          } else {
+            next.textContent = "Mark Lab as Complete";
+            next.onclick = () => {
               progress.labs[dept] = true;
+              const buttons = document.querySelectorAll("#moduleButtons button");
+              buttons.forEach(b => {
+                if (b.textContent === dept) b.disabled = true;
+              });
               document.getElementById("labPage").style.display = "none";
               document.getElementById("orientationPage").style.display = "block";
               checkProgress();
-            }
-          };
+            };
+          }
           feedback.appendChild(next);
           answersDiv.appendChild(feedback);
         };
@@ -666,16 +673,22 @@ button:disabled {
             ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
             : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
           const next = document.createElement("button");
-          next.textContent = i < items.length - 1 ? "Next Question ➡️" : "Return to Departments";
-          next.onclick = () => {
-            if (i < items.length - 1) showQuestion(i + 1);
-            else {
+          if (i < items.length - 1) {
+            next.textContent = "Next Question ➡️";
+            next.onclick = () => showQuestion(i + 1);
+          } else {
+            next.textContent = "Mark Exam as Complete";
+            next.onclick = () => {
               progress.exams[dept] = true;
+              const buttons = document.querySelectorAll("#moduleButtons button");
+              buttons.forEach(b => {
+                if (b.textContent === dept) b.disabled = true;
+              });
               document.getElementById("examPage").style.display = "none";
               document.getElementById("orientationPage").style.display = "block";
               checkProgress();
-            }
-          };
+            };
+          }
           feedback.appendChild(next);
           answersDiv.appendChild(feedback);
         };
@@ -685,8 +698,6 @@ button:disabled {
     }
   }
 
-  finalExamBtn.disabled = false;
-  finalExamBtn.textContent = "Kobayashi Maru - Engage";
   finalExamBtn.onclick = () => {
     const name = encodeURIComponent(cadetName);
     setTimeout(() => {
@@ -699,6 +710,7 @@ button:disabled {
   </script>
 </body>
 </html>
+
 
 
 
