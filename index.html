@@ -303,7 +303,7 @@ button:disabled {
 </head>
 
 <body>
-   <div id="loginScreen">
+  <div id="loginScreen">
     <div class="lcars-top">Starfleet Academy - Established 2161</div>
     <div class="lcars-bottom">Ex Astris Scientia</div>
     <div class="container glass-panel">
@@ -311,7 +311,7 @@ button:disabled {
       <p class="login-subtext">Authorization required for Federation access</p>
       <div class="lcars-divider"></div>
       <label for="cadetName">Cadet Name</label>
-      <input type="text" id="cadetName" required placeholder="Enter full designation">
+      <input type="text" id="cadetName" required placeholder="Enter full designation" />
       <label for="species">Species</label>
       <select id="species" required>
         <option value="">-- Select Species --</option>
@@ -336,202 +336,368 @@ button:disabled {
     </div>
   </div>
 
-  <div id="mainScreen" style="display:none;">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-left" alt="">
-    <img src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png" class="corner-image corner-right" alt="">
+  <div id="mainScreen" style="display: none;">
+    <img
+      src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png"
+      class="corner-image corner-left"
+      alt=""
+    />
+    <img
+      src="https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/Starfleet%20Academy%20Orientation.png"
+      class="corner-image corner-right"
+      alt=""
+    />
     <div class="container">
       <div class="page-title">Welcome to Starfleet Academy</div>
-      <div id="mainWelcome" style="font-size:17pt;margin-bottom:10px;"></div>
-      <p style="color:#fff;text-align:center;max-width:800px;">
-        Congratulations, Cadet. You have been accepted into Starfleet Academy,
-        where the finest minds of the Federation prepare to serve in the vast
-        frontier of space. Here, you will learn the disciplines of command,
-        diplomacy, science, engineering, medicine, and security — each a vital
-        pillar in the exploration and defense of the Federation.
+      <div id="mainWelcome" style="font-size: 17pt; margin-bottom: 10px;"></div>
+
+      <p style="color: #fff; text-align: center; max-width: 800px;">
+        Congratulations, Cadet. You have been accepted into Starfleet Academy, where the finest minds of the Federation
+        prepare to serve in the vast frontier of space. Here, you will learn the disciplines of command, diplomacy,
+        science, engineering, medicine, and security — each a vital pillar in the exploration and defense of the
+        Federation.
       </p>
-      <p style="color:#fff;text-align:center;max-width:800px;">
-        Choose your discipline and commence your studies by selecting the "Study" button below.
-        When you have completed your studies, return to this console and select the "Labs" button
-        to evaluate your proficiency. Upon completion of all lab modules, return again to this console
-        and select the "Exams" button to complete your academic requirements.
+
+      <p style="color: #fff; text-align: center; max-width: 800px;">
+        Choose your discipline and commence your studies by selecting the "Study" button below. When you have completed
+        your studies, return to this console and select the "Labs" button to evaluate your proficiency. Upon completion
+        of all lab modules, return again to this console and select the "Exams" button to complete your academic
+        requirements.
       </p>
-      <p style="color:#fff;text-align:center;max-width:800px;">
-        Prior to graduation, all cadets are required to undertake the "Kobayashi Maru" simulation — 
-        a no-win scenario designed to test your command character. Your performance in this exercise 
-        does not affect your eligibility for graduation.
+
+      <p style="color: #fff; text-align: center; max-width: 800px;">
+        Prior to graduation, all cadets are required to undertake the "Kobayashi Maru" simulation — a no-win scenario
+        designed to test your command character. Your performance in this exercise does not affect your eligibility for
+        graduation.
       </p>
-      <p style="color:#fff;text-align:center;margin-top:8px;">Good luck, Cadet.</p>
+
+      <p style="color: #fff; text-align: center; margin-top: 8px;">Good luck, Cadet.</p>
 
       <div class="department-select-box">
-        <button id="trainingBtn" style="width:180px;">Study</button>
-        <button id="labBtn" style="width:180px;">Labs</button>
-        <button id="examBtn" style="width:180px;" disabled>Exams</button>
+        <button id="trainingBtn" style="width: 180px;">Study</button>
+        <button id="labBtn" style="width: 180px;">Labs</button>
+        <button id="examBtn" style="width: 180px;" disabled>Exams</button>
       </div>
 
       <div class="km-button-box">
-        <button id="finalExamBtn" style="width:260px;" disabled>Kobayashi Maru - Locked</button>
+        <button id="finalExamBtn" style="width: 260px;" disabled>Kobayashi Maru - Locked</button>
+      </div>
+
+      <div
+        id="leaderboard"
+        style="display: none; margin-top: 20px; color: #fff; text-align: center; font-family: 'Orbitron', sans-serif;"
+      >
+        <h3 style="color: var(--gold);">Exam Performance — Cadet Rankings</h3>
+        <table id="leaderboardTable" style="margin: 10px auto; border-collapse: collapse; color: #fff;">
+          <thead>
+            <tr>
+              <th style="padding: 6px 12px;">Cadet</th>
+              <th style="padding: 6px 12px;">GPA</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
     </div>
   </div>
 
-  <div id="orientationPage" style="display:none;text-align:center;">
+  <div id="orientationPage" style="display: none; text-align: center;">
     <div class="page-title" id="orientationTitle"></div>
     <div id="moduleButtons" class="department-select-box"></div>
     <button id="returnMain" class="fixed-return">Return to Main</button>
   </div>
 
-  <div id="trainingPage" style="display:none;text-align:center;">
+  <div id="trainingPage" style="display: none; text-align: center;">
     <div class="page-title" id="trainingDeptTitle"></div>
-    <div id="trainingCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-    <div id="trainingContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <div id="trainingCadetInfo" style="font-size: 16pt; color: var(--gold); margin-bottom: 20px;"></div>
+    <div
+      id="trainingContent"
+      style="max-width: 1000px; margin: 0 auto; text-align: left; padding: 20px; background: rgba(0, 0, 0, 0.8);
+      border: 2px solid var(--gold); border-radius: 12px; box-shadow: 0 0 15px var(--blue);"
+    ></div>
     <button id="returnOrientationTrain" class="fixed-return">Return to Departments</button>
   </div>
 
-  <div id="labPage" style="display:none;text-align:center;">
+  <div id="labPage" style="display: none; text-align: center;">
     <div class="page-title" id="labDeptTitle"></div>
-    <div id="labCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-    <div id="labContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <div id="labCadetInfo" style="font-size: 16pt; color: var(--gold); margin-bottom: 20px;"></div>
+    <div
+      id="labContent"
+      style="max-width: 1000px; margin: 0 auto; text-align: left; padding: 20px; background: rgba(0, 0, 0, 0.8);
+      border: 2px solid var(--gold); border-radius: 12px; box-shadow: 0 0 15px var(--blue);"
+    ></div>
     <button id="returnOrientationLab" class="fixed-return">Return to Departments</button>
   </div>
 
-  <div id="examPage" style="display:none;text-align:center;">
+  <div id="examPage" style="display: none; text-align: center;">
     <div class="page-title" id="examDeptTitle"></div>
-    <div id="examCadetInfo" style="font-size:16pt;color:var(--gold);margin-bottom:20px;"></div>
-    <div id="examContent" style="max-width:1000px;margin:0 auto;text-align:left;padding:20px;background:rgba(0,0,0,0.8);border:2px solid var(--gold);border-radius:12px;box-shadow:0 0 15px var(--blue);"></div>
+    <div id="examCadetInfo" style="font-size: 16pt; color: var(--gold); margin-bottom: 20px;"></div>
+    <div
+      id="examContent"
+      style="max-width: 1000px; margin: 0 auto; text-align: left; padding: 20px; background: rgba(0, 0, 0, 0.8);
+      border: 2px solid var(--gold); border-radius: 12px; box-shadow: 0 0 15px var(--blue);"
+    ></div>
     <button id="returnOrientationExam" class="fixed-return">Return to Departments</button>
   </div>
+</body>
 
   <script>
    document.addEventListener("DOMContentLoaded", () => {
-  const departments = ["Command", "Diplomacy", "Engineering", "Security", "Science", "Medical"];
-  const trainingFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Training.json`]));
-  const labFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Lab.json`]));
-  const examFiles = Object.fromEntries(departments.map(d => [d, `https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Exam.json`]));
-  const progress = { training: {}, labs: {}, exams: {} };
+  const departments = ["Command","Diplomacy","Engineering","Security","Science","Medical"];
+  const trainingFiles = Object.fromEntries(departments.map(d=>[d,`https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Training.json`]));
+  const labFiles = Object.fromEntries(departments.map(d=>[d,`https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Lab.json`]));
+  const examFiles = Object.fromEntries(departments.map(d=>[d,`https://raw.githubusercontent.com/BigBird7827/Starfleet_Academy/main/${d}%20Exam.json`]));
 
   const homeworlds = {
-    "Human": "Earth","Vulcan": "Vulcan","Andorian": "Andoria","Aenar": "Andoria","Tellarite": "Tellar Prime",
-    "Bajoran": "Bajor","Betazoid": "Betazed","Bolian": "Bolarus IX","Trill": "Trill","Klingon": "Qo'noS",
-    "Ferengi": "Ferenginar","Denobulan": "Denobula","Orion": "Orion","Caitian": "Cait","Benzite": "Benzar"
+    Human:"Earth", Vulcan:"Vulcan", Andorian:"Andoria", Aenar:"Andoria", Tellarite:"Tellar Prime",
+    Bajoran:"Bajor", Betazoid:"Betazed", Bolian:"Bolarus IX", Trill:"Trill", Klingon:"Qo'noS",
+    Ferengi:"Ferenginar", Denobulan:"Denobula", Orion:"Orion", Caitian:"Cait", Benzite:"Benzar"
+  };
+
+  const trainingBlurbs = {
+    Command:"You are the Captain of a starship, charged with the lives of your crew and the mission of the Federation itself. You will be tested in crisis decisions, chain of command dynamics, and the delicate balance between morale and duty. When lives and alliances depend on your judgment, you must act with clarity, courage, and purpose — the very qualities that define a true Starfleet officer.",
+    Diplomacy:"You are a Starfleet Diplomacy Envoy. Your mission is to bridge worlds. You will learn to negotiate treaties, interpret alien cultures, and mediate conflict where misunderstanding can ignite war. As a Diplomacy Envoy, your voice carries the promise of peace, shaping first contacts and forging alliances that strengthen the Federation’s ideals.",
+    Engineering:"Every starship in the fleet relies on those who keep its heart beating. As an Engineering Officer, you will monitor power systems, repair damage under pressure, and invent solutions where none exist. Warp drives, transporters, and shields all respond to your discipline and intuition. When systems fail and the void presses in, it is your steady hand that holds chaos at bay.",
+    Security:"In the unpredictable reaches of space, danger can appear without warning. As a Security Officer, you will defend lives, enforce regulations, and uphold the principles that define Starfleet. Your calm under fire and sense of honor shape every mission, from quelling internal conflict to facing external threats. Where others hesitate, you act — not from aggression, but duty.",
+    Science:"The stars themselves hold endless mysteries waiting to be uncovered. As a Science Officer, your curiosity drives the Federation’s greatest discoveries. You will study alien worlds, unravel cosmic phenomena, and expand humanity’s understanding of the universe. Each observation brings you closer to the truth — that exploration and discovery are themselves acts of courage.",
+    Medical:"Beyond the hum of the warp core and the glow of the bridge lies the quiet, urgent world of healing. As a Medical Officer, you safeguard the health and hope of those who serve. You will treat the injured, confront unknown diseases, and make impossible choices where seconds determine survival. In your hands lies the trust of every soul aboard — a trust you must honor with skill, compassion, and resolve."
   };
 
   let cadetName = "", species = "";
+  const progress = { training:{}, labs:{}, exams:{} };
+  const cadetScores = {};
+  const simulatedCadets = [];
+  let currentExamGPA = null;
+
   const trainingBtn = document.getElementById("trainingBtn");
   const labBtn = document.getElementById("labBtn");
   const examBtn = document.getElementById("examBtn");
   const finalExamBtn = document.getElementById("finalExamBtn");
 
-  function checkProgress() {
-    const allTrainingDone = departments.every(d => progress.training[d]);
-    const allLabsDone = departments.every(d => progress.labs[d]);
-    const allExamsDone = departments.every(d => progress.exams[d]);
+  function saveProgress(){
+    if(!cadetName) return;
+    localStorage.setItem(`progress_${cadetName}`, JSON.stringify({progress, cadetScores}));
+  }
+
+  function loadProgress(name){
+    const raw = localStorage.getItem(`progress_${name}`);
+    if(!raw) return;
+    const data = JSON.parse(raw);
+    Object.assign(progress.training, data.progress?.training || {});
+    Object.assign(progress.labs, data.progress?.labs || {});
+    Object.assign(progress.exams, data.progress?.exams || {});
+    Object.assign(cadetScores, data.cadetScores || {});
+  }
+
+  function createSimulatedCadets(){
+    const pool = ["T'Ren","Mendoza","Korrin","Sh'ral","Tallis","Mokar","Elrin","V'Lar","Nerok","Ilyra"];
+    pool.forEach(n => simulatedCadets.push({ name:n, gpa: parseFloat((Math.random()*1.2 + 2.4).toFixed(2)) }));
+  }
+
+  function ensureLeaderboard(){
+    let board = document.getElementById("leaderboard");
+    if(!board){
+      const c = document.querySelector("#mainScreen .container");
+      board = document.createElement("div");
+      board.id = "leaderboard";
+      board.style.display = "none";
+      board.style.marginTop = "20px";
+      board.style.color = "#fff";
+      board.style.textAlign = "center";
+      board.innerHTML = `
+        <h3 style="color:var(--gold);font-family:'Orbitron',sans-serif;">Exam Performance — Cadet Rankings</h3>
+        <table style="margin:10px auto;border-collapse:collapse;color:#fff;">
+          <thead><tr><th style="padding:6px 12px;">Cadet</th><th style="padding:6px 12px;">GPA</th></tr></thead>
+          <tbody></tbody>
+        </table>`;
+      c.appendChild(board);
+    }
+    return board;
+  }
+
+  function ensureExamLog(){
+    let log = document.getElementById("examLog");
+    if(!log){
+      const c = document.querySelector("#mainScreen .container");
+      log = document.createElement("div");
+      log.id = "examLog";
+      log.style.display = "none";
+      log.style.maxWidth = "800px";
+      log.style.margin = "12px auto";
+      log.style.textAlign = "left";
+      log.style.color = "#fff";
+      log.style.fontSize = "13px";
+      log.style.lineHeight = "1.5";
+      log.innerHTML = `<div style="color:var(--gold);font-family:'Orbitron',sans-serif;margin-bottom:6px;">Exam Activity Log</div>`;
+      c.appendChild(log);
+    }
+    return log;
+  }
+
+  function updateLeaderboard(){
+    const board = document.querySelector("#leaderboard tbody");
+    if(!board) return;
+    const playerGPA = currentExamGPA != null ? currentExamGPA : calculateOverallGPA();
+    const rows = [...simulatedCadets.map(c=>({name:c.name,gpa:c.gpa})), {name:cadetName, gpa:playerGPA}].sort((a,b)=>b.gpa-a.gpa);
+    board.innerHTML = "";
+    rows.forEach(r=>{
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td style="padding:6px 12px;">${r.name}</td><td style="padding:6px 12px;">${r.gpa.toFixed(2)}</td>`;
+      if(r.name===cadetName) tr.style.background = "rgba(255,212,122,0.15)";
+      board.appendChild(tr);
+    });
+  }
+
+  function appendExamLog(text){
+    const log = ensureExamLog();
+    log.style.display = "block";
+    const p = document.createElement("p");
+    p.textContent = text;
+    log.appendChild(p);
+  }
+
+  function logExamUpdate(dept, gpa){
+    appendExamLog(`${cadetName} — ${dept}: GPA ${gpa.toFixed(2)}`);
+    saveProgress();
+  }
+
+  function calculateOverallGPA(){
+    const vals = Object.values(cadetScores);
+    if(!vals.length) return 0;
+    return vals.reduce((a,b)=>a+b,0) / vals.length;
+  }
+
+  function bestDepartments(){
+    return Object.entries(cadetScores).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([d])=>d);
+  }
+
+  function showEnlistmentScreen(){
+    document.querySelectorAll("#mainScreen,#orientationPage,#trainingPage,#labPage,#examPage").forEach(e=>e.style.display="none");
+    const main = document.getElementById("mainScreen");
+    const c = main.querySelector(".container");
+    c.innerHTML = `
+      <div class="page-title">Enlistment Opportunity</div>
+      <p style="max-width:800px;margin:20px auto;color:#fff;font-size:14pt;">
+        Cadet ${cadetName} of ${homeworlds[species]}, although you did not qualify for commission as a Starfleet officer,
+        your performance has been exemplary in other areas. Starfleet Command offers you the opportunity to serve
+        as a Non-Commissioned Officer aboard one of several Federation vessels.
+      </p>
+      <p style="color:#ffd47a;font-size:13pt;margin:10px auto;">You are recommended for assignment in the following divisions:</p>
+      <ul style="list-style:none;padding:0;font-size:13pt;">${bestDepartments().map(d=>`<li>${d} Division</li>`).join("")}</ul>
+      <p style="margin-top:20px;color:#4ab0ff;">Live long and serve with honor.</p>`;
+    main.style.display = "block";
+  }
+
+  function checkProgress(){
+    const allTrainingDone = departments.every(d=>progress.training[d]);
+    const allLabsDone = departments.every(d=>progress.labs[d]);
+    const allExamsDone = departments.every(d=>progress.exams[d]);
+
     labBtn.disabled = !allTrainingDone;
     trainingBtn.disabled = allTrainingDone;
-    if (allLabsDone) {
+
+    if(allLabsDone){
       examBtn.disabled = false;
       trainingBtn.disabled = true;
       labBtn.disabled = true;
+    }else{
+      examBtn.disabled = true;
     }
-    if (allExamsDone) {
+
+    if(allExamsDone){
       trainingBtn.disabled = true;
       labBtn.disabled = true;
       examBtn.disabled = true;
-      finalExamBtn.disabled = false;
-      finalExamBtn.textContent = "Kobayashi Maru - Available";
+      const gpa = calculateOverallGPA();
+      if(gpa >= 3){
+        finalExamBtn.disabled = false;
+        finalExamBtn.textContent = "Kobayashi Maru - Available";
+      }else{
+        finalExamBtn.disabled = true;
+        finalExamBtn.textContent = "Kobayashi Maru - Locked";
+        showEnlistmentScreen();
+      }
+    }else{
+      finalExamBtn.disabled = true;
+      finalExamBtn.textContent = "Kobayashi Maru - Locked";
     }
+
+    saveProgress();
   }
 
-  labBtn.disabled = true;
-  examBtn.disabled = true;
-  finalExamBtn.disabled = true;
-  checkProgress();
-
-  document.getElementById("loginBtn").addEventListener("click", () => {
+  document.getElementById("loginBtn").addEventListener("click",()=>{
     cadetName = document.getElementById("cadetName").value.trim();
     species = document.getElementById("species").value;
-    if (!cadetName || !species) return alert("Enter name and species first.");
+    if(!cadetName || !species) return alert("Enter name and species first.");
+    loadProgress(cadetName);
+    if(simulatedCadets.length===0) createSimulatedCadets();
     const msg = document.getElementById("accessMessage");
     msg.textContent = `Access Link Established — Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
     msg.classList.add("active");
-    setTimeout(() => {
-      const login = document.getElementById("loginScreen");
-      login.classList.add("fade-out");
-      setTimeout(() => {
-        login.style.display = "none";
+    setTimeout(()=>{
+      document.getElementById("loginScreen").classList.add("fade-out");
+      setTimeout(()=>{
+        document.getElementById("loginScreen").style.display="none";
         const main = document.getElementById("mainScreen");
-        main.style.display = "block";
-        main.classList.add("fade-in");
+        main.style.display="block";
         document.getElementById("mainWelcome").textContent = `Welcome, Cadet ${cadetName} of ${homeworlds[species]}.`;
-      }, 3000);
-    }, 4000);
+        checkProgress();
+      },3000);
+    },4000);
   });
 
-  document.getElementById("trainingBtn").onclick = () => openOrientation("training");
-  document.getElementById("labBtn").onclick = () => openOrientation("lab");
-  document.getElementById("examBtn").onclick = () => openOrientation("exam");
-
-  function openOrientation(mode) {
-    document.getElementById("mainScreen").style.display = "none";
+  function openOrientation(mode){
+    document.getElementById("mainScreen").style.display="none";
     const title = document.getElementById("orientationTitle");
-    title.textContent = mode === "lab" ? "Select Lab Department" : mode === "exam" ? "Select Exam Department" : "Select Study Department";
-    const btnBox = document.getElementById("moduleButtons");
-    btnBox.innerHTML = "";
-    departments.forEach(dept => {
+    title.textContent = mode==="lab" ? "Select Lab Department" : mode==="exam" ? "Select Exam Department" : "Select Study Department";
+    const box = document.getElementById("moduleButtons");
+    box.innerHTML = "";
+    departments.forEach(d=>{
       const b = document.createElement("button");
-      b.textContent = dept;
-      if (mode === "training" && progress.training[dept]) b.disabled = true;
-      if (mode === "lab" && progress.labs[dept]) b.disabled = true;
-      if (mode === "exam" && progress.exams[dept]) b.disabled = true;
-      b.onclick = () => {
-        mode === "training" ? loadTraining(dept) : mode === "lab" ? loadLab(dept) : loadExam(dept);
-      };
-      btnBox.appendChild(b);
+      b.textContent = d;
+      if(mode==="training" && progress.training[d]) b.disabled = true;
+      if(mode==="lab" && progress.labs[d]) b.disabled = true;
+      if(mode==="exam" && progress.exams[d]) b.disabled = true;
+      b.onclick = ()=> mode==="training" ? loadTraining(d) : mode==="lab" ? loadLab(d) : loadExam(d);
+      box.appendChild(b);
     });
-    const orientation = document.getElementById("orientationPage");
-    orientation.style.display = "flex";
-    orientation.style.flexDirection = "column";
-    orientation.style.justifyContent = "center";
-    orientation.style.alignItems = "center";
-    orientation.style.height = "100vh";
-    orientation.style.overflow = "hidden";
+    const orient = document.getElementById("orientationPage");
+    orient.style.display="flex";
+    orient.style.flexDirection="column";
+    orient.style.justifyContent="center";
+    orient.style.alignItems="center";
+    orient.style.height="100vh";
+    orient.style.overflow="hidden";
   }
 
-  document.getElementById("returnMain").onclick = () => {
-    document.getElementById("orientationPage").style.display = "none";
-    document.getElementById("mainScreen").style.display = "block";
+  trainingBtn.onclick = ()=>openOrientation("training");
+  labBtn.onclick = ()=>openOrientation("lab");
+  examBtn.onclick = ()=>openOrientation("exam");
+
+  document.getElementById("returnMain").onclick = ()=>{
+    document.getElementById("orientationPage").style.display="none";
+    document.getElementById("mainScreen").style.display="block";
+    checkProgress();
+  };
+  document.getElementById("returnOrientationTrain").onclick = ()=>{
+    document.getElementById("trainingPage").style.display="none";
+    document.getElementById("orientationPage").style.display="block";
+    checkProgress();
+  };
+  document.getElementById("returnOrientationLab").onclick = ()=>{
+    document.getElementById("labPage").style.display="none";
+    document.getElementById("orientationPage").style.display="block";
+    checkProgress();
+  };
+  document.getElementById("returnOrientationExam").onclick = ()=>{
+    document.getElementById("examPage").style.display="none";
+    document.getElementById("orientationPage").style.display="block";
     checkProgress();
   };
 
-  document.getElementById("returnOrientationTrain").onclick = () => {
-    document.getElementById("trainingPage").style.display = "none";
-    document.getElementById("orientationPage").style.display = "block";
-    checkProgress();
-  };
-
-  document.getElementById("returnOrientationLab").onclick = () => {
-    document.getElementById("labPage").style.display = "none";
-    document.getElementById("orientationPage").style.display = "block";
-    checkProgress();
-  };
-
-  document.getElementById("returnOrientationExam").onclick = () => {
-    document.getElementById("examPage").style.display = "none";
-    document.getElementById("orientationPage").style.display = "block";
-    checkProgress();
-  };
-
-  const trainingBlurbs = {
-    Command: "You are the Captain of a starship, charged with the lives of your crew and the mission of the Federation itself. You will be tested in crisis decisions, chain of command dynamics, and the delicate balance between morale and duty. When lives and alliances depend on your judgment, you must act with clarity, courage, and purpose — the very qualities that define a true Starfleet officer.",
-    Diplomacy: "You are a Starfleet Diplomacy Envoy. Your mission is to bridge worlds. You will learn to negotiate treaties, interpret alien cultures, and mediate conflict where misunderstanding can ignite war. As a Diplomacy Envoy, your voice carries the promise of peace, shaping first contacts and forging alliances that strengthen the Federation’s ideals.",
-    Engineering: "Every starship in the fleet relies on those who keep its heart beating. As an Engineering Officer, you will monitor power systems, repair damage under pressure, and invent solutions where none exist. Warp drives, transporters, and shields all respond to your discipline and intuition. When systems fail and the void presses in, it is your steady hand that holds chaos at bay.",
-    Security: "In the unpredictable reaches of space, danger can appear without warning. As a Security Officer, you will defend lives, enforce regulations, and uphold the principles that define Starfleet. Your calm under fire and sense of honor shape every mission, from quelling internal conflict to facing external threats. Where others hesitate, you act — not from aggression, but duty.",
-    Science: "The stars themselves hold endless mysteries waiting to be uncovered. As a Science Officer, your curiosity drives the Federation’s greatest discoveries. You will study alien worlds, unravel cosmic phenomena, and expand humanity’s understanding of the universe. Each observation brings you closer to the truth — that exploration and discovery are themselves acts of courage.",
-    Medical: "Beyond the hum of the warp core and the glow of the bridge lies the quiet, urgent world of healing. As a Medical Officer, you safeguard the health and hope of those who serve. You will treat the injured, confront unknown diseases, and make impossible choices where seconds determine survival. In your hands lies the trust of every soul aboard — a trust you must honor with skill, compassion, and resolve."
-  };
-
-  async function loadTraining(dept) {
-    document.getElementById("orientationPage").style.display = "none";
-    document.getElementById("trainingPage").style.display = "block";
+  async function loadTraining(dept){
+    document.getElementById("orientationPage").style.display="none";
+    document.getElementById("trainingPage").style.display="block";
     document.getElementById("trainingDeptTitle").textContent = `${dept} Study`;
     document.getElementById("trainingCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
     const content = document.getElementById("trainingContent");
@@ -544,57 +710,55 @@ button:disabled {
     blurb.style.margin = "10px auto 25px";
     blurb.style.fontStyle = "italic";
     blurb.style.fontSize = "14pt";
-    blurb.style.color = "#ffffff";
+    blurb.style.color = "#fff";
     blurb.style.textAlign = "center";
     blurb.style.maxWidth = "900px";
     document.getElementById("trainingCadetInfo").insertAdjacentElement("afterend", blurb);
-    data.study?.forEach(item => {
-      const section = document.createElement("div");
-      section.className = "training-section boxed-scenario";
+    (data.study||[]).forEach(item=>{
+      const s = document.createElement("div");
+      s.className = "training-section boxed-scenario";
       const header = document.createElement("div");
       header.className = "training-header-bar";
       header.textContent = `${dept.toUpperCase()} DIVISION`;
-      section.appendChild(header);
-      const scenario = document.createElement("h3");
-      scenario.textContent = item.scenario;
-      section.appendChild(scenario);
-      const summary = document.createElement("p");
-      summary.textContent = item.summary;
-      section.appendChild(summary);
-      const answersDiv = document.createElement("div");
-      answersDiv.className = "training-answers";
-      item.answers.forEach((ans, i) => {
-        const p = document.createElement("p");
+      s.appendChild(header);
+      const h3 = document.createElement("h3");
+      h3.textContent = item.scenario;
+      s.appendChild(h3);
+      const p = document.createElement("p");
+      p.textContent = item.summary || "";
+      s.appendChild(p);
+      const ansDiv = document.createElement("div");
+      (item.answers||[]).forEach((ans,i)=>{
+        const p2 = document.createElement("p");
         const strong = document.createElement("strong");
-        strong.style.color = i === 0 ? "green" : i === 1 ? "yellow" : "red";
+        strong.style.color = i===0 ? "green" : i===1 ? "yellow" : "red";
         strong.textContent = ans.text;
         const span = document.createElement("span");
-        span.textContent = ans.details;
-        p.appendChild(strong);
-        p.appendChild(span);
-        answersDiv.appendChild(p);
+        span.textContent = " " + (ans.details||"");
+        p2.appendChild(strong);
+        p2.appendChild(span);
+        ansDiv.appendChild(p2);
       });
-      section.appendChild(answersDiv);
-      content.appendChild(section);
+      s.appendChild(ansDiv);
+      content.appendChild(s);
     });
     const completeBtn = document.createElement("button");
     completeBtn.textContent = "Mark as Complete";
-    completeBtn.onclick = () => {
+    completeBtn.onclick = ()=>{
       progress.training[dept] = true;
-      completeBtn.disabled = true;
-      completeBtn.textContent = "Module Complete";
       const buttons = document.querySelectorAll("#moduleButtons button");
-      buttons.forEach(b => {
-        if (b.textContent === dept) b.disabled = true;
-      });
+      buttons.forEach(b=>{ if(b.textContent===dept) b.disabled = true; });
+      document.getElementById("trainingPage").style.display="none";
+      document.getElementById("orientationPage").style.display="block";
       checkProgress();
+      saveProgress();
     };
     content.appendChild(completeBtn);
   }
 
-  async function loadLab(dept) {
-    document.getElementById("orientationPage").style.display = "none";
-    document.getElementById("labPage").style.display = "block";
+  async function loadLab(dept){
+    document.getElementById("orientationPage").style.display="none";
+    document.getElementById("labPage").style.display="block";
     document.getElementById("labDeptTitle").textContent = `${dept} Lab`;
     document.getElementById("labCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
     const content = document.getElementById("labContent");
@@ -602,38 +766,39 @@ button:disabled {
     const res = await fetch(labFiles[dept]);
     const data = await res.json();
     const items = data.lab || [];
-    let currentIndex = 0;
-    showScenario(currentIndex);
-    function showScenario(i) {
-      const item = items[i];
-      content.innerHTML = `<div class="training-section"><h3>${item.scenario}</h3><p>${item.summary || ""}</p></div>`;
+    let i = 0;
+    function showScenario(idx){
+      const it = items[idx];
+      content.innerHTML = `<div class="training-section boxed-scenario">
+        <h3>${it.scenario}</h3>
+        <p>${it.summary||""}</p>
+      </div>`;
       const answersDiv = document.createElement("div");
-      answersDiv.className = "lab-answers";
-      [...item.answers].sort(() => Math.random() - 0.5).forEach(ans => {
+      [...it.answers].sort(()=>Math.random()-0.5).forEach(ans=>{
         const btn = document.createElement("button");
         btn.textContent = ans.text;
-        btn.onclick = () => {
-          answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
+        btn.onclick = ()=>{
+          answersDiv.querySelectorAll("button").forEach(b=>b.disabled=true);
           const feedback = document.createElement("div");
           feedback.className = "feedback";
-          feedback.innerHTML = ans.type === "best"
-            ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
-            : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
+          const best = it.answers.find(a=>a.type==="best");
+          feedback.innerHTML = ans.type==="best"
+            ? `<span class="best-answer">✅ Correct — Best Answer!</span><p>${ans.details||""}</p>`
+            : `<span class="incorrect-answer">❌ Incorrect</span><p>${best?best.text:""}</p>`;
           const next = document.createElement("button");
-          if (i < items.length - 1) {
+          if(idx < items.length-1){
             next.textContent = "Next Scenario ➡️";
-            next.onclick = () => showScenario(i + 1);
-          } else {
+            next.onclick = ()=> showScenario(idx+1);
+          }else{
             next.textContent = "Mark Lab as Complete";
-            next.onclick = () => {
+            next.onclick = ()=>{
               progress.labs[dept] = true;
               const buttons = document.querySelectorAll("#moduleButtons button");
-              buttons.forEach(b => {
-                if (b.textContent === dept) b.disabled = true;
-              });
-              document.getElementById("labPage").style.display = "none";
-              document.getElementById("orientationPage").style.display = "block";
+              buttons.forEach(b=>{ if(b.textContent===dept) b.disabled = true; });
+              document.getElementById("labPage").style.display="none";
+              document.getElementById("orientationPage").style.display="block";
               checkProgress();
+              saveProgress();
             };
           }
           feedback.appendChild(next);
@@ -643,11 +808,12 @@ button:disabled {
       });
       content.appendChild(answersDiv);
     }
+    showScenario(i);
   }
 
-  async function loadExam(dept) {
-    document.getElementById("orientationPage").style.display = "none";
-    document.getElementById("examPage").style.display = "block";
+  async function loadExam(dept){
+    document.getElementById("orientationPage").style.display="none";
+    document.getElementById("examPage").style.display="block";
     document.getElementById("examDeptTitle").textContent = `${dept} Exam`;
     document.getElementById("examCadetInfo").textContent = `Cadet ${cadetName} of ${homeworlds[species]}`;
     const content = document.getElementById("examContent");
@@ -655,57 +821,72 @@ button:disabled {
     const res = await fetch(examFiles[dept]);
     const data = await res.json();
     const items = data.exam || [];
-    let currentIndex = 0;
-    showQuestion(currentIndex);
-    function showQuestion(i) {
-      const item = items[i];
-      content.innerHTML = `<div class="training-section"><h3>${item.scenario}</h3></div>`;
+    let i = 0, scoreSum = 0;
+
+    function scoreForAnswer(ans){
+      if(typeof ans.score === "number") return ans.score;
+      if(ans.type === "best") return 4;
+      if(ans.type === "good") return 3;
+      if(ans.type === "fair") return 2;
+      return 1;
+    }
+
+    function showQuestion(idx){
+      const it = items[idx];
+      content.innerHTML = `<div class="training-section boxed-scenario">
+        <h3>${it.scenario}</h3>
+        <p>${it.summary||""}</p>
+      </div>`;
       const answersDiv = document.createElement("div");
-      answersDiv.className = "exam-answers";
-      [...item.answers].forEach(ans => {
+      (it.answers||[]).forEach(ans=>{
         const btn = document.createElement("button");
         btn.textContent = ans.text;
-        btn.onclick = () => {
-          answersDiv.querySelectorAll("button").forEach(b => b.disabled = true);
-          const feedback = document.createElement("div");
-          feedback.className = "feedback";
-          feedback.innerHTML = ans.type === "best"
-            ? `<span class='best-answer'>✅ Correct — Best Answer!</span><p>${ans.details}</p>`
-            : `<span class='incorrect-answer'>❌ Incorrect</span><p>${item.answers.find(a => a.type==='best').text}</p>`;
-          const next = document.createElement("button");
-          if (i < items.length - 1) {
-            next.textContent = "Next Question ➡️";
-            next.onclick = () => showQuestion(i + 1);
-          } else {
-            next.textContent = "Mark Exam as Complete";
-            next.onclick = () => {
-              progress.exams[dept] = true;
-              const buttons = document.querySelectorAll("#moduleButtons button");
-              buttons.forEach(b => {
-                if (b.textContent === dept) b.disabled = true;
-              });
-              document.getElementById("examPage").style.display = "none";
-              document.getElementById("orientationPage").style.display = "block";
-              checkProgress();
-            };
+        btn.onclick = ()=>{
+          answersDiv.querySelectorAll("button").forEach(b=>b.disabled=true);
+          const add = scoreForAnswer(ans);
+          scoreSum += add;
+          const answeredCount = idx + 1;
+          currentExamGPA = parseFloat((scoreSum/answeredCount).toFixed(2));
+          ensureLeaderboard().style.display = "block";
+          ensureExamLog().style.display = "block";
+          if(answeredCount === 1){
+            createLeaderboard();
           }
-          feedback.appendChild(next);
-          answersDiv.appendChild(feedback);
+          updateLeaderboard();
+          appendExamLog(`${dept} Q${answeredCount}: +${add} → ${currentExamGPA.toFixed(2)}`);
+          const next = document.createElement("button");
+          if(idx < items.length-1){
+            next.textContent = "Next Question ➡️";
+            next.onclick = ()=> showQuestion(idx+1);
+          }else{
+            const finalGPA = parseFloat((scoreSum/items.length).toFixed(2));
+            cadetScores[dept] = finalGPA;
+            progress.exams[dept] = true;
+            currentExamGPA = null;
+            logExamUpdate(dept, finalGPA);
+            updateLeaderboard();
+            document.getElementById("examPage").style.display="none";
+            document.getElementById("orientationPage").style.display="block";
+            checkProgress();
+            saveProgress();
+          }
+          answersDiv.appendChild(next);
         };
         answersDiv.appendChild(btn);
       });
       content.appendChild(answersDiv);
     }
+
+    showQuestion(i);
   }
 
-  finalExamBtn.onclick = () => {
+  finalExamBtn.onclick = ()=>{
+    if(finalExamBtn.disabled) return;
     const name = encodeURIComponent(cadetName);
-    setTimeout(() => {
-      window.open(`https://bigbird7827.github.io/Starfleet_Academy/Final_exam/Final_Exam.html?name=${name}&cachebust=${Date.now()}`, "_blank", "noopener");
-      window.location.href = "about:blank";
-    }, 100);
+    window.open(`https://bigbird7827.github.io/Starfleet_Academy/Final_exam/Final_Exam.html?name=${name}&cachebust=${Date.now()}`,"_blank","noopener");
   };
 });
+
 
   </script>
 </body>
